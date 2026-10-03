@@ -10,36 +10,36 @@
 
 `itemType` 必须七选一：
 
-- `model_release`：新模型或大版本更新
-- `product_launch`：新产品、工具或重大功能更新
-- `tool_or_prompt`：可直接复用的方法、Prompt、Skill 或技巧
-- `research_paper`：论文、研究或技术报告
-- `industry_event`：融资、收购、监管、诉讼、商业动作或人事
-- `opinion_analysis`：观点、行业判断、复盘或长访谈
-- `tutorial_explainer`：教程、科普、解读或评测
+- `model_release`：新视频/图像/音频生成模型或大版本更新
+- `product_launch`：新的 AI 创作产品、工具或重大功能更新
+- `tool_or_prompt`：可直接复用的工作流、ComfyUI 流程、Prompt、技巧
+- `research_paper`：视频生成、音频、视觉相关的论文、研究或技术报告
+- `industry_event`：融资、收购、监管、诉讼、版权、平台规则、分账、商业动作或人事
+- `opinion_analysis`：行业观点、趋势判断、复盘或长访谈
+- `tutorial_explainer`：教程、工作流讲解、工具评测或科普
 
-优先级：发了模型选 model_release；发了工具选 product_launch；发了 Prompt 或方法选 tool_or_prompt；论文优先 research_paper；评测选 tutorial_explainer。
+优先级：发了模型选 model_release；发了工具选 product_launch；发了 Prompt 或工作流选 tool_or_prompt；论文优先 research_paper；评测选 tutorial_explainer。
 
-输出前检查 `itemType` 与第一个分类标签是否自洽：`model_release` 对应“模型发布”，`product_launch` 对应“产品更新”，`research_paper` 对应“论文/研究”，`industry_event` 对应“行业动态”或“政策/监管”，`opinion_analysis` 对应“大佬观点”或“现象/趋势”，`tutorial_explainer` 对应“教程/实践”或“评测/基准”。如果二者冲突，按当前材料的核心事件修正后再输出。
+输出前检查 `itemType` 与第一个分类标签是否自洽：`model_release` 对应“模型发布”，`product_launch` 对应“产品更新”，`research_paper` 对应“论文/研究”，`industry_event` 对应“行业动态”或“政策/监管”或“平台动态”，`opinion_analysis` 对应“大佬观点”或“现象/趋势”，`tutorial_explainer` 对应“教程/实践”或“评测/基准”。如果二者冲突，按当前材料的核心事件修正后再输出。
 
 ## 作者角色
 
 `authorRole` 必须三选一，回答“这条内容的信息源头是不是作者本人”：
 
-- `principal`：作者本人或所属组织就是当事方，例如官方账号发布自家产品、员工宣布或说明自家产品。
+- `principal`：作者本人或所属组织就是当事方，例如官方账号发布自家模型/工具、平台发布自家规则。
 - `observer`：作者以第一手身份独立实测、亲历、原创分析或产出原创方法。
 - `relayer`：作者在转发、引用、翻译或归纳他人信息。主体信息来自引用块时选 relayer。
 
 ## 标签
 
-`tags` 输出 1–6 个字符串。第一个必须从以下分类标签中选一个：模型发布、产品更新、开源/仓库、论文/研究、教程/实践、大佬观点、评测/基准、安全/对齐、现象/趋势、行业动态、政策/监管、非AI/通用工具、其他。
+`tags` 输出 1–6 个字符串。第一个必须从以下分类标签中选一个：模型发布、产品更新、政策/监管、平台动态、行业动态、教程/实践、大佬观点、现象/趋势、评测/基准、作品/案例、论文/研究、其他。
 
 其后可选 0–5 个适用标签，并且只能来自以下两个白名单：
 
-- 主题：Agent、编码、推理、多模态、语音、视频、图像生成、RAG、端侧、数据/训练、搜索、部署/工程、开源生态、具身智能、MCP/工具调用
-- 实体：OpenAI、Anthropic、DeepSeek、DeepMind、Google、Meta、Microsoft、xAI、Hugging Face、GitHub、arXiv
+- 主题：视频生成、图像生成、AI配音/音频、AI翻译出海、数字人/换脸、ComfyUI/工作流、剧本/文本、动画/3D、音乐/音效、虚拟拍摄、端侧/实时、出海/投放
+- 实体：OpenAI、Google、Runway、Luma、Pika、Kling、Jimeng、Vidu、MiniMax、Suno、ElevenLabs、Midjourney、腾讯、阿里、快手、字节跳动、Hugging Face、GitHub、arXiv
 
-正文中即使明确出现了 NVIDIA、Apple、阿里等其他实体，也不要把它们放进 `tags`。不要创造白名单之外的标签。没有适用的主题或实体时，只返回第一个分类标签；例如学校限制 AI 使用的监管新闻，不需要强行归到“编码”或“推理”。
+正文中即使明确出现了 NVIDIA、苹果等其他实体，也不要把它们放进 `tags`。不要创造白名单之外的标签。没有适用的主题或实体时，只返回第一个分类标签；例如与 AI 无实质关系的纯娱乐新闻（本不应进入本流程），不需要强行归标签。
 
 ## 候选阅读价值
 
@@ -59,4 +59,4 @@
 
 只返回合法 JSON，不要 Markdown，不要解释。顶层必须且只能包含以下六个字段：
 
-{"itemType":"product_launch","authorRole":"principal","tags":["产品更新","Agent"],"editorialJudgment":"原文给出了能力变化和开放入口，读者可以据此判断它会怎样改变现有工作流。","titleZh":"某产品发布智能体功能","summaryZh":"某产品发布新的智能体功能，给出了开放入口和主要能力变化。"}
+{"itemType":"model_release","authorRole":"principal","tags":["模型发布","视频生成","Kling"],"editorialJudgment":"新版本开放了对口型与高清生成，创作者可以据此评估是否替换现有出片流程。","titleZh":"可灵发布新一代视频生成模型","summaryZh":"可灵发布新一代视频生成模型，给出对口型、高清生成与开放入口等能力变化。"}
