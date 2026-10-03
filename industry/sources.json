@@ -1,5 +1,5 @@
 {
-  "$comment": "aitvhot 第一批信源（阶段 2 · 只跑免费 RSS，对应总纲 Day 4 起）。只含 11 个免费 RSS 源：无付费 key、无 web_list 选择器校准成本。与 sources.json 的差异仅两处：① 只保留 RSS 源 ② ComfyUI Releases 的 participation_mode 改为 hot_signal（发布频率高、单条信息量低，先只做热度证据，观察两周后再开 editorial——见 docs/信源说明.md）。校准完成后换回完整版 sources.json。",
+  "$comment": "aitvhot 第一批信源（阶段 2 · 只跑免费 RSS，对应总纲 Day 4 起）；机器之心的公开 RSS 已于 2026-10 实测下线（/rss 302、/feed 为 HTML），已从清单移除，其内容后续由公众号源 mp-jizhi 覆盖。只含 11 个免费 RSS 源：无付费 key、无 web_list 选择器校准成本。与 sources.json 的差异仅两处：① 只保留 RSS 源 ② ComfyUI Releases 的 participation_mode 改为 hot_signal（发布频率高、单条信息量低，先只做热度证据，观察两周后再开 editorial——见 docs/信源说明.md）。校准完成后换回完整版 sources.json。",
   "sources": [
     {
       "id": "rss-openai-news",
@@ -105,27 +105,6 @@
       "tags": [
         "开源",
         "工作流"
-      ],
-      "site_fulltext": false,
-      "syndicate_fulltext": false
-    },
-    {
-      "id": "rss-jiqizhixin",
-      "name": "机器之心",
-      "kind": "rss",
-      "config": {
-        "feedUrl": "https://www.jiqizhixin.com/rss",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
-      },
-      "tier": "T2",
-      "first_party": false,
-      "owner_entity_id": null,
-      "participation_mode": "editorial",
-      "interval_minutes": 120,
-      "tags": [
-        "媒体"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false
