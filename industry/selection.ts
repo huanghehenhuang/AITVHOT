@@ -16,3 +16,17 @@ export const SELECTION = {
    */
   understandFloor: 50,
 } as const;
+
+/**
+ * 日报分节的均衡配额（packages/backend/src/reports/compose.ts 读取）。
+ * 每个分节进日报正文的上限由这里决定，超出的条目降级进文末简讯（flashes，溢出保护）。
+ * sectionLimits 没列出的分节用 defaultSectionLimit；**不限用 Infinity，绝不要用 null**
+ * （compose 里 `?? 默认值` 会把 null 吞成默认上限，不限语义静默失效——validate-fork 会拦 null）。
+ * aitvhot 的取向：垂直行业的读者注意力紧，日报宁紧勿滥（默认 6 条/节，上游宽赛道默认是 8）；
+ * 核心价值区“平台与监管”不设限——规则与监管的日常密度本来就低，每条都该进正文。
+ */
+export const REPORT = {
+  defaultSectionLimit: 6,
+  sectionLimits: { "平台与监管": Infinity } as Record<string, number>,
+  flashLimit: 10,
+} as const;

@@ -4,6 +4,7 @@
 import { z } from "zod";
 import { SITE } from "@aihot/industry/site";
 import { CATEGORIES } from "@aihot/industry/taxonomy";
+import { REPORT } from "@aihot/industry/selection";
 import { promptText, promptVersion } from "../editorial/prompts.ts";
 import { modelFor } from "../editorial/models.ts";
 import { addDays, beijingDate, beijingMidnight, isoWeekLabel, isoWeekRange } from "@aihot/contracts/time";
@@ -163,11 +164,14 @@ export async function composeDaily(date: string, reason = "scheduled"): Promise<
   const fresh = all.filter((c) => !covered.has(c.factKey) && !covered.has(`a:${c.itemId}`));
   const perSection = new Map<string, Candidate[]>();
   const flashes: Array<{ itemId: string; title: string; sourceName: string; sourceUrl: string; publishedAt: string }> = [];
+  // Per-section balance from the industry pack: capped sections overflow into the flashes list. A section
+  // listed with Infinity in REPORT.sectionLimits is never capped (this industry's core-value section).
+  const sectionLimit = (label: string) => REPORT.sectionLimits[label] ?? REPORT.defaultSectionLimit;
   for (const c of fresh) {
     const label = SECTION_OF[c.category ?? ""] ?? DEFAULT_SECTION;
     const list = perSection.get(label) ?? [];
-    if (list.length < 8) list.push(c);
-    else if (flashes.length < 12) flashes.push({ itemId: c.itemId, title: c.title, sourceName: c.sourceName, sourceUrl: c.sourceUrl, publishedAt: c.publishedAt });
+    if (list.length < sectionLimit(label)) list.push(c);
+    else if (flashes.length < REPORT.flashLimit) flashes.push({ itemId: c.itemId, title: c.title, sourceName: c.sourceName, sourceUrl: c.sourceUrl, publishedAt: c.publishedAt });
     perSection.set(label, list);
   }
   const sections = SECTION_ORDER.filter((l) => perSection.get(l)?.length).map((label) => ({
