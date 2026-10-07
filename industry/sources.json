@@ -213,6 +213,50 @@
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-cartoon-brew",
+      "name": "Cartoon Brew（动画工业·AI in animation）",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.cartoonbrew.com/feed",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "媒体",
+        "影视工业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-reddit-aivideo",
+      "name": "Reddit r/aivideo（视频生成社区）",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.reddit.com/r/aivideo/.rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "社区",
+        "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
     }
   ]
 }
