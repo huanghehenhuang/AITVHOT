@@ -266,7 +266,8 @@
         "feedUrl": "https://blog.comfy.org/feed",
         "_aihot": {
           "initialBackfillLimit": 3
-        }
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -288,7 +289,8 @@
         "feedUrl": "https://blog.fal.ai/rss/",
         "_aihot": {
           "initialBackfillLimit": 3
-        }
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -310,7 +312,8 @@
         "feedUrl": "https://stability.ai/news-updates?format=rss",
         "_aihot": {
           "initialBackfillLimit": 3
-        }
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -340,7 +343,8 @@
           "Company",
           "Customer Stories",
           "Impact"
-        ]
+        ],
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -362,7 +366,8 @@
         "feedUrl": "https://replicate.com/blog/rss",
         "_aihot": {
           "initialBackfillLimit": 3
-        }
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -384,7 +389,8 @@
         "feedUrl": "https://github.com/Lightricks/LTX-2/releases.atom",
         "_aihot": {
           "initialBackfillLimit": 3
-        }
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -407,7 +413,8 @@
         "feedUrl": "https://github.com/huggingface/diffusers/releases.atom",
         "_aihot": {
           "initialBackfillLimit": 3
-        }
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -430,7 +437,8 @@
         "feedUrl": "https://github.com/invoke-ai/InvokeAI/releases.atom",
         "_aihot": {
           "initialBackfillLimit": 3
-        }
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -453,7 +461,8 @@
         "feedUrl": "https://github.com/fishaudio/fish-speech/releases.atom",
         "_aihot": {
           "initialBackfillLimit": 3
-        }
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -476,7 +485,8 @@
         "feedUrl": "https://nofilmschool.com/feeds/content-types/article.rss",
         "_aihot": {
           "initialBackfillLimit": 3
-        }
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T2",
       "first_party": false,
@@ -505,7 +515,8 @@
         ],
         "_aihot": {
           "initialBackfillLimit": 3
-        }
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,

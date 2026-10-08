@@ -119,6 +119,11 @@ export async function collectSource(sourceId: string, opts: { force?: boolean } 
     }
     found = candidates.length;
     candidates = candidates.filter((c) => allowed(c.url, source)).map((c) => rewriteUrl(c, source)).filter((c) => !noiseFiltered(c, source));
+    // A first-backfill cap alone only postpones older feed entries until the next round. Sources
+    // intended for current news can bound dated material before any detail fetch or paid analysis.
+    const cutoff = typeof source.config.maxItemAgeDays === "number" ? Date.now() - source.config.maxItemAgeDays * DAY_MS : null;
+    const withinAge = (c: Candidate) => cutoff === null || !c.publishedAt || !Number.isFinite(c.publishedAt.getTime()) || c.publishedAt.getTime() >= cutoff;
+    if (cutoff !== null && source.config.detail?.publishedAtAuthoritative !== true) candidates = candidates.filter(withinAge);
     if (source.config.sortByPublishedAt) candidates.sort((a, b) => (b.publishedAt?.getTime() ?? 0) - (a.publishedAt?.getTime() ?? 0));
     // Deduplicate before enrichment and limits: URL aliases must neither buy duplicate detail reads
     // nor crowd other articles out of the window. Use exactly the identity the material will store.
@@ -181,6 +186,8 @@ export async function collectSource(sourceId: string, opts: { force?: boolean } 
       }
     }
 
+    // A listing date explicitly marked unreliable must give way to the detail's authoritative date.
+    if (cutoff !== null && d?.publishedAtAuthoritative === true) candidates = candidates.filter(withinAge);
     ({ created, revised } = await store(sourceId, candidates, firstImport ? "first-import" : null));
 
     // A Jina listing round that was pending when this run started has been received by now.
