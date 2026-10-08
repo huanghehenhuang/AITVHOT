@@ -26,8 +26,8 @@ after(closeDb);
 async function material(sourceId: string, age = 1, options: { storyId?: number | null; withdrawn?: boolean; eligible?: boolean; future?: boolean } = {}) {
   const date = new Date(at.getTime() - age * day);
   const { articleId } = await upsertMaterial({ sourceId, url: `https://example.com/eff/${tag()}`, title: "Source yield", via: "fetch", discoveredAt: date, publishedAt: date });
-  await sql`INSERT INTO publications (article_id, source_id, title, channel, url, discovered_at, timeline_at, eligible, selected, visibility, story_id, visible_after)
-    VALUES (${articleId}, ${sourceId}, 'Source yield', 'news', 'https://example.com/item', ${date}, ${date}, ${options.eligible ?? true}, true,
+  await sql`INSERT INTO publications (article_id, source_id, title, channel, url, discovered_at, timeline_at, sort_at, eligible, selected, visibility, story_id, visible_after)
+    VALUES (${articleId}, ${sourceId}, 'Source yield', 'news', 'https://example.com/item', ${date}, ${date}, ${date}, ${options.eligible ?? true}, true,
             ${options.withdrawn ? "withdrawn" : "public"}, ${options.storyId ?? null}, ${options.future ? new Date(at.getTime() + day) : date})`;
   return articleId;
 }
