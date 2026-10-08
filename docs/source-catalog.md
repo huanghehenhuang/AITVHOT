@@ -1,56 +1,57 @@
 # AI 影视信源清单
 
-验证日期：2026-10-08。配置从上一轮 23 个扩到 **122 个**，本轮新增 99 个；相对当前 main 的 12 个基础源共增加 110 个。不包含仅在线上数据库里的 X、公众号或其他手工来源。
+验证日期：2026-10-08。配置现有 **162 个入口**：从最初 23 个扩到 122 个，本轮再新增 40 个；相对当前 main 的 12 个基础源共增加 150 个。不包含仅在线上数据库中的 X、公众号付费账号或其他手工来源。
 
 | 类型 | 入口数 |
 |---|---:|
-| RSS / Atom | 76 |
-| 普通 HTML 列表 | 11 |
+| RSS / Atom | 110 |
+| 普通 HTML 列表 | 17 |
 | 公开 JSON / HTML 内嵌 JSON | 35 |
 
-107 个入口进入原有精选流程，15 个开源版本更新入口仅作热度证据。热度证据也可能产生向量与归组费用。来源身份按 `owner_entity_id` 共归并为 99 组；122 是订阅、作者模型库和公告列表的数量，不是 122 家独立公司或网站。
+147 个入口进入原有精选流程，15 个开源版本更新入口仅作热度证据。热度证据也可能产生向量与归组费用。来源身份按 `owner_entity_id` 共归并为 134 组；162 是入口数，134 是配置中的归属分组，均不等同于独立网站数。
 
-## 验证范围与当前产出
+## 本轮补充与验证口径
 
-逐个读取公开 HTTP 响应，再把保存的响应交给仓库现有 RSS、HTML 和 JSON 采集器验证。122 个列表均可解析出非空条目；经过来源关键词与格式过滤后，116 个本次有匹配内容，6 个本次没有匹配内容。71 个本次列表含近 30 天的匹配条目，其他来源保留监测新发布，其旧资料不回灌。
+新增 40 个入口均能由仓库采集器解析出条目、匹配主题，并获得可解析日期；其中 37 个当前列表含近 30 天的匹配条目。补充 HeyGen、Luma、Reallusion、Apple 研究等一手入口，Theoretically Media、AIography、Slop Reel 等创作者，以及影视后期、音频、国内媒体和公开公众号 RSS。Theoretically Media 的博客与简报内容不同，沿用同一来源归属；Curious Refuge 的作品订阅也与其博客共用归属。
 
-这些是一次列表快照，不是线上采集成功率、日均产量或实际入选率。下表的近期条目数在来源内统计，尚未跨 URL、来源与事件去重；正文提取与模型筛选仍由后续流程决定。已选入口的匹配条目均有可解析日期。
+全库 162 个列表均有非空解析记录；154 个本次有匹配内容，8 个本次没有匹配内容。105 个列表含近 30 天匹配条目，其余继续监测新发布，明确有日期的旧资料不会进入新配置的回灌。所有匹配条目均有可解析日期。未改配置的来源沿用上轮 HTTP 捕获，改变范围的 31 个旧源和 40 个新源重新核验；逐条时间、最终跳转地址和响应 SHA-256 见 [source-checks.json](source-checks.json)。
 
-验证结果与响应 SHA-256 见 [source-checks.json](source-checks.json)。可复查配置或显式联网检查：
+这些是公开列表快照，不是线上采集成功率、日均产量或精选入选率。下表统计在来源内进行，尚未跨 URL、来源与事件去重；正文提取和模型筛选由后续流程决定。
 
 ```bash
 MODEL_CALLS_ENABLED=false COLLECT_ENABLED=false node scripts/check-sources.ts
 MODEL_CALLS_ENABLED=false COLLECT_ENABLED=false node scripts/check-sources.ts --live
 ```
 
-第二条命令只读取公开列表，不入库、不抓正文、不启动 worker、不调用模型或 X/公众号付费 API。列表有条目但当前没有主题匹配时记为提示，抓取或解析失败才返回失败；代码测试使用本地样本，不访问外网。
+第二条命令显式联网，只读取公开列表，不入库、不抓正文、不启动 worker、不调用模型或 X/公众号付费 API。列表暂时没有主题匹配记为提示，抓取或解析失败才返回失败；自动测试使用本地样本，不访问外网。
 
-## 接入与成本约束
+## 采集与处理成本
 
-- 全部基础配置限制 30 天有日期历史，首轮最多 3 条；旧源在已有数据库中的配置仍由 seed 保留。没有日期的未来条目依原规则保留，需从检查结果关注。
-- 宽泛 AI 媒体先按影视关键词过滤，影视媒体先按 AI 关键词过滤。规则只作用于配置了 `requireMarkers` 的源，过滤在详情补齐、入库和模型调用前完成。
-- 一个 Hugging Face 作者只配一个模型列表，按 `createdAt` 读取新模型仓库，不将权重文件、提交或修改时间算成新发布。过滤常见 Diffusers 转换、GGUF、FP8 等重复格式；IndexTeam 保留指定的完整精度原生语音模型。
-- Hugging Face 作者模型列表中，Step、腾讯混元、NVIDIA Cosmos、Microsoft TRELLIS、Meta SAM 和智谱图像已收窄查询或使用标题范围，避免大量文本模型挤掉创作模型。
-- 同一厂商的官网、模型列表与发布日志共用来源身份，例如 Comfy、Google、字节、阿里、腾讯和 Lightricks，避免当成多家机构重复贡献热度。
-- RSS 沿用条件请求与 URL 判重，普通 HTML / JSON 直接读取，不配置 Jina；全文展示和全文分发均关闭。
-- 列表采集不需要按次付费 API；正文补齐、精选、写作、向量和事件归组仍可能花费。评分门槛、模型选择及预算额度未改变，上线后从「产出与成本」核对实际效果。
+- 全部基础配置限制 30 天有日期历史，首轮最多 3 条。没有日期的未来条目依原规则保留；已有数据库配置由 seed 保留。
+- 宽泛 AI 媒体按影视关键词过滤，影视和音频媒体按 AI 关键词过滤；原先较宽的 OpenAI、Google、DeepMind、Hugging Face 和综合媒体示例也补上主题范围。过滤发生在详情补齐、入库和模型调用前。
+- `requireMarkers` 保留字面子串匹配；短词 `AI`、`Udio` 使用 `requireWords` 整词检查，避免 `air`、`paid`、`audio` 等普通词误命中。关键词只是入口范围，最终重要性仍由原有精选流程决定。
+- Hugging Face 每个作者只配一个列表，按 `createdAt` 监测新仓库；不将权重、提交或修改时间当成新发布。排除常见重复权重格式。
+- 同一厂商的官网、模型列表、发布日志和公开公众号订阅共用来源身份，避免重复贡献热度。
+- RSS 沿用条件请求和 URL 判重；HTML/JSON 直接读取，不配置 Jina。列表采集无需按次付费 API；正文、精选、写作、向量和归组仍可能产生费用。全文展示与分发均关闭，评分门槛、模型选择及预算额度未改变。
 
-Runway 列表在 Next.js Flight 的 `posts` 数组中；已修复原解析器遇到条目内嵌套数组就截断的问题。MiniMax 官网使用同一 `publishDate` 字段返回毫秒数字和 ISO 字符串，使用显式混合日期单位。字节 Seed 使用官网的公开文章列表与 `ArticleMeta.PublishDate`，避免把置顶旧文的更新日期当成新发布。LTX Studio 入口已迁移至 `ltx.io`，Captions 列表使用 `captions.ai` 的实际地址。
+新增公众号入口中的 7 个由公开 RSS 桥接服务提供，配置标注「公共 RSS 桥接」，`first_party` 为 false；媒体按 T2，厂商账号按 T1_5，并归入对应厂商。它们依赖第三方转换服务，可能延迟、漏文或停用，不能视为官方 RSS 的可用性承诺，也不代表已免费接入全部公众号。
 
-## 未纳入的入口
+Runway 使用官网嵌套 Flight 数组，MiniMax 使用混合日期格式，字节 Seed 使用原始发布日；Luma 按官网新闻卡片取日期，排除 Blog 类 SEO 文章。创作者简报读取公开网页上的原始日期。入口可能发生官网跳转，实际最终地址见逐源记录。
 
-空的 Wan2GP、ComfyUI-WanVideoWrapper、Qwen3-TTS/ASR Releases；仅有很旧发布的 HunyuanVideo、FramePack、GPT-SoVITS、CosyVoice 等 Releases；返回错误页的 Substack / YouTube RSS、404、403、无法解析的页面均未作为新增有效入口。Genmo、Bark 等长期没有新模型创建的作者列表也未加入。它们仍可能有活跃产品或代码，需要另找可靠公告渠道，不能从空订阅推断项目停止更新。
+## 导入与未纳入入口
 
-新来源名单仍需要运营校验精选质量；账号、接口和网页结构都可能变化。已有站点的导入、别名重复与费用口径见 [source-operations.md](source-operations.md)。
+已有站点可先只读预览，再分批启用新来源；导入会保留同 ID 的手工修改，并沿用后台同类地址/账号判重规则，跳过不同 ID 的地址别名。操作命令与边界见 [source-operations.md](source-operations.md)。
 
-## 官方公告与产品博客（31）
+未将返回错误页的 Substack/YouTube RSS、空的发布订阅、无可用日期、很旧的教程和只有无关条目的新候选作为扩容数量。Prompt Muse 的当前 RSS 内容仍停在 2024 年，InfoQ 示例 feed 与 Pixar 样例订阅也未加入；这些结果不表示作者或项目停止更新。网页、账号与接口会变化，后续用后台产出与回执继续核验。
+
+## 官方公告与产品博客（39）
 
 | 信源 / ID | 入口 | 参与方式 | 最近匹配日期 | 本次近 30 天 |
 |---|---|---|---|---:|
-| OpenAI News<br>`rss-openai-news` | [列表](https://openai.com/news/rss.xml) | 精选 | 2026-10-07 | 74 |
-| Google AI Blog（Veo 发布渠道）<br>`rss-google-ai-blog` | [列表](https://blog.google/technology/ai/rss/) | 精选 | 2026-10-07 | 16 |
-| Google DeepMind<br>`rss-deepmind` | [列表](https://deepmind.google/blog/rss.xml) | 精选 | 2026-10-06 | 8 |
-| Hugging Face Blog（开源视频模型常首发于此）<br>`rss-hugging-face` | [列表](https://huggingface.co/blog/feed.xml) | 精选 | 2026-10-07 | 16 |
+| OpenAI News<br>`rss-openai-news` | [列表](https://openai.com/news/rss.xml) | 精选 | 2026-09-23 | 6 |
+| Google AI Blog（Veo 发布渠道）<br>`rss-google-ai-blog` | [列表](https://blog.google/technology/ai/rss/) | 精选 | 2026-09-09 | 1 |
+| Google DeepMind<br>`rss-deepmind` | [列表](https://deepmind.google/blog/rss.xml) | 精选 | 2026-09-23 | 1 |
+| Hugging Face Blog（开源视频模型常首发于此）<br>`rss-hugging-face` | [列表](https://huggingface.co/blog/feed.xml) | 精选 | 2026-09-30 | 1 |
 | Comfy 官方博客<br>`rss-comfy-blog` | [列表](https://blog.comfy.org/feed) | 精选 | 2026-10-06 | 8 |
 | fal 官方博客<br>`rss-fal-blog` | [列表](https://blog.fal.ai/rss/) | 精选 | 2026-09-17 | 1 |
 | Stability AI 官方新闻<br>`rss-stability-news` | [列表](https://stability.ai/news-updates?format=rss) | 精选 | 2026-08-25 | 0 |
@@ -78,6 +79,14 @@ Runway 列表在 Next.js Flight 的 `posts` 数组中；已修复原解析器遇
 | Runway 官方新闻<br>`json-runway` | [列表](https://runway.com/news) | 精选 | 2026-09-30 | 15 |
 | MiniMax 官方新闻<br>`json-minimax-api` | [列表](https://www.minimax.io/api/news?page=1&locale=en) | 精选 | 2026-08-03 | 0 |
 | 字节 Seed 官方博客<br>`json-bytedance-seed-api` | [列表](https://seed.bytedance.com/api/get_article_list_v2?article_type=2&count=20&order_desc=true) | 精选 | 2026-08-04 | 0 |
+| HeyGen Updates<br>`rss-heygen-updates` | [列表](https://heygen.noticeable.news/feed.rss) | 精选 | 2026-10-05 | 1 |
+| Podcastle<br>`rss-podcastle` | [列表](https://async.com/blog/rss/) | 精选 | 2026-10-06 | 10 |
+| LALAL AI<br>`rss-lalalai` | [列表](https://www.lalal.ai/blog/rss/) | 精选 | 2026-10-07 | 6 |
+| Unity<br>`rss-unity` | [列表](https://unity.com/cn/blog/rss) | 精选 | 2026-09-24 | 3 |
+| Apple Machine Learning Research<br>`rss-apple-ml` | [列表](https://machinelearning.apple.com/rss.xml) | 精选 | 2026-10-02 | 1 |
+| Reallusion<br>`rss-reallusion` | [列表](https://magazine.reallusion.com/feed/) | 精选 | 2026-10-08 | 2 |
+| Epidemic Sound<br>`rss-epidemic` | [列表](https://www.epidemicsound.com/blog/rss/) | 精选 | 2026-09-21 | 2 |
+| Luma News<br>`web-luma-news` | [列表](https://lumalabs.ai/news) | 精选 | 2026-10-01 | 1 |
 
 ## 官方模型发布（31）
 
@@ -115,7 +124,7 @@ Runway 列表在 Next.js Flight 的 `posts` 数组中；已修复原解析器遇
 | InstantX · 视觉模型<br>`json-hf-instantx` | [列表](https://huggingface.co/api/models?author=InstantX&sort=createdAt&direction=-1&limit=20&full=true&config=false) | 精选 | 2025-09-08 | 0 |
 | Shakker Labs · 图像模型<br>`json-hf-shakker-labs` | [列表](https://huggingface.co/api/models?author=Shakker-Labs&sort=createdAt&direction=-1&limit=20&full=true&config=false) | 精选 | 2025-12-14 | 0 |
 
-## 开源软件发布（27）
+## 开源创作工具与发布订阅（27）
 
 | 信源 / ID | 入口 | 参与方式 | 最近匹配日期 | 本次近 30 天 |
 |---|---|---|---|---:|
@@ -147,32 +156,54 @@ Runway 列表在 Next.js Flight 的 `posts` 数组中；已修复原解析器遇
 | faster-whisper 官方发布<br>`rss-systran--faster-whisper` | [列表](https://github.com/SYSTRAN/faster-whisper/releases.atom) | 热度证据 | 2025-10-31 | 0 |
 | sdnext 官方发布<br>`rss-vladmandic--sdnext` | [列表](https://github.com/vladmandic/sdnext/releases.atom) | 精选 | 2026-07-14 | 0 |
 
-## 创作者与教程（3）
+## 创作者、教程与作品（9）
 
 | 信源 / ID | 入口 | 参与方式 | 最近匹配日期 | 本次近 30 天 |
 |---|---|---|---|---:|
 | Curious Refuge 创作教程<br>`rss-curious-refuge` | [列表](https://curiousrefuge.com/blog?format=rss) | 精选 | 2026-10-02 | 9 |
 | Latent Space<br>`rss-latentspace` | [列表](https://www.latent.space/feed) | 精选 | 2026-09-29 | 3 |
 | Stable Diffusion Art 教程<br>`rss-stable-diffusion-art` | [列表](https://stable-diffusion-art.com/feed/) | 精选 | 2026-03-02 | 0 |
+| Curious Refuge film gallery<br>`rss-curious-gallery` | [列表](https://curiousrefuge.com/ai-film-gallery?format=rss) | 精选 | 2026-10-07 | 20 |
+| Theoretically Media blog<br>`web-theoretically-media` | [列表](https://theoreticallymedia.com/blog/) | 精选 | 2026-10-06 | 7 |
+| Theoretically Media<br>`web-theoretically-news` | [列表](https://theoreticallymedia.beehiiv.com/) | 精选 | 2026-09-18 | 1 |
+| AI For Real Life<br>`web-ai-for-real-life` | [列表](https://ai-for-real-life.beehiiv.com/) | 精选 | 2026-06-28 | 0 |
+| AIography · Lawrence Jordan<br>`web-aiography` | [列表](https://aiography.beehiiv.com/) | 精选 | 2026-09-11 | 1 |
+| Slop Reel · AI 视频制作简报<br>`web-slop-reel` | [列表](https://www.slopreel.com/) | 精选 | 2026-10-07 | 6 |
 
-## 媒体与社区（30）
+## 新增国内媒体与公众号公开订阅（11）
 
 | 信源 / ID | 入口 | 参与方式 | 最近匹配日期 | 本次近 30 天 |
 |---|---|---|---|---:|
-| The Verge · AI<br>`rss-the-verge-ai` | [列表](https://www.theverge.com/rss/ai-artificial-intelligence/index.xml) | 精选 | 2026-10-07 | 10 |
-| TechCrunch · AI<br>`rss-techcrunch-ai` | [列表](https://techcrunch.com/category/artificial-intelligence/feed/) | 精选 | 2026-10-07 | 20 |
-| Ars Technica · AI<br>`rss-ars-ai` | [列表](https://arstechnica.com/ai/feed/) | 精选 | 2026-10-08 | 20 |
-| The Decoder<br>`rss-the-decoder` | [列表](https://the-decoder.com/feed/) | 精选 | 2026-10-07 | 10 |
-| MIT Technology Review · AI<br>`rss-mit-tr-ai` | [列表](https://www.technologyreview.com/topic/artificial-intelligence/feed) | 精选 | 2026-10-05 | 10 |
-| Cartoon Brew（动画工业·AI in animation）<br>`rss-cartoon-brew` | [列表](https://www.cartoonbrew.com/feed) | 精选 | 2026-10-07 | 20 |
+| 智东西<br>`rss-zhidx` | [列表](https://zhidx.com/rss) | 精选 | 2026-10-08 | 13 |
+| 开源中国<br>`rss-oschina` | [列表](https://www.oschina.net/news/rss) | 精选 | 2026-10-08 | 4 |
+| 钛媒体<br>`rss-tmtpost` | [列表](https://www.tmtpost.com/rss.xml) | 精选 | 2026-10-08 | 2 |
+| cnBeta<br>`rss-cnbeta` | [列表](https://www.cnbeta.com.tw/backend.php) | 精选 | 2026-10-08 | 20 |
+| 我爱计算机视觉 · 公开公众号 RSS<br>`rss-wechat-cv` | [列表](https://wechat2rss.xlab.app/feed/b81ffcfff1107b5265cd7e39de610dc7ca72caf4.xml) | 精选 | 2026-10-04 | 9 |
+| 新智元 · 公开公众号 RSS<br>`rss-wechat-xinzhiyuan` | [列表](https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml) | 精选 | 2026-10-06 | 1 |
+| 机器之心 · 公开公众号 RSS<br>`rss-wechat-jiqizhixin` | [列表](https://wechat2rss.bestblogs.dev/feed/8d97af31b0de9e48da74558af128a4673d78c9a3.xml) | 精选 | 2026-10-07 | 2 |
+| 机器之心SOTA模型 · 公开公众号 RSS<br>`rss-wechat-jiqizhixin-sota` | [列表](https://wechat2rss.bestblogs.dev/feed/2f520471856d56c7b3a95cd09eb777149b32828a.xml) | 精选 | 2026-09-30 | 9 |
+| 腾讯混元 · 公开公众号 RSS<br>`rss-wechat-tencent-hunyuan` | [列表](https://wechat2rss.bestblogs.dev/feed/306ce19a1ca590c9c2df781789e828d1acfa1356.xml) | 精选 | 2026-09-22 | 1 |
+| 通义实验室 · 公开公众号 RSS<br>`rss-wechat-tongyi` | [列表](https://wechat2rss.bestblogs.dev/feed/4ebee6222ae08705b8aabc9116f0defbcb6b17c6.xml) | 精选 | 2026-07-20 | 0 |
+| 阶跃StepFun · 公开公众号 RSS<br>`rss-wechat-stepfun` | [列表](https://wechat2rss.bestblogs.dev/feed/3e2714d06aa36142e8ed6b3f4e5cf9090a069dd2.xml) | 精选 | 2026-09-15 | 1 |
+
+## 影视、音频与 AI 媒体社区（45）
+
+| 信源 / ID | 入口 | 参与方式 | 最近匹配日期 | 本次近 30 天 |
+|---|---|---|---|---:|
+| The Verge · AI<br>`rss-the-verge-ai` | [列表](https://www.theverge.com/rss/ai-artificial-intelligence/index.xml) | 精选 | 2026-10-07 | 1 |
+| TechCrunch · AI<br>`rss-techcrunch-ai` | [列表](https://techcrunch.com/category/artificial-intelligence/feed/) | 精选 | 2026-10-07 | 1 |
+| Ars Technica · AI<br>`rss-ars-ai` | [列表](https://arstechnica.com/ai/feed/) | 精选 | 2026-10-07 | 1 |
+| The Decoder<br>`rss-the-decoder` | [列表](https://the-decoder.com/feed/) | 精选 | 2026-10-07 | 4 |
+| MIT Technology Review · AI<br>`rss-mit-tr-ai` | [列表](https://www.technologyreview.com/topic/artificial-intelligence/feed) | 精选 | 2026-10-05 | 1 |
+| Cartoon Brew（动画工业·AI in animation）<br>`rss-cartoon-brew` | [列表](https://www.cartoonbrew.com/feed) | 精选 | 2026-10-06 | 1 |
 | Reddit r/aivideo（视频生成社区）<br>`rss-reddit-aivideo` | [列表](https://www.reddit.com/r/aivideo/.rss) | 精选 | 2026-10-08 | 23 |
-| No Film School<br>`rss-no-film-school` | [列表](https://nofilmschool.com/feeds/content-types/article.rss) | 精选 | 2026-10-07 | 30 |
-| CineD<br>`rss-cined` | [列表](https://www.cined.com/feed/) | 精选 | 2026-10-07 | 3 |
+| No Film School<br>`rss-no-film-school` | [列表](https://nofilmschool.com/feeds/content-types/article.rss) | 精选 | 2026-10-07 | 4 |
+| CineD<br>`rss-cined` | [列表](https://www.cined.com/feed/) | 精选 | 2026-10-07 | 1 |
 | 80 Level<br>`rss-80lv` | [列表](https://80.lv/feed) | 精选 | 2026-10-07 | 2 |
-| befores & afters<br>`rss-befores-afters` | [列表](https://beforesandafters.com/feed/) | 精选 | 2026-10-07 | 1 |
-| fxguide<br>`rss-fxguide` | [列表](https://www.fxguide.com/feed/) | 精选 | 2026-10-06 | 1 |
+| befores & afters<br>`rss-befores-afters` | [列表](https://beforesandafters.com/feed/) | 精选 | 本次未匹配 | 0 |
+| fxguide<br>`rss-fxguide` | [列表](https://www.fxguide.com/feed/) | 精选 | 2026-08-28 | 0 |
 | VFX Voice<br>`rss-vfxvoice` | [列表](https://vfxvoice.com/feed/) | 精选 | 本次未匹配 | 0 |
-| Animation Magazine<br>`rss-animation-magazine` | [列表](https://www.animationmagazine.net/feed/) | 精选 | 2026-10-07 | 8 |
+| Animation Magazine<br>`rss-animation-magazine` | [列表](https://www.animationmagazine.net/feed/) | 精选 | 本次未匹配 | 0 |
 | ProVideo Coalition<br>`rss-provideo-coalition` | [列表](https://www.provideocoalition.com/feed/) | 精选 | 2026-10-06 | 2 |
 | RedShark News<br>`rss-redshark` | [列表](https://www.redsharknews.com/rss.xml) | 精选 | 2026-10-06 | 2 |
 | Videomaker<br>`rss-videomaker` | [列表](https://www.videomaker.com/feed/) | 精选 | 2026-09-24 | 1 |
@@ -180,12 +211,27 @@ Runway 列表在 Next.js Flight 的 `posts` 数组中；已修复原解析器遇
 | Deadline · AI<br>`rss-deadline-ai` | [列表](https://deadline.com/tag/artificial-intelligence/feed/) | 精选 | 2026-10-02 | 6 |
 | The Hollywood Reporter · AI<br>`rss-hollywood-reporter-ai` | [列表](https://www.hollywoodreporter.com/t/artificial-intelligence/feed/) | 精选 | 2026-09-28 | 1 |
 | IndieWire · AI<br>`rss-indiewire-ai` | [列表](https://www.indiewire.com/t/artificial-intelligence/feed/) | 精选 | 2026-09-19 | 1 |
-| Fstoppers<br>`rss-fstoppers` | [列表](https://fstoppers.com/feed) | 精选 | 2026-10-06 | 3 |
+| Fstoppers<br>`rss-fstoppers` | [列表](https://fstoppers.com/feed) | 精选 | 2026-10-06 | 2 |
 | DIYPhotography<br>`rss-diy-photography` | [列表](https://www.diyphotography.net/feed/) | 精选 | 本次未匹配 | 0 |
-| Creative Bloq<br>`rss-creative-bloq` | [列表](https://www.creativebloq.com/feeds.xml) | 精选 | 2026-10-07 | 3 |
+| Creative Bloq<br>`rss-creative-bloq` | [列表](https://www.creativebloq.com/feeds.xml) | 精选 | 2026-10-08 | 2 |
 | Digital Camera World<br>`rss-digital-camera-world` | [列表](https://www.digitalcameraworld.com/feeds.xml) | 精选 | 2026-10-07 | 1 |
 | 量子位<br>`rss-qbitai` | [列表](https://www.qbitai.com/feed) | 精选 | 2026-10-07 | 1 |
 | IT之家<br>`rss-ithome` | [列表](https://www.ithome.com/rss/) | 精选 | 2026-10-08 | 13 |
 | 极客公园<br>`rss-geekpark` | [列表](https://www.geekpark.net/rss) | 精选 | 2026-10-08 | 20 |
 | 少数派<br>`rss-sspai` | [列表](https://sspai.com/feed) | 精选 | 本次未匹配 | 0 |
 | 雷峰网<br>`rss-leiphone` | [列表](https://www.leiphone.com/feed) | 精选 | 2026-10-07 | 5 |
+| postPerspective<br>`rss-postperspective` | [列表](https://postperspective.com/feed/) | 精选 | 2026-10-07 | 3 |
+| Post Magazine<br>`rss-postmagazine` | [列表](https://www.postmagazine.com/feed/) | 精选 | 2026-09-09 | 1 |
+| Filmmaker Magazine<br>`rss-filmmakermagazine` | [列表](https://filmmakermagazine.com/feed/) | 精选 | 2026-06-17 | 0 |
+| Filmmakers Academy<br>`rss-filmmakersacademy` | [列表](https://www.filmmakersacademy.com/feed/) | 精选 | 2026-10-07 | 1 |
+| Creative Review<br>`rss-creative-review` | [列表](https://www.creativereview.co.uk/feed/) | 精选 | 2026-10-05 | 1 |
+| CG Channel<br>`rss-cgchannel` | [列表](https://www.cgchannel.com/feed/) | 精选 | 2026-10-06 | 2 |
+| CGPress<br>`rss-cgpress` | [列表](https://cgpress.org/feed) | 精选 | 2026-10-06 | 2 |
+| BlenderNation<br>`rss-blendernation` | [列表](https://www.blendernation.com/feed/) | 精选 | 2026-10-08 | 2 |
+| Blender Artists<br>`rss-blenderartists` | [列表](https://blenderartists.org/latest.rss) | 精选 | 2026-10-07 | 2 |
+| Production Expert<br>`rss-productionexpert` | [列表](https://www.production-expert.com/production-expert-1?format=rss) | 精选 | 2026-10-07 | 3 |
+| Rekkerd<br>`rss-rekkerd` | [列表](https://rekkerd.org/feed/) | 精选 | 2026-10-07 | 7 |
+| CDM<br>`rss-cdm` | [列表](https://cdm.link/feed/) | 精选 | 2026-09-27 | 1 |
+| MusicRadar<br>`rss-musicradar` | [列表](https://www.musicradar.com/feeds.xml) | 精选 | 2026-10-06 | 2 |
+| Music Business Worldwide<br>`rss-musicbusinessworldwide` | [列表](https://www.musicbusinessworldwide.com/feed/) | 精选 | 2026-10-07 | 3 |
+| PetaPixel<br>`rss-petapixel` | [列表](https://petapixel.com/feed/) | 精选 | 2026-10-07 | 4 |

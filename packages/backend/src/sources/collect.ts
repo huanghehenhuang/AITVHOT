@@ -35,7 +35,10 @@ export function noiseFiltered(c: Candidate, source: SourceRow): boolean {
   const hay = `${title}\n${(c.excerpt ?? "").toLowerCase()}`;
   // Broad feeds can require a literal topic marker before detail reads and model processing.
   // A drop-rule exemption does not bypass this source's explicit topic scope.
-  if (f.requireMarkers?.length && !has(hay, f.requireMarkers)) return true;
+  // Short product names need token boundaries: "udio" must not match every "audio" article,
+  // and "ai" must not match "paid" or "air". Chinese text next to an ASCII name is allowed.
+  const wordsMatched = f.requireWords?.some((word: string) => new RegExp(`(^|[^a-z0-9_])${word.toLowerCase()}(?=$|[^a-z0-9_])`).test(hay)) ?? false;
+  if ((f.requireMarkers?.length || f.requireWords?.length) && !has(hay, f.requireMarkers) && !wordsMatched) return true;
   if (has(hay, f.keepIfMatches)) return false;
   return has(title, f.dropMarkersTitleOnly) || has(hay, f.dropMarkers);
 }

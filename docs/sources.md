@@ -37,6 +37,8 @@
 
 宽泛媒体可配置 `ingestNoiseFilter.requireMarkers`，例如 `{ "requireMarkers": ["视频", "图像", "Veo", "Sora"] }`：标题或摘要至少包含一个不区分大小写的字面关键词，才进入详情补齐、入库和模型处理。不启用时保持原行为；`keepIfMatches` 只豁免排除词，不能绕过必需关键词。这是降低接入噪声的来源范围规则，不替代模型预筛，也不改变精选门槛。
 
+短名称可用 `requireWords`，例如 `{ "requireMarkers": ["人工智能", "generative"], "requireWords": ["ai", "udio"] }`。两个列表合起来至少命中一项即可；`requireWords` 按 ASCII 字母、数字和下划线判断词边界，不区分大小写，支持英文名称旁紧接中文。`AI影视`、`Udio 2.0` 可以匹配，`air`、`paid`、`audio` 不会误匹配。词列表必须非空且仅包含 ASCII 字母、数字、连字符或下划线；字面关键词仍沿用原有子串语义。
+
 ### web_list
 
 支持普通 CSS 选择器，`div` 列表也能采集。关键是 `itemSelector` 要选中**每条新闻**，而不是包住所有新闻的容器。例如：

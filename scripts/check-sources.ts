@@ -6,6 +6,7 @@ import { fetchRss } from "@aihot/backend/sources/rss";
 import { fetchWebList, allowed } from "@aihot/backend/sources/web-list";
 import { fetchJsonList } from "@aihot/backend/sources/json-list";
 import { noiseFiltered } from "@aihot/backend/sources/collect";
+import { sourceIdentity } from "@aihot/backend/sources/identity";
 import type { Candidate, SourceRow } from "@aihot/backend/sources/types";
 import { closeDb } from "@aihot/backend/db";
 
@@ -20,7 +21,7 @@ for (const source of sources) {
   const url = new URL(source.config.feedUrl ?? source.config.url);
   if (url.protocol !== "https:" || url.hostname === "r.jina.ai" || url.username || url.password) throw new Error(`Source is not a direct public HTTPS list: ${source.id}`);
   url.searchParams.sort();
-  const key = url.toString().replace(/\/$/, "");
+  const key = sourceIdentity(source.kind, source.config)!;
   if (urls.has(key)) throw new Error(`Duplicate source URL: ${source.id}`);
   urls.add(key);
 }

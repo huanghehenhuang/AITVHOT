@@ -1,55 +1,63 @@
 {
-  "checkedAt": "2026-10-08T04:30:59.393Z",
-  "method": "Public HTTP captures parsed by repository collectors; no database writes or paid processing",
-  "total": 122,
+  "checkedAt": "2026-10-08T07:45:52.279Z",
+  "method": "Public HTTP captures parsed by repository collectors; unchanged legacy sources retain their earlier per-source timestamp; no database writes or paid processing",
+  "total": 162,
   "sources": [
     {
       "id": "rss-openai-news",
       "items": 1255,
-      "scoped": 1255,
-      "dated": 1255,
-      "recent30Days": 74,
-      "latest": "2026-10-07T12:00:00.000Z",
-      "sha256": "8da9492324b004b6689d12a3a77a4fddfcf1d0075376e0578e39b49dfbcd6b09",
+      "scoped": 96,
+      "dated": 96,
+      "recent30Days": 6,
+      "latest": "2026-09-23T12:00:00.000Z",
+      "sha256": "3111464a4ec54a964f68c09e85101dd8020722dd86ed44967f1d3c913355b92a",
       "finalUrl": "https://openai.com/news/rss.xml",
       "httpStatus": 200,
-      "endpoint": "https://openai.com/news/rss.xml"
+      "endpoint": "https://openai.com/news/rss.xml",
+      "checkedAt": "2026-10-08T07:41:39.583Z",
+      "group": "official"
     },
     {
       "id": "rss-google-ai-blog",
       "items": 20,
-      "scoped": 20,
-      "dated": 20,
-      "recent30Days": 16,
-      "latest": "2026-10-07T12:00:00.000Z",
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 1,
+      "latest": "2026-09-09T16:00:00.000Z",
       "sha256": "1244ba8efc82377d897cca9d3781de3db7926b7fcb42cd2bf944f24e7ec9db8c",
       "finalUrl": "https://blog.google/innovation-and-ai/technology/ai/rss/",
       "httpStatus": 200,
-      "endpoint": "https://blog.google/technology/ai/rss/"
+      "endpoint": "https://blog.google/technology/ai/rss/",
+      "checkedAt": "2026-10-08T07:41:42.985Z",
+      "group": "official"
     },
     {
       "id": "rss-deepmind",
       "items": 100,
-      "scoped": 100,
-      "dated": 100,
-      "recent30Days": 8,
-      "latest": "2026-10-06T19:57:04.000Z",
+      "scoped": 18,
+      "dated": 18,
+      "recent30Days": 1,
+      "latest": "2026-09-23T15:25:14.000Z",
       "sha256": "f43bba6893a2e67dcc8365de09d6e3e5ff5c77ebab67e20b3b5cdc9c8fa4b0f1",
       "finalUrl": "https://deepmind.google/blog/rss.xml",
       "httpStatus": 200,
-      "endpoint": "https://deepmind.google/blog/rss.xml"
+      "endpoint": "https://deepmind.google/blog/rss.xml",
+      "checkedAt": "2026-10-08T07:41:40.381Z",
+      "group": "official"
     },
     {
       "id": "rss-hugging-face",
       "items": 874,
-      "scoped": 874,
-      "dated": 874,
-      "recent30Days": 16,
-      "latest": "2026-10-07T16:54:33.000Z",
+      "scoped": 63,
+      "dated": 63,
+      "recent30Days": 1,
+      "latest": "2026-09-30T00:00:00.000Z",
       "sha256": "1b5f063cfe4030aeee376e8f80f92a7969bc9e98d62e1fd0c5215f1443d76d3c",
       "finalUrl": "https://huggingface.co/blog/feed.xml",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/blog/feed.xml"
+      "endpoint": "https://huggingface.co/blog/feed.xml",
+      "checkedAt": "2026-10-08T07:41:39.679Z",
+      "group": "official"
     },
     {
       "id": "rss-comfyui-releases",
@@ -61,79 +69,93 @@
       "sha256": "21037509d5d66eebe3ea4ac92666dd1fd791ac19f89471579a2ac95a8fb78910",
       "finalUrl": "https://github.com/Comfy-Org/ComfyUI/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/comfyanonymous/ComfyUI/releases.atom"
+      "endpoint": "https://github.com/comfyanonymous/ComfyUI/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-the-verge-ai",
       "items": 10,
-      "scoped": 10,
-      "dated": 10,
-      "recent30Days": 10,
-      "latest": "2026-10-07T19:10:42.000Z",
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-07T17:46:44.000Z",
       "sha256": "9cf1b40b07bb193935ab4421f07eca331aacb4ae05b6307d8fb666365050627d",
       "finalUrl": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
       "httpStatus": 200,
-      "endpoint": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+      "endpoint": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "checkedAt": "2026-10-08T07:41:39.821Z",
+      "group": "media"
     },
     {
       "id": "rss-techcrunch-ai",
       "items": 20,
-      "scoped": 20,
-      "dated": 20,
-      "recent30Days": 20,
-      "latest": "2026-10-07T20:48:45.000Z",
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-07T14:00:00.000Z",
       "sha256": "91febacb6a65ec6d8b68c2b51c8879fd9aca4a34d31182b4ac5ae1193824cfe4",
       "finalUrl": "https://techcrunch.com/category/artificial-intelligence/feed/",
       "httpStatus": 200,
-      "endpoint": "https://techcrunch.com/category/artificial-intelligence/feed/"
+      "endpoint": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "checkedAt": "2026-10-08T07:41:39.286Z",
+      "group": "media"
     },
     {
       "id": "rss-ars-ai",
       "items": 20,
-      "scoped": 20,
-      "dated": 20,
-      "recent30Days": 20,
-      "latest": "2026-10-08T00:00:24.000Z",
-      "sha256": "23d3d9a7c7d66e076a1dfa2af6b490e195c866e340146cee680a5f143d97ee63",
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-07T17:57:39.000Z",
+      "sha256": "dbf3bcea360334d2a871fb86efe3db6de454ffbea6a5d4cbf2de4021a57f94ea",
       "finalUrl": "https://arstechnica.com/ai/feed/",
       "httpStatus": 200,
-      "endpoint": "https://arstechnica.com/ai/feed/"
+      "endpoint": "https://arstechnica.com/ai/feed/",
+      "checkedAt": "2026-10-08T07:41:42.560Z",
+      "group": "media"
     },
     {
       "id": "rss-the-decoder",
       "items": 10,
-      "scoped": 10,
-      "dated": 10,
-      "recent30Days": 10,
-      "latest": "2026-10-07T19:06:40.000Z",
+      "scoped": 4,
+      "dated": 4,
+      "recent30Days": 4,
+      "latest": "2026-10-07T17:50:17.000Z",
       "sha256": "6c909ad608db4e313dafc11e5a61e4f5c74972f936a4242013a98063b82b1b7b",
       "finalUrl": "https://the-decoder.com/feed/",
       "httpStatus": 200,
-      "endpoint": "https://the-decoder.com/feed/"
+      "endpoint": "https://the-decoder.com/feed/",
+      "checkedAt": "2026-10-08T07:41:44.430Z",
+      "group": "media"
     },
     {
       "id": "rss-mit-tr-ai",
       "items": 10,
-      "scoped": 10,
-      "dated": 10,
-      "recent30Days": 10,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
       "latest": "2026-10-05T15:47:52.000Z",
       "sha256": "721e01c5c87da648f1ba857de28c467935a12033d449395d9d604b05c67ed072",
       "finalUrl": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
       "httpStatus": 200,
-      "endpoint": "https://www.technologyreview.com/topic/artificial-intelligence/feed"
+      "endpoint": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+      "checkedAt": "2026-10-08T07:41:42.439Z",
+      "group": "media"
     },
     {
       "id": "rss-cartoon-brew",
       "items": 20,
-      "scoped": 20,
-      "dated": 20,
-      "recent30Days": 20,
-      "latest": "2026-10-07T14:09:58.000Z",
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-06T14:08:51.000Z",
       "sha256": "28c982a0309aa9f2772e7e64159d70bebac949e3e23ae98364ed7265f9b2ee50",
       "finalUrl": "https://www.cartoonbrew.com/feed",
       "httpStatus": 200,
-      "endpoint": "https://www.cartoonbrew.com/feed"
+      "endpoint": "https://www.cartoonbrew.com/feed",
+      "checkedAt": "2026-10-08T07:41:43.603Z",
+      "group": "media"
     },
     {
       "id": "rss-reddit-aivideo",
@@ -145,7 +167,9 @@
       "sha256": "2cc32e007a18298053d8d2914c613bc4c4df7e33373432b613e7a316bab91dc7",
       "finalUrl": "https://www.reddit.com/r/aivideo/.rss",
       "httpStatus": 200,
-      "endpoint": "https://www.reddit.com/r/aivideo/.rss"
+      "endpoint": "https://www.reddit.com/r/aivideo/.rss",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "media"
     },
     {
       "id": "rss-comfy-blog",
@@ -157,7 +181,9 @@
       "sha256": "c6d6a36ba6fa694f3350643eebb49a30295cbe61a151f3ad5e7bde892458068c",
       "finalUrl": "https://blog.comfy.org/feed",
       "httpStatus": 200,
-      "endpoint": "https://blog.comfy.org/feed"
+      "endpoint": "https://blog.comfy.org/feed",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "rss-fal-blog",
@@ -169,7 +195,9 @@
       "sha256": "fa30264a5e27a9c73139f70e9a05d485cb199e6d6c7c71abc093f4ab5f0e5d99",
       "finalUrl": "https://blog.fal.ai/rss/",
       "httpStatus": 200,
-      "endpoint": "https://blog.fal.ai/rss/"
+      "endpoint": "https://blog.fal.ai/rss/",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "rss-stability-news",
@@ -181,7 +209,9 @@
       "sha256": "169c5d1c30c0d39869bde47ba84649b15157461c59c7ceb953462222668cda1e",
       "finalUrl": "https://stability.ai/news-updates?format=rss",
       "httpStatus": 200,
-      "endpoint": "https://stability.ai/news-updates?format=rss"
+      "endpoint": "https://stability.ai/news-updates?format=rss",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "rss-elevenlabs-blog",
@@ -193,7 +223,9 @@
       "sha256": "2fcac021e7d8105168f2182c54c10bc974dce8ccc30fa654328b2ff3ba75cfa9",
       "finalUrl": "https://elevenlabs.io/blog/rss.xml",
       "httpStatus": 200,
-      "endpoint": "https://elevenlabs.io/blog/rss.xml"
+      "endpoint": "https://elevenlabs.io/blog/rss.xml",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "rss-replicate-blog",
@@ -205,7 +237,9 @@
       "sha256": "75936c2503fed9ed736f4447d9e68aa2afe38a60d2a534263ab5add4782bf113",
       "finalUrl": "https://replicate.com/blog/rss",
       "httpStatus": 200,
-      "endpoint": "https://replicate.com/blog/rss"
+      "endpoint": "https://replicate.com/blog/rss",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "rss-ltx2-releases",
@@ -217,7 +251,9 @@
       "sha256": "d2f8ed98cf6a3485fd52b45101fa139944e15cd919ece71d5731bc7c9743e6bb",
       "finalUrl": "https://github.com/Lightricks/LTX-2/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/Lightricks/LTX-2/releases.atom"
+      "endpoint": "https://github.com/Lightricks/LTX-2/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-diffusers-releases",
@@ -229,7 +265,9 @@
       "sha256": "ad478aacf5964a5dd7846a0f02566a5d03d511b9cd9f672cdb1c1fc79ead3777",
       "finalUrl": "https://github.com/huggingface/diffusers/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/huggingface/diffusers/releases.atom"
+      "endpoint": "https://github.com/huggingface/diffusers/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-invokeai-releases",
@@ -241,7 +279,9 @@
       "sha256": "4886154cce86d1f03edb3f56cd8ef3d1deb562297f64451c4471a5601f429f4c",
       "finalUrl": "https://github.com/invoke-ai/InvokeAI/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/invoke-ai/InvokeAI/releases.atom"
+      "endpoint": "https://github.com/invoke-ai/InvokeAI/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-fish-speech-releases",
@@ -253,19 +293,23 @@
       "sha256": "a7535e694552d150a60e79ccc569ba64cf1893dfc79bb91eb141d7a48574378a",
       "finalUrl": "https://github.com/fishaudio/fish-speech/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/fishaudio/fish-speech/releases.atom"
+      "endpoint": "https://github.com/fishaudio/fish-speech/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-no-film-school",
       "items": 30,
-      "scoped": 30,
-      "dated": 30,
-      "recent30Days": 30,
+      "scoped": 4,
+      "dated": 4,
+      "recent30Days": 4,
       "latest": "2026-10-07T20:19:15.000Z",
       "sha256": "4370af7d3d30a13b33b4dc44dfde3ba406162891e0559789c0dc345cb90532c6",
       "finalUrl": "https://nofilmschool.com/feeds/content-types/article.rss",
       "httpStatus": 200,
-      "endpoint": "https://nofilmschool.com/feeds/content-types/article.rss"
+      "endpoint": "https://nofilmschool.com/feeds/content-types/article.rss",
+      "checkedAt": "2026-10-08T07:41:42.983Z",
+      "group": "media"
     },
     {
       "id": "web-bfl-blog",
@@ -277,7 +321,9 @@
       "sha256": "f82fe41790d021517805918d2fd1bca203b4444be5b3ede8714929563d5ac509",
       "finalUrl": "https://bfl.ai/blog",
       "httpStatus": 200,
-      "endpoint": "https://bfl.ai/blog"
+      "endpoint": "https://bfl.ai/blog",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "rss-midjourney",
@@ -289,7 +335,9 @@
       "sha256": "ee09b49a05d9af7af1b80db20f6b1287674fd10ce57580ee2edb973eda0e634d",
       "finalUrl": "https://updates.midjourney.com/rss/",
       "httpStatus": 200,
-      "endpoint": "https://updates.midjourney.com/rss/"
+      "endpoint": "https://updates.midjourney.com/rss/",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "rss-curious-refuge",
@@ -301,7 +349,9 @@
       "sha256": "598966a3c6bf736334a8b962aab8c5a3280860648ab32f544523a6bd1229751b",
       "finalUrl": "https://curiousrefuge.com/blog?format=rss",
       "httpStatus": 200,
-      "endpoint": "https://curiousrefuge.com/blog?format=rss"
+      "endpoint": "https://curiousrefuge.com/blog?format=rss",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "creators"
     },
     {
       "id": "rss-kapwing",
@@ -313,7 +363,9 @@
       "sha256": "c984960aa95ccc0bfab15e21839b6c7524be9f9784b79a66dfaeea5e8bf3135b",
       "finalUrl": "https://www.kapwing.com/resources/rss/",
       "httpStatus": 200,
-      "endpoint": "https://www.kapwing.com/resources/rss/"
+      "endpoint": "https://www.kapwing.com/resources/rss/",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "rss-freepik",
@@ -325,19 +377,23 @@
       "sha256": "fc3ebabfa4e9d2afd87617ee5c0bf46c1344f2ecac60de2825b9f91f28124565",
       "finalUrl": "https://www.magnific.com/blog/rss/",
       "httpStatus": 200,
-      "endpoint": "https://www.magnific.com/blog/rss/"
+      "endpoint": "https://www.magnific.com/blog/rss/",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "rss-cined",
       "items": 20,
-      "scoped": 3,
-      "dated": 3,
-      "recent30Days": 3,
-      "latest": "2026-10-07T15:49:35.000Z",
-      "sha256": "26a0df623004598ab7ac88743290c9ad8037cb00102b13d3cad4607593591240",
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-07T10:21:27.000Z",
+      "sha256": "afcbc85802433da802c3c920905ff9872c4470fb3f93ced638cd86a46ff4cdab",
       "finalUrl": "https://www.cined.com/feed/",
       "httpStatus": 200,
-      "endpoint": "https://www.cined.com/feed/"
+      "endpoint": "https://www.cined.com/feed/",
+      "checkedAt": "2026-10-08T07:41:46.481Z",
+      "group": "media"
     },
     {
       "id": "rss-80lv",
@@ -346,34 +402,41 @@
       "dated": 2,
       "recent30Days": 2,
       "latest": "2026-10-07T21:09:00.000Z",
-      "sha256": "f8768a2db0b6554b8af3739b4964ab79a87ea107356ca4ec941147d9c00e4b23",
+      "sha256": "e62a7c31885a8dc82b8ac1e6de12f40a5c6374ceed5dbd3a175a45f0503e0dd7",
       "finalUrl": "https://80.lv/feed",
       "httpStatus": 200,
-      "endpoint": "https://80.lv/feed"
+      "endpoint": "https://80.lv/feed",
+      "checkedAt": "2026-10-08T07:41:45.763Z",
+      "group": "media"
     },
     {
       "id": "rss-befores-afters",
       "items": 10,
-      "scoped": 1,
-      "dated": 1,
-      "recent30Days": 1,
-      "latest": "2026-10-07T09:11:03.000Z",
+      "scoped": 0,
+      "dated": 0,
+      "recent30Days": 0,
+      "latest": null,
       "sha256": "c1329b6a8b1c4b37dc1a42425da557ba60bef9355ecb3bc5ea3a9d80fa6952f5",
       "finalUrl": "https://beforesandafters.com/feed/",
       "httpStatus": 200,
-      "endpoint": "https://beforesandafters.com/feed/"
+      "endpoint": "https://beforesandafters.com/feed/",
+      "note": "Current list has no topic-matched items",
+      "checkedAt": "2026-10-08T07:41:45.828Z",
+      "group": "media"
     },
     {
       "id": "rss-fxguide",
       "items": 15,
-      "scoped": 4,
-      "dated": 4,
-      "recent30Days": 1,
-      "latest": "2026-10-06T07:58:39.000Z",
+      "scoped": 3,
+      "dated": 3,
+      "recent30Days": 0,
+      "latest": "2026-08-28T15:43:50.000Z",
       "sha256": "910cb63c354d6dbe09be7b94a988c0850114f7defa18ada989ac8db096ab2030",
       "finalUrl": "https://www.fxguide.com/feed/",
       "httpStatus": 200,
-      "endpoint": "https://www.fxguide.com/feed/"
+      "endpoint": "https://www.fxguide.com/feed/",
+      "checkedAt": "2026-10-08T07:41:45.728Z",
+      "group": "media"
     },
     {
       "id": "rss-vfxvoice",
@@ -384,21 +447,26 @@
       "latest": null,
       "sha256": "6913a9d1ec1b062851aad02414ec28971e21ac14f11f32412c814f182578574e",
       "finalUrl": "https://vfxvoice.com/feed/",
-      "note": "Current list has no topic-matched items",
       "httpStatus": 200,
-      "endpoint": "https://vfxvoice.com/feed/"
+      "endpoint": "https://vfxvoice.com/feed/",
+      "note": "Current list has no topic-matched items",
+      "checkedAt": "2026-10-08T07:41:46.514Z",
+      "group": "media"
     },
     {
       "id": "rss-animation-magazine",
       "items": 20,
-      "scoped": 8,
-      "dated": 8,
-      "recent30Days": 8,
-      "latest": "2026-10-07T19:41:34.000Z",
+      "scoped": 0,
+      "dated": 0,
+      "recent30Days": 0,
+      "latest": null,
       "sha256": "2076b676799caa634a9fe10c679571d0a14f29531ea0d6c6796a530649a38ae6",
       "finalUrl": "https://www.animationmagazine.net/feed/",
       "httpStatus": 200,
-      "endpoint": "https://www.animationmagazine.net/feed/"
+      "endpoint": "https://www.animationmagazine.net/feed/",
+      "note": "Current list has no topic-matched items",
+      "checkedAt": "2026-10-08T07:41:47.208Z",
+      "group": "media"
     },
     {
       "id": "rss-provideo-coalition",
@@ -410,7 +478,9 @@
       "sha256": "2beb62e26901e7868927715fab4cb7c7aefdd1237e35a67c3bea981ba204aea8",
       "finalUrl": "https://www.provideocoalition.com/feed/",
       "httpStatus": 200,
-      "endpoint": "https://www.provideocoalition.com/feed/"
+      "endpoint": "https://www.provideocoalition.com/feed/",
+      "checkedAt": "2026-10-08T07:41:49.253Z",
+      "group": "media"
     },
     {
       "id": "rss-redshark",
@@ -422,7 +492,9 @@
       "sha256": "b7d778661b731ba333b56f45001629dba8b6e7ea835341060ddac48f4c2dd463",
       "finalUrl": "https://www.redsharknews.com/rss.xml",
       "httpStatus": 200,
-      "endpoint": "https://www.redsharknews.com/rss.xml"
+      "endpoint": "https://www.redsharknews.com/rss.xml",
+      "checkedAt": "2026-10-08T07:41:48.581Z",
+      "group": "media"
     },
     {
       "id": "rss-videomaker",
@@ -431,10 +503,12 @@
       "dated": 1,
       "recent30Days": 1,
       "latest": "2026-09-24T02:27:35.000Z",
-      "sha256": "a35a81f8096980b86294b3eed6ba0e187729eb79f037a54f40b169f1ab77935e",
+      "sha256": "33e5a4dd1baec2f605be1a83c681d21838086c52ae54a246cdb5a3e1864304f6",
       "finalUrl": "https://www.videomaker.com/feed/",
       "httpStatus": 200,
-      "endpoint": "https://www.videomaker.com/feed/"
+      "endpoint": "https://www.videomaker.com/feed/",
+      "checkedAt": "2026-10-08T07:41:49.098Z",
+      "group": "media"
     },
     {
       "id": "rss-variety-ai",
@@ -446,7 +520,9 @@
       "sha256": "d6c8719440f9aa25f31bd5d4f3e30a0a824316880d82e9e93e5623b03ad968d4",
       "finalUrl": "https://variety.com/t/artificial-intelligence/feed/",
       "httpStatus": 200,
-      "endpoint": "https://variety.com/t/artificial-intelligence/feed/"
+      "endpoint": "https://variety.com/t/artificial-intelligence/feed/",
+      "checkedAt": "2026-10-08T07:41:49.591Z",
+      "group": "media"
     },
     {
       "id": "rss-deadline-ai",
@@ -458,7 +534,9 @@
       "sha256": "f5f0c286dab1debe958b367b6a112a644dd5bad60108208c5e94b30d2a073701",
       "finalUrl": "https://deadline.com/tag/artificial-intelligence/feed/",
       "httpStatus": 200,
-      "endpoint": "https://deadline.com/tag/artificial-intelligence/feed/"
+      "endpoint": "https://deadline.com/tag/artificial-intelligence/feed/",
+      "checkedAt": "2026-10-08T07:41:50.522Z",
+      "group": "media"
     },
     {
       "id": "rss-hollywood-reporter-ai",
@@ -470,7 +548,9 @@
       "sha256": "16effc86558f89ba938640bede90f626f2d4ef099408429aaa1aa766301fd3ab",
       "finalUrl": "https://www.hollywoodreporter.com/t/artificial-intelligence/feed/",
       "httpStatus": 200,
-      "endpoint": "https://www.hollywoodreporter.com/t/artificial-intelligence/feed/"
+      "endpoint": "https://www.hollywoodreporter.com/t/artificial-intelligence/feed/",
+      "checkedAt": "2026-10-08T07:41:49.656Z",
+      "group": "media"
     },
     {
       "id": "rss-indiewire-ai",
@@ -482,19 +562,23 @@
       "sha256": "0f3b7036b6f677d953071d1a16678c2599e91f27cc8583b5a03210c9d5c75bc6",
       "finalUrl": "https://www.indiewire.com/t/artificial-intelligence/feed/",
       "httpStatus": 200,
-      "endpoint": "https://www.indiewire.com/t/artificial-intelligence/feed/"
+      "endpoint": "https://www.indiewire.com/t/artificial-intelligence/feed/",
+      "checkedAt": "2026-10-08T07:41:51.542Z",
+      "group": "media"
     },
     {
       "id": "rss-fstoppers",
       "items": 30,
-      "scoped": 3,
-      "dated": 3,
-      "recent30Days": 3,
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 2,
       "latest": "2026-10-06T01:14:05.000Z",
-      "sha256": "c4973967d016e879d32ec5ef13d284dfa9f59aeae09d69248cf7bf756395e228",
+      "sha256": "81ef6c6efb97fd3c0251c5af2a192983899c587d6ba49d21c03ec6d9c6177279",
       "finalUrl": "https://fstoppers.com/feed",
       "httpStatus": 200,
-      "endpoint": "https://fstoppers.com/feed"
+      "endpoint": "https://fstoppers.com/feed",
+      "checkedAt": "2026-10-08T07:41:51.607Z",
+      "group": "media"
     },
     {
       "id": "rss-diy-photography",
@@ -505,21 +589,25 @@
       "latest": null,
       "sha256": "ad1e5d66b50d3ca81b54b02d90e6697addec1f78f7a92fc69b536d5570c3af41",
       "finalUrl": "https://www.diyphotography.net/feed/",
-      "note": "Current list has no topic-matched items",
       "httpStatus": 200,
-      "endpoint": "https://www.diyphotography.net/feed/"
+      "endpoint": "https://www.diyphotography.net/feed/",
+      "note": "Current list has no topic-matched items",
+      "checkedAt": "2026-10-08T07:41:51.821Z",
+      "group": "media"
     },
     {
       "id": "rss-creative-bloq",
       "items": 25,
-      "scoped": 3,
-      "dated": 3,
-      "recent30Days": 3,
-      "latest": "2026-10-07T17:17:08.000Z",
-      "sha256": "c300120874fe82ff357f5a0d5b5cca1dfc0a345596495efb7801a762e9e10f20",
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-08T07:00:00.000Z",
+      "sha256": "6a81639e4f322b3065e6f1ea2789626888098262371bb6dfec2d66d50634d46d",
       "finalUrl": "https://www.creativebloq.com/feeds.xml",
       "httpStatus": 200,
-      "endpoint": "https://www.creativebloq.com/feeds.xml"
+      "endpoint": "https://www.creativebloq.com/feeds.xml",
+      "checkedAt": "2026-10-08T07:41:52.165Z",
+      "group": "media"
     },
     {
       "id": "rss-digital-camera-world",
@@ -528,10 +616,12 @@
       "dated": 1,
       "recent30Days": 1,
       "latest": "2026-10-07T15:04:35.000Z",
-      "sha256": "f7ade6bf04b1a7a84e32fbe3fab10b1248b6d2f9e35049d2af434ec1e35bd0ba",
+      "sha256": "132efb796f2062ab5d280d0ae0525d30ddcef18560266332846e74e970e3c18e",
       "finalUrl": "https://www.digitalcameraworld.com/feeds.xml",
       "httpStatus": 200,
-      "endpoint": "https://www.digitalcameraworld.com/feeds.xml"
+      "endpoint": "https://www.digitalcameraworld.com/feeds.xml",
+      "checkedAt": "2026-10-08T07:41:52.330Z",
+      "group": "media"
     },
     {
       "id": "rss-qbitai",
@@ -543,7 +633,9 @@
       "sha256": "706ee228c3a0e82c9a94fb8611ff0293568c0477308d28dc47ba20da029e38a5",
       "finalUrl": "https://www.qbitai.com/feed",
       "httpStatus": 200,
-      "endpoint": "https://www.qbitai.com/feed"
+      "endpoint": "https://www.qbitai.com/feed",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "media"
     },
     {
       "id": "rss-ithome",
@@ -555,7 +647,9 @@
       "sha256": "ffa86bb97519dfba612cf244e01c054661c217ad9e70d34fb69f2f723a129ed7",
       "finalUrl": "https://www.ithome.com/rss/",
       "httpStatus": 200,
-      "endpoint": "https://www.ithome.com/rss/"
+      "endpoint": "https://www.ithome.com/rss/",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "media"
     },
     {
       "id": "rss-geekpark",
@@ -567,7 +661,9 @@
       "sha256": "8672d679ec5c83dc50789301bcb91d95970dcb9a3cdebc17f13b571154240869",
       "finalUrl": "https://www.geekpark.net/rss",
       "httpStatus": 200,
-      "endpoint": "https://www.geekpark.net/rss"
+      "endpoint": "https://www.geekpark.net/rss",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "media"
     },
     {
       "id": "rss-sspai",
@@ -580,7 +676,9 @@
       "finalUrl": "https://sspai.com/feed",
       "note": "Current list has no topic-matched items",
       "httpStatus": 200,
-      "endpoint": "https://sspai.com/feed"
+      "endpoint": "https://sspai.com/feed",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "media"
     },
     {
       "id": "rss-leiphone",
@@ -592,7 +690,9 @@
       "sha256": "0dffd29feb3af9d4c43416b498d25413ad47ccd015e47e83b91c1bcc0ef3fa05",
       "finalUrl": "https://www.leiphone.com/feed",
       "httpStatus": 200,
-      "endpoint": "https://www.leiphone.com/feed"
+      "endpoint": "https://www.leiphone.com/feed",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "media"
     },
     {
       "id": "rss-blender-news",
@@ -601,11 +701,13 @@
       "dated": 0,
       "recent30Days": 0,
       "latest": null,
-      "sha256": "14bad8457b1940ae1bffeaf8be7078145160fa3294ed5cf4e4380a17ed5d5001",
+      "sha256": "90d0a3c32bf7a264212d04da6c1938af2551991b3180e3db996335ebed8c2e8e",
       "finalUrl": "https://www.blender.org/feed/",
-      "note": "Current list has no topic-matched items",
       "httpStatus": 200,
-      "endpoint": "https://www.blender.org/feed/"
+      "endpoint": "https://www.blender.org/feed/",
+      "note": "Current list has no topic-matched items",
+      "checkedAt": "2026-10-08T07:41:53.339Z",
+      "group": "official"
     },
     {
       "id": "rss-blender-development",
@@ -614,11 +716,13 @@
       "dated": 0,
       "recent30Days": 0,
       "latest": null,
-      "sha256": "0798e7e0437836501d098cce5f40c4f3ee3f2735d4f9071f87f86c48534a667b",
+      "sha256": "a5af814a882b4597e2d2bfab5825ad877e094faf1714590655e303741a0dd4ef",
       "finalUrl": "https://code.blender.org/feed/",
-      "note": "Current list has no topic-matched items",
       "httpStatus": 200,
-      "endpoint": "https://code.blender.org/feed/"
+      "endpoint": "https://code.blender.org/feed/",
+      "note": "Current list has no topic-matched items",
+      "checkedAt": "2026-10-08T07:41:54.959Z",
+      "group": "official"
     },
     {
       "id": "rss-nvidia-generative-ai",
@@ -631,7 +735,9 @@
       "finalUrl": "https://blogs.nvidia.com/blog/category/generative-ai/feed/",
       "note": "Current list has no topic-matched items",
       "httpStatus": 200,
-      "endpoint": "https://blogs.nvidia.com/blog/category/generative-ai/feed/"
+      "endpoint": "https://blogs.nvidia.com/blog/category/generative-ai/feed/",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "rss-latentspace",
@@ -643,7 +749,9 @@
       "sha256": "789fa0db6a2ce6c3ddec2916bad9b4d21a877f06fab66cf88df768c6befa9615",
       "finalUrl": "https://www.latent.space/feed",
       "httpStatus": 200,
-      "endpoint": "https://www.latent.space/feed"
+      "endpoint": "https://www.latent.space/feed",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "creators"
     },
     {
       "id": "rss-stable-diffusion-art",
@@ -655,7 +763,9 @@
       "sha256": "f42d036c0637b92b76f37c2c928bcba869b3321c3105959d62bc0c2a04c8736c",
       "finalUrl": "https://stable-diffusion-art.com/feed/",
       "httpStatus": 200,
-      "endpoint": "https://stable-diffusion-art.com/feed/"
+      "endpoint": "https://stable-diffusion-art.com/feed/",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "creators"
     },
     {
       "id": "rss-higgsfield-rss",
@@ -667,7 +777,9 @@
       "sha256": "c04539e8f374433b0795e2511723d0921249b6317c3ac26f04ebd74e77735a2a",
       "finalUrl": "https://higgsfield.ai/blog/rss.xml",
       "httpStatus": 200,
-      "endpoint": "https://higgsfield.ai/blog/rss.xml"
+      "endpoint": "https://higgsfield.ai/blog/rss.xml",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "rss-acly--krita-ai-diffusion",
@@ -679,7 +791,9 @@
       "sha256": "96045f44b57a2146cfd030c056eaea9d8f48e96da7b5714a5eb5221cc1972070",
       "finalUrl": "https://github.com/Acly/krita-ai-diffusion/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/Acly/krita-ai-diffusion/releases.atom"
+      "endpoint": "https://github.com/Acly/krita-ai-diffusion/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-bmaltais--kohya_ss",
@@ -691,7 +805,9 @@
       "sha256": "93a61d303f70ffeee31e39bc21dcc5416ed6ede7724aaae9d6be691a5566a388",
       "finalUrl": "https://github.com/bmaltais/kohya_ss/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/bmaltais/kohya_ss/releases.atom"
+      "endpoint": "https://github.com/bmaltais/kohya_ss/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-chidiwilliams--buzz",
@@ -703,7 +819,9 @@
       "sha256": "2a7ed308d5e310259b4f91668127305301fcc7759a1daadffe01711288bbe9f3",
       "finalUrl": "https://github.com/chidiwilliams/buzz/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/chidiwilliams/buzz/releases.atom"
+      "endpoint": "https://github.com/chidiwilliams/buzz/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-comfy-org--comfyui_frontend",
@@ -715,7 +833,9 @@
       "sha256": "6297536e429459d2d1a4b22f4f4e6a1a3d7b4ef5299c6636b6707451b9b43074",
       "finalUrl": "https://github.com/Comfy-Org/ComfyUI_frontend/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/Comfy-Org/ComfyUI_frontend/releases.atom"
+      "endpoint": "https://github.com/Comfy-Org/ComfyUI_frontend/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-comfy-org--desktop",
@@ -727,7 +847,9 @@
       "sha256": "6065a124767510a984c8c16a10565236ca711d1c74563368ae3b5a200b7981dd",
       "finalUrl": "https://github.com/Comfy-Org/desktop/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/Comfy-Org/desktop/releases.atom"
+      "endpoint": "https://github.com/Comfy-Org/desktop/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-facefusion--facefusion",
@@ -739,7 +861,9 @@
       "sha256": "e664df6ce2e87bff7292c8151087fd42827235c47a9719caecc37c98bb0e1803",
       "finalUrl": "https://github.com/facefusion/facefusion/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/facefusion/facefusion/releases.atom"
+      "endpoint": "https://github.com/facefusion/facefusion/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-funaudiollm--sensevoice",
@@ -751,7 +875,9 @@
       "sha256": "5c854f67621bce8db075b2a8d133b48ddb74513699811d8b5205f411c02c9117",
       "finalUrl": "https://github.com/QwenAudio/SenseVoice/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/QwenAudio/SenseVoice/releases.atom"
+      "endpoint": "https://github.com/QwenAudio/SenseVoice/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-ggerganov--whisper.cpp",
@@ -763,7 +889,9 @@
       "sha256": "bda33fa3a3fdba19f6b8c4a5000c8b1fe7eb5fb7f1656887b47196acc3006aea",
       "finalUrl": "https://github.com/ggml-org/whisper.cpp/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/ggml-org/whisper.cpp/releases.atom"
+      "endpoint": "https://github.com/ggml-org/whisper.cpp/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-index-tts--index-tts",
@@ -775,7 +903,9 @@
       "sha256": "ebf558484fe6639be567a234e6830e11adca3363e72b98f30c639a101cb4005f",
       "finalUrl": "https://github.com/index-tts/index-tts/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/index-tts/index-tts/releases.atom"
+      "endpoint": "https://github.com/index-tts/index-tts/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-jianchang512--pyvideotrans",
@@ -787,7 +917,9 @@
       "sha256": "d59f59468c8426ca89e053d0b07c257fa0a69c7288e0f41134c8418f8e769484",
       "finalUrl": "https://github.com/jianchang512/pyvideotrans/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/jianchang512/pyvideotrans/releases.atom"
+      "endpoint": "https://github.com/jianchang512/pyvideotrans/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-kohya-ss--sd-scripts",
@@ -799,7 +931,9 @@
       "sha256": "7b2888b19817d4e34cb42481f37fa614ffe4b2e4656bfd53db3a06bee99c9216",
       "finalUrl": "https://github.com/kohya-ss/sd-scripts/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/kohya-ss/sd-scripts/releases.atom"
+      "endpoint": "https://github.com/kohya-ss/sd-scripts/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-m-bain--whisperx",
@@ -811,7 +945,9 @@
       "sha256": "c14bff162d882444432de63cf098937eed72b51190f6cb8e45d3c1dadcbb22c6",
       "finalUrl": "https://github.com/m-bain/whisperX/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/m-bain/whisperX/releases.atom"
+      "endpoint": "https://github.com/m-bain/whisperX/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-mcmonkeyprojects--swarmui",
@@ -823,7 +959,9 @@
       "sha256": "dd77b456a9150980457737318e2f72c5a8f7c1e08a0b838cc594cc7812f0bab2",
       "finalUrl": "https://github.com/mcmonkeyprojects/SwarmUI/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/mcmonkeyprojects/SwarmUI/releases.atom"
+      "endpoint": "https://github.com/mcmonkeyprojects/SwarmUI/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-mifi--lossless-cut",
@@ -835,7 +973,9 @@
       "sha256": "e3e23a3ccdc8544712a79e47c2a906f1f5ee032fceb76dc5e36686b305211222",
       "finalUrl": "https://github.com/mifi/lossless-cut/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/mifi/lossless-cut/releases.atom"
+      "endpoint": "https://github.com/mifi/lossless-cut/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-mltframework--shotcut",
@@ -847,7 +987,9 @@
       "sha256": "94c833f25d410a6893e84d79291a8df6d008b92d6ae53293934ad51c88144df7",
       "finalUrl": "https://github.com/mltframework/shotcut/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/mltframework/shotcut/releases.atom"
+      "endpoint": "https://github.com/mltframework/shotcut/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-mrnerf--lichtfeld-studio",
@@ -859,7 +1001,9 @@
       "sha256": "6bf3036eb1cf9c40b26974744d0cc89a1f774678d3b220d9a329626ad08bb02c",
       "finalUrl": "https://github.com/MrNeRF/LichtFeld-Studio/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/MrNeRF/LichtFeld-Studio/releases.atom"
+      "endpoint": "https://github.com/MrNeRF/LichtFeld-Studio/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-ohf-voice--piper1-gpl",
@@ -871,7 +1015,9 @@
       "sha256": "85738cfccd1682df500dc96ca4ceddc930e082da324958548b7e755c2640edeb",
       "finalUrl": "https://github.com/OHF-Voice/piper1-gpl/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/OHF-Voice/piper1-gpl/releases.atom"
+      "endpoint": "https://github.com/OHF-Voice/piper1-gpl/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-openshot--openshot-qt",
@@ -883,7 +1029,9 @@
       "sha256": "0a8c03996aa5cc6e113ff8ca94f6c5c580b475e9170df0bba411e5af06f9dada",
       "finalUrl": "https://github.com/OpenShot/openshot-qt/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/OpenShot/openshot-qt/releases.atom"
+      "endpoint": "https://github.com/OpenShot/openshot-qt/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-subtitleedit--subtitleedit",
@@ -895,7 +1043,9 @@
       "sha256": "e2021cb66e3cc1e74a3fd37dd005d10e4dade7343059d57c3ca5bdb8838780b0",
       "finalUrl": "https://github.com/SubtitleEdit/subtitleedit/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/SubtitleEdit/subtitleedit/releases.atom"
+      "endpoint": "https://github.com/SubtitleEdit/subtitleedit/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-swivid--f5-tts",
@@ -907,7 +1057,9 @@
       "sha256": "b8c1558e50b58df0cf707ba8cac352b7393a4a645d5e753f1c02b1143f9dea20",
       "finalUrl": "https://github.com/SWivid/F5-TTS/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/SWivid/F5-TTS/releases.atom"
+      "endpoint": "https://github.com/SWivid/F5-TTS/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-systran--faster-whisper",
@@ -919,7 +1071,9 @@
       "sha256": "35a0b0d168c247dca3528fbbda3bd3b96f9ad338f5a5fad0f491c434ff480234",
       "finalUrl": "https://github.com/SYSTRAN/faster-whisper/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/SYSTRAN/faster-whisper/releases.atom"
+      "endpoint": "https://github.com/SYSTRAN/faster-whisper/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "rss-vladmandic--sdnext",
@@ -931,7 +1085,9 @@
       "sha256": "344b9d435ee6e0f87537fe52dec00304a808d52d342a8920b66244ef3e72e857",
       "finalUrl": "https://github.com/vladmandic/sdnext/releases.atom",
       "httpStatus": 200,
-      "endpoint": "https://github.com/vladmandic/sdnext/releases.atom"
+      "endpoint": "https://github.com/vladmandic/sdnext/releases.atom",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "oss"
     },
     {
       "id": "json-hf-wan-ai",
@@ -943,7 +1099,9 @@
       "sha256": "9883d80f3ab125bf4e4a5134831e50f6e236b432d27d2d38e5e1a9c2bca9e341",
       "finalUrl": "https://huggingface.co/api/models?author=Wan-AI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=Wan-AI&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=Wan-AI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-bytedance",
@@ -955,7 +1113,9 @@
       "sha256": "45f08ae18c28dd4ba8f9c660bbc5219bf0560efd7c4084a12f82ad5bae88f7f7",
       "finalUrl": "https://huggingface.co/api/models?author=ByteDance&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=ByteDance&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=ByteDance&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-bytedance-seed",
@@ -967,7 +1127,9 @@
       "sha256": "4f1dda045a37afc4c62b598af0397e15c7f76d4c1deecfd02ca41a080f2cbe04",
       "finalUrl": "https://huggingface.co/api/models?author=ByteDance-Seed&sort=createdAt&direction=-1&limit=100&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=ByteDance-Seed&sort=createdAt&direction=-1&limit=100&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=ByteDance-Seed&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-minimaxai",
@@ -979,7 +1141,9 @@
       "sha256": "937a113a0ce0a3d1585b828272b2b9df3cbd897dc11ef641c0e9739ec271ad42",
       "finalUrl": "https://huggingface.co/api/models?author=MiniMaxAI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=MiniMaxAI&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=MiniMaxAI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-kwai-kolors",
@@ -991,7 +1155,9 @@
       "sha256": "38b8f0c4d1832ee41e5076f16bc25f9a64191e024a6a6e3fb098c62f385c5f38",
       "finalUrl": "https://huggingface.co/api/models?author=Kwai-Kolors&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=Kwai-Kolors&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=Kwai-Kolors&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-qwen",
@@ -1003,7 +1169,9 @@
       "sha256": "f146724d8fa3b88adf9876cd9996c2d2aec74a5901367d63c7c938ce748d7930",
       "finalUrl": "https://huggingface.co/api/models?author=Qwen&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=Qwen&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=Qwen&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-focused-stepfun-ai",
@@ -1015,7 +1183,9 @@
       "sha256": "441bc7507f3fc74b49c1da5a7fcf6a664ca93344652c253fab3d2fc86068ce06",
       "finalUrl": "https://huggingface.co/api/models?author=stepfun-ai&search=Step&sort=createdAt&direction=-1&limit=100&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=stepfun-ai&search=Step&sort=createdAt&direction=-1&limit=100&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=stepfun-ai&search=Step&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-lightricks",
@@ -1027,7 +1197,9 @@
       "sha256": "e940bf9a4d57037298ae424ba0baf51deebc6bd10ff67e8fab553ff86e6c4ac2",
       "finalUrl": "https://huggingface.co/api/models?author=Lightricks&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=Lightricks&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=Lightricks&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-black-forest-labs",
@@ -1039,7 +1211,9 @@
       "sha256": "99dd7050d0b7f5f0cd44ebbea55e4cbe2182b6435b68b66ac02f2e0c9e67b5b7",
       "finalUrl": "https://huggingface.co/api/models?author=black-forest-labs&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=black-forest-labs&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=black-forest-labs&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-stabilityai",
@@ -1051,7 +1225,9 @@
       "sha256": "552cc839d7f107a8d7d50c41b8eeaaf9aff8f85a3e001680c8dcbea3c4382b72",
       "finalUrl": "https://huggingface.co/api/models?author=stabilityai&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=stabilityai&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=stabilityai&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-focused-zai-org",
@@ -1063,7 +1239,9 @@
       "sha256": "57aeb339dabcd80c80a373034c39b4413f273f83ec5b0ca23679e06f0f75988c",
       "finalUrl": "https://huggingface.co/api/models?author=zai-org&search=Image&sort=createdAt&direction=-1&limit=100&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=zai-org&search=Image&sort=createdAt&direction=-1&limit=100&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=zai-org&search=Image&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-tongyi-mai",
@@ -1075,7 +1253,9 @@
       "sha256": "2d3c84bdad0a170bee081c01058f5f88b34aeaa6d90acce8fa8cb139f9503a47",
       "finalUrl": "https://huggingface.co/api/models?author=Tongyi-MAI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=Tongyi-MAI&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=Tongyi-MAI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-funaudiollm",
@@ -1087,7 +1267,9 @@
       "sha256": "00b2f339beab4beb436cd570157355cd4f6fa95908e0606f09baa7b5eeba5851",
       "finalUrl": "https://huggingface.co/api/models?author=FunAudioLLM&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=FunAudioLLM&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=FunAudioLLM&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-fishaudio",
@@ -1099,7 +1281,9 @@
       "sha256": "102c20b0f0c8da0f69632f994c4bf292b1acb28e931283c6a2f4bc0c1cb4e995",
       "finalUrl": "https://huggingface.co/api/models?author=fishaudio&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=fishaudio&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=fishaudio&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-resembleai",
@@ -1111,7 +1295,9 @@
       "sha256": "aae95c62074210e4fc3326b5cea3326e88e2d5f5dbbde4160aad0c0a581448db",
       "finalUrl": "https://huggingface.co/api/models?author=ResembleAI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=ResembleAI&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=ResembleAI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-swivid",
@@ -1123,7 +1309,9 @@
       "sha256": "d7df73cedfd415378c519c75b916ccec91354b2397189417c8aa4f9ffaf85237",
       "finalUrl": "https://huggingface.co/api/models?author=SWivid&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=SWivid&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=SWivid&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-indexteam",
@@ -1135,7 +1323,9 @@
       "sha256": "43959218ef7441f3a37654cb34c3986641c1a25d8e0988f11a75f06594424607",
       "finalUrl": "https://huggingface.co/api/models?author=IndexTeam&sort=createdAt&direction=-1&limit=100&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=IndexTeam&sort=createdAt&direction=-1&limit=100&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=IndexTeam&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-focused-nvidia",
@@ -1147,7 +1337,9 @@
       "sha256": "96c181d7b4d29c6bdc3f9a52aeb0fbbb6d698c685e1cb57331a9c0d946dca48a",
       "finalUrl": "https://huggingface.co/api/models?author=nvidia&search=Cosmos&sort=createdAt&direction=-1&limit=100&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=nvidia&search=Cosmos&sort=createdAt&direction=-1&limit=100&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=nvidia&search=Cosmos&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-zyphra",
@@ -1159,7 +1351,9 @@
       "sha256": "b9150d4bf9b418a620d5ab88a11ccb080cfd9efc8ac7df53620a073ffea8203e",
       "finalUrl": "https://huggingface.co/api/models?author=Zyphra&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=Zyphra&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=Zyphra&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-kyutai",
@@ -1171,7 +1365,9 @@
       "sha256": "0a99779f7e92c1ff8b0880e834433cba81ba100390d6d3b839153d93c05702d4",
       "finalUrl": "https://huggingface.co/api/models?author=kyutai&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=kyutai&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=kyutai&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-ace-step",
@@ -1183,7 +1379,9 @@
       "sha256": "a834ffe6a91f2060014fb656ef022b10e0e839d25992ab7445314e62c6544fb3",
       "finalUrl": "https://huggingface.co/api/models?author=ACE-Step&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=ACE-Step&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=ACE-Step&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-focused-tencent",
@@ -1195,7 +1393,9 @@
       "sha256": "061f385d2ba399c562d2637242def9b3fff942c1833ab0677f3144bfc996e882",
       "finalUrl": "https://huggingface.co/api/models?author=tencent&search=Hunyuan&sort=createdAt&direction=-1&limit=100&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=tencent&search=Hunyuan&sort=createdAt&direction=-1&limit=100&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=tencent&search=Hunyuan&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-vchitect",
@@ -1207,7 +1407,9 @@
       "sha256": "486c3e92e0262981906e57dc6e588c389ba1698d220398e64b22951245db93fa",
       "finalUrl": "https://huggingface.co/api/models?author=Vchitect&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=Vchitect&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=Vchitect&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-skywork",
@@ -1219,7 +1421,9 @@
       "sha256": "8af573ceef05105eca942913c32d93b8fcc2ad88aafc5b36057916856edac32c",
       "finalUrl": "https://huggingface.co/api/models?author=Skywork&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=Skywork&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=Skywork&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-focused-meituan-longcat",
@@ -1231,7 +1435,9 @@
       "sha256": "0f7fe8c6a8cd3bd9e06114046b3af2490a0167b0face2bc95ab2c37794e6e4d4",
       "finalUrl": "https://huggingface.co/api/models?author=meituan-longcat&search=LongCat&sort=createdAt&direction=-1&limit=100&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=meituan-longcat&search=LongCat&sort=createdAt&direction=-1&limit=100&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=meituan-longcat&search=LongCat&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-tencentarc",
@@ -1243,7 +1449,9 @@
       "sha256": "70012f8a8d16d16e7f66edcd3039b1cd0c0c2e905d40369418f160ec2bb6c24c",
       "finalUrl": "https://huggingface.co/api/models?author=TencentARC&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=TencentARC&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=TencentARC&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-hidream-ai",
@@ -1255,7 +1463,9 @@
       "sha256": "1afaa81a060939182a259a00c74d23ef6abcf650bfbc920ba22c972deed40667",
       "finalUrl": "https://huggingface.co/api/models?author=HiDream-ai&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=HiDream-ai&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=HiDream-ai&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-focused-microsoft",
@@ -1267,7 +1477,9 @@
       "sha256": "1b4b50504db08fd2c27bd52998a16a0ee7b13e3ccc344db230c0362993d32af4",
       "finalUrl": "https://huggingface.co/api/models?author=microsoft&search=TRELLIS&sort=createdAt&direction=-1&limit=100&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=microsoft&search=TRELLIS&sort=createdAt&direction=-1&limit=100&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=microsoft&search=TRELLIS&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-focused-facebook",
@@ -1279,7 +1491,9 @@
       "sha256": "bf0f81bdf33baee5fbf53d4d05deddfc3d372255ffb4b54a3475d0bfbacdbc80",
       "finalUrl": "https://huggingface.co/api/models?author=facebook&search=sam&sort=createdAt&direction=-1&limit=100&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=facebook&search=sam&sort=createdAt&direction=-1&limit=100&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=facebook&search=sam&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-instantx",
@@ -1291,7 +1505,9 @@
       "sha256": "1cf13b48bcd226dfb40dfee0f834f916c8dae81f7000ea3f4263595034d1c695",
       "finalUrl": "https://huggingface.co/api/models?author=InstantX&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=InstantX&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=InstantX&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "json-hf-shakker-labs",
@@ -1303,7 +1519,9 @@
       "sha256": "e0690eab8287138c48eddf462bf8d853103114bf4654e62174f93face62584a2",
       "finalUrl": "https://huggingface.co/api/models?author=Shakker-Labs&sort=createdAt&direction=-1&limit=20&full=true&config=false",
       "httpStatus": 200,
-      "endpoint": "https://huggingface.co/api/models?author=Shakker-Labs&sort=createdAt&direction=-1&limit=20&full=true&config=false"
+      "endpoint": "https://huggingface.co/api/models?author=Shakker-Labs&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "models"
     },
     {
       "id": "web-kling",
@@ -1315,7 +1533,9 @@
       "sha256": "9a79d94400d4569fc9f1d1df2554fdaa9bce2e1a668d57cc196632eec6169bce",
       "finalUrl": "https://kling.ai/blog",
       "httpStatus": 200,
-      "endpoint": "https://kling.ai/blog"
+      "endpoint": "https://kling.ai/blog",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "web-pixverse",
@@ -1327,7 +1547,9 @@
       "sha256": "4663bddcff00c05859917e25c44431392e47bb500a93cc8076cd642b8c7d4fe4",
       "finalUrl": "https://pixverse.ai/zh/blog",
       "httpStatus": 200,
-      "endpoint": "https://pixverse.ai/zh/blog"
+      "endpoint": "https://pixverse.ai/zh/blog",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "web-krea",
@@ -1339,7 +1561,9 @@
       "sha256": "044dfa1a26acf97ba8d6f8a3e226d3967d4bd51708c2fc8170b6af29ad11e190",
       "finalUrl": "https://www.krea.ai/blog",
       "httpStatus": 200,
-      "endpoint": "https://www.krea.ai/blog"
+      "endpoint": "https://www.krea.ai/blog",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "web-ltx-studio",
@@ -1351,7 +1575,9 @@
       "sha256": "72950359b238fde79d94e2ea39bd56e7d1153d54b69ab99823b36cc53e67797a",
       "finalUrl": "https://ltx.io/blog",
       "httpStatus": 200,
-      "endpoint": "https://ltx.io/blog"
+      "endpoint": "https://ltx.io/blog",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "web-recraft",
@@ -1363,7 +1589,9 @@
       "sha256": "c7004b4c72a03c0a005bb7ac958acab960bd4bb3fced048a6fc0c3df5e5effea",
       "finalUrl": "https://www.recraft.ai/blog",
       "httpStatus": 200,
-      "endpoint": "https://www.recraft.ai/blog"
+      "endpoint": "https://www.recraft.ai/blog",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "web-hedra",
@@ -1375,7 +1603,9 @@
       "sha256": "67c69483d8a5da14f700751176b5d9155796089680ac6e5b3636e11aad1ced36",
       "finalUrl": "https://www.hedra.com/blog",
       "httpStatus": 200,
-      "endpoint": "https://www.hedra.com/blog"
+      "endpoint": "https://www.hedra.com/blog",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "web-cartesia",
@@ -1387,7 +1617,9 @@
       "sha256": "a4d5db19dcc40dca11611610c835d3af421911fe344ab5ac6563e548b51ba538",
       "finalUrl": "https://www.cartesia.ai/blog",
       "httpStatus": 200,
-      "endpoint": "https://www.cartesia.ai/blog"
+      "endpoint": "https://www.cartesia.ai/blog",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "web-suno",
@@ -1399,7 +1631,9 @@
       "sha256": "d8ec565127ea0d686167c4859fbee1e76976dba1f10ba6323a1be80b32de16e7",
       "finalUrl": "https://suno.com/blog",
       "httpStatus": 200,
-      "endpoint": "https://suno.com/blog"
+      "endpoint": "https://suno.com/blog",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "web-captions-web",
@@ -1411,7 +1645,9 @@
       "sha256": "dcd0d7f234b921720be66673b74f6b8bb546afce2c166905a25122a209d0f06d",
       "finalUrl": "https://captions.ai/blog",
       "httpStatus": 200,
-      "endpoint": "https://captions.ai/blog"
+      "endpoint": "https://captions.ai/blog",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "web-vidu",
@@ -1423,7 +1659,9 @@
       "sha256": "932b0158a30597e40cd03030ce3f98b4e244af5cd0dd87b749ef3ec444de5e38",
       "finalUrl": "https://www.vidu.com/blog",
       "httpStatus": 200,
-      "endpoint": "https://www.vidu.com/blog"
+      "endpoint": "https://www.vidu.com/blog",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "json-canva",
@@ -1432,10 +1670,12 @@
       "dated": 4,
       "recent30Days": 4,
       "latest": "2026-09-29T10:54:00.000Z",
-      "sha256": "f3c04f5b671bea438c9e1e0559b0ab249dd8f1c261d1bbe076bae5435816b6de",
+      "sha256": "150041fea4d0e7cfc1875cbbe47541d09fb988b73d5f19d780cd49677958aac3",
       "finalUrl": "https://www.canva.com/newsroom/news/",
       "httpStatus": 200,
-      "endpoint": "https://www.canva.com/newsroom/news/"
+      "endpoint": "https://www.canva.com/newsroom/news/",
+      "checkedAt": "2026-10-08T07:42:06.514Z",
+      "group": "official"
     },
     {
       "id": "json-runway",
@@ -1447,7 +1687,9 @@
       "sha256": "50ba0897acd8ecefae9f383c275bfa9bc80e4969530261382215e7ce485e4740",
       "finalUrl": "https://runway.com/News",
       "httpStatus": 200,
-      "endpoint": "https://runway.com/news"
+      "endpoint": "https://runway.com/news",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "json-minimax-api",
@@ -1459,7 +1701,9 @@
       "sha256": "9ba85fcd85077c6067951560494f3806ac9937db2bf699c7bb096a0a80d29e1b",
       "finalUrl": "https://www.minimax.io/api/news?page=1&locale=en",
       "httpStatus": 200,
-      "endpoint": "https://www.minimax.io/api/news?page=1&locale=en"
+      "endpoint": "https://www.minimax.io/api/news?page=1&locale=en",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
     },
     {
       "id": "json-bytedance-seed-api",
@@ -1471,7 +1715,569 @@
       "sha256": "ef150d2a8a7a2db85b1d5b5411502be4c644ec68f5f7363658d17f5cb3e4a336",
       "finalUrl": "https://seed.bytedance.com/api/get_article_list_v2?article_type=2&count=20&order_desc=true",
       "httpStatus": 200,
-      "endpoint": "https://seed.bytedance.com/api/get_article_list_v2?article_type=2&count=20&order_desc=true"
+      "endpoint": "https://seed.bytedance.com/api/get_article_list_v2?article_type=2&count=20&order_desc=true",
+      "checkedAt": "2026-10-08T04:30:59.393Z",
+      "group": "official"
+    },
+    {
+      "id": "rss-curious-gallery",
+      "items": 20,
+      "scoped": 20,
+      "dated": 20,
+      "recent30Days": 20,
+      "latest": "2026-10-07T19:00:57.000Z",
+      "sha256": "303744b162edc7bce92e54d68d2acef4f4d11735a1c5eb44b12e72c929369f8a",
+      "finalUrl": "https://curiousrefuge.com/ai-film-gallery?format=rss",
+      "httpStatus": 200,
+      "endpoint": "https://curiousrefuge.com/ai-film-gallery?format=rss",
+      "checkedAt": "2026-10-08T07:23:50.636Z",
+      "group": "creators"
+    },
+    {
+      "id": "rss-heygen-updates",
+      "items": 10,
+      "scoped": 10,
+      "dated": 10,
+      "recent30Days": 1,
+      "latest": "2026-10-05T20:25:55.000Z",
+      "sha256": "31ddae0b674276d0ec274ba6f1e2d9e456a2b999e44ea85d5b7679520d8d7d85",
+      "finalUrl": "https://heygen.noticeable.news/feed.rss",
+      "httpStatus": 200,
+      "endpoint": "https://heygen.noticeable.news/feed.rss",
+      "checkedAt": "2026-10-08T07:23:54.175Z",
+      "group": "official"
+    },
+    {
+      "id": "rss-podcastle",
+      "items": 15,
+      "scoped": 11,
+      "dated": 11,
+      "recent30Days": 10,
+      "latest": "2026-10-06T08:47:00.000Z",
+      "sha256": "b1a3424b6c06e4546ef7e336f05c00504ee3dedd2934a0d16c8a658aee603a84",
+      "finalUrl": "https://async.com/blog/rss/",
+      "httpStatus": 200,
+      "endpoint": "https://async.com/blog/rss/",
+      "checkedAt": "2026-10-08T07:24:11.738Z",
+      "group": "official"
+    },
+    {
+      "id": "rss-lalalai",
+      "items": 15,
+      "scoped": 15,
+      "dated": 15,
+      "recent30Days": 6,
+      "latest": "2026-10-07T13:59:31.000Z",
+      "sha256": "81e880ee8142fb601289592919607bf9db6b09835a23d827ab24cbd6b029cf92",
+      "finalUrl": "https://www.lalal.ai/blog/rss/",
+      "httpStatus": 200,
+      "endpoint": "https://www.lalal.ai/blog/rss/",
+      "checkedAt": "2026-10-08T07:24:11.805Z",
+      "group": "official"
+    },
+    {
+      "id": "rss-unity",
+      "items": 50,
+      "scoped": 16,
+      "dated": 16,
+      "recent30Days": 3,
+      "latest": "2026-09-24T00:00:00.000Z",
+      "sha256": "a129724d5ac393a26aabe31b559a383d39e91d3d5e98c93237141cbebb48c286",
+      "finalUrl": "https://unity.com/cn/blog/rss",
+      "httpStatus": 200,
+      "endpoint": "https://unity.com/cn/blog/rss",
+      "checkedAt": "2026-10-08T07:24:23.470Z",
+      "group": "official"
+    },
+    {
+      "id": "rss-postperspective",
+      "items": 10,
+      "scoped": 3,
+      "dated": 3,
+      "recent30Days": 3,
+      "latest": "2026-10-07T20:08:48.000Z",
+      "sha256": "3360fd770803d84da55d36fd26c0e8c68134705684be65d24e0855cce4b04a02",
+      "finalUrl": "https://postperspective.com/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://postperspective.com/feed/",
+      "checkedAt": "2026-10-08T07:24:23.541Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-postmagazine",
+      "items": 1,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-09-09T14:51:28.000Z",
+      "sha256": "fd185c0b995f54bac55272acfdd2e2a87450fe12186a40dea17e44915b114a8a",
+      "finalUrl": "https://www.postmagazine.com/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://www.postmagazine.com/feed/",
+      "checkedAt": "2026-10-08T07:24:24.003Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-filmmakermagazine",
+      "items": 20,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 0,
+      "latest": "2026-06-17T20:07:54.000Z",
+      "sha256": "1b83b222f7dfa6468947d79e030a0b5d4696620489c7e18458f8f962bb37a643",
+      "finalUrl": "https://filmmakermagazine.com/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://filmmakermagazine.com/feed/",
+      "checkedAt": "2026-10-08T07:24:26.996Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-filmmakersacademy",
+      "items": 20,
+      "scoped": 3,
+      "dated": 3,
+      "recent30Days": 1,
+      "latest": "2026-10-07T00:57:43.000Z",
+      "sha256": "be0b3284d2e6e74a74cca6c2ff2ce75c0cde280acc42095f1087e7dc06c500a8",
+      "finalUrl": "https://www.filmmakersacademy.com/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://www.filmmakersacademy.com/feed/",
+      "checkedAt": "2026-10-08T07:24:26.650Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-creative-review",
+      "items": 12,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-05T02:21:07.000Z",
+      "sha256": "c43387d5b098102b3df537f2fcf4f671c2620bedf81437033c4d8f574df787af",
+      "finalUrl": "https://www.creativereview.co.uk/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://www.creativereview.co.uk/feed/",
+      "checkedAt": "2026-10-08T07:24:33.004Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-cgchannel",
+      "items": 10,
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-06T09:36:50.000Z",
+      "sha256": "9883757e8c6b7f0440ffe0b7c0de226c37485fba0c4d98760f6d002bf9388946",
+      "finalUrl": "http://feeds2.feedburner.com/cgchannel/nHpU",
+      "httpStatus": 200,
+      "endpoint": "https://www.cgchannel.com/feed/",
+      "checkedAt": "2026-10-08T07:24:40.046Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-cgpress",
+      "items": 10,
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-06T18:00:00.000Z",
+      "sha256": "b33ac97b5385a3781e1b2465fcf7265063e455b8a497e4737dfdd8465626573e",
+      "finalUrl": "https://cgpress.org/feed",
+      "httpStatus": 200,
+      "endpoint": "https://cgpress.org/feed",
+      "checkedAt": "2026-10-08T07:24:37.042Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-blendernation",
+      "items": 10,
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-08T06:21:20.000Z",
+      "sha256": "5209e236c205e7ceafb40d0b9a8c5e52574e7734695c5cee659fe6274d3dd2f0",
+      "finalUrl": "http://feeds.feedburner.com/Blendernation",
+      "httpStatus": 200,
+      "endpoint": "https://www.blendernation.com/feed/",
+      "checkedAt": "2026-10-08T07:24:41.177Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-blenderartists",
+      "items": 30,
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-07T19:03:43.000Z",
+      "sha256": "040742053991971ba7a70922c8ee880ae5e80f08287a9a829225962ad7ef0a58",
+      "finalUrl": "https://blenderartists.org/latest.rss",
+      "httpStatus": 200,
+      "endpoint": "https://blenderartists.org/latest.rss",
+      "checkedAt": "2026-10-08T07:24:39.518Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-productionexpert",
+      "items": 20,
+      "scoped": 3,
+      "dated": 3,
+      "recent30Days": 3,
+      "latest": "2026-10-07T08:00:00.000Z",
+      "sha256": "7f02dd0ad076acbab008485b81c1564949f62cdf91abbc833d2ec1091016cbb3",
+      "finalUrl": "https://www.production-expert.com/production-expert-1?format=rss",
+      "httpStatus": 200,
+      "endpoint": "https://www.production-expert.com/production-expert-1?format=rss",
+      "checkedAt": "2026-10-08T07:24:43.045Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-rekkerd",
+      "items": 100,
+      "scoped": 7,
+      "dated": 7,
+      "recent30Days": 7,
+      "latest": "2026-10-07T12:49:16.000Z",
+      "sha256": "81704752e70e50ddce7ac264685c9a3592b93c085155e64dfe02940bbd044aec",
+      "finalUrl": "https://rekkerd.org/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://rekkerd.org/feed/",
+      "checkedAt": "2026-10-08T07:24:42.586Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-cdm",
+      "items": 10,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-09-27T22:08:06.000Z",
+      "sha256": "78a7ace579180b795e0d6c14713f9225592c976ca83906bd0337683563d19ee3",
+      "finalUrl": "https://cdm.link/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://cdm.link/feed/",
+      "checkedAt": "2026-10-08T07:24:43.976Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-musicradar",
+      "items": 50,
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-06T15:24:35.000Z",
+      "sha256": "7982e25108dc4dde3347f9fef2c17a191c371978344e607a84adec138c2d2185",
+      "finalUrl": "https://www.musicradar.com/feeds.xml",
+      "httpStatus": 200,
+      "endpoint": "https://www.musicradar.com/feeds.xml",
+      "checkedAt": "2026-10-08T07:24:50.501Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-musicbusinessworldwide",
+      "items": 10,
+      "scoped": 3,
+      "dated": 3,
+      "recent30Days": 3,
+      "latest": "2026-10-07T13:00:10.000Z",
+      "sha256": "c6b6f4c73805a158d54bd51b3db61f08c59d740b37bcaa42cd30040bd17a57cc",
+      "finalUrl": "https://www.musicbusinessworldwide.com/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://www.musicbusinessworldwide.com/feed/",
+      "checkedAt": "2026-10-08T07:24:44.292Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-petapixel",
+      "items": 20,
+      "scoped": 4,
+      "dated": 4,
+      "recent30Days": 4,
+      "latest": "2026-10-07T17:05:47.000Z",
+      "sha256": "6531b32b50ffa0616da940d692c1e3c54d6d6e3f851ec438ea12ce55f0ec76dd",
+      "finalUrl": "https://petapixel.com/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://petapixel.com/feed/",
+      "checkedAt": "2026-10-08T07:24:45.877Z",
+      "group": "media"
+    },
+    {
+      "id": "rss-zhidx",
+      "items": 20,
+      "scoped": 13,
+      "dated": 13,
+      "recent30Days": 13,
+      "latest": "2026-10-08T02:54:12.000Z",
+      "sha256": "3508bdbcfa8a7eff03f482e2fe6ed9ba42d5c5bdc93172a72fe1c3ecc4ab0d7a",
+      "finalUrl": "https://zhidx.com/rss",
+      "httpStatus": 200,
+      "endpoint": "https://zhidx.com/rss",
+      "checkedAt": "2026-10-08T07:24:58.268Z",
+      "group": "china"
+    },
+    {
+      "id": "rss-oschina",
+      "items": 50,
+      "scoped": 4,
+      "dated": 4,
+      "recent30Days": 4,
+      "latest": "2026-10-08T03:56:07.000Z",
+      "sha256": "cc433d171b2e86943303b6ad913cac596011ed48eeecce60654b544f82f56de9",
+      "finalUrl": "https://www.oschina.net/news/rss",
+      "httpStatus": 200,
+      "endpoint": "https://www.oschina.net/news/rss",
+      "checkedAt": "2026-10-08T07:24:59.019Z",
+      "group": "china"
+    },
+    {
+      "id": "rss-tmtpost",
+      "items": 19,
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-08T06:02:03.000Z",
+      "sha256": "2023ac7dc2fd9e41e5b064859cb9fb05e3d36c39decf3f34f4112a879d4232db",
+      "finalUrl": "https://www.tmtpost.com/rss.xml",
+      "httpStatus": 200,
+      "endpoint": "https://www.tmtpost.com/rss.xml",
+      "checkedAt": "2026-10-08T07:25:07.776Z",
+      "group": "china"
+    },
+    {
+      "id": "rss-cnbeta",
+      "items": 150,
+      "scoped": 20,
+      "dated": 20,
+      "recent30Days": 20,
+      "latest": "2026-10-08T06:45:33.000Z",
+      "sha256": "86e501a7c34d5bccde6ef00c388338499865be2bdc0bf9df6308cfbe06a9e378",
+      "finalUrl": "https://www.cnbeta.com.tw/backend.php",
+      "httpStatus": 200,
+      "endpoint": "https://www.cnbeta.com.tw/backend.php",
+      "checkedAt": "2026-10-08T07:25:07.292Z",
+      "group": "china"
+    },
+    {
+      "id": "rss-wechat-cv",
+      "items": 20,
+      "scoped": 9,
+      "dated": 9,
+      "recent30Days": 9,
+      "latest": "2026-10-04T15:26:00.000Z",
+      "sha256": "ad59dea33a05e2dab97c536832178a410e4131907fca5cb5f1f91fa1db834a5c",
+      "finalUrl": "https://wechat2rss.xlab.app/feed/b81ffcfff1107b5265cd7e39de610dc7ca72caf4.xml",
+      "httpStatus": 200,
+      "endpoint": "https://wechat2rss.xlab.app/feed/b81ffcfff1107b5265cd7e39de610dc7ca72caf4.xml",
+      "checkedAt": "2026-10-08T07:24:29.844Z",
+      "group": "china"
+    },
+    {
+      "id": "rss-wechat-xinzhiyuan",
+      "items": 20,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-06T04:55:00.000Z",
+      "sha256": "dd11473704ac24b31809795aa366876e0ff0c50900533480173e8eda4d144691",
+      "finalUrl": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
+      "httpStatus": 200,
+      "endpoint": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
+      "checkedAt": "2026-10-08T07:24:29.723Z",
+      "group": "china"
+    },
+    {
+      "id": "rss-wechat-jiqizhixin",
+      "items": 10,
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-07T01:49:00.000Z",
+      "sha256": "33da7e21f30b7f0c0caa7b675ef7013d59254c43be9e36878c8558741d5f2f8b",
+      "finalUrl": "https://wechat2rss.bestblogs.dev/feed/8d97af31b0de9e48da74558af128a4673d78c9a3.xml",
+      "httpStatus": 200,
+      "endpoint": "https://wechat2rss.bestblogs.dev/feed/8d97af31b0de9e48da74558af128a4673d78c9a3.xml",
+      "checkedAt": "2026-10-08T07:24:29.687Z",
+      "group": "china"
+    },
+    {
+      "id": "rss-wechat-jiqizhixin-sota",
+      "items": 10,
+      "scoped": 9,
+      "dated": 9,
+      "recent30Days": 9,
+      "latest": "2026-09-30T10:03:00.000Z",
+      "sha256": "5766714b14e714a2843ea8c541e2d2341521acb844d93a1f4965327556a01bd1",
+      "finalUrl": "https://wechat2rss.bestblogs.dev/feed/2f520471856d56c7b3a95cd09eb777149b32828a.xml",
+      "httpStatus": 200,
+      "endpoint": "https://wechat2rss.bestblogs.dev/feed/2f520471856d56c7b3a95cd09eb777149b32828a.xml",
+      "checkedAt": "2026-10-08T07:24:33.232Z",
+      "group": "china"
+    },
+    {
+      "id": "rss-wechat-tencent-hunyuan",
+      "items": 10,
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 1,
+      "latest": "2026-09-22T02:36:00.000Z",
+      "sha256": "c04754b31dfbff049b5fa7ec273f5774d629bc6850731589a14f224e0bf3c577",
+      "finalUrl": "https://wechat2rss.bestblogs.dev/feed/306ce19a1ca590c9c2df781789e828d1acfa1356.xml",
+      "httpStatus": 200,
+      "endpoint": "https://wechat2rss.bestblogs.dev/feed/306ce19a1ca590c9c2df781789e828d1acfa1356.xml",
+      "checkedAt": "2026-10-08T07:24:33.310Z",
+      "group": "china"
+    },
+    {
+      "id": "rss-wechat-tongyi",
+      "items": 10,
+      "scoped": 3,
+      "dated": 3,
+      "recent30Days": 0,
+      "latest": "2026-07-20T08:54:00.000Z",
+      "sha256": "b687bc6cbc098dbbaddb2cafa8c4889322c115244a318e07f72c5e24c30a617b",
+      "finalUrl": "https://wechat2rss.bestblogs.dev/feed/4ebee6222ae08705b8aabc9116f0defbcb6b17c6.xml",
+      "httpStatus": 200,
+      "endpoint": "https://wechat2rss.bestblogs.dev/feed/4ebee6222ae08705b8aabc9116f0defbcb6b17c6.xml",
+      "checkedAt": "2026-10-08T07:24:33.218Z",
+      "group": "china"
+    },
+    {
+      "id": "rss-wechat-stepfun",
+      "items": 10,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-09-15T07:29:00.000Z",
+      "sha256": "0d5de24519cffe9c52b97052c1cb9f1a4cf19d0f00c42370be26344379a3ac8c",
+      "finalUrl": "https://wechat2rss.bestblogs.dev/feed/3e2714d06aa36142e8ed6b3f4e5cf9090a069dd2.xml",
+      "httpStatus": 200,
+      "endpoint": "https://wechat2rss.bestblogs.dev/feed/3e2714d06aa36142e8ed6b3f4e5cf9090a069dd2.xml",
+      "checkedAt": "2026-10-08T07:24:33.230Z",
+      "group": "china"
+    },
+    {
+      "id": "rss-apple-ml",
+      "items": 10,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-02T00:00:00.000Z",
+      "sha256": "dce61dca8ff8525cb1abcfe9c56c6fee55112c6a6269c4170daca09e20f3cf81",
+      "finalUrl": "https://machinelearning.apple.com/rss.xml",
+      "httpStatus": 200,
+      "endpoint": "https://machinelearning.apple.com/rss.xml",
+      "checkedAt": "2026-10-08T07:31:25.937Z",
+      "group": "official"
+    },
+    {
+      "id": "rss-reallusion",
+      "items": 8,
+      "scoped": 5,
+      "dated": 5,
+      "recent30Days": 2,
+      "latest": "2026-10-08T00:30:18.000Z",
+      "sha256": "8c1369b413ed5ede6796270baf12deb89ff70de2188dcb3d5dba8ec87ed64eab",
+      "finalUrl": "https://magazine.reallusion.com/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://magazine.reallusion.com/feed/",
+      "checkedAt": "2026-10-08T07:31:26.325Z",
+      "group": "official"
+    },
+    {
+      "id": "rss-epidemic",
+      "items": 15,
+      "scoped": 4,
+      "dated": 4,
+      "recent30Days": 2,
+      "latest": "2026-09-21T15:15:16.000Z",
+      "sha256": "41402417ba7b164970c657b6a368ee6a2101e37d2ed3a756f9db607e566d8667",
+      "finalUrl": "https://www.epidemicsound.com/blog/rss/",
+      "httpStatus": 200,
+      "endpoint": "https://www.epidemicsound.com/blog/rss/",
+      "checkedAt": "2026-10-08T07:31:36.701Z",
+      "group": "official"
+    },
+    {
+      "id": "web-theoretically-media",
+      "items": 23,
+      "scoped": 23,
+      "dated": 23,
+      "recent30Days": 7,
+      "latest": "2026-10-06T00:00:00.000Z",
+      "sha256": "005ed0194686ce79188f31b5936eeff729c463e4b6eb342ba24eb6b0d0e03873",
+      "finalUrl": "https://theoreticallymedia.com/blog/",
+      "httpStatus": 200,
+      "endpoint": "https://theoreticallymedia.com/blog/",
+      "checkedAt": "2026-10-08T07:23:58.857Z",
+      "group": "creators"
+    },
+    {
+      "id": "web-theoretically-news",
+      "items": 6,
+      "scoped": 6,
+      "dated": 6,
+      "recent30Days": 1,
+      "latest": "2026-09-18T00:00:00.000Z",
+      "sha256": "203365cf7efa524bfcb2f5b1f766576566cdced14c85b293f3481a50f8c37c51",
+      "finalUrl": "https://theoreticallymedia.beehiiv.com/",
+      "httpStatus": 200,
+      "endpoint": "https://theoreticallymedia.beehiiv.com/",
+      "checkedAt": "2026-10-08T07:26:32.570Z",
+      "group": "creators"
+    },
+    {
+      "id": "web-ai-for-real-life",
+      "items": 6,
+      "scoped": 6,
+      "dated": 6,
+      "recent30Days": 0,
+      "latest": "2026-06-28T00:00:00.000Z",
+      "sha256": "a248df21a8fd1ca51cfe1aaddb9aefd78a7faa26169dee2f8a3ab6436c9db64a",
+      "finalUrl": "https://ai-for-real-life.beehiiv.com/",
+      "httpStatus": 200,
+      "endpoint": "https://ai-for-real-life.beehiiv.com/",
+      "checkedAt": "2026-10-08T07:26:31.897Z",
+      "group": "creators"
+    },
+    {
+      "id": "web-luma-news",
+      "items": 41,
+      "scoped": 41,
+      "dated": 41,
+      "recent30Days": 1,
+      "latest": "2026-10-01T00:00:00.000Z",
+      "sha256": "1cb3d11eb9b5e16cfa56dd7c2295629190d32510e72c344932b7343d7cf731de",
+      "finalUrl": "https://lumalabs.ai/news",
+      "httpStatus": 200,
+      "endpoint": "https://lumalabs.ai/news",
+      "checkedAt": "2026-10-08T07:23:53.839Z",
+      "group": "official"
+    },
+    {
+      "id": "web-aiography",
+      "items": 9,
+      "scoped": 9,
+      "dated": 9,
+      "recent30Days": 1,
+      "latest": "2026-09-11T00:00:00.000Z",
+      "sha256": "602de8a832a439ecb007ff1414efc7e31ca549e80174fedc0f4ba7590e48da16",
+      "finalUrl": "https://aiography.beehiiv.com/",
+      "httpStatus": 200,
+      "endpoint": "https://aiography.beehiiv.com/",
+      "checkedAt": "2026-10-08T07:26:30.579Z",
+      "group": "creators"
+    },
+    {
+      "id": "web-slop-reel",
+      "items": 6,
+      "scoped": 6,
+      "dated": 6,
+      "recent30Days": 6,
+      "latest": "2026-10-07T00:00:00.000Z",
+      "sha256": "dd64701d77cb1a689891d4c1d4289b1e7305267fc60d033d94c4ca200eee5032",
+      "finalUrl": "https://www.slopreel.com/",
+      "httpStatus": 200,
+      "endpoint": "https://www.slopreel.com/",
+      "checkedAt": "2026-10-08T07:26:30.273Z",
+      "group": "creators"
     }
   ]
 }

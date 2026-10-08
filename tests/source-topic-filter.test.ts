@@ -34,3 +34,23 @@ test("invalid required markers fail validation instead of broadening a feed sile
   }
   assertSupportedConfig("rss", { ingestNoiseFilter: { requireMarkers: ["视频", "image"] } });
 });
+
+test("ASCII word gates retain AI and Udio coverage without matching audio, paid, air or trailing name fragments", () => {
+  const s = source({ ingestNoiseFilter: { requireWords: ["ai", "udio"], requireMarkers: ["生成式"], keepIfMatches: ["research"] } });
+  for (const title of ["AI restores a film", "AI: new editing tool", "音乐平台Udio更新", "Udio 2.0 release", "(AI) sound design", "生成式音效研究"]) {
+    assert.equal(noiseFiltered(item(title), s), false, title);
+  }
+  assert.equal(noiseFiltered(item("New platform", "Uses AI for sound generation"), s), false);
+  for (const title of ["Audio interface review", "Paid audio subscription", "Air compressor guide", "Research on studio acoustics", "RAIL release"]) {
+    assert.equal(noiseFiltered(item(title), s), true, title);
+  }
+  assert.equal(noiseFiltered(item("Sponsored AI tool"), source({ ingestNoiseFilter: { requireWords: ["ai"], dropMarkers: ["sponsored"] } })), true);
+});
+
+test("invalid word gates fail validation and literal markers keep their substring semantics", () => {
+  for (const requireWords of [[], null, "ai", [""], [" ai "], ["a.i."], ["视频"], [".*"], [1]]) {
+    assert.throws(() => assertSupportedConfig("rss", { ingestNoiseFilter: { requireWords } }), /requireWords/);
+  }
+  assertSupportedConfig("rss", { ingestNoiseFilter: { requireWords: ["AI", "udio", "ai-powered"] } });
+  assert.equal(noiseFiltered(item("Audio tool"), source({ ingestNoiseFilter: { requireMarkers: ["udio"] } })), false);
+});

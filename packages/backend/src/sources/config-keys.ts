@@ -26,7 +26,7 @@ const KEYS: Record<SourceRow["kind"], string[]> = {
 // Objects with fixed keys (headers and bodyJson are request data, free-form).
 const NESTED: Record<string, string[]> = {
   _aihot: ["initialBackfillLimit", "initialBackfillMonths"],
-  ingestNoiseFilter: ["dropMarkers", "dropMarkersTitleOnly", "keepIfMatches", "requireMarkers"],
+  ingestNoiseFilter: ["dropMarkers", "dropMarkersTitleOnly", "keepIfMatches", "requireMarkers", "requireWords"],
   itemUrlPrefixRewrite: ["from", "to"],
   requireBoolean: ["path", "equals"],
   minNumeric: ["path", "min"],
@@ -54,6 +54,10 @@ export function unsupportedConfig(kind: SourceRow["kind"], config: Record<string
       if (key === "ingestNoiseFilter" && "requireMarkers" in value) {
         const markers = (value as Record<string, unknown>).requireMarkers;
         if (!Array.isArray(markers) || markers.length === 0 || markers.some((v) => typeof v !== "string" || !v.trim())) out.push("ingestNoiseFilter.requireMarkers must be a non-empty string array");
+      }
+      if (key === "ingestNoiseFilter" && "requireWords" in value) {
+        const words = (value as Record<string, unknown>).requireWords;
+        if (!Array.isArray(words) || words.length === 0 || words.some((v) => typeof v !== "string" || !/^[a-z0-9_-]+$/i.test(v))) out.push("ingestNoiseFilter.requireWords must be a non-empty ASCII word array");
       }
     }
   }

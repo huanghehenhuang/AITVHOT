@@ -1,5 +1,5 @@
 {
-  "$comment": "AITVHot 免费信源库：官方公告、模型发布、创作教程与行业媒体。2026-10-08 验证记录和完整清单见 docs/source-catalog.md；新来源限制 30 天历史并默认关闭全文。seed 不覆盖已有后台配置。",
+  "$comment": "AITVHot 免费与公开信源库：官方公告、模型发布、创作者、国内公众号 RSS 桥接与行业媒体。2026-10-08 验证记录和完整清单见 docs/source-catalog.md；限制 30 天历史并默认关闭全文。seed 只新增，按 ID 和后台同类地址规则判重，不覆盖已有配置；--dry-run 可预览，--disabled 暂停新源。",
   "sources": [
     {
       "id": "rss-openai-news",
@@ -10,7 +10,73 @@
         "_aihot": {
           "initialBackfillLimit": 3
         },
-        "maxItemAgeDays": 30
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
       },
       "tier": "T1",
       "first_party": true,
@@ -32,7 +98,73 @@
         "_aihot": {
           "initialBackfillLimit": 3
         },
-        "maxItemAgeDays": 30
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
       },
       "tier": "T1",
       "first_party": true,
@@ -54,7 +186,73 @@
         "_aihot": {
           "initialBackfillLimit": 3
         },
-        "maxItemAgeDays": 30
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
       },
       "tier": "T1",
       "first_party": true,
@@ -77,7 +275,73 @@
         "_aihot": {
           "initialBackfillLimit": 3
         },
-        "maxItemAgeDays": 30
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
       },
       "tier": "T1",
       "first_party": true,
@@ -123,7 +387,73 @@
         "_aihot": {
           "initialBackfillLimit": 3
         },
-        "maxItemAgeDays": 30
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
       },
       "tier": "T2",
       "first_party": false,
@@ -145,7 +475,73 @@
         "_aihot": {
           "initialBackfillLimit": 3
         },
-        "maxItemAgeDays": 30
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
       },
       "tier": "T2",
       "first_party": false,
@@ -167,7 +563,73 @@
         "_aihot": {
           "initialBackfillLimit": 3
         },
-        "maxItemAgeDays": 30
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
       },
       "tier": "T2",
       "first_party": false,
@@ -189,7 +651,73 @@
         "_aihot": {
           "initialBackfillLimit": 3
         },
-        "maxItemAgeDays": 30
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
       },
       "tier": "T2",
       "first_party": false,
@@ -211,7 +739,73 @@
         "_aihot": {
           "initialBackfillLimit": 3
         },
-        "maxItemAgeDays": 30
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
       },
       "tier": "T2",
       "first_party": false,
@@ -233,7 +827,39 @@
         "_aihot": {
           "initialBackfillLimit": 3
         },
-        "maxItemAgeDays": 30
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
       },
       "tier": "T2",
       "first_party": false,
@@ -498,7 +1124,39 @@
         "_aihot": {
           "initialBackfillLimit": 3
         },
-        "maxItemAgeDays": 30
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
       },
       "tier": "T2",
       "first_party": false,
@@ -647,8 +1305,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -664,7 +1320,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -673,6 +1328,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -701,8 +1360,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -718,7 +1375,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -727,6 +1383,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -756,8 +1416,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -773,7 +1431,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -782,6 +1439,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -810,8 +1471,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -827,7 +1486,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -836,6 +1494,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -864,8 +1526,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -881,7 +1541,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -890,6 +1549,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -918,8 +1581,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -935,7 +1596,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -944,6 +1604,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -972,8 +1636,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -989,7 +1651,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -998,6 +1659,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1026,8 +1691,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1043,7 +1706,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1052,6 +1714,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1080,8 +1746,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1097,7 +1761,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1106,6 +1769,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1134,8 +1801,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1151,7 +1816,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1160,6 +1824,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1188,8 +1856,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1205,7 +1871,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1214,6 +1879,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1242,8 +1911,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1259,7 +1926,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1268,6 +1934,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1296,8 +1966,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1313,7 +1981,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1322,6 +1989,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1350,8 +2021,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1367,7 +2036,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1376,6 +2044,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1404,8 +2076,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1421,7 +2091,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1430,6 +2099,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1458,8 +2131,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1475,7 +2146,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1484,6 +2154,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1513,8 +2187,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1530,7 +2202,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1539,6 +2210,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1883,8 +2558,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1900,7 +2573,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1909,6 +2581,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -1938,8 +2614,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -1955,7 +2629,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -1964,6 +2637,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -4839,8 +5516,6 @@
         "ingestNoiseFilter": {
           "requireMarkers": [
             "artificial intelligence",
-            " ai",
-            "ai ",
             "a.i.",
             "generative",
             "machine learning",
@@ -4856,7 +5531,6 @@
             "midjourney",
             "firefly",
             "suno",
-            "udio",
             "pixverse",
             "vidu",
             "可灵",
@@ -4865,6 +5539,10 @@
             "万相",
             "混元",
             "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
           ]
         },
         "_aihot": {
@@ -5049,6 +5727,2420 @@
         "国内",
         "视频生成",
         "音频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-curious-gallery",
+      "name": "Curious Refuge film gallery",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://curiousrefuge.com/ai-film-gallery?format=rss",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "curious-refuge",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "创作者"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-heygen-updates",
+      "name": "HeyGen Updates",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://heygen.noticeable.news/feed.rss",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "heygen",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-podcastle",
+      "name": "Podcastle",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://async.com/blog/rss/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "podcastle",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-lalalai",
+      "name": "LALAL AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.lalal.ai/blog/rss/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "lalal-ai",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-unity",
+      "name": "Unity",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://unity.com/cn/blog/rss",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "unity",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-postperspective",
+      "name": "postPerspective",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://postperspective.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "postperspective",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-postmagazine",
+      "name": "Post Magazine",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.postmagazine.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "postmagazine",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-filmmakermagazine",
+      "name": "Filmmaker Magazine",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://filmmakermagazine.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "filmmakermagazine",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-filmmakersacademy",
+      "name": "Filmmakers Academy",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.filmmakersacademy.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "filmmakersacademy",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-creative-review",
+      "name": "Creative Review",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.creativereview.co.uk/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creative-review",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-cgchannel",
+      "name": "CG Channel",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.cgchannel.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "cgchannel",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-cgpress",
+      "name": "CGPress",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://cgpress.org/feed",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "cgpress",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-blendernation",
+      "name": "BlenderNation",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.blendernation.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "blendernation",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-blenderartists",
+      "name": "Blender Artists",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blenderartists.org/latest.rss",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "blenderartists",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-productionexpert",
+      "name": "Production Expert",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.production-expert.com/production-expert-1?format=rss",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "productionexpert",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-rekkerd",
+      "name": "Rekkerd",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://rekkerd.org/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "rekkerd",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-cdm",
+      "name": "CDM",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://cdm.link/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "cdm",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-musicradar",
+      "name": "MusicRadar",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.musicradar.com/feeds.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "musicradar",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-musicbusinessworldwide",
+      "name": "Music Business Worldwide",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.musicbusinessworldwide.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "musicbusinessworldwide",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-petapixel",
+      "name": "PetaPixel",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://petapixel.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "petapixel",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "影视媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-zhidx",
+      "name": "智东西",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://zhidx.com/rss",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "zhidx",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "中文媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-oschina",
+      "name": "开源中国",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.oschina.net/news/rss",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "oschina",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "中文媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-tmtpost",
+      "name": "钛媒体",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.tmtpost.com/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "tmtpost",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "中文媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-cnbeta",
+      "name": "cnBeta",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.cnbeta.com.tw/backend.php",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "cnbeta",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "中文媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-wechat-cv",
+      "name": "我爱计算机视觉 · 公开公众号 RSS",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.xlab.app/feed/b81ffcfff1107b5265cd7e39de610dc7ca72caf4.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "cv-public-account",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "中文媒体",
+        "公共 RSS 桥接"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-wechat-xinzhiyuan",
+      "name": "新智元 · 公开公众号 RSS",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "xinzhiyuan",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "中文媒体",
+        "公共 RSS 桥接"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-wechat-jiqizhixin",
+      "name": "机器之心 · 公开公众号 RSS",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/8d97af31b0de9e48da74558af128a4673d78c9a3.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "jiqizhixin",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "中文媒体",
+        "公共 RSS 桥接"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-wechat-jiqizhixin-sota",
+      "name": "机器之心SOTA模型 · 公开公众号 RSS",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/2f520471856d56c7b3a95cd09eb777149b32828a.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "jiqizhixin",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "中文媒体",
+        "公共 RSS 桥接"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-wechat-tencent-hunyuan",
+      "name": "腾讯混元 · 公开公众号 RSS",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/306ce19a1ca590c9c2df781789e828d1acfa1356.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "tencent",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "中文媒体",
+        "公共 RSS 桥接"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-wechat-tongyi",
+      "name": "通义实验室 · 公开公众号 RSS",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/4ebee6222ae08705b8aabc9116f0defbcb6b17c6.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "alibaba",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "中文媒体",
+        "公共 RSS 桥接"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-wechat-stepfun",
+      "name": "阶跃StepFun · 公开公众号 RSS",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/3e2714d06aa36142e8ed6b3f4e5cf9090a069dd2.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "stepfun",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "中文媒体",
+        "公共 RSS 桥接"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-apple-ml",
+      "name": "Apple Machine Learning Research",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://machinelearning.apple.com/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型",
+            "speech",
+            "voice",
+            "music",
+            "3d",
+            "render",
+            "cinema",
+            "vfx",
+            "tts",
+            "nano banana",
+            "lip sync",
+            "lumalabs",
+            "runway",
+            "luma",
+            "recraft",
+            "krea",
+            "字幕",
+            "语音",
+            "声音",
+            "绘画",
+            "画图",
+            "生图",
+            "画面",
+            "剪辑",
+            "拍摄",
+            "运镜",
+            "视频生成"
+          ]
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "apple",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-reallusion",
+      "name": "Reallusion",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://magazine.reallusion.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "reallusion",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-epidemic",
+      "name": "Epidemic Sound",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.epidemicsound.com/blog/rss/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ],
+          "requireWords": [
+            "ai",
+            "udio"
+          ]
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "epidemic",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-theoretically-media",
+      "name": "Theoretically Media blog",
+      "kind": "web_list",
+      "config": {
+        "url": "https://theoreticallymedia.com/blog/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "publishedAtUtcOffset": "+00:00",
+        "itemSelector": "a.post-card",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time",
+        "allowUrlPrefixes": [
+          "https://theoreticallymedia.com/blog/"
+        ],
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "theoretically",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "创作者"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-theoretically-news",
+      "name": "Theoretically Media",
+      "kind": "web_list",
+      "config": {
+        "url": "https://theoreticallymedia.beehiiv.com/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "publishedAtUtcOffset": "+00:00",
+        "itemSelector": "a[href^=\"/p/\"]:has(h3)",
+        "titleSelector": "h3",
+        "publishedAtRegex": "([A-Z][a-z]{2} \\d{1,2}, \\d{4})",
+        "allowUrlPrefixes": [
+          "https://theoreticallymedia.beehiiv.com/p/"
+        ],
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "theoretically",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "创作者"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-ai-for-real-life",
+      "name": "AI For Real Life",
+      "kind": "web_list",
+      "config": {
+        "url": "https://ai-for-real-life.beehiiv.com/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "publishedAtUtcOffset": "+00:00",
+        "itemSelector": "a[href^=\"/p/\"]:has(h3)",
+        "titleSelector": "h3",
+        "publishedAtRegex": "([A-Z][a-z]{2} \\d{1,2}, \\d{4})",
+        "allowUrlPrefixes": [
+          "https://ai-for-real-life.beehiiv.com/p/"
+        ],
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "ai-for-real-life",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "创作者"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-luma-news",
+      "name": "Luma News",
+      "kind": "web_list",
+      "config": {
+        "url": "https://lumalabs.ai/news",
+        "parseMode": "html",
+        "itemSelector": "div.group:has(h3 a.card-link):not(:has(span.typo-label:contains(\"Blog\")))",
+        "linkSelector": "h3 a.card-link",
+        "titleSelector": "h3",
+        "publishedAtSelector": "span.typo-body-s",
+        "publishedAtUtcOffset": "+00:00",
+        "sortByPublishedAt": true,
+        "allowUrlPrefixes": [
+          "https://lumalabs.ai/news/"
+        ],
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "luma",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-aiography",
+      "name": "AIography · Lawrence Jordan",
+      "kind": "web_list",
+      "config": {
+        "url": "https://aiography.beehiiv.com/",
+        "parseMode": "html",
+        "itemSelector": ".embla__slide:has(h3)",
+        "linkSelector": "a[href^=\"/p/\"]",
+        "titleSelector": "h3",
+        "publishedAtRegex": "([A-Z][a-z]{2} \\d{1,2}, \\d{4})",
+        "publishedAtUtcOffset": "+00:00",
+        "sortByPublishedAt": true,
+        "allowUrlPrefixes": [
+          "https://aiography.beehiiv.com/p/"
+        ],
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "aiography",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "创作者",
+        "AI影视"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-slop-reel",
+      "name": "Slop Reel · AI 视频制作简报",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.slopreel.com/",
+        "parseMode": "html",
+        "itemSelector": "a.sr-edition",
+        "linkSelector": "a.sr-edition",
+        "titleSelector": ".sr-edition-title",
+        "publishedAtRegex": "([A-Z][a-z]+ \\d{1,2}, \\d{4})",
+        "publishedAtUtcOffset": "+00:00",
+        "sortByPublishedAt": true,
+        "allowUrlPrefixes": [
+          "https://www.slopreel.com/archive/"
+        ],
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "slop-reel",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "创作者",
+        "AI影视"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false
