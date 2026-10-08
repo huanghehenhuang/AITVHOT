@@ -2,29 +2,15 @@
 
 采集免费不等于处理免费：RSS、普通网页和 GitHub 发布订阅不需要按次付费的采集 API，但进入精选、写作和事件归组后仍可能调用模型。先补充一手与垂直信源，再按产出和回执决定哪些付费入口值得保留。
 
-## 已验证的新增免费入口
+## 已验证的免费来源库
 
-2026-10-08 用公开 HTTP 响应验证了下面 11 个入口，并加入 `industry/sources.json`。基础配置从 12 个增至 23 个（22 个 RSS/Atom、1 个普通 HTML 列表）；这些数字不包含仅存在于线上数据库里的 X、公众号或手工添加的其他来源。
+2026-10-08 扩容后，`industry/sources.json` 共 122 个入口（上一轮为 23 个，本轮新增 99 个；当前 main 为 12 个）。包括 31 个官方公告与产品博客、31 个作者模型库、27 个开源软件发布订阅、3 个创作者/教程来源、30 个媒体与社区入口；107 个参与精选，15 个日常版本更新入口仅作热度证据。
 
-| 信源 | 入口 | 主要覆盖 |
-|---|---|---|
-| Comfy 官方博客 | <https://blog.comfy.org/feed> | 工作流、模型接入、创作案例 |
-| fal 官方博客 | <https://blog.fal.ai/rss/> | 视频、图像、生产工作流 |
-| Stability AI 官方新闻 | <https://stability.ai/news-updates?format=rss> | 图像、音频、影视合作 |
-| ElevenLabs | <https://elevenlabs.io/blog/rss.xml> | 配音、声音、音频研究 |
-| Replicate 官方博客 | <https://replicate.com/blog/rss> | 模型使用与创作案例 |
-| LTX-2 官方发布 | <https://github.com/Lightricks/LTX-2/releases.atom> | 开源音视频模型 |
-| Diffusers 官方发布 | <https://github.com/huggingface/diffusers/releases.atom> | 开源管线，先作热度证据 |
-| InvokeAI 官方发布 | <https://github.com/invoke-ai/InvokeAI/releases.atom> | 图像创作与工作流 |
-| Fish Speech 官方发布 | <https://github.com/fishaudio/fish-speech/releases.atom> | 开源配音模型 |
-| No Film School | <https://nofilmschool.com/feeds/content-types/article.rss> | 影视创作、AI 配音与版权 |
-| Black Forest Labs 官方博客 | <https://bfl.ai/blog> | 图像与视频模型 |
+完整入口、最近匹配日期、近 30 天列表条目数与复查命令见 [source-catalog.md](source-catalog.md)，逐源解析记录见 [source-checks.json](source-checks.json)。这些是配置与一次 HTTP 列表验证，不是已经部署的来源数、日均产出或精选成功率；不包含只存在于线上数据库的 X、公众号等来源。
 
-全部订阅返回了非空、可解析的 RSS/Atom；Black Forest Labs 的原始 HTML 用配置中的选择器可解析出 10 篇文章，标题和 `time[datetime]` 都能读取，不需要浏览器渲染或 Jina。这里验证的是列表接入，不保证每篇原文都能提取正文，也不保证未来接口一直有效。
+RSS/Atom、普通 HTML 和公开 JSON 列表直接读取，不配置付费渲染。范围覆盖视频、图像、语音、音乐、字幕、3D、剪辑和工作流，并补充国内厂商与行业媒体。网页中的 JSON 列表按官网实际字段映射，Runway 的嵌套 Flight 数组和 MiniMax 的混合日期格式已补齐解析。
 
-ElevenLabs 排除 `Resources` 类，保留产品、研究、公司、客户故事和影响案例，减少通用客服与企业知识文章。No Film School 的电影与摄影内容较宽，仍按现有 AI 影视预筛处理，观察一周后的有效产出再决定是否缩窄入口。Replicate 与 Fish Speech 当前更新较慢，作为低频补充；未加入没有发布条目的 Wan2.2 Releases，以及只返回 2024 年旧发布的 HunyuanVideo Releases。
-
-新增信源首轮最多回灌 3 条，并配置 `maxItemAgeDays: 30`：每轮都在详情补齐和模型处理前跳过已有明确日期的 30 天前旧文，避免下一轮再补进订阅里的大量存量。没有可用发布时间的条目继续保留；已有信源未配置这一字段时保持原采集范围。默认只展示摘要与原文链接，站内全文和全文分发均关闭。此次没有修改评分门槛、模型选择或付费服务预算。
+全部基础配置首轮最多回灌 3 条，每轮按 `maxItemAgeDays: 30` 跳过有明确日期的旧资料。宽泛入口按配置中的 `ingestNoiseFilter.requireMarkers` 在详情补齐与模型处理前筛掉无关标题和摘要，模型列表排除常见重复权重格式。没有可用日期的未来条目仍会保留；现有数据库配置不会因 seed 自动改写。默认只展示摘要与原文链接，全文展示和分发均关闭。评分门槛、模型选择和付费预算未改变。
 
 ## 在已有站点导入
 
@@ -34,7 +20,7 @@ ElevenLabs 排除 `Resources` 类，保留产品、研究、公司、客户故�
 node --env-file-if-exists=.env scripts/seed.ts
 ```
 
-`seed` 只添加不存在的信源 ID，保留现有信源的后台编辑、启停与频率；它不会删除已从 JSON 移除的旧信源。同一个入口如果已经以另一 ID 加入后台，应先核对，避免重复配置。执行 seed 后，新启用来源会按 worker 的开关和计划进入采集；如只想审阅配置，先保持采集和模型开关关闭。
+`seed` 只添加不存在的信源 ID，保留现有信源的后台编辑、启停与频率；它不会删除已从 JSON 移除的旧信源。同一个入口如果已经以另一 ID 加入后台，应先核对，避免重复配置。执行 seed 后，新启用来源会按 worker 的开关和计划进入采集；如只想审阅配置，先保持采集和模型开关关闭。新增默认来源已统一同一厂商的 `owner_entity_id`，已有官方源如果仍为空，可在后台按清单核对来源归属，避免博客、模型库和发布日志贡献重复热度。
 
 ## 后台「产出与成本」
 

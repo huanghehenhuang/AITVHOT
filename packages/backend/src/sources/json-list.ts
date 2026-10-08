@@ -41,7 +41,11 @@ export function renderTemplate(template: string, item: unknown): string | null {
 
 function toDate(v: unknown, unit: string | undefined): Date | null {
   if (v === null || v === undefined || v === "") return null;
-  if (unit === "epoch_ms" || unit === "epoch_s") {
+  if (unit === "epoch_ms_or_iso" && typeof v === "string" && /^\d{4}-\d{2}-\d{2}T/.test(v)) {
+    const t = Date.parse(v);
+    return Number.isFinite(t) ? new Date(t) : null;
+  }
+  if (unit === "epoch_ms" || unit === "epoch_s" || unit === "epoch_ms_or_iso") {
     try {
       const date = new Date(Number(v) * (unit === "epoch_s" ? 1000 : 1));
       return Number.isFinite(date.getTime()) ? date : null;
@@ -57,6 +61,27 @@ function toDate(v: unknown, unit: string | undefined): Date | null {
   }
   const t = Date.parse(String(v));
   return Number.isFinite(t) ? new Date(t) : null;
+}
+
+/** One complete JSON array/object, including nested containers and brackets inside strings. */
+function jsonContainer(text: string, start: number): string | null {
+  if (text[start] !== "{" && text[start] !== "[") return null;
+  let depth = 0, inStr: string | null = null, esc = false;
+  for (let i = start; i < text.length; i++) {
+    const ch = text[i]!;
+    if (inStr) {
+      if (esc) esc = false;
+      else if (ch === "\\") esc = true;
+      else if (ch === inStr) inStr = null;
+      continue;
+    }
+    if (ch === '"' || ch === "'") inStr = ch;
+    else if (ch === "{" || ch === "[") depth++;
+    else if (ch === "}" || ch === "]") {
+      if (--depth === 0) return text.slice(start, i + 1);
+    }
+  }
+  return null;
 }
 
 function findKey(obj: unknown, key: string, depth = 0): unknown {
@@ -80,23 +105,8 @@ function embeddedJson(html: string, source: SourceRow): unknown {
     const m = re.exec(html);
     if (!m) throw new FetchError(`window.${name} not found`);
     const start = m.index + m[0].length;
-    // Balanced-brace scan to find the object literal's end.
-    let depth = 0, inStr: string | null = null, esc = false;
-    for (let i = start; i < html.length; i++) {
-      const ch = html[i]!;
-      if (inStr) {
-        if (esc) esc = false;
-        else if (ch === "\\") esc = true;
-        else if (ch === inStr) inStr = null;
-        continue;
-      }
-      if (ch === '"' || ch === "'") inStr = ch;
-      else if (ch === "{" || ch === "[") depth++;
-      else if (ch === "}" || ch === "]") {
-        depth--;
-        if (depth === 0) return JSON.parse(html.slice(start, i + 1));
-      }
-    }
+    const container = jsonContainer(html, start);
+    if (container) return JSON.parse(container);
     throw new FetchError(`window.${name} not terminated`);
   }
   // html_json_key: scan JSON script blocks (e.g. __NEXT_DATA__) for the key.
@@ -115,16 +125,19 @@ function embeddedJson(html: string, source: SourceRow): unknown {
         // Next.js flight payloads: self.__next_f.push([1,"..."])
       }
     }
-    const flight = /"((?:[^"\\]|\\.)*)"\]\)\s*$/.exec(body);
+    const flight = /"((?:[^"\\]|\\.)*)"\]\)\s*;?\s*$/.exec(body);
     if (flight) {
       try {
         const decoded = JSON.parse(`"${flight[1]}"`) as string;
-        const idx = decoded.indexOf(`"${key}"`);
-        if (idx >= 0) {
-          const objStart = decoded.lastIndexOf("{", idx);
-          const parsed = JSON.parse(decoded.slice(objStart, decoded.indexOf("]", idx) + 1) + "}");
-          const found = findKey(parsed, key);
-          if (found) return { [key]: found };
+        const literal = JSON.stringify(key);
+        let idx = -1;
+        while ((idx = decoded.indexOf(literal, idx + 1)) >= 0) {
+          const colon = /^\s*:\s*/.exec(decoded.slice(idx + literal.length));
+          if (!colon) continue;
+          const start = idx + literal.length + colon[0].length;
+          if (decoded[start] !== "[") continue;
+          const container = jsonContainer(decoded, start);
+          if (container) return { [key]: JSON.parse(container) };
         }
       } catch {
         // keep scanning

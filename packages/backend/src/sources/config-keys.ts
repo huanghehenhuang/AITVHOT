@@ -26,7 +26,7 @@ const KEYS: Record<SourceRow["kind"], string[]> = {
 // Objects with fixed keys (headers and bodyJson are request data, free-form).
 const NESTED: Record<string, string[]> = {
   _aihot: ["initialBackfillLimit", "initialBackfillMonths"],
-  ingestNoiseFilter: ["dropMarkers", "dropMarkersTitleOnly", "keepIfMatches"],
+  ingestNoiseFilter: ["dropMarkers", "dropMarkersTitleOnly", "keepIfMatches", "requireMarkers"],
   itemUrlPrefixRewrite: ["from", "to"],
   requireBoolean: ["path", "equals"],
   minNumeric: ["path", "min"],
@@ -51,6 +51,10 @@ export function unsupportedConfig(kind: SourceRow["kind"], config: Record<string
     else if (VALUES[key] && !VALUES[key]!.includes(String(value))) out.push(`${key}=${String(value)}`);
     else if (NESTED[key] && value && typeof value === "object") {
       for (const sub of Object.keys(value)) if (!NESTED[key]!.includes(sub)) out.push(`${key}.${sub}`);
+      if (key === "ingestNoiseFilter" && "requireMarkers" in value) {
+        const markers = (value as Record<string, unknown>).requireMarkers;
+        if (!Array.isArray(markers) || markers.length === 0 || markers.some((v) => typeof v !== "string" || !v.trim())) out.push("ingestNoiseFilter.requireMarkers must be a non-empty string array");
+      }
     }
   }
   return out;

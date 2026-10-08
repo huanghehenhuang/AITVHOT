@@ -35,6 +35,8 @@
 
 可选：`summaryIsBody`（订阅里的摘要就是全文）、`allowCategories` / `denyCategories`（按订阅里的分类过滤）。
 
+宽泛媒体可配置 `ingestNoiseFilter.requireMarkers`，例如 `{ "requireMarkers": ["视频", "图像", "Veo", "Sora"] }`：标题或摘要至少包含一个不区分大小写的字面关键词，才进入详情补齐、入库和模型处理。不启用时保持原行为；`keepIfMatches` 只豁免排除词，不能绕过必需关键词。这是降低接入噪声的来源范围规则，不替代模型预筛，也不改变精选门槛。
+
 ### web_list
 
 支持普通 CSS 选择器，`div` 列表也能采集。关键是 `itemSelector` 要选中**每条新闻**，而不是包住所有新闻的容器。例如：
@@ -111,6 +113,8 @@
 - 接口本身返回数组时，省略 `itemsPath`。`titlePaths`、`summaryPaths`、`authorPaths` 是候选路径数组，按顺序取第一个非空值，例如 `["title", "name"]`。
 - 已有完整网址时用 `{raw:url}`；只有 slug 时可用 `https://example.com/posts/{slug}`。`{字段路径}` 会编码字段值，`{raw:字段路径}` 原样插入。JSON 列表不会自动把相对网址补成绝对网址，模板应产出完整的 HTTP(S) 地址。
 - 日期建议返回带时区的 ISO 字符串；数字时间戳分别设 `publishedAtUnit: "epoch_s"`（秒）或 `"epoch_ms"`（毫秒），`20261001` 这类日期设 `"yyyymmdd"`。
+- 同一字段混用毫秒时间戳和 ISO 字符串时，显式设 `publishedAtUnit: "epoch_ms_or_iso"`（例如 MiniMax 新闻接口）；原数字单位不自动改变含义。
+- 官网将列表嵌在 HTML 时，`mode: "html_json_key"` 配合 `jsonKey` 可读 JSON script 或 Next.js Flight 中的完整数组（包括条目内嵌套数组）；`html_window_var` 配合 `windowVar` 读窗口变量。它们读取原始响应中的公开数据，不运行 JavaScript，不解析需要后续请求的 Flight 引用。
 - 缺少标题或无法生成链接的条目会跳过。非空数组全部映射失败时，会报 `no items mapped (check title/url paths)`；路径不是数组时，会报 `items path did not resolve to an array`。
 
 ### 本地跑通 HTML/JSON 示例

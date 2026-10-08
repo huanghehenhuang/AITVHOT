@@ -24,6 +24,12 @@ const pages: Record<string, (base: string) => string> = {
     `<?xml version="1.0"?><rss version="2.0"><channel><title>t</title>` +
     ["news/a", "business/b"].map((p) => `<item><title>Entry ${p} ${T}</title><link>https://example.org/rules-${T}/${p}</link><pubDate>${new Date().toUTCString()}</pubDate></item>`).join("") +
     `</channel></rss>`,
+  "/topic.xml": () => `<rss version="2.0"><channel><title>Mixed news</title>` +
+    [
+      ["New enterprise chatbot", "Not part of the film desk"],
+      ["New video model", "Veo gives filmmakers more control"],
+      ["A new workflow", "配音制作与角色口型同步"],
+    ].map(([title, summary], i) => `<item><title>${title}</title><description>${summary}</description><link>${base}/topic-${T}/${i}</link></item>`).join("") + `</channel></rss>`,
   "/list.html": () => html("", `<ul><li><a href="/p/a-${T}">Short clean title ${T}</a><time>2026-09-20</time></li><li><a href="/p/b-${T}">${LONG}</a></li></ul>`),
   [`/p/a-${T}`]: () =>
     html(`<meta name="description" content="Summary of A"><meta property="article:published_time" content="2026-01-01T00:00:00Z">`, `<h1>Detail heading A</h1><p class="byline"><time datetime="2026-09-21T08:00:00Z">Sep 21</time></p>`),
@@ -56,6 +62,7 @@ process.env.JINA_API_KEY = "test-key";
 const SOURCES = {
   unsupported: { kind: "rss", config: { feedUrl: `${base}/feed.xml`, adapter: "feed_cards" } },
   denied: { kind: "rss", config: { feedUrl: `${base}/feed.xml`, denyUrlPrefixes: [`https://example.org/rules-${T}/business/`] } },
+  topic: { kind: "rss", config: { feedUrl: `${base}/topic.xml`, ingestNoiseFilter: { requireMarkers: ["veo", "配音"], keepIfMatches: ["enterprise"] }, detail: { maxFetches: 5, titleSelector: "h1" } } },
   detail: {
     kind: "web_list",
     config: {
@@ -103,6 +110,12 @@ test("a config entry the collector does not implement fails the fetch instead of
 test("feed entries outside the source's URL rules are skipped", async () => {
   assert.equal((await collectSource(id("denied"), { force: true })).status, "ok");
   assert.deepEqual((await articles(id("denied"))).map((a) => a.url), [`https://example.org/rules-${T}/news/a`]);
+});
+
+test("a broad feed's required topic markers filter before detail reads and storage", async () => {
+  assert.equal((await collectSource(id("topic"), { force: true })).status, "ok");
+  assert.deepEqual((await articles(id("topic"))).map((a) => a.title).sort(), ["A new workflow", "New video model"]);
+  assert.equal(pageReads.get(`/topic-${T}/0`) ?? 0, 0, "off-topic material never buys enrichment or enters processing");
 });
 
 test("detail rules fill what the listing lacks, and a detail title survives the next listing", async () => {

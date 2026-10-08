@@ -1,5 +1,5 @@
 {
-  "$comment": "AITVHot 免费基础信源：RSS/Atom 与无需渲染服务的官方网页列表。新增来源于 2026-10-08 验证，覆盖视频模型、图像、配音、工作流和影视创作；验证记录与导入方式见 docs/source-operations.md。新增源首轮最多回灌 3 条，全文许可默认关闭；已有后台配置不会被 seed 覆盖。",
+  "$comment": "AITVHot 免费信源库：官方公告、模型发布、创作教程与行业媒体。2026-10-08 验证记录和完整清单见 docs/source-catalog.md；新来源限制 30 天历史并默认关闭全文。seed 不覆盖已有后台配置。",
   "sources": [
     {
       "id": "rss-openai-news",
@@ -8,8 +8,9 @@
       "config": {
         "feedUrl": "https://openai.com/news/rss.xml",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -29,8 +30,9 @@
       "config": {
         "feedUrl": "https://blog.google/technology/ai/rss/",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -50,8 +52,9 @@
       "config": {
         "feedUrl": "https://deepmind.google/blog/rss.xml",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
@@ -72,12 +75,13 @@
       "config": {
         "feedUrl": "https://huggingface.co/blog/feed.xml",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "huggingface",
       "participation_mode": "editorial",
       "interval_minutes": 120,
       "tags": [
@@ -94,12 +98,13 @@
       "config": {
         "feedUrl": "https://github.com/comfyanonymous/ComfyUI/releases.atom",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T1_5",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "comfy",
       "participation_mode": "hot_signal",
       "interval_minutes": 180,
       "tags": [
@@ -116,8 +121,9 @@
       "config": {
         "feedUrl": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T2",
       "first_party": false,
@@ -137,8 +143,9 @@
       "config": {
         "feedUrl": "https://techcrunch.com/category/artificial-intelligence/feed/",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T2",
       "first_party": false,
@@ -158,8 +165,9 @@
       "config": {
         "feedUrl": "https://arstechnica.com/ai/feed/",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T2",
       "first_party": false,
@@ -179,8 +187,9 @@
       "config": {
         "feedUrl": "https://the-decoder.com/feed/",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T2",
       "first_party": false,
@@ -200,8 +209,9 @@
       "config": {
         "feedUrl": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T2",
       "first_party": false,
@@ -221,8 +231,9 @@
       "config": {
         "feedUrl": "https://www.cartoonbrew.com/feed",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T2",
       "first_party": false,
@@ -243,8 +254,9 @@
       "config": {
         "feedUrl": "https://www.reddit.com/r/aivideo/.rss",
         "_aihot": {
-          "initialBackfillLimit": 8
-        }
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
       },
       "tier": "T2",
       "first_party": false,
@@ -271,7 +283,7 @@
       },
       "tier": "T1",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "comfy",
       "participation_mode": "editorial",
       "interval_minutes": 180,
       "tags": [
@@ -294,7 +306,7 @@
       },
       "tier": "T1",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "fal",
       "participation_mode": "editorial",
       "interval_minutes": 180,
       "tags": [
@@ -317,7 +329,7 @@
       },
       "tier": "T1",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "stabilityai",
       "participation_mode": "editorial",
       "interval_minutes": 180,
       "tags": [
@@ -348,7 +360,7 @@
       },
       "tier": "T1",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "elevenlabs",
       "participation_mode": "editorial",
       "interval_minutes": 180,
       "tags": [
@@ -371,7 +383,7 @@
       },
       "tier": "T1",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "replicate",
       "participation_mode": "editorial",
       "interval_minutes": 180,
       "tags": [
@@ -394,7 +406,7 @@
       },
       "tier": "T1",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "lightricks",
       "participation_mode": "editorial",
       "interval_minutes": 180,
       "tags": [
@@ -418,7 +430,7 @@
       },
       "tier": "T1",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "huggingface",
       "participation_mode": "hot_signal",
       "interval_minutes": 180,
       "tags": [
@@ -442,7 +454,7 @@
       },
       "tier": "T1",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "invokeai",
       "participation_mode": "editorial",
       "interval_minutes": 180,
       "tags": [
@@ -466,7 +478,7 @@
       },
       "tier": "T1",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "fishaudio",
       "participation_mode": "editorial",
       "interval_minutes": 180,
       "tags": [
@@ -520,13 +532,4523 @@
       },
       "tier": "T1",
       "first_party": true,
-      "owner_entity_id": null,
+      "owner_entity_id": "black-forest-labs",
       "participation_mode": "editorial",
       "interval_minutes": 180,
       "tags": [
         "官方",
         "图像生成",
         "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-midjourney",
+      "name": "Midjourney 官方更新",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://updates.midjourney.com/rss/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "midjourney",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "图像生成",
+        "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-curious-refuge",
+      "name": "Curious Refuge 创作教程",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://curiousrefuge.com/blog?format=rss",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "curious-refuge",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "创作者",
+        "影视创作"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-kapwing",
+      "name": "Kapwing 创作指南",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.kapwing.com/resources/rss/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "kapwing",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "剪辑",
+        "配音"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-freepik",
+      "name": "Freepik / Magnific 官方博客",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.magnific.com/blog/rss/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "freepik",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "图像生成",
+        "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-cined",
+      "name": "CineD",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.cined.com/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "cined",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "影视工业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-80lv",
+      "name": "80 Level",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://80.lv/feed",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "80lv",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "动画",
+        "工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-befores-afters",
+      "name": "befores & afters",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://beforesandafters.com/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "befores-afters",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "影视工业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-fxguide",
+      "name": "fxguide",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.fxguide.com/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "fxguide",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "影视工业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-vfxvoice",
+      "name": "VFX Voice",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://vfxvoice.com/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "vfxvoice",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "影视工业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-animation-magazine",
+      "name": "Animation Magazine",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.animationmagazine.net/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "animation-magazine",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "动画"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-provideo-coalition",
+      "name": "ProVideo Coalition",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.provideocoalition.com/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "provideo-coalition",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "剪辑"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-redshark",
+      "name": "RedShark News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.redsharknews.com/rss.xml",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "redshark",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "影视工业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-videomaker",
+      "name": "Videomaker",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.videomaker.com/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "videomaker",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "影视创作"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-variety-ai",
+      "name": "Variety · AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://variety.com/t/artificial-intelligence/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "variety",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "影视工业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-deadline-ai",
+      "name": "Deadline · AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://deadline.com/tag/artificial-intelligence/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "deadline",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "影视工业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-hollywood-reporter-ai",
+      "name": "The Hollywood Reporter · AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.hollywoodreporter.com/t/artificial-intelligence/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "hollywood-reporter",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "影视工业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-indiewire-ai",
+      "name": "IndieWire · AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.indiewire.com/t/artificial-intelligence/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "indiewire",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "影视创作"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-fstoppers",
+      "name": "Fstoppers",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://fstoppers.com/feed",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "fstoppers",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-diy-photography",
+      "name": "DIYPhotography",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.diyphotography.net/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "diy-photography",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-creative-bloq",
+      "name": "Creative Bloq",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.creativebloq.com/feeds.xml",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creative-bloq",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "图像生成",
+        "工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-digital-camera-world",
+      "name": "Digital Camera World",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.digitalcameraworld.com/feeds.xml",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "digital-camera-world",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-qbitai",
+      "name": "量子位",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.qbitai.com/feed",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "qbitai",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-ithome",
+      "name": "IT之家",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.ithome.com/rss/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "ithome",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-geekpark",
+      "name": "极客公园",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.geekpark.net/rss",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "geekpark",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-sspai",
+      "name": "少数派",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://sspai.com/feed",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "sspai",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "国内",
+        "工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-leiphone",
+      "name": "雷峰网",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.leiphone.com/feed",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "leiphone",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-blender-news",
+      "name": "Blender 官方新闻",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.blender.org/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "blender",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "动画",
+        "工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-blender-development",
+      "name": "Blender 开发博客",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://code.blender.org/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "blender",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "动画",
+        "工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-nvidia-generative-ai",
+      "name": "NVIDIA · Generative AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blogs.nvidia.com/blog/category/generative-ai/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "nvidia",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "研究"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-latentspace",
+      "name": "Latent Space",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.latent.space/feed",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "seedream",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "配音",
+            "音乐",
+            "影视",
+            "电影",
+            "动画",
+            "短剧",
+            "漫剧",
+            "漫画",
+            "视频",
+            "图像",
+            "数字人",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元视频",
+            "视觉",
+            "口型"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "latentspace",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "创作者",
+        "研究"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-stable-diffusion-art",
+      "name": "Stable Diffusion Art 教程",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://stable-diffusion-art.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "stable-diffusion-art",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "创作者",
+        "图像生成",
+        "工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-higgsfield-rss",
+      "name": "Higgsfield 官方博客",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://higgsfield.ai/blog/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "higgsfield",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "视频生成",
+        "影视创作"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-acly--krita-ai-diffusion",
+      "name": "krita-ai-diffusion 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/Acly/krita-ai-diffusion/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "acly",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "工作流",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-bmaltais--kohya_ss",
+      "name": "kohya_ss 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/bmaltais/kohya_ss/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "bmaltais",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "工作流",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-chidiwilliams--buzz",
+      "name": "buzz 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/chidiwilliams/buzz/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "chidiwilliams",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "配音",
+        "字幕"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-comfy-org--comfyui_frontend",
+      "name": "ComfyUI_frontend 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/Comfy-Org/ComfyUI_frontend/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "comfy",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "工作流",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-comfy-org--desktop",
+      "name": "desktop 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/Comfy-Org/desktop/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "comfy",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "工作流",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-facefusion--facefusion",
+      "name": "facefusion 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/facefusion/facefusion/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "facefusion",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "工作流",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-funaudiollm--sensevoice",
+      "name": "SenseVoice 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/QwenAudio/SenseVoice/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "alibaba",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "配音",
+        "字幕"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-ggerganov--whisper.cpp",
+      "name": "whisper.cpp 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/ggml-org/whisper.cpp/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "ggerganov",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "配音",
+        "字幕"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-index-tts--index-tts",
+      "name": "index-tts 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/index-tts/index-tts/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "indexteam",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "配音",
+        "字幕"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-jianchang512--pyvideotrans",
+      "name": "pyvideotrans 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/jianchang512/pyvideotrans/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "jianchang512",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "配音",
+        "字幕"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-kohya-ss--sd-scripts",
+      "name": "sd-scripts 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/kohya-ss/sd-scripts/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "kohya-ss",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "工作流",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-m-bain--whisperx",
+      "name": "whisperX 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/m-bain/whisperX/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "m-bain",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "配音",
+        "字幕"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-mcmonkeyprojects--swarmui",
+      "name": "SwarmUI 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/mcmonkeyprojects/SwarmUI/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "mcmonkeyprojects",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "工作流",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-mifi--lossless-cut",
+      "name": "lossless-cut 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/mifi/lossless-cut/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "mifi",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "剪辑"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-mltframework--shotcut",
+      "name": "shotcut 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/mltframework/shotcut/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "mltframework",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "剪辑"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-mrnerf--lichtfeld-studio",
+      "name": "LichtFeld-Studio 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/MrNeRF/LichtFeld-Studio/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "mrnerf",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "动画"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-ohf-voice--piper1-gpl",
+      "name": "piper1-gpl 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/OHF-Voice/piper1-gpl/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "ohf-voice",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "配音",
+        "字幕"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-openshot--openshot-qt",
+      "name": "openshot-qt 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/OpenShot/openshot-qt/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "openshot",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "剪辑"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-subtitleedit--subtitleedit",
+      "name": "subtitleedit 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/SubtitleEdit/subtitleedit/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "subtitleedit",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "配音",
+        "字幕"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-swivid--f5-tts",
+      "name": "F5-TTS 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/SWivid/F5-TTS/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "swivid",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "配音",
+        "字幕"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-systran--faster-whisper",
+      "name": "faster-whisper 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/SYSTRAN/faster-whisper/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "systran",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "配音",
+        "字幕"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-vladmandic--sdnext",
+      "name": "sdnext 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/vladmandic/sdnext/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "vladmandic",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "工作流",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-wan-ai",
+      "name": "通义万相 · 模型发布",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=Wan-AI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "alibaba",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-bytedance",
+      "name": "字节跳动 · 视觉模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=ByteDance&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "seedvr",
+            "hyper-sd",
+            "sdxl",
+            "bernini",
+            "depth",
+            "image",
+            "video",
+            "dream"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "bytedance",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-bytedance-seed",
+      "name": "字节 Seed · 创作模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=ByteDance-Seed&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "seedvr",
+            "seededit",
+            "seedream",
+            "video",
+            "dream",
+            "image",
+            "3d",
+            "spatial"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "bytedance",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-minimaxai",
+      "name": "MiniMax · 音视频模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=MiniMaxAI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "music",
+            "speech",
+            "audio",
+            "minimax-h",
+            "hailuo",
+            "video"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "minimax",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-kwai-kolors",
+      "name": "快手 Kolors · 视觉模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=Kwai-Kolors&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "kuaishou",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-qwen",
+      "name": "通义千问 · 图像与音频模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=Qwen&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "image",
+            "tts",
+            "asr",
+            "audio"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "alibaba",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-focused-stepfun-ai",
+      "name": "阶跃星辰 · 音视频与图像模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=stepfun-ai&search=Step&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "video",
+            "audio",
+            "step1x",
+            "image"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "stepfun-ai",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-lightricks",
+      "name": "Lightricks · LTX 模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=Lightricks&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "lightricks",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-black-forest-labs",
+      "name": "Black Forest Labs · FLUX 模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=black-forest-labs&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "black-forest-labs",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-stabilityai",
+      "name": "Stability AI · 创作模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=stabilityai&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "stabilityai",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-focused-zai-org",
+      "name": "智谱 · 图像模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=zai-org&search=Image&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "glm-image"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "zai-org",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-tongyi-mai",
+      "name": "通义 MAI · Z-Image",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=Tongyi-MAI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "alibaba",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-funaudiollm",
+      "name": "通义 · 语音模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=FunAudioLLM&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "alibaba",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-fishaudio",
+      "name": "Fish Audio · 语音模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=fishaudio&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "fishaudio",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-resembleai",
+      "name": "Resemble AI · 语音模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=ResembleAI&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "resembleai",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-swivid",
+      "name": "F5-TTS · 语音模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=SWivid&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "swivid",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-indexteam",
+      "name": "IndexTTS · 语音模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=IndexTeam&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "keepIfMatches": [
+            "index-echo-s2st-9b-bf16",
+            "index-tts"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "indexteam",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-focused-nvidia",
+      "name": "NVIDIA · Cosmos 模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=nvidia&search=Cosmos&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "nvidia",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-zyphra",
+      "name": "Zyphra · Zonos 语音模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=Zyphra&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "zonos"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "zyphra",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-kyutai",
+      "name": "Kyutai · 音视频模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=kyutai&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "tts",
+            "moshi",
+            "unievo",
+            "ovie",
+            "voice",
+            "sound",
+            "audio"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "kyutai",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-ace-step",
+      "name": "ACE-Step · 音乐模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=ACE-Step&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "ace-step",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-focused-tencent",
+      "name": "腾讯混元 · 音视频与图像模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=tencent&search=Hunyuan&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "hunyuanvideo",
+            "hunyuanimage",
+            "hunyuan3d",
+            "hunyuan-3d",
+            "hunyuanfoley",
+            "hunyuan-foley",
+            "hunyuan-videoworld"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "tencent",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-vchitect",
+      "name": "Vchitect · 视频模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=Vchitect&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "vchitect",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-skywork",
+      "name": "昆仑万维 · SkyReels",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=Skywork&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "skyreels",
+            "matrix-game",
+            "video",
+            "audio",
+            "image"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "skywork",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-focused-meituan-longcat",
+      "name": "美团 LongCat · 创作模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=meituan-longcat&search=LongCat&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "image",
+            "video",
+            "audio"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "meituan-longcat",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-tencentarc",
+      "name": "腾讯 ARC · 创作模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=TencentARC&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "worldcrafter",
+            "photomaker",
+            "instantmesh",
+            "image",
+            "video",
+            "dit"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "tencent",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-hidream-ai",
+      "name": "HiDream · 图像模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=HiDream-ai&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ],
+          "requireMarkers": [
+            "hidream",
+            "hi-dream",
+            "image",
+            "e1",
+            "i1"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "hidream-ai",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-focused-microsoft",
+      "name": "Microsoft · TRELLIS 3D",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=microsoft&search=TRELLIS&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "microsoft",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-focused-facebook",
+      "name": "Meta · SAM 图像/音频工具",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=facebook&search=sam&sort=createdAt&direction=-1&limit=100&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "meta",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-instantx",
+      "name": "InstantX · 视觉模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=InstantX&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "instantx",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-hf-shakker-labs",
+      "name": "Shakker Labs · 图像模型",
+      "kind": "json_list",
+      "config": {
+        "url": "https://huggingface.co/api/models?author=Shakker-Labs&sort=createdAt&direction=-1&limit=20&full=true&config=false",
+        "mode": "json_api",
+        "titlePaths": [
+          "id"
+        ],
+        "urlTemplate": "https://huggingface.co/{raw:id}",
+        "publishedAtPath": "createdAt",
+        "externalIdPath": "id",
+        "summaryPaths": [
+          "pipeline_tag"
+        ],
+        "authorPaths": [
+          "author"
+        ],
+        "fetchPublicContent": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "-diffusers",
+            "-gguf",
+            "-gptq",
+            "-awq",
+            "-bf16",
+            "-fp16",
+            "-fp8",
+            "-fp4",
+            "-mxfp",
+            "-nvfp",
+            "-int8"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "shakker-labs",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "模型发布",
+        "国内"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-kling",
+      "name": "可灵官方博客",
+      "kind": "web_list",
+      "config": {
+        "url": "https://kling.ai/blog",
+        "parseMode": "html",
+        "itemSelector": ".blog-card",
+        "titleSelector": "h3",
+        "publishedAtSelector": ".card-meta > div",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://kling.ai/blog/"
+        ],
+        "sortByPublishedAt": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "best ",
+            "top ai tools",
+            "gift code",
+            "watermark remover",
+            "headshot",
+            "wallpaper"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "kuaishou",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "国内",
+        "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-pixverse",
+      "name": "PixVerse 中文官方博客",
+      "kind": "web_list",
+      "config": {
+        "url": "https://pixverse.ai/zh/blog",
+        "parseMode": "html",
+        "itemSelector": "a[href^=\"/zh/blog/\"]:has(h2)",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://pixverse.ai/zh/blog/"
+        ],
+        "sortByPublishedAt": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "best ",
+            "top ai tools",
+            "gift code",
+            "watermark remover",
+            "headshot",
+            "wallpaper"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "pixverse",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "国内",
+        "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-krea",
+      "name": "Krea 官方博客",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.krea.ai/blog",
+        "parseMode": "html",
+        "itemSelector": "a.post-card",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://www.krea.ai/blog/"
+        ],
+        "sortByPublishedAt": true,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "krea",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "图像生成",
+        "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-ltx-studio",
+      "name": "LTX Studio 创作与产品博客",
+      "kind": "web_list",
+      "config": {
+        "url": "https://ltx.io/blog",
+        "parseMode": "html",
+        "itemSelector": ".w-dyn-item:has(h3.blog-title):not(.blog-caruosel-collection-item)",
+        "titleSelector": ".blog-title",
+        "publishedAtSelector": ".author-date-wrap > .post-author-new:last-child",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://ltx.io/blog/"
+        ],
+        "sortByPublishedAt": true,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "lightricks",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "影视创作",
+        "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-recraft",
+      "name": "Recraft 官方博客",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.recraft.ai/blog",
+        "parseMode": "html",
+        "itemSelector": ".collection-item:has(h2)",
+        "titleSelector": "h2",
+        "publishedAtSelector": ".paragraph-2-copy.grey",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://www.recraft.ai/blog/"
+        ],
+        "sortByPublishedAt": true,
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "best ",
+            "top ai tools",
+            "gift code",
+            "watermark remover",
+            "headshot",
+            "wallpaper"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "recraft",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "图像生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-hedra",
+      "name": "Hedra 官方博客",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.hedra.com/blog",
+        "parseMode": "html",
+        "itemSelector": "a[href^=\"/blog/\"]:has(time)",
+        "titleSelector": "h2,h3",
+        "publishedAtSelector": "time",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://www.hedra.com/blog/"
+        ],
+        "sortByPublishedAt": true,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "hedra",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "视频生成",
+        "数字人"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-cartesia",
+      "name": "Cartesia 官方博客",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.cartesia.ai/blog",
+        "parseMode": "html",
+        "itemSelector": "a[href^=\"/blog/\"]:has(time)",
+        "titleSelector": ".leading-header",
+        "publishedAtSelector": "time",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://www.cartesia.ai/blog/"
+        ],
+        "sortByPublishedAt": true,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "cartesia",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "配音"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-suno",
+      "name": "Suno 官方博客",
+      "kind": "web_list",
+      "config": {
+        "url": "https://suno.com/blog",
+        "parseMode": "html",
+        "itemSelector": "a[href^=\"/blog/\"]:has(h2)",
+        "titleSelector": "h2",
+        "publishedAtSelector": "p.flex span:last-child",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://suno.com/blog/"
+        ],
+        "sortByPublishedAt": true,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "suno",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "音乐生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-captions-web",
+      "name": "Captions / Mirage 官方博客",
+      "kind": "web_list",
+      "config": {
+        "url": "https://captions.ai/blog",
+        "parseMode": "html",
+        "itemSelector": "a.blog-post-item, a.feature-post",
+        "titleSelector": ".body-01,h2",
+        "publishedAtSelector": ".blog-meta,.legend-01",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://captions.ai/blog/"
+        ],
+        "sortByPublishedAt": true,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "captions",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "视频生成",
+        "数字人"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-vidu",
+      "name": "Vidu 官方创作博客",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.vidu.com/blog",
+        "parseMode": "html",
+        "itemSelector": "a[href^=\"/en/blog/\"]:has(time)",
+        "titleSelector": ".line-clamp-4",
+        "publishedAtSelector": "time",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://www.vidu.com/en/blog/"
+        ],
+        "sortByPublishedAt": true,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "vidu",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "国内",
+        "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-canva",
+      "name": "Canva 官方新闻室",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.canva.com/newsroom/news/",
+        "mode": "html_json_key",
+        "jsonKey": "posts",
+        "titlePaths": [
+          "name"
+        ],
+        "summaryPaths": [
+          "summary"
+        ],
+        "publishedAtPath": "publishedAt",
+        "urlTemplate": "https://www.canva.com/newsroom/news/{slug}/",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "artificial intelligence",
+            " ai",
+            "ai ",
+            "a.i.",
+            "generative",
+            "machine learning",
+            "生成式",
+            "人工智能",
+            "aigc",
+            "comfy",
+            "veo",
+            "sora",
+            "seedance",
+            "kling",
+            "flux",
+            "midjourney",
+            "firefly",
+            "suno",
+            "udio",
+            "pixverse",
+            "vidu",
+            "可灵",
+            "海螺",
+            "即梦",
+            "万相",
+            "混元",
+            "ai视频"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "canva",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "图像生成",
+        "工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-runway",
+      "name": "Runway 官方新闻",
+      "kind": "json_list",
+      "config": {
+        "url": "https://runway.com/news",
+        "mode": "html_json_key",
+        "jsonKey": "posts",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "excerpt"
+        ],
+        "urlTemplate": "https://runway.com{raw:href}",
+        "publishedAtPath": "date",
+        "externalIdPath": "_id",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "sortByPublishedAt": true
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "runway",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "视频生成",
+        "影视创作"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-minimax-api",
+      "name": "MiniMax 官方新闻",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.minimax.io/api/news?page=1&locale=en",
+        "mode": "json_api",
+        "itemsPath": "data",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "summary"
+        ],
+        "urlTemplate": "https://www.minimax.io/news/{slug}",
+        "publishedAtPath": "publishDate",
+        "publishedAtUnit": "epoch_ms_or_iso",
+        "externalIdPath": "newsId",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "speech",
+            "music",
+            "sora",
+            "veo",
+            "seedance",
+            "seedream",
+            "hailuo",
+            "minimax-h",
+            "配音",
+            "视频",
+            "图像",
+            "影视",
+            "动画",
+            "音乐",
+            "声音",
+            "视觉",
+            "语音",
+            "音频",
+            "海螺"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "sortByPublishedAt": true
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "minimax",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "国内",
+        "视频生成",
+        "配音"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-bytedance-seed-api",
+      "name": "字节 Seed 官方博客",
+      "kind": "json_list",
+      "config": {
+        "url": "https://seed.bytedance.com/api/get_article_list_v2?article_type=2&count=20&order_desc=true",
+        "mode": "json_api",
+        "itemsPath": "sub_article_list",
+        "titlePaths": [
+          "ArticleSubContentEn.Title"
+        ],
+        "summaryPaths": [
+          "ArticleSubContentEn.Abstract"
+        ],
+        "urlTemplate": "https://seed.bytedance.com/en/blog/{ArticleSubContentEn.TitleKey}",
+        "publishedAtPath": "ArticleMeta.PublishDate",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "ArticleMeta.ArticleID",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "video",
+            "image",
+            "audio",
+            "film",
+            "animation",
+            "speech",
+            "music",
+            "sora",
+            "veo",
+            "seedance",
+            "seedream",
+            "hailuo",
+            "minimax-h",
+            "配音",
+            "视频",
+            "图像",
+            "影视",
+            "动画",
+            "音乐",
+            "声音",
+            "视觉",
+            "语音",
+            "音频",
+            "海螺"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "maxItemAgeDays": 30,
+        "sortByPublishedAt": true
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "bytedance",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "国内",
+        "视频生成",
+        "音频生成"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false
