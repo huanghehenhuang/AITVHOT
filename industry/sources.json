@@ -1,5 +1,5 @@
 {
-  "$comment": "aitvhot 第一批信源（阶段 2 · 只跑免费 RSS，对应总纲 Day 4 起）；机器之心的公开 RSS 已于 2026-10 实测下线（/rss 302、/feed 为 HTML），已从清单移除，其内容后续由公众号源 mp-jizhi 覆盖。只含 11 个免费 RSS 源：无付费 key、无 web_list 选择器校准成本。与 sources.json 的差异仅两处：① 只保留 RSS 源 ② ComfyUI Releases 的 participation_mode 改为 hot_signal（发布频率高、单条信息量低，先只做热度证据，观察两周后再开 editorial——见 docs/信源说明.md）。校准完成后换回完整版 sources.json。",
+  "$comment": "AITVHot 免费基础信源：RSS/Atom 与无需渲染服务的官方网页列表。新增来源于 2026-10-08 验证，覆盖视频模型、图像、配音、工作流和影视创作；验证记录与导入方式见 docs/source-operations.md。新增源首轮最多回灌 3 条，全文许可默认关闭；已有后台配置不会被 seed 覆盖。",
   "sources": [
     {
       "id": "rss-openai-news",
@@ -253,6 +253,268 @@
       "interval_minutes": 120,
       "tags": [
         "社区",
+        "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-comfy-blog",
+      "name": "Comfy 官方博客",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blog.comfy.org/feed",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-fal-blog",
+      "name": "fal 官方博客",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blog.fal.ai/rss/",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-stability-news",
+      "name": "Stability AI 官方新闻",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://stability.ai/news-updates?format=rss",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "图像生成",
+        "音频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-elevenlabs-blog",
+      "name": "ElevenLabs 产品与研究",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://elevenlabs.io/blog/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "allowCategories": [
+          "Product",
+          "Research",
+          "Company",
+          "Customer Stories",
+          "Impact"
+        ]
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "配音"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-replicate-blog",
+      "name": "Replicate 官方博客",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://replicate.com/blog/rss",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-ltx2-releases",
+      "name": "LTX-2 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/Lightricks/LTX-2/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "视频生成"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-diffusers-releases",
+      "name": "Diffusers 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/huggingface/diffusers/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-invokeai-releases",
+      "name": "InvokeAI 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/invoke-ai/InvokeAI/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-fish-speech-releases",
+      "name": "Fish Speech 官方发布",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://github.com/fishaudio/fish-speech/releases.atom",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "开源",
+        "配音"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-no-film-school",
+      "name": "No Film School",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://nofilmschool.com/feeds/content-types/article.rss",
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "媒体",
+        "影视创作"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-bfl-blog",
+      "name": "Black Forest Labs 官方博客",
+      "kind": "web_list",
+      "config": {
+        "url": "https://bfl.ai/blog",
+        "parseMode": "html",
+        "itemSelector": "a[href^=\"/blog/\"]",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time",
+        "allowUrlPrefixes": [
+          "https://bfl.ai/blog/"
+        ],
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "图像生成",
         "视频生成"
       ],
       "site_fulltext": false,

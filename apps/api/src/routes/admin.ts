@@ -13,6 +13,7 @@ import { listMonitorEvents, listMonitorPosts, relinkPost, resolveMonitorPost, re
 import { requeueFailedArticles, runsOverview } from "@aihot/backend/admin/runs";
 import { replaceContactQr, setTargetEnabled, settingsOverview, updateBudget } from "@aihot/backend/admin/settings";
 import { createSource, fetchNow, listSources, previewSource, previewStoredSource, sourceDetail, updateSource } from "@aihot/backend/admin/sources";
+import { sourceEfficiency } from "@aihot/backend/admin/source-efficiency";
 import { navCounts } from "@aihot/backend/admin/navigation";
 import { listAudit } from "@aihot/backend/audit";
 import { detachFromFact, mergeStories } from "@aihot/backend/events/corrections";
@@ -43,6 +44,7 @@ export function registerAdmin(app: FastifyInstance) {
   }));
   app.post("/api/admin/sources", adminHandler(async (req, _reply, admin) => createSource(body(req), actorOf(admin))));
   app.post("/api/admin/sources/preview", adminHandler(async (req) => previewSource(body(req) as never)));
+  app.get("/api/admin/sources/efficiency", adminHandler(async (req) => sourceEfficiency(q(req).days === "30" ? 30 : 7)));
   app.get("/api/admin/sources/:id", adminHandler(async (req, reply) => orNotFound(req, reply, await sourceDetail(param(req, "id")))));
   app.patch("/api/admin/sources/:id", adminHandler(async (req, reply, admin) => {
     const b = body<{ patch: unknown; version: string; reason?: string }>(req);

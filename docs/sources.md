@@ -2,6 +2,8 @@
 
 信源在后台“信源”页管理：新建、试抓一次看看抓到什么、改频率、启停、看失败原因和最近的条目。首次启动时，`industry/sources.json` 里的示范信源会被导入。
 
+后台「产出与成本」可按信源查看近 7 天或 30 天的精选事件、采集费、模型费与金额缺失的请求。免费垂直信源的验证记录、已有站点导入方式和统计口径见[扩大覆盖与核对成本](source-operations.md)。
+
 ## 六种信源
 
 | 类型 | 适合 | 需要 |
@@ -9,7 +11,7 @@
 | `rss` | 有 RSS / Atom 的博客、媒体、Substack、公众号转 RSS 服务 | 无 |
 | `web_list` | 没有 RSS 的网页列表（新闻页、博客列表、更新日志） | 写选择器；按需配置 Jina Reader 渲染（按次计费） |
 | `json_list` | 返回 JSON 的接口（GitHub Releases 等） | 写字段路径 |
-| `x_search` | X（推特）账号 | SocialData 的 key，按请求计费 |
+| `x_search` | X（推特）账号 | SocialData 的 key，搜索按返回帖子计费；空搜索可能触发额外费用 |
 | `mp_account` | 微信公众号 | 极致了（Dajiala）的 key，按请求计费 |
 | `external` | 你自己的脚本推送进来的内容 | `INGEST_TOKEN`，见下文 |
 

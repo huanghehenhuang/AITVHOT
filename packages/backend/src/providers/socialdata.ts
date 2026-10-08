@@ -1,4 +1,4 @@
-// SocialData (X search). Paid per request: every call goes through receipts and the budget.
+// SocialData (X search). Search bills returned tweets; every call goes through receipts and the budget.
 import { credential } from "../config.ts";
 import { guardedFetch } from "../lib/http-fetch.ts";
 import { paidRequest, ProviderRejectedError } from "./receipts.ts";
@@ -83,7 +83,9 @@ export async function searchTweets(query: string, opts: { purpose: string; subje
       if (res.status === 429 || res.status >= 500) throw new ProviderRejectedError(`socialdata HTTP ${res.status}`, res.status, true);
       const json = JSON.parse(text) as { tweets?: SdTweet[]; next_cursor?: string | null };
       const tweets = json.tweets?.length ?? 0;
-      return { response: json, usage: { tweets }, cost: objectsCost(tweets) };
+      // Empty searches can incur the account-wide fair-use fee. The response does not say whether
+      // the free allowance was exhausted, so retain an unpriced attempt rather than claiming zero.
+      return { response: json, usage: { tweets }, cost: tweets > 0 ? objectsCost(tweets) : null };
     },
   );
   const json = receipt.response as { tweets?: SdTweet[]; next_cursor?: string | null };

@@ -70,6 +70,29 @@ export interface AdminSources {
   totals: { total: number; enabled: number; failing: number; degraded: number };
 }
 
+export interface AdminSourceCost {
+  stage: "collection" | "model";
+  currency: string | null;
+  actual: number;
+  estimated: number;
+  attempts: number;
+  unpriced: number;
+}
+
+export interface AdminSourceEfficiency {
+  days: 7 | 30;
+  from: Timestamp;
+  to: Timestamp;
+  rows: Array<{
+    id: string; name: string; kind: string; enabled: boolean; participation_mode: string;
+    items: number; selected: number; events: number; ungrouped: number;
+    costs: AdminSourceCost[];
+  }>;
+  totals: { items: number; selected: number; events: number; ungrouped: number; costs: AdminSourceCost[] };
+  /** Shared X searches, event/report work and requests without a resolvable source. */
+  sharedCosts: AdminSourceCost[];
+}
+
 export interface AdminSource {
   id: string;
   name: string;
