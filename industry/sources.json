@@ -10174,6 +10174,1120 @@
         "漫剧",
         "公开作者专栏"
       ]
+    },
+    {
+      "id": "json-sohu-yingtang",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/482286",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "娱乐硬糖 · 搜狐公开专栏",
+      "owner_entity_id": "yingtang",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-wenyu-value",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/99997725",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "文娱价值官 · 搜狐公开专栏",
+      "owner_entity_id": "wenyu-value",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-techplanet",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/120073179",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "Tech星球 · 搜狐公开专栏",
+      "owner_entity_id": "techplanet",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "rss-behind-verticals",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.behindtheverticals.com/feed",
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "Behind the Verticals · 竖屏剧制作简报",
+      "owner_entity_id": "behind-the-verticals",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-digiday-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://digiday.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "Digiday · 微短剧营销与商业",
+      "owner_entity_id": "digiday",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-animationxpress-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://animationxpress.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "AnimationXpress · 微短剧产业",
+      "owner_entity_id": "animationxpress",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-todotv-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://todotvnews.com/en/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "TodoTV News · 微短剧产业",
+      "owner_entity_id": "todotvnews",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-produ-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.produ.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "PRODU · 微短剧产业",
+      "owner_entity_id": "produ",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "json-sohu-dongxi",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/100180909",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "东西文娱 · 搜狐公开专栏",
+      "owner_entity_id": "dongxi",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "web-nrta-industry",
+      "name": "国家广电总局 · 工作动态",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "nrta",
+      "config": {
+        "url": "https://www.nrta.gov.cn/col/col114/index.html",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "embeddedHtmlSelector": "script[type=\"text/xml\"]",
+        "itemSelector": "record li, li",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "publishedAtSelector": "a span",
+        "allowUrlPrefixes": [
+          "https://www.nrta.gov.cn/art/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-shanghai-tv",
+      "name": "上海文旅局 · 广播电视",
+      "kind": "web_list",
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "shanghai-wlyj",
+      "config": {
+        "url": "https://whlyj.sh.gov.cn/gbds/index.html",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li.flex-box:has(a[href^=\"/gbds/\"])",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "publishedAtSelector": "span.date",
+        "allowUrlPrefixes": [
+          "https://whlyj.sh.gov.cn/gbds/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-jiangsu-industry",
+      "name": "江苏省广电局 · 省局动态",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "jiangsu-gdj",
+      "config": {
+        "url": "https://jsgd.jiangsu.gov.cn/col/col69981/index.html",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": ".leftt:has(.sp_time):has(a)",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "allowUrlPrefixes": [
+          "https://jsgd.jiangsu.gov.cn/art/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "publishedAtRegex": "时间：[\\s\\S]*?(\\d{4}-\\d{2}-\\d{2})"
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-jiangsu-notices",
+      "name": "江苏省广电局 · 通知公告",
+      "kind": "web_list",
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "jiangsu-gdj",
+      "config": {
+        "url": "https://jsgd.jiangsu.gov.cn/col/col91594/index.html",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": ".leftt:has(.sp_time):has(a)",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "allowUrlPrefixes": [
+          "https://jsgd.jiangsu.gov.cn/art/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "publishedAtRegex": "时间：[\\s\\S]*?(\\d{4}-\\d{2}-\\d{2})"
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "rss-thewrap-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.thewrap.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ],
+          "dropMarkersTitleOnly": [
+            "The Daily Show",
+            "Kimmel",
+            "Colbert"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "TheWrap · 微短剧产业",
+      "owner_entity_id": "thewrap",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-applabs-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blog.applabs.ai/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "Applabs · 微短剧移动广告研究",
+      "owner_entity_id": "applabs",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "json-sohu-neihang",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/122642385",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "短剧内行人 · 搜狐公开专栏",
+      "owner_entity_id": "duanju-neihang",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "web-fujian-notices",
+      "name": "福建省广电局 · 通知公告",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "fujian-gdj",
+      "config": {
+        "url": "https://gdj.fujian.gov.cn/gkai/tzgg/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(span.bf-pass)",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "publishedAtSelector": "span.bf-pass",
+        "allowUrlPrefixes": [
+          "https://gdj.fujian.gov.cn/gkai/tzgg/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-fujian-work",
+      "name": "福建省广电局 · 省局工作",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "fujian-gdj",
+      "config": {
+        "url": "https://gdj.fujian.gov.cn/xw/sjgz/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(span.bf-pass)",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "publishedAtSelector": "span.bf-pass",
+        "allowUrlPrefixes": [
+          "https://gdj.fujian.gov.cn/xw/sjgz/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-fujian-industry",
+      "name": "福建省广电局 · 媒体报道",
+      "kind": "web_list",
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "fujian-gdj",
+      "config": {
+        "url": "https://gdj.fujian.gov.cn/xw/hydt/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(span.bf-pass)",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "publishedAtSelector": "span.bf-pass",
+        "allowUrlPrefixes": [
+          "https://gdj.fujian.gov.cn/xw/hydt/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-shaanxi-work",
+      "name": "陕西省广电局 · 省局要闻",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "shaanxi-gdj",
+      "config": {
+        "url": "https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li.list-item:has(a)",
+        "linkSelector": "a",
+        "titleSelector": "div.text",
+        "publishedAtSelector": "div.time",
+        "allowUrlPrefixes": [
+          "https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-morketing-outbound",
+      "name": "Morketing · 出海商业洞察",
+      "kind": "web_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "morketing",
+      "config": {
+        "url": "https://www.morketing.com/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": ".trend-card",
+        "linkSelector": "a",
+        "titleSelector": ".card-title",
+        "publishedAtSelector": ".metadata-item:first-child span",
+        "allowUrlPrefixes": [
+          "https://www.morketing.com/detail/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 720,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "出海",
+        "市场研究"
+      ]
     }
   ]
 }

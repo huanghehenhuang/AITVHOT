@@ -1,6 +1,81 @@
 # 短剧与漫剧信源扩展
 
-2026-10-09 在 162 个入口基础上新增 **35 个**，现共 **197 个**；另外扩展 8 个既有影视媒体的短剧主题过滤。新增包括 11 个 RSS、11 个 HTML 列表、13 个公开页面内嵌 JSON，全部直接读取公开列表，不使用 X、公众号付费 API 或 Jina。
+2026-10-09 继续新增 **21 个**公开入口，总库 **197 → 218**；两轮短剧专题累计新增 **56 个**，另扩展 8 个既有影视媒体的主题范围。本轮为 7 个 RSS、9 个 HTML 列表、5 个公开页面内嵌 JSON，全部直接读取公开列表。
+
+仓库采集器从本轮响应解析出 **1859** 个条目，按主题和网址范围保留 **166** 个，全部有可解析发布日期；其中 **64** 个在验证时属于近 30 天，分布在 **19** 个入口。江苏通知公告、Morketing 出海卡片只有较旧匹配，作为新发布监测。大部分原始条目来自政府列表的历史档案，不是日均增量。统计尚未跨来源、网址、正文和事件去重，也不是精选入选量。
+
+| 本轮类别 | 新增入口数 |
+|---|---:|
+| 国内行业媒体与出海研究 | 6 |
+| 监管公告与地方行业工作 | 8 |
+| 海外制作、发行、营销与研究 | 7 |
+
+## 本轮来源与日期口径
+
+5 个国内媒体入口读取经名称核对的搜狐公开作者专栏 `blockRenderData`，按原始 `postTime` 获取平台发布时间；不执行网页脚本，无需私有账号。它们不是公众号直连，平台日期可能晚于首发日。
+
+政府列表按页面原始完整日期读取，不把 URL 路径日、抓取时间或图片上传日当作发布日期。例如福建稿件的链接路径可能为 9 月 30 日，列表日期为 9 月 25 日，采集保留列表日期。福建列表中的外链公众号文章本轮不采集。广电总局读取选定 XML CDATA，江苏读取日期明确的新闻卡片。
+
+上海列表、福建媒体报道、江苏通知公告含外部转载，标为 T1_5、`first_party: false`；原始部门公告与工作列表按实际来源标记。江苏两类列表共用 `jiangsu-gdj`，福建三类共用 `fujian-gdj`，广电总局工作与公告共用 `nrta`。陕西行业动态与已接入要闻有重叠，本轮只保留要闻入口。AnimationXpress 两种查询也有重叠，只保留一个。
+
+Behind the Verticals 是竖屏叙事制作简报，其公开 RSS 标题可能没有“microdrama”，因此按这个专门出版物的范围采集；其他泛媒体保留主题关键词限制。TheWrap 另排除 Daily Show、Kimmel、Colbert 等政治娱乐评论标题。Applabs 为广告技术公司，按 T2 行业研究处理，不当作独立市场统计或平台公告。PRODU 含西语行业报道，沿用微短剧关键词及后续相关性、评分流程。
+
+下表最近匹配日期为 UTC，逐条核验时区与响应 SHA-256 见 [source-checks.json](source-checks.json)。
+
+## 本轮国内行业媒体与出海研究（6）
+
+| 信源 / ID | 公开入口 | 分级 | 最近匹配日期（UTC） | 近 30 天条目 |
+|---|---|---|---|---:|
+| 娱乐硬糖 · 搜狐公开专栏<br>`json-sohu-yingtang` | [列表](https://m.sohu.com/media/482286) | T2 | 2026-10-09 | 1 |
+| 文娱价值官 · 搜狐公开专栏<br>`json-sohu-wenyu-value` | [列表](https://m.sohu.com/media/99997725) | T2 | 2026-10-08 | 6 |
+| Tech星球 · 搜狐公开专栏<br>`json-sohu-techplanet` | [列表](https://m.sohu.com/media/120073179) | T2 | 2026-10-07 | 1 |
+| 东西文娱 · 搜狐公开专栏<br>`json-sohu-dongxi` | [列表](https://m.sohu.com/media/100180909) | T2 | 2026-09-18 | 1 |
+| 短剧内行人 · 搜狐公开专栏<br>`json-sohu-neihang` | [列表](https://m.sohu.com/media/122642385) | T2 | 2026-10-08 | 16 |
+| Morketing · 出海商业洞察<br>`web-morketing-outbound` | [列表](https://www.morketing.com/) | T2 | 2026-09-01 | 0 |
+
+## 本轮监管公告与地方行业工作（8）
+
+| 信源 / ID | 公开入口 | 分级 | 最近匹配日期（UTC） | 近 30 天条目 |
+|---|---|---|---|---:|
+| 国家广电总局 · 工作动态<br>`web-nrta-industry` | [列表](https://www.nrta.gov.cn/col/col114/index.html) | T1 | 2026-09-30 | 3 |
+| 上海文旅局 · 广播电视<br>`web-shanghai-tv` | [列表](https://whlyj.sh.gov.cn/gbds/index.html) | T1_5 | 2026-09-30 | 3 |
+| 江苏省广电局 · 省局动态<br>`web-jiangsu-industry` | [列表](https://jsgd.jiangsu.gov.cn/col/col69981/index.html) | T1 | 2026-09-24 | 2 |
+| 江苏省广电局 · 通知公告<br>`web-jiangsu-notices` | [列表](https://jsgd.jiangsu.gov.cn/col/col91594/index.html) | T1_5 | 2026-05-29 | 0 |
+| 福建省广电局 · 通知公告<br>`web-fujian-notices` | [列表](https://gdj.fujian.gov.cn/gkai/tzgg/) | T1 | 2026-09-20 | 1 |
+| 福建省广电局 · 省局工作<br>`web-fujian-work` | [列表](https://gdj.fujian.gov.cn/xw/sjgz/) | T1 | 2026-09-29 | 2 |
+| 福建省广电局 · 媒体报道<br>`web-fujian-industry` | [列表](https://gdj.fujian.gov.cn/xw/hydt/) | T1_5 | 2026-09-29 | 2 |
+| 陕西省广电局 · 省局要闻<br>`web-shaanxi-work` | [列表](https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/) | T1 | 2026-09-30 | 6 |
+
+## 本轮海外制作、发行、营销与研究（7）
+
+| 信源 / ID | 公开入口 | 分级 | 最近匹配日期（UTC） | 近 30 天条目 |
+|---|---|---|---|---:|
+| Behind the Verticals · 竖屏剧制作简报<br>`rss-behind-verticals` | [列表](https://www.behindtheverticals.com/feed) | T2 | 2026-10-06 | 4 |
+| Digiday · 微短剧营销与商业<br>`rss-digiday-microdramas` | [列表](https://digiday.com/?s=microdrama&feed=rss2) | T2 | 2026-09-23 | 1 |
+| AnimationXpress · 微短剧产业<br>`rss-animationxpress-microdramas` | [列表](https://animationxpress.com/?s=microdrama&feed=rss2) | T2 | 2026-09-29 | 1 |
+| TodoTV News · 微短剧产业<br>`rss-todotv-microdramas` | [列表](https://todotvnews.com/en/?s=microdrama&feed=rss2) | T2 | 2026-09-29 | 1 |
+| PRODU · 微短剧产业<br>`rss-produ-microdramas` | [列表](https://www.produ.com/?s=microdrama&feed=rss2) | T2 | 2026-10-08 | 9 |
+| TheWrap · 微短剧产业<br>`rss-thewrap-microdramas` | [列表](https://www.thewrap.com/?s=microdrama&feed=rss2) | T2 | 2026-10-02 | 3 |
+| Applabs · 微短剧移动广告研究<br>`rss-applabs-microdramas` | [列表](https://blog.applabs.ai/feed/) | T2 | 2026-09-09 | 1 |
+
+## 本轮候选核验与成本
+
+| 未接入候选 | 本轮结果 |
+|---|---|
+| 三声、网视互联的旧搜狐专栏 | 匹配记录主要停留在 2021 / 2022 年，未加入；不代表其他发布渠道停更 |
+| 犀牛娱乐、刺猬公社、霞光社、钛媒体、蓝鲸新闻等当前专栏 | 当前公开列表没有主题匹配，保留候选；不推断媒体停更 |
+| Adweek、Marketing Brew、TV Technology、FOX 业务 RSS | 能读取列表，但本次快照没有短剧匹配，未计入新增 |
+| CNSA、河南列表、Señal 标签与 AppsFlyer RSS | 当前请求失败，未计入新增 |
+| Shorts Report、Vertical Series Network、部分短剧网站 | 没有可用的条目原始完整日期，未以网页更新时间、聚合发现时间补日期 |
+| 浙江本轮两个列表 | 当前响应未解析出带日期的短剧条目，未计入新增 |
+
+本轮继续限制 30 天有日期历史、首轮最多 3 条，媒体通常每 3 小时，公告和海外简报每 6 小时，Morketing 出海卡片每 12 小时。没有新增按次付费采集 API，全文展示和分发均关闭。服务器、正文处理和后续模型仍可能产生费用，评分门槛、模型选择及预算不变。
+
+本轮仅更新来源配置与文档，复用仓库已有采集器。验证读取公开列表快照，不入库、不抓正文、不调用模型；没有扩大八卦、剧情推荐或泛 AI 的相关性范围。导入方法见 [source-operations.md](source-operations.md)，seed 继续保留已有来源、暂停状态和手工配置。生产稳定性与实际日增量需在启用后通过后台产出与回执核对。
+
+## 上轮新增 35 个（162 → 197）
+
+2026-10-09 上轮在 162 个入口基础上新增 **35 个**，当时共 **197 个**；另外扩展 8 个既有影视媒体的短剧主题过滤。新增包括 11 个 RSS、11 个 HTML 列表、13 个公开页面内嵌 JSON，全部直接读取公开列表，不使用 X、公众号付费 API 或 Jina。
 
 仓库采集器从本轮新源捕获的响应中解析出 566 个条目，按配置范围保留 219 个，其中 74 个在验证时属于近 30 天，分布在 22 个入口；其余 13 个目前只有较旧匹配记录，作为新发布监测入口。全部匹配条目有可解析日期。这些统计尚未跨来源、网址、正文或事件去重，不是日均增量，也不是精选数量。
 
@@ -11,7 +86,7 @@
 | 监管公告 | 3 |
 | 海外竖屏剧媒体与简报 | 10 |
 
-## 公开来源与日期口径
+### 公开来源与日期口径
 
 12 个国内媒体入口读取其搜狐公开作者专栏上的 `blockRenderData`，提取标题、摘要、文章链接和 `postTime`，不执行 JavaScript、无需登录或私有账号。它们是平台专栏，不能视为公众号直连；平台发布日可能晚于原公众号或官网首发日。短剧自习室官网与其专栏、DataEye 报告与其专栏共用原媒体归属，仍按正文和事件去重。旧版骨朵专栏停留在 2021 年、新腕儿旧专栏停留在 2024 年的结果没有加入。
 
@@ -23,7 +98,7 @@ Vertical Drama 与 Streaming Radar 共用归属。前者只收 `/news/` 路径�
 
 表中最近匹配日期按 UTC 展示；逐条时间带时区，国内凌晨发布可能对应前一 UTC 日。原始响应哈希、请求方式、来源网址及逐源核验时间见 [source-checks.json](source-checks.json)。
 
-## 国内行业媒体与研究（16）
+### 国内行业媒体与研究（16）
 
 | 信源 / ID | 公开入口 | 分级 | 最近匹配日期（UTC） | 近 30 天条目 |
 |---|---|---|---|---:|
@@ -44,7 +119,7 @@ Vertical Drama 与 Streaming Radar 共用归属。前者只收 `/news/` 路径�
 | 读娱官网 · 搜狐公开专栏<br>`json-sohu-duyu` | [列表](https://m.sohu.com/media/523234) | T2 | 2026-09-30 | 1 |
 | 编剧帮 · 搜狐公开专栏<br>`json-sohu-bianjubang` | [列表](https://m.sohu.com/media/154166) | T2 | 2026-07-31 | 0 |
 
-## 平台与制作发行公司（6）
+### 平台与制作发行公司（6）
 
 | 信源 / ID | 公开入口 | 分级 | 最近匹配日期（UTC） | 近 30 天条目 |
 |---|---|---|---|---:|
@@ -55,7 +130,7 @@ Vertical Drama 与 Streaming Radar 共用归属。前者只收 `/news/` 路径�
 | 阅文集团 · 媒体报道<br>`web-yuewen-news` | [列表](https://www.yuewen.com/news) | T1_5 | 2026-08-10 | 0 |
 | HOLYWATER TECH / My Drama · 公开新闻<br>`web-holywater-news` | [列表](https://www.holywater.tech/blog) | T1_5 | 2026-09-02 | 0 |
 
-## 监管公告（3）
+### 监管公告（3）
 
 | 信源 / ID | 公开入口 | 分级 | 最近匹配日期（UTC） | 近 30 天条目 |
 |---|---|---|---|---:|
@@ -63,7 +138,7 @@ Vertical Drama 与 Streaming Radar 共用归属。前者只收 `/news/` 路径�
 | 广东省广电局 · 通知公告<br>`web-guangdong-notices` | [列表](https://gbdsj.gd.gov.cn/zxzx/tzgg/) | T1 | 2026-06-10 | 0 |
 | 广东省广电局 · 行业动态<br>`web-guangdong-industry` | [列表](https://gbdsj.gd.gov.cn/zxzx/hydt/) | T1_5 | 2026-10-04 | 3 |
 
-## 海外竖屏剧媒体与简报（10）
+### 海外竖屏剧媒体与简报（10）
 
 | 信源 / ID | 公开入口 | 分级 | 最近匹配日期（UTC） | 近 30 天条目 |
 |---|---|---|---|---:|
@@ -78,7 +153,7 @@ Vertical Drama 与 Streaming Radar 共用归属。前者只收 `/news/` 路径�
 | Tubefilter · 微短剧<br>`rss-tubefilter-microdramas` | [列表](https://www.tubefilter.com/?s=microdrama&feed=rss2) | T2 | 2026-09-24 | 2 |
 | Vertical Story Fest · 竖屏剧行业简报<br>`web-vertical-story` | [列表](https://verticalstoryfest.com/) | T2 | 2026-10-08 | 6 |
 
-## 过滤与成本边界
+### 过滤与成本边界
 
 泛影视列表在详情抓取和模型处理之前，按 AI 创作或微短剧/漫剧/竖屏剧关键词限范围；普通剧情介绍、演员八卦、追剧推荐不因出现短剧或平台名而成为产业信息。监管、平台分账、保底、流量入口、扶持与准入、制作发行、版权合作、经营和市场研究可通过相关性预筛，即使没有 AI 参与。通用 AI 与纯时政的过滤边界保持。相关性通过之后仍走原有评分、去重与归组。
 
@@ -86,7 +161,7 @@ Vertical Drama 与 Streaming Radar 共用归属。前者只收 `/news/` 路径�
 
 每个新增入口限制 30 天有日期历史、首轮最多 3 条，媒体约 3 小时轮询，低频报告和公告每 6–12 小时；同一媒体、公司、平台的多个入口共用归属。公开列表读取没有按次付费服务费用，但服务器、正文处理、精选、向量、归组和写作仍可能产生费用。没有调低评分门槛或调整模型预算。
 
-## 尚未接入的候选
+### 尚未接入的候选
 
 | 候选 | 本次结果 |
 |---|---|
@@ -98,7 +173,7 @@ Vertical Drama 与 Streaming Radar 共用归属。前者只收 `/news/` 路径�
 | 部分微短剧标签 RSS | 返回空订阅、错误页或没有匹配，未计数；同一媒体多个重叠查询只保留一个有效入口 |
 | 同名短剧平台网站 | 来源身份缺乏依据，不作为平台官方信源 |
 
-## 导入与验证
+### 导入与验证
 
 导入方法见 [source-operations.md](source-operations.md)。seed 只新增，保留已有来源 ID、手工配置、暂停状态，并跳过同类地址别名；如需将 8 个旧源应用新过滤规则，应在后台核对配置后更新，seed 不会自动覆盖。
 

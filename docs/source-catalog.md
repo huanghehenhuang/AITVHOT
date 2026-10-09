@@ -1,20 +1,20 @@
 # AI 影视信源清单
 
-本轮验证日期：2026-10-09。配置现有 **197 个入口**：23 → 122 → 162 → 197，本轮新增 **35 个短剧相关入口**，并扩展 8 个既有影视媒体的短剧主题范围；相对当前 main 的 12 个基础源共增加 185 个。不包含仅在线上数据库中的 X、公众号付费账号或其他手工来源。
+本轮验证日期：2026-10-09。配置现有 **218 个入口**：23 → 122 → 162 → 197 → 218，本轮再新增 **21 个短剧相关入口**；短剧专题累计补充 56 个入口，另有 8 个既有影视媒体扩展短剧主题范围。相对当前 main 的 12 个基础源共增加 206 个。不包含仅在线上数据库中的 X、公众号付费账号或其他手工来源。
 
 | 类型 | 入口数 |
 |---|---:|
-| RSS / Atom | 121 |
-| 普通 HTML 列表 | 28 |
-| 公开 JSON / HTML 内嵌 JSON | 48 |
+| RSS / Atom | 128 |
+| 普通 HTML 列表 | 37 |
+| 公开 JSON / HTML 内嵌 JSON | 53 |
 
-182 个入口进入原有精选流程，15 个开源版本更新入口仅作热度证据。热度证据也可能产生向量与归组费用。非空 `owner_entity_id` 有 153 个不同归属，另外 8 个入口未显式设置归属，按各自 ID 分别计数时共 161 组；这是清单口径，197 个入口不等同于独立网站数。
+203 个入口进入原有精选流程，15 个开源版本更新入口仅作热度证据。热度证据也可能产生向量与归组费用。非空 `owner_entity_id` 有 170 个不同归属，另外 8 个入口未显式设置归属，按各自 ID 分别计数时共 178 组；这是清单口径，218 个入口不等同于独立网站数。
 
 ## 本轮补充与验证口径
 
-本轮新增 35 个短剧/漫剧相关入口，全部有非空解析、主题匹配和可解析日期；22 个列表在本次核验时含近 30 天匹配条目。覆盖国内行业媒体公开专栏、平台及制作发行公司、监管公告、海外竖屏剧媒体和创作者简报。名单、日期口径及未接入候选见 [短剧信源说明](short-drama-sources.md)。此前新增的 40 个 AI 影视入口保留，本轮不重新计算其“新增”数量。
+本轮新增 21 个短剧/漫剧相关入口，全部有非空解析、主题匹配和可解析日期；19 个列表在核验时含近 30 天匹配条目，共 64 条。补充短剧内行人、娱乐硬糖、文娱价值官、Tech星球、东西文娱，广电总局及上海、江苏、福建、陕西的列表，以及 Behind the Verticals、PRODU、TheWrap 等海外制作与商业报道。江苏通知公告和 Morketing 出海卡片当前仅有较旧匹配，作为新发布监测，旧资料受 30 天窗口限制。名单及日期口径见 [短剧信源说明](short-drama-sources.md)。上轮新增 35 个短剧入口和此前 40 个 AI 影视入口保留，不重复计为本轮新增。
 
-全库 197 个列表的最近一次验证记录均为非空；189 个快照有匹配内容，8 个没有匹配内容，127 个在各自验证时含近 30 天匹配条目。旧源沿用逐条原有验证时间，本轮重新捕获 35 个新入口和 8 个范围调整入口；最终跳转地址、HTTP 状态、日期和响应 SHA-256 见 [source-checks.json](source-checks.json)。所有匹配条目均有可解析日期，明确超龄的旧资料不会进入新配置的回灌。
+全库 218 个列表的最近一次验证记录均为非空；210 个快照有匹配内容，8 个没有匹配内容，146 个在各自验证时含近 30 天匹配条目。旧源沿用逐条原有验证时间，本轮重新捕获 21 个新入口；最终跳转地址、HTTP 状态、日期和响应 SHA-256 见 [source-checks.json](source-checks.json)。所有匹配条目均有可解析日期，明确超龄的旧资料不会进入新配置的回灌。
 
 这些是公开列表快照，不是线上采集成功率、日均产量或精选入选率。下表统计在来源内进行，尚未跨 URL、来源与事件去重；正文提取和模型筛选由后续流程决定。
 
@@ -238,7 +238,7 @@ Runway 使用官网嵌套 Flight 数组，MiniMax 使用混合日期格式，字
 | Music Business Worldwide<br>`rss-musicbusinessworldwide` | [列表](https://www.musicbusinessworldwide.com/feed/) | 精选 | 2026-10-07 | 3 |
 | PetaPixel<br>`rss-petapixel` | [列表](https://petapixel.com/feed/) | 精选 | 2026-10-07 | 4 |
 
-## 短剧、漫剧与竖屏剧产业（35）
+## 短剧、漫剧与竖屏剧产业（56）
 
 | 信源 / ID | 入口 | 参与方式 | 最近匹配日期（UTC） | 本次近 30 天 |
 |---|---|---|---|---:|
@@ -277,3 +277,29 @@ Runway 使用官网嵌套 Flight 数组，MiniMax 使用混合日期格式，字
 | 镜像娱乐 · 搜狐公开专栏<br>`json-sohu-jingxiang` | [列表](https://m.sohu.com/media/305277) | 精选 | 2026-09-29 | 1 |
 | 读娱官网 · 搜狐公开专栏<br>`json-sohu-duyu` | [列表](https://m.sohu.com/media/523234) | 精选 | 2026-09-30 | 1 |
 | 编剧帮 · 搜狐公开专栏<br>`json-sohu-bianjubang` | [列表](https://m.sohu.com/media/154166) | 精选 | 2026-07-31 | 0 |
+
+### 本轮继续扩展（21）
+
+| 信源 / ID | 公开入口 | 参与方式 | 最近匹配日期（UTC） | 近 30 天条目 |
+|---|---|---|---|---:|
+| 娱乐硬糖 · 搜狐公开专栏<br>`json-sohu-yingtang` | [列表](https://m.sohu.com/media/482286) | 精选 | 2026-10-09 | 1 |
+| 文娱价值官 · 搜狐公开专栏<br>`json-sohu-wenyu-value` | [列表](https://m.sohu.com/media/99997725) | 精选 | 2026-10-08 | 6 |
+| Tech星球 · 搜狐公开专栏<br>`json-sohu-techplanet` | [列表](https://m.sohu.com/media/120073179) | 精选 | 2026-10-07 | 1 |
+| Behind the Verticals · 竖屏剧制作简报<br>`rss-behind-verticals` | [列表](https://www.behindtheverticals.com/feed) | 精选 | 2026-10-06 | 4 |
+| Digiday · 微短剧营销与商业<br>`rss-digiday-microdramas` | [列表](https://digiday.com/?s=microdrama&feed=rss2) | 精选 | 2026-09-23 | 1 |
+| AnimationXpress · 微短剧产业<br>`rss-animationxpress-microdramas` | [列表](https://animationxpress.com/?s=microdrama&feed=rss2) | 精选 | 2026-09-29 | 1 |
+| TodoTV News · 微短剧产业<br>`rss-todotv-microdramas` | [列表](https://todotvnews.com/en/?s=microdrama&feed=rss2) | 精选 | 2026-09-29 | 1 |
+| PRODU · 微短剧产业<br>`rss-produ-microdramas` | [列表](https://www.produ.com/?s=microdrama&feed=rss2) | 精选 | 2026-10-08 | 9 |
+| 东西文娱 · 搜狐公开专栏<br>`json-sohu-dongxi` | [列表](https://m.sohu.com/media/100180909) | 精选 | 2026-09-18 | 1 |
+| 国家广电总局 · 工作动态<br>`web-nrta-industry` | [列表](https://www.nrta.gov.cn/col/col114/index.html) | 精选 | 2026-09-30 | 3 |
+| 上海文旅局 · 广播电视<br>`web-shanghai-tv` | [列表](https://whlyj.sh.gov.cn/gbds/index.html) | 精选 | 2026-09-30 | 3 |
+| 江苏省广电局 · 省局动态<br>`web-jiangsu-industry` | [列表](https://jsgd.jiangsu.gov.cn/col/col69981/index.html) | 精选 | 2026-09-24 | 2 |
+| 江苏省广电局 · 通知公告<br>`web-jiangsu-notices` | [列表](https://jsgd.jiangsu.gov.cn/col/col91594/index.html) | 精选 | 2026-05-29 | 0 |
+| TheWrap · 微短剧产业<br>`rss-thewrap-microdramas` | [列表](https://www.thewrap.com/?s=microdrama&feed=rss2) | 精选 | 2026-10-02 | 3 |
+| Applabs · 微短剧移动广告研究<br>`rss-applabs-microdramas` | [列表](https://blog.applabs.ai/feed/) | 精选 | 2026-09-09 | 1 |
+| 短剧内行人 · 搜狐公开专栏<br>`json-sohu-neihang` | [列表](https://m.sohu.com/media/122642385) | 精选 | 2026-10-08 | 16 |
+| 福建省广电局 · 通知公告<br>`web-fujian-notices` | [列表](https://gdj.fujian.gov.cn/gkai/tzgg/) | 精选 | 2026-09-20 | 1 |
+| 福建省广电局 · 省局工作<br>`web-fujian-work` | [列表](https://gdj.fujian.gov.cn/xw/sjgz/) | 精选 | 2026-09-29 | 2 |
+| 福建省广电局 · 媒体报道<br>`web-fujian-industry` | [列表](https://gdj.fujian.gov.cn/xw/hydt/) | 精选 | 2026-09-29 | 2 |
+| 陕西省广电局 · 省局要闻<br>`web-shaanxi-work` | [列表](https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/) | 精选 | 2026-09-30 | 6 |
+| Morketing · 出海商业洞察<br>`web-morketing-outbound` | [列表](https://www.morketing.com/) | 精选 | 2026-09-01 | 0 |

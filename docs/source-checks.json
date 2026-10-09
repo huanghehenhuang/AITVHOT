@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-09T02:37:45.888640+00:00",
-  "method": "Public HTTP captures parsed by repository collectors; 35 short-drama additions and 8 widened film scopes checked on 2026-10-09; unchanged sources retain their previous per-source timestamp; no database writes or paid processing",
-  "total": 197,
+  "checkedAt": "2026-10-09T07:56:57.360835+00:00",
+  "method": "Public HTTP captures parsed by repository collectors; 21 further short-drama additions checked on 2026-10-09 after the previous 35 additions and 8 widened film scopes; unchanged sources retain their previous per-source timestamp; no database writes, full-text reads or paid processing",
+  "total": 218,
   "sources": [
     {
       "id": "rss-openai-news",
@@ -2772,6 +2772,758 @@
       "endpoint": "https://m.sohu.com/media/154166",
       "checkedAt": "2026-10-09T02:27:06.968367+00:00",
       "group": "short-drama"
+    },
+    {
+      "id": "json-sohu-yingtang",
+      "items": 20,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-09T03:34:38.000Z",
+      "sha256": "7a1ecce8be1db451b0be0d58ea514f0d321e2c4b863dfe105cf075822cb903ec",
+      "finalUrl": "https://m.sohu.com/media/482286",
+      "httpStatus": 200,
+      "endpoint": "https://m.sohu.com/media/482286",
+      "checkedAt": "2026-10-09T07:39:13.859508+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "真人AI混拍，内娱的救赎还是过渡的废棋？",
+          "date": "2026-10-09T03:34:38.000Z",
+          "url": "https://m.sohu.com/a/1085456272_482286"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "json-sohu-wenyu-value",
+      "items": 20,
+      "scoped": 9,
+      "dated": 9,
+      "recent30Days": 6,
+      "latest": "2026-10-08T11:53:34.000Z",
+      "sha256": "02863739a65894b34a55452e4c32c1878d0ddb7361d3a403a1dfcc00f8687454",
+      "finalUrl": "https://m.sohu.com/media/99997725",
+      "httpStatus": 200,
+      "endpoint": "https://m.sohu.com/media/99997725",
+      "checkedAt": "2026-10-09T07:39:13.860434+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "AI视频攻入深水区后，“轻量剪辑”的下一站是“专业创作”",
+          "date": "2026-10-08T11:53:34.000Z",
+          "url": "https://m.sohu.com/a/1085230200_99997725"
+        },
+        {
+          "title": "腾讯四次出手短剧皆未果，微信“绿泡泡”这次能成吗？",
+          "date": "2026-10-07T09:23:59.000Z",
+          "url": "https://m.sohu.com/a/1084790810_99997725"
+        },
+        {
+          "title": "腾讯四次出手短剧皆未果，微信“绿泡泡”这次能成吗？",
+          "date": "2026-10-07T08:50:16.000Z",
+          "url": "https://m.sohu.com/a/1084790299_99997725"
+        },
+        {
+          "title": "虎鲸文娱发布“鲸锐AI”，减少AI视频创作无效抽卡、让创意精准可控",
+          "date": "2026-09-22T08:44:00.000Z",
+          "url": "https://m.sohu.com/a/1079508030_99997725"
+        },
+        {
+          "title": "短剧行业从“快”到“远”：抖音心动追剧盛典给出长线经营新答案",
+          "date": "2026-09-12T04:34:41.000Z",
+          "url": "https://m.sohu.com/a/1075153793_99997725"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "json-sohu-techplanet",
+      "items": 20,
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 1,
+      "latest": "2026-10-07T06:15:38.000Z",
+      "sha256": "903dcc9c40d93b5acf57b0f3b6144a80fad6e65caf39c6e19db17e20ee011a1c",
+      "finalUrl": "https://m.sohu.com/media/120073179",
+      "httpStatus": 200,
+      "endpoint": "https://m.sohu.com/media/120073179",
+      "checkedAt": "2026-10-09T07:42:35.331991+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "品牌涌入AI漫剧，双11营销有了新战场",
+          "date": "2026-10-07T06:15:38.000Z",
+          "url": "https://m.sohu.com/a/1084734628_120073179"
+        },
+        {
+          "title": "2.8亿人消费，三大计划扶持，快手加码AIGC",
+          "date": "2026-09-04T01:37:32.000Z",
+          "url": "https://m.sohu.com/a/1071688837_120073179"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "rss-behind-verticals",
+      "items": 20,
+      "scoped": 20,
+      "dated": 20,
+      "recent30Days": 4,
+      "latest": "2026-10-06T11:23:45.000Z",
+      "sha256": "05360b019e4ccbea477b97182d92c404b59e5350ef45b5887a55d0e770844e55",
+      "finalUrl": "https://www.behindtheverticals.com/feed",
+      "httpStatus": 200,
+      "endpoint": "https://www.behindtheverticals.com/feed",
+      "checkedAt": "2026-10-09T07:43:16.312971+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "Guest Post: Paris Is a Set. Who Gets to Produce There?",
+          "date": "2026-10-06T11:23:45.000Z",
+          "url": "https://www.behindtheverticals.com/p/guest-post-paris-is-a-set-who-gets"
+        },
+        {
+          "title": "The Latest Vertical Drama Global News",
+          "date": "2026-09-29T11:04:36.000Z",
+          "url": "https://www.behindtheverticals.com/p/the-latest-vertical-drama-global-b3b"
+        },
+        {
+          "title": "The Vertical Drama App Taking the TikTok Route",
+          "date": "2026-09-22T11:23:17.000Z",
+          "url": "https://www.behindtheverticals.com/p/the-vertical-drama-app-taking-the"
+        },
+        {
+          "title": "Guest Post: Can a Slow-Burn Thriller Work in Vertical?",
+          "date": "2026-09-15T11:23:45.000Z",
+          "url": "https://www.behindtheverticals.com/p/guest-post-can-a-slow-burn-thriller"
+        },
+        {
+          "title": "Literary Classics are Getting the Microdrama Treatment",
+          "date": "2026-09-08T10:33:34.000Z",
+          "url": "https://www.behindtheverticals.com/p/literary-classics-are-getting-the"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "rss-digiday-microdramas",
+      "items": 9,
+      "scoped": 2,
+      "dated": 2,
+      "recent30Days": 1,
+      "latest": "2026-09-23T04:01:00.000Z",
+      "sha256": "575ee852b6a9598726d4ba4a9088a261400854b4f2310a0bcee14f8c69480ddd",
+      "finalUrl": "https://digiday.com/?s=microdrama&feed=rss2",
+      "httpStatus": 200,
+      "endpoint": "https://digiday.com/?s=microdrama&feed=rss2",
+      "checkedAt": "2026-10-09T07:45:52.502384+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "Marketers have bought into microdramas — but a lack of ROI might make them irrelevant",
+          "date": "2026-09-23T04:01:00.000Z",
+          "url": "https://digiday.com/marketing/r-i-p-quibi-you-would-have-loved-microdramas/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss"
+        },
+        {
+          "title": "In Graphic Detail: The rise of micro dramas that are attracting big ad dollars",
+          "date": "2025-11-04T05:01:00.000Z",
+          "url": "https://digiday.com/marketing/in-graphic-detail-the-rise-of-micro-dramas-that-are-attracting-big-ad-dollars/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "rss-animationxpress-microdramas",
+      "items": 5,
+      "scoped": 3,
+      "dated": 3,
+      "recent30Days": 1,
+      "latest": "2026-09-29T07:46:12.000Z",
+      "sha256": "b30c43ae0709727044ef09ad388537a8ab9d38baa2a51da413e2b514c5a06e1e",
+      "finalUrl": "https://animationxpress.com/?s=microdrama&feed=rss2",
+      "httpStatus": 200,
+      "endpoint": "https://animationxpress.com/?s=microdrama&feed=rss2",
+      "checkedAt": "2026-10-09T07:43:20.368818+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "Canvas brings 30 Indian animators together for ‘Project Maya’, its first short-form anime series",
+          "date": "2026-09-29T07:46:12.000Z",
+          "url": "https://animationxpress.com/latest-news/canvas-brings-30-indian-animators-together-for-project-maya-its-first-short-form-anime-series/"
+        },
+        {
+          "title": "Bullet Microdrama unveils trailer of AI-led Indian anime feature ‘The Dwarka Project’",
+          "date": "2026-09-02T10:26:56.000Z",
+          "url": "https://animationxpress.com/latest-news/bullet-microdrama-unveils-trailer-of-ai-led-indian-anime-feature-the-dwarka-project/"
+        },
+        {
+          "title": "Flick TV secures US$2.3 million in seed funding led by Stellaris Venture Partners",
+          "date": "2025-06-10T06:37:00.000Z",
+          "url": "https://animationxpress.com/latest-news/flick-tv-secures-us2-3-million-in-seed-funding-led-by-stellaris-venture-partners/"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "rss-todotv-microdramas",
+      "items": 8,
+      "scoped": 4,
+      "dated": 4,
+      "recent30Days": 1,
+      "latest": "2026-09-29T13:19:23.000Z",
+      "sha256": "db59ba7ad18ae5e36cedfe616b4b73844bece8356c3479ee0ee5700a060a159b",
+      "finalUrl": "https://todotvnews.com/en/?s=microdrama&feed=rss2",
+      "httpStatus": 200,
+      "endpoint": "https://todotvnews.com/en/?s=microdrama&feed=rss2",
+      "checkedAt": "2026-10-09T07:43:24.936622+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "JK Media Group Produces First Microdramas for ViX",
+          "date": "2026-09-29T13:19:23.000Z",
+          "url": "https://todotvnews.com/en/jk-media-group-produces-first-microdramas-for-vix/"
+        },
+        {
+          "title": "LatiNation Media Celebrates 25 Years with New Partnerships",
+          "date": "2026-08-12T11:30:21.000Z",
+          "url": "https://todotvnews.com/en/latination-media-celebrates-25-years-with-new-partnerships/"
+        },
+        {
+          "title": "Panea and Content SERO Partner to Expand Korean Vertical Microdramas Across the Americas",
+          "date": "2026-07-27T20:00:59.000Z",
+          "url": "https://todotvnews.com/en/panea-and-content-sero-partner-to-expand-korean-vertical-microdramas-across-the-americas/"
+        },
+        {
+          "title": "One Life Studios Announces Major Southeast Asia Licensing Deals and Two New Scripted Series",
+          "date": "2026-07-22T09:38:24.000Z",
+          "url": "https://todotvnews.com/en/one-life-studios-announces-major-southeast-asia-licensing-deals-and-two-new-scripted-series/"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "rss-produ-microdramas",
+      "items": 20,
+      "scoped": 20,
+      "dated": 20,
+      "recent30Days": 9,
+      "latest": "2026-10-08T17:22:03.000Z",
+      "sha256": "e1da1782fb0cb9ac50d5633ea80f8360052993335cf444d5c9affd56bcc8dc5b",
+      "finalUrl": "https://www.produ.com/?s=microdrama&feed=rss2",
+      "httpStatus": 200,
+      "endpoint": "https://www.produ.com/?s=microdrama&feed=rss2",
+      "checkedAt": "2026-10-09T07:43:25.052561+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "A+E Global Media y Lifetime fortalecen su estrategia de storytelling vertical con nueva oferta de microdramas",
+          "date": "2026-10-08T17:22:03.000Z",
+          "url": "https://www.produ.com/television/noticias/ae-global-media-y-lifetime-fortalecen-su-estrategia-de-storytelling-vertical-con-nueva-oferta-de-microdramas/"
+        },
+        {
+          "title": "Pedro Lopes de SPi: “El microdrama exige una estrategia narrativa diferente a la TV tradicional”",
+          "date": "2026-10-04T14:45:41.000Z",
+          "url": "https://www.produ.com/especiales/iberseries-platino-industria-2026/noticias/pedro-lopes-de-spi-el-microdrama-exige-una-estrategia-narrativa-diferente-a-la-tv-tradicional"
+        },
+        {
+          "title": "JK Media Group Enters the Microdrama Production Space with Encerrada con el Enemigo and Infidelidad Amenazada for ViX",
+          "date": "2026-10-02T14:19:52.000Z",
+          "url": "https://www.produ.com/ushispanic/noticias/jk-media-group-enters-the-microdrama-production-space-with-encerrada-con-el-enemigo-and-infidelidad-amenazada-for-vix/"
+        },
+        {
+          "title": "JK Media Group debuta en los microdramas con Encerrada con el enemigo e Infidelidad amenazada producidos en EE. UU. para ViX MicrO",
+          "date": "2026-09-29T18:33:38.000Z",
+          "url": "https://www.produ.com/television/noticias/jk-media-group-debuta-en-los-microdramas-con-encerrada-con-el-enemigo-e-infidelidad-amenazada-producidos-en-ee-uu-para-vix-micro/"
+        },
+        {
+          "title": "Can Okan de Inter Medya: “Tenemos una cadena de producción y proyectamos lanzar cinco microdramas cada dos meses”",
+          "date": "2026-09-29T17:18:25.000Z",
+          "url": "https://www.produ.com/especiales/iberseries-platino-industria-2026/noticias/inter-medya-afianza-su-presencia-global-dramas-largos-y-una-fuerte-apuesta-por-el-formato-corto-vertical"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "json-sohu-dongxi",
+      "items": 20,
+      "scoped": 5,
+      "dated": 5,
+      "recent30Days": 1,
+      "latest": "2026-09-18T02:53:46.000Z",
+      "sha256": "fc925b26dea09674591e4e8fff51cbe9935e352860d1cd3c0d8384798208573b",
+      "finalUrl": "https://m.sohu.com/media/100180909",
+      "httpStatus": 200,
+      "endpoint": "https://m.sohu.com/media/100180909",
+      "checkedAt": "2026-10-09T07:43:16.311234+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "AI漫剧逐渐告别产能大战，“觉醒计划2.0”新姿态入局",
+          "date": "2026-09-18T02:53:46.000Z",
+          "url": "https://m.sohu.com/a/1077682968_100180909"
+        },
+        {
+          "title": "Wan3.0遇上巨日禄星海3.0，AI短剧有了工业化生产的新基建",
+          "date": "2026-08-15T06:18:40.000Z",
+          "url": "https://m.sohu.com/a/1063242530_100180909"
+        },
+        {
+          "title": "暑期档迎来首部“AI电影”，国内AI长篇叙事交出“落地”成绩单",
+          "date": "2026-07-29T09:24:49.000Z",
+          "url": "https://m.sohu.com/a/1056288742_100180909"
+        },
+        {
+          "title": "“一键转绘”正在重新定义“重拍”，AI短剧出海有了轻量高效的新解法",
+          "date": "2026-07-12T06:55:33.000Z",
+          "url": "https://m.sohu.com/a/1049265654_100180909"
+        },
+        {
+          "title": "收益模型在变，短剧如何拔高商业上限",
+          "date": "2026-07-01T07:15:49.000Z",
+          "url": "https://m.sohu.com/a/1044234929_100180909"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "web-nrta-industry",
+      "items": 45,
+      "scoped": 5,
+      "dated": 5,
+      "recent30Days": 3,
+      "latest": "2026-09-30T00:00:00.000Z",
+      "sha256": "b71870f537ec3c86cb4856fbe65fe824d1f42565cd2bcaf1bd1e62bd0e432042",
+      "finalUrl": "https://www.nrta.gov.cn/col/col114/index.html",
+      "httpStatus": 200,
+      "endpoint": "https://www.nrta.gov.cn/col/col114/index.html",
+      "checkedAt": "2026-10-09T07:39:19.018317+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "2026精品微短剧秋季点评会在京举行2026-09-30",
+          "date": "2026-09-30T00:00:00.000Z",
+          "url": "https://www.nrta.gov.cn/art/2026/9/30/art_114_74171.html"
+        },
+        {
+          "title": "“微短剧精品创作传播计划‘五个一批工程’”第三次调度会召开2026-09-30",
+          "date": "2026-09-30T00:00:00.000Z",
+          "url": "https://www.nrta.gov.cn/art/2026/9/30/art_114_74152.html"
+        },
+        {
+          "title": "2026年第二批“微短剧+”行动计划推荐剧目发布2026-09-22",
+          "date": "2026-09-22T00:00:00.000Z",
+          "url": "https://www.nrta.gov.cn/art/2026/9/22/art_114_74107.html"
+        },
+        {
+          "title": "AI微短剧“融像”“融声”知识产权与人格权益保护座谈会召开2026-09-04",
+          "date": "2026-09-04T00:00:00.000Z",
+          "url": "https://www.nrta.gov.cn/art/2026/9/4/art_114_74033.html"
+        },
+        {
+          "title": "“微短剧精品创作传播计划‘五个一批工程’”第二次调度会召开2026-09-01",
+          "date": "2026-09-01T00:00:00.000Z",
+          "url": "https://www.nrta.gov.cn/art/2026/9/1/art_114_73989.html"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "web-shanghai-tv",
+      "items": 20,
+      "scoped": 4,
+      "dated": 4,
+      "recent30Days": 3,
+      "latest": "2026-09-30T00:00:00.000Z",
+      "sha256": "1605a29d31fdd113d6c98ef3fba185d5effe9dda93903da74bd923a03cca6869",
+      "finalUrl": "https://whlyj.sh.gov.cn/gbds/index.html",
+      "httpStatus": 200,
+      "endpoint": "https://whlyj.sh.gov.cn/gbds/index.html",
+      "checkedAt": "2026-10-09T07:39:19.020051+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "金鹰奖微短剧荣誉单元名单公布！沪产微短剧《爱我万岁》荣获年度微短剧，上海听花...",
+          "date": "2026-09-30T00:00:00.000Z",
+          "url": "https://whlyj.sh.gov.cn/gbds/20260930/b4055dd3c6234919a39f185cf91e9394.html"
+        },
+        {
+          "title": "2026年第二批“微短剧+”行动计划推荐剧目发布",
+          "date": "2026-09-28T00:00:00.000Z",
+          "url": "https://whlyj.sh.gov.cn/gbds/20260928/bc070a9fe605481dac6f548a8627373b.html"
+        },
+        {
+          "title": "上海100小时城市AI微短剧创作大赛奖项揭晓！",
+          "date": "2026-09-25T00:00:00.000Z",
+          "url": "https://whlyj.sh.gov.cn/gbds/20260925/c5cce3e46e7745f48a7218dd39bab23d.html"
+        },
+        {
+          "title": "逛展前先科普，上博美洲古代文明大展AI系列短剧上线！",
+          "date": "2026-07-20T00:00:00.000Z",
+          "url": "https://whlyj.sh.gov.cn/gbds/20260720/098e7c66ccae4f65abc7f1bc6df22931.html"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "web-jiangsu-industry",
+      "items": 949,
+      "scoped": 32,
+      "dated": 32,
+      "recent30Days": 2,
+      "latest": "2026-09-24T00:00:00.000Z",
+      "sha256": "61c0b7169486afee79cf9197948f27728199cb2192bdf69e7c69b1bbb9e00711",
+      "finalUrl": "https://jsgd.jiangsu.gov.cn/col/col69981/index.html",
+      "httpStatus": 200,
+      "endpoint": "https://jsgd.jiangsu.gov.cn/col/col69981/index.html",
+      "checkedAt": "2026-10-09T07:42:40.307733+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "江苏首部两岸题材微短剧《等我，回家|...",
+          "date": "2026-09-24T00:00:00.000Z",
+          "url": "https://jsgd.jiangsu.gov.cn/art/2026/9/24/art_69981_11835083.html"
+        },
+        {
+          "title": "双城同日发榜 江苏微短剧精品涌流",
+          "date": "2026-09-23T00:00:00.000Z",
+          "url": "https://jsgd.jiangsu.gov.cn/art/2026/9/23/art_69981_11833981.html"
+        },
+        {
+          "title": "“跟着微短剧去旅行”重点项目《好想陪...",
+          "date": "2026-08-25T00:00:00.000Z",
+          "url": "https://jsgd.jiangsu.gov.cn/art/2026/8/25/art_69981_11820389.html"
+        },
+        {
+          "title": "青春励志微短剧《苏超之追风少年》在多...",
+          "date": "2026-08-10T00:00:00.000Z",
+          "url": "https://jsgd.jiangsu.gov.cn/art/2026/8/10/art_69981_11814474.html"
+        },
+        {
+          "title": "苏产精品微短剧《爱在风起燕舞时》7月...",
+          "date": "2026-07-27T00:00:00.000Z",
+          "url": "https://jsgd.jiangsu.gov.cn/art/2026/7/27/art_69981_11808941.html"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "web-jiangsu-notices",
+      "items": 343,
+      "scoped": 7,
+      "dated": 7,
+      "recent30Days": 0,
+      "latest": "2026-05-29T00:00:00.000Z",
+      "sha256": "f4bb144546bc4861ebff2300064c85be8e4b78aeb798e1839d3f859ae4a7f442",
+      "finalUrl": "https://jsgd.jiangsu.gov.cn/col/col91594/index.html",
+      "httpStatus": 200,
+      "endpoint": "https://jsgd.jiangsu.gov.cn/col/col91594/index.html",
+      "checkedAt": "2026-10-09T07:42:40.410738+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "转发总局办公厅关于印发“微短剧精品创...",
+          "date": "2026-05-29T00:00:00.000Z",
+          "url": "https://jsgd.jiangsu.gov.cn/art/2026/5/29/art_91594_11777915.html"
+        },
+        {
+          "title": "关于开展2026年度江苏省“微短剧+...",
+          "date": "2026-03-31T00:00:00.000Z",
+          "url": "https://jsgd.jiangsu.gov.cn/art/2026/3/31/art_91594_11752092.html"
+        },
+        {
+          "title": "2026年“微短剧+”主题创作方向提...",
+          "date": "2026-03-25T00:00:00.000Z",
+          "url": "https://jsgd.jiangsu.gov.cn/art/2026/3/25/art_91594_11749356.html"
+        },
+        {
+          "title": "关于开展跟着微短剧看“苏超”主题创作...",
+          "date": "2025-08-11T00:00:00.000Z",
+          "url": "https://jsgd.jiangsu.gov.cn/art/2025/8/11/art_91594_11621306.html"
+        },
+        {
+          "title": "关于开展江苏省“微短剧+”主题创作征...",
+          "date": "2025-03-14T00:00:00.000Z",
+          "url": "https://jsgd.jiangsu.gov.cn/art/2025/3/14/art_91594_11516587.html"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "rss-thewrap-microdramas",
+      "items": 10,
+      "scoped": 10,
+      "dated": 10,
+      "recent30Days": 3,
+      "latest": "2026-10-02T20:33:30.000Z",
+      "sha256": "052e4e83c83bd65dbcf1e6383bae0f1d69b88a0ce9069cb34cf6abcfd42e9021",
+      "finalUrl": "https://www.thewrap.com/?s=microdrama&feed=rss2",
+      "httpStatus": 200,
+      "endpoint": "https://www.thewrap.com/?s=microdrama&feed=rss2",
+      "checkedAt": "2026-10-09T07:53:32.169395+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "David Oyelowo. Nate Parker. Jana Winograde. Microdramas Come to TheGrill",
+          "date": "2026-09-18T19:00:00.000Z",
+          "url": "https://www.thewrap.com/industry-news/business/microdramas-thegrill-panel-david-oyelowo-nate-parkerjana-winograde/"
+        },
+        {
+          "title": "Microdrama Platform Founders Say Hollywood Has Come Knocking as Traditional Pipelines Shrink",
+          "date": "2026-10-02T20:33:30.000Z",
+          "url": "https://www.thewrap.com/media-platforms/tv/microdramas-ai-david-oyelowo-nate-parker-interview-mansa-atwist/"
+        },
+        {
+          "title": "Casting Microdramas: It’s Gone Hollywood",
+          "date": "2026-04-20T13:11:35.000Z",
+          "url": "https://www.thewrap.com/creative-content/tv-shows/microdramas-casting-pipeline-rep-driven-star-system/"
+        },
+        {
+          "title": "‘The Tonight Show’ Brings Back Microdrama for Season 2 With Alix Earle and John Stamos",
+          "date": "2026-09-25T17:00:18.000Z",
+          "url": "https://www.thewrap.com/creative-content/tv-shows/the-tonight-show-microdrama-series-returns-season-2/"
+        },
+        {
+          "title": "AI-Generated Microdramas Are Real — and Thriving Under Our Noses",
+          "date": "2026-06-11T13:00:00.000Z",
+          "url": "https://www.thewrap.com/media-platforms/tv/ai-generated-microdramas-could-be-the-future-of-mobile-entertainment/"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "rss-applabs-microdramas",
+      "items": 10,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-09-09T11:57:52.000Z",
+      "sha256": "1f7646ed735bc2e46d0796d7b3c263a439cd327e7105e277375b081cc9b4af21",
+      "finalUrl": "https://blog.applabs.ai/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://blog.applabs.ai/feed/",
+      "checkedAt": "2026-10-09T07:53:32.386530+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "Micro Drama Apps, Macro Viewership, and a Massive Mobile Ad Opportunity",
+          "date": "2026-09-09T11:57:52.000Z",
+          "url": "https://blog.applabs.ai/micro-drama-apps-macro-viewership-and-a-massive-mobile-ad-opportunity/"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "json-sohu-neihang",
+      "items": 20,
+      "scoped": 16,
+      "dated": 16,
+      "recent30Days": 16,
+      "latest": "2026-10-08T03:38:26.000Z",
+      "sha256": "507ff991c35f152577ea0bda42ff6debb44cfc9f018794710d7b1c3df58c0a1d",
+      "finalUrl": "https://m.sohu.com/media/122642385",
+      "httpStatus": 200,
+      "endpoint": "https://m.sohu.com/media/122642385",
+      "checkedAt": "2026-10-09T07:53:32.167558+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "《无人似你》开播，七猫如何用“笨”方法死磕精品真人短剧？",
+          "date": "2026-10-08T03:38:26.000Z",
+          "url": "https://m.sohu.com/a/1085001404_122642385"
+        },
+        {
+          "title": "传统长剧公司入局短剧赛道，欢娱影视凭什么获金鹰认可？",
+          "date": "2026-10-08T02:27:19.000Z",
+          "url": "https://m.sohu.com/a/1084932898_122642385"
+        },
+        {
+          "title": "戏里是结局，戏外是开始：AI漫剧虚拟人正在走出大结局",
+          "date": "2026-09-30T14:31:18.000Z",
+          "url": "https://m.sohu.com/a/1082890611_122642385"
+        },
+        {
+          "title": "从一个想法到一部精品短剧，AI时代需要怎样的新路径？",
+          "date": "2026-09-30T14:30:16.000Z",
+          "url": "https://m.sohu.com/a/1082889570_122642385"
+        },
+        {
+          "title": "听花岛又有新动作！超级IP需要更多“人味儿”",
+          "date": "2026-09-30T02:03:26.000Z",
+          "url": "https://m.sohu.com/a/1082569055_122642385"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "web-fujian-notices",
+      "items": 105,
+      "scoped": 3,
+      "dated": 3,
+      "recent30Days": 1,
+      "latest": "2026-09-20T00:00:00.000Z",
+      "sha256": "922ec95ceb1ae6205439c7939d458a4b624e032ce50436141808c2cd7e86a6cc",
+      "finalUrl": "https://gdj.fujian.gov.cn/gkai/tzgg/",
+      "httpStatus": 200,
+      "endpoint": "https://gdj.fujian.gov.cn/gkai/tzgg/",
+      "checkedAt": "2026-10-09T07:53:25.079666+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "福建省广播电视局关于推荐参评总局2026年“微短剧精品创作传播计划扶持项目” （第三批）评审结果的公示",
+          "date": "2026-09-20T00:00:00.000Z",
+          "url": "https://gdj.fujian.gov.cn/gkai/tzgg/202609/t20260920_7215831.htm"
+        },
+        {
+          "title": "福建省广播电视局关于推荐参评总局2026年“微短剧精品创作传播计划扶持项目” （第二批）评审结果的公示",
+          "date": "2026-07-24T00:00:00.000Z",
+          "url": "https://gdj.fujian.gov.cn/gkai/tzgg/202607/t20260724_7191924.htm"
+        },
+        {
+          "title": "福建省广播电视局关于推荐参评总局2026年“微短剧精品创作传播计划扶持项目”（第一批）评审结果的公示",
+          "date": "2026-06-15T00:00:00.000Z",
+          "url": "https://gdj.fujian.gov.cn/gkai/tzgg/202606/t20260615_7163056.htm"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "web-fujian-work",
+      "items": 87,
+      "scoped": 12,
+      "dated": 12,
+      "recent30Days": 2,
+      "latest": "2026-09-29T00:00:00.000Z",
+      "sha256": "faf281fc17de350c55c9e3c8ae0a31100352584724bccbe839510dd5412ee795",
+      "finalUrl": "https://gdj.fujian.gov.cn/xw/sjgz/",
+      "httpStatus": 200,
+      "endpoint": "https://gdj.fujian.gov.cn/xw/sjgz/",
+      "checkedAt": "2026-10-09T07:53:25.080623+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "2026年福建省微短剧内容管理培训班在泉州举办",
+          "date": "2026-09-29T00:00:00.000Z",
+          "url": "https://gdj.fujian.gov.cn/xw/sjgz/202609/t20260930_7220292.htm"
+        },
+        {
+          "title": "2026海峡两岸WE短剧大赛成果发布仪式在泉州圆满举行",
+          "date": "2026-09-25T00:00:00.000Z",
+          "url": "https://gdj.fujian.gov.cn/xw/sjgz/202609/t20260930_7220282.htm"
+        },
+        {
+          "title": "福建（厦门）微短剧审查服务中心揭牌",
+          "date": "2026-08-25T00:00:00.000Z",
+          "url": "https://gdj.fujian.gov.cn/xw/sjgz/202608/t20260825_7203583.htm"
+        },
+        {
+          "title": "闽派微短剧繁花竞放 精品力作点亮荧屏",
+          "date": "2026-08-06T00:00:00.000Z",
+          "url": "https://gdj.fujian.gov.cn/xw/sjgz/202608/t20260806_7196744.htm"
+        },
+        {
+          "title": "省广电局全力保障推进长征主题微短剧创作生产",
+          "date": "2026-07-06T00:00:00.000Z",
+          "url": "https://gdj.fujian.gov.cn/xw/sjgz/202607/t20260706_7172377.htm"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "web-fujian-industry",
+      "items": 105,
+      "scoped": 3,
+      "dated": 3,
+      "recent30Days": 2,
+      "latest": "2026-09-29T00:00:00.000Z",
+      "sha256": "69b12788ba2c0dba8c693663661c8643b304d7e5732fac5051f1635a19d9f12a",
+      "finalUrl": "https://gdj.fujian.gov.cn/xw/hydt/",
+      "httpStatus": 200,
+      "endpoint": "https://gdj.fujian.gov.cn/xw/hydt/",
+      "checkedAt": "2026-10-09T07:53:25.081463+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "原创微短剧《失落的航海图》上线",
+          "date": "2026-09-29T00:00:00.000Z",
+          "url": "https://gdj.fujian.gov.cn/xw/hydt/202609/t20260930_7220344.htm"
+        },
+        {
+          "title": "首部闽宁协作主题AI微短剧《塞上渔歌》上线",
+          "date": "2026-09-11T00:00:00.000Z",
+          "url": "https://gdj.fujian.gov.cn/xw/hydt/202609/t20260915_7213567.htm"
+        },
+        {
+          "title": "南侨机工题材网络短剧《一见·南侨》上线",
+          "date": "2026-05-18T00:00:00.000Z",
+          "url": "https://gdj.fujian.gov.cn/xw/hydt/202606/t20260624_7167005.htm"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "web-shaanxi-work",
+      "items": 20,
+      "scoped": 6,
+      "dated": 6,
+      "recent30Days": 6,
+      "latest": "2026-09-30T00:00:00.000Z",
+      "sha256": "9505965394cf2178c100ff0210ef476e617b85310ed3a91d2b31139128312170",
+      "finalUrl": "https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/",
+      "httpStatus": 200,
+      "endpoint": "https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/",
+      "checkedAt": "2026-10-09T07:56:57.360835+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "我省微短剧《东山顶上》获评国家广电总局2026年第一季度优秀网络视听作品",
+          "date": "2026-09-30T00:00:00.000Z",
+          "url": "https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/202609/t20260930_3700505.html"
+        },
+        {
+          "title": "我省微短剧《山河回响》《长乐长歌》荣获第16届中国金鹰电视艺术节“年度微短剧”荣誉",
+          "date": "2026-09-30T00:00:00.000Z",
+          "url": "https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/202609/t20260930_3700390.html"
+        },
+        {
+          "title": "我省选送的12部作品入选总局“微短剧+”创作计划第二批推荐剧目",
+          "date": "2026-09-28T00:00:00.000Z",
+          "url": "https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/202609/t20260930_3700380.html"
+        },
+        {
+          "title": "红色微短剧《扁担银行》红果、抖音热播",
+          "date": "2026-09-24T00:00:00.000Z",
+          "url": "https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/202609/t20260928_3699441.html"
+        },
+        {
+          "title": "我省两部微短剧入选广电总局“五个一批工程”重点扶持项目",
+          "date": "2026-09-24T00:00:00.000Z",
+          "url": "https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/202609/t20260928_3699435.html"
+        }
+      ],
+      "method": "GET"
+    },
+    {
+      "id": "web-morketing-outbound",
+      "items": 3,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 0,
+      "latest": "2026-09-01T03:35:00.000Z",
+      "sha256": "b6ce0c9880949bc4489a55042418973db4f22d055905235346dffa09d6c0d8ad",
+      "finalUrl": "https://www.morketing.com/",
+      "httpStatus": 200,
+      "endpoint": "https://www.morketing.com/",
+      "checkedAt": "2026-10-09T07:39:20.023884+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "短剧出海的泼天流量，谁赚到钱了？| WaveGlocal财报分析",
+          "date": "2026-09-01T03:35:00.000Z",
+          "url": "https://www.morketing.com/detail/28775"
+        }
+      ],
+      "method": "GET"
     }
   ]
 }
