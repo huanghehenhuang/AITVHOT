@@ -125,6 +125,7 @@ async function fetchListingText(source: SourceRow): Promise<{ text: string; viaJ
   const url = String(source.config.url ?? "");
   if (!url) throw new FetchError("url missing");
   if (url.startsWith(JINA_PREFIX)) {
+    if (source.config.method === "POST" || source.config.bodyForm) throw new FetchError("form listings require a direct URL");
     const target = url.slice(JINA_PREFIX.length);
     // One paid read per round. The round is saved on the source before the request and cleared once the
     // material is stored, so a fetch that ended with the outcome unknown (timeout after sending, a restart)
@@ -138,7 +139,13 @@ async function fetchListingText(source: SourceRow): Promise<{ text: string; viaJ
     const page = await jinaRead(target, { purpose: "source_listing", subject: `source:${source.id}`, cacheToleranceSeconds: source.config.cacheToleranceSeconds, round, format });
     return { text: page.markdown, viaJina: true, base: source.config.baseUrl ?? target, round };
   }
-  const res = await guardedFetch(url, { headers: { accept: "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8" }, timeoutMs: 25_000 });
+  const form = source.config.bodyForm;
+  const res = await guardedFetch(url, {
+    method: source.config.method ?? "GET",
+    headers: { accept: "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8", ...(form ? { "content-type": "application/x-www-form-urlencoded" } : {}) },
+    ...(form ? { body: new URLSearchParams(form).toString() } : {}),
+    timeoutMs: 25_000,
+  });
   if (res.status !== 200) throw new FetchError(`HTTP ${res.status}`, res.status);
   return { text: res.text(), viaJina: false, base: source.config.baseUrl ?? url };
 }
@@ -173,7 +180,15 @@ export function fromMarkdown(md: string, base: string, source: SourceRow): Candi
 
 export function fromHtml(html: string, base: string, source: SourceRow): Candidate[] {
   const c = source.config;
-  const $ = cheerio.load(html);
+  let $ = cheerio.load(html);
+  // Government lists can keep their rendered rows in XML CDATA inside an inert script.
+  // Read only explicitly selected blocks; never evaluate scripts or fall back to page menus.
+  if (c.embeddedHtmlSelector) {
+    const fragments = $(c.embeddedHtmlSelector).toArray().flatMap((node) =>
+      Array.from($(node).text().matchAll(/<!\[CDATA\[([\s\S]*?)\]\]>/g), (m) => m[1]!),
+    );
+    $ = cheerio.load(fragments.join("\n"));
+  }
   const out: Candidate[] = [];
   const seen = new Set<string>();
   const listing = String(c.url ?? base).replace(JINA_PREFIX, "");
@@ -184,7 +199,9 @@ export function fromHtml(html: string, base: string, source: SourceRow): Candida
   for (const node of nodes) {
     const el = $(node);
     const linkEl = c.linkSelector ? (el.is(c.linkSelector) ? el : el.find(c.linkSelector).first()) : el.is("a") ? el : el.find("a[href]").first();
-    const url = absolute(linkEl.attr("href"), base);
+    const rawLink = linkEl.attr(c.linkAttribute ?? "href");
+    const link = rawLink && c.linkTemplate ? String(c.linkTemplate).replaceAll("{value}", encodeURIComponent(rawLink)) : rawLink;
+    const url = absolute(link, base);
     if (!url || seen.has(url) || !allowed(url, source)) continue;
     if (!sectionsArePosts && listingItself(url, listing)) continue;
     const titleEl = c.titleSelector ? (el.is(c.titleSelector) ? el : el.find(c.titleSelector).first()) : linkEl;

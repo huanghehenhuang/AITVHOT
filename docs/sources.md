@@ -71,7 +71,9 @@
 ```
 
 - `itemSelector` 在整个页面找条目；`linkSelector`、`titleSelector` 在每个条目内取第一个匹配节点，也可以匹配条目自身。选 `.news-list` 只会得到一个容器，通常只取到第一条新闻；只写 `div` 又会混入嵌套容器。要选重复出现的新闻节点。
-- 链接取自 `href`；`/posts/first` 等相对链接按列表 `url` 解析，也可用 `baseUrl` 指定基准地址。标题取节点文字。重复链接会合并，指向列表自身的链接通常会跳过。
+- 链接默认取自 `href`；`linkAttribute` 可指定 `data-link` 等属性。只有文章 ID 时，用 `linkTemplate: "https://example.com/news?id={value}"` 生成链接，`{value}` 会 URL 编码。`/posts/first` 等相对链接按列表 `url` 解析，也可用 `baseUrl` 指定基准地址。标题取节点文字。重复链接会合并，指向列表自身的链接通常会跳过。
+- 有些政府公告把列表保存在 `script[type="text/xml"]` 内的 CDATA 中。用 `embeddedHtmlSelector` 明确选择该块后，在其中的 HTML 片段上应用条目选择器；不执行 JavaScript。块缺失或不含 CDATA 时返回空列表并报解析失败，不退回抓取页面导航。
+- 公开列表若通过表单读取，可设 `method: "POST"` 与 `bodyForm: { "page_no": "1", "page_size": "40" }`；所有参数值须为字符串，自动按 `application/x-www-form-urlencoded` 编码。默认仍用 GET。只用于公开、只读列表，不填写凭据；表单列表要求直接 URL，不能通过 Jina 读取。
 - 日期在条目内查找 `publishedAtSelector`，依次读取 `datetime` 属性、`title` 属性、文字。没有时区的日期时间可用 `publishedAtUtcOffset`（默认 `+08:00`）；自带时区的时间保留原时区语义，纯 `YYYY-MM-DD` 按 UTC 零点读。
 - `parseMode`：普通网页默认 `html`；`markdown` 按 Markdown 链接读；`docusaurus_changelog` 读更新日志标题。需要 Jina 时，显式把 `url` 写成 `https://r.jina.ai/https://目标站/路径` 并配置 `JINA_API_KEY`，不是抓不到就自动切换。Jina 默认返回 Markdown；要继续使用 CSS 选择器，显式设 `parseMode: "html"`。
 - `detail`：列表缺日期、标题或摘要时抓详情页补齐（`publishedAtSelector`、`titleSelector`、`summarySelector` 等）。

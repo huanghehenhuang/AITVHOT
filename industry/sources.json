@@ -1,5 +1,5 @@
 {
-  "$comment": "AITVHot 免费与公开信源库：官方公告、模型发布、创作者、国内公众号 RSS 桥接与行业媒体。2026-10-08 验证记录和完整清单见 docs/source-catalog.md；限制 30 天历史并默认关闭全文。seed 只新增，按 ID 和后台同类地址规则判重，不覆盖已有配置；--dry-run 可预览，--disabled 暂停新源。",
+  "$comment": "AITVHot 免费与公开信源库：AI影视、短剧/漫剧产业、官方公告、创作者与媒体。2026-10-09 新增短剧相关公开入口，完整清单与逐源验证见 docs/source-catalog.md、docs/short-drama-sources.md；限制30天历史、首轮3条、默认关闭全文。seed只新增，按ID与同类地址判重，保留既有配置；--dry-run预览，--disabled暂停新源。",
   "sources": [
     {
       "id": "rss-openai-news",
@@ -853,7 +853,26 @@
             "即梦",
             "万相",
             "混元",
-            "ai视频"
+            "ai视频",
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort"
           ],
           "requireWords": [
             "ai",
@@ -1150,7 +1169,26 @@
             "即梦",
             "万相",
             "混元",
-            "ai视频"
+            "ai视频",
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort"
           ],
           "requireWords": [
             "ai",
@@ -1382,7 +1420,26 @@
             "即梦",
             "万相",
             "混元",
-            "ai视频"
+            "ai视频",
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort"
           ],
           "requireWords": [
             "ai",
@@ -1603,7 +1660,26 @@
             "即梦",
             "万相",
             "混元",
-            "ai视频"
+            "ai视频",
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort"
           ],
           "requireWords": [
             "ai",
@@ -1658,7 +1734,26 @@
             "即梦",
             "万相",
             "混元",
-            "ai视频"
+            "ai视频",
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort"
           ],
           "requireWords": [
             "ai",
@@ -1768,7 +1863,26 @@
             "即梦",
             "万相",
             "混元",
-            "ai视频"
+            "ai视频",
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort"
           ],
           "requireWords": [
             "ai",
@@ -6116,7 +6230,26 @@
             "即梦",
             "万相",
             "混元",
-            "ai视频"
+            "ai视频",
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort"
           ],
           "requireWords": [
             "ai",
@@ -6170,7 +6303,26 @@
             "即梦",
             "万相",
             "混元",
-            "ai视频"
+            "ai视频",
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort"
           ],
           "requireWords": [
             "ai",
@@ -8144,6 +8296,1884 @@
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-hollywood-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.hollywoodreporter.com/t/microdramas/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ],
+          "dropMarkersTitleOnly": [
+            "the daily show"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "The Hollywood Reporter · 微短剧",
+      "owner_entity_id": "hollywood-reporter",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-variety-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://variety.com/t/microdramas/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "Variety · 微短剧",
+      "owner_entity_id": "variety",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-deadline-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://deadline.com/tag/microdramas/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "Deadline · 微短剧",
+      "owner_entity_id": "deadline",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-streaming-radar",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.streaming-radar.com/feed",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow",
+            "microdrame",
+            "séries verticales",
+            "fiction verticale"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "Streaming Radar · 竖屏剧产业简报",
+      "owner_entity_id": "streaming-radar",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-verticaldrama-news",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.verticaldrama.tv/feed.xml",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://www.verticaldrama.tv/news/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "Vertical Drama · 竖屏剧行业新闻",
+      "owner_entity_id": "streaming-radar",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-worldscreen-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://worldscreen.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "World Screen · 微短剧",
+      "owner_entity_id": "worldscreen",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-videoweek-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://videoweek.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "VideoWeek · 微短剧",
+      "owner_entity_id": "videoweek",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-advancedtv-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://advanced-television.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "Advanced Television · 微短剧",
+      "owner_entity_id": "advancedtv",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-kuaishou-company-news",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://ir.kuaishou.com/rss/news-releases.xml",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow",
+            "可灵",
+            "Kling",
+            "AI影视",
+            "Nadou",
+            "AI-powered video",
+            "AI-generated",
+            "AI multi-season",
+            "AI filmmaking"
+          ],
+          "requireWords": [
+            "ai"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "快手 · 公司公告与 AI 内容业务",
+      "owner_entity_id": "kuaishou",
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "rss-iqiyi-company-news",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://ir.iqiyi.com/rss/news-releases.xml",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow",
+            "可灵",
+            "Kling",
+            "AI影视",
+            "Nadou",
+            "AI-powered video",
+            "AI-generated",
+            "AI multi-season",
+            "AI filmmaking"
+          ],
+          "requireWords": [
+            "ai"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "爱奇艺 · 官方新闻与 AI 制作",
+      "owner_entity_id": "iqiyi",
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "rss-tubefilter-microdramas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.tubefilter.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "Tubefilter · 微短剧",
+      "owner_entity_id": "tubefilter",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "web-dataeye-reports",
+      "name": "DataEye 微短剧与漫剧公开报告",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "dataeye",
+      "config": {
+        "url": "https://www.dataeye.com/media-center.html",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": ".column:has(h5)",
+        "linkSelector": ".cover a",
+        "titleSelector": "h5",
+        "publishedAtSelector": ".time",
+        "allowUrlPrefixes": [
+          "https://www.dataeye.com/report.html?"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 720,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-duanju007-posts",
+      "name": "短剧自习室 · 文章",
+      "kind": "web_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "duanju007",
+      "config": {
+        "url": "https://duanju007.com/posts",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": ".message-info-content > a",
+        "titleSelector": ".message-info-title",
+        "publishedAtSelector": ".message-info-date",
+        "allowUrlPrefixes": [
+          "https://duanju007.com/?post_type=post&p="
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "web-nrta-notices",
+      "name": "国家广电总局 · 公告公示",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "nrta",
+      "config": {
+        "url": "https://www.nrta.gov.cn/col/col113/index.html",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "embeddedHtmlSelector": "script[type=\"text/xml\"]",
+        "itemSelector": "record li, li",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "publishedAtSelector": "a span",
+        "allowUrlPrefixes": [
+          "https://www.nrta.gov.cn/art/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-guangdong-notices",
+      "name": "广东省广电局 · 通知公告",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "guangdong-gdj",
+      "config": {
+        "url": "https://gbdsj.gd.gov.cn/zxzx/tzgg/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(a[href*=\"post_\"])",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "publishedAtSelector": ".time",
+        "allowUrlPrefixes": [
+          "https://gbdsj.gd.gov.cn/zxzx/tzgg/content/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-guangdong-industry",
+      "name": "广东省广电局 · 行业动态",
+      "kind": "web_list",
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "guangdong-gdj",
+      "config": {
+        "url": "https://gbdsj.gd.gov.cn/zxzx/hydt/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(a[href*=\"post_\"])",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "publishedAtSelector": ".time",
+        "allowUrlPrefixes": [
+          "https://gbdsj.gd.gov.cn/zxzx/hydt/content/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "web-col-news",
+      "name": "中文在线 · 官方新闻",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "col",
+      "config": {
+        "url": "https://www.col.com/list-e6jni41m/guanfangxinwen/2/10",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": ".swiper-slide:has(.card .title)",
+        "linkSelector": ".title[data-link]",
+        "linkAttribute": "data-link",
+        "titleSelector": ".title",
+        "publishedAtSelector": ".rq",
+        "allowUrlPrefixes": [
+          "https://www.col.com/article/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-crazy-maple-news",
+      "name": "Crazy Maple Studio / ReelShort · 媒体报道",
+      "kind": "web_list",
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "crazy-maple",
+      "config": {
+        "url": "https://crazymaplestudios.com/maple-news",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(a[aria-label])",
+        "linkSelector": "a[aria-label]",
+        "titleSelector": "h2",
+        "publishedAtRegex": "(\\d{4}\\.\\d{2}\\.\\d{2})",
+        "publishedAtUtcOffset": "+00:00",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "web-vertical-story",
+      "name": "Vertical Story Fest · 竖屏剧行业简报",
+      "kind": "web_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "vertical-story-fest",
+      "config": {
+        "url": "https://verticalstoryfest.com/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "a[href^=\"/p/\"]:has(h3)",
+        "titleSelector": "h3",
+        "publishedAtRegex": "([A-Z][a-z]{2} \\d{1,2}, \\d{4})",
+        "publishedAtUtcOffset": "+00:00",
+        "allowUrlPrefixes": [
+          "https://verticalstoryfest.com/p/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "web-yuewen-news",
+      "name": "阅文集团 · 媒体报道",
+      "kind": "web_list",
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "yuewen",
+      "config": {
+        "url": "https://www.yuewen.com/news",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "a.news-each",
+        "titleSelector": ".news-title",
+        "publishedAtSelector": ".news-time",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "web-xinwanr",
+      "name": "新腕儿 · 短剧与漫剧行业报道",
+      "kind": "web_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "xinwanr",
+      "config": {
+        "url": "https://www.xinwanr.com/news_list_index",
+        "method": "POST",
+        "bodyForm": {
+          "page_no": "1",
+          "page_size": "40"
+        },
+        "parseMode": "html",
+        "itemSelector": "li.js_news_item",
+        "linkSelector": "a.title[id]",
+        "linkAttribute": "id",
+        "linkTemplate": "https://www.xinwanr.com/news/details?id={value}",
+        "titleSelector": "a.title",
+        "publishedAtRegex": "(\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2})",
+        "publishedAtUtcOffset": "+08:00",
+        "sortByPublishedAt": true,
+        "allowUrlPrefixes": [
+          "https://www.xinwanr.com/news/details?"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "web-holywater-news",
+      "name": "HOLYWATER TECH / My Drama · 公开新闻",
+      "kind": "web_list",
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "holywater",
+      "config": {
+        "url": "https://www.holywater.tech/blog",
+        "parseMode": "html",
+        "itemSelector": ".w-dyn-item:has(h3):has(a[href^=\"/blog/\"]):has(.blog-card-title-top > p:first-child:not(.w-dyn-bind-empty))",
+        "linkSelector": "a[href^=\"/blog/\"]",
+        "titleSelector": "h3",
+        "publishedAtSelector": ".blog-card-title-top p",
+        "publishedAtUtcOffset": "+00:00",
+        "sortByPublishedAt": true,
+        "allowUrlPrefixes": [
+          "https://www.holywater.tech/blog/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "json-sohu-chuanmeineican",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/351788",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "传媒内参 · 搜狐公开专栏",
+      "owner_entity_id": "chuanmeineican",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-duanju007",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/121864780",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "短剧自习室 · 搜狐公开专栏",
+      "owner_entity_id": "duanju007",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-dataeye",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/120362942",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "DataEye数据 · 搜狐公开专栏",
+      "owner_entity_id": "dataeye",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-dumou",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/100240657",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "毒眸 · 搜狐公开专栏",
+      "owner_entity_id": "dumou",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-entcapital",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/159592",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "娱乐资本论 · 搜狐公开专栏",
+      "owner_entity_id": "entcapital",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-yiyu",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/477902",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "壹娱观察 · 搜狐公开专栏",
+      "owner_entity_id": "yiyu",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-shenxiang",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/100194960",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "深响 · 搜狐公开专栏",
+      "owner_entity_id": "shenxiang",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-entunicorn",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/549401",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "娱乐独角兽 · 搜狐公开专栏",
+      "owner_entity_id": "entunicorn",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-newrank-news",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.newrank.cn/article",
+        "mode": "html_json_key",
+        "jsonKey": "articleList",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "summary"
+        ],
+        "urlTemplate": "{raw:url}",
+        "publishedAtPath": "publicTime",
+        "externalIdPath": "articleUuid",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "分账",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "新榜 · 短剧与 AI 内容行业报道",
+      "owner_entity_id": "newrank",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "json-sohu-yingshidushe",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/116162",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "影视独舌 · 搜狐公开专栏",
+      "owner_entity_id": "yingshidushe",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-jingxiang",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/305277",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "镜像娱乐 · 搜狐公开专栏",
+      "owner_entity_id": "jingxiang",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-duyu",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/523234",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "读娱官网 · 搜狐公开专栏",
+      "owner_entity_id": "duyu",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "json-sohu-bianjubang",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/154166",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "编剧帮 · 搜狐公开专栏",
+      "owner_entity_id": "bianjubang",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
     }
   ]
 }

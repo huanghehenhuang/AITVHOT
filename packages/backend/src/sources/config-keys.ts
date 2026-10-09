@@ -9,8 +9,8 @@ const COLLECTED = ["_aihot", "allowUrlPrefixes", "denyUrlPrefixes", "ingestNoise
 const KEYS: Record<SourceRow["kind"], string[]> = {
   rss: [...COLLECTED, "feedUrl", "summaryIsBody", "preserveUrlFragment", "allowCategories", "denyCategories"],
   web_list: [
-    ...COLLECTED, "url", "baseUrl", "parseMode", "adapter", "cacheToleranceSeconds", "linksStartLine", "preserveUrlFragment",
-    "itemSelector", "linkSelector", "titleSelector", "publishedAtSelector", "publishedAtRegex", "publishedAtUtcOffset",
+    ...COLLECTED, "url", "baseUrl", "parseMode", "adapter", "cacheToleranceSeconds", "linksStartLine", "preserveUrlFragment", "method", "bodyForm",
+    "itemSelector", "linkSelector", "linkAttribute", "linkTemplate", "embeddedHtmlSelector", "titleSelector", "publishedAtSelector", "publishedAtRegex", "publishedAtUtcOffset",
   ],
   json_list: [
     ...COLLECTED, "url", "mode", "method", "headers", "bodyJson", "jsonKey", "windowVar", "itemsPath", "itemsObjectValues",
@@ -47,6 +47,11 @@ export function unsupportedConfig(kind: SourceRow["kind"], config: Record<string
   const out: string[] = [];
   for (const [key, value] of Object.entries(config ?? {})) {
     if (!allowed.has(key)) out.push(key);
+    else if (kind === "web_list" && key === "method" && !["GET", "POST"].includes(String(value))) out.push(`method=${String(value)}`);
+    else if (key === "bodyForm" && (config.method !== "POST" || !value || typeof value !== "object" || Array.isArray(value) || Object.values(value).some((v) => typeof v !== "string"))) out.push("bodyForm must be a string map with method=POST");
+    else if (key === "linkAttribute" && (typeof value !== "string" || !/^[a-zA-Z][a-zA-Z0-9_:.-]*$/.test(value))) out.push("linkAttribute must be an HTML attribute name");
+    else if (key === "linkTemplate" && (typeof value !== "string" || !value.includes("{value}"))) out.push("linkTemplate must contain {value}");
+    else if (key === "embeddedHtmlSelector" && (typeof value !== "string" || !value.trim())) out.push("embeddedHtmlSelector must be a non-empty CSS selector");
     else if (key === "maxItemAgeDays" && (typeof value !== "number" || !Number.isFinite(value) || value <= 0)) out.push("maxItemAgeDays must be a positive number");
     else if (VALUES[key] && !VALUES[key]!.includes(String(value))) out.push(`${key}=${String(value)}`);
     else if (NESTED[key] && value && typeof value === "object") {
