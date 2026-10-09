@@ -11288,6 +11288,683 @@
         "出海",
         "市场研究"
       ]
+    },
+    {
+      "id": "json-sohu-yingshichanye",
+      "kind": "json_list",
+      "config": {
+        "url": "https://m.sohu.com/media/100097343",
+        "mode": "html_window_var",
+        "windowVar": "blockRenderData",
+        "itemsPath": "FeedSlideloadAuthor_1_2_wap_1655966653498.param.data2.list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "brief"
+        ],
+        "urlTemplate": "https://m.sohu.com/a/{id}_{authorId}",
+        "publishedAtPath": "postTime",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果",
+            "分账",
+            "microdrama",
+            "ReelShort",
+            "DramaBox",
+            "short drama",
+            "AI影视",
+            "AI视频",
+            "AI电影",
+            "AI动画",
+            "AI纪录片"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://m.sohu.com/a/"
+        ],
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "影视产业观察 · 搜狐公开专栏",
+      "owner_entity_id": "yingshi-chanye",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "公开作者专栏"
+      ]
+    },
+    {
+      "id": "rss-opengardens-vertical",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.enteropengardens.com/feed",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow",
+            "Vertical Bloom"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "Open Gardens · 竖屏剧简报",
+      "owner_entity_id": "open-gardens",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "web-hunan-notices",
+      "name": "湖南省广电局 · 通知公告",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "hunan-gdj",
+      "config": {
+        "url": "https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/newxxgklist_nochn.html",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(a small)",
+        "linkSelector": "a",
+        "titleSelector": "a span",
+        "publishedAtSelector": "a small",
+        "allowUrlPrefixes": [
+          "https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-sichuan-notices",
+      "name": "四川省广电局 · 公告公示",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "sichuan-gdj",
+      "config": {
+        "url": "https://gdj.sc.gov.cn/scgdj/gggs/zfxxgklist.shtml",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(b):has(a)",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "publishedAtSelector": "b",
+        "allowUrlPrefixes": [
+          "https://gdj.sc.gov.cn/scgdj/gggs/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-sichuan-industry",
+      "name": "四川省广电局 · 行业动态",
+      "kind": "web_list",
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "sichuan-gdj",
+      "config": {
+        "url": "https://gdj.sc.gov.cn/scgdj/gdxw/list.shtml",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(span):has(a)",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "publishedAtSelector": "span",
+        "allowUrlPrefixes": [
+          "https://gdj.sc.gov.cn/scgdj/gdxw/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-socialpeta-blog",
+      "name": "SocialPeta · 微短剧投放研究",
+      "kind": "web_list",
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "socialpeta",
+      "config": {
+        "url": "https://socialpeta.com/en/blog",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "a:has(time):has(h3)",
+        "linkSelector": "a",
+        "titleSelector": "h3",
+        "publishedAtSelector": "time",
+        "allowUrlPrefixes": [
+          "https://socialpeta.com/en/blog/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "publishedAtUtcOffset": "+00:00"
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "投放研究"
+      ]
+    },
+    {
+      "id": "rss-appgrowing-cn-feed",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://appgrowing.net/blog/feed/",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "name": "AppGrowing · 短剧投放研究",
+      "owner_entity_id": "appgrowing",
+      "tier": "T1_5",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "投放研究"
+      ]
+    },
+    {
+      "id": "web-liaoning-notices",
+      "name": "辽宁省广电局 · 通知公告",
+      "kind": "web_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "liaoning-gdj",
+      "config": {
+        "url": "https://gdj.ln.gov.cn/gdj/index/tzgg/index.shtml",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(a[istitle=\"true\"]):has(span)",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "allowUrlPrefixes": [
+          "https://gdj.ln.gov.cn/gdj/index/tzgg/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "publishedAtRegex": "\\[(\\d{4}-\\d{2}-\\d{2})\\]"
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-liaoning-industry",
+      "name": "辽宁省广电局 · 行业动态",
+      "kind": "web_list",
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "liaoning-gdj",
+      "config": {
+        "url": "https://gdj.ln.gov.cn/gdj/index/xydt/index.shtml",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(a[istitle=\"true\"]):has(span)",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "allowUrlPrefixes": [
+          "https://gdj.ln.gov.cn/gdj/index/xydt/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "publishedAtRegex": "\\[(\\d{4}-\\d{2}-\\d{2})\\]"
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "web-hunan-industry",
+      "name": "湖南省广电局 · 省局与行业消息",
+      "kind": "web_list",
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": "hunan-gdj",
+      "config": {
+        "url": "https://gbdsj.hunan.gov.cn/gbdsj/",
+        "parseMode": "html",
+        "sortByPublishedAt": true,
+        "itemSelector": "li:has(span.date):has(a[href^=\"/gbdsj/xxgk/gzdt/\"])",
+        "linkSelector": "a",
+        "titleSelector": "a",
+        "publishedAtSelector": "span.date",
+        "allowUrlPrefixes": [
+          "https://gbdsj.hunan.gov.cn/gbdsj/xxgk/gzdt/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "microdrama",
+            "micro-drama",
+            "micro drama",
+            "short drama",
+            "short-drama",
+            "vertical drama",
+            "vertical series",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "My Drama"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "官方"
+      ]
+    },
+    {
+      "id": "json-fanqie-author-notices",
+      "name": "番茄小说 · 短剧漫剧改编公告",
+      "kind": "json_list",
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "bytedance",
+      "config": {
+        "url": "https://fanqienovel.com/writer/zone/notice",
+        "mode": "html_window_var",
+        "windowVar": "_ROUTER_DATA",
+        "itemsPath": "loaderData.notice/page.notice_list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstract"
+        ],
+        "urlTemplate": "{raw:url}",
+        "publishedAtPath": "notice_time",
+        "publishedAtUnit": "epoch_s",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "短漫剧",
+            "红果"
+          ]
+        },
+        "allowUrlPrefixes": [
+          "https://fanqienovel.com/writer/zone/article/"
+        ],
+        "sortByPublishedAt": true,
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "json-vertical-observer-news",
+      "name": "Vertical Observer · 竖屏剧产业报道",
+      "kind": "json_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "vertical-observer",
+      "config": {
+        "url": "https://verticalobserver.com/data/site.json",
+        "itemsPath": "stories",
+        "titlePaths": [
+          "headline"
+        ],
+        "summaryPaths": [
+          "body",
+          "dek"
+        ],
+        "urlTemplate": "https://verticalobserver.com/#/news/{id}",
+        "publishedAtPath": "date",
+        "externalIdPath": "id",
+        "requireBoolean": {
+          "path": "publish",
+          "equals": true
+        },
+        "preserveUrlFragment": true,
+        "allowUrlPrefixes": [
+          "https://verticalobserver.com/#/news/"
+        ],
+        "sortByPublishedAt": true,
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "summaryIsBody": true
+      },
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "web-plotparty-news",
+      "name": "Plot Party · 微短剧产业周报",
+      "kind": "web_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "plotparty",
+      "participation_mode": "editorial",
+      "interval_minutes": 720,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧",
+        "制作发行"
+      ],
+      "config": {
+        "url": "https://plotparty.ai/page/news",
+        "parseMode": "html",
+        "itemSelector": ".news-issue-card:nth-of-type(-n+5)",
+        "linkSelector": "h2 a",
+        "titleSelector": "h2 a",
+        "allowUrlPrefixes": [
+          "https://plotparty.ai/page/news/"
+        ],
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      }
     }
   ]
 }

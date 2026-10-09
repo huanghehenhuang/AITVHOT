@@ -1,5 +1,5 @@
 // Failure cases: tracking aliases miss the stored article, duplicate cards buy duplicate detail
-// requests, fragment-aware HTML lists collapse separate updates, invalid epoch values abort a run.
+// requests, fragment-aware lists collapse separate updates, invalid epoch values abort a run.
 import { tag } from "./setup.ts";
 import assert from "node:assert/strict";
 import http from "node:http";
@@ -62,6 +62,24 @@ for (const parseMode of ["html", "markdown"]) test(`${parseMode} sections explic
   assert.equal((await collectSource(id)).revised, 0);
   const rows = await sql`SELECT url,revision FROM articles WHERE source_id=${id} ORDER BY url`;
   assert.deepEqual(rows.map(r => [String(r.url).split("#")[1], r.revision]), [["one", 1], ["two", 1]]);
+});
+
+for (const preserveUrlFragment of [false, true]) test(`JSON hash routes ${preserveUrlFragment ? "retain separate posts" : "deduplicate ordinary anchors"} on repeated collection`, async () => {
+  const id = await source("json_list", {
+    url: `${base}/json`, titlePaths: ["title"], publishedAtPath: "time", publishedAtUnit: "epoch_ms",
+    urlTemplate: `${base}/reader#/news/{id}`,
+    ...(preserveUrlFragment ? { preserveUrlFragment: true } : {}),
+  });
+  const first = await collectSource(id);
+  assert.equal(first.status, "ok", first.error ?? "");
+  assert.equal(first.created, preserveUrlFragment ? 2 : 1);
+  const repeat = await collectSource(id);
+  assert.equal(repeat.status, "ok", repeat.error ?? "");
+  assert.equal(repeat.created, 0);
+  assert.equal(repeat.revised, 0);
+  const rows = await sql`SELECT url,revision FROM articles WHERE source_id=${id} ORDER BY url`;
+  assert.deepEqual(rows.map(r => [String(r.url).split("#")[1], r.revision]), preserveUrlFragment
+    ? [["/news/1", 1], ["/news/2", 1]] : [["/news/1", 1]]);
 });
 
 for (const unit of ["epoch_s", "epoch_ms"]) test(`an invalid ${unit} date is unknown and does not discard the listing`, async () => {

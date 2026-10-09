@@ -116,6 +116,7 @@
 
 - 接口本身返回数组时，省略 `itemsPath`。`titlePaths`、`summaryPaths`、`authorPaths` 是候选路径数组，按顺序取第一个非空值，例如 `["title", "name"]`。
 - 已有完整网址时用 `{raw:url}`；只有 slug 时可用 `https://example.com/posts/{slug}`。`{字段路径}` 会编码字段值，`{raw:字段路径}` 原样插入。JSON 列表不会自动把相对网址补成绝对网址，模板应产出完整的 HTTP(S) 地址。
+- 如果网站用 `#/news/文章ID` 等片段路由区分文章，显式设 `preserveUrlFragment: true`，采集和入库判重会保留片段；普通页面锚点默认不计为独立文章。
 - 日期建议返回带时区的 ISO 字符串；数字时间戳分别设 `publishedAtUnit: "epoch_s"`（秒）或 `"epoch_ms"`（毫秒），`20261001` 这类日期设 `"yyyymmdd"`。
 - 同一字段混用毫秒时间戳和 ISO 字符串时，显式设 `publishedAtUnit: "epoch_ms_or_iso"`（例如 MiniMax 新闻接口）；原数字单位不自动改变含义。
 - 官网将列表嵌在 HTML 时，`mode: "html_json_key"` 配合 `jsonKey` 可读 JSON script 或 Next.js Flight 中的完整数组（包括条目内嵌套数组）；`html_window_var` 配合 `windowVar` 读窗口变量。它们读取原始响应中的公开数据，不运行 JavaScript，不解析需要后续请求的 Flight 引用。

@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-09T07:56:57.360835+00:00",
-  "method": "Public HTTP captures parsed by repository collectors; 21 further short-drama additions checked on 2026-10-09 after the previous 35 additions and 8 widened film scopes; unchanged sources retain their previous per-source timestamp; no database writes, full-text reads or paid processing",
-  "total": 218,
+  "checkedAt": "2026-10-09T08:32:32.567055+00:00",
+  "method": "Public HTTP captures parsed by repository collectors; 13 further short-drama additions checked on 2026-10-09 after the previous 56 additions and 8 widened film scopes; Plot Party dates and excerpts use five captured article metadata responses with body extraction disabled; unchanged sources retain their previous per-source timestamp; no database writes or paid processing",
+  "total": 231,
   "sources": [
     {
       "id": "rss-openai-news",
@@ -3524,6 +3524,436 @@
         }
       ],
       "method": "GET"
+    },
+    {
+      "id": "json-sohu-yingshichanye",
+      "items": 20,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-02T02:44:42.000Z",
+      "sha256": "1c711dc511b86c5310aa22b4e2c4c3b20dfa1e12d819ac609cc4ea6160046a6d",
+      "finalUrl": "https://m.sohu.com/media/100097343",
+      "httpStatus": 200,
+      "endpoint": "https://m.sohu.com/media/100097343",
+      "checkedAt": "2026-10-09T08:21:20.593562+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "AI影视的长片时代要来了？",
+          "date": "2026-10-02T02:44:42.000Z",
+          "url": "https://m.sohu.com/a/1083316181_100097343"
+        }
+      ]
+    },
+    {
+      "id": "rss-opengardens-vertical",
+      "items": 20,
+      "scoped": 6,
+      "dated": 6,
+      "recent30Days": 5,
+      "latest": "2026-10-09T03:32:06.000Z",
+      "sha256": "9f4fef176e5ed37df3644ee5581d86526753526b893aefbbf3e96b56df64cd70",
+      "finalUrl": "https://www.enteropengardens.com/feed",
+      "httpStatus": 200,
+      "endpoint": "https://www.enteropengardens.com/feed",
+      "checkedAt": "2026-10-09T08:21:24.936247+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "The Vertical Bloom: 10/08/26",
+          "date": "2026-10-09T03:32:06.000Z",
+          "url": "https://www.enteropengardens.com/p/the-vertical-bloom-100826"
+        },
+        {
+          "title": "Billionaires, Organ Transplants And Shirtless Men: How A Veteran Comedy Producer Stopped Worrying And Learned To Love Microdramas",
+          "date": "2026-10-06T03:34:56.000Z",
+          "url": "https://www.enteropengardens.com/p/billionaires-organ-transplants-and"
+        },
+        {
+          "title": "The Vertical Bloom",
+          "date": "2026-09-25T05:01:54.000Z",
+          "url": "https://www.enteropengardens.com/p/the-vertical-bloom"
+        },
+        {
+          "title": "The Vertical Bloom: 09/17/26",
+          "date": "2026-09-17T23:30:47.000Z",
+          "url": "https://www.enteropengardens.com/p/the-vertical-bloom-091726"
+        },
+        {
+          "title": "The Vertical Bloom: 9/10/2026",
+          "date": "2026-09-11T03:30:02.000Z",
+          "url": "https://www.enteropengardens.com/p/the-vertical-bloom-9102026"
+        }
+      ]
+    },
+    {
+      "id": "web-hunan-notices",
+      "items": 20,
+      "scoped": 3,
+      "dated": 3,
+      "recent30Days": 1,
+      "latest": "2026-09-22T00:00:00.000Z",
+      "sha256": "c4c5ed1980fa9858fe29ed2e9bea2a2e62770eb79ddde27b769810b2ef831022",
+      "finalUrl": "https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/newxxgklist_nochn.html",
+      "httpStatus": 200,
+      "endpoint": "https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/newxxgklist_nochn.html",
+      "checkedAt": "2026-10-09T08:17:45.860330+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "关于第二批“四百工程 湘当有戏”微短剧项目征集评审结果的公示",
+          "date": "2026-09-22T00:00:00.000Z",
+          "url": "https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/202609/t20260922_34070087.html"
+        },
+        {
+          "title": "关于第一批“四百工程 湘当有戏”微短剧项目征集评审结果的公示",
+          "date": "2026-08-26T00:00:00.000Z",
+          "url": "https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/202608/t20260826_34051330.html"
+        },
+        {
+          "title": "首届湖南省大学生创业微短剧短视频大赛获奖名单公示",
+          "date": "2026-08-07T00:00:00.000Z",
+          "url": "https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/202608/t20260807_34041613.html"
+        }
+      ]
+    },
+    {
+      "id": "web-sichuan-notices",
+      "items": 19,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 0,
+      "latest": "2026-06-05T00:00:00.000Z",
+      "sha256": "8d8675125cd4ef9ed83bd9e02fac26a7d79e4b822b3371d2e7195340654fe3e3",
+      "finalUrl": "https://gdj.sc.gov.cn/scgdj/gggs/zfxxgklist.shtml",
+      "httpStatus": 200,
+      "endpoint": "https://gdj.sc.gov.cn/scgdj/gggs/zfxxgklist.shtml",
+      "checkedAt": "2026-10-09T08:17:45.868468+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "“光影点亮美好生活” “青藤扶持计划”精品微短剧创作征集活动",
+          "date": "2026-06-05T00:00:00.000Z",
+          "url": "https://gdj.sc.gov.cn/scgdj/gggs/2026/6/5/0628e353e3d84c7da6df60b370b9db73.shtml"
+        }
+      ]
+    },
+    {
+      "id": "web-sichuan-industry",
+      "items": 15,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 0,
+      "latest": "2026-08-11T00:00:00.000Z",
+      "sha256": "7f8a439046b3bd970117e8c7cd25709ec5c8c6d7c4f12b898439217b4985c715",
+      "finalUrl": "https://gdj.sc.gov.cn/scgdj/gdxw/list.shtml",
+      "httpStatus": 200,
+      "endpoint": "https://gdj.sc.gov.cn/scgdj/gdxw/list.shtml",
+      "checkedAt": "2026-10-09T08:17:45.869376+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "百花奖首次评选短剧，四川三部作品榜上有名",
+          "date": "2026-08-11T00:00:00.000Z",
+          "url": "https://gdj.sc.gov.cn/scgdj/gdxw/2026/8/11/bcca717c31284d918085b591d9e3fdbf.shtml"
+        }
+      ]
+    },
+    {
+      "id": "web-socialpeta-blog",
+      "items": 177,
+      "scoped": 40,
+      "dated": 40,
+      "recent30Days": 4,
+      "latest": "2026-09-30T00:00:00.000Z",
+      "sha256": "8815bf94140348c7f9fc04483724d91c7c46d330d2fd1766ba669fe0fc288f8f",
+      "finalUrl": "https://socialpeta.com/en/blog",
+      "httpStatus": 200,
+      "endpoint": "https://socialpeta.com/en/blog",
+      "checkedAt": "2026-10-09T08:17:52.614496+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "Short Drama Weekly Ranking: DramaWave Continues to Dominate as FlickReels Makes a Surprise Entry",
+          "date": "2026-09-30T00:00:00.000Z",
+          "url": "https://socialpeta.com/en/blog/short-drama-weekly-dramawave-continues-to-dominate-as-flickreels-makes-a-surprise-entry"
+        },
+        {
+          "title": "Short Drama Weekly: DramaWave, JoyReels & DramaShorts Dominate as Facebook Drives Global UA",
+          "date": "2026-09-30T00:00:00.000Z",
+          "url": "https://socialpeta.com/en/blog/short-drama-weekly-dramawave-joyreels-dramashorts-dominate-as-facebook-drives-global-ua"
+        },
+        {
+          "title": "Short Drama Weekly Ranking: NetShort Bets on One Title, DramaWave Floods the Chart — Two Playbooks Emerge",
+          "date": "2026-09-15T00:00:00.000Z",
+          "url": "https://socialpeta.com/en/blog/short-drama-weekly-ranking-netshort-bets-on-one-title-dramawave-floods-the-chart-two-playbooks-emerge"
+        },
+        {
+          "title": "Short Drama Weekly Ranking: AI Live-Action Dramas Sweep the Board, DramaWave Takes 80% of the Chart",
+          "date": "2026-09-10T00:00:00.000Z",
+          "url": "https://socialpeta.com/en/blog/short-drama-weekly-ranking-ai-live-action-dramas-sweep-the-board-dramawave-takes-80-of-the-chart"
+        },
+        {
+          "title": "Short Drama Weekly Ranking: Can a Title Really Drive 510M Impressions?",
+          "date": "2026-09-03T00:00:00.000Z",
+          "url": "https://socialpeta.com/en/blog/short-drama-weekly-ranking-can-a-title-really-drive-510m-impressions"
+        }
+      ]
+    },
+    {
+      "id": "rss-appgrowing-cn-feed",
+      "items": 10,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-09-24T02:54:29.000Z",
+      "sha256": "2f2c7f79a7fe44f789d3a37a8a2871c4308195a40df3af30ce73bc052d41e9ef",
+      "finalUrl": "https://appgrowing.net/blog/feed/",
+      "httpStatus": 200,
+      "endpoint": "https://appgrowing.net/blog/feed/",
+      "checkedAt": "2026-10-09T08:17:51.846755+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "8 月应用月报：AI 短剧成为新竞争点，掌阅《PopoVibe》素材策略分析",
+          "date": "2026-09-24T02:54:29.000Z",
+          "url": "https://appgrowing.net/blog/aug_app-2/"
+        }
+      ]
+    },
+    {
+      "id": "web-liaoning-notices",
+      "items": 18,
+      "scoped": 5,
+      "dated": 5,
+      "recent30Days": 2,
+      "latest": "2026-09-24T00:00:00.000Z",
+      "sha256": "7bc0d9e2744ef7e1b31b010e573ac9e3f9fc2bb9e2775f3480911a4ed15ba520",
+      "finalUrl": "https://gdj.ln.gov.cn/gdj/index/tzgg/index.shtml",
+      "httpStatus": 200,
+      "endpoint": "https://gdj.ln.gov.cn/gdj/index/tzgg/index.shtml",
+      "checkedAt": "2026-10-09T08:31:00.249701+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "关于公示2026年度“辽宁故事·时代光影”微短剧剧本征集活动第一批评审结果的通知",
+          "date": "2026-09-24T00:00:00.000Z",
+          "url": "https://gdj.ln.gov.cn/gdj/index/tzgg/2026092416320584159/index.shtml"
+        },
+        {
+          "title": "关于公示2026年度辽宁省“微短剧+”重点项目评审结果的通知",
+          "date": "2026-09-21T00:00:00.000Z",
+          "url": "https://gdj.ln.gov.cn/gdj/index/tzgg/2026092110483114157/index.shtml"
+        },
+        {
+          "title": "关于开展2026年度辽宁省微短剧产业发展基金项目申报工作的通知",
+          "date": "2026-09-02T00:00:00.000Z",
+          "url": "https://gdj.ln.gov.cn/gdj/index/tzgg/2026090214523712548/index.shtml"
+        },
+        {
+          "title": "关于发布《辽宁省“微短剧+”重点选题指南》及做好重点项目申报、推荐工作的通知",
+          "date": "2026-07-17T00:00:00.000Z",
+          "url": "https://gdj.ln.gov.cn/gdj/index/tzgg/2026071715481819330/index.shtml"
+        },
+        {
+          "title": "关于调整“北归”系列微短剧作品征集活动申报截止时间的通知",
+          "date": "2026-07-17T00:00:00.000Z",
+          "url": "https://gdj.ln.gov.cn/gdj/index/tzgg/2026071715341248693/index.shtml"
+        }
+      ]
+    },
+    {
+      "id": "web-liaoning-industry",
+      "items": 18,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-09-28T00:00:00.000Z",
+      "sha256": "510ff163b5752c90fc1d55c054e19bfcca66fbdb4bf15ca965a7b6d16b2537d0",
+      "finalUrl": "https://gdj.ln.gov.cn/gdj/index/xydt/index.shtml",
+      "httpStatus": 200,
+      "endpoint": "https://gdj.ln.gov.cn/gdj/index/xydt/index.shtml",
+      "checkedAt": "2026-10-09T08:23:38.545017+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "以微短剧讲述辽北乡土振兴故事，《北归》入选国家级扶持项目",
+          "date": "2026-09-28T00:00:00.000Z",
+          "url": "https://gdj.ln.gov.cn/gdj/index/xydt/2026093018093935761/index.shtml"
+        }
+      ]
+    },
+    {
+      "id": "web-hunan-industry",
+      "items": 18,
+      "scoped": 1,
+      "dated": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-09T00:00:00.000Z",
+      "sha256": "cf67dc90ef50d3248d96644dd6c0dfd39d30209dcde6d612a741230b619926a7",
+      "finalUrl": "https://gbdsj.hunan.gov.cn/gbdsj/",
+      "httpStatus": 200,
+      "endpoint": "https://gbdsj.hunan.gov.cn/gbdsj/",
+      "checkedAt": "2026-10-09T08:16:23.112732+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "金鹰奖首次设立微短剧评选单元 我省4部作品荣获“年度微短剧”",
+          "date": "2026-10-09T00:00:00.000Z",
+          "url": "https://gbdsj.hunan.gov.cn/gbdsj/xxgk/gzdt/hyxx/202610/t20261009_34077830.html"
+        }
+      ]
+    },
+    {
+      "id": "json-fanqie-author-notices",
+      "items": 10,
+      "scoped": 3,
+      "dated": 3,
+      "recent30Days": 3,
+      "latest": "2026-09-29T09:00:13.000Z",
+      "sha256": "4fe512686aeab2fd5e13ee606a48a448d10cb7e1a92a3203ffcdbfb4c8e6f019",
+      "finalUrl": "https://fanqienovel.com/writer/zone/notice",
+      "httpStatus": 200,
+      "endpoint": "https://fanqienovel.com/writer/zone/notice",
+      "checkedAt": "2026-10-09T08:21:20.592402+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "番茄短故事・「IP回响计划」第三期",
+          "date": "2026-09-29T09:00:13.000Z",
+          "url": "https://fanqienovel.com/writer/zone/article/7690521379786997822"
+        },
+        {
+          "title": "番茄短故事2026「千字万金」五百万激励计划第四期上线",
+          "date": "2026-09-29T08:00:12.000Z",
+          "url": "https://fanqienovel.com/writer/zone/article/7690522089802973246"
+        },
+        {
+          "title": "番茄短故事｜「IP金品共创计划」—中短IP激励活动",
+          "date": "2026-09-29T07:00:00.000Z",
+          "url": "https://fanqienovel.com/writer/zone/article/7690402951050838078"
+        }
+      ]
+    },
+    {
+      "id": "json-vertical-observer-news",
+      "items": 225,
+      "scoped": 225,
+      "dated": 225,
+      "recent30Days": 61,
+      "latest": "2026-10-08T00:00:00.000Z",
+      "sha256": "7b4e7e6cecfc894e387218949a8fb83db6e28d2134bfc890c0cce3b10163ff4b",
+      "finalUrl": "https://verticalobserver.com/data/site.json",
+      "httpStatus": 200,
+      "endpoint": "https://verticalobserver.com/data/site.json",
+      "checkedAt": "2026-10-09T08:21:20.591247+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "French group JLA launches JLA Play, a platform for vertical series",
+          "date": "2026-10-08T00:00:00.000Z",
+          "url": "https://verticalobserver.com/#/news/2026-10-08-jla-play-vertical-series"
+        },
+        {
+          "title": "A+E Global Media puts microseries at centre of distribution plan ahead of Mipcom",
+          "date": "2026-10-08T00:00:00.000Z",
+          "url": "https://verticalobserver.com/#/news/2026-10-08-ae-global-microseries-distribution"
+        },
+        {
+          "title": "LumoTV opens commissioning round that accepts deaf-led vertical drama pitches",
+          "date": "2026-10-06T00:00:00.000Z",
+          "url": "https://verticalobserver.com/#/news/2026-10-06-lumotv-deaf-led-vertical-drama-brief"
+        },
+        {
+          "title": "Shortical targets $100m revenue in 2026; Mansa cites $100k-$250k budgets",
+          "date": "2026-10-02T00:00:00.000Z",
+          "url": "https://verticalobserver.com/#/news/2026-10-02-shortical-revenue-target-mansa-budgets"
+        },
+        {
+          "title": "Room418 announces horror-only vertical platform with invite-only beta",
+          "date": "2026-10-02T00:00:00.000Z",
+          "url": "https://verticalobserver.com/#/news/2026-10-02-room418-horror-vertical-platform"
+        }
+      ]
+    },
+    {
+      "id": "web-plotparty-news",
+      "items": 5,
+      "scoped": 5,
+      "dated": 5,
+      "recent30Days": 4,
+      "latest": "2026-10-05T00:00:00.000Z",
+      "sha256": "ee6e0251550ae76dcb542d8dfacabf9c26ebd8b40004e5c54d10585f89bfd9ca",
+      "finalUrl": "https://plotparty.ai/page/news",
+      "httpStatus": 200,
+      "endpoint": "https://plotparty.ai/page/news",
+      "checkedAt": "2026-10-09T08:23:38.547907+00:00",
+      "group": "short-drama",
+      "sample": [
+        {
+          "title": "Pulled From the Shelf",
+          "date": "2026-10-05T00:00:00.000Z",
+          "url": "https://plotparty.ai/page/news/pulled-from-the-shelf"
+        },
+        {
+          "title": "A Stage of Its Own",
+          "date": "2026-09-28T00:00:00.000Z",
+          "url": "https://plotparty.ai/page/news/a-stage-of-its-own"
+        },
+        {
+          "title": "The Rails Were Already There",
+          "date": "2026-09-21T00:00:00.000Z",
+          "url": "https://plotparty.ai/page/news/the-rails-were-already-there"
+        },
+        {
+          "title": "Setting Up Shop",
+          "date": "2026-09-14T00:00:00.000Z",
+          "url": "https://plotparty.ai/page/news/setting-up-shop"
+        },
+        {
+          "title": "Closer to Home",
+          "date": "2026-09-07T00:00:00.000Z",
+          "url": "https://plotparty.ai/page/news/closer-to-home"
+        }
+      ],
+      "detailChecks": [
+        {
+          "url": "https://plotparty.ai/page/news/pulled-from-the-shelf",
+          "checkedAt": "2026-10-09T08:31:00.249078+00:00",
+          "sha256": "3d724db5ebeb0bec9404bd1157784d34e9dd56c8183544e248085554056aed99",
+          "httpStatus": 200,
+          "publishedAt": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "url": "https://plotparty.ai/page/news/a-stage-of-its-own",
+          "checkedAt": "2026-10-09T08:32:32.563260+00:00",
+          "sha256": "095254ebdc6ae7e8d0ef7ba59c8aca7667cbaaae4f07338c1a5bba69ade0ca9d",
+          "httpStatus": 200,
+          "publishedAt": "2026-09-28T00:00:00.000Z"
+        },
+        {
+          "url": "https://plotparty.ai/page/news/the-rails-were-already-there",
+          "checkedAt": "2026-10-09T08:32:32.565407+00:00",
+          "sha256": "86c3808db80340e9c512bd9c02e54e67ee0b2425bbe0de474947f1377c440602",
+          "httpStatus": 200,
+          "publishedAt": "2026-09-21T00:00:00.000Z"
+        },
+        {
+          "url": "https://plotparty.ai/page/news/setting-up-shop",
+          "checkedAt": "2026-10-09T08:32:32.566592+00:00",
+          "sha256": "4ecb3e4513cc6dd74af2542294b15358e1918dde5cdb4f059046b2bfc587a948",
+          "httpStatus": 200,
+          "publishedAt": "2026-09-14T00:00:00.000Z"
+        },
+        {
+          "url": "https://plotparty.ai/page/news/closer-to-home",
+          "checkedAt": "2026-10-09T08:32:32.567055+00:00",
+          "sha256": "f6cdf06d5593255c32b54e1732221e7a91ac7f09b6d7228820c2e6b87c397a5b",
+          "httpStatus": 200,
+          "publishedAt": "2026-09-07T00:00:00.000Z"
+        }
+      ]
     }
   ]
 }

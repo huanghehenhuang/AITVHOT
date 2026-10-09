@@ -1,20 +1,20 @@
 # AI 影视信源清单
 
-本轮验证日期：2026-10-09。配置现有 **218 个入口**：23 → 122 → 162 → 197 → 218，本轮再新增 **21 个短剧相关入口**；短剧专题累计补充 56 个入口，另有 8 个既有影视媒体扩展短剧主题范围。相对当前 main 的 12 个基础源共增加 206 个。不包含仅在线上数据库中的 X、公众号付费账号或其他手工来源。
+本轮验证日期：2026-10-09。配置现有 **231 个入口**：23 → 122 → 162 → 197 → 218 → 231，本轮再新增 **13 个短剧相关入口**；短剧专题累计补充 69 个入口，另有 8 个既有影视媒体扩展短剧主题范围。相对当前 main 的 12 个基础源共增加 219 个。不包含仅在线上数据库中的 X、公众号付费账号或其他手工来源。
 
 | 类型 | 入口数 |
 |---|---:|
-| RSS / Atom | 128 |
-| 普通 HTML 列表 | 37 |
-| 公开 JSON / HTML 内嵌 JSON | 53 |
+| RSS / Atom | 130 |
+| 普通 HTML 列表 | 45 |
+| 公开 JSON / HTML 内嵌 JSON | 56 |
 
-203 个入口进入原有精选流程，15 个开源版本更新入口仅作热度证据。热度证据也可能产生向量与归组费用。非空 `owner_entity_id` 有 170 个不同归属，另外 8 个入口未显式设置归属，按各自 ID 分别计数时共 178 组；这是清单口径，218 个入口不等同于独立网站数。
+216 个入口进入原有精选流程，15 个开源版本更新入口仅作热度证据。热度证据也可能产生向量与归组费用。非空 `owner_entity_id` 有 179 个不同归属，另外 8 个入口未显式设置归属，按各自 ID 分别计数时共 187 组；这是清单口径，231 个入口不等同于独立网站数。
 
 ## 本轮补充与验证口径
 
-本轮新增 21 个短剧/漫剧相关入口，全部有非空解析、主题匹配和可解析日期；19 个列表在核验时含近 30 天匹配条目，共 64 条。补充短剧内行人、娱乐硬糖、文娱价值官、Tech星球、东西文娱，广电总局及上海、江苏、福建、陕西的列表，以及 Behind the Verticals、PRODU、TheWrap 等海外制作与商业报道。江苏通知公告和 Morketing 出海卡片当前仅有较旧匹配，作为新发布监测，旧资料受 30 天窗口限制。名单及日期口径见 [短剧信源说明](short-drama-sources.md)。上轮新增 35 个短剧入口和此前 40 个 AI 影视入口保留，不重复计为本轮新增。
+本轮新增 13 个短剧/漫剧相关入口，全部有非空解析、主题匹配和可解析日期；11 个入口在核验时含近 30 天匹配条目，共 84 条。补充番茄小说改编激励公告、Vertical Observer、Open Gardens、Plot Party、SocialPeta、AppGrowing、影视产业观察，以及湖南、四川、辽宁公开部门列表。四川两类列表当前仅有较旧匹配，作为新发布监测。前两轮新增 56 个短剧入口保留，不重复计为本轮新增。名单、归属与日期口径见 [短剧信源说明](short-drama-sources.md)。
 
-全库 218 个列表的最近一次验证记录均为非空；210 个快照有匹配内容，8 个没有匹配内容，146 个在各自验证时含近 30 天匹配条目。旧源沿用逐条原有验证时间，本轮重新捕获 21 个新入口；最终跳转地址、HTTP 状态、日期和响应 SHA-256 见 [source-checks.json](source-checks.json)。所有匹配条目均有可解析日期，明确超龄的旧资料不会进入新配置的回灌。
+全库 231 个列表的最近一次验证记录均为非空；223 个快照有匹配内容，8 个没有匹配内容，157 个在各自验证时含近 30 天匹配条目。旧源沿用逐条原有验证时间，本轮重新捕获 13 个新入口；最终跳转地址、HTTP 状态、日期和响应 SHA-256 见 [source-checks.json](source-checks.json)。Plot Party 用 5 次原始文章元数据响应补齐发布日期，其列表本身只有周报覆盖区间。全部匹配条目均有可解析日期，明确超龄的旧资料不会进入新配置的回灌。
 
 这些是公开列表快照，不是线上采集成功率、日均产量或精选入选率。下表统计在来源内进行，尚未跨 URL、来源与事件去重；正文提取和模型筛选由后续流程决定。
 
@@ -23,7 +23,7 @@ MODEL_CALLS_ENABLED=false COLLECT_ENABLED=false node scripts/check-sources.ts
 MODEL_CALLS_ENABLED=false COLLECT_ENABLED=false node scripts/check-sources.ts --live
 ```
 
-第二条命令显式联网，只读取公开列表，不入库、不抓正文、不启动 worker、不调用模型或 X/公众号付费 API。列表暂时没有主题匹配记为提示，抓取或解析失败才返回失败；自动测试使用本地样本，不访问外网。
+第二条命令显式联网，只读取公开列表，不入库、不抓正文或详情、不启动 worker、不调用模型或 X/公众号付费 API；Plot Party 的日期元数据验证另见短剧说明与逐源记录。列表暂时没有主题匹配记为提示，抓取或解析失败才返回失败；自动测试使用本地样本，不访问外网。
 
 ## 采集与处理成本
 
@@ -238,7 +238,7 @@ Runway 使用官网嵌套 Flight 数组，MiniMax 使用混合日期格式，字
 | Music Business Worldwide<br>`rss-musicbusinessworldwide` | [列表](https://www.musicbusinessworldwide.com/feed/) | 精选 | 2026-10-07 | 3 |
 | PetaPixel<br>`rss-petapixel` | [列表](https://petapixel.com/feed/) | 精选 | 2026-10-07 | 4 |
 
-## 短剧、漫剧与竖屏剧产业（56）
+## 短剧、漫剧与竖屏剧产业（69）
 
 | 信源 / ID | 入口 | 参与方式 | 最近匹配日期（UTC） | 本次近 30 天 |
 |---|---|---|---|---:|
@@ -303,3 +303,16 @@ Runway 使用官网嵌套 Flight 数组，MiniMax 使用混合日期格式，字
 | 福建省广电局 · 媒体报道<br>`web-fujian-industry` | [列表](https://gdj.fujian.gov.cn/xw/hydt/) | 精选 | 2026-09-29 | 2 |
 | 陕西省广电局 · 省局要闻<br>`web-shaanxi-work` | [列表](https://gdj.shaanxi.gov.cn/xwzx/bmdt/sjyw/) | 精选 | 2026-09-30 | 6 |
 | Morketing · 出海商业洞察<br>`web-morketing-outbound` | [列表](https://www.morketing.com/) | 精选 | 2026-09-01 | 0 |
+| 影视产业观察 · 搜狐公开专栏<br>`json-sohu-yingshichanye` | [列表](https://m.sohu.com/media/100097343) | 精选 | 2026-10-02 | 1 |
+| Open Gardens · 竖屏剧简报<br>`rss-opengardens-vertical` | [列表](https://www.enteropengardens.com/feed) | 精选 | 2026-10-09 | 5 |
+| 湖南省广电局 · 通知公告<br>`web-hunan-notices` | [列表](https://gbdsj.hunan.gov.cn/gbdsj/xxgk/tzgg/newxxgklist_nochn.html) | 精选 | 2026-09-22 | 1 |
+| 四川省广电局 · 公告公示<br>`web-sichuan-notices` | [列表](https://gdj.sc.gov.cn/scgdj/gggs/zfxxgklist.shtml) | 精选 | 2026-06-05 | 0 |
+| 四川省广电局 · 行业动态<br>`web-sichuan-industry` | [列表](https://gdj.sc.gov.cn/scgdj/gdxw/list.shtml) | 精选 | 2026-08-11 | 0 |
+| SocialPeta · 微短剧投放研究<br>`web-socialpeta-blog` | [列表](https://socialpeta.com/en/blog) | 精选 | 2026-09-30 | 4 |
+| AppGrowing · 短剧投放研究<br>`rss-appgrowing-cn-feed` | [列表](https://appgrowing.net/blog/feed/) | 精选 | 2026-09-24 | 1 |
+| 辽宁省广电局 · 通知公告<br>`web-liaoning-notices` | [列表](https://gdj.ln.gov.cn/gdj/index/tzgg/index.shtml) | 精选 | 2026-09-24 | 2 |
+| 辽宁省广电局 · 行业动态<br>`web-liaoning-industry` | [列表](https://gdj.ln.gov.cn/gdj/index/xydt/index.shtml) | 精选 | 2026-09-28 | 1 |
+| 湖南省广电局 · 省局与行业消息<br>`web-hunan-industry` | [列表](https://gbdsj.hunan.gov.cn/gbdsj/) | 精选 | 2026-10-09 | 1 |
+| 番茄小说 · 短剧漫剧改编公告<br>`json-fanqie-author-notices` | [列表](https://fanqienovel.com/writer/zone/notice) | 精选 | 2026-09-29 | 3 |
+| Vertical Observer · 竖屏剧产业报道<br>`json-vertical-observer-news` | [列表](https://verticalobserver.com/data/site.json) | 精选 | 2026-10-08 | 61 |
+| Plot Party · 微短剧产业周报<br>`web-plotparty-news` | [列表](https://plotparty.ai/page/news) | 精选 | 2026-10-05 | 4 |
