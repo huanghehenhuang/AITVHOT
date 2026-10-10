@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
   res.setHeader("Content-Type", "application/rss+xml");
   res.end(`<rss version="2.0"><channel><title>News</title>
     <item><title>Old release</title><link>${prefix}/old</link><pubDate>${date(40)}</pubDate></item>
-    <item><title>Recent release</title><link>${prefix}/recent</link><pubDate>${date(2)}</pubDate></item>
+    <item><title>Recent release</title><link>${prefix}/recent</link><pubDate>${new Date(now - 2 * 3600_000).toUTCString()}</pubDate></item>
     <item><title>Undated release</title><link>${prefix}/undated</link></item>
     </channel></rss>`);
 });

@@ -53,6 +53,13 @@ function toDate(v: unknown, unit: string | undefined, utcOffset: string | undefi
   } catch {
     return null;
   }
+  // Mixed feeds (some items epoch millis, some ISO strings) need the unit to disambiguate numbers
+  // from dates without breaking either representation.
+  if (unit === "epoch_ms_or_iso") {
+    if (/^\d{4}-\d{2}-\d{2}T/.test(text)) { const t = Date.parse(text); return Number.isFinite(t) ? new Date(t) : null; }
+    const d = new Date(Number(text));
+    return Number.isFinite(d.getTime()) ? d : null;
+  }
   if (unit === "epoch_ms" || unit === "epoch_s") {
     const date = new Date(Number(text) * (unit === "epoch_s" ? 1000 : 1));
     return Number.isFinite(date.getTime()) ? date : null;
