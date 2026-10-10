@@ -1,4 +1,4 @@
-import { SITE } from "@aihot/industry/site";
+import { SITE } from "@aihot/site";
 import { Link } from "react-router";
 import type { AdminSourceCost, AdminSourceEfficiency } from "@aihot/contracts/admin";
 import type { Route } from "./+types/source-efficiency";

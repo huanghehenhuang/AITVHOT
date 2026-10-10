@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { after, test } from "node:test";
-import { noiseFiltered } from "@aihot/backend/sources/collect";
+import { noiseFiltered } from "@aihot/backend/sources/filters";
 import { assertSupportedConfig } from "@aihot/backend/sources/config-keys";
 import { closeDb } from "@aihot/backend/db";
 import type { SourceRow } from "@aihot/backend/sources/types";
