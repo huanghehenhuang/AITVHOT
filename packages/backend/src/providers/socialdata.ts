@@ -98,7 +98,9 @@ export async function searchTweets(query: string, opts: { purpose: string; subje
       maxBytes: 12 * 1024 * 1024,
       settle: (json) => {
         const tweets = json.tweets?.length ?? 0;
-        return { response: json, usage: { tweets }, cost: objectsCost(tweets) };
+        // Empty searches can incur the account-wide fair-use fee. The response does not say whether
+        // the free allowance was exhausted, so retain an unpriced attempt rather than claiming zero.
+        return { response: json, usage: { tweets }, cost: tweets > 0 ? objectsCost(tweets) : null };
       },
     });
   const json = receipt.response as { tweets?: SdTweet[]; next_cursor?: string | null };

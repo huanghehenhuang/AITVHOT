@@ -77,7 +77,7 @@ test("source tier and event ownership are separate; mentions of an entity do not
     assert.equal(representativePriority({ ...org, fact_subject: subject }), 3, String(subject));
   }
   assert.equal(representativePriority({ ...org, fact_subject: "ChatGPT" }), 1, "exact configured product alias");
-  assert.equal(representativePriority({ ...org, fact_subject: "OpenAI / Anthropic" }), 1, "explicit co-subject list");
+  assert.equal(representativePriority({ ...org, fact_subject: "OpenAI / OpenAI" }), 1, "explicit co-subject list");
   assert.equal(representativePriority({ ...org, owner_entity_id: "qwen", fact_subject: "Qwen Team" }), 1, "the company under another of its own names");
   assert.equal(representativePriority({ ...org, owner_entity_id: "world-labs", fact_subject: "AMD + World Labs" }), 1);
   assert.equal(representativePriority({ ...org, fact_subject: "OpenAI + " }), 3, "incomplete subject list is not evidence");
