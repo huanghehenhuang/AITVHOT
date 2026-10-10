@@ -5,18 +5,31 @@
 
 /**
  * 网页上的类别（筛选栏、卡片角标、RSS 分类订阅）。key 是网址和接口里的身份，上线后不要改。
- * section 是日报里的分节标题（几个类别可以共用一节，按这里的顺序排）；guide 告诉模型怎么归类。
+ * section 是日报里的分节标题（几个类别可以共用一节，按这里的顺序排）；guide 告诉结构抽取模型这一类收什么、
+ * 和相邻类别的边界在哪（总的归类原则写在 prompts/structure.md 里）。
+ * commentary 标出评论类（教程、观点）：日报写过的事又有评论类的后续报道，只占一行快讯（报道它的信源够多时除外）。
  * 没归上类的资料在日报里放进第一个 key 为 industry 的类别所在的节（没有就放最后一节）。
+ * feedLabel 是分类 RSS 标题里的名字（不写就用 label）。公开接口、RSS 和 MCP 里要把一类并进另一类发布，写在站点设置里（site/site.ts 的 PUBLIC_CATEGORIES）。
  */
 export const CATEGORIES = [
-  { key: "video-model", label: "视频模型", section: "模型发布/更新", guide: "视频、图像、音频生成模型的发布、版本更新、能力边界变化与开放" },
-  { key: "tool", label: "创作工具", section: "工具与工作流", guide: "AI 创作工具与平台：剪辑、配音、翻译、换脸、数字人、ComfyUI 工作流的发布和更新" },
-  { key: "platform", label: "平台动态", section: "平台与监管", guide: "红果、抖音、快手等短剧平台的规则、分账、入口与审核变化" },
-  { key: "policy", label: "监管政策", section: "平台与监管", guide: "微短剧备案与审核规定、AI 生成内容标识、版权与深度合成监管" },
-  { key: "industry", label: "行业商业", section: "行业动态", guide: "融资并购、公司经营、人事、合作、版权诉讼与商业模式" },
-  { key: "tip", label: "教程实践", section: "技巧与观点", guide: "工作流教程、工具评测、实操技巧与踩坑记录" },
-  { key: "opinion", label: "观点趋势", section: "技巧与观点", guide: "行业观点、人物访谈、现象与趋势讨论" },
-] as const;
+  { key: "video-model", label: "视频模型", feedLabel: "AI 视频模型", section: "模型发布/更新", guide: "视频、图像、音频生成模型本身的发布、版本、权重开放、能力或价格变化，以及既有榜单上的模型成绩。单纯的作品演示归工具或教程，不能因为用了某模型就归模型。" },
+  { key: "tool", label: "创作工具", feedLabel: "AI 创作工具", section: "工具与工作流", guide: "可使用的 AI 创作工具与平台：剪辑、配音、翻译、换脸、数字人、ComfyUI 工作流的发布和更新。重点是可使用的产品功能；只有做法没有工具的复盘归教程。" },
+  { key: "platform", label: "平台动态", section: "平台与监管", guide: "红果、抖音、快手等短剧与内容平台的规则、分账、保底、流量入口与审核变化。平台自身的经营新闻归行业。" },
+  { key: "policy", label: "监管政策", section: "平台与监管", guide: "微短剧备案与审核规定、AI 生成内容标识、版权与深度合成监管。平台自己定的规则归平台动态。" },
+  { key: "industry", label: "行业商业", section: "行业动态", guide: "已发生的公司经营、融资并购、人事、合作、版权诉讼与商业模式事实。新闻由当事人发帖、带有态度，也不因此变成观点。" },
+  { key: "tip", label: "教程实践", section: "技巧与观点", guide: "读者可以照着使用的工作流教程、工具评测、实操技巧与踩坑记录。重点是可复用的做法；单纯发布工具归创作工具，只有态度和预测而无做法归观点。", commentary: true },
+  { key: "opinion", label: "观点趋势", section: "技巧与观点", guide: "行业观点、人物访谈、现象与趋势讨论。重点是作者的解释、判断、主张、预测或评论；讨论市场不自动归行业，作者是名人不自动归观点。", commentary: true },
+] as const satisfies ReadonlyArray<{ key: string; label: string; feedLabel?: string; section: string; guide: string; commentary?: true }>;
+
+/**
+ * 这个行业最受关注的一类发布（AI 短剧是新视频模型）：日报报头的“N 个新模型”、改分类后修订已出的报告都按它数。
+ * category 是类别，tag 是标签，两者都对上才算；unit 接在数字后面。
+ * 没有这样一类的行业设成 null，报头就不显示这个数。
+ */
+export const RELEASE: { category: string; tag: string; unit: string } | null = { category: "video-model", tag: "模型发布", unit: "个新模型" };
+
+/** 周报月报的总述可以直接写、不必在报道里找到出处的行业通用词（小写）。站名会自动算进去。 */
+export const PLAIN_TERMS: readonly string[] = ["ai", "aigc", "api", "llm", "gpu", "agi", "ceo", "ipo", "app"];
 
 /**
  * 内容理解一步给每篇资料判的“内容类型”（写在 prompts/content-understanding.md 里，改了类型要同步改那份提示词）。
@@ -54,22 +67,20 @@ export const TAG_SYNONYMS: Readonly<Record<string, string>> = {
   论文: "论文/研究", 研究: "论文/研究", paper: "论文/研究", papers: "论文/研究",
 };
 
-/** 模型漏了分类标签时，按内容类型补一个。 */
-export const CATEGORY_BY_ITEM_TYPE: Readonly<Record<string, string>> = {
-  model_release: "模型发布", product_launch: "产品更新", tool_or_prompt: "教程/实践", research_paper: "论文/研究",
-  industry_event: "行业动态", opinion_analysis: "大佬观点", tutorial_explainer: "教程/实践",
-};
-
 // ── 公司与主体 ──────────────────────────────────────────────────────────────────────────
 
-/** 公司主题：id → 显示名、卡片上显示的标签（null 表示只用 entity:<id> 归类）、别名。 */
-export const ENTITIES: Record<string, { name: string; displayTag: string | null; aliases: string[] }> = {
-  kling: { name: "可灵 Kling", displayTag: "Kling", aliases: ["可灵", "Kling", "Kling AI"] },
+/**
+ * 公司主题：id → 显示名、卡片上显示的标签（null 表示只用 entity:<id> 归类）、别名。
+ * aliases 给结构抽取模型看；otherNames 是公司自己的其他称呼（官方账号名、子品牌），
+ * 把事实的主体对到发布方时也认它们。
+ */
+export const ENTITIES: Record<string, { name: string; displayTag: string | null; aliases: string[]; otherNames?: string[] }> = {
+  kling: { name: "可灵 Kling", displayTag: "Kling", aliases: ["可灵", "Kling", "Kling AI"], otherNames: ["快手可灵"] },
   jimeng: { name: "即梦 Jimeng", displayTag: "Jimeng", aliases: ["即梦", "Jimeng"] },
   vidu: { name: "Vidu（生数科技）", displayTag: "Vidu", aliases: ["Vidu", "生数科技", "生数"] },
   minimax: { name: "MiniMax / 海螺", displayTag: "MiniMax", aliases: ["MiniMax", "海螺", "Hailuo"] },
   openai: { name: "OpenAI / Sora", displayTag: "OpenAI", aliases: ["OpenAI", "Sora", "GPT", "ChatGPT"] },
-  google: { name: "Google / Veo", displayTag: "Google", aliases: ["Google", "DeepMind", "Gemini", "Veo", "谷歌"] },
+  google: { name: "Google / Veo", displayTag: "Google", aliases: ["Google", "DeepMind", "Gemini", "Veo", "谷歌"], otherNames: ["Google DeepMind", "Google Research"] },
   runway: { name: "Runway", displayTag: "Runway", aliases: ["Runway"] },
   pika: { name: "Pika", displayTag: "Pika", aliases: ["Pika"] },
   luma: { name: "Luma", displayTag: "Luma", aliases: ["Luma", "Dream Machine"] },
@@ -77,13 +88,13 @@ export const ENTITIES: Record<string, { name: string; displayTag: string | null;
   elevenlabs: { name: "ElevenLabs", displayTag: "ElevenLabs", aliases: ["ElevenLabs", "Eleven Labs"] },
   suno: { name: "Suno", displayTag: "Suno", aliases: ["Suno"] },
   nrta: { name: "国家广电总局", displayTag: null, aliases: ["广电总局", "国家广播电视总局", "NRTA"] },
-  hongguo: { name: "红果短剧", displayTag: null, aliases: ["红果", "红果短剧"] },
+  hongguo: { name: "红果短剧", displayTag: null, aliases: ["红果", "红果短剧"], otherNames: ["红果短剧APP"] },
   dianzhong: { name: "点众科技", displayTag: null, aliases: ["点众", "点众科技"] },
   jiuzhou: { name: "九州文化", displayTag: null, aliases: ["九州", "九州文化"] },
   zhongwen: { name: "中文在线", displayTag: null, aliases: ["中文在线"] },
   yuewen: { name: "阅文集团", displayTag: null, aliases: ["阅文", "阅文集团"] },
   kuaishou: { name: "快手", displayTag: null, aliases: ["快手", "Kuaishou"] },
-  bytedance: { name: "字节跳动", displayTag: null, aliases: ["字节跳动", "字节", "抖音集团"] },
+  bytedance: { name: "字节跳动", displayTag: null, aliases: ["字节跳动", "字节", "抖音集团"], otherNames: ["抖音"] },
   "alibaba-wan": { name: "通义万相（阿里）", displayTag: null, aliases: ["通义万相", "Wan", "万相"] },
   tencent: { name: "混元视频（腾讯）", displayTag: null, aliases: ["混元", "Hunyuan", "腾讯混元"] },
 };
