@@ -156,27 +156,12 @@ test("MCP answers preflights for allowed origins only", async () => {
   }
 });
 
-const MCP_ROUTE = new URL("../apps/api/src/routes/mcp.ts", import.meta.url).href;
-
 function checkConfiguration(siteUrl: string, allowedHosts: string, cases: Array<{ headers: Record<string, string>; status: number }>) {
-  // A process of its own sets the configuration before the route loads (the module reads it once).
-  return promisify(execFile)(process.execPath, ["--input-type=module", "-e", `
-    import assert from "node:assert/strict";
-    import Fastify from "fastify";
-    import { registerMcp } from ${JSON.stringify(MCP_ROUTE)};
-    const app = Fastify();
-    registerMcp(app);
-    try {
-      for (const { headers, status } of JSON.parse(process.argv[1])) {
-        const response = await app.inject({ method: "POST", url: "/api/mcp", payload: ${JSON.stringify(initialize)},
-          headers: { accept: "application/json, text/event-stream", ...headers } });
-        assert.equal(response.statusCode, status, JSON.stringify(headers) + ": " + response.body);
-        assert.equal(response.headers["cache-control"], "no-store");
-      }
-    } finally { await app.close(); }
-  `, JSON.stringify(cases)], {
+  // A process of its own sets the configuration before the route loads (the module reads it once);
+  // the fixture child receives the cases as JSON in MCP_CASES.
+  return promisify(execFile)("node", ["--", "tests/fixtures/mcp-host-probe.mjs"], {
     cwd: new URL("..", import.meta.url), encoding: "utf8", timeout: 10000,
-    env: { ...process.env, SITE_URL: siteUrl, MCP_ALLOWED_HOSTS: allowedHosts },
+    env: { ...process.env, SITE_URL: siteUrl, MCP_ALLOWED_HOSTS: allowedHosts, MCP_CASES: JSON.stringify(cases) },
   });
 }
 

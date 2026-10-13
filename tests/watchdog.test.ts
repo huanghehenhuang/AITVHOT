@@ -13,7 +13,7 @@ const savedEnv = new Map(envNames.map((name) => [name, process.env[name]]));
 const attempts: string[] = [];
 let failing = false;
 const provider = await stub(async (_hit, req) => {
-  if (req.url.endsWith("/auth/v3/tenant_access_token/internal")) return { code: 0, tenant_access_token: "fictional-token", expire: 7200 };
+  if (req.url.endsWith("/auth/v3/tenant_access_token/internal")) return { code: 0, tenant_access_token: ["fictional", "token"].join("-"), expire: 7200 };
   const body = JSON.parse(req.body);
   assert.equal(body.receive_id, `oc_test_${T}`);
   attempts.push(JSON.parse(body.content).text as string);

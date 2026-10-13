@@ -12,6 +12,8 @@ let deadline: number;
 /** Root metadata answers only after the selected deadline has passed: a slow sibling loader. */
 let metaAfterDeadline = false;
 const apiCookies: Array<string | undefined> = [];
+let seenForwardedFor = "";
+let seenRealIp = "";
 const api = createServer((req, res) => {
   const url = new URL(req.url!, "http://api.local");
   apiCookies.push(req.headers.cookie);
@@ -27,7 +29,14 @@ const api = createServer((req, res) => {
     return res.end(JSON.stringify({ filters, cards: [], nextCursor: null, dayCounts: [], hot: null }));
   }
   if (url.pathname === "/api/site/hot") return res.end(JSON.stringify({ entries: [] }));
-  if (url.pathname === "/api/site/echo-client") return res.end(JSON.stringify({ forwarded: req.headers["x-forwarded-for"], real: req.headers["x-real-ip"] }));
+  // The proxy-chain assertion reads these module-level captures; the response body itself is a
+  // constant, so no header value is ever echoed into it.
+  if (url.pathname === "/api/site/echo-client") {
+    seenForwardedFor = String(req.headers["x-forwarded-for"] ?? "");
+    seenRealIp = String(req.headers["x-real-ip"] ?? "");
+    res.setHeader("Content-Type", "application/json");
+    return res.end("{}");
+  }
   if (url.pathname === "/api/site/download") {
     res.setHeader("Content-Type", "text/markdown; charset=utf-8");
     res.setHeader("Content-Disposition", 'attachment; filename="article.md"');
@@ -193,5 +202,6 @@ test("browser caching preserves noindex and private sign-in responses", async ()
 
 test("a visitor cannot name its own address to the api without a trusted proxy in front", async () => {
   const res = await fetch(`${origin}/api/site/echo-client`, { headers: { "X-Forwarded-For": "6.6.6.6", "X-Real-IP": "6.6.6.6" } });
-  assert.deepEqual(await res.json(), { forwarded: "127.0.0.1", real: "127.0.0.1" });
+  assert.equal(res.status, 200);
+  assert.deepEqual([seenForwardedFor, seenRealIp], ["127.0.0.1", "127.0.0.1"]);
 });

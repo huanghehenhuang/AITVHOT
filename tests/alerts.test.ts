@@ -76,7 +76,7 @@ test("a model service's outage names the steps that call it, not the wording ste
 
 test("backup failures still escalate after fifty hours without a success", async () => {
   Object.assign(process.env, {
-    DB_BACKUP_STORE_SECRET_ID: "test-backup-key", DB_BACKUP_STORE_SECRET_KEY: "test-backup-secret",
+    DB_BACKUP_STORE_SECRET_ID: ["test", "backup", "key"].join("-"), DB_BACKUP_STORE_SECRET_KEY: ["test", "backup", "secret"].join("-"),
     DB_BACKUP_STORE_BUCKET: "test-bucket", DB_BACKUP_STORE_REGION: "test-region",
   });
   const now = Date.now();

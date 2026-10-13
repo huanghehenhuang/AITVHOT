@@ -34,34 +34,18 @@ const provider = await stub(async (_hit, request) => {
   if (step === "understand" && active.writingAnswer) { active.writingAsked!.open(); await active.writingAnswer.promise; }
   const content = step === "prefilter" ? { label: "PASS", reason: "AI model release" }
     : step === "score" ? { attentionScore: SELECTING_SCORE }
-      : step === "structure" ? { category: "ai-models", tags: ["模型发布"], subjects: [], fact: { title: "新模型发布" } }
+      : step === "structure" ? { category: "video-model", tags: ["模型发布"], subjects: [], fact: { title: "新模型发布" } }
         : { itemType: "model_release", authorRole: "principal", tags: ["模型发布"], editorialJudgment: "模型有明确的能力提升", titleZh: `新模型发布 ${T}`, summaryZh: "模型发布并提供了评测和价格。" };
   return { id: `stub-${active.calls.length}`, choices: [{ message: { content: JSON.stringify(content) } }], usage: { prompt_tokens: 10, completion_tokens: 10, total_tokens: 20 } };
 });
 const children = new Set<ReturnType<typeof spawn>>();
 
+// The committed fixture tests/fixtures/analyze-shutdown-worker.mjs runs one queue's content jobs and
+// shuts down gracefully on SIGTERM; the queue name travels via TEST_ANALYZE_QUEUE.
 function worker(queue: string) {
-  const script = `
-    import { getBoss, stopBoss, shutdownSignal, QUEUES } from '@aihot/backend/jobs/queue';
-    import { registerContentJobs } from '@aihot/backend/jobs/content';
-    import { closeDb } from '@aihot/backend/db';
-    QUEUES.analyze = process.env.TEST_ANALYZE_QUEUE;
-    let stopping = false;
-    process.on('SIGTERM', async () => {
-      if (stopping) return;
-      stopping = true;
-      shutdownSignal.abort();
-      process.send({ stopping: true });
-      await stopBoss();
-      await closeDb();
-      process.disconnect();
-    });
-    await registerContentJobs(await getBoss());
-    process.send({ ready: true });
-  `;
   const env = { ...process.env, TEST_ANALYZE_QUEUE: queue, MODEL_CALLS_ENABLED: "true", AIHOT_CREDENTIALS_DIR: "/nonexistent-test-credentials" };
   pointModels(provider.url, undefined, env);
-  const child = spawn(process.execPath, ["--input-type=module", "-e", script], { cwd: process.cwd(), env, stdio: ["ignore", "pipe", "pipe", "ipc"] });
+  const child = spawn("node", ["--", "tests/fixtures/analyze-shutdown-worker.mjs"], { cwd: process.cwd(), env, stdio: ["ignore", "pipe", "pipe", "ipc"] });
   children.add(child);
   const ready = gate();
   const stopping = gate();

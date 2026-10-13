@@ -31,6 +31,24 @@ function extraFromEnv(value: string | undefined): Record<string, unknown> | unde
   }
 }
 
+// Some relays route by an extra header (opencode-go wants x-opencode-session). Parsed once; an empty
+// object keeps the common direct-endpoint path allocation-free.
+let extraHeadersCache: Record<string, string> | null = null;
+function extraHeadersFromEnv(): Record<string, string> {
+  if (extraHeadersCache === null) {
+    const raw = process.env.LLM_EXTRA_HEADERS;
+    if (!raw) extraHeadersCache = {};
+    else {
+      try {
+        extraHeadersCache = JSON.parse(raw) as Record<string, string>;
+      } catch {
+        throw new Error("LLM_EXTRA_HEADERS must be a JSON object of header name to value");
+      }
+    }
+  }
+  return extraHeadersCache;
+}
+
 function reasoningTokensFromEnv(value: string | undefined): number | undefined {
   if (!value) return undefined;
   if (!/^\d+$/.test(value)) throw new Error("LLM_REASONING_TOKENS must be a non-negative integer, e.g. 4000");
@@ -167,7 +185,7 @@ export async function chatJson<S extends z.ZodType>(opts: ChatJsonOptions<S>): P
       try {
         res = await fetch(`${baseUrl.replace(/\/$/, "")}/chat/completions`, {
           method: "POST",
-          headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
+          headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}`, ...extraHeadersFromEnv() },
           body: JSON.stringify(body),
           signal: AbortSignal.timeout(opts.timeoutMs ?? 120_000),
         });

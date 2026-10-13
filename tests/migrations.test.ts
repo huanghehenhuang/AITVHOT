@@ -14,10 +14,14 @@ const roots: string[] = [];
 after(async () => { await db.end(); await other.end(); for (const root of roots) rmSync(root, { recursive: true, force: true }); });
 
 function fixture(files: Record<string, string>) {
-  const root = mkdtempSync(path.join(tmpdir(), "migrations-"));
+  const root = mkdtempSync(path.resolve(tmpdir(), "migrations-"));
   roots.push(root);
+  const ROOT = path.resolve(root);
   for (const [file, text] of Object.entries(files)) {
-    const target = path.join(root, file);
+    // Fixture keys are relative POSIX paths from this file: no traversal segments, no backslashes.
+    if (!/^[A-Za-z0-9_./-]+$/.test(file) || file.split("/").includes("..")) throw new Error(`unsafe fixture path: ${file}`);
+    const target = path.resolve(ROOT, file);
+    if (!target.startsWith(ROOT + path.sep)) throw new Error(`outside the fixtures root: ${file}`);
     mkdirSync(path.dirname(target), { recursive: true });
     writeFileSync(target, text);
   }

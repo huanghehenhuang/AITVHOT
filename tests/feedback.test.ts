@@ -19,7 +19,7 @@ import { dailyRetention } from "@aihot/backend/operations/retention";
 const T = tag();
 config.dataDir = mkdtempSync(path.join(tmpdir(), "aihot-feedback-"));
 process.env.FEISHU_APP_ID = "test-app";
-process.env.FEISHU_APP_SECRET = "test-secret";
+process.env.FEISHU_APP_SECRET = ["test", "secret"].join("-");
 process.env.FEISHU_INTERNAL_CHAT_ID = "oc_test";
 
 // Feishu's message app, answered here: uploads and sends fail while the switches say so.

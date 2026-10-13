@@ -71,15 +71,10 @@ test("the MCP check uses module samples and keeps its failure assertions", async
           : ability.mcp.tool === "async_check" ? asyncInput(false) : z.fromJSONSchema(ability.mcp.input);
       }
     `;
-    const preload = `
-      import { registerHooks } from "node:module";
-      const manifestUrl = ${JSON.stringify(import.meta.resolve("@aihot/site/modules/server"))};
-      registerHooks({ load(url, context, next) {
-        return url === manifestUrl ? { format: "module", source: ${JSON.stringify(source)}, shortCircuit: true } : next(url, context);
-      } });
-    `;
-    return promisify(execFile)(process.execPath, ["--import", `data:text/javascript,${encodeURIComponent(preload)}`, "scripts/mcp-check.ts", `${address}/api/mcp`], {
+    return promisify(execFile)("node", ["--import", "./tests/fixtures/mcp-check-preload.mjs", "scripts/mcp-check.ts"], {
       cwd: new URL("..", import.meta.url), encoding: "utf8", timeout: 15000,
+      env: { ...process.env, MCP_CHECK_URL: `${address}/api/mcp`,
+        MCP_MANIFEST_URL: import.meta.resolve("@aihot/site/modules/server"), MCP_PRELOAD_SOURCE: source },
     });
   }
 

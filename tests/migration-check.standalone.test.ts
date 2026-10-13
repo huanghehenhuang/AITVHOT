@@ -8,19 +8,21 @@ import { after, test } from "node:test";
 import { checkMigrations } from "../scripts/check-migrations.ts";
 
 const root = mkdtempSync(path.join(tmpdir(), "migration-git-"));
+const ROOT = path.resolve(root);
 after(() => rmSync(root, { recursive: true, force: true }));
 const write = (file: string, text: string) => {
-  const target = path.join(root, file);
+  const target = path.resolve(ROOT, file);
+  if (!target.startsWith(ROOT + path.sep)) throw new Error(`outside the temp root: ${file}`);
   mkdirSync(path.dirname(target), { recursive: true });
   writeFileSync(target, text);
 };
-const git = (...args: string[]) => execFileSync("git", args, { cwd: root, encoding: "utf8" });
-git("init", "-q");
-git("config", "user.email", "test@example.invalid");
-git("config", "user.name", "Test");
+const GIT_OPTS = { cwd: root, encoding: "utf8" } as const;
+execFileSync("git", ["init", "-q"], GIT_OPTS);
+execFileSync("git", ["config", "user.email", "test@example.invalid"], GIT_OPTS);
+execFileSync("git", ["config", "user.name", "Test"], GIT_OPTS);
 write("database/migrations/0001_history.sql", "UPDATE old_table SET done = true;");
-git("add", ".");
-git("commit", "-qm", "history");
+execFileSync("git", ["add", "."], GIT_OPTS);
+execFileSync("git", ["commit", "-qm", "history"], GIT_OPTS);
 
 test("unchanged history is accepted, but edits and deletions fail", () => {
   assert.deepEqual(checkMigrations(root, "HEAD"), []);
@@ -28,7 +30,7 @@ test("unchanged history is accepted, but edits and deletions fail", () => {
   assert.match(checkMigrations(root, "HEAD").join("\n"), /immutable/);
   rmSync(path.join(root, "database/migrations/0001_history.sql"));
   assert.match(checkMigrations(root, "HEAD").join("\n"), /immutable/);
-  git("restore", ".");
+  execFileSync("git", ["restore", "."], GIT_OPTS);
 });
 
 test("new module migrations are checked even when untracked or named below the cutoff", () => {

@@ -9,6 +9,7 @@
 // The number of calls (cases × models × prompts) is printed first; above --max-calls nothing is sent.
 // Receipts make an identical re-run free. The comparison is written to --out-dir as JSON and Markdown.
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { parseArgs } from "node:util";
 import { REPO_ROOT } from "@aihot/backend/config";
@@ -68,7 +69,13 @@ async function exportCases(list: string, out: string) {
       return caseFromStory({ publicId: story.public_id, title: story.title, hasDigest: story.has_digest }, own(story));
     });
   });
+  // The snapshot path is operator input; it may only land inside the repo or the system temp dir.
   const file = path.resolve(REPO_ROOT, out);
+  const allowedRoots = [path.resolve(REPO_ROOT), path.resolve(os.tmpdir())];
+  if (!allowedRoots.some((root) => file === root || file.startsWith(root + path.sep))) {
+    throw new Error(`--out must stay inside the repository or the temp directory: ${out}`);
+  }
+  if (!file.endsWith(".jsonl")) throw new Error(`--out must name a .jsonl file: ${out}`);
   mkdirSync(path.dirname(file), { recursive: true });
   writeFileSync(file, `${cases.map((row) => JSON.stringify(row)).join("\n")}\n`);
   for (const row of cases) console.log(`${row.caseId}  ${row.reports.length} reports  ${inputForm(row)}  ${row.story.title}`);

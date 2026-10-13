@@ -12,7 +12,12 @@ import { createEgressProxy } from "@aihot/backend/lib/egress-proxy";
 const { fetch } = createRequire(new URL("../packages/backend/package.json", import.meta.url))("undici");
 
 const tunnels: string[] = [];
-const origin = createServer((req, res) => res.end(req.headers.host));
+// The origin captures the Host it saw for the assertion; the response body is a constant.
+let seenHost = "";
+const origin = createServer((req, res) => {
+  seenHost = String(req.headers.host ?? "");
+  res.end("ok");
+});
 const proxy = createServer();
 proxy.on("connect", (req, socket, head) => {
   tunnels.push(req.url!);
@@ -35,7 +40,8 @@ test("egress resolves independently of local DNS and pins CONNECT while preservi
   const agent = createEgressProxy(proxyUrl, async () => ["93.184.216.34"]);
   try {
     const res = await fetch("http://image.invalid:8080/photo", { dispatcher: agent });
-    assert.equal(await res.text(), "image.invalid:8080");
+    assert.equal(await res.text(), "ok");
+    assert.equal(seenHost, "image.invalid:8080");
     assert.equal(tunnels.at(-1), "93.184.216.34:8080");
   } finally { await agent.close(); }
 });

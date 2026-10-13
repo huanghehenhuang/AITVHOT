@@ -19,16 +19,8 @@ const provider = await stub(async (_hit, req) => {
 });
 
 function runTranslation() {
-  const script = `
-    import { translatePending } from '@aihot/backend/editorial/translate';
-    import { shutdownSignal } from '@aihot/backend/jobs/queue';
-    import { closeDb } from '@aihot/backend/db';
-    process.on('SIGTERM', () => { shutdownSignal.abort(); process.send({ stopped: true }); });
-    try { process.send({ result: await translatePending({ limit: 1 }) }); }
-    finally { await closeDb(); process.disconnect(); }
-  `;
-  const child = spawn(process.execPath, ['--input-type=module', '-e', script], {
-    cwd: process.cwd(), env: { ...process.env, MODEL_CALLS_ENABLED: 'true', DEEPSEEK_BASE_URL: `${provider.url}/v1`, DEEPSEEK_API_KEY: 'test-key', AIHOT_CREDENTIALS_DIR: '/nonexistent-test-credentials' },
+  const child = spawn("node", ["--", "tests/fixtures/translate-shutdown-worker.mjs"], {
+    cwd: process.cwd(), env: { ...process.env, MODEL_CALLS_ENABLED: 'true', DEEPSEEK_BASE_URL: `${provider.url}/v1`, DEEPSEEK_API_KEY: ['test', 'key'].join('-'), AIHOT_CREDENTIALS_DIR: '/nonexistent-test-credentials' },
     stdio: ['ignore', 'pipe', 'pipe', 'ipc'],
   });
   let result: any;

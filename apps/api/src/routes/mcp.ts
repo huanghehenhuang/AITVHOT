@@ -349,7 +349,14 @@ export function registerMcp(app: FastifyInstance) {
     // A client that goes away ends the exchange in the SDK too.
     const gone = new AbortController();
     reply.raw.once("close", () => gone.abort());
-    const request = new Request(`${config.siteUrl}${(req.raw.url ?? "/api/mcp")}`, { method: req.method, headers, body, signal: gone.signal });
+    // The forwarded request is rebuilt against the configured site origin; the protocol and host
+    // allowlists are checked before the Request object exists.
+    const siteOrigin = new URL(config.siteUrl);
+    const forwarded = new URL(req.raw.url ?? "/api/mcp", siteOrigin);
+    const protocolAllowed = forwarded.protocol === siteOrigin.protocol;
+    const hostAllowed = forwarded.host === siteOrigin.host;
+    if (!protocolAllowed || !hostAllowed) throw new Error("mcp forwarding left the site origin");
+    const request = new Request(forwarded, { method: req.method, headers, body, signal: gone.signal });
     const parsed = req.method === "POST" && typeof req.body === "object" ? { parsedBody: req.body } : undefined;
     try {
       return respond(reply, await requestLog.run(req.log, () => handlerFor(requestNotice("mcp", req)).fetch(request, parsed)));

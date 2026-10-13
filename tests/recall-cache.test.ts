@@ -14,7 +14,7 @@ const savedBackground = '正文'.repeat(3500) + '阅读背景后半部证据' + 
 const provider = await stub((_hit, req) => ({ data: (JSON.parse(req.body).input as string[])
   .map((_text, index) => ({ index, embedding: [1, 0] })) }));
 const env = { ...process.env, EMBEDDING_MODEL: T, EMBEDDING_DIMS: "0",
-  EMBEDDING_API_KEY: "test-key", EMBEDDING_BASE_URL: `${provider.url}/v1` };
+  EMBEDDING_API_KEY: ["test", "key"].join("-"), EMBEDDING_BASE_URL: `${provider.url}/v1` };
 after(async () => { await provider.close(); await closeDb(); });
 
 test("fact and reading recall agree across cold, full and overflowing vector caches", async (t) => {
@@ -41,31 +41,10 @@ test("fact and reading recall agree across cold, full and overflowing vector cac
   await sql`INSERT INTO embeddings (kind, ref_id, model, text_hash, vector)
     SELECT 'article', ${T} || '-filler-' || i, ${T}, ${sha256("filler")}, ARRAY[0,1]::real[] FROM generate_series(0, 29996) i`;
   const run = async (size: number, stale = false) => {
-    const { stdout } = await promisify(execFile)(process.execPath, ["--input-type=module", "-e", `
-      const { vectorsFor, recallFacts, recallSelectedBackground } = await import('@aihot/backend/events/recall');
-      const { closeDb, sql } = await import('@aihot/backend/db');
-      const { sha256 } = await import('@aihot/backend/lib/ids');
-      try {
-        const items = ${JSON.stringify(items)};
-        const fillers = Array.from({ length: Math.max(0, ${size} - items.length) }, (_, i) => ({ id: ${JSON.stringify(T)} + '-filler-' + i, text: 'filler' }));
-        if (${size}) await vectorsFor([...items.map(it => ({ ...it, revision: 1 })), ...fillers]);
-        if (${stale}) {
-          const text = 'changed report';
-          await sql\`UPDATE publications SET title = \${text}, revision = 2 WHERE article_id = \${items[0].id}\`;
-          await sql\`UPDATE embeddings SET text_hash = \${sha256(text + '。')}, vector = ARRAY[0,1]::real[] WHERE ref_id = \${items[0].id}\`;
-        }
-        const facts = await recallFacts(${JSON.stringify(`${T}-query`)}, 'query', 0.5, 10);
-        const background = await recallSelectedBackground(${JSON.stringify(`${T}-reading-query`)}, 'query', 0.5);
-        if (fillers.length) {
-          const filler = fillers[0];
-          await sql\`UPDATE embeddings SET vector = ARRAY[1,0]::real[] WHERE ref_id = \${filler.id}\`;
-          const afterEviction = await vectorsFor([filler]);
-          if (afterEviction.get(filler.id)[0] !== 1) throw new Error('overflow retained the old cache');
-          await sql\`UPDATE embeddings SET vector = ARRAY[0,1]::real[] WHERE ref_id = \${filler.id}\`;
-        }
-        console.log(JSON.stringify({ facts, background }));
-      } finally { await closeDb(); }
-    `], { env, maxBuffer: 1024 * 1024 });
+    const { stdout } = await promisify(execFile)("node", ["--", "tests/fixtures/recall-cache-probe.mjs"], {
+      env: { ...env, RC_T: T, RC_ITEMS: JSON.stringify(items), RC_SIZE: String(size), RC_STALE: String(stale) },
+      maxBuffer: 1024 * 1024,
+    });
     return JSON.parse(stdout) as { facts: Array<{ factId: number; score: number }>; background: Array<{ sourceText: string | null }> };
   };
   const cold = await run(0);

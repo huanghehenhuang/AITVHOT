@@ -120,7 +120,9 @@ test("a real paired restore opens a feedback screenshot when forwarding is disab
 
 
 async function save(relative: string, data = PNG) {
-  const file = path.join(config.dataDir, relative);
+  const root = path.resolve(config.dataDir);
+  const file = path.resolve(root, relative);
+  if (!file.startsWith(root + path.sep)) throw new Error(`outside the data dir: ${relative}`);
   await mkdir(path.dirname(file), { recursive: true });
   await writeFile(file, data);
 }

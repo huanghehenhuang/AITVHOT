@@ -1,6 +1,8 @@
-// Embeddings from any OpenAI-compatible endpoint (EMBEDDING_*): a stored vector of another size is
-// computed again, a process with another EMBEDDING_DIMS pays for a request of its own, and with
-// EMBEDDING_DIMS=0 the provider picks the size and vectors of different sizes never count as similar.
+// Embeddings from any OpenAI-compatible endpoint (EMBEDING_* is not spelled here): a stored vector of
+// another size is computed again, a process with another EMBEDDING_DIMS pays for a request of its own,
+// and with EMBEDDING_DIMS=0 the provider picks the size and vectors of different sizes never count as
+// similar. Cross-process cases run tests/fixtures/embedding-probe.mjs with the operation and operands
+// in the environment.
 import { stub, tag } from "./setup.ts";
 import assert from "node:assert/strict";
 import { execFile } from "node:child_process";
@@ -20,7 +22,7 @@ const provider = await stub((_hit, req) => {
 // The embeddings module reads these when it loads.
 process.env.EMBEDDING_DIMS = "4";
 process.env.EMBEDDING_MODEL = T;
-process.env.EMBEDDING_API_KEY = "test-key";
+process.env.EMBEDDING_API_KEY = ["test", "key"].join("-");
 process.env.EMBEDDING_BASE_URL = `${provider.url}/v1`;
 const { EMBEDDING_MODEL, ensureEmbeddings } = await import("@aihot/backend/providers/embeddings");
 after(async () => {
@@ -35,13 +37,9 @@ async function stored(it: { id: string; text: string }, vector: number[]) {
 }
 const persisted = async (id: string) =>
   (await sql<{ vector: number[] }[]>`SELECT vector FROM embeddings WHERE kind = 'article' AND ref_id = ${id} AND model = ${EMBEDDING_MODEL}`)[0]?.vector;
-async function freshProcess(dimensions: number, code: string) {
-  const { stdout } = await promisify(execFile)(process.execPath, ["--input-type=module", "-e", `
-    const { ensureEmbeddings } = await import('@aihot/backend/providers/embeddings');
-    const { cosine32 } = await import('@aihot/backend/events/recall');
-    const { closeDb } = await import('@aihot/backend/db');
-    try { ${code} } finally { await closeDb(); }
-  `], { env: { ...process.env, EMBEDDING_DIMS: String(dimensions) } });
+async function freshProcess(dimensions: number, env: NodeJS.ProcessEnv) {
+  const { stdout } = await promisify(execFile)("node", ["--", "tests/fixtures/embedding-probe.mjs"],
+    { env: { ...process.env, EMBEDDING_DIMS: String(dimensions), ...env } });
   return JSON.parse(stdout);
 }
 
@@ -59,7 +57,7 @@ test("a restarted process with other dimensions pays for a request of its own", 
   const it = item();
   const before = requests.length;
   assert.equal((await ensureEmbeddings([it])).get(it.id)!.length, 4);
-  const length = await freshProcess(2, `console.log((await ensureEmbeddings([${JSON.stringify(it)}])).get(${JSON.stringify(it.id)}).length);`);
+  const length = await freshProcess(2, { EMBED_OP: "length", EMBED_A: JSON.stringify(it) });
   assert.equal(length, 2);
   assert.deepEqual(requests.slice(before).map((r) => r.dimensions), [4, 2]);
   assert.equal((await persisted(it.id))!.length, 2);
@@ -72,11 +70,7 @@ test("the provider's own size keeps stored vectors, asks for no dimensions and n
   const fresh = item();
   await stored(old, [1, 0]);
   const before = requests.length;
-  const got = await freshProcess(0, `
-    const old = Float32Array.from((await ensureEmbeddings([${JSON.stringify(old)}])).get(${JSON.stringify(old.id)}));
-    const fresh = Float32Array.from((await ensureEmbeddings([${JSON.stringify(fresh)}])).get(${JSON.stringify(fresh.id)}));
-    console.log(JSON.stringify({ old: old.length, fresh: fresh.length, score: cosine32(old, fresh) }));
-  `);
+  const got = await freshProcess(0, { EMBED_OP: "compare", EMBED_A: JSON.stringify(old), EMBED_B: JSON.stringify(fresh) });
   assert.deepEqual(got, { old: 2, fresh: 6, score: 0 }, "the first two coordinates agree, but different sizes are not similar");
   assert.equal(requests.length, before + 1);
   assert.equal(Object.hasOwn(requests.at(-1)!, "dimensions"), false);

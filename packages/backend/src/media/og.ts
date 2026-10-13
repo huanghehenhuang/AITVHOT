@@ -143,9 +143,14 @@ const inflight = new Map<string, Promise<Buffer>>();
  * requests share one render; the file is written aside and moved into place, never read half-written.
  */
 export function renderPng(name: string, size: { width: number; height: number }, tree: () => Promise<Node>): Promise<Buffer> {
+  // Cache names are slugs the callers build; anything else never becomes a cache path.
+  if (!/^[A-Za-z0-9._-]{1,120}$/.test(name)) throw new Error(`unsafe og cache name: ${name}`);
+  const CACHE_ROOT = path.resolve(CACHE_DIR);
+  const file = path.resolve(CACHE_ROOT, `${name}.png`);
+  if (!file.startsWith(CACHE_ROOT + path.sep)) throw new Error(`outside the og cache: ${name}`);
   let job = inflight.get(name);
   if (!job) {
-    job = render(path.join(CACHE_DIR, `${name}.png`), size, tree).finally(() => inflight.delete(name));
+    job = render(file, size, tree).finally(() => inflight.delete(name));
     inflight.set(name, job);
   }
   return job;

@@ -20,9 +20,12 @@ const BACKEND = "packages/backend/src";
  */
 function sources(dir: string): Array<{ file: string; text: string }> {
   const out: Array<{ file: string; text: string }> = [];
-  for (const entry of readdirSync(path.join(ROOT, dir), { withFileTypes: true, recursive: true })) {
+  const base = path.resolve(ROOT, dir);
+  if (!base.startsWith(path.resolve(ROOT))) throw new Error(`outside the repo: ${dir}`);
+  for (const entry of readdirSync(base, { withFileTypes: true, recursive: true })) {
     if (!entry.isFile() || !/\.tsx?$/.test(entry.name)) continue;
-    const full = path.join(entry.parentPath, entry.name);
+    const full = path.resolve(entry.parentPath, entry.name);
+    if (!full.startsWith(base + path.sep)) continue;
     const file = path.relative(ROOT, full).split(path.sep).join("/");
     if (/\/(node_modules|build|\.react-router)\//.test(file)) continue;
     out.push({ file, text: readFileSync(full, "utf8") });

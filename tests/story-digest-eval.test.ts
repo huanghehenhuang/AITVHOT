@@ -6,7 +6,7 @@ import { pointModels, stub, tag } from "./setup.ts";
 import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
 import { execFile } from "node:child_process";
-import { copyFileSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { after, test } from "node:test";
@@ -25,12 +25,20 @@ after(async () => {
   await closeDb();
 });
 
+// The evaluation script's own flags, script paths, case files and temp directories all pass this
+// allowlist before they reach argv: letters, digits, and path/flag punctuation only (including the
+// "~" some Windows short paths carry).
+const SAFE_ARG = /^[A-Za-z0-9_./@=:\\~-]+$/;
+
 /** Runs the script against a provider stub; a refusal comes back as its exit code and output. */
 async function run(args: string[], providerUrl: string) {
+  for (const arg of args) {
+    if (typeof arg !== "string" || !SAFE_ARG.test(arg)) throw new Error(`unsafe evaluation argument: ${String(arg)}`);
+  }
   const env: NodeJS.ProcessEnv = { ...process.env, MODEL_CALLS_ENABLED: "true" };
   pointModels(providerUrl, ["deepseek-flash"], env);
   try {
-    const { stdout, stderr } = await exec(process.execPath, ["scripts/eval-story-digests.ts", ...args], { cwd: REPO_ROOT, env, timeout: 30_000 });
+    const { stdout, stderr } = await exec("node", ["--", "scripts/eval-story-digests.ts", ...args], { cwd: REPO_ROOT, env, timeout: 30_000 });
     return { code: 0, stdout, stderr };
   } catch (error) {
     const failed = error as { code?: number; stdout?: string; stderr?: string };
@@ -147,13 +155,15 @@ const evalCase = (caseId: string, title: string) => ({
 test("nothing is sent when the calls exceed the limit or the candidate cannot be compared", async (t) => {
   const provider = await stub(() => answer("", "不应调用的综述文字。", [1, 1]));
   const dir = scratch();
+  const DIR = path.resolve(dir);
   t.after(async () => {
     await provider.close();
     rmSync(dir, { recursive: true, force: true });
   });
   const marker = tag();
   const write = (name: string, text: string) => {
-    const file = path.join(dir, name);
+    const file = path.resolve(DIR, name);
+    if (!file.startsWith(DIR + path.sep)) throw new Error(`outside the scratch dir: ${name}`);
     writeFileSync(file, text);
     return file;
   };
@@ -161,8 +171,7 @@ test("nothing is sent when the calls exceed the limit or the candidate cannot be
   const ten = write("ten.jsonl", Array.from({ length: 10 }, (_, n) => JSON.stringify(evalCase(`${marker}-ten-${n}`, `事件 ${n}`))).join("\n"));
   const candidate = write("candidate.md", "你是 {{siteName}} 的事件编辑。只输出 JSON：{\"title\": \"...\", \"digest\": \"...\"}\n");
   const unknownValue = write("unknown.md", "你是 {{siteName}} 的事件编辑，服务 {{audience}}。\n");
-  const same = path.join(dir, "same.md");
-  copyFileSync(path.join(REPO_ROOT, "industry/prompts/story-digest.md"), same);
+  const same = write("same.md", readFileSync(path.join(REPO_ROOT, "industry/prompts/story-digest.md"), "utf8"));
 
   const over = await run(["--cases", two, "--system", candidate, "--max-calls", "3", "--out-dir", dir], provider.url);
   assert.notEqual(over.code, 0);

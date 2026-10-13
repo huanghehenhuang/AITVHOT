@@ -146,7 +146,9 @@ async function screenshotFor(fb: { id: number; screenshot_key: string | null; cr
   if (key === "gone:upload") return { imageKey: null, note: "（截图未能上传，已删除）" };
   if (key === "gone:missing") return { imageKey: null, note: "（截图文件已不存在）" };
   if (!key?.startsWith("local:")) return { imageKey: null, note: null };
-  const file = path.join(config.dataDir, "feedback-screenshots", key.slice("local:".length));
+  const screenshotsRoot = path.resolve(config.dataDir, "feedback-screenshots");
+  const file = path.resolve(screenshotsRoot, key.slice("local:".length));
+  if (!file.startsWith(screenshotsRoot + path.sep)) return { imageKey: null, note: "（截图路径非法）" };
   const data = await readFile(file).catch(() => null);
   if (!data) {
     await sql`UPDATE feedback SET screenshot_key = 'gone:missing' WHERE id = ${fb.id}`;

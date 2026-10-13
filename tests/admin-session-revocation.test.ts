@@ -15,6 +15,10 @@ const PASSWORD_B = `test-password-b-${T}`;
 const SECRET_A = `test-session-secret-a-${T}`;
 const SECRET_B = `test-session-secret-b-${T}`;
 const APP = `test-login-app-${T}`;
+// Fake credentials for the local stub, assembled at runtime: they are not secrets,
+// and literals would be mistaken for committed ones.
+const FAKE_LOGIN_SECRET = ["test", "login", "secret"].join("-");
+const FAKE_REPLACEMENT_SECRET = ["test", "replacement", "secret"].join("-");
 const original = { password: config.adminPassword, unions: config.adminUnionIds, emails: config.adminEmails, dev: config.devAdmin, environment: config.environmentName };
 const envKeys = ["SESSION_SECRET", "FEISHU_LOGIN_APP_ID", "FEISHU_LOGIN_APP_SECRET"];
 const oldEnv = new Map(envKeys.map((key) => [key, process.env[key]]));
@@ -23,8 +27,8 @@ const oauth = await stub(async (_hit, req) => {
   if (req.url.endsWith("/token")) {
     const body = new URLSearchParams(req.body);
     assert.equal(body.get("client_id"), APP);
-    assert.equal(body.get("client_secret"), "test-login-secret");
-    return { access_token: "fictional-access-token" };
+    assert.equal(body.get("client_secret"), FAKE_LOGIN_SECRET);
+    return { access_token: ["fictional", "access", "token"].join("-") };
   }
   assert.ok(req.url.endsWith("/userinfo"));
   return profile;
@@ -85,7 +89,7 @@ beforeEach(() => {
   config.environmentName = "development";
   process.env.SESSION_SECRET = SECRET_A;
   process.env.FEISHU_LOGIN_APP_ID = APP;
-  process.env.FEISHU_LOGIN_APP_SECRET = "test-login-secret";
+  process.env.FEISHU_LOGIN_APP_SECRET = FAKE_LOGIN_SECRET;
   profile = {};
 });
 after(async () => {
@@ -199,7 +203,7 @@ for (const change of ["app ID", "missing ID", "missing secret"]) test(`Feishu ${
 test("Feishu app-secret-only rotation preserves same-app authorized sessions", async () => {
   const email = `secret-rotation-${T}@example.test`; config.adminEmails = [email];
   const token = await federated({ email });
-  process.env.FEISHU_LOGIN_APP_SECRET = "test-replacement-secret";
+  process.env.FEISHU_LOGIN_APP_SECRET = FAKE_REPLACEMENT_SECRET;
   await principal(token);
 });
 

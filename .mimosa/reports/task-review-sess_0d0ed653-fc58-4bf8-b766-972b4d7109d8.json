@@ -1,0 +1,1576 @@
+{
+  "schema_version": "mimosa-task-review/v2",
+  "run_id": "20261013T023543674Z-21668-1efa3f515ad4",
+  "run_status": "inconclusive",
+  "errors": [
+    {
+      "stage": "candidate-select",
+      "target": "tests/source-seed.test.ts",
+      "reason": "changed_file_unreadable: observed changed file no longer exists or cannot be read"
+    },
+    {
+      "stage": "candidate-select",
+      "target": "scripts/mcp-check.ts",
+      "reason": "candidate_limit_exceeded: 12 changed reviewable file(s) were not scanned because the limit is 20"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/mcp-host.standalone.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/outbound-headers.standalone.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/outbound-protocol.standalone.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/databases.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/setup.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/admin-corrections.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/alerts.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/feedback.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/private-routes.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/admin-session-revocation.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/migration-check.standalone.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/architecture.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/backup.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/egress-proxy.standalone.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/story-digest-eval.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "scripts/smoke.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/error-logging.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/translate-shutdown.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    },
+    {
+      "stage": "scan",
+      "target": "tests/recall-cache.test.ts",
+      "reason": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT"
+    }
+  ],
+  "coverage": {
+    "schema_version": "mimosa-hook-coverage/v1",
+    "status": "partial",
+    "scope": "hook_observed_diff",
+    "baseline": {
+      "complete": true,
+      "captured_files": 537,
+      "candidate_limit": 5000,
+      "truncated": false,
+      "enumeration_error_count": 0,
+      "snapshot_error_count": 0,
+      "compensated_target_count": 32
+    },
+    "change_tracking": {
+      "touched_observed": 33,
+      "touched_retained": 33,
+      "truncated": false,
+      "bash_mutation": true,
+      "bash_discovered": 31,
+      "bash_discovery_limit": 80,
+      "bash_discovery_truncated": false
+    },
+    "candidates": {
+      "eligible_files": 32,
+      "selected_files": 20,
+      "limit": 20,
+      "truncated": true
+    },
+    "scanning": {
+      "required_files": 19,
+      "scanned_files": 0,
+      "skipped_files": 0,
+      "failed_files": 19,
+      "project_checks_required": 0,
+      "project_checks_completed": 0
+    },
+    "notification": {
+      "eligible_findings": 0,
+      "detailed_findings": 0,
+      "detail_limit": 3,
+      "truncated": false
+    },
+    "reason_counts": {
+      "changed_file_unreadable": 1,
+      "candidate_limit_exceeded": 1,
+      "scanner_failed": 19,
+      "project_check_failed": 21
+    },
+    "reasons": [
+      {
+        "code": "changed_file_unreadable",
+        "stage": "candidate-select",
+        "target": "tests/source-seed.test.ts",
+        "detail": "observed changed file no longer exists or cannot be read",
+        "affects_completion": true
+      },
+      {
+        "code": "candidate_limit_exceeded",
+        "stage": "candidate-select",
+        "target": "scripts/mcp-check.ts",
+        "detail": "12 changed reviewable file(s) were not scanned because the limit is 20",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/mcp-host.standalone.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/outbound-headers.standalone.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/outbound-protocol.standalone.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/databases.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/setup.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/admin-corrections.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/alerts.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/feedback.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/private-routes.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/admin-session-revocation.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/migration-check.standalone.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/architecture.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/backup.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/egress-proxy.standalone.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/story-digest-eval.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "scripts/smoke.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/error-logging.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/translate-shutdown.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "scanner_failed",
+        "stage": "scan",
+        "target": "tests/recall-cache.test.ts",
+        "detail": "spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "candidate-select",
+        "target": "tests/source-seed.test.ts",
+        "detail": "changed_file_unreadable: observed changed file no longer exists or cannot be read",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "candidate-select",
+        "target": "scripts/mcp-check.ts",
+        "detail": "candidate_limit_exceeded: 12 changed reviewable file(s) were not scanned because the limit is 20",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/mcp-host.standalone.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/outbound-headers.standalone.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/outbound-protocol.standalone.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/databases.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/setup.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/admin-corrections.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/alerts.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/feedback.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/private-routes.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/admin-session-revocation.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/migration-check.standalone.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/architecture.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/backup.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/egress-proxy.standalone.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/story-digest-eval.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "scripts/smoke.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/error-logging.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/translate-shutdown.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "scan",
+        "target": "tests/recall-cache.test.ts",
+        "detail": "scanner_failed: spawnSync D:\\node.exe ETIMEDOUT",
+        "affects_completion": true
+      }
+    ],
+    "reasons_truncated": false
+  },
+  "generated_at": "2026-10-13T02:35:43.674Z",
+  "session_id": "sess_0d0ed653-fc58-4bf8-b766-972b4d7109d8",
+  "target": ".",
+  "revision": "86e5c8783d9ce26ccf3c2ab7f63d302033b13071",
+  "rules_version": "unavailable",
+  "diff_hash": "401eb7893af07363df69d376d9daaa2185d5579323c63b2f17f19f68455f4e19",
+  "diff": {
+    "algorithm": "sha256",
+    "changed_file_count": 19,
+    "changed_files": [
+      {
+        "file": "scripts/smoke.ts",
+        "ranges": [
+          {
+            "start": 4,
+            "end": 4
+          },
+          {
+            "start": 8,
+            "end": 21
+          },
+          {
+            "start": 44,
+            "end": 44
+          },
+          {
+            "start": 60,
+            "end": 60
+          },
+          {
+            "start": 65,
+            "end": 65
+          }
+        ],
+        "before_hash": "5a34a6729ee3d6ff498290c28b328ea70847ff0ee525ae2d38bf7ec849cf3caf",
+        "after_hash": "c5a8d21aa00f185d46213d3c65fecd5d9f3ef73a2393863717a9a033838db10f"
+      },
+      {
+        "file": "tests/admin-corrections.test.ts",
+        "ranges": [
+          {
+            "start": 146,
+            "end": 146
+          }
+        ],
+        "before_hash": "1252b699baed94dbb301c867d38bbdbfc41f2852bf80ecd09f237e81fc9b664a",
+        "after_hash": "e496ba0d89a3645a0e02828daf1492ffa3215892c43c6091725355ee698de8af"
+      },
+      {
+        "file": "tests/admin-session-revocation.test.ts",
+        "ranges": [
+          {
+            "start": 18,
+            "end": 21
+          },
+          {
+            "start": 30,
+            "end": 31
+          },
+          {
+            "start": 92,
+            "end": 92
+          },
+          {
+            "start": 206,
+            "end": 206
+          }
+        ],
+        "before_hash": "cc1864168422041c9a400354ac7610fe4f140809ecfc62921efb616a1de1d149",
+        "after_hash": "23044f58586e8cbeaffc3f5e02ca747363959860ccd130e5305fb46ff7324516"
+      },
+      {
+        "file": "tests/alerts.test.ts",
+        "ranges": [
+          {
+            "start": 79,
+            "end": 79
+          }
+        ],
+        "before_hash": "561c2587e275219df495b73d42b47794a75082111e8e22e9969d1fa3e7000818",
+        "after_hash": "80ac18dc26988f8276594e4a7b4c2788d228e09138997f86663fc645a0e97f32"
+      },
+      {
+        "file": "tests/architecture.test.ts",
+        "ranges": [
+          {
+            "start": 23,
+            "end": 25
+          },
+          {
+            "start": 27,
+            "end": 28
+          }
+        ],
+        "before_hash": "19736a07b08ea82116f88f6e4b071afbd79ccbd7483034db46fc3cff052d0647",
+        "after_hash": "8371442c2e5c62c4e0c867c8fc10a07fef066bb607048464e25f11a95c89ec35"
+      },
+      {
+        "file": "tests/backup.test.ts",
+        "ranges": [
+          {
+            "start": 123,
+            "end": 125
+          }
+        ],
+        "before_hash": "8a8e79aaeee722e6d09487b50c941ee770f4ce0c1f49a0c111233304a16cdc73",
+        "after_hash": "1365721303e10dd613bfffde355b54cabc8fc5dd32dee3d1305a821d483b1ac6"
+      },
+      {
+        "file": "tests/databases.ts",
+        "ranges": [
+          {
+            "start": 47,
+            "end": 48
+          }
+        ],
+        "before_hash": "4ec65542a0998403ed179cff98e122cd49917730d631417afac9ff4dfc0426c0",
+        "after_hash": "a859422b498ac963ed1011f0a99d9e0a1a39cc63b2a07b0c46ecbafe521660a8"
+      },
+      {
+        "file": "tests/egress-proxy.standalone.test.ts",
+        "ranges": [
+          {
+            "start": 15,
+            "end": 20
+          },
+          {
+            "start": 43,
+            "end": 44
+          }
+        ],
+        "before_hash": "08d8487fa793088529b5d2b5a9662890c75ac6b51b74da26e73c5e413f90a810",
+        "after_hash": "84e93467fa3856e59ff0bc2ce8961a32b42e7598255cfca0eb95558e45bc580d"
+      },
+      {
+        "file": "tests/error-logging.test.ts",
+        "ranges": [
+          {
+            "start": 3,
+            "end": 4
+          },
+          {
+            "start": 7,
+            "end": 7
+          },
+          {
+            "start": 11,
+            "end": 12
+          },
+          {
+            "start": 14,
+            "end": 22
+          },
+          {
+            "start": 25,
+            "end": 27
+          },
+          {
+            "start": 29,
+            "end": 31
+          },
+          {
+            "start": 37,
+            "end": 41
+          }
+        ],
+        "before_hash": "c944b9ab83f2087923bf4c829f4ff3d126bceb5eb4b956f378aa0fc47fd19957",
+        "after_hash": "d585566e25da61ff9ba6dc8e49ecfad3c5efe2ef79215247f39c3d3aa9f59c28"
+      },
+      {
+        "file": "tests/feedback.test.ts",
+        "ranges": [
+          {
+            "start": 22,
+            "end": 22
+          }
+        ],
+        "before_hash": "96c3fde74555fc6ed0ffe5e480787aa44369d0d94048f946aae3de57f6a5db5a",
+        "after_hash": "7f66754bec9be7b2ebad5ee23a81ae320299f215789d909e5b5a7e89f6ac483b"
+      },
+      {
+        "file": "tests/mcp-host.standalone.test.ts",
+        "ranges": [
+          {
+            "start": 160,
+            "end": 162
+          },
+          {
+            "start": 164,
+            "end": 164
+          }
+        ],
+        "before_hash": "84fbf65401f3f59208117e56e9ced533db4cb1547637e960789b52d42f097a99",
+        "after_hash": "60bcccf8ad3c1ff4d2250bbfd897b2f57cc2a87b3d9df76ada2cdf13e9d8c39d"
+      },
+      {
+        "file": "tests/migration-check.standalone.test.ts",
+        "ranges": [
+          {
+            "start": 11,
+            "end": 11
+          },
+          {
+            "start": 14,
+            "end": 15
+          },
+          {
+            "start": 19,
+            "end": 22
+          },
+          {
+            "start": 24,
+            "end": 25
+          },
+          {
+            "start": 33,
+            "end": 33
+          }
+        ],
+        "before_hash": "f1787c5406284d64b7fdc29d16b2aa4d760bb78b210595cf1fa12c820eebecd7",
+        "after_hash": "33731e4afbd73880b7f0c90678f78fb5db906a355c7ade5126561ff6dfa19e44"
+      },
+      {
+        "file": "tests/outbound-headers.standalone.test.ts",
+        "ranges": [
+          {
+            "start": 4,
+            "end": 4
+          },
+          {
+            "start": 14,
+            "end": 14
+          }
+        ],
+        "before_hash": "d4014aa14532fa7b85a08c7abfa8ca0bb60a3d886619286aaab2e0aa31bbd25e",
+        "after_hash": "66bccb82dcbe2276e896cb91e02f72ce35af5741e5c3dbc99dcf0b76e7c38299"
+      },
+      {
+        "file": "tests/outbound-protocol.standalone.test.ts",
+        "ranges": [
+          {
+            "start": 24,
+            "end": 24
+          }
+        ],
+        "before_hash": "8291008b552b0e02f937590fe6b47110ab3a1ef51efed2781efbfebb6a11150d",
+        "after_hash": "728b62ea329570ccb53ceb5d926ab6ed4749abe756c0785312522b967531a2c2"
+      },
+      {
+        "file": "tests/private-routes.test.ts",
+        "ranges": [
+          {
+            "start": 25,
+            "end": 25
+          }
+        ],
+        "before_hash": "ea29aa239ad54d82155afe8afa5d6c216387a26c184960dc80fcb3c6c1fe3ff1",
+        "after_hash": "9a2cf8263222a7174a239e09290e971ccf9268e34065680413d27ac8676bdc3e"
+      },
+      {
+        "file": "tests/recall-cache.test.ts",
+        "ranges": [
+          {
+            "start": 17,
+            "end": 17
+          },
+          {
+            "start": 44,
+            "end": 47
+          }
+        ],
+        "before_hash": "7361d0f2cb8e84ee4429043b0e29165099efa572292a284f9ef6df2987f1911a",
+        "after_hash": "d566c0923b1f3062f1cd99bc6899c58281f74bc944dd005846f72b4bd7a1d1cd"
+      },
+      {
+        "file": "tests/setup.ts",
+        "ranges": [
+          {
+            "start": 17,
+            "end": 18
+          }
+        ],
+        "before_hash": "f70cfc0770b2bdc334b56ae84bcc811cb5ce31706d4a7688b17dc5344e607ead",
+        "after_hash": "a92208e063cdb534720c61270ccec21de34e3e3ace5408c8deb4749c4040f9ca"
+      },
+      {
+        "file": "tests/story-digest-eval.test.ts",
+        "ranges": [
+          {
+            "start": 9,
+            "end": 9
+          },
+          {
+            "start": 28,
+            "end": 32
+          },
+          {
+            "start": 35,
+            "end": 37
+          },
+          {
+            "start": 41,
+            "end": 41
+          },
+          {
+            "start": 158,
+            "end": 158
+          },
+          {
+            "start": 165,
+            "end": 166
+          },
+          {
+            "start": 174,
+            "end": 174
+          }
+        ],
+        "before_hash": "4b251428ff3e078786d1c3683edd9030d7c84c8a16bc907c4d4e47af2c99d9f9",
+        "after_hash": "cac609fffdb67a7a97b6b4f40b2e22e9ebddbd56705fc51744371f16e2b64a26"
+      },
+      {
+        "file": "tests/translate-shutdown.test.ts",
+        "ranges": [
+          {
+            "start": 22,
+            "end": 23
+          }
+        ],
+        "before_hash": "5ef98cd174be246f28c0e064ce4f9cc8651cbeb5d872fd17218da10591c5996a",
+        "after_hash": "45ec40d8439d6935127c1eba63c57f83ba35ea133b20891e386bc2f6ebf0b1d4"
+      }
+    ]
+  },
+  "timing": {
+    "started_at": "2026-10-13T02:35:41.106Z",
+    "completed_at": "2026-10-13T02:35:43.674Z",
+    "duration_ms": 2568,
+    "measurement": "hook_wall_clock"
+  },
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "total": 0,
+    "model_calls": 0,
+    "measurement": "known-zero"
+  },
+  "telemetry": {
+    "schemaVersion": "mimosa-gate-telemetry/v1",
+    "profile": "gate",
+    "operation": "Stop",
+    "outcome": "partial/INCONCLUSIVE",
+    "latencyMs": 2568,
+    "peakMemoryBytes": 82059264,
+    "memoryMeasurement": "max-observed-process-rss",
+    "scannedFiles": 0,
+    "cache": {
+      "hits": 0,
+      "misses": 0,
+      "measurement": "not-applicable"
+    },
+    "denyCount": 0,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "total": 0,
+      "modelCalls": 0,
+      "measurement": "known-zero"
+    }
+  },
+  "finding_count": 0,
+  "rewake_finding_count": 0,
+  "evidence_boundary": {
+    "scan": "candidate",
+    "static_fix_verification": "observed_static_only",
+    "runtime_verification": "not_performed"
+  },
+  "finding_events": [
+    {
+      "finding_id": "mimosa-7c9a1448baf5df04ae5fe843",
+      "file": "tests/admin-session-revocation.test.ts",
+      "line": 5,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "硬编码凭据",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T00:53:35.225Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "99b99c9cbc143dd9bbf937107409532d9a244a745f4b427ded1afbad9748d874",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-7c9a1448baf5df04ae5fe843",
+      "file": "tests/admin-session-revocation.test.ts",
+      "line": 5,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "硬编码凭据",
+      "status": "fixed_candidate",
+      "decision": "repair_observed",
+      "at": "2026-10-13T00:54:29.145Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "99b99c9cbc143dd9bbf937107409532d9a244a745f4b427ded1afbad9748d874",
+        "candidate_before_evidence_hash": "99b99c9cbc143dd9bbf937107409532d9a244a745f4b427ded1afbad9748d874",
+        "post_change_evidence_hash_at_previous_location": "82832973ea4e6afec6d400f83bb05e67b6819e1ac63d98df44942164008c68ad",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-7c9a1448baf5df04ae5fe843",
+      "file": "tests/admin-session-revocation.test.ts",
+      "line": 5,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "硬编码凭据",
+      "status": "static_verified",
+      "decision": "static_rescan_passed",
+      "at": "2026-10-13T00:54:29.145Z",
+      "evidence": {
+        "kind": "static_scan",
+        "boundary": "observed",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "99b99c9cbc143dd9bbf937107409532d9a244a745f4b427ded1afbad9748d874",
+        "candidate_before_evidence_hash": "99b99c9cbc143dd9bbf937107409532d9a244a745f4b427ded1afbad9748d874",
+        "post_change_evidence_hash_at_previous_location": "82832973ea4e6afec6d400f83bb05e67b6819e1ac63d98df44942164008c68ad",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-d0f4ad922651be0048900006",
+      "file": "tests/migration-check.standalone.test.ts",
+      "line": 2,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "路径穿越",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T00:55:09.337Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "93ed5cf9f59445e16f8b7dd6470560af3acf83207f7a0c42c802f9d7d13d2a44",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-d0f4ad922651be0048900006",
+      "file": "tests/migration-check.standalone.test.ts",
+      "line": 2,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "路径穿越",
+      "status": "fixed_candidate",
+      "decision": "repair_observed",
+      "at": "2026-10-13T00:55:19.995Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "93ed5cf9f59445e16f8b7dd6470560af3acf83207f7a0c42c802f9d7d13d2a44",
+        "candidate_before_evidence_hash": "93ed5cf9f59445e16f8b7dd6470560af3acf83207f7a0c42c802f9d7d13d2a44",
+        "post_change_evidence_hash_at_previous_location": "57f1709746dd7dd60c275d2834f4d96fb0d5da730b4974371e98141d980b3849",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-d0f4ad922651be0048900006",
+      "file": "tests/migration-check.standalone.test.ts",
+      "line": 2,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "路径穿越",
+      "status": "static_verified",
+      "decision": "static_rescan_passed",
+      "at": "2026-10-13T00:55:19.995Z",
+      "evidence": {
+        "kind": "static_scan",
+        "boundary": "observed",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "93ed5cf9f59445e16f8b7dd6470560af3acf83207f7a0c42c802f9d7d13d2a44",
+        "candidate_before_evidence_hash": "93ed5cf9f59445e16f8b7dd6470560af3acf83207f7a0c42c802f9d7d13d2a44",
+        "post_change_evidence_hash_at_previous_location": "57f1709746dd7dd60c275d2834f4d96fb0d5da730b4974371e98141d980b3849",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-ee5fa4be16afceee549ed6ee",
+      "file": "scripts/smoke.ts",
+      "line": 57,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "SSRF 服务端请求伪造",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T00:57:12.084Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "49bdc5712a513d4166f50658684c20087c1f3b5eecb2312daaf5a17b3f6a5dd6",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-ee5fa4be16afceee549ed6ee",
+      "file": "scripts/smoke.ts",
+      "line": 57,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "服务端请求伪造",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T00:57:12.084Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "49bdc5712a513d4166f50658684c20087c1f3b5eecb2312daaf5a17b3f6a5dd6",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-ee5fa4be16afceee549ed6ee",
+      "file": "scripts/smoke.ts",
+      "line": 57,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "服务端请求伪造",
+      "status": "fixed_candidate",
+      "decision": "repair_observed",
+      "at": "2026-10-13T00:57:27.101Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "49bdc5712a513d4166f50658684c20087c1f3b5eecb2312daaf5a17b3f6a5dd6",
+        "candidate_before_evidence_hash": "49bdc5712a513d4166f50658684c20087c1f3b5eecb2312daaf5a17b3f6a5dd6",
+        "post_change_evidence_hash_at_previous_location": "eeddbc4fbd5b01a2e16505db35823fbca10242a0e00e7abb0f1b1fd33bd430c5",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-ee5fa4be16afceee549ed6ee",
+      "file": "scripts/smoke.ts",
+      "line": 57,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "服务端请求伪造",
+      "status": "static_verified",
+      "decision": "static_rescan_passed",
+      "at": "2026-10-13T00:57:27.101Z",
+      "evidence": {
+        "kind": "static_scan",
+        "boundary": "observed",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "49bdc5712a513d4166f50658684c20087c1f3b5eecb2312daaf5a17b3f6a5dd6",
+        "candidate_before_evidence_hash": "49bdc5712a513d4166f50658684c20087c1f3b5eecb2312daaf5a17b3f6a5dd6",
+        "post_change_evidence_hash_at_previous_location": "eeddbc4fbd5b01a2e16505db35823fbca10242a0e00e7abb0f1b1fd33bd430c5",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-d73f6cd34119f6055bd93c56",
+      "file": "tests/migrations.test.ts",
+      "line": 2,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "路径穿越",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T02:26:51.784Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "9a5e418aacd47e818b645374366bb8d68a0b7c12234435d373849f803ce498c5",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-d73f6cd34119f6055bd93c56",
+      "file": "tests/migrations.test.ts",
+      "line": 2,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "路径穿越",
+      "status": "fixed_candidate",
+      "decision": "repair_observed",
+      "at": "2026-10-13T02:27:19.348Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "9a5e418aacd47e818b645374366bb8d68a0b7c12234435d373849f803ce498c5",
+        "candidate_before_evidence_hash": "9a5e418aacd47e818b645374366bb8d68a0b7c12234435d373849f803ce498c5",
+        "post_change_evidence_hash_at_previous_location": "506c780295c067cf39e67dddf2b4c533555f9f80ad1a06352d4db43e52d539bd",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-d73f6cd34119f6055bd93c56",
+      "file": "tests/migrations.test.ts",
+      "line": 2,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "路径穿越",
+      "status": "static_verified",
+      "decision": "static_rescan_passed",
+      "at": "2026-10-13T02:27:19.348Z",
+      "evidence": {
+        "kind": "static_scan",
+        "boundary": "observed",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "9a5e418aacd47e818b645374366bb8d68a0b7c12234435d373849f803ce498c5",
+        "candidate_before_evidence_hash": "9a5e418aacd47e818b645374366bb8d68a0b7c12234435d373849f803ce498c5",
+        "post_change_evidence_hash_at_previous_location": "506c780295c067cf39e67dddf2b4c533555f9f80ad1a06352d4db43e52d539bd",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-791ddbb3bff1ce88150dd7fe",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 32,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "XSS 跨站脚本",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T02:27:40.943Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "a70c18dce5282c32d247619abcba3d7f7747aba936fc7bbbb745a4d459ebfd51",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-791ddbb3bff1ce88150dd7fe",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 32,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T02:27:40.943Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "a70c18dce5282c32d247619abcba3d7f7747aba936fc7bbbb745a4d459ebfd51",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-2378957363f2bd72539ce3cb",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 5,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "XSS 跨站脚本",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T02:27:49.600Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "2be821ea6285957230727d3760f24e028c1ad48efe7a98dfa006938ab1a6ea76",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-2378957363f2bd72539ce3cb",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 5,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T02:27:49.600Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "2be821ea6285957230727d3760f24e028c1ad48efe7a98dfa006938ab1a6ea76",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-a3a93c3be716dc0bbba3c431",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 35,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "XSS 跨站脚本",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T02:28:07.891Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "819fb4642153952cd53519212f0fa29af23444b67a46024bd444295e74779fb2",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-a3a93c3be716dc0bbba3c431",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 35,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T02:28:07.891Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "819fb4642153952cd53519212f0fa29af23444b67a46024bd444295e74779fb2",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-64f4f7e96c60604c1f177f19",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 35,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "XSS 跨站脚本",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T02:28:20.548Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "20fc29d91215cd19ccfc69761e041a8f6453df47de1c5e4578e0566ce1fee8a5",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-64f4f7e96c60604c1f177f19",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 35,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T02:28:20.548Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "20fc29d91215cd19ccfc69761e041a8f6453df47de1c5e4578e0566ce1fee8a5",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-791ddbb3bff1ce88150dd7fe",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 32,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "fixed_candidate",
+      "decision": "repair_observed",
+      "at": "2026-10-13T02:28:34.134Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "a70c18dce5282c32d247619abcba3d7f7747aba936fc7bbbb745a4d459ebfd51",
+        "candidate_before_evidence_hash": "a70c18dce5282c32d247619abcba3d7f7747aba936fc7bbbb745a4d459ebfd51",
+        "post_change_evidence_hash_at_previous_location": "f709a12a2e03a0c0004757a01041116e29c4ac21c87c2f65b3cbda60968df933",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-791ddbb3bff1ce88150dd7fe",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 32,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "static_verified",
+      "decision": "static_rescan_passed",
+      "at": "2026-10-13T02:28:34.134Z",
+      "evidence": {
+        "kind": "static_scan",
+        "boundary": "observed",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "a70c18dce5282c32d247619abcba3d7f7747aba936fc7bbbb745a4d459ebfd51",
+        "candidate_before_evidence_hash": "a70c18dce5282c32d247619abcba3d7f7747aba936fc7bbbb745a4d459ebfd51",
+        "post_change_evidence_hash_at_previous_location": "f709a12a2e03a0c0004757a01041116e29c4ac21c87c2f65b3cbda60968df933",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-2378957363f2bd72539ce3cb",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 5,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "fixed_candidate",
+      "decision": "repair_observed",
+      "at": "2026-10-13T02:28:34.134Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "2be821ea6285957230727d3760f24e028c1ad48efe7a98dfa006938ab1a6ea76",
+        "candidate_before_evidence_hash": "2be821ea6285957230727d3760f24e028c1ad48efe7a98dfa006938ab1a6ea76",
+        "post_change_evidence_hash_at_previous_location": "4b7dccaa4bece6cfd4ede7d7dc7233ccd6779d4721520b54783aebb05542efe6",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-2378957363f2bd72539ce3cb",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 5,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "static_verified",
+      "decision": "static_rescan_passed",
+      "at": "2026-10-13T02:28:34.134Z",
+      "evidence": {
+        "kind": "static_scan",
+        "boundary": "observed",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "2be821ea6285957230727d3760f24e028c1ad48efe7a98dfa006938ab1a6ea76",
+        "candidate_before_evidence_hash": "2be821ea6285957230727d3760f24e028c1ad48efe7a98dfa006938ab1a6ea76",
+        "post_change_evidence_hash_at_previous_location": "4b7dccaa4bece6cfd4ede7d7dc7233ccd6779d4721520b54783aebb05542efe6",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-a3a93c3be716dc0bbba3c431",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 35,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "fixed_candidate",
+      "decision": "repair_observed",
+      "at": "2026-10-13T02:28:34.134Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "819fb4642153952cd53519212f0fa29af23444b67a46024bd444295e74779fb2",
+        "candidate_before_evidence_hash": "819fb4642153952cd53519212f0fa29af23444b67a46024bd444295e74779fb2",
+        "post_change_evidence_hash_at_previous_location": "42163238c9680e4d64817255e17f4bd6eb99875a706ba1d584e3308dd687b686",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-a3a93c3be716dc0bbba3c431",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 35,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "static_verified",
+      "decision": "static_rescan_passed",
+      "at": "2026-10-13T02:28:34.134Z",
+      "evidence": {
+        "kind": "static_scan",
+        "boundary": "observed",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "819fb4642153952cd53519212f0fa29af23444b67a46024bd444295e74779fb2",
+        "candidate_before_evidence_hash": "819fb4642153952cd53519212f0fa29af23444b67a46024bd444295e74779fb2",
+        "post_change_evidence_hash_at_previous_location": "42163238c9680e4d64817255e17f4bd6eb99875a706ba1d584e3308dd687b686",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-64f4f7e96c60604c1f177f19",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 35,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "fixed_candidate",
+      "decision": "repair_observed",
+      "at": "2026-10-13T02:28:34.134Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "20fc29d91215cd19ccfc69761e041a8f6453df47de1c5e4578e0566ce1fee8a5",
+        "candidate_before_evidence_hash": "20fc29d91215cd19ccfc69761e041a8f6453df47de1c5e4578e0566ce1fee8a5",
+        "post_change_evidence_hash_at_previous_location": "42163238c9680e4d64817255e17f4bd6eb99875a706ba1d584e3308dd687b686",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-64f4f7e96c60604c1f177f19",
+      "file": "apps/web/tests/cache.test.ts",
+      "line": 35,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "跨站脚本",
+      "status": "static_verified",
+      "decision": "static_rescan_passed",
+      "at": "2026-10-13T02:28:34.134Z",
+      "evidence": {
+        "kind": "static_scan",
+        "boundary": "observed",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "20fc29d91215cd19ccfc69761e041a8f6453df47de1c5e4578e0566ce1fee8a5",
+        "candidate_before_evidence_hash": "20fc29d91215cd19ccfc69761e041a8f6453df47de1c5e4578e0566ce1fee8a5",
+        "post_change_evidence_hash_at_previous_location": "42163238c9680e4d64817255e17f4bd6eb99875a706ba1d584e3308dd687b686",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-81d78d906ea5eab0ba588790",
+      "file": "scripts/eval-story-digests.ts",
+      "line": 73,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "路径穿越",
+      "status": "blocked",
+      "decision": "deny",
+      "at": "2026-10-13T02:29:04.387Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "5d6a21bfec4f00159c0012dab844a38fd98e9608187189e6e277f82fa77a0dfa",
+        "runtime_oracle": false
+      }
+    },
+    {
+      "finding_id": "mimosa-81d78d906ea5eab0ba588790",
+      "file": "scripts/eval-story-digests.ts",
+      "line": 73,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "路径穿越",
+      "status": "fixed_candidate",
+      "decision": "repair_observed",
+      "at": "2026-10-13T02:29:22.061Z",
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "5d6a21bfec4f00159c0012dab844a38fd98e9608187189e6e277f82fa77a0dfa",
+        "candidate_before_evidence_hash": "5d6a21bfec4f00159c0012dab844a38fd98e9608187189e6e277f82fa77a0dfa",
+        "post_change_evidence_hash_at_previous_location": "19410a490d09a1d51832920996542ea35e2e3aaf1085195205c5e5a93745e590",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    },
+    {
+      "finding_id": "mimosa-81d78d906ea5eab0ba588790",
+      "file": "scripts/eval-story-digests.ts",
+      "line": 73,
+      "rule_id": "security",
+      "severity": "high",
+      "category": "路径穿越",
+      "status": "static_verified",
+      "decision": "static_rescan_passed",
+      "at": "2026-10-13T02:29:22.061Z",
+      "evidence": {
+        "kind": "static_scan",
+        "boundary": "observed",
+        "producer": "deterministic",
+        "source": "semgrep",
+        "evidence_hash": "5d6a21bfec4f00159c0012dab844a38fd98e9608187189e6e277f82fa77a0dfa",
+        "candidate_before_evidence_hash": "5d6a21bfec4f00159c0012dab844a38fd98e9608187189e6e277f82fa77a0dfa",
+        "post_change_evidence_hash_at_previous_location": "19410a490d09a1d51832920996542ea35e2e3aaf1085195205c5e5a93745e590",
+        "runtime_oracle": false,
+        "verification": {
+          "method": "mimosa-posttool-static-rescan",
+          "finding_absent": true,
+          "runtime_oracle": false
+        }
+      }
+    }
+  ],
+  "findings": [],
+  "artifacts": {
+    "immutable_report": ".mimosa/reports/task-review-sess_0d0ed653-fc58-4bf8-b766-972b4d7109d8-20261013T023543674Z-21668-1efa3f515ad4.json",
+    "latest_report": ".mimosa/reports/task-review-sess_0d0ed653-fc58-4bf8-b766-972b4d7109d8.json",
+    "history_summary": ".mimosa/history/run-20261013T023543674Z-21668-1efa3f515ad4.json"
+  }
+}

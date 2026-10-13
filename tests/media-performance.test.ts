@@ -11,6 +11,13 @@ import { SITE } from "@aihot/site";
 
 const dir = await mkdtemp(path.join(tmpdir(), "aihot-media-test-"));
 process.env.AIHOT_DATA_DIR = dir;
+/** A cache path under the fixture's data dir, asserted to stay inside the image cache root. */
+const cachePath = (root: string, ...segments: string[]) => {
+  const base = path.resolve(root, "imgcache");
+  const file = path.resolve(base, ...segments);
+  if (!file.startsWith(base + path.sep)) throw new Error("outside the image cache dir");
+  return file;
+};
 process.env.ALLOW_PRIVATE_NETWORK_FETCH = "true";
 process.env.MODEL_CALLS_ENABLED = "false";
 const { produceImage } = await import("@aihot/backend/media/images");
@@ -80,7 +87,7 @@ test("cached oversized SVGs use current renditions without downloading them agai
   const svg = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080"><rect width="1920" height="1080" fill="#176b75"/><desc>${randomBytes(180000).toString("base64")}</desc></svg>`);
   const url = `${base}/cached-vector`;
   const key = createHash("sha256").update(`full|${url}`).digest("hex");
-  const file = path.join(dir, "imgcache", key.slice(0, 2), key);
+  const file = cachePath(dir, key.slice(0, 2), key);
   await mkdir(path.dirname(file), { recursive: true });
   await writeFile(file, svg);
   await writeFile(`${file}.type`, "image/svg+xml");
@@ -99,7 +106,7 @@ test("cached oversized SVGs use current renditions without downloading them agai
   assert.deepEqual(await produceImage(url, "full"), first);
   const smallUrl = `${base}/compact-vector`;
   const smallKey = createHash("sha256").update(`full|${smallUrl}`).digest("hex");
-  const smallFile = path.join(dir, "imgcache", smallKey.slice(0, 2), smallKey);
+  const smallFile = cachePath(dir, smallKey.slice(0, 2), smallKey);
   const compact = Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8"/></svg>');
   await mkdir(path.dirname(smallFile), { recursive: true });
   await writeFile(smallFile, compact);
@@ -118,7 +125,7 @@ test("SVG preparation retains compact transfer and intrinsic display size", asyn
     assert.deepEqual(await resizeImage(body, "image/svg+xml", "full"), { body, type: "image/svg+xml" });
     const url = `${base}/${name}`;
     const key = createHash("sha256").update(`full|${url}`).digest("hex");
-    const file = path.join(dir, "imgcache", key.slice(0, 2), key);
+    const file = cachePath(dir, key.slice(0, 2), key);
     await mkdir(path.dirname(file), { recursive: true });
     await writeFile(file, body);
     await writeFile(`${file}.type`, "image/svg+xml");
@@ -132,7 +139,8 @@ test("a retained large SVG still supplies the model's raster thumbnail", async (
   const { firstImagePart } = await import("@aihot/backend/editorial/input");
   const url = `${base}/model-vector`;
   const key = createHash("sha256").update(`thumb|${url}`).digest("hex");
-  const file = path.join(dir, "imgcache", key.slice(0, 2), key);
+  const file = path.resolve(dir, "imgcache", key.slice(0, 2), key);
+  if (!file.startsWith(path.resolve(dir) + path.sep)) throw new Error("outside the cache dir");
   const body = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="180" height="34"><rect width="180" height="34" fill="#176b75"/><desc>${randomBytes(180000).toString("base64")}</desc></svg>`);
   await mkdir(path.dirname(file), { recursive: true });
   await writeFile(file, body);

@@ -10,7 +10,6 @@ import { execFileSync } from "node:child_process";
 import { mkdirSync, mkdtempSync, readdirSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { isMainThread } from "node:worker_threads";
 import postgres from "postgres";
 
@@ -45,7 +44,8 @@ export async function globalSetup() {
   await onServer(async (db) => {
     if ((await db`SELECT 1 FROM pg_database WHERE datname = ${name}`).length === 0) await db`CREATE DATABASE ${db(name)}`;
   });
-  execFileSync(process.execPath, [fileURLToPath(new URL("../scripts/migrate.ts", import.meta.url))], { stdio: ["ignore", "ignore", "inherit"] });
+  // The migrations script runs as a literal entry path from the repo root (npm test's cwd).
+  execFileSync("node", ["--", "scripts/migrate.ts"], { stdio: ["ignore", "ignore", "inherit"] });
   await dropCopies(); // left by an interrupted run
 }
 

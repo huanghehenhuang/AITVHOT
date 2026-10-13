@@ -33,10 +33,11 @@ test("the worker warms the API's current public PNG without an HTTP server", asy
   // There is no serving process here: an implementation that asks one for the card returns false.
   assert.equal(await warmShareImage(articleId), true, "a prepared public card must not depend on a serving process");
 
-  const cache = path.join(directory, "ogcache");
+  const cache = path.resolve(directory, "ogcache");
   const files = await readdir(cache);
   assert.equal(files.length, 1);
-  const file = path.join(cache, files[0]!);
+  const file = path.resolve(cache, files[0]!);
+  if (!file.startsWith(cache + path.sep)) throw new Error("outside the og cache dir");
   const png = await readFile(file);
   const metadata = await sharp(png).metadata();
   assert.deepEqual([metadata.format, metadata.width, metadata.height], ["png", 1200, 630]);

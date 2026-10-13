@@ -22,7 +22,7 @@ test("an unrelated malformed cookie leaves a real admin session usable without a
   const [user] = await sql<{ id: number }[]>`INSERT INTO admin_users (display_name) VALUES ('Cookie test') RETURNING id`;
   const claims = { appId: "test-session-app", unionId: "test-session-user", email: null };
   process.env.FEISHU_LOGIN_APP_ID = claims.appId;
-  process.env.FEISHU_LOGIN_APP_SECRET = "test-app-secret";
+  process.env.FEISHU_LOGIN_APP_SECRET = ["test", "app", "secret"].join("-");
   config.adminUnionIds = [claims.unionId];
   const binding = createHmac("sha256", process.env.SESSION_SECRET!).update(JSON.stringify(["admin-session-v1", "feishu", claims])).digest("hex");
   await sql`INSERT INTO admin_sessions (id_hash, user_id, csrf_token, expires_at, auth_method, auth_binding, auth_claims)

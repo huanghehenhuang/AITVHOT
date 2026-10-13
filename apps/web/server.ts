@@ -60,8 +60,9 @@ async function serveStatic(pathname: string, res: import("node:http").ServerResp
   } catch {
     throw new BadRequest("malformed percent-encoding");
   }
-  const file = path.join(CLIENT_DIR, decoded);
-  if (!file.startsWith(CLIENT_DIR)) return false;
+  const rootDir = path.resolve(CLIENT_DIR);
+  const file = path.resolve(rootDir, decoded);
+  if (!file.startsWith(rootDir + path.sep)) return false;
   const info = await stat(file).catch(() => null);
   if (!info?.isFile()) return false;
   const immutable = pathname.startsWith("/assets/");
