@@ -24,11 +24,17 @@ export interface ModelSpec {
 
 function extraFromEnv(value: string | undefined): Record<string, unknown> | undefined {
   if (!value) return undefined;
+  let parsed: unknown;
   try {
-    return JSON.parse(value) as Record<string, unknown>;
+    parsed = JSON.parse(value);
   } catch {
     throw new Error("LLM_EXTRA_JSON must be a JSON object, e.g. {\"enable_thinking\": false}");
   }
+  // A string or array would spread into numbered request-body keys instead of provider parameters.
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+    throw new Error("LLM_EXTRA_JSON must be a JSON object, e.g. {\"enable_thinking\": false}");
+  }
+  return parsed as Record<string, unknown>;
 }
 
 // Some relays route by an extra header (opencode-go wants x-opencode-session). Parsed once; an empty
@@ -39,11 +45,18 @@ function extraHeadersFromEnv(): Record<string, string> {
     const raw = process.env.LLM_EXTRA_HEADERS;
     if (!raw) extraHeadersCache = {};
     else {
+      let parsed: unknown;
       try {
-        extraHeadersCache = JSON.parse(raw) as Record<string, string>;
+        parsed = JSON.parse(raw);
       } catch {
         throw new Error("LLM_EXTRA_HEADERS must be a JSON object of header name to value");
       }
+      // A shape a relay cannot use must fail before the request, not as a failed attempt.
+      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+        throw new Error("LLM_EXTRA_HEADERS must be a JSON object of header name to value");
+      }
+      for (const value of Object.values(parsed)) if (typeof value !== "string") throw new Error("LLM_EXTRA_HEADERS must be a JSON object of header name to value");
+      extraHeadersCache = parsed as Record<string, string>;
     }
   }
   return extraHeadersCache;
@@ -169,6 +182,8 @@ export async function chatJson<S extends z.ZodType>(opts: ChatJsonOptions<S>): P
     ...(spec.extra ?? {}),
   };
 
+  // Read before the receipt: a malformed LLM_EXTRA_HEADERS must not spend an attempt or a budget slot.
+  const extraHeaders = extraHeadersFromEnv();
   const receipt = await paidRequest(
     {
       service: spec.service,
@@ -185,7 +200,7 @@ export async function chatJson<S extends z.ZodType>(opts: ChatJsonOptions<S>): P
       try {
         res = await fetch(`${baseUrl.replace(/\/$/, "")}/chat/completions`, {
           method: "POST",
-          headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}`, ...extraHeadersFromEnv() },
+          headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}`, ...extraHeaders },
           body: JSON.stringify(body),
           signal: AbortSignal.timeout(opts.timeoutMs ?? 120_000),
         });

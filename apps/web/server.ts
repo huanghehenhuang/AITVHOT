@@ -61,7 +61,7 @@ async function serveStatic(pathname: string, res: import("node:http").ServerResp
     throw new BadRequest("malformed percent-encoding");
   }
   const rootDir = path.resolve(CLIENT_DIR);
-  const file = path.resolve(rootDir, decoded);
+  const file = path.resolve(rootDir, `.${decoded}`);
   if (!file.startsWith(rootDir + path.sep)) return false;
   const info = await stat(file).catch(() => null);
   if (!info?.isFile()) return false;

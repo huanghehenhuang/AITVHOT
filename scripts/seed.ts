@@ -1,7 +1,7 @@
-// Seeds a fresh site from the industry pack: the topics (industry/topics.json, updated in place) and
-// the sources (industry/sources.json, preserving existing IDs and skipping address aliases).
-// Re-runnable: node --env-file=.env scripts/seed.ts; --dry-run only reads, --sources-only skips
-// topic writes, --disabled stages new sources without enabling collection.
+// Seeds a fresh site's sources from the industry pack (industry/sources.json, preserving existing IDs
+// and skipping address aliases). Topics come from industry/topics.json at startup, so nothing seeds them.
+// Re-runnable: node --env-file=.env scripts/seed.ts; --dry-run only reads, --disabled stages new sources
+// without enabling collection.
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { REPO_ROOT } from "@aihot/backend/config";

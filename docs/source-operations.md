@@ -4,6 +4,8 @@
 
 ## 已验证的免费来源库
 
+2026-10-13 新增并启用 20 个公开 RSS 入口，配置库现有 251 个入口。最终过滤规则、真实解析结果和运行数据库导入情况见 [本轮扩展记录](source-expansion-20261013.md)；逐源证据见 [source-expansion-20261013-checks.json](source-expansion-20261013-checks.json)。其中 6 个入口在收紧过滤后当前没有近期匹配，保留监测后续更新，不计作近期有效产出。
+
 2026-10-09 继续扩容后，`industry/sources.json` 共 231 个入口（23 → 122 → 162 → 197 → 218 → 231，本轮新增 13 个短剧相关入口；当前 main 为 12 个）。清单分为 39 个官方公告与产品博客、31 个作者模型库、27 个开源软件发布订阅、9 个创作者/教程与作品入口、11 个国内媒体/公众号公开订阅、45 个媒体与社区入口，以及 69 个短剧、漫剧与竖屏剧产业入口；216 个参与精选，15 个日常版本更新入口仅作热度证据。
 
 完整入口、最近匹配日期、近 30 天列表条目数与复查命令见 [source-catalog.md](source-catalog.md)，短剧来源及日期口径见 [short-drama-sources.md](short-drama-sources.md)，逐源解析记录见 [source-checks.json](source-checks.json)。这些是配置与各来源最近一次 HTTP 列表验证，不是已经部署的来源数、日均产出或精选成功率；不包含只存在于线上数据库的 X、公众号等来源。
@@ -17,18 +19,18 @@ RSS/Atom、普通 HTML 和公开 JSON 列表直接读取，不配置付费渲染
 部署包含这些配置的版本后，在后端运行环境先做只读预览：
 
 ```bash
-node --env-file-if-exists=.env scripts/seed.ts --sources-only --dry-run
+node --env-file-if-exists=.env scripts/seed.ts --dry-run
 ```
 
-`--dry-run` 只读数据库，列出将添加的来源、保留的现有 ID 和跳过的地址别名，不写主题、来源或模型目录，不采集、不调用付费 API 或模型。预览是当时的快照；正式导入会在事务中重新读取、判重，并与后台创建/改地址共用同一把锁。
+`--dry-run` 只读数据库，列出将添加的来源、保留的现有 ID 和跳过的地址别名，不写来源，不采集、不调用付费 API 或模型。预览是当时的快照；正式导入会在事务中重新读取、判重，并与后台创建/改地址共用同一把锁。
 
 如需先审阅来源质量，可将新源以暂停状态导入：
 
 ```bash
-node --env-file-if-exists=.env scripts/seed.ts --sources-only --disabled
+node --env-file-if-exists=.env scripts/seed.ts --disabled
 ```
 
-`--disabled` 只影响本次新增来源；已有来源的启停、频率、配置、名称和归属保持原样。随后在后台试抓并按需要启用。若直接启用新来源，执行 `scripts/seed.ts --sources-only`；不加 `--sources-only` 的默认 seed 仍会同步主题与模型目录。重复执行不会启用此前已暂停的来源。
+`--disabled` 只影响本次新增来源；已有来源的启停、频率、配置、名称和归属保持原样。随后在后台试抓并按需要启用。直接启用新来源就不加 `--disabled`。`scripts/seed.ts` 只处理来源：主题在 `industry/topics.json` 里维护，模型目录已随模型榜一起移出框架。重复执行不会启用此前已暂停的来源。
 
 导入按 ID 优先保留，按后台同类地址/账号规则跳过别名，含 URL 参数排序、跟踪参数、www/协议归一和 Jina 包装。不同采集种类、跳转前后的不同地址、同一文章的不同发布渠道不会仅凭这次检查全部识别；不删除旧源，也不会强制覆盖手工过滤规则。同 ID 的新默认过滤和归属应在后台对照清单更新，`seed` 会继续保留线上配置。新增默认来源已统一同一厂商的 `owner_entity_id`，已有官方源如果为空，可在后台核对，避免博客、模型库和发布日志贡献重复热度。
 
