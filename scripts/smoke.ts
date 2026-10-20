@@ -56,6 +56,12 @@ async function check(path: string, expect: (res: Response, body: string) => stri
 const htmlName = SITE.name.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
 for (const path of PAGES) await check(path, (_res, body) => (body.includes(SITE.name) || body.includes(htmlName) ? null : `the page does not name ${SITE.name}`));
 for (const [path, type] of MACHINE) await check(path, (res) => (type.test(res.headers.get("content-type") ?? "") ? null : `content-type ${res.headers.get("content-type")}`));
+// The stylesheet the page names must actually be served. A rejected static path leaves every page
+// answering 200 while its CSS and JS sit at 404, which no fixed-path check above would notice.
+const home = await get("/");
+const asset = (await home.text()).match(/\/assets\/[^"'\\]+\.css/)?.[0];
+if (asset) await check(asset, (res) => (/^text\/css/.test(res.headers.get("content-type") ?? "") ? null : `content-type ${res.headers.get("content-type")}`));
+else { console.log("✗ /  the page names no built stylesheet"); failed += 1; }
 // MCP: the handshake answers with the site's server name.
 const mcp = await get("/api/mcp", {
   method: "POST",
