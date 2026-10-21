@@ -39,6 +39,8 @@
 
 短名称可用 `requireWords`，例如 `{ "requireMarkers": ["人工智能", "generative"], "requireWords": ["ai", "udio"] }`。两个列表合起来至少命中一项即可；`requireWords` 按 ASCII 字母、数字和下划线判断词边界，不区分大小写，支持英文名称旁紧接中文。`AI影视`、`Udio 2.0` 可以匹配，`air`、`paid`、`audio` 不会误匹配。词列表必须非空且仅包含 ASCII 字母、数字、连字符或下划线；字面关键词仍沿用原有子串语义。
 
+部分创作者和项目周报的标题/摘要不描述主题，但订阅已附上完整文章。可显式设置 `ingestNoiseFilter.includeBodyForTopic: true`，让 `bodyStatus: "ok"` 的已提供正文也参与必需关键词匹配；不额外抓取正文、不使用 pending 正文，未启用的来源保持原行为。排除词和豁免词继续只看标题/摘要，正文不能绕过标题广告排除或类别规则。这项设置只决定主题召回，内容仍需通过模型领域与质量筛选。
+
 ### web_list
 
 支持普通 CSS 选择器，`div` 列表也能采集。关键是 `itemSelector` 要选中**每条新闻**，而不是包住所有新闻的容器。例如：
@@ -119,6 +121,7 @@
 - 如果网站用 `#/news/文章ID` 等片段路由区分文章，显式设 `preserveUrlFragment: true`，采集和入库判重会保留片段；普通页面锚点默认不计为独立文章。
 - 日期建议返回带时区的 ISO 字符串；数字时间戳分别设 `publishedAtUnit: "epoch_s"`（秒）或 `"epoch_ms"`（毫秒），`20261001` 这类日期设 `"yyyymmdd"`。
 - 同一字段混用毫秒时间戳和 ISO 字符串时，显式设 `publishedAtUnit: "epoch_ms_or_iso"`（例如 MiniMax 新闻接口）；原数字单位不自动改变含义。
+- 电子表格整日序号使用 `publishedAtUnit: "excel_days"`（例如 Adobe 公开博客索引的 `date`）；`46288` 对应 `2026-09-23`，按 UTC 零点表示日历日期。此格式只接受整数且必须大于 60，拒绝 Excel 虚构的 `1900-02-29` 和带小数的时间值；不使用索引的 `lastModified` 代替发布日期。
 - 官网将列表嵌在 HTML 时，`mode: "html_json_key"` 配合 `jsonKey` 可读 JSON script 或 Next.js Flight 中的完整数组（包括条目内嵌套数组）；`html_window_var` 配合 `windowVar` 读窗口变量。它们读取原始响应中的公开数据，不运行 JavaScript，不解析需要后续请求的 Flight 引用。
 - 缺少标题或无法生成链接的条目会跳过。非空数组全部映射失败时，会报 `no items mapped (check title/url paths)`；路径不是数组时，会报 `items path did not resolve to an array`。
 

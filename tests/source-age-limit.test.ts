@@ -12,7 +12,22 @@ const T = tag();
 const now = Date.now();
 const date = (days: number) => new Date(now - days * 86400_000).toUTCString();
 const server = http.createServer((req, res) => {
-  if (req.url === "/detail-recent") {
+  const path = new URL(req.url ?? "/", "http://localhost").pathname;
+  if (path === "/detail-old") {
+    res.setHeader("Content-Type", "text/html");
+    res.end(`<html><head><meta property="article:published_time" content="${new Date(now - 40 * 86400_000).toISOString()}"></head><body><h1>Old article</h1></body></html>`);
+    return;
+  }
+  if (path === "/undated-details") {
+    const port = (server.address() as { port: number }).port;
+    res.setHeader("Content-Type", "application/rss+xml");
+    res.end(`<rss version="2.0"><channel><title>News</title>
+      <item><title>Undated old article</title><link>http://127.0.0.1:${port}/detail-old?enriched=${T}</link></item>
+      <item><title>Undated recent article</title><link>http://127.0.0.1:${port}/detail-recent?enriched=${T}</link></item>
+      </channel></rss>`);
+    return;
+  }
+  if (path === "/detail-recent") {
     res.setHeader("Content-Type", "text/html");
     res.end(`<html><body><time datetime="${new Date(now - 2 * 86400_000).toISOString()}">Recent</time></body></html>`);
     return;
@@ -71,6 +86,17 @@ test("an unreliable listing date cannot discard an article whose authoritative d
   assert.equal((await collectSource(id)).created, 1);
   const [row] = await sql<{ published_at: Date }[]>`SELECT published_at FROM articles WHERE source_id = ${id}`;
   assert.equal(row!.published_at.getTime(), now - 2 * 86400_000);
+});
+
+test("a date window also rejects old dates filled from ordinary detail metadata on every collection", async () => {
+  const id = `age-enriched-${T}`;
+  const settings = { feedUrl: `${root}/undated-details`, maxItemAgeDays: 30, detail: { maxFetches: 2 } };
+  await sql`INSERT INTO sources (id, name, kind, config) VALUES (${id}, ${id}, 'rss', ${sql.json(settings)})`;
+  assert.equal((await collectSource(id)).created, 1);
+  assert.equal((await collectSource(id)).created, 0);
+  const rows = await sql<{ title: string; published_at: Date }[]>`SELECT title, published_at FROM articles WHERE source_id = ${id}`;
+  assert.deepEqual(rows.map(row => row.title), ["Undated recent article"]);
+  assert.equal(rows[0]!.published_at.getTime(), now - 2 * 86400_000);
 });
 
 test("invalid date-window values are rejected instead of silently disabling the limit", () => {

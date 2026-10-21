@@ -8,6 +8,7 @@ import { after, test } from "node:test";
 import { config } from "@aihot/backend/config";
 import { extractFromUrl, pageFetchable, readable } from "@aihot/backend/content/extract";
 import { fetchRss } from "@aihot/backend/sources/rss";
+import { fetchJsonList } from "@aihot/backend/sources/json-list";
 
 const { MockAgent, getGlobalDispatcher, setGlobalDispatcher } = createRequire(new URL("../packages/backend/package.json", import.meta.url))("undici");
 const originalDispatcher = getGlobalDispatcher();
@@ -27,7 +28,7 @@ after(async () => {
 
 const watch = "https://www.youtube.com/watch?v=COJAZQM1aeQ";
 const shorts = "https://www.youtube.com/shorts/FByNauagcbY";
-const videoUrls = [watch, shorts, "https://m.youtube.com/watch?v=COJAZQM1aeQ", "https://youtu.be/COJAZQM1aeQ", "https://www.youtube.com/embed/COJAZQM1aeQ", "https://vimeo.com/1105244173", "https://player.vimeo.com/video/1105244173"];
+const videoUrls = [watch, shorts, "https://m.youtube.com/watch?v=COJAZQM1aeQ", "https://youtu.be/COJAZQM1aeQ", "https://www.youtube.com/embed/COJAZQM1aeQ", "https://vimeo.com/1105244173", "https://player.vimeo.com/video/1105244173", "https://www.bilibili.com/video/BV1x7h46eEqY/", "https://m.bilibili.com/video/av123/"];
 const playerText = "Back Skip navigation Search Search with your voice Sign in Video Build an App With Claude Design Tap to unmute Watch later Share Copy link Info Shopping If playback does not begin shortly, try restarting your device. Video unavailable. You are signed out. Videos you watch may be added to the TV watch history and influence TV recommendations. Cancel Confirm. I Tried The LAZIEST Way to Make Money With AI. ";
 const playerHtml = `<html><head><title>Watch video</title></head><body><article><p>${playerText.repeat(3)}</p></article></body></html>`;
 const feedBody = "The publisher supplied an actual explanatory text alongside this video. ".repeat(8);
@@ -43,12 +44,21 @@ const fixtures: Record<string, string> = {
 };
 for (const [path, xml] of Object.entries(fixtures)) mock.get("https://publisher.example").intercept({ path }).reply(200, xml, { headers: { "content-type": "application/atom+xml" } }).persist();
 let videoReads = 0;
-for (const origin of ["https://www.youtube.com", "https://m.youtube.com", "https://youtu.be", "https://vimeo.com", "https://player.vimeo.com"]) {
+for (const origin of ["https://www.youtube.com", "https://m.youtube.com", "https://youtu.be", "https://vimeo.com", "https://player.vimeo.com", "https://www.bilibili.com", "https://m.bilibili.com"]) {
   mock.get(origin).intercept({ path: /.*/ }).reply(() => { videoReads++; return { statusCode: 200, data: playerHtml, responseOptions: { headers: { "content-type": "text/html" } } }; }).persist();
 }
 mock.get("https://publisher.example").intercept({ path: "/video-link" }).reply(302, "", { headers: { location: watch } });
 
 const read = async (path: string, summaryIsBody = false) => (await fetchRss({ id: "video-fixture", kind: "rss", participation_mode: "editorial", config: { feedUrl: "https://publisher.example" + path, summaryIsBody } } as never)).candidates;
+
+test("JSON video upload descriptions stay excerpts and cannot trigger article body extraction", async () => {
+  const url = "https://www.bilibili.com/video/BV1x7h46eEqY/";
+  mock.get("https://publisher.example").intercept({ path: "/uploads.json" }).reply(200, JSON.stringify([{ title: "ComfyUI tutorial", url, description: feedBody }]), { headers: { "content-type": "application/json" } });
+  const [item] = await fetchJsonList({ id: "bili-json", kind: "json_list", config: { mode: "json_api", url: "https://publisher.example/uploads.json", itemsPath: "", titlePaths: ["title"], summaryPaths: ["description"], urlTemplate: "{raw:url}", summaryIsBody: true } } as never);
+  assert.equal(item!.excerpt, feedBody.trim());
+  assert.equal(item!.bodyText, null);
+  assert.equal(item!.bodyStatus, "none");
+});
 
 test("Atom and RSS Media descriptions survive as excerpts without pretending to be video body text", async () => {
   const items = await read("/media.xml");

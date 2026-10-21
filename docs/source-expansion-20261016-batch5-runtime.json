@@ -1,0 +1,167 @@
+{
+  "at": "2026-10-16T01:15:36.903Z",
+  "pack": 412,
+  "totals": [
+    {
+      "total": 431,
+      "enabled": 429
+    }
+  ],
+  "sources": [
+    {
+      "id": "web_list-expand11-getopenscreen-openscreen",
+      "name": "openscreen · 公开创作项目发布",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:12:51.550Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand11-zenstory-ai-drama-skills",
+      "name": "drama-skills · 公开创作项目发布",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:12:55.357Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand11-xn--sd3a-com",
+      "name": "诀.com · 创作开源项目拆解",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:12:40.057Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand11-6cef434b771dd75a91864b2e699a622cb4e3eb33",
+      "name": "有机大橘子",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:12:41.816Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand11-bitshovel-site",
+      "name": "BitShovel · 中文AI视频与图像创作案例",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:12:43.670Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand11-swotatmk-infinite-creation",
+      "name": "infinite-creation · 公开创作项目发布",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:12:47.205Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand11-baoshare",
+      "name": "AI资源分享站 · 开源创作项目分享",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:12:58.284Z",
+      "last_error": null
+    }
+  ],
+  "articles": [
+    {
+      "source_id": "rss-expand11-6cef434b771dd75a91864b2e699a622cb4e3eb33",
+      "total": 1,
+      "recent": 1,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand11-bitshovel-site",
+      "total": 1,
+      "recent": 1,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand11-xn--sd3a-com",
+      "total": 2,
+      "recent": 2,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand11-baoshare",
+      "total": 2,
+      "recent": 2,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand11-getopenscreen-openscreen",
+      "total": 3,
+      "recent": 3,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand11-swotatmk-infinite-creation",
+      "total": 2,
+      "recent": 2,
+      "undated": 0,
+      "pending": 2
+    },
+    {
+      "source_id": "web_list-expand11-zenstory-ai-drama-skills",
+      "total": 3,
+      "recent": 3,
+      "undated": 0,
+      "pending": 0
+    }
+  ],
+  "pubs": [
+    {
+      "source_id": "rss-expand11-6cef434b771dd75a91864b2e699a622cb4e3eb33",
+      "public": 1,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand11-bitshovel-site",
+      "public": 1,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand11-xn--sd3a-com",
+      "public": 2,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand11-baoshare",
+      "public": 2,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand11-getopenscreen-openscreen",
+      "public": 3,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand11-zenstory-ai-drama-skills",
+      "public": 3,
+      "selected": 0
+    }
+  ],
+  "pending": [
+    {
+      "id": "xpu4g7z2je3q8jv333ovuohat",
+      "source_id": "web_list-expand11-swotatmk-infinite-creation",
+      "processing_retry_at": "2026-10-16T01:22:49.967Z",
+      "processing_attempts": 1,
+      "stage": "extract_retry"
+    },
+    {
+      "id": "e2lmqzottv5gidwybes659wc7",
+      "source_id": "web_list-expand11-swotatmk-infinite-creation",
+      "processing_retry_at": "2026-10-16T01:22:50.201Z",
+      "processing_attempts": 1,
+      "stage": "extract_retry"
+    }
+  ]
+}

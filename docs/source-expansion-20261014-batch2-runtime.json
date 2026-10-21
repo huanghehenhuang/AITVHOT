@@ -1,0 +1,206 @@
+{
+  "checkedAt": "2026-10-14T00:55:22.808Z",
+  "totals": [
+    {
+      "total": 312,
+      "enabled": 310
+    }
+  ],
+  "newSources": [
+    {
+      "id": "json-expand3-adobe-blog",
+      "name": "Adobe · 官方创作与影视博客",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:08.524Z",
+      "articles": 3,
+      "recentarticles": 3
+    },
+    {
+      "id": "json-hf-expand3-fastvideo",
+      "name": "FastVideo 视频模型 · 模型发布",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:21.200Z",
+      "articles": 2,
+      "recentarticles": 2
+    },
+    {
+      "id": "json-sohu-expand3-chuanmeidayan",
+      "name": "视听指南 · 搜狐公开专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:11.107Z",
+      "articles": 2,
+      "recentarticles": 2
+    },
+    {
+      "id": "json-sohu-expand3-lanjing",
+      "name": "蓝鲸新闻 · 搜狐公开专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:11.449Z",
+      "articles": 1,
+      "recentarticles": 1
+    },
+    {
+      "id": "json-sohu-expand3-wenyushangye",
+      "name": "文娱商业观察 · 搜狐公开专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:09.958Z",
+      "articles": 1,
+      "recentarticles": 1
+    },
+    {
+      "id": "json-sohu-expand3-xinshang",
+      "name": "新熵 · 搜狐公开专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:10.342Z",
+      "articles": 2,
+      "recentarticles": 2
+    },
+    {
+      "id": "rss-expand3-descript-changelog",
+      "name": "Descript · 官方产品更新",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:32.238Z",
+      "articles": 2,
+      "recentarticles": 2
+    },
+    {
+      "id": "web-expand3-aitnt",
+      "name": "AITNT · AI创作资讯",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:14.899Z",
+      "articles": 1,
+      "recentarticles": 1
+    },
+    {
+      "id": "web-expand3-autodesk-news-html",
+      "name": "Autodesk · 官方影视与动画新闻",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:20.044Z",
+      "articles": 1,
+      "recentarticles": 1
+    },
+    {
+      "id": "web-expand3-chinaz",
+      "name": "站长之家 · AI影视与短剧产业",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:12.520Z",
+      "articles": 2,
+      "recentarticles": 2
+    },
+    {
+      "id": "web-expand3-descript-blog",
+      "name": "Descript · 官方创作者博客",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:54:40.438Z",
+      "articles": 3,
+      "recentarticles": 1
+    },
+    {
+      "id": "web-expand3-huxiu",
+      "name": "虎嗅 · AI影视与短剧产业",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:54:41.930Z",
+      "articles": 1,
+      "recentarticles": 1
+    },
+    {
+      "id": "web-expand3-synthesia-blog",
+      "name": "Synthesia · 官方博客",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:26.110Z",
+      "articles": 3,
+      "recentarticles": 3
+    },
+    {
+      "id": "web-expand3-tvoao-comic",
+      "name": "中广互联 · 漫剧",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:26.558Z",
+      "articles": 3,
+      "recentarticles": 3
+    },
+    {
+      "id": "web-expand3-tvoao-short",
+      "name": "中广互联 · 短剧",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:26.528Z",
+      "articles": 3,
+      "recentarticles": 3
+    },
+    {
+      "id": "web-expand3-wellsaid-blog",
+      "name": "WellSaid · 官方博客",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:54:38.789Z",
+      "articles": 8,
+      "recentarticles": 1
+    },
+    {
+      "id": "web-expand3-worldlabs",
+      "name": "World Labs · 官方研究与公告",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T00:45:22.133Z",
+      "articles": 1,
+      "recentarticles": 1
+    }
+  ],
+  "processing": [
+    {
+      "processing_state": "analyzed",
+      "count": 35
+    },
+    {
+      "processing_state": "blocked",
+      "count": 3
+    },
+    {
+      "processing_state": "new",
+      "count": 1
+    }
+  ],
+  "publications": [
+    {
+      "eligible": 27,
+      "selected": 6
+    }
+  ],
+  "withdrawn": [
+    {
+      "count": 9
+    }
+  ]
+}

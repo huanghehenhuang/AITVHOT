@@ -1,0 +1,556 @@
+{
+  "checkedAt": "2026-10-14T00:11:20.350Z",
+  "sources": [
+    {
+      "id": "rss-expand2-politicsofai",
+      "name": "The Politics of AI Filmmaking",
+      "url": "https://politicsofai.substack.com/feed",
+      "items": 20,
+      "scoped": 14,
+      "recent30Days": 8,
+      "latest": "2026-10-08T18:15:02.000Z",
+      "sample": [
+        {
+          "title": "Christopher Nolan Says AI Is Just a Tool. But Is That the Right Question?",
+          "url": "https://politicsofai.substack.com/p/christopher-nolan-says-ai-is-just",
+          "publishedAt": "2026-10-08T18:15:02.000Z"
+        },
+        {
+          "title": "THE REAL LIMITATION OF AI ISN’T INTELLIGENCE",
+          "url": "https://politicsofai.substack.com/p/the-real-limitation-of-ai-isnt-intelligence",
+          "publishedAt": "2026-10-03T11:01:41.000Z"
+        },
+        {
+          "title": "What James Cameron Sees in AI",
+          "url": "https://politicsofai.substack.com/p/what-james-cameron-sees-in-ai",
+          "publishedAt": "2026-10-01T18:15:49.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-theaipixel",
+      "name": "The AI Pixel",
+      "url": "https://theaipixel.substack.com/feed",
+      "items": 20,
+      "scoped": 15,
+      "recent30Days": 7,
+      "latest": "2026-10-12T15:00:43.000Z",
+      "sample": [
+        {
+          "title": "🎬 Nicolas Cage to Amazon: \"I am not an AI-friendly actor\"",
+          "url": "https://theaipixel.substack.com/p/nicolas-cage-to-amazon-i-am-not-an",
+          "publishedAt": "2026-10-12T15:00:43.000Z"
+        },
+        {
+          "title": "🎬 Google Just Cut AI Image Prices in Half",
+          "url": "https://theaipixel.substack.com/p/google-just-cut-ai-image-prices-in",
+          "publishedAt": "2026-10-08T15:36:58.000Z"
+        },
+        {
+          "title": "🎬 The Internet's Biggest Creators Are Asking to Slow Down AI",
+          "url": "https://theaipixel.substack.com/p/the-internets-biggest-creators-are",
+          "publishedAt": "2026-10-05T15:03:34.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-tarynoneill",
+      "name": "The New Protagonists",
+      "url": "https://tarynoneill.substack.com/feed",
+      "items": 20,
+      "scoped": 1,
+      "recent30Days": 1,
+      "latest": "2026-09-25T19:10:36.000Z",
+      "sample": [
+        {
+          "title": "Future Film Fridays 09.25.26 🎬",
+          "url": "https://tarynoneill.substack.com/p/future-film-fridays-092526",
+          "publishedAt": "2026-09-25T19:10:36.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-labthoughts",
+      "name": "Lab Thoughts",
+      "url": "https://labthoughts.substack.com/feed",
+      "items": 20,
+      "scoped": 8,
+      "recent30Days": 1,
+      "latest": "2026-10-06T03:33:11.000Z",
+      "sample": [
+        {
+          "title": "Which brands belong in microdramas?",
+          "url": "https://labthoughts.substack.com/p/which-brands-belong-in-microdramas",
+          "publishedAt": "2026-10-06T03:33:11.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-keepitmag",
+      "name": "Keep It Magazine",
+      "url": "https://keepitmag.substack.com/feed",
+      "items": 7,
+      "scoped": 1,
+      "recent30Days": 1,
+      "latest": "2026-09-22T19:41:22.000Z",
+      "sample": [
+        {
+          "title": "Microdramas: the rise of 90-second stories",
+          "url": "https://keepitmag.substack.com/p/micro-dramas-the-rise-of-90-second-stories",
+          "publishedAt": "2026-09-22T19:41:22.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-motionographer",
+      "name": "Motionographer",
+      "url": "https://motionographer.com/feed/",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-07T14:03:58.000Z",
+      "sample": [
+        {
+          "title": "RevThink’s Revolve Accelerator Explores What Clients Value in the Age of AI",
+          "url": "https://motionographer.com/news/revthink-revolve-accelerator-ai-creative-business/",
+          "publishedAt": "2026-10-07T14:03:58.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-tvtechnology",
+      "name": "TV Technology",
+      "url": "https://www.tvtechnology.com/feeds/all",
+      "items": 50,
+      "scoped": 5,
+      "recent30Days": 5,
+      "latest": "2026-10-13T13:36:03.000Z",
+      "sample": [
+        {
+          "title": "Apple Makes Siri AI the Focus of its New Apple TV 4K",
+          "url": "https://www.tvtechnology.com/business/apple-makes-siri-ai-the-focus-of-its-new-apple-tv-4k",
+          "publishedAt": "2026-10-13T13:36:03.000Z"
+        },
+        {
+          "title": "Special Report: California’s AI Warning to Broadcasters",
+          "url": "https://www.tvtechnology.com/insights/opinion/special-report-californias-ai-warning-to-broadcasters",
+          "publishedAt": "2026-10-09T13:46:44.000Z"
+        },
+        {
+          "title": "Mediagenix Bows AI Content-Aware Scheduling",
+          "url": "https://www.tvtechnology.com/platform/streaming/mediagenix-bows-ai-content-aware-scheduling",
+          "publishedAt": "2026-10-08T14:45:42.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-tvbeurope",
+      "name": "TVBEurope",
+      "url": "https://www.tvbeurope.com/feed",
+      "items": 20,
+      "scoped": 3,
+      "recent30Days": 3,
+      "latest": "2026-10-12T10:39:32.000Z",
+      "sample": [
+        {
+          "title": "Making history with AI",
+          "url": "https://www.tvbeurope.com/artificial-intelligence/making-history-with-ai",
+          "publishedAt": "2026-10-12T10:39:32.000Z"
+        },
+        {
+          "title": "Mediagenix debuts AI-driven Context-Aware Scheduling to anticipate viewer behaviour",
+          "url": "https://www.tvbeurope.com/media-consumption/mediagenix-debuts-ai-driven-context-aware-scheduling-to-anticipate-viewer-behaviour",
+          "publishedAt": "2026-10-09T09:43:59.000Z"
+        },
+        {
+          "title": "HbbTV Symposium to explore AI-powered user interfaces, personalisation",
+          "url": "https://www.tvbeurope.com/business/hbbtv-symposium-to-explore-ai-powered-user-interfaces-personalisation",
+          "publishedAt": "2026-10-09T08:18:17.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-sportsvideo",
+      "name": "Sports Video Group",
+      "url": "https://www.sportsvideo.org/feed/",
+      "items": 50,
+      "scoped": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-12T15:07:11.000Z",
+      "sample": [
+        {
+          "title": "Beyond the Hype: Exploring Real-World Applications of AI in Cloud-Based Live Sports Production with the NBA, AWS, Spiideo, and TwelveLabs",
+          "url": "https://www.sportsvideo.org/2026/10/12/beyond-the-hype-exploring-real-world-applications-of-ai-in-cloud-based-live-sports-production-with-the-nba-aws-spiideo-and-twelvelabs/",
+          "publishedAt": "2026-10-12T15:07:11.000Z"
+        },
+        {
+          "title": "AI Paving the Way to Multi-Language Bundesliga World Feeds in New PoC",
+          "url": "https://www.svgeurope.org/blog/headlines/ai-paving-the-way-to-multi-language-bundesliga-world-feeds-in-new-poc/#new_tab",
+          "publishedAt": "2026-10-09T13:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-variety-all",
+      "name": "Variety 产业新闻",
+      "url": "https://variety.com/feed/",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-13T22:24:00.000Z",
+      "sample": [
+        {
+          "title": "‘Just Dance: Decades of Hits’ Costume Designer Breaks Down the New Game’s Look and Not Using AI: ‘It’s Our Art’",
+          "url": "https://variety.com/2026/artisans/news/just-dance-decades-of-hits-no-ai-1236910597/",
+          "publishedAt": "2026-10-13T22:24:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-screenvoice",
+      "name": "ScreenVoice",
+      "url": "https://www.screenvoice.cz/en/feed/",
+      "items": 18,
+      "scoped": 3,
+      "recent30Days": 3,
+      "latest": "2026-10-08T07:30:06.000Z",
+      "sample": [
+        {
+          "title": "HBBTV SYMPOSIUM 2026 TO FOCUS ON AUDIENCE MEASUREMENT AND ADDRESSABLE ADVERTISING",
+          "url": "https://www.screenvoice.cz/en/news/hbbtv-symposium-2026-to-focus-on-audience-measurement-and-addressable-advertising/",
+          "publishedAt": "2026-10-08T07:30:06.000Z"
+        },
+        {
+          "title": "MARKETERS ARE LOOKING FOR BUSINESS BENEFITS IN AI, BUT DO NOT YET SEE ANY SAVINGS",
+          "url": "https://www.screenvoice.cz/en/news/marketers-are-looking-for-business-benefits-in-ai-but-do-not-yet-see-any-savings/",
+          "publishedAt": "2026-10-08T07:00:19.000Z"
+        },
+        {
+          "title": "REPORT: 83% OF UK ADVERTISERS USING AI",
+          "url": "https://www.screenvoice.cz/en/news/report-83-of-uk-advertisers-using-ai/",
+          "publishedAt": "2026-10-06T07:35:11.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-theankler",
+      "name": "The Ankler",
+      "url": "https://theankler.com/feed",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-10T05:22:21.000Z",
+      "sample": [
+        {
+          "title": "Bloys’ HBO Spree; the Holland Backstory; Dana & Josh’s Mission Impossible",
+          "url": "https://theankler.com/bloys-hbo-spree-the-holland-backstory-dana-joshs-mission-impossible/",
+          "publishedAt": "2026-10-10T05:22:21.000Z"
+        }
+      ]
+    },
+    {
+      "id": "json-sohu-expand2-qbitai",
+      "name": "量子位 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/610300",
+      "items": 20,
+      "scoped": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-13T11:12:04.000Z",
+      "sample": [
+        {
+          "title": "iPhone断网跑35B多模态！国产开源新模型，只占3G内存",
+          "url": "https://m.sohu.com/a/1087302317_610300",
+          "publishedAt": "2026-10-13T11:12:04.000Z"
+        },
+        {
+          "title": "AI从「造图」卷到「造世界」，这次真有点科幻了。。。",
+          "url": "https://m.sohu.com/a/1086721582_610300",
+          "publishedAt": "2026-10-12T07:12:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "json-sohu-expand2-jiqizhixin",
+      "name": "机器之心Pro · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/129720",
+      "items": 20,
+      "scoped": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-13T02:21:34.000Z",
+      "sample": [
+        {
+          "title": "关停半年后，OpenAI要复活Sora？",
+          "url": "https://m.sohu.com/a/1087048751_129720",
+          "publishedAt": "2026-10-13T02:21:34.000Z"
+        },
+        {
+          "title": "看着很真，细看不对？文生图「世界一致性」测评来了",
+          "url": "https://m.sohu.com/a/1086718135_129720",
+          "publishedAt": "2026-10-12T08:14:17.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-envato",
+      "name": "Envato 官方博客",
+      "url": "https://elements.envato.com/learn/feed",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-02T02:21:55.000Z",
+      "sample": [
+        {
+          "title": "FLUX 3 Image is now available on Envato’s AI image tool",
+          "url": "https://elements.envato.com/learn/flux-3-image-envato-ai",
+          "publishedAt": "2026-10-02T02:21:55.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-respeecher",
+      "name": "Respeecher 官方博客",
+      "url": "https://www.respeecher.com/blog/rss.xml",
+      "items": 10,
+      "scoped": 7,
+      "recent30Days": 1,
+      "latest": "2026-10-09T14:20:41.000Z",
+      "sample": [
+        {
+          "title": "How to Write AI Voice Rights Into Actor Contracts (Template Included)",
+          "url": "https://www.respeecher.com/blog/ai-voice-rights-actor-contract-template",
+          "publishedAt": "2026-10-09T14:20:41.000Z"
+        }
+      ]
+    },
+    {
+      "id": "json-hf-expand2-openbmb-minicpm",
+      "name": "OpenBMB MiniCPM 多模态 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=openbmb&search=MiniCPM&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 30,
+      "scoped": 9,
+      "recent30Days": 2,
+      "latest": "2026-10-07T07:07:30.000Z",
+      "sample": [
+        {
+          "title": "openbmb/MiniCPM-V-4.7-35B-A3B",
+          "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
+          "publishedAt": "2026-10-07T07:07:30.000Z"
+        },
+        {
+          "title": "openbmb/MiniCPM-V-4.7-1B",
+          "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-1B",
+          "publishedAt": "2026-10-06T17:40:13.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-aimarketing-story",
+      "name": "AI Marketing for Storytellers",
+      "url": "https://aimarketingforstorytellers.substack.com/feed",
+      "items": 20,
+      "scoped": 7,
+      "recent30Days": 7,
+      "latest": "2026-10-13T17:21:08.000Z",
+      "sample": [
+        {
+          "title": "AI is crushing it on Kickstarter!",
+          "url": "https://aimarketingforstorytellers.substack.com/p/ai-is-crushing-it-on-kickstarter",
+          "publishedAt": "2026-10-13T17:21:08.000Z"
+        },
+        {
+          "title": "Friday = Hands On AI Social Media Training",
+          "url": "https://aimarketingforstorytellers.substack.com/p/friday-hands-on-ai-social-media-training",
+          "publishedAt": "2026-10-08T20:23:07.000Z"
+        },
+        {
+          "title": "If you’re not angry, you’re doing AI wrong.",
+          "url": "https://aimarketingforstorytellers.substack.com/p/if-youre-not-angry-youre-doing-ai",
+          "publishedAt": "2026-10-07T21:46:16.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-danbgoldman",
+      "name": "What’s New in Generative Media",
+      "url": "https://danbgoldman.substack.com/feed",
+      "items": 20,
+      "scoped": 20,
+      "recent30Days": 18,
+      "latest": "2026-10-13T17:15:36.000Z",
+      "sample": [
+        {
+          "title": "Today in Generative Media - 10/13/26",
+          "url": "https://danbgoldman.substack.com/p/today-in-generative-media-101326",
+          "publishedAt": "2026-10-13T17:15:36.000Z"
+        },
+        {
+          "title": "This weekend in Generative Media - 10/12/26",
+          "url": "https://danbgoldman.substack.com/p/this-weekend-in-generative-media-389",
+          "publishedAt": "2026-10-12T15:18:00.000Z"
+        },
+        {
+          "title": "Today in Generative Media - 10/9/26",
+          "url": "https://danbgoldman.substack.com/p/today-in-generative-media-10926",
+          "publishedAt": "2026-10-09T18:30:49.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-videoweek-all",
+      "name": "VideoWeek 广告与视频产业",
+      "url": "https://videoweek.com/feed/",
+      "items": 12,
+      "scoped": 8,
+      "recent30Days": 8,
+      "latest": "2026-10-13T13:45:00.000Z",
+      "sample": [
+        {
+          "title": "AI Agents Democratises Data Access, and Ad Tech Infrastructure Needs to be Ready",
+          "url": "https://videoweek.com/2026/10/13/ai-agents-democratises-data-access-and-ad-tech-infrastructure-needs-to-be-ready/",
+          "publishedAt": "2026-10-13T13:45:00.000Z"
+        },
+        {
+          "title": "Week in Charts: Bending Spoons CEO on AI’s Impact on SaaS, AI Shopping Takes Off in Saudi Arabia and India, and Social Media to Drive Global Ad Spend",
+          "url": "https://videoweek.com/2026/10/13/week-in-charts-bending-spoons-ceo-on-ais-impact-on-saas-ai-shopping-takes-off-in-saudi-arabia-and-india-and-social-media-to-drive-global-ad-spend/",
+          "publishedAt": "2026-10-13T13:00:50.000Z"
+        },
+        {
+          "title": "Publicis CEO Arthur Sadoun Sees Marketers Moving On from “Beauty Contest” Pitches",
+          "url": "https://videoweek.com/2026/10/13/publicis-ceo-arthur-sadoun-sees-marketers-moving-on-from-beauty-contest-pitches/",
+          "publishedAt": "2026-10-13T11:28:22.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-produ-all",
+      "name": "PRODU 产业新闻",
+      "url": "https://www.produ.com/feed/",
+      "items": 20,
+      "scoped": 3,
+      "recent30Days": 3,
+      "latest": "2026-10-13T21:57:06.000Z",
+      "sample": [
+        {
+          "title": "RATINGS: Argentina top 10 programas TV abierta del 5 al 10 de octubre",
+          "url": "https://www.produ.com/television/noticias/ratings-argentina-top-10-programas-tv-abierta-del-5-al-10-de-octubre/",
+          "publishedAt": "2026-10-13T21:57:06.000Z"
+        },
+        {
+          "title": "FIAP Face to Face Webinar: El valor de la IA está en potenciar la creatividad y transformar el negocio publicitario",
+          "url": "https://www.produ.com/mercadeo/noticias/fiap-face-to-face-webinar-el-valor-de-la-ia-esta-en-potenciar-la-creatividad-y-transformar-el-negocio-publicitario/",
+          "publishedAt": "2026-10-13T20:25:10.000Z"
+        },
+        {
+          "title": "Georgie de Barba de Don by Havas México: “Las personas no consumen calendarios editoriales, consumen cultura”",
+          "url": "https://www.produ.com/mercadeo/noticias/georgie-de-barba-de-don-by-havas-mexico-las-personas-no-consumen-calendarios-editoriales-consumen-cultura/",
+          "publishedAt": "2026-10-13T17:56:20.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-c21media",
+      "name": "C21Media",
+      "url": "https://www.c21media.net/feed/",
+      "items": 22,
+      "scoped": 2,
+      "recent30Days": 2,
+      "latest": "2026-10-13T16:50:08.000Z",
+      "sample": [
+        {
+          "title": "Disney bids $20m for Character.ai assets after AI firm files for Chapter 11",
+          "url": "https://www.c21media.net/news/disney-bids-20m-for-character-ai-assets-after-ai-firm-files-for-chapter-11/",
+          "publishedAt": "2026-10-13T16:50:08.000Z"
+        },
+        {
+          "title": "Fox to adapt microdramas into TV series under Hartbeat pact",
+          "url": "https://www.c21media.net/news/fox-to-adapt-microdramas-into-tv-series-under-hartbeat-pact/",
+          "publishedAt": "2026-10-13T16:30:11.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-wavespeed",
+      "name": "WaveSpeedAI 官方博客",
+      "url": "https://wavespeed.ai/blog/rss.xml",
+      "items": 50,
+      "scoped": 5,
+      "recent30Days": 5,
+      "latest": "2026-10-05T00:00:00.000Z",
+      "sample": [
+        {
+          "title": "Holo4 API vs Local Deployment: Which Fits Your Agent?",
+          "url": "https://wavespeed.ai/blog/ai-workflows/holo4-api-vs-local-deployment/",
+          "publishedAt": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "title": "Introducing AI Cinema Studio on WaveSpeedAI: Direct Cinematic AI Video Shots",
+          "url": "https://wavespeed.ai/blog/ai-news/introducing-ai-cinema-studio-on-wavespeedai/",
+          "publishedAt": "2026-10-02T00:00:00.000Z"
+        },
+        {
+          "title": "Generate Fast, Deliver in 4K: Upscale AI Video with Ultimate Video Upscaler",
+          "url": "https://wavespeed.ai/blog/ai-workflows/upscale-ai-video-to-4k-with-ultimate-video-upscaler/",
+          "publishedAt": "2026-10-02T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-pictory",
+      "name": "Pictory 官方博客",
+      "url": "https://pictory.ai/feed",
+      "items": 10,
+      "scoped": 10,
+      "recent30Days": 1,
+      "latest": "2026-09-14T10:39:34.000Z",
+      "sample": [
+        {
+          "title": "How College Path Studio Scaled Learning Content Without Scaling Its Team",
+          "url": "https://pictory.ai/pictory-case-studies/scaling-learning-content",
+          "publishedAt": "2026-09-14T10:39:34.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-futurism",
+      "name": "Futurism",
+      "url": "https://futurism.com/feed",
+      "items": 80,
+      "scoped": 3,
+      "recent30Days": 3,
+      "latest": "2026-10-09T16:04:38.000Z",
+      "sample": [
+        {
+          "title": "Meta Won’t Say If It Violates Its Policies to Upload AI-Generated Videos of Sobbing Little Children Begging for Likes and Follows So They Don’t Get Arrested by Police",
+          "url": "https://futurism.com/artificial-intelligence/meta-facebook-ai-generated-videos-sobbing-children-begging-arrested",
+          "publishedAt": "2026-10-09T16:04:38.000Z"
+        },
+        {
+          "title": "Don’t Want to Spend Time With Your Kids? Train an AI Voice Model of Yourself to Read Them Bedtime Stories",
+          "url": "https://futurism.com/artificial-intelligence/dont-spend-time-with-your-kids-train-ai",
+          "publishedAt": "2026-10-08T20:01:24.000Z"
+        },
+        {
+          "title": "The First Fully AI-Generated Movie to Receive an MPA Rating Is Making a Push for an Academy Award, But We Wouldn’t Hold Our Breath",
+          "url": "https://futurism.com/artificial-intelligence/first-fully-ai-movie-mpa-academy-award",
+          "publishedAt": "2026-10-08T17:04:05.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand2-musictech",
+      "name": "MusicTech",
+      "url": "https://musictech.com/feed/",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-12T09:46:27.000Z",
+      "sample": [
+        {
+          "title": "Man who made $8 million in AI streaming fraud scheme given 18-month prison sentence",
+          "url": "https://musictech.com/news/industry/man-who-made-8-million-in-ai-streaming-fraud-scheme-given-18-month-prison-sentence/",
+          "publishedAt": "2026-10-12T09:46:27.000Z"
+        }
+      ]
+    }
+  ]
+}

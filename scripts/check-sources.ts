@@ -5,7 +5,7 @@ import { assertSupportedConfig } from "@aihot/backend/sources/config-keys";
 import { fetchRss } from "@aihot/backend/sources/rss";
 import { fetchWebList, allowed } from "@aihot/backend/sources/web-list";
 import { fetchJsonList } from "@aihot/backend/sources/json-list";
-import { noiseFiltered } from "@aihot/backend/sources/collect";
+import { noiseFiltered } from "@aihot/backend/sources/filters";
 import { sourceIdentity } from "@aihot/backend/sources/identity";
 import type { Candidate, SourceRow } from "@aihot/backend/sources/types";
 import { closeDb } from "@aihot/backend/db";

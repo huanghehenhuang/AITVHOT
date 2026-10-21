@@ -1,0 +1,366 @@
+{
+  "checkedAt": "2026-10-14T00:43:48.949Z",
+  "sources": [
+    {
+      "id": "json-expand3-adobe-blog",
+      "name": "Adobe · 官方创作与影视博客",
+      "url": "https://blog.adobe.com/en/query-index.json?offset=14000&limit=10000",
+      "items": 996,
+      "scoped": 404,
+      "detailReads": 0,
+      "recent30Days": 4,
+      "latest": "2026-10-02T00:00:00.000Z",
+      "sample": [
+        {
+          "title": "Adobe Premiere expands to Android: Fast, powerful, easy mobile video editing",
+          "url": "https://blog.adobe.com/en/publish/2026/09/22/adobe-premiere-expands-android-fast-powerful-easy-mobile-video-editing",
+          "publishedAt": "2026-09-22T00:00:00.000Z"
+        },
+        {
+          "title": "Adobe completes acquisition of Topaz Labs, bringing Emmy Award-winning AI enhancement capabilities to Adobe’s creative ecosystem",
+          "url": "https://blog.adobe.com/en/publish/2026/09/23/adobe-completes-acquisition-of-topaz-labs",
+          "publishedAt": "2026-09-23T00:00:00.000Z"
+        },
+        {
+          "title": "Introducing interactive editing controls for the Adobe plugin in ChatGPT",
+          "url": "https://blog.adobe.com/en/publish/2026/09/29/openai-devday-2026-introducing-hands-on-editing-adobe-plugin-chatgpt",
+          "publishedAt": "2026-09-29T00:00:00.000Z"
+        }
+      ],
+      "dateFormatComparison": {
+        "parsedBefore": 996,
+        "parsedAfter": 996,
+        "changedDates": 994,
+        "recentBefore": 0,
+        "recentAfter": 4
+      }
+    },
+    {
+      "id": "json-sohu-expand3-wenyushangye",
+      "name": "文娱商业观察 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/99935850",
+      "items": 20,
+      "scoped": 6,
+      "detailReads": 0,
+      "recent30Days": 1,
+      "latest": "2026-10-13T04:44:55.000Z",
+      "sample": [
+        {
+          "title": "AI短剧新战：腾讯快手双线奇袭，谁能撕开字节壁垒？",
+          "url": "https://m.sohu.com/a/1087126919_99935850",
+          "publishedAt": "2026-10-13T04:44:55.000Z"
+        }
+      ]
+    },
+    {
+      "id": "json-sohu-expand3-xinshang",
+      "name": "新熵 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/123977",
+      "items": 20,
+      "scoped": 2,
+      "detailReads": 0,
+      "recent30Days": 2,
+      "latest": "2026-10-13T10:16:33.000Z",
+      "sample": [
+        {
+          "title": "一部AIGC网络故事片 42天分账超千万 AI长篇时代的新打法",
+          "url": "https://m.sohu.com/a/1087279966_123977",
+          "publishedAt": "2026-10-13T10:16:33.000Z"
+        },
+        {
+          "title": "再创佳绩！爱奇艺《灵魂摆渡》“浮生梦”系列AIGC网络故事片分账票房破千万",
+          "url": "https://m.sohu.com/a/1083748174_123977",
+          "publishedAt": "2026-10-03T14:19:07.000Z"
+        }
+      ]
+    },
+    {
+      "id": "json-sohu-expand3-chuanmeidayan",
+      "name": "视听指南 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/697084",
+      "items": 20,
+      "scoped": 4,
+      "detailReads": 0,
+      "recent30Days": 2,
+      "latest": "2026-10-08T15:02:02.000Z",
+      "sample": [
+        {
+          "title": "央卫视和各平台瞄准AI纪录片，有何新趋势？",
+          "url": "https://m.sohu.com/a/1085281682_697084",
+          "publishedAt": "2026-10-08T15:02:02.000Z"
+        },
+        {
+          "title": "广电总局发布“微短剧+”行动计划推荐剧目，释放哪些新信号？",
+          "url": "https://m.sohu.com/a/1080125465_697084",
+          "publishedAt": "2026-09-23T14:31:15.000Z"
+        }
+      ]
+    },
+    {
+      "id": "json-sohu-expand3-lanjing",
+      "name": "蓝鲸新闻 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/250147",
+      "items": 20,
+      "scoped": 1,
+      "detailReads": 0,
+      "recent30Days": 1,
+      "latest": "2026-10-13T12:23:32.000Z",
+      "sample": [
+        {
+          "title": "6月登榜狂揽1926万，如今跌出红果前十，3连板德才股份的AI漫剧故事能否持续",
+          "url": "https://m.sohu.com/a/1087319460_250147",
+          "publishedAt": "2026-10-13T12:23:32.000Z"
+        }
+      ]
+    },
+    {
+      "id": "web-expand3-chinaz",
+      "name": "站长之家 · AI影视与短剧产业",
+      "url": "https://www.chinaz.com/news/",
+      "items": 31,
+      "scoped": 2,
+      "detailReads": 0,
+      "recent30Days": 2,
+      "latest": "2026-10-13T08:17:33.000Z",
+      "sample": [
+        {
+          "title": "荐抖音播放超13亿，“不烧心文学”如何攻占AI漫剧？",
+          "url": "https://www.chinaz.com/2026/1013/1781578.shtml",
+          "publishedAt": "2026-10-13T08:17:10.000Z"
+        },
+        {
+          "title": "荐万物皆可是豪门，越来越癫的AI短剧，到底谁在看？",
+          "url": "https://www.chinaz.com/2026/1012/1781402.shtml",
+          "publishedAt": "2026-10-13T08:17:33.000Z"
+        }
+      ]
+    },
+    {
+      "id": "web-expand3-aitnt",
+      "name": "AITNT · AI创作资讯",
+      "url": "https://www.aitntnews.com/",
+      "items": 30,
+      "scoped": 1,
+      "detailReads": 0,
+      "recent30Days": 1,
+      "latest": "2026-10-13T06:24:00.000Z",
+      "sample": [
+        {
+          "title": "关停半年后，OpenAI要复活Sora？",
+          "url": "https://www.aitntnews.com/newDetail.html?newId=30196",
+          "publishedAt": "2026-10-13T06:24:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "web-expand3-huxiu",
+      "name": "虎嗅 · AI影视与短剧产业",
+      "url": "https://www.huxiu.com/",
+      "items": 36,
+      "scoped": 1,
+      "detailReads": 1,
+      "recent30Days": 1,
+      "latest": "2026-10-09T23:30:18.000Z",
+      "sample": [
+        {
+          "title": "00后“戒断”AI短剧：一个月卸载了5次",
+          "url": "https://www.huxiu.com/article/4896306.html",
+          "publishedAt": "2026-10-09T23:30:18.000Z"
+        }
+      ]
+    },
+    {
+      "id": "web-expand3-autodesk-news-html",
+      "name": "Autodesk · 官方影视与动画新闻",
+      "url": "https://adsknews.autodesk.com/en/",
+      "items": 13,
+      "scoped": 1,
+      "detailReads": 0,
+      "recent30Days": 1,
+      "latest": "2026-10-06T00:00:00.000Z",
+      "sample": [
+        {
+          "title": "MotionMaker in Maya named to Fast Company's 2026 Next Big Things in Tech list",
+          "url": "https://adsknews.autodesk.com/en/news/motionmaker-maya-fast-company-next-big-things-in-tech/",
+          "publishedAt": "2026-10-06T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "json-hf-expand3-fastvideo",
+      "name": "FastVideo 视频模型 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=FastVideo&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 30,
+      "scoped": 18,
+      "detailReads": 0,
+      "recent30Days": 2,
+      "latest": "2026-10-06T01:20:18.000Z",
+      "sample": [
+        {
+          "title": "FastVideo/FastVideo-FastH3-Trim-Comfy",
+          "url": "https://huggingface.co/FastVideo/FastVideo-FastH3-Trim-Comfy",
+          "publishedAt": "2026-10-06T01:20:18.000Z"
+        },
+        {
+          "title": "FastVideo/FastVideo-FastH3-Trim-8-Step",
+          "url": "https://huggingface.co/FastVideo/FastVideo-FastH3-Trim-8-Step",
+          "publishedAt": "2026-10-03T04:58:52.000Z"
+        }
+      ]
+    },
+    {
+      "id": "web-expand3-worldlabs",
+      "name": "World Labs · 官方研究与公告",
+      "url": "https://www.worldlabs.ai/blog",
+      "items": 13,
+      "scoped": 13,
+      "detailReads": 0,
+      "recent30Days": 1,
+      "latest": "2026-09-28T00:00:00.000Z",
+      "sample": [
+        {
+          "title": "World Labs is Joining AMD",
+          "url": "https://www.worldlabs.ai/blog/amd-announcement",
+          "publishedAt": "2026-09-28T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "web-expand3-tvoao-short",
+      "name": "中广互联 · 短剧",
+      "url": "https://www.tvoao.com/TagList/?tag=%E7%9F%AD%E5%89%A7",
+      "items": 15,
+      "scoped": 15,
+      "detailReads": 0,
+      "recent30Days": 15,
+      "latest": "2026-10-13T01:58:00.000Z",
+      "sample": [
+        {
+          "title": "首部互动剧完成备案，剧集体系收编 “影游混合体”",
+          "url": "https://www.tvoao.com/a/225312.aspx",
+          "publishedAt": "2026-10-13T01:58:00.000Z"
+        },
+        {
+          "title": "光明日报：看！竖屏方寸间，文化正澎湃——对我国微短剧产业...",
+          "url": "https://www.tvoao.com/a/225308.aspx",
+          "publishedAt": "2026-10-13T01:52:00.000Z"
+        },
+        {
+          "title": "中文在线携手泰国正大集团加速短剧本土化布局",
+          "url": "https://www.tvoao.com/a/225300.aspx",
+          "publishedAt": "2026-10-13T01:34:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "web-expand3-tvoao-comic",
+      "name": "中广互联 · 漫剧",
+      "url": "https://www.tvoao.com/TagList/?tag=%E6%BC%AB%E5%89%A7",
+      "items": 15,
+      "scoped": 15,
+      "detailReads": 0,
+      "recent30Days": 7,
+      "latest": "2026-10-13T01:40:00.000Z",
+      "sample": [
+        {
+          "title": "AI漫剧概念股，4天3板",
+          "url": "https://www.tvoao.com/a/225302.aspx",
+          "publishedAt": "2026-10-13T01:40:00.000Z"
+        },
+        {
+          "title": "漫剧“四大法王”:番茄、阅文、酱油和昆仑,谁在真赚钱？",
+          "url": "https://www.tvoao.com/a/225291.aspx",
+          "publishedAt": "2026-10-12T01:56:00.000Z"
+        },
+        {
+          "title": "9月AI剧漫剧百强榜：热度峰值创新高！",
+          "url": "https://www.tvoao.com/a/225290.aspx",
+          "publishedAt": "2026-10-12T01:54:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "web-expand3-synthesia-blog",
+      "name": "Synthesia · 官方博客",
+      "url": "https://www.synthesia.io/blog",
+      "items": 27,
+      "scoped": 27,
+      "detailReads": 0,
+      "recent30Days": 6,
+      "latest": "2026-10-13T00:00:00.000Z",
+      "sample": [
+        {
+          "title": "The 5 Best AI Video Tools for Training & Onboarding in 2026",
+          "url": "https://www.synthesia.io/post/best-ai-video-tools-employee-onboarding-training",
+          "publishedAt": "2026-10-13T00:00:00.000Z"
+        },
+        {
+          "title": "The 5 Best Tools for Converting PowerPoint to Video (2026)",
+          "url": "https://www.synthesia.io/post/best-tools-for-converting-powerpoint-to-video",
+          "publishedAt": "2026-10-12T00:00:00.000Z"
+        },
+        {
+          "title": "Synthesia Launches Syren: Video and Motion Graphics from a Single Prompt",
+          "url": "https://www.synthesia.io/post/syren-studio",
+          "publishedAt": "2026-10-09T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "web-expand3-wellsaid-blog",
+      "name": "WellSaid · 官方博客",
+      "url": "https://www.wellsaid.io/blog",
+      "items": 14,
+      "scoped": 14,
+      "detailReads": 8,
+      "recent30Days": 1,
+      "latest": "2026-09-17T23:03:09.120Z",
+      "sample": [
+        {
+          "title": "How to localize marketing campaigns with AI voice",
+          "url": "https://www.wellsaid.io/resources/blog/localize-marketing-campaigns-ai-voice",
+          "publishedAt": "2026-09-17T23:03:09.120Z"
+        }
+      ]
+    },
+    {
+      "id": "web-expand3-descript-blog",
+      "name": "Descript · 官方创作者博客",
+      "url": "https://www.descript.com/blog",
+      "items": 3,
+      "scoped": 3,
+      "detailReads": 3,
+      "recent30Days": 1,
+      "latest": "2026-10-07T00:00:00.000Z",
+      "sample": [
+        {
+          "title": "Best video editing software for Windows in 2026 (free and paid)",
+          "url": "https://www.descript.com/blog/article/best-video-editing-software-for-windows",
+          "publishedAt": "2026-10-07T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand3-descript-changelog",
+      "name": "Descript · 官方产品更新",
+      "url": "https://descript.canny.io/api/changelog/feed.rss",
+      "items": 10,
+      "scoped": 10,
+      "detailReads": 0,
+      "recent30Days": 2,
+      "latest": "2026-10-13T04:07:03.000Z",
+      "sample": [
+        {
+          "title": "Release roundup—October 12, 2026",
+          "url": "https://descript.canny.io/changelog/release-roundupoctober-12-2026",
+          "publishedAt": "2026-10-13T04:07:03.000Z"
+        },
+        {
+          "title": "Release roundup—September 17, 2026",
+          "url": "https://descript.canny.io/changelog/release-roundupseptember-17-2026",
+          "publishedAt": "2026-09-17T21:39:20.000Z"
+        }
+      ]
+    }
+  ]
+}

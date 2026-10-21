@@ -13,6 +13,19 @@ const source = (settings: Record<string, unknown>): SourceRow => ({
 const item = (title: string, excerpt?: string) => ({ title, url: "https://example.com/article", excerpt });
 after(closeDb);
 
+test("opted-in roundups can match their supplied article text without changing drop rules or other sources", () => {
+  const config = { requireMarkers: ["ComfyUI"], requireWords: ["veo"], includeBodyForTopic: true, dropMarkersTitleOnly: ["sponsored"], keepIfMatches: ["research"] };
+  const roundup = { ...item("Project roundup"), bodyStatus: "ok" as const, bodyText: "Released an open-source ComfyUI storyboard workflow." };
+  assert.equal(noiseFiltered(roundup, source({ ingestNoiseFilter: config })), false);
+  assert.equal(noiseFiltered(roundup, source({ ingestNoiseFilter: { ...config, includeBodyForTopic: false } })), true);
+  assert.equal(noiseFiltered({ ...roundup, bodyStatus: "pending" }, source({ ingestNoiseFilter: config })), true);
+  assert.equal(noiseFiltered({ ...roundup, bodyText: "Database monitoring tools." }, source({ ingestNoiseFilter: config })), true);
+  assert.equal(noiseFiltered({ ...roundup, bodyText: "An AI video workflow using VEO." }, source({ ingestNoiseFilter: config })), false);
+  assert.equal(noiseFiltered({ ...roundup, title: "Sponsored roundup", bodyText: "ComfyUI research workflow" }, source({ ingestNoiseFilter: config })), true, "body text cannot activate an exemption from a title drop");
+  for (const includeBodyForTopic of [null, "true", 1]) assert.throws(() => assertSupportedConfig("rss", { ingestNoiseFilter: { includeBodyForTopic } }), /includeBodyForTopic/);
+  assertSupportedConfig("rss", { ingestNoiseFilter: config });
+});
+
 test("topic markers match title or excerpt without case sensitivity, and existing drop rules still apply", () => {
   const s = source({ ingestNoiseFilter: { requireMarkers: ["veo", "配音"], dropMarkersTitleOnly: ["sponsored"], keepIfMatches: ["research"] } });
   assert.equal(noiseFiltered(item("New VEO workflow"), s), false);

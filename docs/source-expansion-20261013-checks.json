@@ -1,0 +1,339 @@
+{
+  "checkedAt": "2026-10-13T14:45:29.161Z",
+  "sources": [
+    {
+      "id": "rss-expand-ifanr",
+      "url": "https://www.ifanr.com/feed",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "sample": []
+    },
+    {
+      "id": "rss-expand-digitaling",
+      "url": "https://www.digitaling.com/rss",
+      "items": 30,
+      "scoped": 2,
+      "recent30Days": 2,
+      "sample": [
+        {
+          "title": "招聘频道 - 资深策略",
+          "url": " https://www.digitaling.com/jobs/276380.html",
+          "publishedAt": "2026-10-13T03:52:13.000Z"
+        },
+        {
+          "title": "招聘频道 - BU蓝昊(广州) 后期制作（AI方向）",
+          "url": " https://www.digitaling.com/jobs/276331.html",
+          "publishedAt": "2026-10-12T06:04:46.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-aibusiness",
+      "url": "https://aibusiness.com/rss.xml",
+      "items": 50,
+      "scoped": 1,
+      "recent30Days": 1,
+      "sample": [
+        {
+          "title": "Gemini 3.8 text-to-speech refines voice AI capabilities",
+          "url": "https://aibusiness.com/generative-ai/gemini-3-8-text-speech-refines-voice-ai-capabilities",
+          "publishedAt": "2026-09-24T20:43:48.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-siliconangle",
+      "url": "https://siliconangle.com/feed/",
+      "items": 30,
+      "scoped": 2,
+      "recent30Days": 2,
+      "sample": [
+        {
+          "title": "Business video automation startup Clueso raises $10M to kill off manual production processes",
+          "url": "https://siliconangle.com/2026/10/13/business-video-automation-startup-clueso-raises-10m-to-kill-off-manual-production-processes/",
+          "publishedAt": "2026-10-13T12:00:28.000Z"
+        },
+        {
+          "title": "Deepgram targets voice AI on air-gapped laptops",
+          "url": "https://siliconangle.com/2026/10/12/deepgram-targets-voice-ai-air-gapped-laptops-dellaileadershipsymposium/",
+          "publishedAt": "2026-10-12T19:17:22.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-techxplore",
+      "url": "https://techxplore.com/rss-feed/",
+      "items": 30,
+      "scoped": 0,
+      "recent30Days": 0,
+      "sample": []
+    },
+    {
+      "id": "rss-expand-tubefilter-all",
+      "url": "https://www.tubefilter.com/feed/",
+      "items": 12,
+      "scoped": 1,
+      "recent30Days": 1,
+      "sample": [
+        {
+          "title": "AI-generated videos get labels. The European Union is applying the same standards to text.",
+          "url": "https://www.tubefilter.com/2026/10/08/european-union-eu-generative-ai-text-chatgpt/",
+          "publishedAt": "2026-10-08T20:36:01.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-sci-tech-ai",
+      "url": "https://scitechdaily.com/tag/artificial-intelligence/feed/",
+      "items": 24,
+      "scoped": 0,
+      "recent30Days": 0,
+      "sample": []
+    },
+    {
+      "id": "rss-expand-digiday-all",
+      "url": "https://digiday.com/feed/",
+      "items": 15,
+      "scoped": 3,
+      "recent30Days": 3,
+      "sample": [
+        {
+          "title": "Publicis is selling directly to AI-anxious CEOs as it steps away from traditional pitches",
+          "url": "https://digiday.com/media-buying/publicis-is-selling-directly-to-ai-anxious-ceos-as-it-steps-away-from-traditional-pitches/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+          "publishedAt": "2026-10-13T11:54:46.000Z"
+        },
+        {
+          "title": "How many people does it take to run an agency? According to Bad Mktg, just two if you’re using AI",
+          "url": "https://digiday.com/marketing/how-many-people-does-it-take-to-run-an-agency-according-to-bad-mktg-just-two-if-youre-using-ai/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+          "publishedAt": "2026-10-13T04:01:00.000Z"
+        },
+        {
+          "title": "Interoperability may be the future, but it cannot be an entire AI strategy",
+          "url": "https://digiday.com/sponsored/interoperability-may-be-the-future-but-it-cannot-be-an-entire-ai-strategy/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+          "publishedAt": "2026-10-08T20:58:56.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-thewrap-ai",
+      "url": "https://www.thewrap.com/?s=artificial+intelligence&feed=rss2",
+      "items": 10,
+      "scoped": 7,
+      "recent30Days": 3,
+      "sample": [
+        {
+          "title": "‘The View’ Hosts Laugh at Trump’s Suggestion to Rename AI: ‘Super Intelligence Was Not in the Room With Us’",
+          "url": "https://www.thewrap.com/creative-content/tv-shows/the-view-laughs-at-trump-rename-ai/",
+          "publishedAt": "2026-09-23T16:48:41.000Z"
+        },
+        {
+          "title": "Jimmy Fallon Mocks Trump for Suggesting He’s the Solution to AI Concerns: ‘I Don’t Think He Can Beat Wordle’",
+          "url": "https://www.thewrap.com/creative-content/tv-shows/jimmy-fallon-reacts-trump-dismissing-ai-concerns/",
+          "publishedAt": "2026-09-15T04:24:22.000Z"
+        },
+        {
+          "title": "An Ad Tech Firm Is on the Hunt for Smart AI Bets",
+          "url": "https://www.thewrap.com/industry-news/business/an-ad-tech-firm-is-on-the-hunt-for-smart-ai-bets/",
+          "publishedAt": "2026-09-18T21:01:47.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-marktechpost",
+      "url": "https://www.marktechpost.com/feed/",
+      "items": 10,
+      "scoped": 3,
+      "recent30Days": 3,
+      "sample": [
+        {
+          "title": "TII Releases Falcon-ASR: 1.6B Arabic Speech Model Hits 20.92% WER",
+          "url": "https://www.marktechpost.com/2026/10/11/tii-falcon-asr-arabic-speech-recognition/",
+          "publishedAt": "2026-10-12T03:16:09.000Z"
+        },
+        {
+          "title": "Meet Cloudflare Clef-omni: A 30B-A3B Multimodal Decision Model for Audio, Video, Image and Text",
+          "url": "https://www.marktechpost.com/2026/10/11/cloudflare-clef-omni-multimodal-decision-model/",
+          "publishedAt": "2026-10-11T23:15:52.000Z"
+        },
+        {
+          "title": "What is Decision 3.0? vLLM Semantic Router’s New Open Decision Models",
+          "url": "https://www.marktechpost.com/2026/10/11/what-is-decision-3-0-vllm-semantic-routers-new-open-decision-models/",
+          "publishedAt": "2026-10-11T21:43:41.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-animationxpress-all",
+      "url": "https://animationxpress.com/feed/",
+      "items": 10,
+      "scoped": 3,
+      "recent30Days": 3,
+      "sample": [
+        {
+          "title": "Astra Studios and VerSe Innovation put AI production on the fast track with Astra-Spark Alliance at Mipcom",
+          "url": "https://animationxpress.com/latest-news/astra-studios-and-verse-innovation-put-ai-production-on-the-fast-track-with-astra-spark-alliance/",
+          "publishedAt": "2026-10-13T13:36:22.000Z"
+        },
+        {
+          "title": "Gods, demons and AI: Five Indian animated epics set to roar",
+          "url": "https://animationxpress.com/latest-news/gods-demons-and-ai-five-indian-animated-epics-set-to-roar/",
+          "publishedAt": "2026-10-13T11:00:00.000Z"
+        },
+        {
+          "title": "IICT and YouTube bring four AI-powered films into the spotlight",
+          "url": "https://animationxpress.com/latest-news/iict-and-youtube-bring-four-ai-powered-films-into-the-spotlight/",
+          "publishedAt": "2026-10-12T14:13:22.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-blogs-youtube",
+      "url": "https://blog.youtube/rss/",
+      "items": 20,
+      "scoped": 3,
+      "recent30Days": 3,
+      "sample": [
+        {
+          "title": "Innovation for the YouTube Era: What’s new for viewers and creators",
+          "url": "https://blog.youtube/news-and-events/innovation-youtube-era-made-on-viewers-creators/",
+          "publishedAt": "2026-09-23T14:30:00.000Z"
+        },
+        {
+          "title": "Press play on these new YouTube Music updates",
+          "url": "https://blog.youtube/news-and-events/made-on-youtube-music-new-discovery-features/",
+          "publishedAt": "2026-09-23T14:30:00.000Z"
+        },
+        {
+          "title": "Connect with creators on the biggest screen with YouTube’s latest features",
+          "url": "https://blog.youtube/news-and-events/made-on-youtube-creators-shorts-series-tv-features/",
+          "publishedAt": "2026-09-23T14:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-vimeo-blog",
+      "url": "https://vimeo.com/blog/feed/",
+      "items": 100,
+      "scoped": 8,
+      "recent30Days": 3,
+      "sample": [
+        {
+          "title": "Share unlimited videos on Vimeo, with no ads, and no AI training—for free",
+          "url": "https://vimeo.com/blog/post/new-free-plan",
+          "publishedAt": "2026-10-07T14:00:00.000Z"
+        },
+        {
+          "title": "10 updates for Vimeo Enterprise: AI search, AI analytics, and custom event pages",
+          "url": "https://vimeo.com/blog/post/enterprise-september-update",
+          "publishedAt": "2026-10-05T14:00:00.000Z"
+        },
+        {
+          "title": "10 new updates for Vimeo Enterprise: Magic links, clearer AI credits, and more…",
+          "url": "https://vimeo.com/blog/post/enterprise-august-update",
+          "publishedAt": "2026-09-16T14:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-creativeboom",
+      "url": "https://www.creativeboom.com/feed/",
+      "items": 20,
+      "scoped": 1,
+      "recent30Days": 1,
+      "sample": [
+        {
+          "title": "AI just cloned Adobe's apps for free. Is this design software's Napster moment?",
+          "url": "https://www.creativeboom.com/news/ai-just-cloned-adobes-apps-for-free-is-this-design-softwares-napster-moment/",
+          "publishedAt": "2026-10-13T11:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-engadget",
+      "url": "https://www.engadget.com/rss.xml",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "sample": []
+    },
+    {
+      "id": "rss-expand-windowscentral",
+      "url": "https://www.windowscentral.com/feeds/all",
+      "items": 50,
+      "scoped": 0,
+      "recent30Days": 0,
+      "sample": []
+    },
+    {
+      "id": "rss-expand-techpowerup",
+      "url": "https://www.techpowerup.com/rss/news",
+      "items": 126,
+      "scoped": 2,
+      "recent30Days": 2,
+      "sample": [
+        {
+          "title": "Intel \"Crescent Island\" GPU Gets D-Series Name, Supports Up to 480 GB of LPDDR5X",
+          "url": "https://www.techpowerup.com/353647/intel-crescent-island-gpu-gets-d-series-name-supports-up-to-480-gb-of-lpddr5x",
+          "publishedAt": "2026-10-12T19:45:25.000Z"
+        },
+        {
+          "title": "(PR) ASUS Announces Availability of Its ProArt RTX Spark Windows PCs",
+          "url": "https://www.techpowerup.com/353475/asus-announces-availability-of-its-proart-rtx-spark-windows-pcs",
+          "publishedAt": "2026-10-07T18:47:20.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-socialmediatoday",
+      "url": "https://www.socialmediatoday.com/feeds/news/",
+      "items": 10,
+      "scoped": 2,
+      "recent30Days": 2,
+      "sample": [
+        {
+          "title": "Meta launches advanced Muse Wonder AI models",
+          "url": "https://www.socialmediatoday.com/news/meta-launches-advanced-muse-wonder-ai-models/832795/",
+          "publishedAt": "2026-10-12T20:21:58.000Z"
+        },
+        {
+          "title": "There is no viable case for widespread generative AI access",
+          "url": "https://www.socialmediatoday.com/news/there-is-no-viable-case-for-widespread-generative-ai-access/832681/",
+          "publishedAt": "2026-10-11T20:42:04.000Z"
+        }
+      ]
+    },
+    {
+      "id": "rss-expand-fastcompany",
+      "url": "https://www.fastcompany.com/latest/rss",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "sample": []
+    },
+    {
+      "id": "rss-expand-socialmediaexaminer",
+      "url": "https://www.socialmediaexaminer.com/feed/",
+      "items": 25,
+      "scoped": 5,
+      "recent30Days": 5,
+      "sample": [
+        {
+          "title": "AI Print Design, AI Video Production, and Industry News",
+          "url": "https://www.socialmediaexaminer.com/ai-print-design-ai-video-production-and-industry-news/",
+          "publishedAt": "2026-10-01T09:30:00.000Z"
+        },
+        {
+          "title": "AI Execution Tips, Professional Quality AI Video, and Industry News",
+          "url": "https://www.socialmediaexaminer.com/ai-execution-tips-professional-quality-ai-video-and-industry-news/",
+          "publishedAt": "2026-09-24T09:30:00.000Z"
+        },
+        {
+          "title": "How to Create Pro-Quality AI Videos With Gemini Omni",
+          "url": "https://www.socialmediaexaminer.com/how-to-create-pro-quality-ai-videos-with-gemini-omni/",
+          "publishedAt": "2026-09-22T10:00:00.000Z"
+        }
+      ]
+    }
+  ]
+}

@@ -15,6 +15,7 @@ import { ApiPanel, McpPanel, mcpToolCount, RssPanel } from "../features/agent/pa
 import type { AgentTrack } from "../modules";
 import { PhoneBar } from "../components/shell/PhoneBar";
 import type { Screen } from "../components/shell/screens";
+import { localeFromMatches, translate, useI18n, type Locale } from "../i18n";
 
 export const handle: Screen = { tab: "me", name: "Agent 接入" };
 
@@ -25,15 +26,24 @@ const V = PUBLIC_INTERFACE_VERSION;
 /** The ways in, the modules' first. The chooser's cards are the tabs: `?tab=` (the first is the default and not written). */
 const TRACKS: AgentTrack[] = [
   ...AGENT_PARTS.flatMap((p) => p.tracks ?? []),
-  { key: "mcp", name: "MCP", short: "MCP", pitch: `填一个地址，多出 ${mcpToolCount()} 个工具`, fit: "Claude 桌面版、Cursor 等远程 MCP 客户端", icon: IconPlug, Panel: McpPanel },
+  { key: "mcp", name: "MCP", short: "MCP", pitch: "填一个地址，多出 {n} 个工具", fit: "Claude 桌面版、Cursor 等远程 MCP 客户端", icon: IconPlug, Panel: McpPanel },
   { key: "rss", name: "RSS", short: "RSS", pitch: "复制地址，用阅读器订阅", fit: "Reeder、Folo、Inoreader、n8n", icon: IconRss, Panel: RssPanel },
   { key: "api", name: "REST API", short: "API", pitch: "匿名 GET，自己写程序取数", fit: "脚本、机器人、小程序、看板", icon: IconCode, Panel: ApiPanel, anchors: ["agent-api-recovery"] },
 ];
 const FIRST = TRACKS[0]!.key;
 const tabKey = (key: string | null) => key && TRACKS.some(t => t.key === key) ? key : FIRST;
 const hrefOf = (key: string) => (key === FIRST ? "/agent" : `/agent?tab=${key}`);
-/** How many ways, as the copy counts them ("四种方式"). */
-const WAYS = ["零", "一", "两", "三", "四", "五", "六"][TRACKS.length];
+const WAYS_ZH = ["零", "一", "两", "三", "四", "五", "六"];
+const WAYS_EN = ["zero", "one", "two", "three", "four", "five", "six"];
+
+function trackNames(locale: Locale, pick: "name" | "short"): string {
+  return TRACKS.map((track) => translate(locale, pick === "name" ? track.name : track.short)).join(locale === "en" ? ", " : "、");
+}
+
+function waysWord(locale: Locale): string {
+  const n = TRACKS.length;
+  return locale === "en" ? (WAYS_EN[n] ?? String(n)) : (WAYS_ZH[n] ?? String(n));
+}
 
 /** The modules' sections at the end of a panel. */
 const BLOCKS = AGENT_PARTS.flatMap((p) => p.blocks ?? []);
@@ -47,8 +57,8 @@ const anchorHref = (id: string) => `${hrefOf(ANCHORS.get(id)!)}#${id}`;
 /** Machine-readable entry points, with what each one is for. */
 const RESOURCES: Array<[label: string, href: string, note: string]> = [
   ["llms.txt", "/llms.txt", "给大模型读的站点说明"],
-  ["Agent 使用说明", "/api/v1/agent", `Agent 读了就能查${GUIDE_CLIENTS ? `，${GUIDE_CLIENTS} 用的也是它` : ""}`],
-  ["OpenAPI 3.1", "/openapi-v1.json", `REST API 的完整定义 · ${V}`],
+  ["Agent 使用说明", "/api/v1/agent", GUIDE_CLIENTS ? "Agent 读了就能查，{clients} 用的也是它" : "Agent 读了就能查"],
+  ["OpenAPI 3.1", "/openapi-v1.json", "REST API 的完整定义 · {v}"],
   ...AGENT_PARTS.flatMap((p) => p.resources ?? []),
 ];
 
@@ -75,18 +85,25 @@ export const { clientLoader, shouldRevalidate } = pageReuse<typeof loader>((url)
   return url.pathname + (params.size ? `?${params}` : "");
 });
 
-export function meta({ location }: Route.MetaArgs) {
+export function meta({ location, matches }: Route.MetaArgs) {
+  const locale = localeFromMatches(matches);
   const tab = tabKey(new URLSearchParams(location.search).get('tab'));
   const path = listPath("/agent", { tab: tab !== FIRST ? tab : null });
   return pageMeta({
-    title: "Agent 接入",
-    description: `把 ${SITE.name} 接进你的 Agent：${TRACKS.map((t) => t.name).join("、")} ${WAYS}种方式，匿名只读，无需 API Key，一分钟接好。`,
+    title: translate(locale, "Agent 接入"),
+    description: translate(locale, "把 {site} 接进你的 Agent：{names} {ways}种方式，匿名只读，无需 API Key，一分钟接好。", {
+      site: SITE.name,
+      names: trackNames(locale, "name"),
+      ways: waysWord(locale),
+    }),
     path,
     image: "/og/pages/agent.png",
+    locale,
   });
 }
 
 export default function AgentPage() {
+  const { t, locale } = useI18n();
   const { healthy, base, now } = useLoaderData<typeof loader>();
   const [params] = useSearchParams();
   const navigate = useNavigate();
@@ -123,47 +140,47 @@ export default function AgentPage() {
   const chip = "inline-flex h-7 items-center gap-1.5 rounded-full border border-line bg-surface px-2.5 text-[12px] text-ink-3";
   const aside = (
     <>
-      <AsideCard title="接入方式" className="hidden lg:block">
-        <nav aria-label="接入方式" className="-mx-2 -mb-1 space-y-0.5">
-          {TRACKS.map((t) => {
-            const on = t.key === tab;
+      <AsideCard title={t("接入方式")} className="hidden lg:block">
+        <nav aria-label={t("接入方式")} className="-mx-2 -mb-1 space-y-0.5">
+          {TRACKS.map((track) => {
+            const on = track.key === tab;
             return (
               <a
-                key={t.key}
-                href={hrefOf(t.key)}
+                key={track.key}
+                href={hrefOf(track.key)}
                 onClick={(e) => {
                   e.preventDefault();
-                  select(t.key);
+                  select(track.key);
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 aria-current={on ? "true" : undefined}
                 className={`flex items-center gap-2.5 rounded-control px-2 py-2 text-[13.5px] transition-colors ${on ? "bg-accent-soft font-medium text-accent" : "text-ink-2 hover:bg-bg-sunk hover:text-ink"}`}
               >
-                <t.icon size={16} />
-                <span className="min-w-0 flex-1">{t.name}</span>
+                <track.icon size={16} />
+                <span className="min-w-0 flex-1">{t(track.name)}</span>
                 {on && <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />}
               </a>
             );
           })}
         </nav>
       </AsideCard>
-      <AsideCard title="接入资源">
-        <nav aria-label="接入资源" className="-mx-2 -mb-1">
+      <AsideCard title={t("接入资源")}>
+        <nav aria-label={t("接入资源")} className="-mx-2 -mb-1">
           {RESOURCES.map(([l, h, note]) => (
             <a key={h} href={h} target={h.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="group flex items-start gap-2 rounded-control px-2 py-2 transition-colors hover:bg-bg-sunk">
               <span className="min-w-0 flex-1">
-                <span className="block text-[13.5px] text-ink-2 group-hover:text-ink">{l}</span>
-                <span className="mt-0.5 block text-[12px] text-ink-4">{note}</span>
+                <span className="block text-[13.5px] text-ink-2 group-hover:text-ink">{t(l)}</span>
+                <span className="mt-0.5 block text-[12px] text-ink-4">{t(note, { clients: GUIDE_CLIENTS, v: V })}</span>
               </span>
               <IconArrowUpRight size={13} className="mt-1 shrink-0 text-ink-4" />
             </a>
           ))}
         </nav>
       </AsideCard>
-      <AsideCard title="没接上？">
-        <p className="text-[13px] leading-[1.75] text-ink-3">把平台、版本和报错写在反馈页，别发 token 或本地文件。</p>
+      <AsideCard title={t("没接上？")}>
+        <p className="text-[13px] leading-[1.75] text-ink-3">{t("把平台、版本和报错写在反馈页，别发 token 或本地文件。")}</p>
         <IntentLink viewTransition to="/feedback" className="mt-3 inline-flex items-center gap-1 text-[13px] font-medium text-accent hover:underline">
-          去反馈 <IconChevronRight size={14} />
+          {t("去反馈")} <IconChevronRight size={14} />
         </IntentLink>
       </AsideCard>
     </>
@@ -171,50 +188,50 @@ export default function AgentPage() {
 
   return (
     <>
-    <PhoneBar back={{ to: "/more", label: "我的" }} title="Agent 接入" />
+    <PhoneBar back={{ to: "/more", label: "我的" }} title={t("Agent 接入")} />
     <ReadingLayout aside={aside}>
       <header className="lg:pt-5">
-        <Kicker>AGENT 接入</Kicker>
-        <h1 data-page-title="" className="mt-4 text-[28px] font-semibold leading-[1.3] text-ink sm:text-[32px]">{`把 ${SITE.name} 接进你的 Agent`}</h1>
-        <p className="mt-3 max-w-[40em] text-[15px] leading-[1.8] text-ink-3">{`${TRACKS.map((t) => t.short).join("、")} ${WAYS}种方式读的是同一份数据：精选、热点、日报、周报和月报，按你用的工具选一种就行。全部匿名只读，不用注册，也不用 API Key。`}</p>
+        <Kicker>{t("AGENT 接入")}</Kicker>
+        <h1 data-page-title="" className="mt-4 text-[28px] font-semibold leading-[1.3] text-ink sm:text-[32px]">{t("把 {site} 接进你的 Agent", { site: SITE.name })}</h1>
+        <p className="mt-3 max-w-[40em] text-[15px] leading-[1.8] text-ink-3">{t("{names} {ways}种方式读的是同一份数据：精选、热点、日报、周报和月报，按你用的工具选一种就行。全部匿名只读，不用注册，也不用 API Key。", { names: trackNames(locale, "short"), ways: waysWord(locale) })}</p>
         <div className="mt-4 flex flex-wrap items-center gap-2">
           <span className={`${chip} ${healthy ? "text-ok" : "text-hot"}`}>
             <span className={`size-1.5 rounded-full ${healthy ? "bg-ok" : "bg-hot"}`} aria-hidden="true" />
-            {healthy ? "服务正常" : "服务异常"}
+            {healthy ? t("服务正常") : t("服务异常")}
           </span>
-          <span className={chip}>版本 <span className="mono text-ink-2">{V}</span></span>
-          <span className={chip}>匿名只读 · 无需 Key</span>
+          <span className={chip}>{t("版本")} <span className="mono text-ink-2">{V}</span></span>
+          <span className={chip}>{t("匿名只读 · 无需 Key")}</span>
         </div>
       </header>
 
       {BANNERS.map((Banner, i) => <Banner key={i} base={base} tag={tag} now={now} href={anchorHref} open={open} />)}
 
-      <div role="tablist" aria-label="接入方式" className="mt-8 grid grid-cols-2 gap-2.5 sm:gap-3 2xl:grid-cols-4">
-        {TRACKS.map((t) => {
-          const on = t.key === tab;
+      <div role="tablist" aria-label={t("接入方式")} className="mt-8 grid grid-cols-2 gap-2.5 sm:gap-3 2xl:grid-cols-4">
+        {TRACKS.map((track) => {
+          const on = track.key === tab;
           return (
             <a
-              key={t.key}
-              href={hrefOf(t.key)}
+              key={track.key}
+              href={hrefOf(track.key)}
               role="tab"
-              id={`agent-tab-${t.key}`}
+              id={`agent-tab-${track.key}`}
               aria-selected={on}
               aria-controls="agent-panel"
               onClick={(e) => {
                 e.preventDefault();
-                select(t.key);
+                select(track.key);
               }}
               className={`group flex flex-col rounded-card border p-3.5 transition-[border-color,background-color,box-shadow] duration-200 sm:p-4 ${on ? "border-accent/50 bg-accent-softer shadow-[inset_0_0_0_1px_var(--accent)]" : "border-line bg-surface shadow-[var(--shadow-card)] hover:border-line-strong hover:shadow-[var(--shadow-card-hover)]"}`}
             >
               <span className="flex items-center justify-between gap-2">
                 <span className={`grid size-9 place-items-center rounded-control transition-colors ${on ? "bg-accent text-accent-contrast" : "bg-bg-sunk text-ink-3 group-hover:text-ink"}`}>
-                  <t.icon size={18} />
+                  <track.icon size={18} />
                 </span>
-                {t.badge && <span className="inline-flex h-[18px] items-center rounded-full bg-accent-soft px-2 text-[11px] font-medium text-accent">{t.badge}</span>}
+                {track.badge && <span className="inline-flex h-[18px] items-center rounded-full bg-accent-soft px-2 text-[11px] font-medium text-accent">{t(track.badge)}</span>}
               </span>
-              <span className="mt-3 text-[15.5px] font-semibold text-ink">{t.name}</span>
-              <span className="mt-1 text-[13px] leading-snug text-ink-2">{t.pitch}</span>
-              <span className="mt-2 hidden text-[12px] leading-snug text-ink-4 sm:block">{t.fit}</span>
+              <span className="mt-3 text-[15.5px] font-semibold text-ink">{t(track.name)}</span>
+              <span className="mt-1 text-[13px] leading-snug text-ink-2">{t(track.pitch, track.key === "mcp" ? { n: mcpToolCount() } : undefined)}</span>
+              <span className="mt-2 hidden text-[12px] leading-snug text-ink-4 sm:block">{t(track.fit)}</span>
             </a>
           );
         })}

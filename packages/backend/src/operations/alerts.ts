@@ -11,6 +11,7 @@ import { ALERTS, EDITION_TIMES } from "@aihot/site";
 import { sql } from "../db.ts";
 import { beijingDay, beijingStamp, duration, formatAlert, formatRecovery, sendAlert, type Finding, type Level } from "../notify/feishu.ts";
 import { stepsOnService } from "../editorial/models.ts";
+import { configuredFallbackModel, fallbackCoversService } from "../providers/llm.ts";
 import { backupConfigured } from "./backup.ts";
 import { GROUPING_WARN_AFTER_MS, waitingSelectedNews } from "./grouping.ts";
 import { upstreamFindings } from "../media/upstream.ts";
@@ -203,7 +204,11 @@ export async function collectFindings(now = Date.now()): Promise<Finding[]> {
 /** What stops when a model service refuses us: the steps that default to its models, else a pointer to the admin. */
 function modelStops(service: string): string {
   const steps = stepsOnService(service);
-  return steps.length ? `${steps.join("、")}停了` : "用到这家模型的步骤停了（看后台“模型与评测”），新内容可能进不了精选";
+  const backup = fallbackCoversService(service) ? configuredFallbackModel() : null;
+  if (!steps.length) {
+    return backup ? `用到这家模型的步骤已自动改用备用模型 ${backup}` : "用到这家模型的步骤停了（看后台“模型与评测”），新内容可能进不了精选";
+  }
+  return backup ? `${steps.join("、")}已自动改用备用模型 ${backup}，备用也失败时会停` : `${steps.join("、")}停了`;
 }
 /** `stops` is for the services that are not models; a model service's follows from the steps that use it. */
 const PROVIDERS: Record<string, { name: string; where: string; stops?: string }> = {
@@ -212,6 +217,8 @@ const PROVIDERS: Record<string, { name: string; where: string; stops?: string }>
   dashscope: { name: "阿里云百炼", where: "阿里云百炼控制台" },
   deepseek: { name: "DeepSeek", where: "DeepSeek 开放平台" },
   mimo: { name: "小米 MiMo", where: "小米 MiMo 开放平台" },
+  xfyun: { name: "讯飞 MaaS", where: "讯飞星火 MaaS 控制台" },
+  sensenova: { name: "商汤 SenseNova", where: "SenseNova 控制台" },
   socialdata: { name: "SocialData", stops: "X（推特）上的新内容收不到", where: "SocialData 后台" },
   jina: { name: "Jina", stops: "部分文章取不到正文", where: "Jina 后台" },
   dajiala: { name: "极致了（Dajiala）", stops: "公众号新文章收不到", where: "极致了后台" },

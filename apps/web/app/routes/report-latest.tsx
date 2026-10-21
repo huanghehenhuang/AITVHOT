@@ -6,10 +6,11 @@ import { cachedPage, loadOr404 } from "../lib/api.server";
 import { pageReuse } from "../lib/page-reuse";
 import { pageMeta, reportLd } from "../lib/seo";
 import { beijingDate } from "@aihot/contracts/time";
+import { localeFromMatches, translate, useI18n } from "../i18n";
 import { EmptyState } from "../components/ui/Page";
 import { ReportLayout } from "../features/report/ReportLayout";
 import { ReportPaper, reportOutline } from "../features/report/ReportPaper";
-import { KIND_LABEL, feedLink, kindFromPath } from "../features/report/format";
+import { KIND_LABEL, feedLink, kindFromPath, quietText } from "../features/report/format";
 import type { Screen } from "../components/shell/screens";
 
 export const handle: Screen = { tab: "daily", name: "日报" };
@@ -22,25 +23,29 @@ export async function loader({ request }: Route.LoaderArgs) {
   return cachedPage(600, { kind, report, index, today: beijingDate(Date.now()) });
 }
 
-export function meta({ loaderData, location }: Route.MetaArgs) {
+export function meta({ loaderData, location, matches }: Route.MetaArgs) {
+  const locale = localeFromMatches(matches);
   const kind = loaderData?.kind ?? "daily";
-  const description = `${REPORTS.descriptions[kind]}。`;
+  const body = translate(locale, REPORTS.descriptions[kind]);
+  const description = `${body}${locale === "en" ? "." : "。"}`;
   const report = loaderData?.report;
   return [...pageMeta({
-    title: withSubject(KIND_LABEL[kind]),
+    title: translate(locale, withSubject(KIND_LABEL[kind])),
     description,
     path: location.pathname,
     image: `/og/pages/${kind}.png`,
+    locale,
     // The latest issue, described at this page's own address (its canonical).
-    jsonLd: report ? reportLd(report, location.pathname, report.lead?.leadParagraph ?? description) : undefined,
-  }), feedLink(kind)];
+    jsonLd: report ? reportLd(report, location.pathname, report.lead?.leadParagraph ? quietText(report.lead.leadParagraph, locale) : description, locale) : undefined,
+  }), feedLink(kind, locale)];
 }
 
 export default function ReportLatestPage() {
   const { kind, report, index, today } = useLoaderData<typeof loader>();
+  const { locale, t } = useI18n();
   return (
-    <ReportLayout kind={kind} index={index} current={report?.key ?? null} today={today} outline={report ? reportOutline(report) : []}>
-      {report ? <ReportPaper report={report} index={index} /> : <EmptyState title={subjectAfter("还没有发布", KIND_LABEL[kind])}>第一期发布后会出现在这里。</EmptyState>}
+    <ReportLayout kind={kind} index={index} current={report?.key ?? null} today={today} outline={report ? reportOutline(report, locale) : []}>
+      {report ? <ReportPaper report={report} index={index} /> : <EmptyState title={t(subjectAfter("还没有发布", KIND_LABEL[kind]))}>{t("第一期发布后会出现在这里。")}</EmptyState>}
     </ReportLayout>
   );
 }

@@ -5,7 +5,6 @@ import { subjectAfter, withSubject } from "@aihot/site";
 import { cachedPage, loadOr404 } from "../lib/api.server";
 import { pageReuse } from "../lib/page-reuse";
 import { pageMeta } from "../lib/seo";
-import { monthDayTime } from "../lib/format";
 import { Badge } from "../components/ui/Badge";
 import { EmptyState } from "../components/ui/Page";
 import { IconChevronDown, IconInfo } from "../components/icons";
@@ -15,6 +14,8 @@ import { Delta } from "../features/hot/Delta";
 import { PhoneBar } from "../components/shell/PhoneBar";
 import { inNav } from "../components/shell/nav";
 import type { Screen } from "../components/shell/screens";
+import { countLabel, localeFromMatches, translate, useFormat, useI18n } from "../i18n";
+import type { Route } from "./+types/hot";
 
 export const handle: Screen = { tab: inNav("/hot") ? "hot" : "featured", name: "热点" };
 export { pageHeaders as headers } from "../lib/api.server";
@@ -24,12 +25,14 @@ export async function loader({ request }: { request: Request }) {
   return cachedPage(120, { hot: await loadOr404<HotResponse>("/api/site/hot", { signal: request.signal }) });
 }
 
-export function meta() {
+export function meta({ matches }: Route.MetaArgs) {
+  const locale = localeFromMatches(matches);
   return pageMeta({
-    title: withSubject("热点榜"),
-    description: `${subjectAfter("过去 48 小时", "圈")}讨论最多的 10 个事件：热度指数、趋势与组成热度的公开来源。`,
+    title: translate(locale, withSubject("热点榜")),
+    description: translate(locale, `${subjectAfter("过去 48 小时", "圈")}讨论最多的 10 个事件：热度指数、趋势与组成热度的公开来源。`),
     path: "/hot",
     image: "/og/pages/hot.png",
+    locale,
   });
 }
 
@@ -45,26 +48,28 @@ const pad = (rank: number) => String(rank).padStart(2, "0");
 
 /** "某媒体、某账号 等 4 个来源 · 7 位参与者". */
 function Voices({ e }: { e: HotEntryView }) {
+  const { t, locale } = useI18n();
   const names = e.sourceNames.slice(0, 2);
   return (
     <span className="min-w-0 text-[12.5px] leading-snug text-ink-4">
       {/* Lines break between the phrases, never inside one. */}
       <span className="whitespace-nowrap">
-        {names.length > 0 && <span className="text-ink-3">{names.join("、")}</span>}
-        {e.sourceCount > names.length ? ` 等 ${e.sourceCount} 个来源` : names.length ? " 报道" : `${e.sourceCount} 个来源`}
+        {names.length > 0 && <span className="text-ink-3">{names.join(locale === "en" ? ", " : "、")}</span>}
+        {e.sourceCount > names.length ? countLabel(locale, e.sourceCount, " 等 {n} 个来源", " and {n} source", " and {n} sources") : names.length ? t(" 报道") : countLabel(locale, e.sourceCount, "{n} 个来源", "{n} source", "{n} sources")}
       </span>
       <span className="mx-1.5 text-line-strong">·</span>
       <span className="whitespace-nowrap">
-        <span className="num">{e.participantCount}</span> 位参与者
+        <span className="num">{e.participantCount}</span> {countLabel(locale, e.participantCount, "位参与者", "participant", "participants")}
       </span>
     </span>
   );
 }
 
 function Badges({ e }: { e: HotEntryView }) {
+  const { t } = useI18n();
   return e.badges.map((b) => (
-    <Badge key={b} tone={BADGES[b].tone} title={BADGES[b].hint}>
-      {BADGES[b].label}
+    <Badge key={b} tone={BADGES[b].tone} title={t(BADGES[b].hint)}>
+      {t(BADGES[b].label)}
     </Badge>
   ));
 }
@@ -83,22 +88,23 @@ function StoryLink({ e, className }: { e: HotEntryView; className: string }) {
  * on a faint wash, with where it peaked. Without enough comparable hours the text takes the width.
  */
 function HeatPanel({ e }: { e: HotEntryView }) {
+  const { t } = useI18n();
   const seen = e.spark.filter((v): v is number => v !== null);
   const peak = Math.max(...seen);
   const peakAt = e.spark.findIndex((v) => v === peak);
   return (
     <div className="order-first flex aspect-[2/1] flex-col rounded-panel bg-accent-softer p-4 ring-1 ring-inset ring-line-soft xl:order-none xl:aspect-[16/10] dark:bg-accent-soft">
       <div className="flex items-baseline justify-between text-[11.5px] text-ink-4">
-        <span className="font-semibold text-ink-3">24 小时热度</span>
+        <span className="font-semibold text-ink-3">{t("24 小时热度")}</span>
         <span>
-          峰值 <span className="mono text-ink-2">{Math.round(peak)}</span>
-          {peakAt >= 0 && <span> · {peakAt === e.spark.length - 1 ? "当前" : `${e.spark.length - 1 - peakAt} 小时前`}</span>}
+          {t("峰值")} <span className="mono text-ink-2">{Math.round(peak)}</span>
+          {peakAt >= 0 && <span> · {peakAt === e.spark.length - 1 ? t("当前") : t("{n} 小时前", { n: e.spark.length - 1 - peakAt })}</span>}
         </span>
       </div>
       <Sparkline values={e.spark} className="mt-3 min-h-0 w-full flex-1" />
       <div className="mt-2 flex justify-between text-[11px] text-ink-4">
-        <span>24 小时前</span>
-        <span>现在</span>
+        <span>{t("24 小时前")}</span>
+        <span>{t("现在")}</span>
       </div>
     </div>
   );
@@ -106,6 +112,7 @@ function HeatPanel({ e }: { e: HotEntryView }) {
 
 /** No. 1: the event people are talking about most, with its picture, digest, latest turn and day of heat. */
 function Lead({ e }: { e: HotEntryView }) {
+  const { t } = useI18n();
   const panel = !e.cover && e.spark.filter((v) => v !== null).length >= 3;
   return (
     <article className="card card-hover group relative flex flex-col overflow-hidden p-5 sm:p-6">
@@ -135,7 +142,7 @@ function Lead({ e }: { e: HotEntryView }) {
         <div className="min-w-0 flex-[1_1_18rem] space-y-2.5">
           {e.latest && (
             <p className="line-clamp-2 text-[13px] leading-[1.7] text-ink-2">
-              <span className="mr-2 text-[12px] font-semibold text-accent">最新进展</span>
+              <span className="mr-2 text-[12px] font-semibold text-accent">{t("最新进展")}</span>
               {e.latest}
             </p>
           )}
@@ -149,7 +156,7 @@ function Lead({ e }: { e: HotEntryView }) {
           {!panel && <Sparkline values={e.spark} className="h-10 w-[140px]" />}
           <div className="text-right">
             <div className="mono text-[34px] font-semibold leading-none tracking-[-0.03em] text-ink">{Math.round(e.heat)}</div>
-            <div className="mt-1 text-[11.5px] text-ink-4">热度指数</div>
+            <div className="mt-1 text-[11.5px] text-ink-4">{t("热度指数")}</div>
           </div>
         </div>
       </div>
@@ -159,6 +166,7 @@ function Lead({ e }: { e: HotEntryView }) {
 
 /** No. 2 and 3: the same card, smaller, without the picture. */
 function Runner({ e }: { e: HotEntryView }) {
+  const { locale } = useI18n();
   return (
     <article className="card card-hover group relative flex flex-col px-5 py-4">
       <div className="flex items-center gap-2.5">
@@ -174,8 +182,8 @@ function Runner({ e }: { e: HotEntryView }) {
         <div className="flex min-w-0 flex-col gap-1.5">
           <Faces participants={e.participants} total={e.participantCount} size={20} />
           <span className="text-[12px] text-ink-4">
-            <span className="whitespace-nowrap"><span className="num">{e.sourceCount}</span> 个来源</span> ·{" "}
-            <span className="whitespace-nowrap"><span className="num">{e.participantCount}</span> 位参与者</span>
+            <span className="whitespace-nowrap"><span className="num">{e.sourceCount}</span> {countLabel(locale, e.sourceCount, "个来源", "source", "sources")}</span> ·{" "}
+            <span className="whitespace-nowrap"><span className="num">{e.participantCount}</span> {countLabel(locale, e.participantCount, "位参与者", "participant", "participants")}</span>
           </span>
         </div>
         <div className="flex items-end gap-3">
@@ -189,9 +197,10 @@ function Runner({ e }: { e: HotEntryView }) {
 
 /** No. 4–10: a row each, with a line of the digest, faces, the day of heat and the index. */
 function Row({ e }: { e: HotEntryView }) {
+  const { t, locale } = useI18n();
   return (
     <li className="group relative grid grid-cols-[30px_minmax(0,1fr)] items-start gap-x-3 px-4 py-3 transition-colors hover:bg-bg-sunk/70 sm:px-5 lg:grid-cols-[44px_minmax(0,1fr)_auto_104px_76px] lg:items-center lg:gap-x-6 lg:px-6 lg:py-3.5 dark:hover:bg-bg-muted/40">
-      <span className={`mono text-[16px] font-semibold leading-[24px] lg:text-[17px] ${rankColor(e.rank)}`} aria-label={`热度排名第 ${e.rank} 位`}>
+      <span className={`mono text-[16px] font-semibold leading-[24px] lg:text-[17px] ${rankColor(e.rank)}`} aria-label={t("热度排名第 {n} 位", { n: e.rank })}>
         {pad(e.rank)}
       </span>
       <div className="min-w-0">
@@ -207,7 +216,7 @@ function Row({ e }: { e: HotEntryView }) {
         <div className="mt-2 flex items-center gap-2.5 lg:hidden">
           <Faces participants={e.participants} total={e.participantCount} size={20} />
           <span className="text-[12px] text-ink-4">
-            <span className="num">{e.sourceCount}</span> 个来源
+            <span className="num">{e.sourceCount}</span> {countLabel(locale, e.sourceCount, "个来源", "source", "sources")}
           </span>
           <span className="ml-auto flex items-center gap-2">
             <span className="mono text-[17px] font-semibold leading-none text-ink">{Math.round(e.heat)}</span>
@@ -237,28 +246,31 @@ function showMethod() {
 
 export default function HotPage() {
   const { hot } = useLoaderData<typeof loader>();
+  const { t } = useI18n();
+  const { monthDayTime } = useFormat();
   const [lead, ...rest] = hot.entries;
   const runners = rest.slice(0, 2);
   const others = rest.slice(2);
   return (
     <div className="pb-10">
       <PhoneBar
-        title="热点"
+        title={t("热点")}
         large
         sub={
           <>
-            过去 {hot.windowHours}{`${subjectAfter(" 小时", "圈")}讨论最多的 `}{hot.entries.length || 10} 件事
+            {t(`过去 {hours}${subjectAfter(" 小时", "圈")}讨论最多的 {n} 件事`, { hours: hot.windowHours, n: hot.entries.length || 10 })}
             {hot.computedAt && (
               <>
                 {" · "}
-                <span className="num">{monthDayTime(hot.computedAt)}</span> 更新
+                <span className="num">{monthDayTime(hot.computedAt)}</span>
+                {t(" 更新")}
               </>
             )}
           </>
         }
         actions={
           <button type="button" onClick={showMethod} className="flex h-11 items-center gap-1 px-3 text-[14px] text-accent active:opacity-50">
-            <IconInfo size={17} /> 怎么算
+            <IconInfo size={17} /> {t("怎么算")}
           </button>
         }
       />
@@ -269,25 +281,25 @@ export default function HotPage() {
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-hot opacity-30" />
               <span className="relative inline-flex size-2 rounded-full bg-hot" />
             </span>
-            实时热度
+            {t("实时热度")}
           </div>
-          <h1 className="mt-1.5 text-[24px] font-bold leading-[1.3] tracking-[-0.01em] text-ink lg:text-[26px]">{withSubject("热点榜")}</h1>
-          <p className="mt-1.5 text-[13.5px] text-ink-3">过去 {hot.windowHours}{` 小时，${withSubject("圈")}讨论最多的 `}{hot.entries.length || 10} 件事</p>
+          <h1 className="mt-1.5 text-[24px] font-bold leading-[1.3] tracking-[-0.01em] text-ink lg:text-[26px]">{t(withSubject("热点榜"))}</h1>
+          <p className="mt-1.5 text-[13.5px] text-ink-3">{t(`过去 {hours} 小时，${withSubject("圈")}讨论最多的 {n} 件事`, { hours: hot.windowHours, n: hot.entries.length || 10 })}</p>
         </div>
         {hot.computedAt && (
           <p className="text-[12px] text-ink-4">
-            <span className="num">{monthDayTime(hot.computedAt)}</span> 更新 · 按讨论热度排序
+            <span className="num">{monthDayTime(hot.computedAt)}</span>{t(" 更新 · 按讨论热度排序")}
           </p>
         )}
       </header>
 
       {!lead ? (
         <div className="card rounded-sheet">
-          <EmptyState title="暂时没有热点">还没有足够多来源共同讨论的事件。</EmptyState>
+          <EmptyState title={t("暂时没有热点")}>{t("还没有足够多来源共同讨论的事件。")}</EmptyState>
         </div>
       ) : (
         <>
-          <section aria-label="热度前三" className="grid grid-cols-1 gap-3 lg:grid-cols-12 lg:gap-4">
+          <section aria-label={t("热度前三")} className="grid grid-cols-1 gap-3 lg:grid-cols-12 lg:gap-4">
             <div className="grid grid-cols-1 lg:col-span-7 lg:row-span-2 xl:col-span-8">
               <Lead e={lead} />
             </div>
@@ -299,12 +311,12 @@ export default function HotPage() {
           </section>
 
           {others.length > 0 && (
-            <section aria-label="其余热点" className="mt-6 lg:mt-7">
+            <section aria-label={t("其余热点")} className="mt-6 lg:mt-7">
               <div className="mb-3 flex items-baseline justify-between px-1">
                 <h2 className="text-[15px] font-semibold text-ink">
-                  继续看 <span className="num font-normal text-ink-4">No.{pad(others[0]!.rank)}–{pad(others[others.length - 1]!.rank)}</span>
+                  {t("继续看")} <span className="num font-normal text-ink-4">No.{pad(others[0]!.rank)}–{pad(others[others.length - 1]!.rank)}</span>
                 </h2>
-                <span className="hidden text-[12px] text-ink-4 lg:block">参与者 · 24 小时走势 · 热度指数</span>
+                <span className="hidden text-[12px] text-ink-4 lg:block">{t("参与者 · 24 小时走势 · 热度指数")}</span>
               </div>
               <ol className="card divide-y divide-line-soft overflow-hidden">
                 {others.map((e) => (
@@ -319,26 +331,26 @@ export default function HotPage() {
       <details id="hot-method" className="disclosure group/method mt-8 scroll-mt-[calc(var(--bar-h)+16px)] text-[12px] text-ink-4">
         <summary className="flex items-center gap-1.5 py-1 transition-colors hover:text-ink-2">
           <IconInfo size={15} />
-          热度是怎么算的？
+          {t("热度是怎么算的？")}
           <span className="ml-auto inline-flex items-center gap-0.5">
-            <span className="group-open/method:hidden">了解榜单</span>
-            <span className="hidden group-open/method:inline">收起</span>
+            <span className="group-open/method:hidden">{t("了解榜单")}</span>
+            <span className="hidden group-open/method:inline">{t("收起")}</span>
             <IconChevronDown size={13} className="transition-transform duration-200 group-open/method:rotate-180" />
           </span>
         </summary>
         <div className="max-w-[760px] space-y-2 pb-2 pl-[21px] pt-2 leading-[1.75] text-ink-3">
-          <p>热度来自参与同一事件的独立账号与机构，重复采集只算一次，并按 24 小时半衰期衰减。它衡量讨论活跃程度，不是报道质量评分。</p>
-          <p>榜单统计过去 48 小时。趋势只比较持续覆盖的同一组信源；它反映我们的监测范围，不代表全网人数。缺少可比历史时，不展示趋势线。</p>
+          <p>{t("热度来自参与同一事件的独立账号与机构，重复采集只算一次，并按 24 小时半衰期衰减。它衡量讨论活跃程度，不是报道质量评分。")}</p>
+          <p>{t("榜单统计过去 48 小时。趋势只比较持续覆盖的同一组信源；它反映我们的监测范围，不代表全网人数。缺少可比历史时，不展示趋势线。")}</p>
           <p>
-            信源名单只展示可公开阅读的报道来源；讨论参与者还包括只计入热度的账号与机构。同一机构的多个渠道可能合并计数，因此参与者不一定多于信源数。点击事件可查看各方报道与观点。
+            {t("信源名单只展示可公开阅读的报道来源；讨论参与者还包括只计入热度的账号与机构。同一机构的多个渠道可能合并计数，因此参与者不一定多于信源数。点击事件可查看各方报道与观点。")}
           </p>
           <dl className="flex flex-wrap gap-x-5 gap-y-1.5 pt-1">
             {Object.values(BADGES).map((b) => (
               <div key={b.label} className="flex items-center gap-1.5">
                 <dt>
-                  <Badge tone={b.tone}>{b.label}</Badge>
+                  <Badge tone={b.tone}>{t(b.label)}</Badge>
                 </dt>
-                <dd>{b.hint}</dd>
+                <dd>{t(b.hint)}</dd>
               </div>
             ))}
           </dl>

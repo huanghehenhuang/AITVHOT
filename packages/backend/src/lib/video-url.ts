@@ -8,6 +8,7 @@ export function isVideoPageUrl(input: string): boolean {
     return (/^\/watch\/?$/.test(url.pathname) && !!url.searchParams.get("v")) || /^\/(?:shorts|embed|v)\/[^/]+\/?$/.test(url.pathname);
   }
   if (host === "youtu.be") return /^\/[^/]+\/?$/.test(url.pathname);
+  if (/^(?:www\.|m\.)?bilibili\.com$/.test(host)) return /^\/video\/(?:BV[a-zA-Z0-9]+|av\d+)\/?$/.test(url.pathname);
   if (host === "vimeo.com" || host === "www.vimeo.com") return /^\/\d+(?:\/[a-zA-Z0-9]+)?\/?$/.test(url.pathname);
   return host === "player.vimeo.com" && /^\/video\/\d+\/?$/.test(url.pathname);
 }

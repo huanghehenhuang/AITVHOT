@@ -1,0 +1,138 @@
+{
+  "checkedAt": "2026-10-15T15:42:59.021Z",
+  "configCount": 365,
+  "totals": [
+    {
+      "total": 384,
+      "enabled": 382
+    }
+  ],
+  "sources": [
+    {
+      "id": "rss-expand6-creator-animation",
+      "name": "Creator Animation · AI影片制作教程",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:40:54.245Z",
+      "articles": 5,
+      "recent": 5
+    },
+    {
+      "id": "rss-expand6-frank-houbre",
+      "name": "Frank Houbre · AI电影制作实战",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:40:52.959Z",
+      "articles": 5,
+      "recent": 5
+    },
+    {
+      "id": "web-expand6-ciaro",
+      "name": "Ciaro · 中文AI电影制作教程",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:41:07.101Z",
+      "articles": 8,
+      "recent": 8
+    },
+    {
+      "id": "web-expand6-project-62656456--ai-film-skills",
+      "name": "ai-film-skills · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:40:47.441Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand6-project-comfy-org--workflow_templates",
+      "name": "workflow_templates · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:40:51.426Z",
+      "articles": 4,
+      "recent": 4
+    },
+    {
+      "id": "web-expand6-project-justin-sky--ai-art-engine",
+      "name": "ai-art-engine · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:40:49.730Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "web-expand6-project-ludwigkienle--ai-video-production-editor",
+      "name": "ai-video-production-editor · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:40:47.183Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand6-project-lykosai--stabilitymatrix",
+      "name": "StabilityMatrix · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:40:50.060Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand6-project-zanllp--sd-webui-infinite-image-browsing",
+      "name": "sd-webui-infinite-image-browsing · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:40:52.070Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web_list-expand6-theoretically-media",
+      "name": "Theoretically Media · 电影人AI实测",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:40:55.572Z",
+      "articles": 0,
+      "recent": 0
+    }
+  ],
+  "processing": [
+    {
+      "processing_state": "analyzed",
+      "count": 26
+    },
+    {
+      "processing_state": "new",
+      "count": 3
+    }
+  ],
+  "publications": [
+    {
+      "eligible": 26,
+      "selected": 0
+    }
+  ]
+}

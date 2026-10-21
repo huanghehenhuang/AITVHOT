@@ -6,7 +6,8 @@ import type { z } from "zod";
 import { PRESETS } from "@aihot/site/models";
 import { config, credential } from "../config.ts";
 import { sha256 } from "../lib/ids.ts";
-import { assertAccepted, paidRequest, ProviderRejectedError, rejectReceivedResponse } from "./receipts.ts";
+import { shutdownSignal } from "../lib/shutdown.ts";
+import { assertAccepted, BudgetExceededError, paidRequest, ProviderRejectedError, rejectReceivedResponse } from "./receipts.ts";
 
 export interface ModelSpec {
   key: string;
@@ -107,6 +108,8 @@ export interface ChatJsonResult<T> {
   reused: boolean;
   model: string;
   usage: Record<string, unknown> | null;
+  /** Set when the selected model's provider refused and LLM_FALLBACK_MODEL answered instead. */
+  fallbackFrom?: string;
 }
 
 export class ModelOutputError extends Error {
@@ -157,24 +160,72 @@ function isConnectFailure(error: unknown): boolean {
   return ["ECONNREFUSED", "ENOTFOUND", "EAI_AGAIN", "UND_ERR_CONNECT_TIMEOUT", "CERT_HAS_EXPIRED"].includes(code ?? "");
 }
 
-export async function chatJson<S extends z.ZodType>(opts: ChatJsonOptions<S>): Promise<ChatJsonResult<z.infer<S>>> {
-  const spec = MODELS[opts.model];
-  if (!spec) throw new Error(`Unknown model ${opts.model}`);
-  if (!config.modelCallsEnabled) throw new Error("Model calls are disabled (MODEL_CALLS_ENABLED=false)");
+/** The chosen model's endpoint is incomplete; unlike a provider refusal, no receipt was spent. */
+export class ModelNotConfiguredError extends Error {}
+
+interface ConfiguredModel {
+  spec: ModelSpec;
+  baseUrl: string;
+  apiKey: string;
+}
+
+function configure(key: string): ConfiguredModel {
+  const spec = MODELS[key];
+  if (!spec) throw new Error(`Unknown model ${key}`);
   const baseUrl = credential("models", spec.baseUrlEnv);
   const apiKey = credential("models", spec.apiKeyEnv);
-  if (!baseUrl || !apiKey || !spec.model) throw new Error(`Model ${opts.model} is not configured (${spec.baseUrlEnv}, ${spec.apiKeyEnv}${spec.key === "default" ? ", LLM_MODEL" : ""})`);
+  if (!baseUrl || !apiKey || !spec.model) throw new ModelNotConfiguredError(`Model ${key} is not configured (${spec.baseUrlEnv}, ${spec.apiKeyEnv}${spec.key === "default" ? ", LLM_MODEL" : ""})`);
+  return { spec, baseUrl, apiKey };
+}
 
+/**
+ * LLM_FALLBACK_MODEL: a registered model that takes over when the chosen one's provider refuses or is
+ * unreachable. Read at call time, like the default model's environment.
+ */
+export function configuredFallbackModel(primary?: string): string | null {
+  const key = process.env.LLM_FALLBACK_MODEL?.trim();
+  return key && key !== primary ? key : null;
+}
+
+/** Whether the configured fallback belongs to another service than this one (for alert wording). */
+export function fallbackCoversService(service: string): boolean {
+  const key = configuredFallbackModel();
+  return !!key && MODELS[key] !== undefined && MODELS[key]!.service !== service;
+}
+
+function fallbackFor(primary: string): string | null {
+  const key = configuredFallbackModel(primary);
+  if (key && !MODELS[key]) throw new Error(`LLM_FALLBACK_MODEL names unknown model ${key}`);
+  return key;
+}
+
+/**
+ * A refusal or an unreachable provider may be tried elsewhere. An unknown outcome (the provider may
+ * have billed it) and unusable output (the provider answered) stay with the chosen model.
+ */
+function shouldFallBack(error: unknown): boolean {
+  if (shutdownSignal.signal.aborted) return false;
+  if (error instanceof ModelNotConfiguredError || error instanceof BudgetExceededError) return true;
+  if (error instanceof ProviderRejectedError) {
+    // A provider's content filter is a decision about the material, not an outage.
+    return error.retryable || !/contentFilter|"1301"/.test(error.message);
+  }
+  return false;
+}
+
+async function callModel<S extends z.ZodType>(opts: ChatJsonOptions<S>, { spec, baseUrl, apiKey }: ConfiguredModel, stripImages = false): Promise<ChatJsonResult<z.infer<S>>> {
   const temperature = opts.temperature ?? 0.2;
   const maxTokens = Math.max(opts.maxTokens ?? 1500, 512) + (spec.reasoningTokens ?? 0);
-  const userText = typeof opts.user === "string" ? opts.user : JSON.stringify(opts.user);
+  // A fallback that cannot read images still answers the text part; these prompts always carry one.
+  const user = stripImages && Array.isArray(opts.user) ? opts.user.filter((part) => part.type === "text") : opts.user;
+  const userText = typeof user === "string" ? user : JSON.stringify(user);
   const body: Record<string, unknown> = {
     model: spec.model,
     messages: [
       // A prompt given as one user message (the title/summary prompts) has no system message.
       ...(opts.system ? [{ role: "system", content: opts.system }] : []),
       // Multimodal parts go through as parts; plain objects are sent as JSON text.
-      { role: "user", content: typeof opts.user === "string" || Array.isArray(opts.user) ? opts.user : userText },
+      { role: "user", content: user },
     ],
     temperature,
     max_tokens: maxTokens,
@@ -239,7 +290,21 @@ export async function chatJson<S extends z.ZodType>(opts: ChatJsonOptions<S>): P
       ? `output token limit reached (finish_reason=length): a reasoning model may have spent it reasoning; give it room with ${spec.key === "default" ? "LLM_REASONING_TOKENS" : `reasoningTokens on preset ${spec.key}`}. ${String(error)}`
       : String(error);
     await rejectReceivedResponse(receipt.receiptId, `unusable output: ${detail.slice(0, 500)}`);
-    throw new ModelOutputError(`Model ${opts.model} returned unusable output for ${opts.subject}: ${detail.slice(0, 300)}`, receipt.receiptId);
+    throw new ModelOutputError(`Model ${spec.key} returned unusable output for ${opts.subject}: ${detail.slice(0, 300)}`, receipt.receiptId);
   }
   return { data: parsed, receiptId: receipt.receiptId, reused: receipt.reused, model: spec.key, usage: response.usage ?? null };
+}
+
+export async function chatJson<S extends z.ZodType>(opts: ChatJsonOptions<S>): Promise<ChatJsonResult<z.infer<S>>> {
+  if (!config.modelCallsEnabled) throw new Error("Model calls are disabled (MODEL_CALLS_ENABLED=false)");
+  // An invalid fallback name is a configuration error: fail before spending a receipt.
+  const fallback = fallbackFor(opts.model);
+  try {
+    return await callModel(opts, configure(opts.model));
+  } catch (error) {
+    if (!fallback || !shouldFallBack(error)) throw error;
+    // The backup's own error is the one worth reporting; both providers are named in the receipts.
+    const result = await callModel(opts, configure(fallback), MODELS[fallback]!.vision !== true);
+    return { ...result, fallbackFrom: opts.model };
+  }
 }

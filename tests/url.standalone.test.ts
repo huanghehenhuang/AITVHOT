@@ -8,7 +8,7 @@ import { syncBuiltinESMExports } from "node:module";
 import { after, mock, test } from "node:test";
 import { Agent, fetch as undiciFetch } from "undici";
 import { guardedFetch } from "@aihot/backend/lib/http-fetch";
-import { assertPublicUrl, guardedLookup, isBlockedAddress } from "@aihot/backend/lib/url";
+import { assertPublicUrl, benchmarkAnswersOnly, guardedLookup, isBenchmarkAddress, isBlockedAddress } from "@aihot/backend/lib/url";
 
 let hits = 0;
 const server = http.createServer((_req, res) => { hits++; res.end("public content"); });
@@ -23,7 +23,7 @@ test("internal and reserved addresses are blocked in every spelling", () => {
   const blocked = [
     "127.0.0.1", "10.1.2.3", "172.16.0.1", "192.168.1.1", "169.254.169.254", "100.64.0.1", "0.0.0.0", "255.255.255.255",
     "198.18.0.0", "198.18.0.1", "198.19.255.255", "::ffff:198.18.0.1", "64:ff9b::c612:1", "2002:c612:1::1",
-    "::1", "::", "fd00::1", "fe80::1", "ff02::1", "2001:db8::1",
+    "2001:2::1", "::1", "::", "fd00::1", "fe80::1", "ff02::1", "2001:db8::1",
     "::ffff:127.0.0.1", "::ffff:7f00:1", "::ffff:a00:1", "::ffff:a9fe:a9fe", "::7f00:1", // IPv4-mapped and -compatible
     "64:ff9b::7f00:1", "64:ff9b:1::1", "2002:7f00:1::1", "2001:0:4136:e378::1", // NAT64, 6to4, Teredo
     "not-an-ip",
@@ -31,6 +31,16 @@ test("internal and reserved addresses are blocked in every spelling", () => {
   const allowed = ["8.8.8.8", "1.1.1.1", "2606:4700:4700::1111", "::ffff:8.8.8.8", "64:ff9b::808:808", "2002:808:808::1"];
   assert.deepEqual(blocked.filter((a) => !isBlockedAddress(a)), [], "not blocked");
   assert.deepEqual(allowed.filter((a) => isBlockedAddress(a)), [], "wrongly blocked");
+});
+
+test("benchmark answers are recognised without treating a real address as fake-IP", () => {
+  assert.equal(benchmarkAnswersOnly(["198.18.0.61", "2001:2::27"]), true);
+  assert.equal(benchmarkAnswersOnly(["::ffff:198.18.0.1"]), true);
+  assert.equal(isBenchmarkAddress("198.19.255.255"), true);
+  assert.equal(benchmarkAnswersOnly(["198.18.0.1", "93.184.216.34"]), false);
+  assert.equal(benchmarkAnswersOnly(["127.0.0.1"]), false);
+  assert.equal(benchmarkAnswersOnly([]), false);
+  assert.equal(isBenchmarkAddress("1.1.1.1"), false);
 });
 
 test("URL literals that embed a loopback address are refused before any request", async () => {

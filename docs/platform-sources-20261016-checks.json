@@ -1,0 +1,925 @@
+{
+  "checkedAt": "2026-10-16T11:42:12.941Z",
+  "sources": [
+    {
+      "source": {
+        "id": "rss-youtube-UCvKqTb-65iAmXK59sFNKINQ",
+        "name": "sebastiankamph · YouTube 创作视频",
+        "kind": "rss",
+        "tier": "T2",
+        "first_party": false,
+        "participation_mode": "editorial",
+        "interval_minutes": 180,
+        "enabled": true,
+        "tags": [
+          "创作教程",
+          "视频创作"
+        ],
+        "owner_entity_id": "youtube-UCvKqTb-65iAmXK59sFNKINQ",
+        "config": {
+          "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvKqTb-65iAmXK59sFNKINQ",
+          "maxItemAgeDays": 30,
+          "publishedAfter": "2026-09-16T11:41:17.441Z",
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "comfyui",
+              "stable diffusion",
+              "flux",
+              "midjourney",
+              "runway",
+              "kling",
+              "animation",
+              "animate",
+              "filmmak",
+              "lora",
+              "wan ",
+              "ltx",
+              "hunyuan",
+              "seedance",
+              "sora",
+              "AI video",
+              "AI image",
+              "image generation",
+              "video generation",
+              "character consistency",
+              "VFX",
+              "绘画",
+              "绘图",
+              "作图",
+              "视频",
+              "短剧",
+              "工作流",
+              "漫剧",
+              "角色一致",
+              "数字人"
+            ]
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        }
+      },
+      "found": 15,
+      "matching": 2,
+      "samples": [
+        {
+          "title": "What are AI models? ComfyUI for beginners, chapter 14",
+          "url": "https://www.youtube.com/watch?v=A20S_Snpu9w",
+          "publishedAt": "2026-10-07T08:55:52.000Z",
+          "excerpt": "Get the full Comfy course before it's released on Youtube https://www.patreon.com/sebastiankamph/posts/whats-ksampler-160599881 Is your computer too weak? Use Floyo https://floyo.ai Chat with me in our community discord: https://discord.gg/dFB7zuXyFY",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "What are nodes? ComfyUI for beginners, chapter 9",
+          "url": "https://www.youtube.com/watch?v=s-aX_Tbxgx0",
+          "publishedAt": "2026-09-29T07:53:58.000Z",
+          "excerpt": "Get the full Comfy course before it's released on Youtube https://www.patreon.com/sebastiankamph/posts/whats-ksampler-160599881 Is your computer too weak? Use Floyo https://floyo.ai Chat with me in our community discord: https://discord.gg/dFB7zuXyFY",
+          "bodyStatus": "none"
+        }
+      ],
+      "recheck": {
+        "found": 15,
+        "matching": 2,
+        "checkedAt": "2026-10-16T11:42:04.378Z"
+      }
+    },
+    {
+      "source": {
+        "id": "rss-youtube-UCsOXR1n2MR15vuK2htE5EkQ",
+        "name": "comfyorg · YouTube 创作视频",
+        "kind": "rss",
+        "tier": "T2",
+        "first_party": false,
+        "participation_mode": "editorial",
+        "interval_minutes": 180,
+        "enabled": true,
+        "tags": [
+          "创作教程",
+          "视频创作"
+        ],
+        "owner_entity_id": "youtube-UCsOXR1n2MR15vuK2htE5EkQ",
+        "config": {
+          "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsOXR1n2MR15vuK2htE5EkQ",
+          "maxItemAgeDays": 30,
+          "publishedAfter": "2026-09-16T11:41:17.441Z",
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "comfyui",
+              "stable diffusion",
+              "flux",
+              "midjourney",
+              "runway",
+              "kling",
+              "animation",
+              "animate",
+              "filmmak",
+              "lora",
+              "wan ",
+              "ltx",
+              "hunyuan",
+              "seedance",
+              "sora",
+              "AI video",
+              "AI image",
+              "image generation",
+              "video generation",
+              "character consistency",
+              "VFX",
+              "绘画",
+              "绘图",
+              "作图",
+              "视频",
+              "短剧",
+              "工作流",
+              "漫剧",
+              "角色一致",
+              "数字人"
+            ]
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        }
+      },
+      "found": 15,
+      "matching": 13,
+      "samples": [
+        {
+          "title": "Inside Flux 3 Image Klein with BFL!",
+          "url": "https://www.youtube.com/watch?v=71EHPhMb_Dg",
+          "publishedAt": "2026-10-16T06:04:58.000Z",
+          "excerpt": "We're going behind the scenes of how FLUX 3 Image was built with special guest Yumeng Li (Research Scientist at Black Forest Labs) and Paul Hansen (Creative Technologist at ComfyUI) for a live conversation covering the research decisions, the tradeoffs, and what it took to build a model that lets you place every element exactly where you want it. FLUX 3 Image lets you compose a scene with bounding boxes, describe what goes in each one, and edit a",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Krea 3 in ComfyUI: New AI Image Model for Multi-Reference Editing",
+          "url": "https://www.youtube.com/watch?v=qSdzsdvaQDU",
+          "publishedAt": "2026-10-15T21:20:25.000Z",
+          "excerpt": "Krea 3 is now available in ComfyUI through Partner Nodes. Krea’s new image model is built for generation and editing that starts from references. You start from a product shot, a person, a room, or a stack of references. Then you describe the change and name what has to stay. Krea 3 is tuned for fast, low-cost iterations, so your second and third edits fit in the same session as the first. What’s new in Krea 3: → Faster, cheaper generations with ",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "FLUX 3 Klein is Now in ComfyUI: Open Weights & Native 4K",
+          "url": "https://www.youtube.com/watch?v=KtheoWUWVUg",
+          "publishedAt": "2026-10-15T18:02:44.000Z",
+          "excerpt": "FLUX 3 Image Klein is Black Forest Labs’ compact, open-weights image model, and it now runs natively in ComfyUI. At 5.6B parameters, it brings the control features of the full FLUX 3 Image model to a single consumer GPU. In this video: → Base vs. Distilled: which checkpoint fits fine-tuning and which fits fast iteration → Native 4K generation → Using bounding boxes to control composition and layout → Multi-reference generation and editing with co",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "ComfyUI Templates Tutorial: Build Anything Without Making a Workflow",
+          "url": "https://www.youtube.com/watch?v=KBAoxzFqoaA",
+          "publishedAt": "2026-10-14T19:48:36.000Z",
+          "excerpt": "Stuck staring at an empty ComfyUI canvas? You don’t need to build workflows from scratch. In this video, Doug stacks five ready-made templates from comfy.org and the built-in template browser to take a rough drawing all the way to a 3D toy, retail packaging, and a full multi-shot commercial. In this video: → Nano Banana 2: drawing to character, with Claude-assisted prompts → Turnaround views template → Image-to-3D Partner Node: generate a real me",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Spooky Season Model Jam",
+          "url": "https://www.youtube.com/watch?v=U3A70LKBU2E",
+          "publishedAt": "2026-10-14T01:19:03.000Z",
+          "excerpt": "Spooky season has officially taken over the canvas. Purz and the Comfy Creatives team are going live to make the creepiest, weirdest, most gloriously Halloween generations we can pull out of ComfyUI. Haunted houses, cursed portraits, things lurking in the fog, and whatever nightmares chat dreams up. We'll be generating live, swapping workflow tricks, and pushing the spooky as far as it'll go. Costumes encouraged, screaming optional. What we'll co",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "LTX for VFX: Pro Post-Production Workflows",
+          "url": "https://www.youtube.com/watch?v=ISLpsBoE3NU",
+          "publishedAt": "2026-10-14T01:09:53.000Z",
+          "excerpt": "Mohamed Oumoumad, Director of Production Technology at LTX, and VFX veteran Doug Hogan, Forward Deployed Creative Technologist at Comfy, join us live to break down the professional VFX workflows LTX built for ComfyUI. These are made for real post-production pipelines, so think 16-bit EXR, ACES color, and delivery-res output rather than social clips. We’ll run the workflows live, talk through where each one slots into a compositing pipeline, and d",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "ComfyUI NVIDIA VFX Nodes: AI Video Upscaling, SDR-to-HDR & EXR Support",
+          "url": "https://www.youtube.com/watch?v=kEjNvmS9-cY",
+          "publishedAt": "2026-10-13T21:40:38.000Z",
+          "excerpt": "NVIDIA’s RTX video effects are now available as ComfyUI nodes. They are built for VFX artists and run locally on your RTX GPU. In this video: → RTX Video Super Resolution: upscale, denoise, and deblur with 19 modes → RTX Video Frame Generation: generate new frames within your footage → RTX Video HDR: convert SDR video to HDR → Chaining all three into one VFX finishing pipeline → New EXR support: Convert Image Color Space node and EXR previews Try",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Fish Audio Drama 3 in ComfyUI: Generate Multi-Character Dialogue Scenes",
+          "url": "https://www.youtube.com/watch?v=tIF5wiJqJ8M",
+          "publishedAt": "2026-10-13T18:18:09.000Z",
+          "excerpt": "rama 3 generates an entire multi-character scene as one conversation, rather than building dialogue one voice line at a time. Comfy is a day-one launch partner, and Drama 3 is available now as a Partner Node. → Generates full multi-character dialogue in a single pass → Runs as a Partner Node, so visuals and dialogue live in the same workflow → Lets you revise the scene or the audio without starting over → Works alongside Comfy’s existing Fish Aud",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "ComfyUI Desktop Tutorial: Multiple Installs, Snapshots & Shared Models",
+          "url": "https://www.youtube.com/watch?v=e0kWHZtnlps",
+          "publishedAt": "2026-10-12T20:41:59.000Z",
+          "excerpt": "Learn how to run multiple ComfyUI installations with Comfy Desktop: a stable production setup and a separate R&D sandbox for testing new models, custom nodes, and updates. When something breaks, snapshots let you roll back to a working setup in minutes. Comfy Desktop handles Python environments, dependencies, and updates for you. It also lets every instance share one models folder, so you don’t need to edit extra_model_paths.yaml. ⏱️ Chapters 0:0",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "ComfyUI: Why It’s Becoming the Standard for Creative AI",
+          "url": "https://www.youtube.com/watch?v=uoLduHEf1Cc",
+          "publishedAt": "2026-10-08T20:24:11.000Z",
+          "excerpt": "Closed AI tools give you speed. ComfyUI gives you control and speed. That’s why ComfyUI is becoming the global standard for creative AI. Solo creators and global studios alike are moving their work onto an open platform they can shape around how they actually create. What is ComfyUI? ComfyUI is an open-source, node-based platform for building creative AI workflows. You don’t type a prompt into a black box and hope for the best. You connect each s",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Block it out first. Refine it second.",
+          "url": "https://www.youtube.com/shorts/j9Ma6KXojQo",
+          "publishedAt": "2026-10-07T17:25:18.000Z",
+          "excerpt": "For complex ComfyUI video shots, a simple Blender blockout can act as the blueprint for the entire generation, camera movement, character placement, attack trajectories, timing, and composition before visual detail is introduced. In this sequence, the blockout defines the 13-second choreography while the reference images supply the final characters and anime visual style. Structure first. Style on top. Run this workflow: https://links.comfy.org/4",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Gemini Nano Banana 2.1 in ComfyUI: 4K Output, 14 References & Multi-Turn Editing",
+          "url": "https://www.youtube.com/watch?v=JWln_5jm4Ic",
+          "publishedAt": "2026-10-06T23:51:00.000Z",
+          "excerpt": "Gemini Nano Banana 2.1, Google's image generation and editing model and the successor to Nano Banana 2, is now available in ComfyUI via Partner Nodes. If Nano Banana 2 is already in your graph, 2.1 drops into the same slot. The resolution tiers carry over, 9:21 joins the aspect ratio list, and each run costs less. What's new: → Three thinking levels (Minimal, Medium, High). Minimal for quick exploration, High for dense layouts and multi-constrain",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "ComfyUI for Animation: Keyframes to Full Character Animation",
+          "url": "https://www.youtube.com/watch?v=hdXwl2CQVDw",
+          "publishedAt": "2026-10-05T17:44:23.000Z",
+          "excerpt": "Draw the key poses, let ComfyUI handle the in-betweens. This workflow takes a sequence of keyframes and generates the frames between them, producing a complete character animation from start to finish. Each consecutive keyframe pair runs through Wan 2.2's first-last frame model, and the results are thinned, assembled in order, and rendered out as a single video. Step 1: Load Your Keyframes Load each keyframe into the numbered image inputs. The wo",
+          "bodyStatus": "none"
+        }
+      ],
+      "recheck": {
+        "found": 15,
+        "matching": 13,
+        "checkedAt": "2026-10-16T11:42:04.793Z"
+      }
+    },
+    {
+      "source": {
+        "id": "rss-youtube-UC9Ryt3XOGYBoAJVsBHNGDzA",
+        "name": "TheoreticallyMedia · YouTube 创作视频",
+        "kind": "rss",
+        "tier": "T2",
+        "first_party": false,
+        "participation_mode": "editorial",
+        "interval_minutes": 180,
+        "enabled": true,
+        "tags": [
+          "创作教程",
+          "视频创作"
+        ],
+        "owner_entity_id": "youtube-UC9Ryt3XOGYBoAJVsBHNGDzA",
+        "config": {
+          "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC9Ryt3XOGYBoAJVsBHNGDzA",
+          "maxItemAgeDays": 30,
+          "publishedAfter": "2026-09-16T11:41:17.441Z",
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "comfyui",
+              "stable diffusion",
+              "flux",
+              "midjourney",
+              "runway",
+              "kling",
+              "animation",
+              "animate",
+              "filmmak",
+              "lora",
+              "wan ",
+              "ltx",
+              "hunyuan",
+              "seedance",
+              "sora",
+              "AI video",
+              "AI image",
+              "image generation",
+              "video generation",
+              "character consistency",
+              "VFX",
+              "绘画",
+              "绘图",
+              "作图",
+              "视频",
+              "短剧",
+              "工作流",
+              "漫剧",
+              "角色一致",
+              "数字人"
+            ]
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        }
+      },
+      "found": 15,
+      "matching": 7,
+      "samples": [
+        {
+          "title": "ByteDance's World Model Re-Shoots Movies, Sora Returns? & Krea 3 Is Here!",
+          "url": "https://www.youtube.com/watch?v=VTrc346ea30",
+          "publishedAt": "2026-10-15T21:47:32.000Z",
+          "excerpt": "ByteDance's new world model, Sora returns?, Krea 3 is here, OmniHuman 2.0 is back, Pico Space Pro, World Gacha, and LTX-2.5's new post tools. ByteDance's unreleased world model took a scene from Stephen Chow's King of Comedy and re-shot it from new camera angles off one drawn camera path, at Sunday's Douyin gala. Then: OmniHuman 2.0 (API only, not in the US yet), Krea 3's beta, a very fast AI image editor, the report that Sora is coming back via ",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "What No One Tells You About Making a 17-Minute AI Backrooms Film",
+          "url": "https://www.youtube.com/watch?v=OxxRcagqbHU",
+          "publishedAt": "2026-10-08T17:25:14.000Z",
+          "excerpt": "A 17-minute Backrooms short film, made by one person with AI. Javi Lopez, co-founder of Magnific, walks me through how he pulled it off, the \"don't do handheld\" lesson, and the thing no one tells you about making a film this long alone: form a band. This is the first of what might become a recurring thing: other AI filmmakers on the channel, so I can steal their workflows and pass them on to you. The longest AI short I've made is about eight minu",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Make Any Game With AI & 2 New Open Source Video Models!",
+          "url": "https://www.youtube.com/watch?v=V1AGM0IKFpg",
+          "publishedAt": "2026-10-06T22:10:07.000Z",
+          "excerpt": "AI coding agents can now mod almost any PC game you own, so I put DOOM inside Skyrim. SkyDoom is real Skyrim with all the NPCs, except Doom monsters spawn everywhere and I have a chaingun. Built with UniversalModder in about an hour, and I'll show you how to mash up any two games you own. Also this week: two new open source video models in one day (Prism does native 2K with audio but wants an 80 GB card; Kandinsky 6.0 runs on a 4090), Nano Banana",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Kling 4! Gemini 4! ElevenLabs v4! Ideogram 4.5! Everything Goes Four!",
+          "url": "https://www.youtube.com/watch?v=U9tFP81PSbQ",
+          "publishedAt": "2026-10-01T21:06:59.000Z",
+          "excerpt": "Four is your lucky number today. Kling 4 is here — kinda. But, I ran it through the usual tests: text-to-video, image-to-video, Omni with Flamethrower Girl, a noir scene in Malloy's office, and my keyframes-plus-Omni trick. Then Google wakes up with Gemini 4 Argon (announced, not released — return of the King? We'll see), HeyGen drops a video model that starts at a penny a second (asterisk included), Ideogram 4.5 gets precise editing, and ElevenL",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Meta Muse Won? Alibaba's \"Seedance Killer\" & AI Audio Levels Up!",
+          "url": "https://www.youtube.com/watch?v=U4231qULtm8",
+          "publishedAt": "2026-09-24T21:08:10.000Z",
+          "excerpt": "A blockbuster week for AI — and not just for the frontier labs. Anthropic and OpenAI dropped Opus 5.5 and GPT-6 Sol (and Luna) on the same day, Meta brought Muse storming into hardware at Meta Connect — including the Muse Charm, which is basically an AI Tamagotchi with its own 5G — and OpenAI has Dev Day next week with the Aeon rumors swirling. The battleground is pretty clear: everyone wants to be your AI best friend. Then, on our side of the fe",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Seedance 2.5 Just Got a Load of Awesome New Features!",
+          "url": "https://www.youtube.com/watch?v=ky9Gj5N3wyQ",
+          "publishedAt": "2026-09-21T22:04:40.000Z",
+          "excerpt": "Dreamina just rolled out the Seedance features a lot of us have been waiting on. The canvas got a proper overhaul, with an AI agent that will actually plan and organize a shoot for you (with some caveats I'll show you), there's finally an Elements library so your characters — voice included — follow you into any prompt, there's a new set of Skills on the generate side, and, surprisingly, MiniMax H3, GPT Image 2 and Nano Banana Pro are all sitting",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "This Cinematic AI Film Workflow Changes Everything",
+          "url": "https://www.youtube.com/watch?v=WKO-YgMQhLI",
+          "publishedAt": "2026-09-17T14:20:28.000Z",
+          "excerpt": "The full cinematic AI film workflow: GPT-6 (Astra) in Codex running Runway and Seedance 2.5, then DaVinci Resolve. That's the actual AI filmmaking pipeline I used to remake one of my first AI films in about a day and a half: script, characters, shots, grade, titles and mix. A big chunk of it I directed by just talking to my computer. Here's every step, including the couple of moments that had my jaw on the floor. SPONSOR This video is sponsored b",
+          "bodyStatus": "none"
+        }
+      ],
+      "recheck": {
+        "found": 15,
+        "matching": 7,
+        "checkedAt": "2026-10-16T11:42:05.089Z"
+      }
+    },
+    {
+      "source": {
+        "id": "rss-youtube-UCmMbwA-s3GZDKVzGZ-kPwaQ",
+        "name": "pixaroma · YouTube 创作视频",
+        "kind": "rss",
+        "tier": "T2",
+        "first_party": false,
+        "participation_mode": "editorial",
+        "interval_minutes": 180,
+        "enabled": true,
+        "tags": [
+          "创作教程",
+          "视频创作"
+        ],
+        "owner_entity_id": "youtube-UCmMbwA-s3GZDKVzGZ-kPwaQ",
+        "config": {
+          "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCmMbwA-s3GZDKVzGZ-kPwaQ",
+          "maxItemAgeDays": 30,
+          "publishedAfter": "2026-09-16T11:41:17.441Z",
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "comfyui",
+              "stable diffusion",
+              "flux",
+              "midjourney",
+              "runway",
+              "kling",
+              "animation",
+              "animate",
+              "filmmak",
+              "lora",
+              "wan ",
+              "ltx",
+              "hunyuan",
+              "seedance",
+              "sora",
+              "AI video",
+              "AI image",
+              "image generation",
+              "video generation",
+              "character consistency",
+              "VFX",
+              "绘画",
+              "绘图",
+              "作图",
+              "视频",
+              "短剧",
+              "工作流",
+              "漫剧",
+              "角色一致",
+              "数字人"
+            ]
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        }
+      },
+      "found": 15,
+      "matching": 7,
+      "samples": [
+        {
+          "title": "ComfyUI Nodes Explained: The Basics for Beginners",
+          "url": "https://www.youtube.com/watch?v=8l8nYfU81nA",
+          "publishedAt": "2026-10-15T14:58:41.000Z",
+          "excerpt": "This is the first video of ComfyUI Nodes Explained, a series where I explain the ComfyUI nodes one by one. Before we look at any single node, this video covers the basics every beginner needs: what a node is, its inputs, outputs and settings, and what the wire colors mean. ⬇️⬇️ MODELS USED IN THIS VIDEO (Flux 2 Klein 9B) ⬇️⬇️ 🧠 1. DIFFUSION MODEL (pick ONE, about 9 GB) 📁 Put it in: ComfyUI/models/diffusion_models ✅ fp8, the one I use in the vid",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "50 Free ComfyUI Automation Workflows (Ep38)",
+          "url": "https://www.youtube.com/watch?v=av-xDOxS1rs",
+          "publishedAt": "2026-10-13T15:00:22.000Z",
+          "excerpt": "In this episode, I'll show you 50 free ComfyUI workflows that automate the boring parts of working with images. Instead of editing images one by one, you point a workflow at a folder, press Run, and it does the whole folder for you. We'll start with simple image folder automation: resize, social media sizes, watermarks, rename and convert, remove backgrounds, slideshows, contact sheets, upscaling, and adding your logo to every image. Then we'll e",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Out of Memory | The ComfyUI Song",
+          "url": "https://www.youtube.com/watch?v=sqJLLuaPWSw",
+          "publishedAt": "2026-10-09T15:30:41.000Z",
+          "excerpt": "Out of Memory is a song about ComfyUI, for everyone who has watched the progress bar crawl to 99 percent and then seen the red box. The whole music video happens inside the real ComfyUI: real workflows, real runs with the live preview, real out of memory errors, real missing nodes, a broken VAE fixed straight from the logs, and my Pixaroma Nodes doing their job on screen (Monitor, Run Timer, Seed, Resolution, LoRA Loader, Label, Node Colors, Alig",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Free AI Model for Design & Text in ComfyUI | Ming Image 0.1 (Ep37)",
+          "url": "https://www.youtube.com/watch?v=QbCeS-VsjGM",
+          "publishedAt": "2026-10-06T15:00:11.000Z",
+          "excerpt": "In this episode, I’ll show you how to use Ming Image 0.1 in ComfyUI, a free image generation model focused on graphic design, text, layouts, and image editing. Ming Image is especially interesting for designs that contain a lot of text. I’ll test it with posters, infographics, logos, UI and app designs, YouTube thumbnails, social media graphics, game screens, transparent PNG images, and more. I’ll also show you several image editing workflows, in",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "ComfyUI Qwen Image 2.1 Tutorial | Generate, Edit, Inpaint & More (Ep36)",
+          "url": "https://www.youtube.com/watch?v=OBZDYDFay9o",
+          "publishedAt": "2026-09-30T15:00:12.000Z",
+          "excerpt": "In this ComfyUI tutorial, I’ll show you Qwen Image 2.1 with more than 20 workflows for image generation and editing. We’ll start with text-to-image, including different image sizes, low VRAM workflows, prompt enhancement, image-to-prompt, transparent PNG generation, and Turbo LoRA workflows. Then we’ll move into image editing, where Qwen Image 2.1 really becomes interesting. I’ll show you how to edit existing images, create character sheets, use ",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "MiniMax FastH3 in ComfyUI | Text to Video and Image to Video (Ep35)",
+          "url": "https://www.youtube.com/watch?v=aetgyCY7UOc",
+          "publishedAt": "2026-09-23T15:00:04.000Z",
+          "excerpt": "Learn how to use MiniMax Fast H3 in ComfyUI with three video workflows: text to video, first frame to video, and first and last frame to video. I’ll show you how to set up the model, choose your video size and duration, create prompts with Google Gemini, and run each workflow. I’ll also compare generation times at different resolutions and show the results, including a video transition between two images. The workflows use Pixaroma Nodes, Kitchen",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Pixal3D Multiview in ComfyUI | Load & Save 3D Nodes (Ep34)",
+          "url": "https://www.youtube.com/watch?v=LSDLengs4hY",
+          "publishedAt": "2026-09-17T15:00:06.000Z",
+          "excerpt": "Learn how to use Pixal3D Multiview in ComfyUI to generate more accurate 3D models from multiple image views, plus how to use the new Load 3D and Save 3D Pixaroma nodes. In this tutorial, I show how to set up the latest Pixaroma Nodes, enable Kitchen Attention for faster workflows, and use front, back, left, and right reference images with Pixal3D Multiview. Using multiple views gives the AI more information about the object, reducing how much it ",
+          "bodyStatus": "none"
+        }
+      ],
+      "recheck": {
+        "found": 15,
+        "matching": 7,
+        "checkedAt": "2026-10-16T11:42:05.543Z"
+      }
+    },
+    {
+      "source": {
+        "id": "rss-youtube-UClnFtyUEaxQOCd1s5NKYGFA",
+        "name": "curiousrefuge · YouTube 创作视频",
+        "kind": "rss",
+        "tier": "T2",
+        "first_party": false,
+        "participation_mode": "editorial",
+        "interval_minutes": 180,
+        "enabled": true,
+        "tags": [
+          "创作教程",
+          "视频创作"
+        ],
+        "owner_entity_id": "youtube-UClnFtyUEaxQOCd1s5NKYGFA",
+        "config": {
+          "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UClnFtyUEaxQOCd1s5NKYGFA",
+          "maxItemAgeDays": 30,
+          "publishedAfter": "2026-09-16T11:41:17.441Z",
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "comfyui",
+              "stable diffusion",
+              "flux",
+              "midjourney",
+              "runway",
+              "kling",
+              "animation",
+              "animate",
+              "filmmak",
+              "lora",
+              "wan ",
+              "ltx",
+              "hunyuan",
+              "seedance",
+              "sora",
+              "AI video",
+              "AI image",
+              "image generation",
+              "video generation",
+              "character consistency",
+              "VFX",
+              "绘画",
+              "绘图",
+              "作图",
+              "视频",
+              "短剧",
+              "工作流",
+              "漫剧",
+              "角色一致",
+              "数字人"
+            ]
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        }
+      },
+      "found": 15,
+      "matching": 8,
+      "samples": [
+        {
+          "title": "This Hack Fixes Your AI Character Consistency Issues (Pro Workflow)",
+          "url": "https://www.youtube.com/watch?v=ktEt4n9VlF4",
+          "publishedAt": "2026-10-13T21:10:48.000Z",
+          "excerpt": "In this video, we'll compare two popular AI character consistency methods to see which one actually works better for AI filmmaking. Check out the full written breakdown and prompts here: curiousrefuge.com/blog/how-to-create-pro-ai-character-sheets Check out our courses: https://curiousrefuge.com/courses Get AI Film News Sent to You: https://curiousrefuge.com/start-here Learn AI Filmmaking Workflows for Free: https://curiousrefuge.com/start-here J",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "You're Spending Too Much on Your AI Videos",
+          "url": "https://www.youtube.com/watch?v=h4MKJAJvins",
+          "publishedAt": "2026-10-09T22:24:51.000Z",
+          "excerpt": "Here's one of my favorite hacks for saving credits while generating for your AI Film. Nowadays, you don;t have to fully commit, but there are a handful of workflows and processes you can set up so that you can ensure you don't waste tons of money on bad generations. Check out the full breakdown here: https://curiousrefuge.com/blog/how-to-save-money-on-ai-generations Check out our Free Training: https://curiousrefuge.com/start-here Explore our All",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "How to Create a Depth Map Using AI + FREE Tool Download",
+          "url": "https://www.youtube.com/watch?v=BFsVW1DrLng",
+          "publishedAt": "2026-10-02T19:19:45.000Z",
+          "excerpt": "In this tutorial, I'll share with you one of my favorite Free AI Tools. You can download it and run it locally on your Mac (woot!), or you can use Fal.ai. Using a depth map as a reference is a phenomenal way to ensure your AI videos have strong accuracy when changing environments. Check out the full breakdown here: https://curiousrefuge.com/blog/how-to-create-a-depth-map-using-ai Download the Depth Map Mac App here: https://curiousrefuge.com/blog",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "I Tested AI Agents Against a Real AI Artist",
+          "url": "https://www.youtube.com/watch?v=aVVxF88J2co",
+          "publishedAt": "2026-09-30T21:33:06.000Z",
+          "excerpt": "In this video, we test all of the top AI Creative Agents against the work from a real AI artist to see how AI holds up when compared to Human creativity. We also dive into some new AI Filmmaking tech that might begin to make AI Creative more obsolete in the near future. Check out our blog about it here: www.curiousrefuge.com/human-vs-ai-who-is-more-creative Join our All Access membership and get access to all of our courses and workshops: https:/",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "The Best AI Workflow for a 2D + Live Action Film",
+          "url": "https://www.youtube.com/watch?v=084IvH5k0E8",
+          "publishedAt": "2026-09-29T21:38:25.000Z",
+          "excerpt": "In this tutorial, we teamed up with our AI Animation Instructor, @albertbozesan to show you the latest AI workflow for combining 2D animation with live-action footage. Check out a full breakdown here: https://curiousrefuge.com/blog/the-best-ai-workflow-for-a-2d-live-action-film Explore AI Animation: https://curiousrefuge.com/ai-animation Get News and Tutorials sent to you each week: https://curiousrefuge.com/start-here Check out our free training",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "How Much of Filmmaking Can AI Agents Actually Do?",
+          "url": "https://www.youtube.com/watch?v=JWEAmLHp7Sg",
+          "publishedAt": "2026-09-29T01:23:32.000Z",
+          "excerpt": "In this video, we let GPT Astra organize and edit a video including doing VFX, SFX, and producing marketing assets. Check out our tutorial for what worked and what didn’t. Check out the full written breakdown and prompts here: https://curiousrefuge.com/blog/5-ways-to-use-astra-for-ai-filmmaking Check out our courses: https://curiousrefuge.com/courses And our latest Micro-drama course: https://curiousrefuge.com/ai-for-microdramas Get AI Film News ",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "This Is Where Filmmaking Is Headed Next (Full Tutorial)",
+          "url": "https://www.youtube.com/watch?v=HVeHHAfiR44",
+          "publishedAt": "2026-09-22T23:09:44.000Z",
+          "excerpt": "In this video, we tested a hybrid filmmaking workflow that combines live-action footage with AI to transform simple greybox shots into entirely new environments. Check out the full written breakdown and prompts here: https://curiousrefuge.com/blog/how-to-use-ai-in-a-hybrid-filmmaking-workflow Check out our courses: https://curiousrefuge.com/courses And our latest Micro-drama course: https://curiousrefuge.com/ai-for-microdramas Get AI Film News Se",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Camera Angles Are Becoming a Thing of the Past",
+          "url": "https://www.youtube.com/watch?v=6QC6nOotxrU",
+          "publishedAt": "2026-09-19T00:34:02.000Z",
+          "excerpt": "In this video, we tested three different ways to create new camera angles with AI, and the results were pretty wild. Check out the full written breakdown and prompts here: https://curiousrefuge.com/blog/how-to-change-camera-angles-with-ai Check out our courses: https://curiousrefuge.com/courses And our latest addition: https://curiousrefuge.com/ai-for-microdramas Get AI Film News Sent to You: https://curiousrefuge.com/start-here Learn AI Filmmaki",
+          "bodyStatus": "none"
+        }
+      ],
+      "recheck": {
+        "found": 15,
+        "matching": 8,
+        "checkedAt": "2026-10-16T11:42:06.162Z"
+      }
+    },
+    {
+      "source": {
+        "id": "rss-youtube-UCKBURc62w9crMI1BhzHRnvw",
+        "name": "mickmumpitz · YouTube 创作视频",
+        "kind": "rss",
+        "tier": "T2",
+        "first_party": false,
+        "participation_mode": "editorial",
+        "interval_minutes": 180,
+        "enabled": true,
+        "tags": [
+          "创作教程",
+          "视频创作"
+        ],
+        "owner_entity_id": "youtube-UCKBURc62w9crMI1BhzHRnvw",
+        "config": {
+          "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCKBURc62w9crMI1BhzHRnvw",
+          "maxItemAgeDays": 30,
+          "publishedAfter": "2026-09-16T11:41:17.441Z",
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "comfyui",
+              "stable diffusion",
+              "flux",
+              "midjourney",
+              "runway",
+              "kling",
+              "animation",
+              "animate",
+              "filmmak",
+              "lora",
+              "wan ",
+              "ltx",
+              "hunyuan",
+              "seedance",
+              "sora",
+              "AI video",
+              "AI image",
+              "image generation",
+              "video generation",
+              "character consistency",
+              "VFX",
+              "绘画",
+              "绘图",
+              "作图",
+              "视频",
+              "短剧",
+              "工作流",
+              "漫剧",
+              "角色一致",
+              "数字人"
+            ]
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        }
+      },
+      "found": 15,
+      "matching": 1,
+      "samples": [
+        {
+          "title": "I turned myself into a pig with AI [Free & Local VFX Tutorial]",
+          "url": "https://www.youtube.com/watch?v=2MzCkYrvDaI",
+          "publishedAt": "2026-10-07T15:27:12.000Z",
+          "excerpt": "You can now turn yourself into any creature, or another person, locally with free AI tools on your own computer. If you like my work, please consider supporting me on Patreon: https://www.patreon.com/Mickmumpitz Follow me on X: https://x.com/mickmumpitz 📥 DOWNLOAD LINKS: 🔗 FREE WORKFLOW: https://www.patreon.com/Mickmumpitz/posts/171702311 🔗 ADVANCED WORKFLOW & EXAMPLE FILES : https://www.patreon.com/Mickmumpitz/posts/171703421 🔗 ComfyUI Insta",
+          "bodyStatus": "none"
+        }
+      ],
+      "recheck": {
+        "found": 15,
+        "matching": 1,
+        "checkedAt": "2026-10-16T11:42:06.462Z"
+      }
+    },
+    {
+      "source": {
+        "id": "rss-youtube-UCEAbqW0HFB_UxZoUDO0kJBw",
+        "name": "Aitrepreneur · YouTube 创作视频",
+        "kind": "rss",
+        "tier": "T2",
+        "first_party": false,
+        "participation_mode": "editorial",
+        "interval_minutes": 180,
+        "enabled": true,
+        "tags": [
+          "创作教程",
+          "视频创作"
+        ],
+        "owner_entity_id": "youtube-UCEAbqW0HFB_UxZoUDO0kJBw",
+        "config": {
+          "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCEAbqW0HFB_UxZoUDO0kJBw",
+          "maxItemAgeDays": 30,
+          "publishedAfter": "2026-09-16T11:41:17.441Z",
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "comfyui",
+              "stable diffusion",
+              "flux",
+              "midjourney",
+              "runway",
+              "kling",
+              "animation",
+              "animate",
+              "filmmak",
+              "lora",
+              "wan ",
+              "ltx",
+              "hunyuan",
+              "seedance",
+              "sora",
+              "AI video",
+              "AI image",
+              "image generation",
+              "video generation",
+              "character consistency",
+              "VFX",
+              "绘画",
+              "绘图",
+              "作图",
+              "视频",
+              "短剧",
+              "工作流",
+              "漫剧",
+              "角色一致",
+              "数字人"
+            ]
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        }
+      },
+      "found": 15,
+      "matching": 2,
+      "samples": [
+        {
+          "title": "QWEN IMAGE 2.1 EDIT LORA TRAINING! LESS THAN 10GB VRAM!",
+          "url": "https://www.youtube.com/watch?v=_YF8GC6Qd2I",
+          "publishedAt": "2026-10-11T17:28:07.000Z",
+          "excerpt": "QWEN IMAGE 2.1 EDIT LORA TRAINING! GET THE BEST RESULTS! In this video, I’ll show you how to easily train your own Qwen Image 2.1 EDIT LoRAs using AI TOOLKIT, locally on your computer or on RunPod! Transform your images into super original new style and teach Qwen entirely new editing effects! I’ll also show you how to create your own training dataset, set up your training, and compare your finished LoRAs in ComfyUI to find the BEST results! Qwen",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "QWEN IMAGE 2.1 IS THE NEW FREE AI EDITING KING!",
+          "url": "https://www.youtube.com/watch?v=5Sby8YxbhJc",
+          "publishedAt": "2026-10-03T19:58:09.000Z",
+          "excerpt": "QWEN IMAGE 2.1 IS THE NEW MODEL EDIT KING! In this video, I’ll show you my brand-new Qwen Image 2.1 ULTRA workflow for ComfyUI, featuring MULTI-IMAGE EDITING with up to 9 images! You can replace entire characters, remove or move objects, and transform your pictures with simple text prompts! You can also use INPAINTING to change specific parts of an image, expand your pictures with OUTPAINTING, remove backgrounds, and MORE! Qwen Image 2.1 is incre",
+          "bodyStatus": "none"
+        }
+      ],
+      "recheck": {
+        "found": 15,
+        "matching": 2,
+        "checkedAt": "2026-10-16T11:42:07.818Z"
+      }
+    },
+    {
+      "source": {
+        "id": "rss-youtube-UC5Wz4fFacYuON6IKbhSa7Zw",
+        "name": "MattVidPro · YouTube 创作视频",
+        "kind": "rss",
+        "tier": "T2",
+        "first_party": false,
+        "participation_mode": "editorial",
+        "interval_minutes": 180,
+        "enabled": true,
+        "tags": [
+          "创作教程",
+          "视频创作"
+        ],
+        "owner_entity_id": "youtube-UC5Wz4fFacYuON6IKbhSa7Zw",
+        "config": {
+          "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC5Wz4fFacYuON6IKbhSa7Zw",
+          "maxItemAgeDays": 30,
+          "publishedAfter": "2026-09-16T11:41:17.441Z",
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "comfyui",
+              "stable diffusion",
+              "flux",
+              "midjourney",
+              "runway",
+              "kling",
+              "animation",
+              "animate",
+              "filmmak",
+              "lora",
+              "wan ",
+              "ltx",
+              "hunyuan",
+              "seedance",
+              "sora",
+              "AI video",
+              "AI image",
+              "image generation",
+              "video generation",
+              "character consistency",
+              "VFX",
+              "绘画",
+              "绘图",
+              "作图",
+              "视频",
+              "短剧",
+              "工作流",
+              "漫剧",
+              "角色一致",
+              "数字人"
+            ]
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        }
+      },
+      "found": 15,
+      "matching": 3,
+      "samples": [
+        {
+          "title": "Create WILD Seamless AI Intros (Full Workflow)",
+          "url": "https://www.youtube.com/watch?v=COgSlYOwEaI",
+          "publishedAt": "2026-10-08T22:08:36.000Z",
+          "excerpt": "A lot of you asked how I make my over-the-top AI intros, so here's the entire process, start to finish. Today's video is sponsored by Runway! Try making your own intro today: https://app.runwayml.com/?utm_source=youtube&utm_medium=sponsored&utm_campaign=ai-influencer&utm_content=MattVidPro My \"Intro Prompt\": https://github.com/mattvideoproductions/MVP-Prompts/blob/main/seedance25_prompting_guide.txt What's covered: • Blending an AI intro into you",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "Opus 5.5, GPT-6 Sol & Luna TESTED on Creative Ideas",
+          "url": "https://www.youtube.com/watch?v=2WyFHZ6lkWE",
+          "publishedAt": "2026-09-23T23:40:23.000Z",
+          "excerpt": "I gave Claude Opus 5.5, GPT-6 Sol, and GPT-6 Luna the same creative briefs: a Blender animation about atoms, a Lemon vs Orange animation that turns into a playable boss fight, and an interactive CRT/VHS-style AI science special. Here are the actual results side by side, including what worked, what broke, and the little creative decisions that made one result feel more complete to me. These are three hands-on tests and my own reactions, not proof ",
+          "bodyStatus": "none"
+        },
+        {
+          "title": "I Didn't Expect YuE2 to Sound THIS Good",
+          "url": "https://www.youtube.com/watch?v=dQVmJog7au8",
+          "publishedAt": "2026-09-16T23:45:18.000Z",
+          "excerpt": "YuE2 is the best local AI music model I've tried so far—but how close does it actually get to Suno V6? I compare songs, try some ridiculous prompts, adjust the settings, and show you how to get it running on your own PC with Pinokio and Wan2GP. Jump to 17:41 for the installation tutorial. License clarification: I describe YuE2 as Apache 2.0 in the video. That applies to its code; the model weights use CC BY-NC 4.0 with additional permission for i",
+          "bodyStatus": "none"
+        }
+      ],
+      "recheck": {
+        "found": 15,
+        "matching": 3,
+        "checkedAt": "2026-10-16T11:42:08.325Z"
+      }
+    },
+    {
+      "source": {
+        "id": "rss-youtube-UC4-5v-f-xKnbi1yaAuRSi_w",
+        "name": "NerdyRodent · YouTube 创作视频",
+        "kind": "rss",
+        "tier": "T2",
+        "first_party": false,
+        "participation_mode": "editorial",
+        "interval_minutes": 180,
+        "enabled": true,
+        "tags": [
+          "创作教程",
+          "视频创作"
+        ],
+        "owner_entity_id": "youtube-UC4-5v-f-xKnbi1yaAuRSi_w",
+        "config": {
+          "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC4-5v-f-xKnbi1yaAuRSi_w",
+          "maxItemAgeDays": 30,
+          "publishedAfter": "2026-09-16T11:41:17.441Z",
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "comfyui",
+              "stable diffusion",
+              "flux",
+              "midjourney",
+              "runway",
+              "kling",
+              "animation",
+              "animate",
+              "filmmak",
+              "lora",
+              "wan ",
+              "ltx",
+              "hunyuan",
+              "seedance",
+              "sora",
+              "AI video",
+              "AI image",
+              "image generation",
+              "video generation",
+              "character consistency",
+              "VFX",
+              "绘画",
+              "绘图",
+              "作图",
+              "视频",
+              "短剧",
+              "工作流",
+              "漫剧",
+              "角色一致",
+              "数字人"
+            ]
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        }
+      },
+      "found": 15,
+      "matching": 1,
+      "samples": [
+        {
+          "title": "Qwen Image 2.1 - Runs Locally in ComfyUI",
+          "url": "https://www.youtube.com/watch?v=iJoo2RuAfZ0",
+          "publishedAt": "2026-09-25T18:33:29.000Z",
+          "excerpt": "Despite the name, Qwen Image 2.1 isn't only for text-to-image tasks, but also has great image editing capabilities as well! Supporting up to 10 image references, you can provide inputs for your main characters, their clothing and a background - or anything else you fancy. Swap faces, heads or backgrounds with ease. Composite multiple characters into a single scene. Change image styles using natural language prompts. ￼￼ Add, remove, edit, composit",
+          "bodyStatus": "none"
+        }
+      ],
+      "recheck": {
+        "found": 15,
+        "matching": 1,
+        "checkedAt": "2026-10-16T11:42:08.752Z"
+      }
+    }
+  ]
+}

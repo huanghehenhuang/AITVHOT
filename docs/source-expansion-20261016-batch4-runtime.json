@@ -1,0 +1,222 @@
+{
+  "at": "2026-10-16T01:06:43.656Z",
+  "pack": 405,
+  "totals": [
+    {
+      "total": 424,
+      "enabled": 422
+    }
+  ],
+  "sources": [
+    {
+      "id": "web_list-expand10-sunomv",
+      "name": "SunoMV · AI音乐视频制作",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:03:42.910Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand10-oimi",
+      "name": "Oimi · 中文图像视频教程",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:04:31.934Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand10-iplaysoft",
+      "name": "异次元软件 · 创作工具分享",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:03:06.731Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand10-aifruit",
+      "name": "AI Fruit · 中文图像视频制作指南",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:03:39.137Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand10-arcreel-arcreel",
+      "name": "ArcReel · 公开创作项目发布",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:03:15.840Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand10-midjourneyhk",
+      "name": "Midjourney-ai.hk · 中文提示词教程（非官方）",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:03:19.288Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand10-appinn",
+      "name": "小众软件 · 创作项目与工具分享",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:03:17.041Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand10-imyhq",
+      "name": "小智博客 · 音视频实践",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T01:03:32.107Z",
+      "last_error": null
+    }
+  ],
+  "articles": [
+    {
+      "source_id": "rss-expand10-appinn",
+      "total": 1,
+      "recent": 1,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand10-iplaysoft",
+      "total": 1,
+      "recent": 1,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand10-aifruit",
+      "total": 9,
+      "recent": 9,
+      "undated": 0,
+      "pending": 1
+    },
+    {
+      "source_id": "web_list-expand10-arcreel-arcreel",
+      "total": 3,
+      "recent": 3,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand10-imyhq",
+      "total": 5,
+      "recent": 5,
+      "undated": 0,
+      "pending": 5
+    },
+    {
+      "source_id": "web_list-expand10-midjourneyhk",
+      "total": 3,
+      "recent": 3,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand10-oimi",
+      "total": 4,
+      "recent": 4,
+      "undated": 0,
+      "pending": 1
+    },
+    {
+      "source_id": "web_list-expand10-sunomv",
+      "total": 5,
+      "recent": 5,
+      "undated": 0,
+      "pending": 0
+    }
+  ],
+  "pubs": [
+    {
+      "source_id": "rss-expand10-appinn",
+      "public": 0,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand10-iplaysoft",
+      "public": 1,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand10-aifruit",
+      "public": 8,
+      "selected": 1
+    },
+    {
+      "source_id": "web_list-expand10-arcreel-arcreel",
+      "public": 3,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand10-midjourneyhk",
+      "public": 3,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand10-oimi",
+      "public": 3,
+      "selected": 1
+    },
+    {
+      "source_id": "web_list-expand10-sunomv",
+      "public": 5,
+      "selected": 0
+    }
+  ],
+  "pending": [
+    {
+      "id": "sy768gu5hbbkzot5uf20ur21v",
+      "source_id": "web_list-expand10-aifruit",
+      "processing_retry_at": "2026-10-16T01:08:44.420Z",
+      "processing_attempts": 1,
+      "stage": "analysis_retry"
+    },
+    {
+      "id": "yb9ee5clgvj6zl0xxg831hkg2",
+      "source_id": "web_list-expand10-imyhq",
+      "processing_retry_at": "2026-10-16T01:13:34.292Z",
+      "processing_attempts": 1,
+      "stage": "extract_retry"
+    },
+    {
+      "id": "ctxv4ld5wji4o1k3fz8rgfs8s",
+      "source_id": "web_list-expand10-imyhq",
+      "processing_retry_at": "2026-10-16T01:13:34.035Z",
+      "processing_attempts": 1,
+      "stage": "extract_retry"
+    },
+    {
+      "id": "hsfs68vw01rpjwn8gos8u6cjn",
+      "source_id": "web_list-expand10-imyhq",
+      "processing_retry_at": "2026-10-16T01:13:33.989Z",
+      "processing_attempts": 1,
+      "stage": "extract_retry"
+    },
+    {
+      "id": "sqycejyaf43o0w8jgzydaw3hk",
+      "source_id": "web_list-expand10-imyhq",
+      "processing_retry_at": "2026-10-16T01:13:35.361Z",
+      "processing_attempts": 1,
+      "stage": "extract_retry"
+    },
+    {
+      "id": "vp57vbngf4yj9w0n2f1d1flos",
+      "source_id": "web_list-expand10-imyhq",
+      "processing_retry_at": "2026-10-16T01:13:33.748Z",
+      "processing_attempts": 1,
+      "stage": "extract_retry"
+    },
+    {
+      "id": "lh8cgmffcpul46gf4z58iid6l",
+      "source_id": "web_list-expand10-oimi",
+      "processing_retry_at": "2026-10-16T01:09:25.313Z",
+      "processing_attempts": 1,
+      "stage": "analysis_retry"
+    }
+  ]
+}

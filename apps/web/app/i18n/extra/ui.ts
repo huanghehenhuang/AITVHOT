@@ -1,0 +1,17 @@
+export const extra: Record<string, string> = {
+  "同一新闻已有精选代表": "A pick already covers this story",
+  "同新闻": "Same story",
+  "图片 {n} / {total}": "Image {n} / {total}",
+  "图片": "Image",
+  "上一张": "Previous",
+  "下一张": "Next",
+  "正在读": "Reading",
+  "本期目录": "This issue",
+  "AI 评分 {value}/100": "AI score {value}/100",
+  "AI 评分 {value} 分": "AI score {value} out of 100",
+  "AI 评分": "AI score",
+  "分享海报": "Share card",
+  "更多操作": "More",
+  "同一新闻的其他报道": "Other reports of this story",
+  "{n} 件": "{n} items",
+};

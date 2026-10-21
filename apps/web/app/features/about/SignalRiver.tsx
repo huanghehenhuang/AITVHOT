@@ -9,6 +9,7 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { withSubject } from "@aihot/site";
 import { EDITION } from "../report/format";
+import { useI18n } from "../../i18n";
 
 export interface RiverSource {
   name: string;
@@ -296,7 +297,10 @@ export function SignalRiver({
   const focusRef = useRef(focus);
   const arriveRef = useRef(onArrive);
   const redrawRef = useRef<() => void>(() => {});
+  const { t } = useI18n();
+  const tRef = useRef(t);
   arriveRef.current = onArrive;
+  tRef.current = t;
 
   useEffect(() => {
     focusRef.current = focus;
@@ -482,7 +486,7 @@ export function SignalRiver({
       const p = L.paper;
       if (x >= p.x - 8 && x <= p.x + p.w + 8 && y >= p.y - 8 && y <= p.y + p.h + 8) {
         hover = { s: null, bundle: null, paper: true };
-        place(x, y, withSubject("日报"), EDITION.daily);
+        place(x, y, tRef.current(withSubject("日报")), tRef.current(EDITION.daily));
         redraw();
         return;
       }
@@ -501,17 +505,18 @@ export function SignalRiver({
         onLeave();
         return;
       }
+      const tr = tRef.current;
       const s = L.strands[best]!;
       const b = L.bundles[s.bundle]!;
       if (x < L.x2) {
         hover = { s: best, bundle: null, paper: false };
-        const kind = s.source ? (KIND[s.source.kind] ?? "信源") : "信源";
-        place(x, y, s.source ? s.source.name : "一个信源", s.source?.heatOnly ? `${kind} · 只计入热度` : kind);
+        const kind = s.source ? tr(KIND[s.source.kind] ?? "信源") : tr("信源");
+        place(x, y, s.source ? s.source.name : tr("一个信源"), s.source?.heatOnly ? tr("{kind} · 只计入热度", { kind }) : kind);
       } else {
         hover = { s: null, bundle: s.bundle, paper: false };
-        if (x < L.gate) place(x, y, "同一件事", `${b.n} 个来源的报道合成一条`);
-        else if (b.kept) place(x, y, "进了精选", "有信息量，分数也够");
-        else place(x, y, "没进精选", "信息不够、重复或只是营销");
+        if (x < L.gate) place(x, y, tr("同一件事"), tr("{n} 个来源的报道合成一条", { n: b.n }));
+        else if (b.kept) place(x, y, tr("进了精选"), tr("有信息量，分数也够"));
+        else place(x, y, tr("没进精选"), tr("信息不够、重复或只是营销"));
       }
       redraw();
     };

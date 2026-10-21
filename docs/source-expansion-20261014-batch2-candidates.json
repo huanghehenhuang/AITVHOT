@@ -1,0 +1,332 @@
+{
+  "checkedAt": "2026-10-14T00:43:48.953Z",
+  "candidates": [
+    {
+      "id": "json-expand3-adobe-blog",
+      "name": "Adobe · 官方创作与影视博客",
+      "url": "https://blog.adobe.com/en/query-index.json?offset=14000&limit=10000",
+      "items": 996,
+      "scoped": 404,
+      "recent30Days": 4,
+      "accepted": true
+    },
+    {
+      "id": "json-sohu-expand3-wenhuapinglun",
+      "name": "三川汇文化科技 / 文化产业评论 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/152615",
+      "items": 20,
+      "scoped": 1,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand3-wenyushangye",
+      "name": "文娱商业观察 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/99935850",
+      "items": 20,
+      "scoped": 6,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "json-sohu-expand3-duojiao",
+      "name": "剁椒Spicy · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/120619691",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand3-xinshang",
+      "name": "新熵 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/123977",
+      "items": 20,
+      "scoped": 2,
+      "recent30Days": 2,
+      "accepted": true
+    },
+    {
+      "id": "json-sohu-expand3-meirijingji",
+      "name": "每日经济新闻 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/115362",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand3-diyicaijing",
+      "name": "第一财经 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/114986",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand3-chuanmeiquan",
+      "name": "传媒圈 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/570245",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand3-chuanmeidayan",
+      "name": "视听指南 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/697084",
+      "items": 20,
+      "scoped": 4,
+      "recent30Days": 2,
+      "accepted": true
+    },
+    {
+      "id": "json-sohu-expand3-thepaper",
+      "name": "澎湃新闻 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/260616",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand3-lanjing",
+      "name": "蓝鲸新闻 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/250147",
+      "items": 20,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "web-expand3-chinaz",
+      "name": "站长之家 · AI影视与短剧产业",
+      "url": "https://www.chinaz.com/news/",
+      "items": 31,
+      "scoped": 2,
+      "recent30Days": 2,
+      "accepted": true
+    },
+    {
+      "id": "web-expand3-aitnt",
+      "name": "AITNT · AI创作资讯",
+      "url": "https://www.aitntnews.com/",
+      "items": 30,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "web-expand3-huxiu",
+      "name": "虎嗅 · AI影视与短剧产业",
+      "url": "https://www.huxiu.com/",
+      "items": 36,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "web-expand3-autodesk-news-html",
+      "name": "Autodesk · 官方影视与动画新闻",
+      "url": "https://adsknews.autodesk.com/en/",
+      "items": 13,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "json-hf-expand3-openmoss",
+      "name": "OpenMOSS-Team · 模型发布",
+      "url": "https://huggingface.co/api/models?author=OpenMOSS-Team&search=MOSS&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 30,
+      "scoped": 28,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand3-humeai",
+      "name": "Hume AI · 模型发布",
+      "url": "https://huggingface.co/api/models?author=HumeAI&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 5,
+      "scoped": 5,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand3-ai4bharat",
+      "name": "AI4Bharat 语音研究 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=ai4bharat&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 30,
+      "scoped": 30,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand3-tii-asr",
+      "name": "TII Falcon 语音识别 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=tiiuae&search=ASR&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand3-alibaba-pai",
+      "name": "阿里 PAI 视频模型 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=Alibaba-PAI&search=Wan&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand3-sesame",
+      "name": "Sesame 语音模型 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=sesame&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 1,
+      "scoped": 1,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand3-amphion",
+      "name": "Amphion 音频生成 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=amphion&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 25,
+      "scoped": 25,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand3-fastvideo",
+      "name": "FastVideo 视频模型 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=FastVideo&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 30,
+      "scoped": 18,
+      "recent30Days": 2,
+      "accepted": true
+    },
+    {
+      "id": "web-expand3-worldlabs",
+      "name": "World Labs · 官方研究与公告",
+      "url": "https://www.worldlabs.ai/blog",
+      "items": 13,
+      "scoped": 13,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "web-expand3-openart",
+      "name": "OpenArt · 官方博客",
+      "url": "https://openart.ai/blog",
+      "items": 3,
+      "scoped": 3,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "web-expand3-tvoao-short",
+      "name": "中广互联 · 短剧",
+      "url": "https://www.tvoao.com/TagList/?tag=%E7%9F%AD%E5%89%A7",
+      "items": 15,
+      "scoped": 15,
+      "recent30Days": 15,
+      "accepted": true
+    },
+    {
+      "id": "web-expand3-tvoao-comic",
+      "name": "中广互联 · 漫剧",
+      "url": "https://www.tvoao.com/TagList/?tag=%E6%BC%AB%E5%89%A7",
+      "items": 15,
+      "scoped": 15,
+      "recent30Days": 7,
+      "accepted": true
+    },
+    {
+      "id": "web-expand3-heygen-blog",
+      "name": "HeyGen · 官方博客",
+      "url": "https://www.heygen.com/blog",
+      "items": 31,
+      "scoped": 31,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "web-expand3-synthesia-blog",
+      "name": "Synthesia · 官方博客",
+      "url": "https://www.synthesia.io/blog",
+      "items": 27,
+      "scoped": 27,
+      "recent30Days": 6,
+      "accepted": true
+    },
+    {
+      "id": "web-expand3-morphic",
+      "name": "Morphic · 官方博客",
+      "url": "https://morphic.com/blog",
+      "error": "Error: no items matched (html)",
+      "accepted": false
+    },
+    {
+      "id": "web-expand3-assemblyai-blog",
+      "name": "AssemblyAI · 官方语音研究与更新",
+      "url": "https://www.assemblyai.com/blog",
+      "error": "Error: no items matched (html)",
+      "accepted": false
+    },
+    {
+      "id": "web-expand3-wellsaid-blog",
+      "name": "WellSaid · 官方博客",
+      "url": "https://www.wellsaid.io/blog",
+      "items": 14,
+      "scoped": 14,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "web-expand3-deepgram-blog",
+      "name": "Deepgram · 官方语音技术博客",
+      "url": "https://deepgram.com/learn",
+      "error": "Error: no items matched (html)",
+      "accepted": false
+    },
+    {
+      "id": "web-expand3-descript-blog",
+      "name": "Descript · 官方创作者博客",
+      "url": "https://www.descript.com/blog",
+      "items": 3,
+      "scoped": 3,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand3-descript-changelog",
+      "name": "Descript · 官方产品更新",
+      "url": "https://descript.canny.io/api/changelog/feed.rss",
+      "items": 10,
+      "scoped": 10,
+      "recent30Days": 2,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand3-autodesk-news",
+      "name": "Autodesk · 官方新闻",
+      "url": "https://adsknews.autodesk.com/en/feed/",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "web-expand3-promise-news",
+      "name": "Promise · 公司新闻",
+      "url": "https://www.promise.ai/news",
+      "items": 4,
+      "scoped": 4,
+      "recent30Days": 0,
+      "accepted": false
+    }
+  ]
+}

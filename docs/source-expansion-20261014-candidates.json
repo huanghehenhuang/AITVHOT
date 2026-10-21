@@ -1,0 +1,1635 @@
+{
+  "checkedAt": "2026-10-14T00:11:20.353Z",
+  "candidates": [
+    {
+      "id": "rss-expand2-crowdcraver",
+      "name": "AI Video Professionals",
+      "url": "https://crowdcraver.substack.com/feed",
+      "items": 13,
+      "scoped": 12,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aivideoschool",
+      "name": "AI Video School",
+      "url": "https://aivideoschool.substack.com/feed",
+      "items": 8,
+      "scoped": 8,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-generatedvideo",
+      "name": "Generated AI 视频制作",
+      "url": "https://generatedvideo.substack.com/feed",
+      "items": 20,
+      "scoped": 17,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-politicsofai",
+      "name": "The Politics of AI Filmmaking",
+      "url": "https://politicsofai.substack.com/feed",
+      "items": 20,
+      "scoped": 14,
+      "recent30Days": 8,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-theaipixel",
+      "name": "The AI Pixel",
+      "url": "https://theaipixel.substack.com/feed",
+      "items": 20,
+      "scoped": 15,
+      "recent30Days": 7,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-cinemashift",
+      "name": "Cinema Shift",
+      "url": "https://cinemashift.substack.com/feed",
+      "items": 15,
+      "scoped": 14,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aicinema",
+      "name": "AI Cinema / Elettra Fiumi",
+      "url": "https://aicinema.substack.com/feed",
+      "items": 20,
+      "scoped": 14,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-flawlesslyhuman",
+      "name": "Flawlessly Human",
+      "url": "https://flawlesslyhuman.substack.com/feed",
+      "items": 20,
+      "scoped": 7,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-timeundertension",
+      "name": "Time Under Tension",
+      "url": "https://timeundertension.substack.com/feed",
+      "items": 20,
+      "scoped": 13,
+      "recent30Days": 1,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-tarynoneill",
+      "name": "The New Protagonists",
+      "url": "https://tarynoneill.substack.com/feed",
+      "items": 20,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-businessoftv",
+      "name": "Business of TV",
+      "url": "https://businessoftv.substack.com/feed",
+      "items": 20,
+      "scoped": 5,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-labthoughts",
+      "name": "Lab Thoughts",
+      "url": "https://labthoughts.substack.com/feed",
+      "items": 20,
+      "scoped": 8,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-mdavidthomson",
+      "name": "Between Cuts",
+      "url": "https://mdavidthomson.substack.com/feed",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-keepitmag",
+      "name": "Keep It Magazine",
+      "url": "https://keepitmag.substack.com/feed",
+      "items": 7,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-hubintel",
+      "name": "Hub Entertainment Research",
+      "url": "https://hubintel.substack.com/feed",
+      "items": 20,
+      "scoped": 1,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aifilm",
+      "name": "AI Film",
+      "url": "https://aifilm.substack.com/feed",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-film-ai",
+      "name": "Film AI",
+      "url": "https://filmai.substack.com/feed",
+      "items": 1,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aifilmmaking",
+      "name": "AI Filmmaking",
+      "url": "https://aifilmmaking.substack.com/feed",
+      "items": 11,
+      "scoped": 8,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-ai-filmmakers",
+      "name": "AI Filmmakers",
+      "url": "https://aifilmmakers.substack.com/feed",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-creativeai",
+      "name": "Creative AI",
+      "url": "https://creativeai.substack.com/feed",
+      "items": 6,
+      "scoped": 6,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-filmustage",
+      "name": "Filmustage 官方博客",
+      "url": "https://filmustage.com/blog/rss/",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-motionographer",
+      "name": "Motionographer",
+      "url": "https://motionographer.com/feed/",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-studiobinder",
+      "name": "StudioBinder",
+      "url": "https://www.studiobinder.com/blog/feed/",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-filmmakingnet",
+      "name": "Filmmaking.net",
+      "url": "https://filmmaking.net/feed/",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-lbbonline",
+      "name": "Little Black Book",
+      "url": "https://lbbonline.com/feed",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-broadcastnow",
+      "name": "Broadcast Now",
+      "url": "https://www.broadcastnow.co.uk/452.more?cmd=GoToPage&val=1",
+      "error": "Error: HTTP 202",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-tvtechnology",
+      "name": "TV Technology",
+      "url": "https://www.tvtechnology.com/feeds/all",
+      "items": 50,
+      "scoped": 5,
+      "recent30Days": 5,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-shots",
+      "name": "Shots 制作与广告",
+      "url": "https://shots.net/feed",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-tvbeurope",
+      "name": "TVBEurope",
+      "url": "https://www.tvbeurope.com/feed",
+      "items": 20,
+      "scoped": 3,
+      "recent30Days": 3,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-sportsvideo",
+      "name": "Sports Video Group",
+      "url": "https://www.sportsvideo.org/feed/",
+      "items": 50,
+      "scoped": 2,
+      "recent30Days": 2,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-ibc",
+      "name": "IBC 产业新闻",
+      "url": "https://www.ibc.org/rss",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-rbr",
+      "name": "Radio Television Business Report",
+      "url": "https://rbr.com/feed/",
+      "items": 15,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-indiewire-all",
+      "name": "IndieWire 产业新闻",
+      "url": "https://www.indiewire.com/feed/",
+      "items": 12,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-deadline-all",
+      "name": "Deadline 产业新闻",
+      "url": "https://deadline.com/feed/",
+      "items": 12,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-broadcastbeat",
+      "name": "Broadcast Beat",
+      "url": "https://www.broadcastbeat.com/feed/",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-variety-all",
+      "name": "Variety 产业新闻",
+      "url": "https://variety.com/feed/",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-hollywood-all",
+      "name": "Hollywood Reporter 产业新闻",
+      "url": "https://www.hollywoodreporter.com/feed/",
+      "items": 10,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-nofilmschool-ai",
+      "name": "No Film School AI 专题",
+      "url": "https://nofilmschool.com/ai/rss.xml",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-screenvoice",
+      "name": "ScreenVoice",
+      "url": "https://www.screenvoice.cz/en/feed/",
+      "items": 18,
+      "scoped": 3,
+      "recent30Days": 3,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-tellychakkar",
+      "name": "TellyChakkar",
+      "url": "https://www.tellychakkar.com/rss.xml",
+      "items": 10,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-theankler",
+      "name": "The Ankler",
+      "url": "https://theankler.com/feed",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-tvnewscheck",
+      "name": "TVNewsCheck",
+      "url": "https://tvnewscheck.com/feed/",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-media-play-news",
+      "name": "Media Play News",
+      "url": "https://www.mediaplaynews.com/feed/",
+      "items": 10,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-rapidtvnews",
+      "name": "Rapid TV News",
+      "url": "https://www.rapidtvnews.com/feed/",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-campaignlive",
+      "name": "Campaign Live",
+      "url": "https://www.campaignlive.co.uk/rss",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-thedrum",
+      "name": "The Drum",
+      "url": "https://www.thedrum.com/rss.xml",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-adweek",
+      "name": "Adweek",
+      "url": "https://www.adweek.com/feed/",
+      "items": 10,
+      "scoped": 2,
+      "recent30Days": 2,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aifilmmaking-blog",
+      "name": "AI Filmmaking",
+      "url": "https://aifilmmaking.com/feed/",
+      "error": "TypeError: fetch failed",
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand2-xiniu",
+      "name": "犀牛娱乐 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/535321",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand2-sansheng",
+      "name": "三声 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/524286",
+      "items": 20,
+      "scoped": 5,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand2-biannews",
+      "name": "鞭牛士 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/115060",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand2-tmtpost",
+      "name": "钛媒体 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/116132",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand2-sina-finance",
+      "name": "新浪财经 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/122014422",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand2-xinwanr",
+      "name": "新腕儿 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/265458",
+      "items": 20,
+      "scoped": 18,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-sohu-expand2-qbitai",
+      "name": "量子位 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/610300",
+      "items": 20,
+      "scoped": 2,
+      "recent30Days": 2,
+      "accepted": true
+    },
+    {
+      "id": "json-sohu-expand2-jiqizhixin",
+      "name": "机器之心Pro · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/129720",
+      "items": 20,
+      "scoped": 2,
+      "recent30Days": 2,
+      "accepted": true
+    },
+    {
+      "id": "json-sohu-expand2-ciweigongshe",
+      "name": "刺猬公社 · 搜狐公开专栏",
+      "url": "https://m.sohu.com/media/141927",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-unreal",
+      "name": "Unreal Engine 新闻",
+      "url": "https://www.unrealengine.com/en-US/feed",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-nvidia-developer",
+      "name": "NVIDIA Developer 技术博客",
+      "url": "https://developer.nvidia.com/blog/feed/",
+      "items": 100,
+      "scoped": 3,
+      "recent30Days": 1,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-microsoft-research",
+      "name": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/feed/",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-unity-technologies",
+      "name": "Unity Technologies 技术博客",
+      "url": "https://blog.unity.com/feed",
+      "items": 50,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-motionarray",
+      "name": "Motion Array 官方博客",
+      "url": "https://motionarray.com/learn/feed/",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-artlist",
+      "name": "Artlist 官方博客",
+      "url": "https://artlist.io/blog/feed/",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-fxhome",
+      "name": "FXhome 官方博客",
+      "url": "https://fxhome.com/blog/feed",
+      "error": "Error: Blocked proxy address for fxhome.com",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-sketchfab",
+      "name": "Sketchfab 官方博客",
+      "url": "https://sketchfab.com/blogs/community/feed/",
+      "items": 10,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-maxon",
+      "name": "Maxon 官方博客",
+      "url": "https://www.maxon.net/en/rss",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-autodesk",
+      "name": "Autodesk Design and Make",
+      "url": "https://www.autodesk.com/design-make/feed/",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-envato",
+      "name": "Envato 官方博客",
+      "url": "https://elements.envato.com/learn/feed",
+      "items": 10,
+      "scoped": 3,
+      "recent30Days": 3,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-respeecher",
+      "name": "Respeecher 官方博客",
+      "url": "https://www.respeecher.com/blog/rss.xml",
+      "items": 10,
+      "scoped": 7,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-elevenlabs-news",
+      "name": "ElevenLabs 官方更新",
+      "url": "https://elevenlabs.io/blog/rss/",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-voice-ai",
+      "name": "Voice.ai 官方博客",
+      "url": "https://voice.ai/hub/feed/",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-microsoft-vibevoice",
+      "name": "Microsoft VibeVoice · 模型发布",
+      "url": "https://huggingface.co/api/models?author=microsoft&search=VibeVoice&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 8,
+      "scoped": 8,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-nvidia-parakeet",
+      "name": "NVIDIA Parakeet ASR · 模型发布",
+      "url": "https://huggingface.co/api/models?author=nvidia&search=parakeet&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 15,
+      "scoped": 15,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-nvidia-cosmos",
+      "name": "NVIDIA Cosmos · 模型发布",
+      "url": "https://huggingface.co/api/models?author=nvidia&search=Cosmos&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 30,
+      "scoped": 30,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-alpha-vllm",
+      "name": "Alpha-VLLM 图像与视频 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=Alpha-VLLM&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 30,
+      "scoped": 29,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-sand-ai",
+      "name": "Sand.ai 音视频 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=SandAI&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-opengvlab",
+      "name": "OpenGVLab 多模态 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=OpenGVLab&search=InternVL&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 30,
+      "scoped": 30,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-sandai",
+      "name": "Sand.ai 音视频 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=Sand-AI&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-genmo",
+      "name": "Genmo 视频生成 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=genmo&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 1,
+      "scoped": 1,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-damo-vilab",
+      "name": "DAMO-VILAB 视频生成 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=damo-vilab&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-ovi",
+      "name": "Ovi 音视频生成 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=Ovi&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-ovi-ai",
+      "name": "Ovi 音视频生成 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=OviAI&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-hkustaudio",
+      "name": "HKUST Audio · 模型发布",
+      "url": "https://huggingface.co/api/models?author=HKUSTAudio&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 25,
+      "scoped": 25,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-moonshotai",
+      "name": "Moonshot 视觉模型 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=moonshotai&search=Kimi-VL&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 3,
+      "scoped": 3,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-openbmb-minicpm",
+      "name": "OpenBMB MiniCPM 多模态 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=openbmb&search=MiniCPM&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 30,
+      "scoped": 14,
+      "recent30Days": 6,
+      "accepted": true
+    },
+    {
+      "id": "json-hf-expand2-sana",
+      "name": "Sana 图像生成 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=Efficient-Large-Model&search=Sana&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 30,
+      "scoped": 28,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-cogview",
+      "name": "THUDM CogView 图像生成 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=THUDM&search=CogView&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-cogvideo",
+      "name": "THUDM CogVideo 视频生成 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=THUDM&search=CogVideo&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-qwen-image",
+      "name": "Qwen Image 官方模型 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=Qwen&search=Image&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 11,
+      "scoped": 11,
+      "recent30Days": 4,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-ltx-distilled",
+      "name": "Lightricks LTX Distilled · 模型发布",
+      "url": "https://huggingface.co/api/models?author=Lightricks&search=LTX&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 30,
+      "scoped": 29,
+      "recent30Days": 6,
+      "accepted": false
+    },
+    {
+      "id": "json-hf-expand2-hunyuanvideo",
+      "name": "HunyuanVideo 官方模型 · 模型发布",
+      "url": "https://huggingface.co/api/models?author=tencent&search=HunyuanVideo&sort=createdAt&direction=-1&limit=30&full=true&config=false",
+      "items": 6,
+      "scoped": 6,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-theoretically-substack",
+      "name": "Theoretically Media",
+      "url": "https://theoreticallymedia.substack.com/feed",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aimarketing-story",
+      "name": "AI Marketing for Storytellers",
+      "url": "https://aimarketingforstorytellers.substack.com/feed",
+      "items": 20,
+      "scoped": 7,
+      "recent30Days": 7,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-danbgoldman",
+      "name": "What’s New in Generative Media",
+      "url": "https://danbgoldman.substack.com/feed",
+      "items": 20,
+      "scoped": 20,
+      "recent30Days": 18,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-chaseai",
+      "name": "Chase AI",
+      "url": "https://chaseai.substack.com/feed",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-theaientrepreneur",
+      "name": "The AI Entrepreneur",
+      "url": "https://theaientrepreneur.substack.com/feed",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-russellpalmer",
+      "name": "Russell Palmer AI Filmmaking",
+      "url": "https://russellpalmer.substack.com/feed",
+      "error": "Error: not an RSS/Atom document",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-nickfloats",
+      "name": "Nick St. Pierre",
+      "url": "https://nickfloats.substack.com/feed",
+      "error": "Error: not an RSS/Atom document",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-generativeai",
+      "name": "Generative AI",
+      "url": "https://generativeai.pub/feed",
+      "items": 10,
+      "scoped": 9,
+      "recent30Days": 9,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aihub",
+      "name": "AIHub",
+      "url": "https://www.aihub.cn/feed/",
+      "error": "Error: Blocked private address for www.aihub.cn",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aibase",
+      "name": "AIbase",
+      "url": "https://www.aibase.com/rss",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aibot",
+      "name": "AI工具集",
+      "url": "https://ai-bot.cn/feed/",
+      "error": "Error: Blocked private address for ai-bot.cn",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aigc-cn",
+      "name": "AIGC 中国",
+      "url": "https://www.aigc.cn/feed/",
+      "error": "Error: Blocked private address for www.aigc.cn",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-benaverbook",
+      "name": "AI Video Newsletter",
+      "url": "https://benaverbook.substack.com/feed",
+      "items": 14,
+      "scoped": 5,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aigc-zh",
+      "name": "AIGC 资讯",
+      "url": "https://aigc.izzi.cn/feed/",
+      "error": "Error: Blocked private address for aigc.izzi.cn",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aitnt",
+      "name": "AI TNT",
+      "url": "https://www.aitntnews.com/rss",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-cgjoy",
+      "name": "CGJOY",
+      "url": "https://www.cgjoy.com/rss.php",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aigcopen",
+      "name": "AIGC Open",
+      "url": "https://www.aigcopen.com/feed/",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-cg99",
+      "name": "CG99",
+      "url": "https://www.cg99.com/feed",
+      "error": "Error: DNS lookup failed for www.cg99.com",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-cgown",
+      "name": "CG资源网",
+      "url": "https://www.cgown.com/feed",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-tvover",
+      "name": "TV Overmind",
+      "url": "https://tvovermind.com/feed/",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-tvmas",
+      "name": "TVMAS Magazine",
+      "url": "https://tvmasmagazine.com/en/feed/",
+      "items": 2,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-senalnews",
+      "name": "Señal News",
+      "url": "https://senalnews.com/en/feed/",
+      "error": "Error: not an RSS/Atom document",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-advancedtv-all",
+      "name": "Advanced Television 产业新闻",
+      "url": "https://advanced-television.com/feed/",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-worldscreen-all",
+      "name": "World Screen 产业新闻",
+      "url": "https://worldscreen.com/feed/",
+      "items": 10,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-videoweek-all",
+      "name": "VideoWeek 广告与视频产业",
+      "url": "https://videoweek.com/feed/",
+      "items": 12,
+      "scoped": 8,
+      "recent30Days": 8,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-todotv-all",
+      "name": "TodoTV News 产业新闻",
+      "url": "https://todotvnews.com/en/feed/",
+      "items": 8,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-market-apac",
+      "name": "MARKETECH APAC",
+      "url": "https://marketech-apac.com/feed/",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-tvc",
+      "name": "The Video Consortium",
+      "url": "https://videoconsortium.org/feed",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-marketing-interactive",
+      "name": "Marketing Interactive",
+      "url": "https://www.marketing-interactive.com/rss",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-produ-all",
+      "name": "PRODU 产业新闻",
+      "url": "https://www.produ.com/feed/",
+      "items": 20,
+      "scoped": 3,
+      "recent30Days": 3,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-kidscreen",
+      "name": "Kidscreen",
+      "url": "https://kidscreen.com/feed/",
+      "error": "Error: HTTP 202",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-c21media",
+      "name": "C21Media",
+      "url": "https://www.c21media.net/feed/",
+      "items": 22,
+      "scoped": 2,
+      "recent30Days": 2,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-tbur",
+      "name": "Television Business International",
+      "url": "https://tbivision.com/feed/",
+      "error": "Error: not an RSS/Atom document",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-real-screen",
+      "name": "Realscreen",
+      "url": "https://realscreen.com/feed/",
+      "error": "Error: HTTP 202",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-ainews-cn",
+      "name": "AI新智界",
+      "url": "https://www.aixinzhijie.com/feed",
+      "error": "TypeError: fetch failed",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-leonardo",
+      "name": "Leonardo AI 官方博客",
+      "url": "https://leonardo.ai/feed/",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-openart",
+      "name": "OpenArt 官方博客",
+      "url": "https://openart.ai/blog/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-freepik-blog",
+      "name": "Freepik 官方博客",
+      "url": "https://www.freepik.com/blog/feed/",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-synthesia",
+      "name": "Synthesia 官方博客",
+      "url": "https://www.synthesia.io/blog/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-ideogram",
+      "name": "Ideogram 官方博客",
+      "url": "https://about.ideogram.ai/blog/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-d-id",
+      "name": "D-ID 官方博客",
+      "url": "https://www.d-id.com/feed/",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-akool",
+      "name": "AKOOL 官方博客",
+      "url": "https://akool.com/blog/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-speechify",
+      "name": "Speechify 官方博客",
+      "url": "https://speechify.com/blog/feed/",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-wellsaid",
+      "name": "WellSaid 官方博客",
+      "url": "https://www.wellsaid.io/blog/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-playht",
+      "name": "PlayAI 官方博客",
+      "url": "https://play.ht/blog/feed/",
+      "error": "Error: Blocked proxy address for play.ht",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-murf",
+      "name": "Murf 官方博客",
+      "url": "https://murf.ai/blog/rss/",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-resemble",
+      "name": "Resemble AI 官方博客",
+      "url": "https://www.resemble.ai/feed/",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-wavespeed",
+      "name": "WaveSpeedAI 官方博客",
+      "url": "https://wavespeed.ai/blog/rss.xml",
+      "items": 50,
+      "scoped": 34,
+      "recent30Days": 34,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-wavel",
+      "name": "Wavel AI 官方博客",
+      "url": "https://wavel.ai/blog/feed/",
+      "error": "Error: feed parse error: Error: readTagExp returned undefined at position 4754. Context: \"       }\n                </style>\n                <meta name=“msvalidate.01” content=“FA6D27D9DF16A9\"",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-novita",
+      "name": "Novita AI 官方博客",
+      "url": "https://blogs.novita.ai/rss/",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-sieve",
+      "name": "Sieve 官方博客",
+      "url": "https://www.sievedata.com/blog/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-baseten",
+      "name": "Baseten 官方博客",
+      "url": "https://www.baseten.co/blog/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-deepgram",
+      "name": "Deepgram 官方博客",
+      "url": "https://deepgram.com/learn/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-modal",
+      "name": "Modal 官方博客",
+      "url": "https://modal.com/blog/feed.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-assemblyai",
+      "name": "AssemblyAI 官方博客",
+      "url": "https://www.assemblyai.com/blog/rss/",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-wondercraft",
+      "name": "Wondercraft 官方博客",
+      "url": "https://www.wondercraft.ai/blog/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-bentoml",
+      "name": "BentoML 官方博客",
+      "url": "https://www.bentoml.com/blog/rss.xml",
+      "error": "Error: HTTP 500",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-soundraw",
+      "name": "Soundraw 官方博客",
+      "url": "https://soundraw.io/blog/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-audiostack",
+      "name": "AudioStack 官方博客",
+      "url": "https://audiostack.ai/en/blog/feed/",
+      "error": "Error: not an RSS/Atom document",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-aiva",
+      "name": "AIVA 官方博客",
+      "url": "https://www.aiva.ai/blog-feed.xml",
+      "error": "Error: not an RSS/Atom document",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-boomy",
+      "name": "Boomy 官方博客",
+      "url": "https://boomy.com/blog/feed/",
+      "error": "Error: not an RSS/Atom document",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-filmustage-ghost",
+      "name": "Filmustage 官方博客",
+      "url": "https://filmustage.com/blog/rss",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-fliki",
+      "name": "Fliki 官方博客",
+      "url": "https://fliki.ai/blog/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-pictory",
+      "name": "Pictory 官方博客",
+      "url": "https://pictory.ai/feed",
+      "items": 10,
+      "scoped": 10,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-animationworld",
+      "name": "AWN 新闻",
+      "url": "https://www.awn.com/news/rss.xml",
+      "error": "Error: HTTP 403",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-reelchicago",
+      "name": "Reel Chicago",
+      "url": "https://reelchicago.com/feed/",
+      "items": 1,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-reel360",
+      "name": "Reel 360",
+      "url": "https://reel360.com/feed/",
+      "items": 10,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-renderosity",
+      "name": "Renderosity Magazine",
+      "url": "https://magazine.renderosity.com/feed/",
+      "error": "Error: DNS lookup failed for magazine.renderosity.com",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-invideo",
+      "name": "InVideo 官方博客",
+      "url": "https://invideo.io/blog/rss.xml",
+      "error": "Error: Too many redirects",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-cg-record",
+      "name": "CG Record",
+      "url": "https://www.cgrecord.net/feeds/posts/default",
+      "items": 25,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-cgdirector",
+      "name": "CG Director",
+      "url": "https://www.cgdirector.com/feed/",
+      "items": 10,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-80lv-ai",
+      "name": "80 Level AI",
+      "url": "https://80.lv/articles/artificial-intelligence/feed/",
+      "error": "Error: not an RSS/Atom document",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-arxiv-cv",
+      "name": "arXiv 视觉生成研究",
+      "url": "https://rss.arxiv.org/rss/cs.CV",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-arxiv-gr",
+      "name": "arXiv 图形与3D研究",
+      "url": "https://rss.arxiv.org/rss/cs.GR",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-arxiv-as",
+      "name": "arXiv 音频与语音处理",
+      "url": "https://rss.arxiv.org/rss/eess.AS",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-arxiv-sd",
+      "name": "arXiv 语音与声音研究",
+      "url": "https://rss.arxiv.org/rss/cs.SD",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-arxiv-mm",
+      "name": "arXiv 多媒体生成研究",
+      "url": "https://rss.arxiv.org/rss/cs.MM",
+      "items": 0,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-newatlas",
+      "name": "New Atlas",
+      "url": "https://newatlas.com/index.rss",
+      "items": 60,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-onedaystudios",
+      "name": "OneDay AI Studios",
+      "url": "https://onedaystudios.substack.com/feed",
+      "items": 2,
+      "scoped": 2,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-futuretools",
+      "name": "Future Tools",
+      "url": "https://www.futuretools.io/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-futurism",
+      "name": "Futurism",
+      "url": "https://futurism.com/feed",
+      "items": 80,
+      "scoped": 6,
+      "recent30Days": 6,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-filmrobots",
+      "name": "Film Robots",
+      "url": "https://www.filmrobots.com/feed",
+      "items": 9,
+      "scoped": 1,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-theregister",
+      "name": "The Register",
+      "url": "https://www.theregister.com/headlines.atom",
+      "error": "Error: not an RSS/Atom document",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-techradar",
+      "name": "TechRadar",
+      "url": "https://www.techradar.com/feeds/all",
+      "items": 50,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-digitaltrends",
+      "name": "Digital Trends",
+      "url": "https://www.digitaltrends.com/feed/",
+      "error": "Error: HTTP 405",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-siliconrepublic",
+      "name": "Silicon Republic",
+      "url": "https://www.siliconrepublic.com/feed",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-androidauthority",
+      "name": "Android Authority",
+      "url": "https://www.androidauthority.com/feed/",
+      "items": 80,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-9to5google",
+      "name": "9to5Google",
+      "url": "https://9to5google.com/feed/",
+      "items": 100,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-9to5mac",
+      "name": "9to5Mac",
+      "url": "https://9to5mac.com/feed/",
+      "items": 100,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-tomshardware",
+      "name": "Tom’s Hardware",
+      "url": "https://www.tomshardware.com/feeds/all",
+      "items": 50,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-tomsguide",
+      "name": "Tom’s Guide",
+      "url": "https://www.tomsguide.com/feeds/all",
+      "items": 50,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-androidpolice",
+      "name": "Android Police",
+      "url": "https://www.androidpolice.com/feed/",
+      "items": 10,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-gizmochina",
+      "name": "Gizmochina",
+      "url": "https://www.gizmochina.com/feed/",
+      "items": 40,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-mydrivers",
+      "name": "快科技",
+      "url": "https://news.mydrivers.com/rss.xml",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-gizchina",
+      "name": "GizChina",
+      "url": "https://www.gizchina.com/feed/",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-ithome-tw",
+      "name": "iThome 台湾",
+      "url": "https://www.ithome.com.tw/rss",
+      "items": 30,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-appleinsider",
+      "name": "AppleInsider",
+      "url": "https://appleinsider.com/rss/news/",
+      "items": 50,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-landian",
+      "name": "蓝点网",
+      "url": "https://www.landiannews.com/feed",
+      "items": 20,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-technews-tw",
+      "name": "科技新报",
+      "url": "https://technews.tw/feed/",
+      "items": 40,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-inside-tw",
+      "name": "INSIDE",
+      "url": "https://www.inside.com.tw/feed",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-cool3c",
+      "name": "Cool3c",
+      "url": "https://www.cool3c.com/rss",
+      "items": 10,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-musictech",
+      "name": "MusicTech",
+      "url": "https://musictech.com/feed/",
+      "items": 10,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": true
+    },
+    {
+      "id": "rss-expand2-eprice",
+      "name": "ePrice",
+      "url": "https://www.eprice.com.tw/rss/",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-bedroomproducers",
+      "name": "Bedroom Producers Blog",
+      "url": "https://bedroomproducersblog.com/feed/",
+      "items": 12,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-soundonsound",
+      "name": "Sound on Sound",
+      "url": "https://www.soundonsound.com/rss-news",
+      "error": "Error: HTTP 410",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-dezeen",
+      "name": "Dezeen",
+      "url": "https://www.dezeen.com/feed/",
+      "items": 50,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-itsnicethat",
+      "name": "It’s Nice That",
+      "url": "https://www.itsnicethat.com/rss",
+      "error": "Error: HTTP 404",
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-designboom",
+      "name": "Designboom",
+      "url": "https://www.designboom.com/feed/",
+      "items": 10,
+      "scoped": 0,
+      "recent30Days": 0,
+      "accepted": false
+    },
+    {
+      "id": "rss-expand2-audioxpress",
+      "name": "AudioXpress",
+      "url": "https://audioxpress.com/rss/",
+      "items": 50,
+      "scoped": 1,
+      "recent30Days": 1,
+      "accepted": false
+    }
+  ]
+}

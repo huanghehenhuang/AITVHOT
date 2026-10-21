@@ -109,6 +109,8 @@ export interface TimelineResponse {
 }
 
 export interface PoolResponse {
+  /** Other public reports of each displayed item's confirmed news fact. */
+  groups?: Record<string, GroupInfo>;
   filters: TimelineFilters & { q: string | null; tab: "time" | "relevance" };
   items: FeedItemSummary[];
   page: number;

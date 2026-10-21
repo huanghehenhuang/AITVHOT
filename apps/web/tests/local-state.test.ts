@@ -26,6 +26,27 @@ async function reader(starred: unknown[] = []) {
 
 const displayDate = (value: string) => `${beijingDate(value)} ${beijingTime(value)}`;
 
+test("new readers default to dark while explicit light and system choices persist", async () => {
+  const { state, values } = await reader();
+  assert.equal(state.getThemePreference(), "dark");
+  state.setThemePreference("light");
+  assert.equal(state.getThemePreference(), "light");
+  state.setThemePreference(null);
+  assert.equal(values.get(state.KEYS.theme), "system");
+  assert.equal(state.getThemePreference(), null);
+  state.setThemePreference("dark");
+  assert.equal(state.getThemePreference(), "dark");
+});
+
+test("import restores a theme for a new reader without replacing an explicit choice", async () => {
+  const { state } = await reader();
+  assert.equal(state.importBundle(JSON.stringify({ version: 1, starred: [], read: [], theme: "light" })).themeApplied, true);
+  assert.equal(state.getThemePreference(), "light");
+  state.setThemePreference(null);
+  assert.equal(state.importBundle(JSON.stringify({ version: 1, starred: [], read: [], theme: "dark" })).themeApplied, false);
+  assert.equal(state.getThemePreference(), null);
+});
+
 test("import keeps bookmarks with invalid dates and persists displayable replacements", async () => {
   const invalid = ["broken", "", "999999-01-01", "+275760-09-13T00:00:00.000Z", null, 42, {}];
   const { state, values } = await reader();

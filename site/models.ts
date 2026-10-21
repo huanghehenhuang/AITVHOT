@@ -50,6 +50,17 @@ export const PRESETS: Record<string, ModelPreset> = {
     service: "mimo", model: "mimo-v2.6-flash", baseUrlEnv: "XIAOMI_MIMO_BASE_URL", apiKeyEnv: "XIAOMI_MIMO_API_KEY",
     extra: { thinking: { type: "disabled" } }, jsonMode: true,
   },
+  // 讯飞 MaaS（星火）托管的 DeepSeek V4 Flash：OpenAI 兼容，JSON 模式可用。
+  "xfyun-deepseek-v4-flash": {
+    service: "xfyun", model: "xopdeepseekv4flash0731", baseUrlEnv: "XFYUN_BASE_URL", apiKeyEnv: "XFYUN_API_KEY",
+    jsonMode: true,
+  },
+  // 商汤 SenseNova：OpenAI 兼容，JSON 模式可用；它总是先推理再回答（关不掉），
+  // 所以给推理预留输出额度，否则答案会被推理用光。返回的 JSON 可能带 ```json 围栏，提取时会去掉。
+  "sensenova-6.8-flash-lite": {
+    service: "sensenova", model: "sensenova-6.8-flash-lite", baseUrlEnv: "SENSENOVA_BASE_URL", apiKeyEnv: "SENSENOVA_API_KEY",
+    reasoningTokens: 4000, jsonMode: true,
+  },
   "qwen3-vl-flash": {
     service: "dashscope", model: "qwen3-vl-flash", baseUrlEnv: "DASHSCOPE_BASE_URL", apiKeyEnv: "DASHSCOPE_API_KEY",
     extra: { enable_thinking: false }, jsonMode: false, vision: true,

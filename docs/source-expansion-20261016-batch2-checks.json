@@ -1,0 +1,850 @@
+[
+  {
+    "source": {
+      "id": "rss-expand8-teloscompass",
+      "name": "TelosCompass · note AI视频创作实践",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://note.com/teloscompass/rss",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:39:33.842Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-teloscompass",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 25,
+    "recent": 25,
+    "samples": [
+      {
+        "title": "AI動画生成のやり直し、見えた違いから直す所を選ぶ。",
+        "url": "https://note.com/teloscompass/n/n750aced37d63",
+        "publishedAt": "2026-10-15T15:00:00.000Z"
+      },
+      {
+        "title": "AI動画生成の二つの場面、商品の色や形をそろえる。",
+        "url": "https://note.com/teloscompass/n/n1f94bdfc728a",
+        "publishedAt": "2026-10-14T15:00:00.000Z"
+      },
+      {
+        "title": "動画生成のカメラワーク、最後の画面まで決める。",
+        "url": "https://note.com/teloscompass/n/n742230a6cdbf",
+        "publishedAt": "2026-10-13T15:00:00.000Z"
+      },
+      {
+        "title": "商品を自然に動かすには、先に周りの動きを書く。",
+        "url": "https://note.com/teloscompass/n/n8ca3ffd1ad19",
+        "publishedAt": "2026-10-12T15:00:00.000Z"
+      },
+      {
+        "title": "プロンプトから1本作って、文と映像を見比べる。",
+        "url": "https://note.com/teloscompass/n/n2628ffbd4500",
+        "publishedAt": "2026-10-11T15:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand8-vibeclips",
+      "name": "VibeClips · AI视频创作教程",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.vibeclips.ai/blog",
+        "itemSelector": "a:has(time):has(h2),a:has(time):has(h3)",
+        "titleSelector": "h2,h3",
+        "publishedAtSelector": "time[datetime]",
+        "publishedAtUtcOffset": "+00:00",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:39:33.842Z",
+        "allowUrlPrefixes": [
+          "https://www.vibeclips.ai/blog/"
+        ],
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "publishedAtAuthoritative": true,
+          "publishedAtUtcOffset": "+00:00",
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-vibeclips",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 54,
+    "recent": 21,
+    "samples": [
+      {
+        "title": "AI Explainer Video Generator: Make Explainer Videos With AI",
+        "url": "https://www.vibeclips.ai/blog/ai-explainer-video-generator-guide",
+        "publishedAt": "2026-10-15T00:00:00.000Z"
+      },
+      {
+        "title": "How to Make an AI Video in 2026: Step-by-Step Guide",
+        "url": "https://www.vibeclips.ai/blog/how-to-make-an-ai-video-step-by-step",
+        "publishedAt": "2026-10-14T00:00:00.000Z"
+      },
+      {
+        "title": "Chinese AI Video Generator: Kling, Seedance, WAN Explained",
+        "url": "https://www.vibeclips.ai/blog/chinese-ai-video-generators-explained",
+        "publishedAt": "2026-10-13T00:00:00.000Z"
+      },
+      {
+        "title": "AI Video Generation Model Explained: Text to Video",
+        "url": "https://www.vibeclips.ai/blog/ai-video-generation-models-explained",
+        "publishedAt": "2026-10-12T00:00:00.000Z"
+      },
+      {
+        "title": "Dog AI Video: Turn Pet Photos Into Viral Videos",
+        "url": "https://www.vibeclips.ai/blog/dog-ai-video-generator-pet-videos",
+        "publishedAt": "2026-10-09T00:00:00.000Z"
+      }
+    ],
+    "details": [
+      {
+        "url": "https://www.vibeclips.ai/blog/ai-explainer-video-generator-guide",
+        "listDate": "2026-10-15T00:00:00.000Z",
+        "originalDate": "2026-10-15T00:00:00.000Z",
+        "summary": "Use an AI explainer video generator to turn a script into scenes, voice and a presenter. Step-by-step guide for business and teaching with V"
+      },
+      {
+        "url": "https://www.vibeclips.ai/blog/how-to-make-an-ai-video-step-by-step",
+        "listDate": "2026-10-14T00:00:00.000Z",
+        "originalDate": "2026-10-14T00:00:00.000Z",
+        "summary": "How to make an AI video in 5 steps: pick a model, write a prompt, set length and ratio, then export. VIBE is the AI video generator app for "
+      },
+      {
+        "url": "https://www.vibeclips.ai/blog/chinese-ai-video-generators-explained",
+        "listDate": "2026-10-13T00:00:00.000Z",
+        "originalDate": "2026-10-13T00:00:00.000Z",
+        "summary": "What is a Chinese AI video generator? Compare Kling, Seedance, WAN, Happy Horse, Vidu and PixVerse, and use them all in VIBE, the AI video g"
+      },
+      {
+        "url": "https://www.vibeclips.ai/blog/ai-video-generation-models-explained",
+        "listDate": "2026-10-12T00:00:00.000Z",
+        "originalDate": "2026-10-12T00:00:00.000Z",
+        "summary": "What is an AI video generation model? Learn how text and images become video, compare Kling, Sora and Veo, and pick one in VIBE, the AI vide"
+      },
+      {
+        "url": "https://www.vibeclips.ai/blog/dog-ai-video-generator-pet-videos",
+        "listDate": "2026-10-09T00:00:00.000Z",
+        "originalDate": "2026-10-09T00:00:00.000Z",
+        "summary": "Make a dog AI video from a photo in a minute. Best models for fur and motion, 10 prompts and 9:16 export with VIBE, the AI video generator a"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "rss-expand8-aituber",
+      "name": "AITuber · AI短视频与提示词",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://aituber.app/blog/rss.xml",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:39:33.842Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-aituber",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 117,
+    "recent": 26,
+    "samples": [
+      {
+        "title": "AI Rap Video Prompts: 25 to Copy and Paste",
+        "url": "https://aituber.app/blog/ai-rap-video-prompts/",
+        "publishedAt": "2026-10-13T00:00:00.000Z"
+      },
+      {
+        "title": "Best Lumen5 Alternatives",
+        "url": "https://aituber.app/blog/best-lumen5-alternatives/",
+        "publishedAt": "2026-10-13T00:00:00.000Z"
+      },
+      {
+        "title": "Best AI Content Repurposing Tools",
+        "url": "https://aituber.app/blog/best-ai-content-repurposing-tools/",
+        "publishedAt": "2026-10-12T00:00:00.000Z"
+      },
+      {
+        "title": "How to Make an AI Rap Video",
+        "url": "https://aituber.app/blog/how-to-make-ai-rap-video/",
+        "publishedAt": "2026-10-12T00:00:00.000Z"
+      },
+      {
+        "title": "Best Blog to Video AI Tools",
+        "url": "https://aituber.app/blog/best-blog-to-video-ai-tools/",
+        "publishedAt": "2026-10-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand8-coanimator",
+      "name": "CoAnimator · 可编辑视频与动画工作流",
+      "kind": "web_list",
+      "config": {
+        "url": "https://coanimator.com/blog",
+        "itemSelector": "li.post-row",
+        "linkSelector": "a.post-row-link",
+        "titleSelector": "a.post-row-link",
+        "publishedAtSelector": "time[datetime]",
+        "publishedAtUtcOffset": "+00:00",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:39:33.842Z",
+        "allowUrlPrefixes": [
+          "https://coanimator.com/blog/"
+        ],
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "publishedAtAuthoritative": true,
+          "publishedAtUtcOffset": "+00:00",
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-coanimator",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 18,
+    "recent": 14,
+    "samples": [
+      {
+        "title": "Can OpenClaw Make Videos? From Chat Brief to Finished MP4",
+        "url": "https://coanimator.com/blog/can-openclaw-make-videos",
+        "publishedAt": "2026-10-14T00:00:00.000Z"
+      },
+      {
+        "title": "Can Cursor Make Videos? How to Use It With CoAnimator",
+        "url": "https://coanimator.com/blog/can-cursor-make-videos",
+        "publishedAt": "2026-10-13T00:00:00.000Z"
+      },
+      {
+        "title": "Can OpenAI Codex Make Videos? Setup, Workflow, and Limits",
+        "url": "https://coanimator.com/blog/can-codex-make-videos",
+        "publishedAt": "2026-10-12T00:00:00.000Z"
+      },
+      {
+        "title": "How to Make a Product Hunt Launch Video That Explains Your Product",
+        "url": "https://coanimator.com/blog/product-hunt-launch-video",
+        "publishedAt": "2026-10-11T00:00:00.000Z"
+      },
+      {
+        "title": "How to make and add a demo GIF to your GitHub README",
+        "url": "https://coanimator.com/blog/github-readme-demo-gif",
+        "publishedAt": "2026-10-10T00:00:00.000Z"
+      }
+    ],
+    "details": [
+      {
+        "url": "https://coanimator.com/blog/can-openclaw-make-videos",
+        "listDate": "2026-10-14T00:00:00.000Z",
+        "originalDate": "2026-10-14T00:00:00.000Z",
+        "summary": "Use OpenClaw to generate video clips or direct an editable CoAnimator project. Learn the Telegram workflow, review steps, export checks, and"
+      },
+      {
+        "url": "https://coanimator.com/blog/can-cursor-make-videos",
+        "listDate": "2026-10-13T00:00:00.000Z",
+        "originalDate": "2026-10-13T00:00:00.000Z",
+        "summary": "Make product videos with Cursor and CoAnimator. Set up the project, install the video skill, render an MP4, and understand the custom ACP op"
+      },
+      {
+        "url": "https://coanimator.com/blog/can-codex-make-videos",
+        "listDate": "2026-10-12T00:00:00.000Z",
+        "originalDate": "2026-10-12T00:00:00.000Z",
+        "summary": "Make product videos with Codex and CoAnimator. Follow Windows, macOS, and Linux setup, plan scenes, prepare assets, review motion, and expor"
+      },
+      {
+        "url": "https://coanimator.com/blog/product-hunt-launch-video",
+        "listDate": "2026-10-11T00:00:00.000Z",
+        "originalDate": "2026-10-11T00:00:00.000Z",
+        "summary": "Create a polished Product Hunt launch video: plan the story, build a moodboard, design key frames, refine motion, and improve the cut throug"
+      },
+      {
+        "url": "https://coanimator.com/blog/github-readme-demo-gif",
+        "listDate": "2026-10-10T00:00:00.000Z",
+        "originalDate": "2026-10-10T00:00:00.000Z",
+        "summary": "Make a clear GitHub README GIF from a screen recording. Follow export settings, tested FFmpeg commands, Markdown examples, and fixes for com"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand8-wireflow",
+      "name": "Wireflow · AI短剧与视频制作教程",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.wireflow.ai/blog",
+        "itemSelector": "a:has(article)",
+        "titleSelector": "h2,h3",
+        "publishedAtSelector": "time[datetime]",
+        "publishedAtUtcOffset": "+00:00",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:39:33.842Z",
+        "allowUrlPrefixes": [
+          "https://www.wireflow.ai/blog/"
+        ],
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "publishedAtAuthoritative": true,
+          "publishedAtUtcOffset": "+00:00",
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-wireflow",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 50,
+    "recent": 41,
+    "samples": [
+      {
+        "title": "Claude Video Generation: How to Make AI Videos From Claude Through MCP",
+        "url": "https://www.wireflow.ai/blog/claude-video-generation",
+        "publishedAt": "2026-10-16T00:27:53.357Z"
+      },
+      {
+        "title": "AI Fruit Videos: How We Made a Talking Fruit Drama, With Every Prompt and Cost",
+        "url": "https://www.wireflow.ai/blog/ai-fruit-videos",
+        "publishedAt": "2026-10-16T00:25:57.196Z"
+      },
+      {
+        "title": "Generative AI Workflow: What It Is, With 3 Real Examples to Open",
+        "url": "https://www.wireflow.ai/blog/generative-ai-workflow",
+        "publishedAt": "2026-10-15T23:45:50.410Z"
+      },
+      {
+        "title": "AI Short Drama: How We Made One Episode, With Every Prompt and Cost",
+        "url": "https://www.wireflow.ai/blog/ai-short-drama",
+        "publishedAt": "2026-10-15T00:45:28.829Z"
+      },
+      {
+        "title": "CapCut API: What Exists in 2026 and What to Use Instead",
+        "url": "https://www.wireflow.ai/blog/capcut-api",
+        "publishedAt": "2026-10-15T00:37:55.025Z"
+      }
+    ],
+    "details": [
+      {
+        "url": "https://www.wireflow.ai/blog/claude-video-generation",
+        "listDate": "2026-10-16T00:27:53.357Z",
+        "originalDate": "2026-10-16T00:27:53.357Z",
+        "summary": "Claude video generation works through connected models: Claude cannot render footage itself, but over MCP it can run video models and hand b"
+      },
+      {
+        "url": "https://www.wireflow.ai/blog/ai-fruit-videos",
+        "listDate": "2026-10-16T00:25:57.196Z",
+        "originalDate": "2026-10-16T00:25:57.196Z",
+        "summary": "AI fruit videos are short vertical clips where fruit characters talk, flirt and argue, often in a reality-show setting. We made a two-fruit "
+      },
+      {
+        "url": "https://www.wireflow.ai/blog/generative-ai-workflow",
+        "listDate": "2026-10-15T23:45:50.410Z",
+        "originalDate": "2026-10-15T23:45:50.410Z",
+        "summary": "A generative AI workflow is a chain of steps in which AI models make the content: a prompt becomes a product photo, a photo becomes a video "
+      },
+      {
+        "url": "https://www.wireflow.ai/blog/ai-short-drama",
+        "listDate": "2026-10-15T00:45:28.829Z",
+        "originalDate": "2026-10-15T00:45:28.829Z",
+        "summary": "An AI short drama is a vertical, phone-first serial whose script, cast, voices and shots come from AI models. We made one full 15-second epi"
+      },
+      {
+        "url": "https://www.wireflow.ai/blog/capcut-api",
+        "listDate": "2026-10-15T00:37:55.025Z",
+        "originalDate": "2026-10-15T00:37:55.025Z",
+        "summary": "There is no official CapCut API for editing or rendering video. CapCut's terms ban scripted access, and the GitHub projects named CapCutAPI "
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand8-videogen",
+      "name": "VideoGen · 视频剪辑与镜头实战",
+      "kind": "web_list",
+      "config": {
+        "url": "https://videogen.io/blog",
+        "itemSelector": "article:has(time)",
+        "linkSelector": "h2 a",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time[datetime]",
+        "publishedAtUtcOffset": "+00:00",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:39:33.842Z",
+        "allowUrlPrefixes": [
+          "https://videogen.io/blog/"
+        ],
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "publishedAtAuthoritative": true,
+          "publishedAtUtcOffset": "+00:00",
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-videogen",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 87,
+    "recent": 18,
+    "samples": [
+      {
+        "title": "Does Higgsfield AI have an app: Complete User Guide",
+        "url": "https://videogen.io/blog/does-higgsfield-ai-have-an-app",
+        "publishedAt": "2026-10-09T00:00:00.000Z"
+      },
+      {
+        "title": "Higgsfield Moodboard: How to Use in VideoGen",
+        "url": "https://videogen.io/blog/higgsfield-moodboard-how-to-use",
+        "publishedAt": "2026-10-09T00:00:00.000Z"
+      },
+      {
+        "title": "How AI Removes Filler Words in Video Editing",
+        "url": "https://videogen.io/blog/how-ai-removes-filler-words-in-video-editing",
+        "publishedAt": "2026-10-09T00:00:00.000Z"
+      },
+      {
+        "title": "How to Access Seedance 2.0: AI Video Generation",
+        "url": "https://videogen.io/blog/how-to-access-seedance-2-0-ai-video-generation",
+        "publishedAt": "2026-10-09T00:00:00.000Z"
+      },
+      {
+        "title": "How to Create AI Avatar Video with Heygen",
+        "url": "https://videogen.io/blog/how-to-create-ai-avatar-video-with-heygen",
+        "publishedAt": "2026-10-09T00:00:00.000Z"
+      }
+    ],
+    "details": [
+      {
+        "url": "https://videogen.io/blog/does-higgsfield-ai-have-an-app",
+        "listDate": "2026-10-09T00:00:00.000Z",
+        "originalDate": "2026-10-09T00:00:00.000Z",
+        "summary": "Does Higgsfield AI have an app? Higgsfield is a web app, its official phone app is Diffuse, and its tools also run inside a VideoGen project"
+      },
+      {
+        "url": "https://videogen.io/blog/higgsfield-moodboard-how-to-use",
+        "listDate": "2026-10-09T00:00:00.000Z",
+        "originalDate": "2026-10-09T00:00:00.000Z",
+        "summary": "Learn how to use Higgsfield AI Moodboards in Soul 2.0, which reference images work, and how to get the same consistent look in a VideoGen pr"
+      },
+      {
+        "url": "https://videogen.io/blog/how-ai-removes-filler-words-in-video-editing",
+        "listDate": "2026-10-09T00:00:00.000Z",
+        "originalDate": "2026-10-09T00:00:00.000Z",
+        "summary": "How video editing AI removes filler words: word timestamps, context-aware detection, editable cuts, and the VideoGen settings that control i"
+      },
+      {
+        "url": "https://videogen.io/blog/how-to-access-seedance-2-0-ai-video-generation",
+        "listDate": "2026-10-09T00:00:00.000Z",
+        "originalDate": "2026-10-09T00:00:00.000Z",
+        "summary": "Four ways to access Seedance 2.0 AI video generation: Dreamina, CapCut, developer APIs, and VideoGen. Steps to use Seedance AI with no ByteD"
+      },
+      {
+        "url": "https://videogen.io/blog/how-to-create-ai-avatar-video-with-heygen",
+        "listDate": "2026-10-09T00:00:00.000Z",
+        "originalDate": "2026-10-09T00:00:00.000Z",
+        "summary": "Make a HeyGen AI avatar video two ways: directly in HeyGen, or inside a VideoGen project where the avatar sits beside product shots, caption"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand8-vibeaiapp",
+      "name": "VibeAI · 图生视频与画幅教程",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.vibeaiapp.com/blog",
+        "itemSelector": "article:has(time)",
+        "linkSelector": "a",
+        "titleSelector": "h2,h3",
+        "publishedAtSelector": "time[datetime]",
+        "publishedAtUtcOffset": "+00:00",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:39:33.842Z",
+        "allowUrlPrefixes": [
+          "https://www.vibeaiapp.com/blog/"
+        ],
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "publishedAtAuthoritative": true,
+          "publishedAtUtcOffset": "+00:00",
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-vibeaiapp",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 26,
+    "recent": 21,
+    "samples": [
+      {
+        "title": "Google AI Video Generator: Veo 3.1 Explained and How to Use It on Your Phone",
+        "url": "https://www.vibeaiapp.com/blog/google-ai-video-generator-veo-guide",
+        "publishedAt": "2026-10-14T00:00:00.000Z"
+      },
+      {
+        "title": "AI Video Aspect Ratio Guide: 9:16, 16:9 or 1:1 for Every Platform",
+        "url": "https://www.vibeaiapp.com/blog/ai-video-aspect-ratios-guide",
+        "publishedAt": "2026-10-13T00:00:00.000Z"
+      },
+      {
+        "title": "AI Product Video: From One Product Photo to a Scroll-Stopping Clip",
+        "url": "https://www.vibeaiapp.com/blog/ai-product-video-generator",
+        "publishedAt": "2026-10-12T00:00:00.000Z"
+      },
+      {
+        "title": "AI Video Generator From Text: How Text-to-Video Works (With 4 Prompts to Copy)",
+        "url": "https://www.vibeaiapp.com/blog/ai-video-generator-from-text",
+        "publishedAt": "2026-10-11T00:00:00.000Z"
+      },
+      {
+        "title": "Happy Horse 1.1: What Alibaba's AI Video Model Does and How It Compares",
+        "url": "https://www.vibeaiapp.com/blog/happy-horse-1-1-ai-video-model",
+        "publishedAt": "2026-10-09T00:00:00.000Z"
+      }
+    ],
+    "details": [
+      {
+        "url": "https://www.vibeaiapp.com/blog/google-ai-video-generator-veo-guide",
+        "listDate": "2026-10-14T00:00:00.000Z",
+        "originalDate": "2026-10-14T00:00:00.000Z",
+        "summary": "The Google AI video generator is Veo 3.1: 8-second clips with built-in audio. See the specs, prompts and how to try Veo 3.1 Fast on your pho"
+      },
+      {
+        "url": "https://www.vibeaiapp.com/blog/ai-video-aspect-ratios-guide",
+        "listDate": "2026-10-13T00:00:00.000Z",
+        "originalDate": "2026-10-13T00:00:00.000Z",
+        "summary": "Pick the right AI video aspect ratio before you generate: 9:16 for TikTok, Reels and Shorts, 16:9 for YouTube, 1:1 for feeds. Try all three "
+      },
+      {
+        "url": "https://www.vibeaiapp.com/blog/ai-product-video-generator",
+        "listDate": "2026-10-12T00:00:00.000Z",
+        "originalDate": "2026-10-12T00:00:00.000Z",
+        "summary": "Make an AI product video from a single photo: orbit, reveal and lifestyle shots, lighting words, model picks and copy-ready prompts you can "
+      },
+      {
+        "url": "https://www.vibeaiapp.com/blog/ai-video-generator-from-text",
+        "listDate": "2026-10-11T00:00:00.000Z",
+        "originalDate": "2026-10-11T00:00:00.000Z",
+        "summary": "Use an AI video generator from text to turn one sentence into a video. Learn how text-to-video works, the 5-part prompt formula and 4 prompt"
+      },
+      {
+        "url": "https://www.vibeaiapp.com/blog/happy-horse-1-1-ai-video-model",
+        "listDate": "2026-10-09T00:00:00.000Z",
+        "originalDate": "2026-10-09T00:00:00.000Z",
+        "summary": "Happy Horse 1.1 is Alibaba's AI video model with built-in audio. See its specs, how it differs from 1.0, and the closest models you can use "
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "rss-expand8-firecut",
+      "name": "FireCut · 口播剪辑与字幕教程",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://firecut.ai/blog/rss/",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:39:33.842Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-firecut",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 15,
+    "recent": 9,
+    "samples": [
+      {
+        "title": "Automate Your Video Editing Workflow: The Ultimate Guide for Content Creators",
+        "url": "https://firecut.ai/blog/automate-your-video-editing-workflow-the-ultimate-guide-for-content-creators/",
+        "publishedAt": "2026-10-14T12:00:16.000Z"
+      },
+      {
+        "title": "Is an AI Talking Head Video Editor Going to Replace Human Editors?",
+        "url": "https://firecut.ai/blog/is-an-ai-talking-head-video-editor-going-to-replace-human-editors/",
+        "publishedAt": "2026-10-10T12:00:48.000Z"
+      },
+      {
+        "title": "Finding the Best AI Talking Head Video Editor: 2026 Ultimate Guide",
+        "url": "https://firecut.ai/blog/finding-the-best-ai-talking-head-video-editor-2026-ultimate-guide/",
+        "publishedAt": "2026-10-07T12:00:08.000Z"
+      },
+      {
+        "title": "The Best AI Caption Generator Premiere Pro Plugin in 2026",
+        "url": "https://firecut.ai/blog/the-best-ai-caption-generator-premiere-pro-plugin-in-2026/",
+        "publishedAt": "2026-10-02T12:00:22.000Z"
+      },
+      {
+        "title": "FireCut vs AutoPod (2026 Comparison): Features, Pricing, and Speed",
+        "url": "https://firecut.ai/blog/firecut-vs-autopod-2026-comparison-features-pricing-and-speed/",
+        "publishedAt": "2026-09-30T12:00:46.000Z"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "rss-expand8-designerbox",
+      "name": "DesignerBox · 商品图与视频工作流",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://designerbox.ai/blog/rss.xml",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:39:33.842Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-designerbox",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 630,
+    "recent": 345,
+    "samples": [
+      {
+        "title": "360 Product Photography: Frames, Gear and Limits (2026)",
+        "url": "https://designerbox.ai/blog/360-product-photography/",
+        "publishedAt": "2026-10-07T00:00:00.000Z"
+      },
+      {
+        "title": "3D Product Rendering: Render, Photo or AI Image? (2026)",
+        "url": "https://designerbox.ai/blog/3d-product-rendering/",
+        "publishedAt": "2026-10-07T00:00:00.000Z"
+      },
+      {
+        "title": "Ad Layout: 6 Types for Product Ads and Safe Zones (2026)",
+        "url": "https://designerbox.ai/blog/ad-layout/",
+        "publishedAt": "2026-10-07T00:00:00.000Z"
+      },
+      {
+        "title": "AI Brand Guidelines: Rules an Image Model Can Follow",
+        "url": "https://designerbox.ai/blog/ai-brand-guidelines/",
+        "publishedAt": "2026-10-07T00:00:00.000Z"
+      },
+      {
+        "title": "AI Design Agent: What It Does and How to Brief One",
+        "url": "https://designerbox.ai/blog/ai-design-agent/",
+        "publishedAt": "2026-10-07T00:00:00.000Z"
+      }
+    ],
+    "filteredRecent": 54
+  },
+  {
+    "source": {
+      "id": "web_list-expand8-aifruit",
+      "name": "AI Fruit · 图像视频创作指南",
+      "kind": "web_list",
+      "config": {
+        "url": "https://aifruit.app/blog",
+        "itemSelector": "a:has(h3)",
+        "titleSelector": "h3",
+        "publishedAtSelector": "time[datetime]",
+        "publishedAtUtcOffset": "+00:00",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:39:33.842Z",
+        "allowUrlPrefixes": [
+          "https://aifruit.app/blog/"
+        ],
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "publishedAtAuthoritative": true,
+          "publishedAtUtcOffset": "+00:00",
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-aifruit",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 30,
+    "recent": 0,
+    "samples": []
+  }
+]

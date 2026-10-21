@@ -88,10 +88,25 @@ const server = createServer((req, res) => {
 });
 
 /**
+ * English documents must not enter the public cache: a cached Chinese page would otherwise be
+ * served to a reader who already chose English. ?lang=en is a separate URL; the cookie is the
+ * same choice on a clean address.
+ */
+function isEnglishDocument(req: import("node:http").IncomingMessage): boolean {
+  const raw = req.url ?? "/";
+  const q = raw.indexOf("?");
+  const params = new URLSearchParams(q >= 0 ? raw.slice(q + 1) : "");
+  if (params.get("lang") === "zh") return false;
+  if (params.get("lang") === "en") return true;
+  return /(?:^|;\s*)locale=en(?:;|$)/.test(String(req.headers.cookie ?? ""));
+}
+
+/**
  * The one writer of page response headers: a route only says how long shared caches may keep it (cachedPage, edgeTtl).
  * Public navigation returns all matched loaders, so `_routes` never changes a cached answer.
  */
 function pageResponse(req: import("node:http").IncomingMessage, res: import("node:http").ServerResponse) {
+  const english = isEnglishDocument(req);
   const target = req.url ?? "/";
   // An origin-form target is a path even when it starts with //, not a new URL authority.
   const url = new URL(target.startsWith("/") ? `http://web.local${target}` : target, "http://web.local");
@@ -114,7 +129,7 @@ function pageResponse(req: import("node:http").IncomingMessage, res: import("nod
       res.setHeader("Content-Type", "text/plain; charset=utf-8");
     }
     const cc = String(res.getHeader("Cache-Control") ?? "");
-    if (!publicRead || status !== 200 || res.hasHeader("Set-Cookie") || !cc || /(?:private|no-store)/i.test(cc)) {
+    if (english || !publicRead || status !== 200 || res.hasHeader("Set-Cookie") || !cc || /(?:private|no-store)/i.test(cc)) {
       res.removeHeader("Expires");
       res.setHeader("Cache-Control", "private, no-store");
       res.setHeader("X-Accel-Expires", "0");

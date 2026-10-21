@@ -1,0 +1,111 @@
+{
+  "checkedAt": "2026-10-14T01:07:45.891Z",
+  "totals": [
+    {
+      "total": 324,
+      "enabled": 322
+    }
+  ],
+  "sources": [
+    {
+      "id": "json-creator-github-akegarasu",
+      "name": "Akegarasu · 新开源创作项目",
+      "health": "ok",
+      "last_error": null,
+      "articles": 0
+    },
+    {
+      "id": "json-creator-github-cubiq",
+      "name": "cubiq · 新开源创作项目",
+      "health": "ok",
+      "last_error": null,
+      "articles": 0
+    },
+    {
+      "id": "json-creator-github-fannovel16",
+      "name": "Fannovel16 · 新开源创作项目",
+      "health": "ok",
+      "last_error": null,
+      "articles": 0
+    },
+    {
+      "id": "json-creator-github-kijai",
+      "name": "kijai · 新开源创作项目",
+      "health": "ok",
+      "last_error": null,
+      "articles": 0
+    },
+    {
+      "id": "json-creator-github-zho-zho-zho",
+      "name": "ZHO-ZHO-ZHO · 新开源创作项目",
+      "health": "ok",
+      "last_error": null,
+      "articles": 0
+    },
+    {
+      "id": "rss-creator-baoyu-io-feed",
+      "name": "宝玉的分享 · 创作与项目分享",
+      "health": "ok",
+      "last_error": null,
+      "articles": 1
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-1c3e3571b1627d23ee9c64521a0b0a41d3fe2987",
+      "name": "歸藏的AI工具箱 · 公众号公开订阅",
+      "health": "ok",
+      "last_error": null,
+      "articles": 2
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-24d0930cc9f4f0c708182dc1c087d41e1f4cbd33",
+      "name": "袋鼠帝AI客栈 · 公众号公开订阅",
+      "health": "ok",
+      "last_error": null,
+      "articles": 2
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-339818dbd5154cecdf5f4161f3391c7038a72bae",
+      "name": "沃垠AI · 公众号公开订阅",
+      "health": "ok",
+      "last_error": null,
+      "articles": 1
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-5903009f48a5e4aa44d8ac941a54fe3aafc3e03c",
+      "name": "AI寒武纪 · 公众号公开订阅",
+      "health": "ok",
+      "last_error": null,
+      "articles": 1
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-8a1fc997e5c742e91ad7c253836c28ca3a69ccb1",
+      "name": "卡尔的AI沃茨 · 公众号公开订阅",
+      "health": "ok",
+      "last_error": null,
+      "articles": 2
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-98bc16b6f53902a2ab511b4faa3499e0a1c78eb1",
+      "name": "山行AI · 公众号公开订阅",
+      "health": "ok",
+      "last_error": null,
+      "articles": 1
+    }
+  ],
+  "processing": [
+    {
+      "processing_state": "analyzed",
+      "count": 9
+    },
+    {
+      "processing_state": "blocked",
+      "count": 1
+    }
+  ],
+  "publications": [
+    {
+      "eligible": 9,
+      "selected": 3
+    }
+  ]
+}

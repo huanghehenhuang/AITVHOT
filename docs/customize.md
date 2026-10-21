@@ -18,7 +18,7 @@
 - `subject`：行业词。页面上“AI 日报”“全部 AI 动态”会变成“法律日报”“全部法律动态”。
 - `homeTitle`、`topicsTitle`、`description`、`tagline`、`keywords`：首页和主题目录页的标题、一句话介绍、分享图下方的小字、给搜索引擎的关键词。
 - `feedbackExample`：反馈表单输入框里的示例。
-- `locale`：界面语言（网页的语言标记、分享卡片和结构化数据），`public/` 文件里的 `{{locale}}` 也换成它。
+- `locale`：默认界面语言（网页语言标记、分享卡片和结构化数据的默认值），`public/` 文件里的 `{{locale}}` 也换成它。读者还可以在侧栏和“我的”里把界面切到英文（`?lang=en` 或 cookie `locale`）；英文只换界面和站点固定文案，文章、日报正文、RSS、分享图和 MCP 仍是写成的那种语言。英文界面对应 `apps/web/app/i18n/`，使用规则和隐私说明的英文在 `site/pages/*.en.md`。行业词改了以后，`i18n/en.ts` 里嵌着旧行业词的句子要一起改。
 - `since`：网站开始收录的年份（结构化数据里的时间范围，选填）。
 - `mcpPrefix`：MCP 工具名前缀，比如 `lawhot` 会得到 `lawhot_get_latest`。有人接入以后不要再改。
 - `interfaceVersion`：公开接口（MCP、OpenAPI、`llms.txt`）的版本号，只升不降；改了接口里已有的字段或含义时升主版本。
@@ -137,6 +137,7 @@
 ## 8. 模型和部署
 
 - 模型：`.env` 里的 `LLM_BASE_URL`、`LLM_API_KEY`、`LLM_MODEL`，任何 OpenAI 兼容接口都行，所有步骤默认都用它。`site/models.ts` 列出具名的模型（各用自己的地址和密钥环境变量）和每一步默认用哪个；部署时还可以用环境变量（见 `.env.example`）或后台“模型与评测”页逐步改选。用推理模型（先想再答）时给它留出推理的额度：默认模型设 `LLM_REASONING_TOKENS`，具名模型在 `site/models.ts` 里写 `reasoningTokens`；不留的话推理会把每一步的输出额度用光，答案为空，每次调用都失败。
+- 备用模型：设 `LLM_FALLBACK_MODEL=<具名模型>`，主模型的服务商拒绝服务（欠费、key 失效、5xx、连不上）或额度用完时自动改用它重试一次。超时这类结果不确定的调用不转移，避免重复计费；服务商的内容过滤也不转移。备用模型可以是任意已注册的模型名（例如 `sensenova-6.8-flash-lite` 或 `default`），与主模型相同时不生效。
 - 部署：见 [部署](deploy.md)。
 
 ## 改完以后检查

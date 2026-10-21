@@ -20,6 +20,7 @@ import { apiGet } from "./lib/api.server";
 import { useHydratedFlag } from "./lib/hydration";
 import { titled } from "./lib/seo";
 import { webModules } from "./site-modules";
+import { I18nProvider, LOCALE_BOOT_SCRIPT, localeFromMatches, localeTag, resolveLocale, translate, useI18n } from "./i18n";
 
 export const links: Route.LinksFunction = () => [
   { rel: "icon", href: "/favicon.ico", sizes: "any" },
@@ -32,14 +33,15 @@ export const links: Route.LinksFunction = () => [
 /** The release rendering this document: once a newer one is deployed, a render error reloads the page (entry.client). */
 export async function loader({ request }: Route.LoaderArgs) {
   const release = process.env.AIHOT_RELEASE ?? null;
+  const locale = resolveLocale(request);
   try {
     const meta = await apiGet<SiteMeta>("/api/site/meta", {
       headers: Object.assign({}, ...webModules().map((m) => m.root?.documentHeaders?.(request) ?? {})),
       signal: request.signal,
     });
-    return { ...meta, release };
+    return { ...meta, release, locale };
   } catch {
-    return { changelogVersion: null, release };
+    return { changelogVersion: null, release, locale };
   }
 }
 
@@ -48,22 +50,24 @@ export const shouldRevalidate: ShouldRevalidateFunction = () => false;
 export function Layout({ children }: { children: React.ReactNode }) {
   const site = useRouteLoaderData<typeof loader>("root");
   const [documentRelease] = useState(site?.release ?? null);
+  const locale = site?.locale === "en" ? "en" : "zh";
   return (
-    <html lang={SITE.locale} suppressHydrationWarning>
+    <html lang={localeTag(locale)} data-theme="dark" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         {documentRelease && <meta name="aihot-release" content={documentRelease} />}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f6" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#13191c" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111112" />
         <meta name="apple-mobile-web-app-title" content={SITE.name} />
+        <script dangerouslySetInnerHTML={{ __html: LOCALE_BOOT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: APPEARANCE_BOOT_SCRIPT }} />
         {webModules().map((m) => m.root?.bootScript && <script key={m.name} dangerouslySetInnerHTML={{ __html: m.root.bootScript }} />)}
         <Meta />
         <Links />
       </head>
       <body>
-        {children}
+        <I18nProvider locale={locale}>{children}</I18nProvider>
         <ScrollRestoration getKey={(location) => location.key} />
         <Scripts />
       </body>
@@ -72,14 +76,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 /** Only a page nobody matched falls back to this; every page names itself. */
-export function meta({ error }: Route.MetaArgs) {
+export function meta({ error, matches }: Route.MetaArgs) {
   if (!error) return [];
   const notFound = isRouteErrorResponse(error) && error.status === 404;
-  return [{ title: titled(notFound ? "页面不存在" : "暂时无法加载") }, { name: "robots", content: "noindex" }];
+  const locale = localeFromMatches(matches);
+  return [{ title: titled(translate(locale, notFound ? "页面不存在" : "暂时无法加载")) }, { name: "robots", content: "noindex" }];
 }
 
 /** Sidebar, main column and phone tab bar around a page (or an error). */
 function SiteShell({ changelogVersion, children }: { changelogVersion: string | null; children: ReactNode }) {
+  const { t } = useI18n();
   const navigation = useNavigation();
   // The phone search and pull-to-refresh are client-side, mounted once the page is interactive.
   const [interactive, setInteractive] = useState(false);
@@ -88,7 +94,7 @@ function SiteShell({ changelogVersion, children }: { changelogVersion: string | 
     <div className="flex min-h-dvh">
       <NavigationProgress active={navigation.state === "loading"} />
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[70] focus:rounded-control focus:bg-surface focus:px-3 focus:py-2">
-        跳到正文
+        {t("跳到正文")}
       </a>
       <Sidebar changelogVersion={changelogVersion} />
       {/* Phone shell (≤ 960px): each page's top bar (PhoneBar), one centred column, the tab bar below.
@@ -134,6 +140,7 @@ export default function App() {
 
 export function ErrorBoundary() {
   useAppearanceSync();
+  const { t } = useI18n();
   const error = useRouteError();
   const site = useRouteLoaderData<typeof loader>("root");
   const { pathname, search, hash } = useLocation();
@@ -144,19 +151,19 @@ export function ErrorBoundary() {
       <div className="max-w-sm text-center">
         <RingMark className="mx-auto mb-5 size-10 text-accent" />
         <div className="mono text-[12px] text-ink-4">{status}</div>
-        <h1 className="mt-1.5 text-[20px] font-bold text-ink">{notFound ? "这里没有内容" : "暂时无法加载"}</h1>
+        <h1 className="mt-1.5 text-[20px] font-bold text-ink">{notFound ? t("这里没有内容") : t("暂时无法加载")}</h1>
         <p className="mt-2 text-[13.5px] leading-relaxed text-ink-3">
-          {notFound ? "你访问的页面不存在，或内容已不再公开。" : "页面暂时无法显示，请重新加载后再试。"}
+          {notFound ? t("你访问的页面不存在，或内容已不再公开。") : t("页面暂时无法显示，请重新加载后再试。")}
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2.5">
           {!notFound && <Link reloadDocument to={pathname + search + hash} className={buttonClass("primary")}>
-            重新加载
+            {t("重新加载")}
           </Link>}
           <Link reloadDocument to="/" className={buttonClass(notFound ? "primary" : "secondary")}>
-            回到精选
+            {t("回到精选")}
           </Link>
           <Link reloadDocument to="/all" className={buttonClass("secondary")}>
-            浏览全部动态
+            {t("浏览全部动态")}
           </Link>
         </div>
       </div>

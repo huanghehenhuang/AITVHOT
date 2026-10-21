@@ -1,0 +1,764 @@
+{
+  "checkedAt": "2026-10-16T00:27:57.492Z",
+  "accepted": [
+    {
+      "source": {
+        "id": "web-expand7-project-jerristhebesta--ai-short-drama-studio",
+        "name": "AI-Short-Drama-Studio · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/JerrIsTheBesta/AI-Short-Drama-Studio/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-jerristhebesta",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 7,
+      "recent30Days": 7,
+      "sample": [
+        {
+          "title": "剧流 Studio v0.1.11",
+          "url": "https://github.com/JerrIsTheBesta/AI-Short-Drama-Studio/releases/tag/v0.1.11",
+          "publishedAt": "2026-10-14T18:00:48.000Z",
+          "summary": "{\"value\" => \"# 更新日志\\n\\n## 0.1.11（2026-10-15）\\n\\n### 新增\\n\\n- 新增 APIMart 图片与视频生成接口支持，按照异步任务 API 提交、轮询并获取生成结果。\\n- APIMart 参考图会先上传为服务端可访问的素材，再提交图片或视频生成任务。\\n- 桌面端增加二进制文件上传通道，支持第三方生成服务所需的参考图上传流程。\\n\\n### 修复\\n\\n- 修复第三方及 APIMart 图片、视频请求错误复用 OpenAI 兼容调用方式的问题。\\n- 修复 APIMart 图片与视频配置相互串用接口地址、请求参数或 API Key 的问题。\\n- 修复 Authorization: Bearer 与 API Key 之间缺少空格导致鉴权失败的问题。\\n- 修复本地参考图直接写入生成请求后，云端服务无法读取素材的问题。\\n\\n### 优化\\n\\n- 完善第三方异步任务的状态轮询、错误解析和媒体结果提取。\\n- 设置页补充 APIMart 图片与视频接入选项，并保持不同能力配置相互独立。\\n\\n## 0.1.10（2026-10-14）\\n\\n### 修复\\n\\n- 修复节点界面显示 AutoDL、实际却仍沿用旧 Zealman 配置并错误请求 /api/workflow/generate 的线路串用问题。\\n- 节点与分镜现在明确保存所选视频接入 ID，下拉框展示节点真实绑定的线路。\\n- Zealman 提交增加严格隔离：仅当接入提供方、适配器和内置 U 系列工作流同时匹配时才进入 Zealman 流程。\\n- H3 10 秒工作流固定使用 AutoDL 接入，不再被当前激活的 Zealman 配置改道。\\n- 修复批量优化提示词因质量启发式规则误判而大量失败的问题；模型格式异常时自动回退为可用稿，仅真实接口故障才中断。\\n\\n### 优化\\n\\n- 视频接入选项增加 AutoDL、Zealman 标识，降低多线路配置时的误选风险。\\n- 提示词第一稿不理想时仍会自动修稿一次，第二稿交由确定性清洗器整理，不再阻塞用户继续生成。\\n\\n## 0.1.9（2026-10-14）\\n\\n### 新增\\n\\n- 新增 Zealman 镜像接口独立配置页，仅需填写用户自己的 Base URL。\\n- 内置 U01、U02、U04、U06 等 H3 图生视频工作流，并支持按工作流自动映射参考图、提示词、尺寸和时长参数。\\n- 视频提示词支持“一键优化全部”，按每批最多 5 个任务排队处理；同时保留单个节点独立优化入口。\\n- 视频节点会保存各自选用的视频模型或工作流，不再被全局选择意外覆盖。\\n\\n### 优化\\n\\n- 重做模型配置文案和分组：语言模型的官方接口与中转站统一按 OpenAI 兼容接口配置；ComfyUI"
+        },
+        {
+          "title": "剧流 Studio v0.1.10",
+          "url": "https://github.com/JerrIsTheBesta/AI-Short-Drama-Studio/releases/tag/v0.1.10",
+          "publishedAt": "2026-10-14T14:25:21.000Z",
+          "summary": "{\"value\" => \"# 更新日志\\n\\n## 0.1.10（2026-10-14）\\n\\n### 修复\\n\\n- 修复节点界面显示 AutoDL、实际却仍沿用旧 Zealman 配置并错误请求 /api/workflow/generate 的线路串用问题。\\n- 节点与分镜现在明确保存所选视频接入 ID，下拉框展示节点真实绑定的线路。\\n- Zealman 提交增加严格隔离：仅当接入提供方、适配器和内置 U 系列工作流同时匹配时才进入 Zealman 流程。\\n- H3 10 秒工作流固定使用 AutoDL 接入，不再被当前激活的 Zealman 配置改道。\\n- 修复批量优化提示词因质量启发式规则误判而大量失败的问题；模型格式异常时自动回退为可用稿，仅真实接口故障才中断。\\n\\n### 优化\\n\\n- 视频接入选项增加 AutoDL、Zealman 标识，降低多线路配置时的误选风险。\\n- 提示词第一稿不理想时仍会自动修稿一次，第二稿交由确定性清洗器整理，不再阻塞用户继续生成。\\n\\n## 0.1.9（2026-10-14）\\n\\n### 新增\\n\\n- 新增 Zealman 镜像接口独立配置页，仅需填写用户自己的 Base URL。\\n- 内置 U01、U02、U04、U06 等 H3 图生视频工作流，并支持按工作流自动映射参考图、提示词、尺寸和时长参数。\\n- 视频提示词支持“一键优化全部”，按每批最多 5 个任务排队处理；同时保留单个节点独立优化入口。\\n- 视频节点会保存各自选用的视频模型或工作流，不再被全局选择意外覆盖。\\n\\n### 优化\\n\\n- 重做模型配置文案和分组：语言模型的官方接口与中转站统一按 OpenAI 兼容接口配置；ComfyUI 明确为本地 ComfyUI；适配器收纳为高级兼容选项。\\n- 将原有视频配置说明调整为“一键出片设置”，根据不同视频模型展示对应规则。\\n- 分镜时长会参考当前视频模型支持的最长时长，减少可合并镜头被机械拆成多个短镜头的问题。\\n- H3 视频提示词优化增强 JSON 容错，并在模型偶发输出不完整时自动重试一次。\\n- 语言模型请求明确使用用户当前选中的配置，鉴权失败时显示实际接口域名和更易懂的提示。\\n- 云端 ComfyUI 请求不再只允许固定平台地址，支持用户配置的公网 ComfyUI 服务。\\n\\n### 修复\\n\\n- 修复 Zealman Base URL 未正确使用用户配置、错误补全路径及部分地址被误改的问题。\\n- 修复 Zealman 返回 HTML 或 HTTP 405 时错误信息不清晰的问题。\\n- 修复批量提示词优化一次并发过多，单次故障导致后续队列无法继续的问题。\\n- 修复若干节点提示词、视频配置和项目数据保存不稳定的问题。\\n\", \"PSPath\" => \"F:\\"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand7-project-buxuku--smartsub",
+        "name": "SmartSub · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/buxuku/SmartSub/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-buxuku",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 10,
+      "recent30Days": 1,
+      "sample": [
+        {
+          "title": "v3.9.0 🤖 AI 创作助手登场，MCP 自动化与音视频工具箱",
+          "url": "https://github.com/buxuku/SmartSub/releases/tag/v3.9.0",
+          "publishedAt": "2026-09-24T05:21:54.000Z",
+          "summary": "v3.9.0 🤖 AI 创作助手登场，MCP 自动化与音视频工具箱 feat 新增内置 AI 创作助手（快捷键 ⌘J / Ctrl+J），支持上下文感知、对话式字幕润色、截图排障与文件对话 (#499) Add in-app AI Assistant (⌘J / Ctrl+J) with context awareness, conversational subtitle polish, screenshot diagnostics, and file chat (#499) 支持 MCP 协议与 CLI 自动化，提供 111 个工具与统一命令行，支持一键连接 Cursor、Codex 与 Claude Code (#499) Support MCP and CLI automation with 111 tools and unified command line, integrating with Cursor, Codex, and Claude Code (#499) 新增音视频工具箱，内置音频提取、字幕合并/转换/对齐、视频压缩、裁剪与转 GIF 等实用小工具 (#487) Add Audio/Video Toolbox for audio extraction, subtitle merge/convert/sync, video compression, trimming, and GIF creation (#487) 新增字幕质量巡检，智能检测语速过快 (CPS)、单行超长与疑似漏听，支持快速试听与补全 (#496 #497) Add subtitle quality review to detect rapid speech rate (CPS), overly long lines, and missed speech with quick audition and repair (#496 #497) 支持多视频独立匹配各自的参考文稿，全局文稿移至高级设置 (#488 #498) Support independent manuscript matching for multi-video imports, and move global manuscript into advanced settings (#488 #498) faster-whisper 支持从本地压缩包或目录一键导入运行时，无需重新下载 (#495) Support importing faster-whisper runtime directly from local archives or folders (#495) 任务列表新增微阶段进度与耗时展示，并将工具箱处理记录纳入历史任务 (#498) Display micro-stage progress "
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand7-project-chatfire-ai--huobao-drama",
+        "name": "huobao-drama · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/chatfire-AI/huobao-drama/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-chatfire-ai",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 4,
+      "recent30Days": 4,
+      "sample": [
+        {
+          "title": "v4.0.8",
+          "url": "https://github.com/chatfire-AI/huobao-drama/releases/tag/v4.0.8",
+          "publishedAt": "2026-10-05T16:33:20.000Z",
+          "summary": "火宝快捷配置支持国内/国外节点选择：默认跟随界面语言（中文→firemux.cn，其他→firemux.com），一键写入的推荐配置与获取 Key 链接随节点生成"
+        },
+        {
+          "title": "v4.0.7",
+          "url": "https://github.com/chatfire-AI/huobao-drama/releases/tag/v4.0.7",
+          "publishedAt": "2026-10-02T08:05:26.000Z",
+          "summary": "统一火宝品牌图标：网页 Logo、浏览器图标、macOS 应用图标和 Windows 应用图标。 提供 macOS Apple Silicon、macOS Intel 和 Windows x64 安装包。 macOS Apple Silicon 安装包内服务与前端启动检查通过；其他平台已完成打包和内容校验，未进行对应系统运行测试。"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand7-project-2771096196--psai",
+        "name": "psai · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/2771096196/psai/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-2771096196",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 10,
+      "recent30Days": 7,
+      "sample": [
+        {
+          "title": "Dreamer 2.0.0 · macOS Apple Silicon",
+          "url": "https://github.com/2771096196/psai/releases/tag/v2.0.0-macos-arm64",
+          "publishedAt": "2026-10-15T22:12:58.000Z",
+          "summary": "Dreamer 2.0.0 · macOS Apple Silicon Dreamer 插件本体完全免费，登录可选，无需激活码或设备绑定。Chat / Token Plan 与 GRS 由用户分别配置，费用由相应模型服务商收取。交流与反馈：QQ 群 465662008。 2.0.0 更新 新主页与全局侧边栏：集中进入 AI 搭档、简洁生成、修图工坊、素材、工作流与设置；常用和最近入口保留在本机。 修图工坊：分类与搜索、常用参数滑块、独立工具子页、原始预设和手动草稿；预览按需读取，导航和调参不自动修图。可选本机模型服务未随包附带。 工作区切换保留草稿和已提交任务，优化页面渲染、选区观察、图像资源释放及贴回中的重复处理。 模型思考设置按具体型号显示并保存，Chat 与看图共用；可选择 JSON 提示词偏好，默认关闭。 插件按需启动，减少隐藏状态下的后台观察；首次说明和界面偏好使用 Photoshop UXP 持久化存储。 从最新共享源码完整原生编译。Windows 专有选区浮条、本机厚涂服务启停管理不代表 Mac 已支持。 下载与版本保留 GitHub 主仓 · 备用镜像 官网版本列表 本次没有新的 2.0.0 百度分享；官网百度渠道仍明确标注 Mac 1.5.1，不要将旧分享当成 2.0.0。 Mac 1.5.1 和 Mac 1.5.0 继续保留；Windows 下载与历史附件不变。 安装与安全说明 适用于 Apple Silicon（M 系列）Mac；Intel Mac 未验证。客户无需安装 Python、pip 或 Anaconda。 更新前备份原 Dreamer/user-data，保存文档并完全退出 Photoshop。 解压得到单个 Dreamer 文件夹，完整替换实际 Photoshop Plug-ins 下的程序文件，不混用新旧文件；保留自己的用户数据。 重开 Photoshop 并打开 Dreamer。若系统阻止 start_agent.command，按面板提示到“系统设置 → 隐私与安全性 → 仍要打开”，系统认证由本人完成。 确认来源可信后，在 Terminal 的整包提示中输入一次 y。启动器核验完整性后只处理本包 scripts / python 的隔离属性，不要求逐个允许动态库，不关闭系统保护。 回到面板重试。创作数据保存在插件内 Dreamer/user-data；首次说明及少量界面偏好保存在 Photoshop UXP 存储，模型服务需另行配置。 本包没有 Apple Developer ID 签名或 Apple 公证，以预发布形式提供。 原生组件的 ad-hoc 签名和文件摘要不等于发布者身份认证。包级确认会跳过这些组件的 Apple 首次检查，请只使用 可信来源。系统授权与包级确认不同，不承诺零提示或固定点击次数。 验收范围"
+        },
+        {
+          "title": "Dreamer 1.5.1 for Windows — 免费未签名版",
+          "url": "https://github.com/2771096196/psai/releases/tag/v1.5.1",
+          "publishedAt": "2026-10-14T10:57:34.000Z",
+          "summary": "Dreamer 1.5.1 for Photoshop — 免费 Windows x64 版。 ImportantDreamer 插件本体完全免费，登录可选。 不需要 Token Plan 也能使用直接生图与本地校色、对齐、光线贴回。AI 搭档按需配置 Chat API 或 Token Plan；生图单独使用 GRS Key/额度。第三方服务费用由服务商收取。账号为后续 Skills 发放、社区与同步做准备，该能力正在建设中。QQ群 465662008。 Warning此版本的 Windows EXE 尚未进行 Authenticode 签名，Windows 可能显示未知发布者或 SmartScreen 提示。请仅从本仓库下载并核对下方 SHA-256。 系统要求： 平台：仅适用于 Windows x64 Adobe Photoshop 2025、Photoshop 2026 或更高版本 Photoshop 最低内部版本：26.0 欢迎加入 Dreamer QQ 群 465662008，在群里提交 Bug、Skills、工作流和新需求。加群时请备注“Dreamer”；请勿公开 Token、AK、API Key、AccessKey Secret 或账号密码。 发布文件： 文件：Dreamer-1.5.1-windows-x64-commercial-20261014-084458.zip SHA-256：434c9c8f832a66f227b79ff37092ddffd410606bb172acaee9d2bd83ce75282a 官网：https://thoudreamer.com/ Dreamer 1.5.1 · Windows 更新 预设编辑器新增章节索引，可快速定位目标、强度、保护规则、预设要求、看图和完整提示词；生成设置与图片输入布局更紧凑。 简洁模式可重新读取尚未成功冻结的任务原图，保留已有提示词和参考图，并明确显示冻结失败原因。 MiniMax Token Plan / M Plan 与按量 API 新配置默认使用 MiniMax-M3.1-Flash-Preview，也可选择 M3；实际可用性由供应商账号权限决定。 简洁看图升级取消固定的 4096-token 输出上限，改用供应商模型输出策略，并显示纯思考或空正文的具体错误。 普通生成确认卡支持在等待期间调整参数并提交新任务，采用 2 秒点击冷却；每次提交保留各自的提示词、图片和参数快照。 本机厚涂新增惠绘与暖树完整方案选择，以及本机服务启动、关闭、状态刷新和安装目录选择。ComfyUI、模型及第三方节点需另行准备，不随插件分发。 改进 GRS 成图下载超时与后台取回；取图期间或失败后可复制原任务的下载链接，查询和取回不会重新提交付费生成。 插件本体免费，本地创作无需 Dreamer 登录；C"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand7-project-huanshere--videolingo",
+        "name": "VideoLingo · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/Huanshere/VideoLingo/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-huanshere",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 10,
+      "recent30Days": 2,
+      "sample": [
+        {
+          "title": "VideoLingo v3.1.1 ✨",
+          "url": "https://github.com/Huanshere/VideoLingo/releases/tag/v3.1.1",
+          "publishedAt": "2026-09-27T21:51:04.000Z",
+          "summary": "VideoLingo v3.1.1 ✨ More flexible subtitle workflows, safer long-video dubbing, and official Fish Audio voice cloning. 🚀 What’s new Official Fish Audio dubbing is here. The new fish_audio provider uses Fish Audio’s official API and defaults to the s2.1-pro model. It can clone the voice from 15–30 seconds of the source video without storing a voice in your Fish Audio account, or use a fixed Fish Audio voice or custom voice ID. OpenAI-compatible TTS can now use OpenLux. The OpenAI TTS backend supports the OpenLux speech endpoint, with configurable base URL and model. Bring your own subtitles. Import an SRT file for translation, with or without a video, and use transcribe-only mode when you only need source subtitles. Review the pipeline before it continues. Optional checkpoints let you edit terminology before translation and review the translation spreadsheet before subtitle generation. More control over subtitle output. Set a translation style, customize font/size/color, and independently choose bilingual, translated, or source subtitles for the subtitle and dubbed videos. MAI-Transcribe-2 is available as an optional ASR backend through Azure Speech or OpenRouter, while local Qwen3"
+        },
+        {
+          "title": "VideoLingo v3.1.0 🎉",
+          "url": "https://github.com/Huanshere/VideoLingo/releases/tag/v3.1.0",
+          "publishedAt": "2026-09-27T09:34:29.000Z",
+          "summary": "VideoLingo v3.1.0 🎉 Easier setup, Qwen speech recognition by default, and a local API for automation. 🚀 What’s new Qwen3-ASR is now the default local speech recognition engine, with Qwen3-ForcedAligner for word timing. The 1.7B model is selected by default; a lighter 0.6B model is also available. Getting started is simpler. On Windows, download and extract the Release ZIP, then double-click OneKeyStart.bat. It prepares uv, Python 3.12, dependencies, and FFmpeg before opening VideoLingo in your browser. For source installations, run uv run start.py. FFmpeg and ffprobe are prepared automatically. No separate download or PATH setup is needed. A local HTTP API replaces the Excel batch workflow. Start it with uv run start.py --api to let scripts and agents use the same processing pipeline as the web interface. Speech recognition and subtitle timing are more reliable. This release improves language detection, word timing, punctuation handling, and error messages. It also fixes an issue where intro music could make the first subtitle appear several seconds too early. The example LLM settings now use OpenLux and GPT-6 Luna; you can change them in the sidebar. ⚠️ Before upgrading VideoLin"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand7-project-swy2018--aurora-audio-studio",
+        "name": "Aurora-Audio-Studio · 创作工具版本发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/swy2018/Aurora-Audio-Studio/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-swy2018",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 4,
+      "recent30Days": 2,
+      "sample": [
+        {
+          "title": "Aurora Audio Studio 2.0.2-beta.1",
+          "url": "https://github.com/swy2018/Aurora-Audio-Studio/releases/tag/v2.0.2-beta.1",
+          "publishedAt": "2026-10-08T17:19:48.000Z",
+          "summary": "2.0.2-beta.1 — 2026-10-09 Windows 与 Mac 2.0.2-beta.1 安装包及完整源码现已提供；Mac Apple Silicon 包已签名、公证并完成原生验收，Stable 继续提供 2.0.1。 改进未预装开发环境时的模型安装：应用随附 Git、音频工具和环境管理组件，安装程序包含 Visual C++ 与 WebView2 前置组件；Python 与模型依赖按需部署到隔离目录。 修复 Whisper 共享组件缺失、部分模型依赖冲突、CUDA 依赖被替换、ACE 权重不完整及下载文件漏选等首次安装问题。 Basic Pitch 的大型依赖支持保留断点、备用下载服务和官方 SHA-256 校验，并修复运行依赖缺失导致无法启动的问题。 改进长任务进度反馈与取消收尾，避免取消后下载进程继续运行；保留已有模型、设置和作品。 修复 SoX 在不同 Windows 系统语言下无法读取中文等文件名的问题；进程级 UTF-8 清单随包提供，不改系统设置。完整 Unicode 支持需要 Windows 10 1903 或更新版本。 Windows 隔离环境已验证 11 个引擎的短样本输出；Basic Pitch 的 12 音符样本音高全部匹配，但不代表复杂乐曲或演出总谱精度。 Windows 包未签名。Mac 已验证隔离首次安装、九个模型短样本及升级回退；全新操作系统、Intel Mac、全部可选模型与长素材未覆盖。首次模型下载需要网络。 Windows and Mac 2.0.2-beta.1 installers and full source are available. The Apple Silicon package is signed, notarized and natively tested; Stable remains 2.0.1. Improve model setup without preinstalled developer tools. Aurora includes Git, audio tools and environment management; setup includes Visual C++ and WebView2 prerequisites. Python and model dependencies are provisioned on demand in isolated directories. Fix missing Whisper shared components, model dependency conflicts, CUDA dependency replacement, incomplete ACE weights and omitted download file"
+        },
+        {
+          "title": "Aurora Audio Studio 2.0.1",
+          "url": "https://github.com/swy2018/Aurora-Audio-Studio/releases/tag/v2.0.1",
+          "publishedAt": "2026-10-04T12:03:38.000Z",
+          "summary": "2.0.1 — 2026-10-04 Windows 与 Mac 2.0.1 正式版均已发布；Mac Apple Silicon 安装包已完成实机验收、Developer ID 签名与 Apple 公证。 修复部分桌面启动环境下 Qwen 工作台报“句柄无效”的问题，统一后台引擎与维护工具的非交互输入处理。 修正引擎日志中中文路径的编码；维护检查明确区分文件齐全与实际运行验证。 包含 2.0.1 测试版的任务取消后重试、批量成果保存、更新缓存恢复、字幕导出及卸载数据保护修复。 保留四语言界面、窄窗口和日语排版改进；旧版配置、处理记录与用户成品受到原有保护。 Windows 安装包未签名。Mac 已验证八个已安装模型的短样本、四语言界面及升级回退；未安装模型、长素材与 Intel Mac 不在本次实机验收范围内。 Windows and Mac 2.0.1 Stable are available. The Apple Silicon package has passed native Mac acceptance, Developer ID signing and Apple notarization. Fix Qwen workbench startup failing with an invalid handle in some desktop launch environments. Background engines and maintenance tools now receive valid non-interactive input. Preserve Unicode paths in engine logs and distinguish file completeness from verified operation in maintenance results. Includes the 2.0.1 Beta fixes for retry after cancellation, batch result preservation, update-cache recovery, subtitle export and uninstall data protection. Retains four-language, compact-window and Japanese typography improvements, with existing safeguards for settings, processing records and user outputs. The Windows installer is unsigned. Mac acceptance covers short samples on eight inst"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand7-project-jianjieyiban--jjyb_ai_videoautocut",
+        "name": "JJYB_AI_VideoAutoCut · 公开创作工具发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/jianjieyiban/JJYB_AI_VideoAutoCut/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-jianjieyiban",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作工具",
+          "视频制作",
+          "项目版本发布"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 3,
+      "recent30Days": 2,
+      "sample": [
+        {
+          "title": "JJYB_AI_VideoAutoCut v3.3.2",
+          "url": "https://github.com/jianjieyiban/JJYB_AI_VideoAutoCut/releases/tag/v3.3.2",
+          "publishedAt": "2026-10-13T04:41:27.000Z",
+          "summary": "主要更新（对标剪映\"粗剪\"算法） 针对\"音画不齐、杂乱无章、片头片尾剪进成片、前后不衔接、大量重复片段\"： 片头片尾智能剔除：黑场 + 低信息画面 + 首尾 5% 比例保护 + 多素材片头模板识别（感知哈希），混剪三大模式与原创解说全链路接入 片段内容去重：镜头中点抽帧 dHash 判重，相似画面保留最高分并自动补位，不打乱叙事顺序 音画同步修复：解说链路逐段 ffprobe 实测视频时长，音频按实测值生成，根除累积漂移 完整说明见 RELEASE_NOTES.md。 安装 下载源码包并解压 2. 安装 Python 3.10-3.13 3. py -3 -m pip install -r requirements.txt 4. 安装 FFmpeg 加入 PATH 5. 双击 启动应用.bat 仅授权个人学习使用，未经书面授权禁止商用。"
+        },
+        {
+          "title": "JJYB_AI_VideoAutoCut v3.3.1",
+          "url": "https://github.com/jianjieyiban/JJYB_AI_VideoAutoCut/releases/tag/v3.3.1",
+          "publishedAt": "2026-10-12T12:10:13.000Z",
+          "summary": "主要更新 新增中英双语界面（i18n）：全站 200+ 界面文案支持简体中文与 English 一键切换，语言设置持久化保存，默认中文显示与原版完全一致 修复 HTML lang 属性与 base.html 模板尾部语法问题 编辑器工具栏、视频预览、剪辑检查器、设置页快捷导航等补充翻译标记 新增 backend/utils/ffmpeg_utils.py 工具模块 README 与 RELEASE_NOTES 文档全面更新（v3.3.1） 完整说明见仓库 README.md 与 RELEASE_NOTES.md。 下载与安装 下载下方 JJYB_AI_VideoAutoCut-v3.3.1-source.zip 解压后安装 Python 3.10-3.13 执行 py -3 -m pip install -r requirements.txt 安装 FFmpeg 并加入 PATH 双击 启动应用.bat 启动 源码包不含 API Key、数据库、日志、用户素材与模型权重。使用声音复刻功能前必须取得参考音频权利人的明确授权。本软件仅授权个人学习、研究和自行使用，未经作者书面授权禁止商用。"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "rss-expand7-stuubzzz",
+        "name": "Stuubzzz · 视频工作流实测",
+        "kind": "rss",
+        "config": {
+          "feedUrl": "https://stuubzzz.studio/blog/feed.xml",
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 5
+          }
+        },
+        "tier": "T2",
+        "first_party": false,
+        "owner_entity_id": "publisher-stuubzzz",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 19,
+      "recent30Days": 12,
+      "sample": [
+        {
+          "title": "MiniMax H3 timeline in ComfyUI: middle frames, extending a clip, pinned sounds and clips",
+          "url": "https://stuubzzz.studio/blog/minimax-h3-keyframes-extend-video-timeline-comfyui/",
+          "publishedAt": "2026-10-08T08:00:00.000Z",
+          "excerpt": "Ultimate H3 0.11 lets you direct MiniMax H3 in ComfyUI with up to two middle frames, a clip continued from its last 1.6 s, and up to 8 pinned sounds or clips."
+        },
+        {
+          "title": "ComfyUI errors beginners hit: what each of the eight means and how to fix it",
+          "url": "https://stuubzzz.studio/blog/comfyui-errors-how-to-fix/",
+          "publishedAt": "2026-10-08T08:00:00.000Z",
+          "excerpt": "The free Part 1 of ComfyUI From Zero covers eight errors beginners actually see, from Value not in list to CUDA out of memory: each message, meaning and fix."
+        },
+        {
+          "title": "MiniMax H3 in 4 steps: PDMD LoRA vs NVIDIA's SoL Refiner, timed on an RTX 5090",
+          "url": "https://stuubzzz.studio/blog/minimax-h3-4-steps-pdmd-vs-sol-refiner/",
+          "publishedAt": "2026-10-08T08:00:00.000Z",
+          "excerpt": "PDMD's 4-step LoRA finished a 6.6 s MiniMax H3 clip to 2520×1440 in 101 s on an RTX 5090, against 753 s for 20 steps plus polish. SoL Refiner changed faces."
+        },
+        {
+          "title": "LTX 2.5 modes in ComfyUI: what each one does and how to stop MSR duplicate characters",
+          "url": "https://stuubzzz.studio/blog/ltx-2-5-comfyui-modes-msr-duplicate-characters/",
+          "publishedAt": "2026-10-08T08:00:00.000Z",
+          "excerpt": "Each LTX 2.5 mode in ComfyUI wants its own prompt. With MSR V1, naming @ref1 in every action cut seeds with a duplicate character from 2 of 4 to 0 of 4."
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "rss-expand7-renderbob",
+        "name": "RenderBob · 图像视频工作流",
+        "kind": "rss",
+        "config": {
+          "feedUrl": "https://renderbob.ai/feed.xml",
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "AI video",
+              "AI image",
+              "AI film",
+              "AI music",
+              "AI audio",
+              "AI voice",
+              "AI speech",
+              "AI filmmaking",
+              "text-to-video",
+              "text-to-image",
+              "text-to-speech",
+              "image generation",
+              "video generation",
+              "image editing",
+              "generative image",
+              "generative video",
+              "generative audio",
+              "ComfyUI",
+              "Stable Diffusion",
+              "Midjourney",
+              "NanoBanana",
+              "Nano Banana",
+              "FLUX",
+              "LoRA",
+              "Seedance",
+              "Seedream",
+              "Veo",
+              "Sora",
+              "Vidu",
+              "Wan2",
+              "Wan 2",
+              "HunyuanVideo",
+              "MoneyPrinter",
+              "Remotion",
+              "OpenMontage",
+              "AI绘画",
+              "AI作图",
+              "AI生图",
+              "AI视频",
+              "AI影视",
+              "AI电影",
+              "AI漫剧",
+              "AI动画",
+              "AI配音",
+              "AI音乐",
+              "AI 绘画",
+              "AI 视频",
+              "AI 图像",
+              "AI影像",
+              "短剧",
+              "漫剧",
+              "分镜",
+              "图生视频",
+              "文生视频",
+              "视频生成",
+              "图像生成",
+              "图片生成",
+              "数字人",
+              "即梦",
+              "可灵",
+              "海螺",
+              "动画生成"
+            ],
+            "requireWords": [
+              "kling",
+              "suno",
+              "udio",
+              "vidu",
+              "runway",
+              "krea",
+              "recraft"
+            ],
+            "includeBodyForTopic": true
+          },
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 5
+          }
+        },
+        "tier": "T2",
+        "first_party": false,
+        "owner_entity_id": "publisher-renderbob",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 159,
+      "recent30Days": 31,
+      "sample": [
+        {
+          "title": "Higgsfield Says AI Video Now Runs Past 10 Minutes: What an OpenAI Customer Story Does and Doesn't Show",
+          "url": "https://renderbob.ai/blog/higgsfield-openai-astra-10-minute-ai-video",
+          "publishedAt": "2026-10-15T09:07:00.000Z",
+          "excerpt": "An OpenAI customer story from 13 October says Higgsfield can now produce AI video longer than 10 minutes using GPT-6 Astra. The claims are the company's, and no independent test has been published."
+        },
+        {
+          "title": "Nano Banana 2.1: 14 References, Three Thinking Levels, and Targeted Edits for Storyboards",
+          "url": "https://renderbob.ai/blog/nano-banana-2-1-references-thinking-levels-storyboards",
+          "publishedAt": "2026-10-15T06:07:00.000Z",
+          "excerpt": "Google's Nano Banana 2.1 accepts up to 14 reference images and adds a medium thinking level. Artlist also describes edits that change a named area instead of redrawing the frame."
+        },
+        {
+          "title": "Text in Images Is Getting Reliable, but Proofread It Anyway: Ideogram 4.5, GPT-Image-2.5 and Nano Banana 2.1",
+          "url": "https://renderbob.ai/blog/text-in-ai-images-ideogram-4-5-proofreading-workflow",
+          "publishedAt": "2026-10-15T05:07:00.000Z",
+          "excerpt": "Ideogram 4.5, GPT-Image-2.5, and Nano Banana 2.1 advertise reliable text in images. Ideogram's own guide still shows wrong numbers, extra headings, and lines that wrap and drop punctuation."
+        },
+        {
+          "title": "Runway Adds Kling Models to Its API and a Draft Mode for Seedance 2.5: Using One Platform for Several Models",
+          "url": "https://renderbob.ai/blog/runway-kling-api-seedance-draft-mode-multi-model",
+          "publishedAt": "2026-10-15T04:07:00.000Z",
+          "excerpt": "Runway's API changelog adds Kling 2.5 Turbo Pro, Kling 3.0, and Kling O3 on 13 October. Seedance 2.5 draft mode, in Agent from 2 October, makes a fast 480p preview."
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web_list-expand7-archigen",
+        "name": "ArchiGen AI · 图像生成与ComfyUI实战",
+        "kind": "web_list",
+        "config": {
+          "url": "https://archigenai.com/journal.html",
+          "itemSelector": "a:has(h3)",
+          "titleSelector": "h3",
+          "publishedAtRegex": "(\\d{1,2} [A-Za-z]{3} 20\\d{2})",
+          "publishedAtUtcOffset": "+00:00",
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 5
+          },
+          "detail": {
+            "maxFetches": 8,
+            "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+            "publishedAtAuthoritative": true,
+            "publishedAtUtcOffset": "+00:00",
+            "summarySelector": "meta[name=\"description\"]"
+          },
+          "publishedAfter": "2026-09-16T00:29:55.021Z"
+        },
+        "tier": "T2",
+        "first_party": false,
+        "owner_entity_id": "publisher-archigen",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 301,
+      "recent30Days": 8,
+      "sample": [
+        {
+          "title": "Keep a ruler in the material graph.",
+          "url": "https://archigenai.com/repair-ai-material-maps-physical-scale-architects-2026.html",
+          "listingDate": "2026-10-15T00:00:00.000Z",
+          "publishedAt": "2026-10-15T00:00:00.000Z"
+        },
+        {
+          "title": "Give paid reviews a test legend.",
+          "url": "https://archigenai.com/paid-ai-render-review-test-legend-architects-2026.html",
+          "listingDate": "2026-10-15T00:00:00.000Z",
+          "publishedAt": "2026-10-15T00:00:00.000Z"
+        },
+        {
+          "title": "Give ComfyUI a change budget.",
+          "url": "https://archigenai.com/comfyui-render-enhancement-change-budget-2026.html",
+          "listingDate": "2026-10-14T00:00:00.000Z",
+          "publishedAt": "2026-10-14T00:00:00.000Z"
+        },
+        {
+          "title": "Make geometry control measurable.",
+          "url": "https://archigenai.com/measure-ai-renderer-geometry-control-2026.html",
+          "listingDate": "2026-10-14T00:00:00.000Z",
+          "publishedAt": "2026-10-14T00:00:00.000Z"
+        },
+        {
+          "title": "Give AI vegetation its own pass.",
+          "url": "https://archigenai.com/vegetation-pass-ai-architectural-render-2026.html",
+          "listingDate": "2026-10-13T00:00:00.000Z",
+          "publishedAt": "2026-10-13T00:00:00.000Z"
+        },
+        {
+          "title": "Export depth before ComfyUI.",
+          "url": "https://archigenai.com/native-depth-pass-comfyui-architecture-2026.html",
+          "listingDate": "2026-10-13T00:00:00.000Z",
+          "publishedAt": "2026-10-13T00:00:00.000Z"
+        },
+        {
+          "title": "The city is not a backdrop.",
+          "url": "https://archigenai.com/real-time-city-context-model-architects-2026.html",
+          "listingDate": "2026-10-12T00:00:00.000Z",
+          "publishedAt": "2026-10-12T00:00:00.000Z"
+        },
+        {
+          "title": "Fast ideas, intact scenes.",
+          "url": "https://archigenai.com/veras-in-vray-nondestructive-ideation-architects-2026.html",
+          "listingDate": "2026-10-12T00:00:00.000Z",
+          "publishedAt": "2026-10-12T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web_list-expand7-loomance",
+        "name": "Loomance · 本地AI动画实测",
+        "kind": "web_list",
+        "config": {
+          "url": "https://loomance.app/blog/",
+          "itemSelector": ".faq-item",
+          "linkSelector": "a[href^=\"/blog/\"]",
+          "titleSelector": "a[href^=\"/blog/\"]",
+          "publishedAfter": "2026-09-16T00:26:56.119Z",
+          "detail": {
+            "maxFetches": 8,
+            "summarySelector": "meta[name=\"description\"]"
+          },
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 5
+          }
+        },
+        "tier": "T2",
+        "first_party": false,
+        "owner_entity_id": "publisher-loomance",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 4,
+      "recent30Days": 3,
+      "sample": [
+        {
+          "title": "First Frame Last Frame AI (Free, Wan 2.2): 3 Runs with Unrelated Images",
+          "url": "https://loomance.app/blog/first-last-frame-unrelated-images-wan-2-2",
+          "publishedAt": "2026-10-13T00:00:00.000Z",
+          "excerpt": "What happens when you animate between two images that have nothing in common? A hand-drawn sketch and a photo-real apple, same prompt, three Wan 2.2 runs, three different transitions, plus Wild Mode and two runs that broke and why."
+        },
+        {
+          "title": "Wan 2.2 on a 12GB GPU: Real Render Times and RAM Use (RTX 5070)",
+          "url": "https://loomance.app/blog/animate-image-locally-wan-2-2-12gb-gpu",
+          "publishedAt": "2026-10-12T00:00:00.000Z",
+          "excerpt": "Can you run Wan 2.2 image-to-video locally on a 12GB GPU? Real test on an RTX 5070: 832×480 in 10.6 minutes, 1536×864 in 67 minutes, and why system RAM matters as much as VRAM."
+        },
+        {
+          "title": "How to Animate a Drawing Locally: Loomance vs ComfyUI on WAN 2.2",
+          "url": "https://loomance.app/blog/loomance-vs-comfyui",
+          "publishedAt": "2026-09-23T00:00:00.000Z",
+          "excerpt": "A side-by-side test of local AI animation on WAN 2.2: ComfyUI's node graph vs Loomance's Stable Scene, First → Last Frame, and Wild Mode workflows on a 12GB-VRAM GPU, rendered locally with no cloud."
+        }
+      ]
+    }
+  ],
+  "publicationDateCorrection": {
+    "id": "web_list-expand7-archigen",
+    "previousConfig": {
+      "url": "https://archigenai.com/journal.html",
+      "itemSelector": "a:has(h3)",
+      "titleSelector": "h3",
+      "publishedAtRegex": "(\\d{1,2} [A-Za-z]{3} 20\\d{2})",
+      "publishedAtUtcOffset": "+00:00",
+      "maxItemAgeDays": 30,
+      "_aihot": {
+        "initialBackfillLimit": 5
+      }
+    },
+    "verified": [
+      {
+        "title": "Keep a ruler in the material graph.",
+        "url": "https://archigenai.com/repair-ai-material-maps-physical-scale-architects-2026.html",
+        "listingDate": "2026-10-15T00:00:00.000Z",
+        "publishedAt": "2026-10-15T00:00:00.000Z"
+      },
+      {
+        "title": "Give paid reviews a test legend.",
+        "url": "https://archigenai.com/paid-ai-render-review-test-legend-architects-2026.html",
+        "listingDate": "2026-10-15T00:00:00.000Z",
+        "publishedAt": "2026-10-15T00:00:00.000Z"
+      },
+      {
+        "title": "Give ComfyUI a change budget.",
+        "url": "https://archigenai.com/comfyui-render-enhancement-change-budget-2026.html",
+        "listingDate": "2026-10-14T00:00:00.000Z",
+        "publishedAt": "2026-10-14T00:00:00.000Z"
+      },
+      {
+        "title": "Make geometry control measurable.",
+        "url": "https://archigenai.com/measure-ai-renderer-geometry-control-2026.html",
+        "listingDate": "2026-10-14T00:00:00.000Z",
+        "publishedAt": "2026-10-14T00:00:00.000Z"
+      },
+      {
+        "title": "Give AI vegetation its own pass.",
+        "url": "https://archigenai.com/vegetation-pass-ai-architectural-render-2026.html",
+        "listingDate": "2026-10-13T00:00:00.000Z",
+        "publishedAt": "2026-10-13T00:00:00.000Z"
+      },
+      {
+        "title": "Export depth before ComfyUI.",
+        "url": "https://archigenai.com/native-depth-pass-comfyui-architecture-2026.html",
+        "listingDate": "2026-10-13T00:00:00.000Z",
+        "publishedAt": "2026-10-13T00:00:00.000Z"
+      },
+      {
+        "title": "The city is not a backdrop.",
+        "url": "https://archigenai.com/real-time-city-context-model-architects-2026.html",
+        "listingDate": "2026-10-12T00:00:00.000Z",
+        "publishedAt": "2026-10-12T00:00:00.000Z"
+      },
+      {
+        "title": "Fast ideas, intact scenes.",
+        "url": "https://archigenai.com/veras-in-vray-nondestructive-ideation-architects-2026.html",
+        "listingDate": "2026-10-12T00:00:00.000Z",
+        "publishedAt": "2026-10-12T00:00:00.000Z"
+      }
+    ]
+  }
+}

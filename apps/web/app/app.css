@@ -6,8 +6,7 @@
 @source "../../../modules/*/{web.tsx,web/**}";
 
 /* ---------------------------------------------------------------------------
-   Design tokens: warm off-white paper, ink text, one teal accent (cyan in
-   dark), hairline borders, no gradients.
+   Design tokens: light reading mode and neutral charcoal with muted gold accents.
    Components use the semantic names below; values change per theme only.
    --------------------------------------------------------------------------- */
 
@@ -150,28 +149,28 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --bg: #13191c;
-  --bg-sunk: #182024;
-  --bg-muted: #202a2f;
-  --surface: #1a2226;
-  --surface-2: #1d272b;
-  --raised: #202a2f;
-  --sidebar: #161e21;
-  --daybar: #182024;
+  --bg: #111112;
+  --bg-sunk: #19191a;
+  --bg-muted: #292929;
+  --surface: #19191a;
+  --surface-2: #202020;
+  --raised: #292929;
+  --sidebar: #151516;
+  --daybar: #19191a;
   --field: rgba(255, 255, 255, 0.06);
-  --ink: #e7eceb;
-  --ink-2: #d2dada;
-  --ink-3: #a5b0b3;
-  --ink-4: #89979d;
+  --ink: #eeede9;
+  --ink-2: #d6d4cf;
+  --ink-3: #b0aea8;
+  --ink-4: #96948e;
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.12);
   --line-soft: rgba(255, 255, 255, 0.06);
-  --accent: #12ccd8;
-  --accent-ink: #2ce2e8;
-  --accent-soft: rgba(18, 204, 216, 0.12);
-  --accent-softer: rgba(18, 204, 216, 0.06);
-  --accent-contrast: #000000;
-  --note: #8fb8a8;
+  --accent: #c7b38a;
+  --accent-ink: #d8c7a6;
+  --accent-soft: rgba(199, 179, 138, 0.10);
+  --accent-softer: rgba(199, 179, 138, 0.05);
+  --accent-contrast: #191714;
+  --note: #b6afa1;
   --hot: #d86a52;
   --hot-soft: rgba(216, 106, 82, 0.12);
   --amber: #d3b26a;
@@ -184,8 +183,8 @@
   --rank-2: #d18a5e;
   --rank-3: #d3b26a;
   --rank-rest: #7b869a;
-  --shadow-card: none;
-  --shadow-card-hover: none;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --shadow-card-hover: 0 8px 28px rgba(0, 0, 0, 0.24);
   --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.35);
   --shadow-thumb: 0 1px 2px rgba(0, 0, 0, 0.45);
   --shadow-pop: 0 16px 40px rgba(0, 0, 0, 0.45);
@@ -197,9 +196,35 @@
   --code-title: #ab9df2;
   --code-variable: #fc9867;
   --code-meta: #ff6188;
-  --selection: rgba(18, 204, 216, 0.22);
+  --selection: rgba(199, 179, 138, 0.25);
 }
 
+/* Editorial homepage: compact masthead, quiet rules, content-led typography. */
+.editorial-masthead { display: flex; align-items: end; justify-content: space-between; gap: 24px; padding: 12px 0 24px; margin-bottom: 24px; border-bottom: 1px solid var(--line-strong); }
+.editorial-kicker { color: var(--ink-4); font-size: 11px; letter-spacing: 0.06em; }
+.editorial-masthead h1 { margin-top: 8px; font-size: 32px; font-weight: 650; line-height: 1.3; letter-spacing: -0.025em; }
+.editorial-description { margin-top: 9px; font-size: 13px; color: var(--ink-3); }
+.editorial-links { display: flex; flex-wrap: wrap; gap: 22px; flex-shrink: 0; padding-bottom: 3px; font-size: 13px; color: var(--ink-2); }
+.editorial-links a { padding-block: 5px; border-bottom: 1px solid var(--line-strong); }
+.editorial-links a:hover { color: var(--accent); border-color: var(--accent); }
+.cinema-sidebar nav a { min-height: 40px; }
+.cinema-sidebar nav a[aria-current="page"] { box-shadow: inset 2px 0 0 var(--accent); }
+.cinema-feed-item { border-radius: 6px; box-shadow: none; }
+.cinema-feed-item h3 { letter-spacing: -0.015em; }
+.cinema-feed-item .cinema-media { gap: 10px; margin-top: 16px; }
+.cinema-feed-item .cinema-media > :is(button, span) { width: min(240px, 45%); max-width: 320px; border-radius: 6px; }
+.cinema-feed-item .cinema-media img { width: 100%; height: 150px; max-width: none; }
+@media (max-width: 960px) {
+  .editorial-masthead { padding-top: 20px; }
+  .cinema-feed-item { padding: 16px 0; border: 0; border-radius: 0; background: transparent; }
+}
+@media (max-width: 640px) {
+  .editorial-masthead { align-items: start; flex-direction: column; gap: 12px; padding-bottom: 18px; margin-bottom: 16px; }
+  .editorial-masthead h1 { font-size: 26px; }
+  .editorial-description { font-size: 12px; }
+  .editorial-links { gap: 20px; font-size: 12px; }
+  .cinema-feed-item .cinema-media img { height: 112px; }
+}
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;

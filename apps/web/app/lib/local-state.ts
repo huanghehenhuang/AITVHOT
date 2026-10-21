@@ -251,11 +251,11 @@ export type ThemePreference = "light" | "dark" | null;
 
 export function getThemePreference(): ThemePreference {
   const v = readRaw(KEYS.theme);
-  return v === "light" || v === "dark" ? v : null;
+  return v === "system" ? null : v === "light" ? "light" : "dark";
 }
 
 export function setThemePreference(pref: ThemePreference) {
-  writeRaw(KEYS.theme, pref);
+  writeRaw(KEYS.theme, pref ?? "system");
   invalidate(KEYS.theme);
 }
 
@@ -268,7 +268,7 @@ export function resolvedTheme(pref: ThemePreference = getThemePreference()): "li
   }
 }
 
-const THEME_COLOR = { light: "#faf9f6", dark: "#13191c" } as const;
+const THEME_COLOR = { light: "#faf9f6", dark: "#111112" } as const;
 
 /** Puts a theme on the page: the document's data-theme and the browser's theme colour. */
 export function applyTheme(theme: "light" | "dark", followsSystem: boolean) {
@@ -308,7 +308,7 @@ export function useAppearanceSync() {
 }
 
 /** Inline script run before paint so the first frame already has the reader's appearance. */
-export const APPEARANCE_BOOT_SCRIPT = `(function(){var f='system';try{f=localStorage.getItem('${KEYS.font}')==='browser'?'browser':'system'}catch(e){}document.documentElement.setAttribute('data-font',f);try{var t=localStorage.getItem('${KEYS.theme}');if(t==='light'||t==='dark'){var c=t==='dark'?'${THEME_COLOR.dark}':'${THEME_COLOR.light}';document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.content=c})}else{t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}})();`;
+export const APPEARANCE_BOOT_SCRIPT = `(function(){var f='system';try{f=localStorage.getItem('${KEYS.font}')==='browser'?'browser':'system'}catch(e){}document.documentElement.setAttribute('data-font',f);try{var t=localStorage.getItem('${KEYS.theme}');if(t==='system'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}else if(t!=='light'){t='dark'}var c=t==='dark'?'${THEME_COLOR.dark}':'${THEME_COLOR.light}';document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.content=c});document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}})();`;
 
 // changelog red dot
 function getChangelogSeen(): string | null {
@@ -448,7 +448,7 @@ function mergeLocalData(incoming: { starred: unknown[]; read: unknown[]; theme: 
     const readFailed = !writeRaw(KEYS.read, JSON.stringify([...readIds, ...readAdditions.slice(0, readRoom)]));
 
     let themeApplied = false;
-    if (!getThemePreference() && (incoming.theme === "light" || incoming.theme === "dark")) {
+    if (!readRaw(KEYS.theme) && (incoming.theme === "light" || incoming.theme === "dark")) {
       themeApplied = writeRaw(KEYS.theme, incoming.theme);
     }
     const fontApplied = !getFontPreference() && incoming.font === "browser" && writeRaw(KEYS.font, "browser");

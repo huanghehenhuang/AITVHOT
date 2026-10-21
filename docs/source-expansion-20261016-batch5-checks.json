@@ -1,0 +1,2030 @@
+[
+  {
+    "source": {
+      "id": "rss-expand11-xn--sd3a-com",
+      "name": "诀.com · 创作开源项目拆解",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://xn--sd3a.com/feed.xml",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:09:29.823Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen Image",
+            "Qwen-Image",
+            "视频编辑",
+            "图像编辑",
+            "MiniMax H3",
+            "AI MV",
+            "AIMV"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-诀.com · 创作开源项目拆解",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 40,
+    "matched": 2,
+    "recent": 2,
+    "samples": [
+      {
+        "title": "给网文、短剧和视频解说配四个创作工作台（oh-story-dsh）",
+        "url": "https://xn--sd3a.com/article/oh-story-dsh.html",
+        "publishedAt": "2026-10-12T19:16:36.000Z"
+      },
+      {
+        "title": "剧本排上画布、鼠标加上轮盘之后，这六篇各自标了不接的活",
+        "url": "https://xn--sd3a.com/article/daily-2026-10-12.html",
+        "publishedAt": "2026-10-12T15:16:28.000Z"
+      }
+    ],
+    "previousRecent": 3
+  },
+  {
+    "source": {
+      "id": "rss-expand11-484d4199ae6c0b72ea01e7e0597a1f74933dfb62",
+      "name": "刘小排r",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/484d4199ae6c0b72ea01e7e0597a1f74933dfb62.xml",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:09:29.821Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen Image",
+            "Qwen-Image",
+            "视频编辑",
+            "图像编辑",
+            "MiniMax H3",
+            "AI MV",
+            "AIMV"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-刘小排r",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "matched": 0,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "rss-expand11-25185b01482da0f485418ecb92e208b4416712fb",
+      "name": "AI前线",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/25185b01482da0f485418ecb92e208b4416712fb.xml",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:09:29.821Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen Image",
+            "Qwen-Image",
+            "视频编辑",
+            "图像编辑",
+            "MiniMax H3",
+            "AI MV",
+            "AIMV"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-AI前线",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "matched": 3,
+    "recent": 3,
+    "samples": [
+      {
+        "title": "黄仁勋谈中国 AI 公司：算力越缺，越逼着他们把架构做到极致",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247668393&idx=1&sn=6985e0e7e56c8102274e28ccdadc8335",
+        "publishedAt": "2026-10-15T06:31:00.000Z"
+      },
+      {
+        "title": "17 年谷歌老兵揭秘 Gemini 研发内幕：鼓励团队说出坏消息，产品不好就不发了",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247668209&idx=1&sn=0d0c2965a74b1264d062b9b2707e42fb",
+        "publishedAt": "2026-10-12T06:13:00.000Z"
+      },
+      {
+        "title": "福建9岁男孩靠AI收入达六位数；Anthropic半年封掉1140万个账号；英伟达被曝停产RTX5090｜AI 周报",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247668191&idx=1&sn=3efc27cd2941a36a72a3f495264c3940",
+        "publishedAt": "2026-10-11T04:15:00.000Z"
+      }
+    ],
+    "excludedReason": "综合AI媒体，本批优先创作实践与独立分享，不因正文偶然提及创作模型计入。"
+  },
+  {
+    "source": {
+      "id": "rss-expand11-6cef434b771dd75a91864b2e699a622cb4e3eb33",
+      "name": "有机大橘子",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/6cef434b771dd75a91864b2e699a622cb4e3eb33.xml",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:09:29.821Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen Image",
+            "Qwen-Image",
+            "视频编辑",
+            "图像编辑",
+            "MiniMax H3",
+            "AI MV",
+            "AIMV"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-有机大橘子",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "matched": 1,
+    "recent": 1,
+    "samples": [
+      {
+        "title": "AI 小白入门指南：一站式做 AI 故事短片",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzkwMzY5NzU2Nw==&mid=2247490706&idx=1&sn=b207dbf117dd8d655ad89e9937f97584",
+        "publishedAt": "2026-10-13T11:15:00.000Z"
+      }
+    ],
+    "previousRecent": 1
+  },
+  {
+    "source": {
+      "id": "rss-expand11-00a1da3493512c20aff1ea5a0d1a02537e931b36",
+      "name": "青哥谈AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/00a1da3493512c20aff1ea5a0d1a02537e931b36.xml",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:09:29.821Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen Image",
+            "Qwen-Image",
+            "视频编辑",
+            "图像编辑",
+            "MiniMax H3",
+            "AI MV",
+            "AIMV"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-青哥谈AI",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: HTTP 500"
+  },
+  {
+    "source": {
+      "id": "rss-expand11-13492cb50df57702cdc0dfa71467cd03f9dd69be",
+      "name": "yikai 的摸鱼笔记",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/13492cb50df57702cdc0dfa71467cd03f9dd69be.xml",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:09:29.821Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen Image",
+            "Qwen-Image",
+            "视频编辑",
+            "图像编辑",
+            "MiniMax H3",
+            "AI MV",
+            "AIMV"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-yikai 的摸鱼笔记",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: HTTP 500"
+  },
+  {
+    "source": {
+      "id": "rss-expand11-854a592a3bac3c2574d092daf4628cf65dfd1858",
+      "name": "ShowMeAI研究中心",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/854a592a3bac3c2574d092daf4628cf65dfd1858.xml",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:09:29.819Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen Image",
+            "Qwen-Image",
+            "视频编辑",
+            "图像编辑",
+            "MiniMax H3",
+            "AI MV",
+            "AIMV"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-ShowMeAI研究中心",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: HTTP 500"
+  },
+  {
+    "source": {
+      "id": "rss-expand11-c125f09ef36fd6b6cb092c409e69a5bcc867d378",
+      "name": "开源服务指南",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://wechat2rss.bestblogs.dev/feed/c125f09ef36fd6b6cb092c409e69a5bcc867d378.xml",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:09:29.821Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen Image",
+            "Qwen-Image",
+            "视频编辑",
+            "图像编辑",
+            "MiniMax H3",
+            "AI MV",
+            "AIMV"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-开源服务指南",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: HTTP 500"
+  },
+  {
+    "source": {
+      "id": "rss-expand11-bitshovel-site",
+      "name": "BitShovel · 中文AI视频与图像创作案例",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://bitshovel.site/feed.xml",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:09:29.823Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen Image",
+            "Qwen-Image",
+            "视频编辑",
+            "图像编辑",
+            "MiniMax H3",
+            "AI MV",
+            "AIMV"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-BitShovel · 中文AI视频与图像创作案例",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 40,
+    "matched": 1,
+    "recent": 1,
+    "samples": [
+      {
+        "title": "四张参考图，一个房间角落：Qwen-Image-2.1 Turbo 用八步接着改图",
+        "url": "https://bitshovel.site/notes/qwen-image-21-turbo",
+        "publishedAt": "2026-10-10T01:09:48.000Z"
+      }
+    ],
+    "previousRecent": 1
+  },
+  {
+    "source": {
+      "id": "rss-expand11-cloudkol",
+      "name": "CloudKOL · 中文视频创作教程",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.cloudkol.com/feed/",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:10:21.832Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-cloudkol",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "matched": 0,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-swotatmk-infinite-creation",
+      "name": "infinite-creation · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/SwotAtmk/infinite-creation/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-swotatmk",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 2,
+    "recent": 2,
+    "samples": [
+      {
+        "title": "v1.0.1",
+        "url": "https://github.com/SwotAtmk/infinite-creation/releases/tag/v1.0.1",
+        "publishedAt": "2026-10-12T07:38:15.000Z"
+      },
+      {
+        "title": "v1.0.0",
+        "url": "https://github.com/SwotAtmk/infinite-creation/releases/tag/v1.0.0",
+        "publishedAt": "2026-09-30T01:11:10.000Z"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-liangdabiao-seedance2-storyboard-generator",
+      "name": "Seedance2-Storyboard-Generator · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/liangdabiao/Seedance2-Storyboard-Generator/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-liangdabiao",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: no items matched (html)"
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-oiuv-ai-short-drama",
+      "name": "ai-short-drama · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/oiuv/ai-short-drama/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-oiuv",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: no items matched (html)"
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-zhaihao118-micro-drama-skills",
+      "name": "Micro-Drama-Skills · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/zhaihao118/Micro-Drama-Skills/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.366Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-zhaihao118",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: no items matched (html)"
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-alchaincyf-seedance-skill",
+      "name": "seedance-skill · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/alchaincyf/seedance-skill/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-alchaincyf",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: no items matched (html)"
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-babicat4242-svg-seedance-2-5-prompting",
+      "name": "seedance-2-5-prompting · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/babicat4242-svg/seedance-2-5-prompting/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-babicat4242-svg",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: no items matched (html)"
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-djyy1031-ai-comic-drama-director-skills",
+      "name": "ai-comic-drama-director-skills · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/djyy1031/ai-comic-drama-director-skills/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-djyy1031",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: no items matched (html)"
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-johnkeating1997-spark-video",
+      "name": "spark-video · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/JohnKeating1997/spark-video/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-johnkeating1997",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: no items matched (html)"
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-soloent-ai-5min-drama-contest",
+      "name": "5min-drama-contest · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/SoloEnt-AI/5min-drama-contest/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-soloent-ai",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: no items matched (html)"
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-lixiaoxiao9888-create-short-drama-factory",
+      "name": "short-drama-factory · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/lixiaoxiao9888-create/short-drama-factory/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-lixiaoxiao9888-create",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 1,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-atlascloudai-awesome-seedance-2-5-prompts-skills",
+      "name": "awesome-seedance-2.5-prompts-skills · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/AtlasCloudAI/awesome-seedance-2.5-prompts-skills/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-atlascloudai",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 1,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-liuxiao20051106-prog-ai-manga-drama",
+      "name": "ai-manga-drama · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/liuxiao20051106-prog/ai-manga-drama/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-liuxiao20051106-prog",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: no items matched (html)"
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-getopenscreen-openscreen",
+      "name": "openscreen · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/getopenscreen/openscreen/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.363Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-getopenscreen",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "recent": 10,
+    "samples": [
+      {
+        "title": "v2.1.0-rc.1",
+        "url": "https://github.com/getopenscreen/openscreen/releases/tag/v2.1.0-rc.1",
+        "publishedAt": "2026-10-15T13:13:01.000Z"
+      },
+      {
+        "title": "v2.0.0: Beautiful demos on the first take",
+        "url": "https://github.com/getopenscreen/openscreen/releases/tag/v2.0.0",
+        "publishedAt": "2026-10-03T15:39:15.000Z"
+      },
+      {
+        "title": "v2.0.0-rc.15",
+        "url": "https://github.com/getopenscreen/openscreen/releases/tag/v2.0.0-rc.15",
+        "publishedAt": "2026-10-03T13:11:13.000Z"
+      },
+      {
+        "title": "v2.0.0-rc.14",
+        "url": "https://github.com/getopenscreen/openscreen/releases/tag/v2.0.0-rc.14",
+        "publishedAt": "2026-10-03T10:17:54.000Z"
+      },
+      {
+        "title": "v2.0.0-rc.13",
+        "url": "https://github.com/getopenscreen/openscreen/releases/tag/v2.0.0-rc.13",
+        "publishedAt": "2026-10-02T22:54:35.000Z"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-nigo-studio-ai-film-skills",
+      "name": "ai-film-skills · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/nigo-studio/ai-film-skills/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-nigo-studio",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 1,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-zenstory-ai-drama-skills",
+      "name": "drama-skills · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/zenstory-ai/drama-skills/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.366Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-zenstory-ai",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "recent": 3,
+    "samples": [
+      {
+        "title": "v0.9.0 — 创作指引精修",
+        "url": "https://github.com/zenstory-ai/drama-skills/releases/tag/v0.9.0",
+        "publishedAt": "2026-10-15T09:18:53.000Z"
+      },
+      {
+        "title": "v0.8.1 — 静帧剪辑、角色音色绑定与实测写法",
+        "url": "https://github.com/zenstory-ai/drama-skills/releases/tag/v0.8.1",
+        "publishedAt": "2026-09-28T23:15:37.000Z"
+      },
+      {
+        "title": "v0.8.0",
+        "url": "https://github.com/zenstory-ai/drama-skills/releases/tag/v0.8.0",
+        "publishedAt": "2026-09-27T09:36:22.000Z"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-slavasexton-comfyui-agent-kit",
+      "name": "ComfyUI-Agent-Kit · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/SlavaSexton/ComfyUI-Agent-Kit/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:06.365Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-slavasexton",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-baoshare",
+      "name": "AI资源分享站 · 开源创作项目分享",
+      "kind": "web_list",
+      "config": {
+        "url": "https://baoshare.com/?post_type=github",
+        "itemSelector": "article",
+        "linkSelector": "a:has(h2)",
+        "titleSelector": "h2",
+        "allowUrlPrefixes": [
+          "https://baoshare.com/posts/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:11:34.070Z",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "图片反推",
+            "image-prompt",
+            "视频剪辑",
+            "图像编辑",
+            "AI短剧"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        },
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtSelector": "meta[property=\"article:published_time\"]",
+          "publishedAtAuthoritative": true,
+          "publishedAtUtcOffset": "+08:00",
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-baoshare",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 15,
+    "matched": 2,
+    "recent": 2,
+    "samples": [
+      {
+        "title": "图片反推Skill",
+        "url": "https://baoshare.com/posts/141",
+        "originalDate": "2026-10-15T04:13:15.000Z",
+        "summary": "image-prompt-reverse 是一个开源项目，能够根据输入的图片自动生成对应的文本提示（prompt），实现对图像的高保真逆向还原，适用于插画、摄影和 3D 渲染等场景。 - 支持多种图像格式，直接读取本地或网络图片； - 采用深度学习模型，生成的 prompt 与原图相似度高，能够实现 1:1 复刻；…"
+      },
+      {
+        "title": "BaoCut 3.5：基于 Qwen Image 的本地 AI 图像生成工具",
+        "url": "https://baoshare.com/posts/123",
+        "originalDate": "2026-10-13T17:25:27.000Z",
+        "summary": "BaoCut 3.5 是一款开源免费的本地图像生成工具，集成了 Qwen Image 2.1 Turbo 模型。用户无需依赖云端服务器，在本地设备上即可完成 AI 绘图任务，并支持作为服务被 AI Agent 调用。 - 本地离线生成：支持在 Mac 等设备上离线渲染 1080P 及 2K 分辨率图片，无需上传云端。…"
+      }
+    ],
+    "details": [
+      {
+        "title": "图片反推Skill",
+        "url": "https://baoshare.com/posts/141",
+        "originalDate": "2026-10-15T04:13:15.000Z",
+        "summary": "image-prompt-reverse 是一个开源项目，能够根据输入的图片自动生成对应的文本提示（prompt），实现对图像的高保真逆向还原，适用于插画、摄影和 3D 渲染等场景。 - 支持多种图像格式，直接读取本地或网络图片； - 采用深度学习模型，生成的 prompt 与原图相似度高，能够实现 1:1 复刻；…"
+      },
+      {
+        "title": "BaoCut 3.5：基于 Qwen Image 的本地 AI 图像生成工具",
+        "url": "https://baoshare.com/posts/123",
+        "originalDate": "2026-10-13T17:25:27.000Z",
+        "summary": "BaoCut 3.5 是一款开源免费的本地图像生成工具，集成了 Qwen Image 2.1 Turbo 模型。用户无需依赖云端服务器，在本地设备上即可完成 AI 绘图任务，并支持作为服务被 AI Agent 调用。 - 本地离线生成：支持在 Mac 等设备上离线渲染 1080P 及 2K 分辨率图片，无需上传云端。…"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand11-ttbobocom-yunling-drama-desktop",
+      "name": "云灵短剧工坊 · 桌面客户端发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/ttbobocom/yunling-drama-desktop/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T01:12:09.949Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-ttbobocom",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 1,
+    "recent": 0,
+    "samples": []
+  }
+]

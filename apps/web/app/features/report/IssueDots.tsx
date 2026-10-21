@@ -7,6 +7,7 @@ import { useEffect, useMemo, useRef } from "react";
 import { useNavigate } from "react-router";
 import type { ReportNavigationEntry, ReportKind } from "@aihot/contracts/site";
 import { KIND_PATH, periodGrid } from "./format";
+import { useI18n } from "../../i18n";
 
 const ROW = 20;
 const TAU = Math.PI * 2;
@@ -14,7 +15,8 @@ const INTRO_MS = 700;
 const easeOutBack = (p: number) => 1 + 2.2 * (p - 1) ** 3 + 1.2 * (p - 1) ** 2;
 
 export function IssueDots({ kind, reportKey, issueNumber, index, className = "" }: { kind: ReportKind; reportKey: string; issueNumber: number; index: ReportNavigationEntry[]; className?: string }) {
-  const grid = useMemo(() => periodGrid(kind, reportKey, index, issueNumber), [kind, reportKey, index, issueNumber]);
+  const { locale } = useI18n();
+  const grid = useMemo(() => periodGrid(kind, reportKey, index, issueNumber, locale), [kind, reportKey, index, issueNumber, locale]);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const navigate = useNavigate();
   const rows = Math.ceil(grid.cells.length / grid.columns);
@@ -158,8 +160,8 @@ export function IssueDots({ kind, reportKey, issueNumber, index, className = "" 
       </div>
       {grid.heads && (
         <div className="mt-2 grid text-center text-[10px] leading-none text-ink-4" style={{ gridTemplateColumns: `repeat(${grid.columns}, minmax(0, 1fr))` }}>
-          {grid.heads.map((h) => (
-            <span key={h}>{h}</span>
+          {grid.heads.map((h, i) => (
+            <span key={i}>{h}</span>
           ))}
         </div>
       )}

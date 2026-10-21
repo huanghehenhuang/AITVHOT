@@ -249,8 +249,9 @@ export async function collectSource(sourceId: string, opts: { force?: boolean } 
       if (source.kind === "rss" && detailPending > 0) delete nextCursor.rss;
     } else delete nextCursor.detailRules;
 
-    // A listing date explicitly marked unreliable must give way to the detail's authoritative date.
-    if (cutoff !== null && d?.publishedAtAuthoritative === true) candidates = candidates.filter(withinAge);
+    // An undated listing can reveal old publication metadata only after its detail is read.
+    // Recheck every date filled by enrichment, as well as authoritative date corrections.
+    if (cutoff !== null) candidates = candidates.filter(withinAge);
     candidates = filterPublicationWindow(candidates, source.config.publishedAfter);
     ({ created, revised } = await store(sourceId, candidates, firstImport ? "first-import" : null));
 

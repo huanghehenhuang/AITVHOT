@@ -1,0 +1,239 @@
+{
+  "checkedAt": "2026-10-14T00:13:00.859Z",
+  "totals": [
+    {
+      "total": 295,
+      "enabled": 293
+    }
+  ],
+  "newSources": [
+    {
+      "id": "json-hf-expand2-openbmb-minicpm",
+      "name": "OpenBMB MiniCPM 多模态 · 模型发布",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:21.725Z",
+      "articles": 2
+    },
+    {
+      "id": "json-sohu-expand2-jiqizhixin",
+      "name": "机器之心Pro · 搜狐公开专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:19.950Z",
+      "articles": 2
+    },
+    {
+      "id": "json-sohu-expand2-qbitai",
+      "name": "量子位 · 搜狐公开专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:19.703Z",
+      "articles": 2
+    },
+    {
+      "id": "rss-expand2-aimarketing-story",
+      "name": "AI Marketing for Storytellers",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:22.283Z",
+      "articles": 3
+    },
+    {
+      "id": "rss-expand2-c21media",
+      "name": "C21Media",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:30.770Z",
+      "articles": 2
+    },
+    {
+      "id": "rss-expand2-danbgoldman",
+      "name": "What’s New in Generative Media",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:22.826Z",
+      "articles": 3
+    },
+    {
+      "id": "rss-expand2-envato",
+      "name": "Envato 官方博客",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:20.532Z",
+      "articles": 1
+    },
+    {
+      "id": "rss-expand2-futurism",
+      "name": "Futurism",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:33.278Z",
+      "articles": 3
+    },
+    {
+      "id": "rss-expand2-keepitmag",
+      "name": "Keep It Magazine",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:11.205Z",
+      "articles": 1
+    },
+    {
+      "id": "rss-expand2-labthoughts",
+      "name": "Lab Thoughts",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:10.405Z",
+      "articles": 1
+    },
+    {
+      "id": "rss-expand2-motionographer",
+      "name": "Motionographer",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:12.574Z",
+      "articles": 1
+    },
+    {
+      "id": "rss-expand2-musictech",
+      "name": "MusicTech",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:33.919Z",
+      "articles": 1
+    },
+    {
+      "id": "rss-expand2-pictory",
+      "name": "Pictory 官方博客",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:32.558Z",
+      "articles": 1
+    },
+    {
+      "id": "rss-expand2-politicsofai",
+      "name": "The Politics of AI Filmmaking",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:08.345Z",
+      "articles": 3
+    },
+    {
+      "id": "rss-expand2-produ-all",
+      "name": "PRODU 产业新闻",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:26.082Z",
+      "articles": 3
+    },
+    {
+      "id": "rss-expand2-respeecher",
+      "name": "Respeecher 官方博客",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:21.015Z",
+      "articles": 1
+    },
+    {
+      "id": "rss-expand2-screenvoice",
+      "name": "ScreenVoice",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:19.157Z",
+      "articles": 3
+    },
+    {
+      "id": "rss-expand2-sportsvideo",
+      "name": "Sports Video Group",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:14.993Z",
+      "articles": 2
+    },
+    {
+      "id": "rss-expand2-tarynoneill",
+      "name": "The New Protagonists",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:09.784Z",
+      "articles": 1
+    },
+    {
+      "id": "rss-expand2-theaipixel",
+      "name": "The AI Pixel",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:09.073Z",
+      "articles": 3
+    },
+    {
+      "id": "rss-expand2-theankler",
+      "name": "The Ankler",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:18.878Z",
+      "articles": 1
+    },
+    {
+      "id": "rss-expand2-tvbeurope",
+      "name": "TVBEurope",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:14.185Z",
+      "articles": 3
+    },
+    {
+      "id": "rss-expand2-tvtechnology",
+      "name": "TV Technology",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:13.542Z",
+      "articles": 3
+    },
+    {
+      "id": "rss-expand2-variety-all",
+      "name": "Variety 产业新闻",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:15.633Z",
+      "articles": 1
+    },
+    {
+      "id": "rss-expand2-videoweek-all",
+      "name": "VideoWeek 广告与视频产业",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:24.947Z",
+      "articles": 4
+    },
+    {
+      "id": "rss-expand2-wavespeed",
+      "name": "WaveSpeedAI 官方博客",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-14T00:12:31.964Z",
+      "articles": 3
+    }
+  ],
+  "processing": [
+    {
+      "processing_state": "analyzed",
+      "count": 31
+    },
+    {
+      "processing_state": "blocked",
+      "count": 22
+    },
+    {
+      "processing_state": "new",
+      "count": 1
+    }
+  ],
+  "publications": [
+    {
+      "eligible": 31,
+      "selected": 3
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "at": "2026-10-16T00:42:35.802Z",
+  "pack": 384,
+  "totals": [
+    {
+      "total": 403,
+      "enabled": 401
+    }
+  ],
+  "sources": [
+    {
+      "id": "rss-expand8-aituber",
+      "name": "AITuber · AI短视频与提示词",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:40:48.689Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand8-firecut",
+      "name": "FireCut · 口播剪辑与字幕教程",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:41:07.945Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand8-designerbox",
+      "name": "DesignerBox · 商品图与视频工作流",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:41:09.647Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand8-vibeclips",
+      "name": "VibeClips · AI视频创作教程",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:40:47.357Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand8-coanimator",
+      "name": "CoAnimator · 可编辑视频与动画工作流",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:40:53.079Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand8-videogen",
+      "name": "VideoGen · 视频剪辑与镜头实战",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:41:06.159Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand8-teloscompass",
+      "name": "TelosCompass · note AI视频创作实践",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:40:42.231Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand8-wireflow",
+      "name": "Wireflow · AI短剧与视频制作教程",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:41:00.734Z",
+      "last_error": null
+    }
+  ],
+  "articles": [
+    {
+      "source_id": "rss-expand8-aituber",
+      "total": 5,
+      "recent": 5,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand8-designerbox",
+      "total": 5,
+      "recent": 5,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand8-firecut",
+      "total": 5,
+      "recent": 5,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand8-teloscompass",
+      "total": 5,
+      "recent": 5,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand8-coanimator",
+      "total": 10,
+      "recent": 10,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand8-vibeclips",
+      "total": 10,
+      "recent": 10,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand8-videogen",
+      "total": 10,
+      "recent": 10,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand8-wireflow",
+      "total": 10,
+      "recent": 10,
+      "undated": 0,
+      "pending": 0
+    }
+  ],
+  "pubs": [
+    {
+      "source_id": "rss-expand8-aituber",
+      "public": 5,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand8-designerbox",
+      "public": 5,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand8-firecut",
+      "public": 5,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand8-teloscompass",
+      "public": 5,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand8-coanimator",
+      "public": 10,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand8-vibeclips",
+      "public": 10,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand8-videogen",
+      "public": 10,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand8-wireflow",
+      "public": 10,
+      "selected": 0
+    }
+  ]
+}

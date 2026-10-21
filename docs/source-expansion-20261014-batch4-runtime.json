@@ -1,0 +1,448 @@
+{
+  "checkedAt": "2026-10-14T01:31:58.368Z",
+  "totals": [
+    {
+      "total": 354,
+      "enabled": 352
+    }
+  ],
+  "newIds": [
+    "rss-expand4-jcmvhdgl2zxbvc3npymxllnn1ynn0ywnrlmnvbs9mzwvk",
+    "rss-expand4-ahr0chm6ly9szwv2zw8uc3vic3rhy2suy29tl2zlzwq",
+    "rss-expand4-ahr0chm6ly9nzw5lcmf0axzlywkuchvil2zlzwq",
+    "rss-expand4-dmnjg0mdu5ztizythmzdnlmdvmmwrimde4njq5ns54bww",
+    "rss-expand4-wrkntmxmdy2zwvjytvlztuwmgexztzhmjy5zte3lnhtba",
+    "rss-creator-wechat2rss-bestblogs-dev-e6cc80b97bf64eeef61cc5927c78ba6ce3356422",
+    "rss-creator-wechat2rss-bestblogs-dev-38be32e5376d852c13d3383e4d7a757fd9a55ff6",
+    "rss-creator-wechat2rss-bestblogs-dev-4915f3747653bbb9c7975323c11b768d2b9cd6c9",
+    "rss-creator-wechat2rss-bestblogs-dev-1f1030491e15e5349aae42367513d6b3f70a8f8b",
+    "web-expand4-uisdc-14",
+    "web-expand4-uisdc-623914",
+    "web-expand4-uisdc-885308",
+    "web-expand4-uisdc-120384",
+    "web-expand4-uisdc-369567",
+    "web-expand4-uisdc-806143",
+    "web-expand4-uisdc-298536",
+    "web-expand4-uisdc-650703",
+    "web-expand4-uisdc-60517",
+    "web-expand4-uisdc-142412",
+    "web-expand4-uisdc-0d942d801c9c311729e72833c33f7fa4",
+    "web-expand4-uisdc-kylin",
+    "web-expand4-ainvfx",
+    "json-expand4-project-colind0pe--trendlume",
+    "json-expand4-project-lcy362--agnes-video-generator",
+    "json-expand4-project-jnmetacode--openshorts",
+    "json-expand4-project-xixihhhh--clipforge",
+    "json-expand4-project-1076184145--video-automation",
+    "json-expand4-project-oskey--go-ai-studio",
+    "json-expand4-project-harry0703--moneyprinterturbo",
+    "rss-expand4-reddit-stablediffusion"
+  ],
+  "updatedIds": [
+    "rss-creator-wechat2rss-bestblogs-dev-1c3e3571b1627d23ee9c64521a0b0a41d3fe2987",
+    "rss-creator-wechat2rss-bestblogs-dev-5903009f48a5e4aa44d8ac941a54fe3aafc3e03c",
+    "rss-creator-wechat2rss-bestblogs-dev-98bc16b6f53902a2ab511b4faa3499e0a1c78eb1",
+    "rss-creator-wechat2rss-bestblogs-dev-24d0930cc9f4f0c708182dc1c087d41e1f4cbd33",
+    "rss-creator-wechat2rss-bestblogs-dev-339818dbd5154cecdf5f4161f3391c7038a72bae",
+    "rss-creator-wechat2rss-bestblogs-dev-8a1fc997e5c742e91ad7c253836c28ca3a69ccb1",
+    "rss-expand2-danbgoldman"
+  ],
+  "sources": [
+    {
+      "id": "json-expand4-project-1076184145--video-automation",
+      "name": "video-automation · 开源创作项目发布",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:46.929Z",
+      "articles": 2,
+      "recent": 2
+    },
+    {
+      "id": "json-expand4-project-colind0pe--trendlume",
+      "name": "Trendlume · 开源创作项目发布",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:44.413Z",
+      "articles": 2,
+      "recent": 2
+    },
+    {
+      "id": "json-expand4-project-harry0703--moneyprinterturbo",
+      "name": "MoneyPrinterTurbo · 开源创作项目发布",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:48.105Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "json-expand4-project-jnmetacode--openshorts",
+      "name": "openshorts · 开源创作项目发布",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:45.613Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "json-expand4-project-lcy362--agnes-video-generator",
+      "name": "agnes-video-generator · 开源创作项目发布",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:45.006Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "json-expand4-project-oskey--go-ai-studio",
+      "name": "Go-Ai-Studio · 开源创作项目发布",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:47.471Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "json-expand4-project-xixihhhh--clipforge",
+      "name": "clipforge · 开源创作项目发布",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:46.352Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-1c3e3571b1627d23ee9c64521a0b0a41d3fe2987",
+      "name": "歸藏的AI工具箱 · 公众号公开订阅",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:54.374Z",
+      "articles": 2,
+      "recent": 2
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-1f1030491e15e5349aae42367513d6b3f70a8f8b",
+      "name": "AI产品黄叔 · 公众号公开订阅",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:25:59.542Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-24d0930cc9f4f0c708182dc1c087d41e1f4cbd33",
+      "name": "袋鼠帝AI客栈 · 公众号公开订阅",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:58.272Z",
+      "articles": 2,
+      "recent": 2
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-339818dbd5154cecdf5f4161f3391c7038a72bae",
+      "name": "沃垠AI · 公众号公开订阅",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:59.049Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-38be32e5376d852c13d3383e4d7a757fd9a55ff6",
+      "name": "逛逛GitHub",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:25:57.940Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-4915f3747653bbb9c7975323c11b768d2b9cd6c9",
+      "name": "AI炼金术 · 公众号公开订阅",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:25:58.878Z",
+      "articles": 4,
+      "recent": 4
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-5903009f48a5e4aa44d8ac941a54fe3aafc3e03c",
+      "name": "AI寒武纪 · 公众号公开订阅",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:55.429Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-8a1fc997e5c742e91ad7c253836c28ca3a69ccb1",
+      "name": "卡尔的AI沃茨 · 公众号公开订阅",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:59.975Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-98bc16b6f53902a2ab511b4faa3499e0a1c78eb1",
+      "name": "山行AI · 公众号公开订阅",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:56.454Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "rss-creator-wechat2rss-bestblogs-dev-e6cc80b97bf64eeef61cc5927c78ba6ce3356422",
+      "name": "HelloGitHub",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:25:57.325Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "rss-expand2-danbgoldman",
+      "name": "What’s New in Generative Media",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:27:00.918Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "rss-expand4-ahr0chm6ly9nzw5lcmf0axzlywkuchvil2zlzwq",
+      "name": "Generative AI · 创作教程与项目分享",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:25:53.945Z",
+      "articles": 2,
+      "recent": 2
+    },
+    {
+      "id": "rss-expand4-ahr0chm6ly9szwv2zw8uc3vic3rhy2suy29tl2zlzwq",
+      "name": "Leeveo AI Tutorials · 创作教程与项目分享",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:25:53.100Z",
+      "articles": 5,
+      "recent": 5
+    },
+    {
+      "id": "rss-expand4-dmnjg0mdu5ztizythmzdnlmdvmmwrimde4njq5ns54bww",
+      "name": "阿里云设计中心 · 创作教程与项目分享",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:25:54.808Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "rss-expand4-jcmvhdgl2zxbvc3npymxllnn1ynn0ywnrlmnvbs9mzwvk",
+      "name": "The Creative Possible · 创作教程与项目分享",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:25:52.163Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "rss-expand4-reddit-stablediffusion",
+      "name": "Reddit StableDiffusion · 创作者与工作流分享",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:50.587Z",
+      "articles": 25,
+      "recent": 25
+    },
+    {
+      "id": "rss-expand4-wrkntmxmdy2zwvjytvlztuwmgexztzhmjy5zte3lnhtba",
+      "name": "Clip设计夹 · 创作教程与项目分享",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:25:56.409Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand4-ainvfx",
+      "name": "AInVFX · 制作实战 · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:43.187Z",
+      "articles": 4,
+      "recent": 4
+    },
+    {
+      "id": "web-expand4-uisdc-0d942d801c9c311729e72833c33f7fa4",
+      "name": "张小闲 · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:40.395Z",
+      "articles": 4,
+      "recent": 4
+    },
+    {
+      "id": "web-expand4-uisdc-120384",
+      "name": "阿真Irene · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:31.147Z",
+      "articles": 2,
+      "recent": 2
+    },
+    {
+      "id": "web-expand4-uisdc-14",
+      "name": "你丫才美工 · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:31:58.215Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand4-uisdc-142412",
+      "name": "AI设计师Lena · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:39.131Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand4-uisdc-298536",
+      "name": "觉之设计 · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:35.055Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "web-expand4-uisdc-369567",
+      "name": "彩云Sky · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:32.436Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand4-uisdc-60517",
+      "name": "AImorph-艾摩弗形界 · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:37.906Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "web-expand4-uisdc-623914",
+      "name": "黯马aigc · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:27.039Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand4-uisdc-650703",
+      "name": "优设 · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:36.313Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand4-uisdc-806143",
+      "name": "淘宝设计 · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:33.646Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand4-uisdc-885308",
+      "name": "花叔 · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:29.937Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand4-uisdc-kylin",
+      "name": "龙爪槐守望者 · 创作者专栏",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-14T01:26:41.632Z",
+      "articles": 4,
+      "recent": 4
+    }
+  ],
+  "newProcessing": [
+    {
+      "processing_state": "new",
+      "count": 8
+    },
+    {
+      "processing_state": "blocked",
+      "count": 18
+    },
+    {
+      "processing_state": "analyzed",
+      "count": 62
+    }
+  ],
+  "newPublications": [
+    {
+      "eligible": 61,
+      "selected": 3
+    }
+  ],
+  "updatedPublications": [
+    {
+      "eligible": 11,
+      "selected": 3
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from "react-router";
 import { IconChevronLeft } from "../icons";
 import { historyIndex, previousScreen } from "./screens";
 import { markBack } from "./transitions";
+import { useI18n } from "../../i18n";
 
 const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
 
@@ -72,6 +73,7 @@ export function PhoneBar({ back, title, large = false, sub, leading, center, act
 function BackButton({ to, label }: BackTarget) {
   const navigate = useNavigate();
   const { key } = useLocation();
+  const { t } = useI18n();
   const [text, setText] = useState(label);
   useIsoLayoutEffect(() => {
     if (historyIndex() === 0) return setText(label);
@@ -89,7 +91,7 @@ function BackButton({ to, label }: BackTarget) {
       className="flex h-11 min-w-11 items-center pl-1 pr-2 text-[16px] text-accent transition-opacity active:opacity-50"
     >
       <IconChevronLeft size={25} strokeWidth={2.1} />
-      <span className="max-w-[7em] truncate">{text}</span>
+      <span className="max-w-[7em] truncate">{t(text)}</span>
     </button>
   );
 }

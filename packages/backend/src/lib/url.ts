@@ -129,12 +129,35 @@ export function isBlockedAddress(address: string): boolean {
   if (g0 === 0x64 && g1 === 0xff9b && g2 === 1) return true; // local-use NAT64
   if (g0 === 0x2002) return ipv4Blocked(embeddedIpv4(g1, g2)); // 6to4
   if (g0 === 0x2001 && g1 === 0) return true; // Teredo
+  if (g0 === 0x2001 && g1 === 2 && g2 === 0) return true; // 2001:2::/48 benchmarking (RFC 5180), also IPv6 fake-IP
   if (g0 === 0x2001 && g1 === 0xdb8) return true; // documentation
   if (g0 === 0x100 && g1 === 0 && g2 === 0 && g3 === 0) return true; // discard prefix
   if ((g0 & 0xfe00) === 0xfc00) return true; // unique local
   if ((g0 & 0xffc0) === 0xfe80 || (g0 & 0xffc0) === 0xfec0) return true; // link-local, site-local
   if ((g0 & 0xff00) === 0xff00) return true; // multicast
   return false;
+}
+
+/**
+ * Benchmarking space used by local fake-IP resolvers (198.18.0.0/15, 2001:2::/48). These answers are
+ * not a destination: the name must be resolved again through a resolver that returns a public address.
+ * A real private address is not in this set and stays refused.
+ */
+export function isBenchmarkAddress(address: string): boolean {
+  const v4 = parseIpv4(address);
+  if (v4) return v4[0] === 198 && (v4[1] === 18 || v4[1] === 19);
+  const g = ipv6Groups(address);
+  if (!g) return false;
+  const [g0, g1, g2, g3, g4, g5, g6, g7] = g as [number, number, number, number, number, number, number, number];
+  if (g0 === 0 && g1 === 0 && g2 === 0 && g3 === 0 && g4 === 0 && (g5 === 0xffff || g5 === 0)) {
+    return isBenchmarkAddress(`${g6 >> 8}.${g6 & 0xff}.${g7 >> 8}.${g7 & 0xff}`);
+  }
+  return g0 === 0x2001 && g1 === 2 && g2 === 0;
+}
+
+/** Every answer is fake-IP space, so the system resolver did not return a routable address. */
+export function benchmarkAnswersOnly(addresses: readonly string[]): boolean {
+  return addresses.length > 0 && addresses.every(isBenchmarkAddress);
 }
 
 function blockedHostname(host: string): boolean {

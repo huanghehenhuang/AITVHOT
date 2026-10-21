@@ -1,9 +1,10 @@
 // Outbound HTTP for collectors, the image proxy and the paid APIs: SSRF guard, routing, limits.
 import net from "node:net";
+import { lookup } from "node:dns/promises";
 import { addAbortListener } from "node:events";
 import { Agent, Pool, ProxyAgent, fetch as undiciFetch, type Dispatcher } from "undici";
 import { config } from "../config.ts";
-import { assertPublicUrl, guardedLookup } from "./url.ts";
+import { assertPublicUrl, benchmarkAnswersOnly, guardedLookup, isBlockedAddress } from "./url.ts";
 import { createEgressProxy, createEgressResolver, OUTBOUND_HTTP_OPTIONS } from "./egress-proxy.ts";
 import { DEPLOYMENT, SITE } from "@aihot/site";
 
@@ -27,6 +28,47 @@ function egressResolver() {
   return resolveEgress ??= createEgressResolver(config.egressProxyUrl!);
 }
 
+type LookupCallback = (err: NodeJS.ErrnoException | null, address: string | Array<{ address: string; family: number }>, family?: number) => void;
+
+/**
+ * System DNS on this host can be a fake-IP resolver (198.18.0.0/15, 2001:2::/48). Those answers are
+ * not dialled. When every answer is in that space and an egress proxy is configured, resolve again
+ * through its public DNS and connect to that checked address. A real private answer is still refused.
+ */
+async function fakeIpFallback(host: string): Promise<string[] | null> {
+  const name = host.replace(/^\[|\]$/g, "").toLowerCase();
+  // The private-network override is the test and local-debug path; it must not consult egress DNS.
+  if (config.allowPrivateNetworkFetch || !config.egressProxyUrl || net.isIP(name) !== 0) return null;
+  let list: Array<{ address: string }>;
+  try {
+    list = await lookup(name, { all: true });
+  } catch {
+    return null;
+  }
+  if (!benchmarkAnswersOnly(list.map((a) => a.address))) return null;
+  const addresses = await egressResolver()(name);
+  if (!addresses.length || addresses.some(isBlockedAddress)) throw new Error(`Blocked private address for ${name}`);
+  const v4 = addresses.filter((a) => net.isIP(a) === 4);
+  return [...v4, ...addresses.filter((a) => net.isIP(a) === 6)];
+}
+
+function directLookup(hostname: string, options: { all?: boolean; family?: number } | number, callback: LookupCallback): void {
+  const opts = typeof options === "number" ? { family: options } : options;
+  const fail = (err: NodeJS.ErrnoException) => callback(err, opts.all ? [] : "", 0);
+  fakeIpFallback(hostname).then(
+    (addresses) => {
+      if (!addresses) {
+        guardedLookup(hostname, options, callback);
+        return;
+      }
+      const list = addresses.map((address) => ({ address, family: net.isIP(address) }));
+      if (opts.all) callback(null, list);
+      else callback(null, list[0]!.address, list[0]!.family);
+    },
+    (err: NodeJS.ErrnoException) => fail(err),
+  );
+}
+
 function proxied(url: URL, route: EgressRoute): boolean {
   if (route !== "egress" || !config.egressProxyUrl) return false;
   const host = url.hostname.replace(/^\[|\]$/g, "").toLowerCase();
@@ -45,8 +87,9 @@ function dispatcherFor(viaProxy: boolean): Dispatcher | undefined {
     return proxyAgent;
   }
   if (config.allowPrivateNetworkFetch) return undefined;
-  // Direct connections resolve through the guarded lookup: the address actually dialled is checked.
-  directAgent ??= new Agent({ ...OUTBOUND_HTTP_OPTIONS, connect: { lookup: guardedLookup as never }, factory: destinationPool });
+  // Direct connections dial the guarded lookup. Fake-IP answers are replaced there with the
+  // egress resolver's public address; benchmark space itself is never a destination.
+  directAgent ??= new Agent({ ...OUTBOUND_HTTP_OPTIONS, connect: { lookup: directLookup as never }, factory: destinationPool });
   return directAgent;
 }
 
@@ -80,8 +123,18 @@ export async function guardedFetch(input: string, opts: GuardedFetchOptions = {}
   // nominal 20 s image request to occupy the API for minutes.
   const signal = AbortSignal.timeout(opts.timeoutMs ?? 20_000);
   const route = opts.route ?? "egress";
-  const check = (target: string) => withinDeadline(assertPublicUrl(target, config.allowPrivateNetworkFetch,
-    proxied(new URL(target), route) ? egressResolver() : undefined), signal);
+  const check = async (target: string) => {
+    const next = new URL(target);
+    const viaProxy = proxied(next, route);
+    // A name the proxy will not carry (.cn, paid APIs) still has to clear the public-address check.
+    // Fake-IP system DNS cannot answer that check, so use the proxy's resolver without sending the
+    // connection through the proxy.
+    const resolve = viaProxy ? egressResolver() : await fakeIpFallback(next.hostname).then(
+      (addresses) => addresses ? async () => addresses : undefined,
+      (error: unknown) => { throw error; },
+    );
+    return withinDeadline(assertPublicUrl(target, config.allowPrivateNetworkFetch, resolve), signal);
+  };
   let url = await check(input);
   const maxRedirects = opts.maxRedirects ?? 5;
   const maxBytes = opts.maxBytes ?? 8 * 1024 * 1024;

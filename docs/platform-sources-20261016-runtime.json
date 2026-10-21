@@ -1,0 +1,290 @@
+{
+  "checkedAt": "2026-10-16T11:43:03.380Z",
+  "health": [
+    {
+      "id": "rss-youtube-UCmMbwA-s3GZDKVzGZ-kPwaQ",
+      "name": "pixaroma · YouTube 创作视频",
+      "health": "ok",
+      "last_ok_at": "2026-10-16T11:42:11.166Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-youtube-UCKBURc62w9crMI1BhzHRnvw",
+      "name": "mickmumpitz · YouTube 创作视频",
+      "health": "ok",
+      "last_ok_at": "2026-10-16T11:42:11.841Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-youtube-UC5Wz4fFacYuON6IKbhSa7Zw",
+      "name": "MattVidPro · YouTube 创作视频",
+      "health": "ok",
+      "last_ok_at": "2026-10-16T11:42:12.612Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-youtube-UCvKqTb-65iAmXK59sFNKINQ",
+      "name": "sebastiankamph · YouTube 创作视频",
+      "health": "ok",
+      "last_ok_at": "2026-10-16T11:42:09.358Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-youtube-UCsOXR1n2MR15vuK2htE5EkQ",
+      "name": "comfyorg · YouTube 创作视频",
+      "health": "ok",
+      "last_ok_at": "2026-10-16T11:42:09.677Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-youtube-UC9Ryt3XOGYBoAJVsBHNGDzA",
+      "name": "TheoreticallyMedia · YouTube 创作视频",
+      "health": "ok",
+      "last_ok_at": "2026-10-16T11:42:10.384Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-youtube-UClnFtyUEaxQOCd1s5NKYGFA",
+      "name": "curiousrefuge · YouTube 创作视频",
+      "health": "ok",
+      "last_ok_at": "2026-10-16T11:42:11.493Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-youtube-UCEAbqW0HFB_UxZoUDO0kJBw",
+      "name": "Aitrepreneur · YouTube 创作视频",
+      "health": "ok",
+      "last_ok_at": "2026-10-16T11:42:12.224Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-youtube-UC4-5v-f-xKnbi1yaAuRSi_w",
+      "name": "NerdyRodent · YouTube 创作视频",
+      "health": "ok",
+      "last_ok_at": "2026-10-16T11:42:12.941Z",
+      "last_error": null
+    }
+  ],
+  "counts": [
+    {
+      "processing_state": "analyzed",
+      "count": 13
+    },
+    {
+      "processing_state": "new",
+      "count": 8
+    }
+  ],
+  "articles": [
+    {
+      "id": "qb1paqpnhyrbh7b3i1u1uz033",
+      "title": "What are AI models? ComfyUI for beginners, chapter 14",
+      "url": "https://www.youtube.com/watch?v=A20S_Snpu9w",
+      "published_at": "2026-10-07T08:55:52.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": false
+    },
+    {
+      "id": "hrv1ze1aaw4sh66zsls4bxt3q",
+      "title": "What are nodes? ComfyUI for beginners, chapter 9",
+      "url": "https://www.youtube.com/watch?v=s-aX_Tbxgx0",
+      "published_at": "2026-09-29T07:53:58.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": false
+    },
+    {
+      "id": "b2gekwa34oyg45bckg5zj7240",
+      "title": "Inside Flux 3 Image Klein with BFL!",
+      "url": "https://www.youtube.com/watch?v=71EHPhMb_Dg",
+      "published_at": "2026-10-16T06:04:58.000Z",
+      "processing_state": "new",
+      "eligible": null,
+      "visibility": null,
+      "selected": null
+    },
+    {
+      "id": "f9vu3xmi78ra949g7kht0bu5z",
+      "title": "Krea 3 in ComfyUI: New AI Image Model for Multi-Reference Editing",
+      "url": "https://www.youtube.com/watch?v=qSdzsdvaQDU",
+      "published_at": "2026-10-15T21:20:25.000Z",
+      "processing_state": "new",
+      "eligible": null,
+      "visibility": null,
+      "selected": null
+    },
+    {
+      "id": "d00ti9jupqh9nyntsvgxxf36i",
+      "title": "FLUX 3 Klein is Now in ComfyUI: Open Weights & Native 4K",
+      "url": "https://www.youtube.com/watch?v=KtheoWUWVUg",
+      "published_at": "2026-10-15T18:02:44.000Z",
+      "processing_state": "new",
+      "eligible": null,
+      "visibility": null,
+      "selected": null
+    },
+    {
+      "id": "xxjd5b05zjl4uyg7rqfstg808",
+      "title": "ByteDance's World Model Re-Shoots Movies, Sora Returns? & Krea 3 Is Here!",
+      "url": "https://www.youtube.com/watch?v=VTrc346ea30",
+      "published_at": "2026-10-15T21:47:32.000Z",
+      "processing_state": "new",
+      "eligible": null,
+      "visibility": null,
+      "selected": null
+    },
+    {
+      "id": "szlyhuzmpk9m4bq4t50tjayu8",
+      "title": "What No One Tells You About Making a 17-Minute AI Backrooms Film",
+      "url": "https://www.youtube.com/watch?v=OxxRcagqbHU",
+      "published_at": "2026-10-08T17:25:14.000Z",
+      "processing_state": "new",
+      "eligible": null,
+      "visibility": null,
+      "selected": null
+    },
+    {
+      "id": "qbwll0c407xssjbd2cxtba8kb",
+      "title": "Make Any Game With AI & 2 New Open Source Video Models!",
+      "url": "https://www.youtube.com/watch?v=V1AGM0IKFpg",
+      "published_at": "2026-10-06T22:10:07.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": false
+    },
+    {
+      "id": "eb20cewh0wxteeoyaj3jsk1qm",
+      "title": "ComfyUI Nodes Explained: The Basics for Beginners",
+      "url": "https://www.youtube.com/watch?v=8l8nYfU81nA",
+      "published_at": "2026-10-15T14:58:41.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": false
+    },
+    {
+      "id": "uh2orxj0hky95wwfc5unldxgc",
+      "title": "50 Free ComfyUI Automation Workflows (Ep38)",
+      "url": "https://www.youtube.com/watch?v=av-xDOxS1rs",
+      "published_at": "2026-10-13T15:00:22.000Z",
+      "processing_state": "new",
+      "eligible": null,
+      "visibility": null,
+      "selected": null
+    },
+    {
+      "id": "c0nl0qzoy4gf6z6b00pzd7x12",
+      "title": "Out of Memory | The ComfyUI Song",
+      "url": "https://www.youtube.com/watch?v=sqJLLuaPWSw",
+      "published_at": "2026-10-09T15:30:41.000Z",
+      "processing_state": "new",
+      "eligible": null,
+      "visibility": null,
+      "selected": null
+    },
+    {
+      "id": "w8b4as15g9oqwr8qhe31atrh4",
+      "title": "This Hack Fixes Your AI Character Consistency Issues (Pro Workflow)",
+      "url": "https://www.youtube.com/watch?v=ktEt4n9VlF4",
+      "published_at": "2026-10-13T21:10:48.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": false
+    },
+    {
+      "id": "p4pa6n013yla8k4rzm6k9975i",
+      "title": "You're Spending Too Much on Your AI Videos",
+      "url": "https://www.youtube.com/watch?v=h4MKJAJvins",
+      "published_at": "2026-10-09T22:24:51.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": false
+    },
+    {
+      "id": "i0r0jmi346ja77oir84zszxnc",
+      "title": "How to Create a Depth Map Using AI + FREE Tool Download",
+      "url": "https://www.youtube.com/watch?v=BFsVW1DrLng",
+      "published_at": "2026-10-02T19:19:45.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": false
+    },
+    {
+      "id": "ikrsuork2kshxssx8ggmxl62p",
+      "title": "I turned myself into a pig with AI [Free & Local VFX Tutorial]",
+      "url": "https://www.youtube.com/watch?v=2MzCkYrvDaI",
+      "published_at": "2026-10-07T15:27:12.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": true
+    },
+    {
+      "id": "dmedabn6wddow1y36v7u4uolw",
+      "title": "QWEN IMAGE 2.1 EDIT LORA TRAINING! LESS THAN 10GB VRAM!",
+      "url": "https://www.youtube.com/watch?v=_YF8GC6Qd2I",
+      "published_at": "2026-10-11T17:28:07.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": false
+    },
+    {
+      "id": "qo6dip75t6g0wkjclnd1dyizw",
+      "title": "QWEN IMAGE 2.1 IS THE NEW FREE AI EDITING KING!",
+      "url": "https://www.youtube.com/watch?v=5Sby8YxbhJc",
+      "published_at": "2026-10-03T19:58:09.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": false
+    },
+    {
+      "id": "wygwhi8kdcmxwga36tldscket",
+      "title": "Create WILD Seamless AI Intros (Full Workflow)",
+      "url": "https://www.youtube.com/watch?v=COgSlYOwEaI",
+      "published_at": "2026-10-08T22:08:36.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": false
+    },
+    {
+      "id": "hhdwxbe5ecrhnhdfd3rp82zc8",
+      "title": "Opus 5.5, GPT-6 Sol & Luna TESTED on Creative Ideas",
+      "url": "https://www.youtube.com/watch?v=2WyFHZ6lkWE",
+      "published_at": "2026-09-23T23:40:23.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": false
+    },
+    {
+      "id": "kter3dhc0rliaffgdjloxym1t",
+      "title": "I Didn't Expect YuE2 to Sound THIS Good",
+      "url": "https://www.youtube.com/watch?v=dQVmJog7au8",
+      "published_at": "2026-09-16T23:45:18.000Z",
+      "processing_state": "new",
+      "eligible": null,
+      "visibility": null,
+      "selected": null
+    },
+    {
+      "id": "xye967506u2sv22dyj9crthlt",
+      "title": "Qwen Image 2.1 - Runs Locally in ComfyUI",
+      "url": "https://www.youtube.com/watch?v=iJoo2RuAfZ0",
+      "published_at": "2026-09-25T18:33:29.000Z",
+      "processing_state": "analyzed",
+      "eligible": true,
+      "visibility": "public",
+      "selected": true
+    }
+  ]
+}

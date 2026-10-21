@@ -1,0 +1,2088 @@
+[
+  {
+    "source": {
+      "id": "rss-expand10-zuphp",
+      "name": "祖普科技 · 创作项目分享",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://zuphp.com/feed",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:55:13.181Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen-Image",
+            "Qwen Image",
+            "AI 剪辑",
+            "AI剪辑",
+            "Pixelle",
+            "DaVinci",
+            "Remotion",
+            "视频编辑",
+            "图像编辑",
+            "语音克隆",
+            "声音克隆",
+            "MiniMax H3",
+            "Minimax H3"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-zuphp",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: HTTP 404"
+  },
+  {
+    "source": {
+      "id": "rss-expand10-runningcheese",
+      "name": "奔跑中的奶酪 · AI创作实用教程",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.runningcheese.com/feed",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:55:13.181Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen-Image",
+            "Qwen Image",
+            "AI 剪辑",
+            "AI剪辑",
+            "Pixelle",
+            "DaVinci",
+            "Remotion",
+            "视频编辑",
+            "图像编辑",
+            "语音克隆",
+            "声音克隆",
+            "MiniMax H3",
+            "Minimax H3"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-runningcheese",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "matched": 0,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "rss-expand10-iplaysoft",
+      "name": "异次元软件 · 创作工具分享",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.iplaysoft.com/feed",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:55:13.181Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen-Image",
+            "Qwen Image",
+            "AI 剪辑",
+            "AI剪辑",
+            "Pixelle",
+            "DaVinci",
+            "Remotion",
+            "视频编辑",
+            "图像编辑",
+            "语音克隆",
+            "声音克隆",
+            "MiniMax H3",
+            "Minimax H3"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-iplaysoft",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 30,
+    "matched": 1,
+    "recent": 1,
+    "samples": [
+      {
+        "title": "免费开源版 Adobe 全家桶！ArtCraft 像素级复刻 PS / AE / PR / AI 等软件",
+        "url": "https://www.iplaysoft.com/artcraft.html",
+        "publishedAt": "2026-10-14T17:37:00.000Z"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "rss-expand10-ghxi",
+      "name": "果核剥壳 · AI创作工具分享",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.ghxi.com/feed",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:55:13.181Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen-Image",
+            "Qwen Image",
+            "AI 剪辑",
+            "AI剪辑",
+            "Pixelle",
+            "DaVinci",
+            "Remotion",
+            "视频编辑",
+            "图像编辑",
+            "语音克隆",
+            "声音克隆",
+            "MiniMax H3",
+            "Minimax H3"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-ghxi",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "matched": 0,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "rss-expand10-zainzh",
+      "name": "LHLY · AI创作与开源分享",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://zainzh.top/feed",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:55:13.181Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen-Image",
+            "Qwen Image",
+            "AI 剪辑",
+            "AI剪辑",
+            "Pixelle",
+            "DaVinci",
+            "Remotion",
+            "视频编辑",
+            "图像编辑",
+            "语音克隆",
+            "声音克隆",
+            "MiniMax H3",
+            "Minimax H3"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-zainzh",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: HTTP 404"
+  },
+  {
+    "source": {
+      "id": "rss-expand10-noisevip",
+      "name": "NOISE宝藏阁 · 创作工具分享",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://noisevip.cn/feed/",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:55:13.181Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen-Image",
+            "Qwen Image",
+            "AI 剪辑",
+            "AI剪辑",
+            "Pixelle",
+            "DaVinci",
+            "Remotion",
+            "视频编辑",
+            "图像编辑",
+            "语音克隆",
+            "声音克隆",
+            "MiniMax H3",
+            "Minimax H3"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-noisevip",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 50,
+    "matched": 11,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "rss-expand10-appinn",
+      "name": "小众软件 · 创作项目与工具分享",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.appinn.com/feed/",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:55:13.181Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen-Image",
+            "Qwen Image",
+            "AI 剪辑",
+            "AI剪辑",
+            "Pixelle",
+            "DaVinci",
+            "Remotion",
+            "视频编辑",
+            "图像编辑",
+            "语音克隆",
+            "声音克隆",
+            "MiniMax H3",
+            "Minimax H3"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-appinn",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "matched": 1,
+    "recent": 1,
+    "samples": [
+      {
+        "title": "发现频道：10款大家发现的好评软件[2026年第41期]",
+        "url": "https://www.appinn.com/faxian-top10-2641/",
+        "publishedAt": "2026-10-12T01:00:36.000Z"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "rss-expand10-v3ucn",
+      "name": "刘悦 · 博客园创作实测",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.cnblogs.com/v3ucn/rss",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:55:13.181Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen-Image",
+            "Qwen Image",
+            "AI 剪辑",
+            "AI剪辑",
+            "Pixelle",
+            "DaVinci",
+            "Remotion",
+            "视频编辑",
+            "图像编辑",
+            "语音克隆",
+            "声音克隆",
+            "MiniMax H3",
+            "Minimax H3"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-v3ucn",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 20,
+    "matched": 3,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "rss-expand10-jian27",
+      "name": "剑二十七 · 创作工具与模型分享",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.jian27.com/feed",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:55:13.180Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen-Image",
+            "Qwen Image",
+            "AI 剪辑",
+            "AI剪辑",
+            "Pixelle",
+            "DaVinci",
+            "Remotion",
+            "视频编辑",
+            "图像编辑",
+            "语音克隆",
+            "声音克隆",
+            "MiniMax H3",
+            "Minimax H3"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-jian27",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "matched": 1,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "rss-expand10-imyhq",
+      "name": "小智博客 · 音视频项目实践",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://imyhq.com/feed/",
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:55:13.181Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成",
+            "Qwen-Image",
+            "Qwen Image",
+            "AI 剪辑",
+            "AI剪辑",
+            "Pixelle",
+            "DaVinci",
+            "Remotion",
+            "视频编辑",
+            "图像编辑",
+            "语音克隆",
+            "声音克隆",
+            "MiniMax H3",
+            "Minimax H3"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "creator-imyhq",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流",
+        "开源项目分享"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: not an RSS/Atom document"
+  },
+  {
+    "source": {
+      "id": "web_list-expand10-anil-matcha-open-ai-micro-drama-generator",
+      "name": "Open-AI-Micro-Drama-Generator · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/Anil-matcha/Open-AI-Micro-Drama-Generator/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:56:27.853Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-anil-matcha",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: no items matched (html)"
+  },
+  {
+    "source": {
+      "id": "web_list-expand10-xiakeman777-xiakeman-ai-short-drama",
+      "name": "xiakeman-ai-short-drama · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/XiakeMan777/xiakeman-ai-short-drama/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:56:27.860Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-xiakeman777",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "error": "Error: no items matched (html)"
+  },
+  {
+    "source": {
+      "id": "web_list-expand10-agions-fablr",
+      "name": "fablr · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/Agions/fablr/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:56:27.859Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-agions",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 2,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "web_list-expand10-xuanyustudio-localminidrama",
+      "name": "LocalMiniDrama · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/xuanyustudio/LocalMiniDrama/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:56:27.858Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-xuanyustudio",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "recent": 0,
+    "samples": []
+  },
+  {
+    "source": {
+      "id": "web_list-expand10-arcreel-arcreel",
+      "name": "ArcReel · 公开创作项目发布",
+      "kind": "web_list",
+      "config": {
+        "url": "https://github.com/ArcReel/ArcReel/releases",
+        "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+        "linkSelector": "a[href*=\"/releases/tag/\"]",
+        "titleSelector": "a[href*=\"/releases/tag/\"]",
+        "publishedAtSelector": "relative-time[datetime]",
+        "allowUrlPrefixes": [
+          "https://github.com/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:56:27.857Z",
+        "detail": {
+          "maxFetches": 3,
+          "summarySelector": ".markdown-body"
+        },
+        "_aihot": {
+          "initialBackfillLimit": 3
+        },
+        "sortByPublishedAt": true
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": "github-arcreel",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作工具",
+        "项目发布"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "recent": 3,
+    "samples": [
+      {
+        "title": "v0.33.0",
+        "url": "https://github.com/ArcReel/ArcReel/releases/tag/v0.33.0",
+        "publishedAt": "2026-10-08T03:35:27.000Z"
+      },
+      {
+        "title": "v0.32.0",
+        "url": "https://github.com/ArcReel/ArcReel/releases/tag/v0.32.0",
+        "publishedAt": "2026-10-02T07:46:00.000Z"
+      },
+      {
+        "title": "v0.31.0",
+        "url": "https://github.com/ArcReel/ArcReel/releases/tag/v0.31.0",
+        "publishedAt": "2026-09-23T05:54:19.000Z"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand10-midjourneyhk",
+      "name": "Midjourney-ai.hk · 中文提示词教程（非官方）",
+      "kind": "web_list",
+      "config": {
+        "url": "https://midjourney-ai.hk/blog/",
+        "itemSelector": "article.blog-card",
+        "linkSelector": "h3 a",
+        "titleSelector": "h3",
+        "publishedAtSelector": "time[datetime]",
+        "publishedAtUtcOffset": "+08:00",
+        "allowUrlPrefixes": [
+          "https://midjourney-ai.hk/blog/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:56:58.620Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "publishedAtAuthoritative": true,
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "sortByPublishedAt": true
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-midjourneyhk",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 34,
+    "matched": 34,
+    "recent": 3,
+    "samples": [
+      {
+        "title": "Midjourney 浮世绘提示词：木版平涂与美人画攻略",
+        "url": "https://midjourney-ai.hk/blog/midjourney-ukiyo-e-woodblock-prompt/",
+        "listDate": "2026-10-05T00:00:00.000Z",
+        "originalDate": "2026-10-05T00:00:00.000Z",
+        "summary": "用 Midjourney 做 Ukiyo-e 浮世绘：粗墨勾线、靛蓝朱红平涂、和纸纹理、美人画与海浪街景。附关键词表、V8.2 参数与 4 组可复制 Midjourney 浮世绘提示词案例。"
+      },
+      {
+        "title": "Midjourney 蒸汽波提示词：粉青霓虹与复古网格攻略",
+        "url": "https://midjourney-ai.hk/blog/midjourney-vaporwave-synthwave-prompt/",
+        "listDate": "2026-09-28T00:00:00.000Z",
+        "originalDate": "2026-09-28T00:00:00.000Z",
+        "summary": "用 Midjourney 做 Vaporwave / Synthwave 蒸汽波：粉青霓虹、CRT 噪点、罗马雕像与网格公路。附关键词表、V8.2 参数与 4 组可复制 Midjourney 蒸汽波提示词案例。"
+      },
+      {
+        "title": "Midjourney 工笔重彩提示词：绢本花鸟与人像攻略",
+        "url": "https://midjourney-ai.hk/blog/midjourney-gongbi-painting-prompt/",
+        "listDate": "2026-09-20T00:00:00.000Z",
+        "originalDate": "2026-09-20T00:00:00.000Z",
+        "summary": "用 Midjourney 做工笔重彩：铁线勾勒、石青石绿朱砂、绢本花鸟与东亚人像。附关键词表、V8.2 参数与 4 组可复制 Midjourney 工笔提示词案例。"
+      }
+    ],
+    "details": [
+      {
+        "title": "Midjourney 浮世绘提示词：木版平涂与美人画攻略",
+        "url": "https://midjourney-ai.hk/blog/midjourney-ukiyo-e-woodblock-prompt/",
+        "listDate": "2026-10-05T00:00:00.000Z",
+        "originalDate": "2026-10-05T00:00:00.000Z",
+        "summary": "用 Midjourney 做 Ukiyo-e 浮世绘：粗墨勾线、靛蓝朱红平涂、和纸纹理、美人画与海浪街景。附关键词表、V8.2 参数与 4 组可复制 Midjourney 浮世绘提示词案例。"
+      },
+      {
+        "title": "Midjourney 蒸汽波提示词：粉青霓虹与复古网格攻略",
+        "url": "https://midjourney-ai.hk/blog/midjourney-vaporwave-synthwave-prompt/",
+        "listDate": "2026-09-28T00:00:00.000Z",
+        "originalDate": "2026-09-28T00:00:00.000Z",
+        "summary": "用 Midjourney 做 Vaporwave / Synthwave 蒸汽波：粉青霓虹、CRT 噪点、罗马雕像与网格公路。附关键词表、V8.2 参数与 4 组可复制 Midjourney 蒸汽波提示词案例。"
+      },
+      {
+        "title": "Midjourney 工笔重彩提示词：绢本花鸟与人像攻略",
+        "url": "https://midjourney-ai.hk/blog/midjourney-gongbi-painting-prompt/",
+        "listDate": "2026-09-20T00:00:00.000Z",
+        "originalDate": "2026-09-20T00:00:00.000Z",
+        "summary": "用 Midjourney 做工笔重彩：铁线勾勒、石青石绿朱砂、绢本花鸟与东亚人像。附关键词表、V8.2 参数与 4 组可复制 Midjourney 工笔提示词案例。"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand10-imyhq",
+      "name": "小智博客 · 音视频实践",
+      "kind": "web_list",
+      "config": {
+        "url": "https://imyhq.com/avi.html",
+        "itemSelector": "article",
+        "linkSelector": "h3 a",
+        "titleSelector": "h3",
+        "publishedAtSelector": "[itemprop=\"date\"]",
+        "publishedAtUtcOffset": "+08:00",
+        "allowUrlPrefixes": [
+          "https://imyhq.com/avi/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:56:58.622Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "发布日期[：:]\\s*(20\\d{2}-\\d{1,2}-\\d{1,2} \\d{1,2}:\\d{2}:\\d{2})",
+          "publishedAtAuthoritative": true,
+          "summarySelector": "meta[name=\"description\"]",
+          "publishedAtUtcOffset": "+08:00"
+        },
+        "sortByPublishedAt": true
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-imyhq",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 10,
+    "matched": 10,
+    "recent": 5,
+    "samples": [
+      {
+        "title": "把 80+ 项音视频能力装进 Claude Code 后，我合上了 FFmpeg 手册",
+        "url": "https://imyhq.com/avi/28260.html",
+        "listDate": "2026-10-10T16:00:00.000Z",
+        "originalDate": "2026-10-10T16:00:10.000Z",
+        "summary": "一、空手开箱编辑丢来一个任务&#xff1a;试试火山新出的 AI MediaKit Skill&#xff0c;写篇实测。我第一反应是翻硬盘找素材——想找段画质差的老视频&#xff0c;或者带硬字幕的片源。翻了一圈&#xff0c;一无所获。索性直接用官方 demo。后来想想这反而是件好事&#xff1a;空着手也能跑通全流程&#xff0c;恰好说明上手门槛低。于是我打开 Claude Code&#x"
+      },
+      {
+        "title": "AI 视频生成能不能真正跑通？MoneyPrinterTurbo 本地制作、远程访问与授权验证",
+        "url": "https://imyhq.com/avi/28185.html",
+        "listDate": "2026-10-03T16:00:00.000Z",
+        "originalDate": "2026-10-03T16:00:26.000Z",
+        "summary": "AI 视频生成能不能真正跑通&#xff1f;MoneyPrinterTurbo 本地制作、远程访问与授权验证 前言这次我想验证的不是“AI 能不能自动做视频”这个宽泛命题&#xff0c;而是一个更具体的问题&#xff1a;MoneyPrinterTurbo 能不能把“主题 → 文案 → 素材 → 配音 → 字幕 → 成片”这一整条流程真正跑通。原文本身已经给出了比较完整的测试路径&#xff1a;"
+      },
+      {
+        "title": "不想先学一堆 React？用 Codex 帮你完成第一支 Remotion 动效视频",
+        "url": "https://imyhq.com/avi/28184.html",
+        "listDate": "2026-10-03T16:00:00.000Z",
+        "originalDate": "2026-10-03T16:00:14.000Z",
+        "summary": "不想先学一堆 React&#xff1f;用 Codex 帮你完成第一支 Remotion 动效视频 前言我以前一直把视频制作理解成“时间轴上的工作”&#xff1a;剪素材、拉关键帧、调转场&#xff0c;再等渲染。Remotion 换了一个思路——把视频画面写成 React 组件&#xff0c;动画、布局和数据都交给代码控制。这个方向本身很有吸引力&#xff0c;但真正的门槛也很明显&#xff1"
+      },
+      {
+        "url": "https://imyhq.com/avi/28164.html",
+        "error": "TypeError: fetch failed",
+        "originalDate": "2026-10-01T07:00:23.000Z"
+      },
+      {
+        "title": "一个主题直接生成完整视频：Windows 部署 Pixelle-Video，把文案、配图和配音串成自动流程",
+        "url": "https://imyhq.com/avi/28163.html",
+        "listDate": "2026-09-30T16:00:00.000Z",
+        "originalDate": "2026-10-01T07:00:18.000Z",
+        "summary": "传统短视频制作其实是一条很长的生产链。确定选题之后&#xff0c;要先写文案&#xff0c;再根据脚本找图或者生成画面&#xff0c;接着处理配音、字幕、背景音乐和画面节奏&#xff0c;最后还要进入剪辑软件重新组合。每一个环节单独看都不难&#xff0c;但真正耗时间的&#xff0c;往往是这些工具之间不断切换&#xff0c;以及素材反复导入、修改和重新生成。Pixelle-Video 的思路&#"
+      }
+    ],
+    "details": [
+      {
+        "title": "把 80+ 项音视频能力装进 Claude Code 后，我合上了 FFmpeg 手册",
+        "url": "https://imyhq.com/avi/28260.html",
+        "listDate": "2026-10-10T16:00:00.000Z",
+        "originalDate": "2026-10-10T16:00:10.000Z",
+        "summary": "一、空手开箱编辑丢来一个任务&#xff1a;试试火山新出的 AI MediaKit Skill&#xff0c;写篇实测。我第一反应是翻硬盘找素材——想找段画质差的老视频&#xff0c;或者带硬字幕的片源。翻了一圈&#xff0c;一无所获。索性直接用官方 demo。后来想想这反而是件好事&#xff1a;空着手也能跑通全流程&#xff0c;恰好说明上手门槛低。于是我打开 Claude Code&#x"
+      },
+      {
+        "title": "AI 视频生成能不能真正跑通？MoneyPrinterTurbo 本地制作、远程访问与授权验证",
+        "url": "https://imyhq.com/avi/28185.html",
+        "listDate": "2026-10-03T16:00:00.000Z",
+        "originalDate": "2026-10-03T16:00:26.000Z",
+        "summary": "AI 视频生成能不能真正跑通&#xff1f;MoneyPrinterTurbo 本地制作、远程访问与授权验证 前言这次我想验证的不是“AI 能不能自动做视频”这个宽泛命题&#xff0c;而是一个更具体的问题&#xff1a;MoneyPrinterTurbo 能不能把“主题 → 文案 → 素材 → 配音 → 字幕 → 成片”这一整条流程真正跑通。原文本身已经给出了比较完整的测试路径&#xff1a;"
+      },
+      {
+        "title": "不想先学一堆 React？用 Codex 帮你完成第一支 Remotion 动效视频",
+        "url": "https://imyhq.com/avi/28184.html",
+        "listDate": "2026-10-03T16:00:00.000Z",
+        "originalDate": "2026-10-03T16:00:14.000Z",
+        "summary": "不想先学一堆 React&#xff1f;用 Codex 帮你完成第一支 Remotion 动效视频 前言我以前一直把视频制作理解成“时间轴上的工作”&#xff1a;剪素材、拉关键帧、调转场&#xff0c;再等渲染。Remotion 换了一个思路——把视频画面写成 React 组件&#xff0c;动画、布局和数据都交给代码控制。这个方向本身很有吸引力&#xff0c;但真正的门槛也很明显&#xff1"
+      },
+      {
+        "url": "https://imyhq.com/avi/28164.html",
+        "error": "TypeError: fetch failed",
+        "originalDate": "2026-10-01T07:00:23.000Z"
+      },
+      {
+        "title": "一个主题直接生成完整视频：Windows 部署 Pixelle-Video，把文案、配图和配音串成自动流程",
+        "url": "https://imyhq.com/avi/28163.html",
+        "listDate": "2026-09-30T16:00:00.000Z",
+        "originalDate": "2026-10-01T07:00:18.000Z",
+        "summary": "传统短视频制作其实是一条很长的生产链。确定选题之后&#xff0c;要先写文案&#xff0c;再根据脚本找图或者生成画面&#xff0c;接着处理配音、字幕、背景音乐和画面节奏&#xff0c;最后还要进入剪辑软件重新组合。每一个环节单独看都不难&#xff0c;但真正耗时间的&#xff0c;往往是这些工具之间不断切换&#xff0c;以及素材反复导入、修改和重新生成。Pixelle-Video 的思路&#"
+      }
+    ],
+    "previousDetail": {
+      "maxFetches": 5,
+      "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+      "publishedAtAuthoritative": true,
+      "summarySelector": "meta[name=\"description\"]"
+    }
+  },
+  {
+    "source": {
+      "id": "web_list-expand10-kongchang",
+      "name": "控场AI · 中文视频与创作实测",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.kongchang.com/articles",
+        "itemSelector": "a:has(h2):has(time)",
+        "titleSelector": "h2",
+        "publishedAtSelector": "time",
+        "publishedAtUtcOffset": "+08:00",
+        "allowUrlPrefixes": [
+          "https://www.kongchang.com/articles/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:56:58.622Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "AI video",
+            "AI image",
+            "AI film",
+            "AI music",
+            "AI audio",
+            "AI voice",
+            "AI speech",
+            "AI filmmaking",
+            "text-to-video",
+            "text-to-image",
+            "text-to-speech",
+            "image generation",
+            "video generation",
+            "image editing",
+            "generative image",
+            "generative video",
+            "generative audio",
+            "ComfyUI",
+            "Stable Diffusion",
+            "Midjourney",
+            "NanoBanana",
+            "Nano Banana",
+            "FLUX",
+            "LoRA",
+            "Seedance",
+            "Seedream",
+            "Veo",
+            "Sora",
+            "Vidu",
+            "Wan2",
+            "Wan 2",
+            "HunyuanVideo",
+            "MoneyPrinter",
+            "Remotion",
+            "OpenMontage",
+            "AI绘画",
+            "AI作图",
+            "AI生图",
+            "AI视频",
+            "AI影视",
+            "AI电影",
+            "AI漫剧",
+            "AI动画",
+            "AI配音",
+            "AI音乐",
+            "AI 绘画",
+            "AI 视频",
+            "AI 图像",
+            "AI影像",
+            "短剧",
+            "漫剧",
+            "分镜",
+            "图生视频",
+            "文生视频",
+            "视频生成",
+            "图像生成",
+            "图片生成",
+            "数字人",
+            "即梦",
+            "可灵",
+            "海螺",
+            "动画生成"
+          ],
+          "requireWords": [
+            "kling",
+            "suno",
+            "udio",
+            "vidu",
+            "runway",
+            "krea",
+            "recraft"
+          ],
+          "includeBodyForTopic": true
+        },
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "publishedAtAuthoritative": true,
+          "summarySelector": "meta[name=\"description\"]"
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-kongchang",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 20,
+    "matched": 0,
+    "recent": 0,
+    "samples": [],
+    "details": []
+  },
+  {
+    "source": {
+      "id": "web_list-expand10-aifruit",
+      "name": "AI Fruit · 中文图像视频制作指南",
+      "kind": "web_list",
+      "config": {
+        "url": "https://aifruit.app/zh/blog",
+        "itemSelector": "a:has(h3)",
+        "titleSelector": "h3",
+        "publishedAtRegex": "(20\\d{2}年\\d{1,2}月\\d{1,2}日)",
+        "publishedAtUtcOffset": "+08:00",
+        "allowUrlPrefixes": [
+          "https://aifruit.app/zh/blog/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:56:58.622Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "publishedAtAuthoritative": true,
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "sortByPublishedAt": true
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-aifruit",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 30,
+    "matched": 30,
+    "recent": 5,
+    "samples": [
+      {
+        "title": "Runway 将静态媒体扩展为实时交互式世界模拟：对短视频创作者意味着什么",
+        "url": "https://aifruit.app/zh/blog/runway-interactive-world-simulation",
+        "listDate": "2026-10-05T16:00:00.000Z",
+        "originalDate": "2026-10-06T01:57:33.874Z",
+        "summary": "Runway 的 Project Continuum 把静态媒体变成可交互的实时世界模拟。2026 年 10 月 1 日的演示到底展示了什么、哪些还只是研究预览，以及短视频创作者今天实际能做什么。"
+      },
+      {
+        "title": "Manus 视频编辑器工作流:把 AI 生成的素材剪成可发布的短片",
+        "url": "https://aifruit.app/zh/blog/manus-video-editor",
+        "listDate": "2026-10-03T16:00:00.000Z",
+        "originalDate": "2026-10-04T02:07:15.075Z",
+        "summary": "Manus 视频编辑器工作流详解:生成素材、导入并自动转录、逐轨精修时间线(字幕、配乐、音效),再把长素材剪成可发布的短片。基于 Manus 2.0 官方发布的文档式解读。"
+      },
+      {
+        "title": "Kling 4.0 Flash：规格、早期访问与 API 开放现状",
+        "url": "https://aifruit.app/zh/blog/kling-4-0-flash",
+        "listDate": "2026-10-01T16:00:00.000Z",
+        "originalDate": "2026-10-02T03:14:21.881Z",
+        "summary": "Kling 4.0 Flash 已限量开放，支持最长 20 秒、720p 视频。本文说明官方访问资格、Kie 与 Replicate 的 API 状态，以及 AI Fruit 当前支持的模型。"
+      },
+      {
+        "title": "ElevenLabs 估值 220 亿美元：短视频创作者的 AI 配音工具怎么选",
+        "url": "https://aifruit.app/zh/blog/ai-voiceover-tools-for-video-creators",
+        "listDate": "2026-10-01T16:00:00.000Z",
+        "originalDate": "2026-10-02T02:36:46.712Z",
+        "summary": "ElevenLabs 估值升至 220 亿美元。本文按能力边界、定价模式、商用授权、工作流衔接四个标准帮你选对 AI 配音工具，价格对比查证于 2026 年 10 月。"
+      },
+      {
+        "title": "HeyGen Video 1：技术、输入模态与定价——短视频创作者决策指南",
+        "url": "https://aifruit.app/zh/blog/heygen-video-1-tech-inputs-pricing",
+        "listDate": "2026-09-30T16:00:00.000Z",
+        "originalDate": "2026-10-01T13:32:32.983Z",
+        "summary": "HeyGen Video 1 是什么、三种输入模式、文档规格、按秒定价，以及给短视频创作者的引入-试用-跳过决策清单。"
+      }
+    ],
+    "details": [
+      {
+        "title": "Runway 将静态媒体扩展为实时交互式世界模拟：对短视频创作者意味着什么",
+        "url": "https://aifruit.app/zh/blog/runway-interactive-world-simulation",
+        "listDate": "2026-10-05T16:00:00.000Z",
+        "originalDate": "2026-10-06T01:57:33.874Z",
+        "summary": "Runway 的 Project Continuum 把静态媒体变成可交互的实时世界模拟。2026 年 10 月 1 日的演示到底展示了什么、哪些还只是研究预览，以及短视频创作者今天实际能做什么。"
+      },
+      {
+        "title": "Manus 视频编辑器工作流:把 AI 生成的素材剪成可发布的短片",
+        "url": "https://aifruit.app/zh/blog/manus-video-editor",
+        "listDate": "2026-10-03T16:00:00.000Z",
+        "originalDate": "2026-10-04T02:07:15.075Z",
+        "summary": "Manus 视频编辑器工作流详解:生成素材、导入并自动转录、逐轨精修时间线(字幕、配乐、音效),再把长素材剪成可发布的短片。基于 Manus 2.0 官方发布的文档式解读。"
+      },
+      {
+        "title": "Kling 4.0 Flash：规格、早期访问与 API 开放现状",
+        "url": "https://aifruit.app/zh/blog/kling-4-0-flash",
+        "listDate": "2026-10-01T16:00:00.000Z",
+        "originalDate": "2026-10-02T03:14:21.881Z",
+        "summary": "Kling 4.0 Flash 已限量开放，支持最长 20 秒、720p 视频。本文说明官方访问资格、Kie 与 Replicate 的 API 状态，以及 AI Fruit 当前支持的模型。"
+      },
+      {
+        "title": "ElevenLabs 估值 220 亿美元：短视频创作者的 AI 配音工具怎么选",
+        "url": "https://aifruit.app/zh/blog/ai-voiceover-tools-for-video-creators",
+        "listDate": "2026-10-01T16:00:00.000Z",
+        "originalDate": "2026-10-02T02:36:46.712Z",
+        "summary": "ElevenLabs 估值升至 220 亿美元。本文按能力边界、定价模式、商用授权、工作流衔接四个标准帮你选对 AI 配音工具，价格对比查证于 2026 年 10 月。"
+      },
+      {
+        "title": "HeyGen Video 1：技术、输入模态与定价——短视频创作者决策指南",
+        "url": "https://aifruit.app/zh/blog/heygen-video-1-tech-inputs-pricing",
+        "listDate": "2026-09-30T16:00:00.000Z",
+        "originalDate": "2026-10-01T13:32:32.983Z",
+        "summary": "HeyGen Video 1 是什么、三种输入模式、文档规格、按秒定价，以及给短视频创作者的引入-试用-跳过决策清单。"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand10-sunomv",
+      "name": "SunoMV · AI音乐视频制作",
+      "kind": "web_list",
+      "config": {
+        "url": "https://suno.bi/zh/blog",
+        "itemSelector": "a:has(h2),a:has(h3),article",
+        "linkSelector": "a",
+        "titleSelector": "h2,h3",
+        "publishedAtSelector": "time",
+        "publishedAtUtcOffset": "+08:00",
+        "allowUrlPrefixes": [
+          "https://suno.bi/zh/blog/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:56:58.622Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "publishedAtAuthoritative": true,
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "sortByPublishedAt": true
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-sunomv",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 60,
+    "matched": 60,
+    "recent": 5,
+    "samples": [
+      {
+        "title": "混合 MV 怎么做才不烧额度：按段花钱，文字 PV、分镜图和 AI 视频怎么搭（2026）",
+        "url": "https://suno.bi/zh/blog/hybrid-music-video-cost-per-section",
+        "listDate": "2026-10-10T00:00:00.000Z",
+        "originalDate": "2026-10-10T00:00:00.000Z",
+        "summary": "一支 MV 不必每一镜都拍 AI 视频。本文用一首 3 分 54 秒、21 镜的真实歌曲，拆开五种画面的额度差：只用文字 0 额度、AI 动效约 118 cr、一镜 AI 视频约 700 cr。再讲怎么按前奏、主歌、副歌分配，三套全片方案各省多少，以及海报风 MV 的叠法。"
+      },
+      {
+        "title": "B站热词AIMV是什么，怎么跟普通MV区分",
+        "url": "https://suno.bi/zh/blog/what-is-aimv",
+        "listDate": "2026-10-09T00:00:00.000Z",
+        "originalDate": "2026-10-09T00:00:00.000Z",
+        "summary": "AIMV 是 B 站给 AI 音乐视频起的短称呼，不是文件格式，也不是某一个软件的名字。这篇说明它和普通 MV 差在哪，以及歌已经做好时，怎样先看歌词对轴的预览，再决定要不要发。"
+      },
+      {
+        "title": "HeyGen Video 做音乐视频：镜头自带声音，试一条 40 积分",
+        "url": "https://suno.bi/zh/blog/heygen-video-music-video",
+        "listDate": "2026-10-01T00:00:00.000Z",
+        "originalDate": "2026-10-01T00:00:00.000Z",
+        "summary": "HeyGen 在 2026 年 9 月 30 日放出 HeyGen Video。这篇只回答音乐视频的问题：一条 5–15 秒、自带声音的分镜，SunoMV 选择器实际提供什么，以及我们 10 月 1 日打出的那一条。"
+      },
+      {
+        "title": "MV 制作流程：先分镜，看样片，再锁成 1080P",
+        "url": "https://suno.bi/zh/blog/music-video-storyboard-preview-lock",
+        "listDate": "2026-10-01T00:00:00.000Z",
+        "originalDate": "2026-10-01T00:00:00.000Z",
+        "summary": "影视和 MV 行业的标准顺序：先分镜，再看这一段的样片，满意后才锁成 1080P。Seedance 2.5 可以直接出 1080P，也可以先看样再做成清晰版。更快的默认模型没有 1080P。"
+      },
+      {
+        "title": "一句话怎么做MV：还没有歌，先看画面",
+        "url": "https://suno.bi/zh/blog/opus-5-5-directs-a-suno-music-video",
+        "listDate": "2026-09-27T00:00:00.000Z",
+        "originalDate": "2026-09-27T00:00:00.000Z",
+        "summary": "在 suno.bi 上，一句话就能拿到歌词、曲风、分镜，以及一段能在网页里看的画面。SunoMV Pro 再把这首歌交给 Suno，并做成歌词同步的视频。不用粘贴 API key。这一下还不能下载 MP4。"
+      }
+    ],
+    "details": [
+      {
+        "title": "混合 MV 怎么做才不烧额度：按段花钱，文字 PV、分镜图和 AI 视频怎么搭（2026）",
+        "url": "https://suno.bi/zh/blog/hybrid-music-video-cost-per-section",
+        "listDate": "2026-10-10T00:00:00.000Z",
+        "originalDate": "2026-10-10T00:00:00.000Z",
+        "summary": "一支 MV 不必每一镜都拍 AI 视频。本文用一首 3 分 54 秒、21 镜的真实歌曲，拆开五种画面的额度差：只用文字 0 额度、AI 动效约 118 cr、一镜 AI 视频约 700 cr。再讲怎么按前奏、主歌、副歌分配，三套全片方案各省多少，以及海报风 MV 的叠法。"
+      },
+      {
+        "title": "B站热词AIMV是什么，怎么跟普通MV区分",
+        "url": "https://suno.bi/zh/blog/what-is-aimv",
+        "listDate": "2026-10-09T00:00:00.000Z",
+        "originalDate": "2026-10-09T00:00:00.000Z",
+        "summary": "AIMV 是 B 站给 AI 音乐视频起的短称呼，不是文件格式，也不是某一个软件的名字。这篇说明它和普通 MV 差在哪，以及歌已经做好时，怎样先看歌词对轴的预览，再决定要不要发。"
+      },
+      {
+        "title": "HeyGen Video 做音乐视频：镜头自带声音，试一条 40 积分",
+        "url": "https://suno.bi/zh/blog/heygen-video-music-video",
+        "listDate": "2026-10-01T00:00:00.000Z",
+        "originalDate": "2026-10-01T00:00:00.000Z",
+        "summary": "HeyGen 在 2026 年 9 月 30 日放出 HeyGen Video。这篇只回答音乐视频的问题：一条 5–15 秒、自带声音的分镜，SunoMV 选择器实际提供什么，以及我们 10 月 1 日打出的那一条。"
+      },
+      {
+        "title": "MV 制作流程：先分镜，看样片，再锁成 1080P",
+        "url": "https://suno.bi/zh/blog/music-video-storyboard-preview-lock",
+        "listDate": "2026-10-01T00:00:00.000Z",
+        "originalDate": "2026-10-01T00:00:00.000Z",
+        "summary": "影视和 MV 行业的标准顺序：先分镜，再看这一段的样片，满意后才锁成 1080P。Seedance 2.5 可以直接出 1080P，也可以先看样再做成清晰版。更快的默认模型没有 1080P。"
+      },
+      {
+        "title": "一句话怎么做MV：还没有歌，先看画面",
+        "url": "https://suno.bi/zh/blog/opus-5-5-directs-a-suno-music-video",
+        "listDate": "2026-09-27T00:00:00.000Z",
+        "originalDate": "2026-09-27T00:00:00.000Z",
+        "summary": "在 suno.bi 上，一句话就能拿到歌词、曲风、分镜，以及一段能在网页里看的画面。SunoMV Pro 再把这首歌交给 Suno，并做成歌词同步的视频。不用粘贴 API key。这一下还不能下载 MP4。"
+      }
+    ]
+  },
+  {
+    "source": {
+      "id": "web_list-expand10-oimi",
+      "name": "Oimi · 中文图像视频教程",
+      "kind": "web_list",
+      "config": {
+        "url": "https://oimi.ai/zh/blog",
+        "itemSelector": "a:has(h2),a:has(h3),article",
+        "linkSelector": "a",
+        "titleSelector": "h2,h3",
+        "publishedAtSelector": "time",
+        "publishedAtUtcOffset": "+08:00",
+        "allowUrlPrefixes": [
+          "https://oimi.ai/zh/blog/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-09-16T00:56:58.622Z",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        },
+        "detail": {
+          "maxFetches": 5,
+          "publishedAtRegex": "\"datePublished\"\\s*:\\s*\"([^\"]+)\"",
+          "publishedAtAuthoritative": true,
+          "summarySelector": "meta[name=\"description\"]"
+        },
+        "sortByPublishedAt": true
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "publisher-oimi",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "创作者",
+        "教程与工作流"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    "total": 21,
+    "matched": 21,
+    "recent": 4,
+    "samples": [
+      {
+        "title": "10条爆款 AI 人像写真级提示词（2026）",
+        "url": "https://oimi.ai/zh/blog/ai-portrait-prompts",
+        "listDate": "2026-09-22T09:44:06.479Z",
+        "originalDate": "2026-09-22T09:44:06.479Z",
+        "summary": "10条可直接复制的AI人像提示词，中英双语对照，附真实示例图——黄金时刻、霓虹街拍、雨夜咖啡馆、胶片颗粒、艺术黑白、油画。上传照片即可生成，一分钟拿到一张像拍出来的人像。"
+      },
+      {
+        "title": "Nano Banana 2.1 正式发布：新功能、价格与上手指南",
+        "url": "https://oimi.ai/zh/blog/nano-banana-2-1-release",
+        "listDate": "2026-10-07T00:36:29.021Z",
+        "originalDate": "2026-10-07T00:36:29.021Z",
+        "summary": "Nano Banana 2.1 已在 Gemini API 正式上线：价格约为 Nano Banana 2 的一半，支持 14 图融合、全景比例、更强文字渲染。完整解读。"
+      },
+      {
+        "title": "AI手办提示词：10条复制即用的收藏级造型（2026）",
+        "url": "https://oimi.ai/zh/blog/ai-figurine-prompts",
+        "listDate": "2026-09-20T12:34:21.360Z",
+        "originalDate": "2026-09-20T12:34:21.360Z",
+        "summary": "复制粘贴热门AI手办提示词，把你的照片变成值得摆上收藏柜的潮玩——桌面配件盒、盲盒、毛绒、波比头雕一应俱全，免费体验。"
+      },
+      {
+        "title": "10 个热门人像海报提示词（2026）",
+        "url": "https://oimi.ai/zh/blog/ai-portrait-poster-prompts",
+        "listDate": "2026-09-18T13:17:01.356Z",
+        "originalDate": "2026-09-18T13:17:01.356Z",
+        "summary": "将任何肖像变成一张高质量的海报，只需一个提示词——从日式水墨极简主义到涂鸦风格的10个可复制粘贴的AI海报提示词，并逐一解释每个括号内的参数。"
+      }
+    ],
+    "details": [
+      {
+        "title": "10条爆款 AI 人像写真级提示词（2026）",
+        "url": "https://oimi.ai/zh/blog/ai-portrait-prompts",
+        "listDate": "2026-09-22T09:44:06.479Z",
+        "originalDate": "2026-09-22T09:44:06.479Z",
+        "summary": "10条可直接复制的AI人像提示词，中英双语对照，附真实示例图——黄金时刻、霓虹街拍、雨夜咖啡馆、胶片颗粒、艺术黑白、油画。上传照片即可生成，一分钟拿到一张像拍出来的人像。"
+      },
+      {
+        "title": "Nano Banana 2.1 正式发布：新功能、价格与上手指南",
+        "url": "https://oimi.ai/zh/blog/nano-banana-2-1-release",
+        "listDate": "2026-10-07T00:36:29.021Z",
+        "originalDate": "2026-10-07T00:36:29.021Z",
+        "summary": "Nano Banana 2.1 已在 Gemini API 正式上线：价格约为 Nano Banana 2 的一半，支持 14 图融合、全景比例、更强文字渲染。完整解读。"
+      },
+      {
+        "title": "AI手办提示词：10条复制即用的收藏级造型（2026）",
+        "url": "https://oimi.ai/zh/blog/ai-figurine-prompts",
+        "listDate": "2026-09-20T12:34:21.360Z",
+        "originalDate": "2026-09-20T12:34:21.360Z",
+        "summary": "复制粘贴热门AI手办提示词，把你的照片变成值得摆上收藏柜的潮玩——桌面配件盒、盲盒、毛绒、波比头雕一应俱全，免费体验。"
+      },
+      {
+        "title": "10 个热门人像海报提示词（2026）",
+        "url": "https://oimi.ai/zh/blog/ai-portrait-poster-prompts",
+        "listDate": "2026-09-18T13:17:01.356Z",
+        "originalDate": "2026-09-18T13:17:01.356Z",
+        "summary": "将任何肖像变成一张高质量的海报，只需一个提示词——从日式水墨极简主义到涂鸦风格的10个可复制粘贴的AI海报提示词，并逐一解释每个括号内的参数。"
+      }
+    ]
+  }
+]

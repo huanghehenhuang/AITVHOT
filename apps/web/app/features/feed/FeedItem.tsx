@@ -5,8 +5,8 @@ import { memo } from "react";
 import { Link } from "react-router";
 import { IntentLink } from "../../components/ui/IntentLink";
 import type { GroupInfo, FeedItemSummary, TimelineFilters } from "@aihot/contracts/site";
-import { CATEGORY_LABELS } from "@aihot/contracts/taxonomy";
 import { ITEM_COPY } from "@aihot/site";
+import { categoryLabel, tagLabel, useI18n } from "../../i18n";
 import { SameEventBadge, SelectedBadge } from "../../components/ui/Badge";
 import { ScoreLabel } from "../../components/ui/Score";
 import { beijingTime } from "@aihot/contracts/time";
@@ -28,6 +28,7 @@ export interface FeedItemProps {
 }
 
 export const FeedItem = memo(function FeedItem({ item, group, filters, read = false, onOpen, showTags = false, at }: FeedItemProps) {
+  const { t, locale } = useI18n();
   const isX = item.channel === "x" && !!item.x;
   const open = () => {
     rememberPreview(item);
@@ -37,7 +38,7 @@ export const FeedItem = memo(function FeedItem({ item, group, filters, read = fa
   const tags = showTags ? item.tags.slice(0, 3) : [];
 
   return (
-    <article className="relative min-w-0 lg:card lg:card-hover lg:px-[18px] lg:pb-[14px] lg:pt-[15px]" data-item-id={item.id}>
+    <article className="cinema-feed-item relative min-w-0 lg:card lg:card-hover lg:px-[18px] lg:pb-[14px] lg:pt-[15px]" data-item-id={item.id}>
       <header className="flex min-h-[22px] items-center gap-1.5 text-[12.5px] leading-[18px] text-ink-4 lg:min-h-[18px] lg:gap-2">
         <SourceLine item={item} className="text-ink-4" />
         {at && (
@@ -68,7 +69,7 @@ export const FeedItem = memo(function FeedItem({ item, group, filters, read = fa
           <IntentLink viewTransition to={`/items/${item.id}`} onClick={open} className="after:absolute after:inset-0 after:content-['']">
             {item.summary}
           </IntentLink>
-        </p> : <IntentLink viewTransition to={`/items/${item.id}`} onClick={open} aria-label={`查看 ${item.x!.authorName} 的帖子`} className="absolute inset-0" />
+        </p> : <IntentLink viewTransition to={`/items/${item.id}`} onClick={open} aria-label={t("查看 {name} 的帖子", { name: item.x!.authorName })} className="absolute inset-0" />
       ) : (
         <>
           <h3 className={`mt-1.5 line-clamp-2 text-[17px] font-[650] leading-[1.5] lg:mt-2 lg:line-clamp-none lg:leading-[1.55] ${read ? "text-ink-4" : "text-ink"}`}>
@@ -87,12 +88,12 @@ export const FeedItem = memo(function FeedItem({ item, group, filters, read = fa
         <div className="relative z-10 mt-2 hidden flex-wrap gap-x-2.5 gap-y-1 text-[12px] text-ink-4 lg:flex">
           {showTags && item.category && (
             <Link to={`/all?category=${item.category}`} className="hover:text-accent">
-              {CATEGORY_LABELS[item.category]}
+              {categoryLabel(item.category, locale)}
             </Link>
           )}
-          {tags.map((t) => (
-            <Link key={t} to={`/all?tag=${encodeURIComponent(t)}`} className="hover:text-accent">
-              #{t}
+          {tags.map((tag) => (
+            <Link key={tag} to={`/all?tag=${encodeURIComponent(tag)}`} className="hover:text-accent">
+              #{tagLabel(tag, locale)}
             </Link>
           ))}
         </div>
@@ -100,7 +101,7 @@ export const FeedItem = memo(function FeedItem({ item, group, filters, read = fa
 
       {item.sameEvent && (
         <p className="relative z-10 mt-2 line-clamp-1 text-[12.5px] text-ink-4">
-          同一新闻，精选展示
+          {t("同一新闻，精选展示")}
           <Link viewTransition to={`/items/${item.sameEvent.id}`} className="text-ink-3 transition-colors hover:text-accent">
             《{item.sameEvent.title}》
           </Link>
@@ -114,7 +115,7 @@ export const FeedItem = memo(function FeedItem({ item, group, filters, read = fa
 
       {item.reason && (
         <div className="mt-1 lg:mt-3 lg:border-t lg:border-line-soft lg:pt-3">
-          <p className="line-clamp-1 text-[13px] leading-[1.65] text-note lg:line-clamp-none lg:leading-[1.75]">{`${ITEM_COPY.reasonLabel}：`}{item.reason}</p>
+          <p className="line-clamp-1 text-[13px] leading-[1.65] text-note lg:line-clamp-none lg:leading-[1.75]">{t(`${ITEM_COPY.reasonLabel}：`)}{item.reason}</p>
         </div>
       )}
 

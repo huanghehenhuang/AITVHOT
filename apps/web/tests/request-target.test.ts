@@ -35,6 +35,17 @@ function raw(path: string, method: "GET" | "HEAD") {
   });
 }
 
+test("homepage stylesheet is served from the client build on every platform", async () => {
+  const home = await raw("/", "GET");
+  const stylesheet = home.body.match(/<link[^>]+href="([^"]+\.css)"/);
+  assert.ok(stylesheet, "SSR must reference its built stylesheet");
+  const asset = await raw(stylesheet[1]!, "GET");
+  assert.equal(asset.status, 200);
+  assert.match(asset.headers["content-type"] ?? "", /^text\/css/);
+  assert.match(asset.body, /editorial-masthead/);
+  assert.match(asset.headers["cache-control"] ?? "", /immutable/);
+});
+
 test("origin-form slashes keep the router's homepage and unknown-route semantics", async () => {
   for (const method of ["GET", "HEAD"] as const) {
     const home = await raw("/", method);

@@ -1,0 +1,149 @@
+{
+  "checkedAt": "2026-10-16T00:31:26.118Z",
+  "configCount": 376,
+  "totals": [
+    {
+      "total": 395,
+      "enabled": 393
+    }
+  ],
+  "sources": [
+    {
+      "id": "rss-expand7-renderbob",
+      "name": "RenderBob · 图像视频工作流",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-16T00:28:46.870Z",
+      "articles": 5,
+      "recent": 5
+    },
+    {
+      "id": "rss-expand7-stuubzzz",
+      "name": "Stuubzzz · 视频工作流实测",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-16T00:28:45.849Z",
+      "articles": 5,
+      "recent": 5
+    },
+    {
+      "id": "web-expand7-project-2771096196--psai",
+      "name": "psai · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-16T00:28:43.701Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "web-expand7-project-buxuku--smartsub",
+      "name": "SmartSub · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-16T00:28:42.899Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand7-project-chatfire-ai--huobao-drama",
+      "name": "huobao-drama · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-16T00:28:43.263Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "web-expand7-project-huanshere--videolingo",
+      "name": "VideoLingo · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-16T00:28:44.218Z",
+      "articles": 2,
+      "recent": 2
+    },
+    {
+      "id": "web-expand7-project-jerristhebesta--ai-short-drama-studio",
+      "name": "AI-Short-Drama-Studio · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-16T00:28:42.524Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "web-expand7-project-jianjieyiban--jjyb_ai_videoautocut",
+      "name": "JJYB_AI_VideoAutoCut · 公开创作工具发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-16T00:28:44.882Z",
+      "articles": 2,
+      "recent": 2
+    },
+    {
+      "id": "web-expand7-project-swy2018--aurora-audio-studio",
+      "name": "Aurora-Audio-Studio · 创作工具版本发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-16T00:28:44.550Z",
+      "articles": 2,
+      "recent": 2
+    },
+    {
+      "id": "web_list-expand7-archigen",
+      "name": "ArchiGen AI · 图像生成与ComfyUI实战",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-16T00:30:30.302Z",
+      "articles": 10,
+      "recent": 8
+    },
+    {
+      "id": "web_list-expand7-loomance",
+      "name": "Loomance · 本地AI动画实测",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-16T00:28:50.549Z",
+      "articles": 3,
+      "recent": 3
+    }
+  ],
+  "processing": [
+    {
+      "processing_state": "analyzed",
+      "count": 36
+    },
+    {
+      "processing_state": "new",
+      "count": 3
+    }
+  ],
+  "publications": [
+    {
+      "eligible": 34,
+      "selected": 2
+    }
+  ]
+}

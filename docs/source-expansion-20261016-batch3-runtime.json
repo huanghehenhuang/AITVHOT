@@ -1,0 +1,276 @@
+{
+  "at": "2026-10-16T00:51:10.568Z",
+  "pack": 397,
+  "totals": [
+    {
+      "total": 416,
+      "enabled": 414
+    }
+  ],
+  "sources": [
+    {
+      "id": "rss-expand9-latteken",
+      "name": "ラテ研 · 图像视频实测观察源",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:49:22.952Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand9-design-to-ai",
+      "name": "デザインとAI · 设计与创作分享",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:49:24.708Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand9-efarsoft-dramaclip",
+      "name": "DramaClip · 公开创作工具发布",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:49:34.510Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand9-wangruofeng",
+      "name": "王若风 · 开源创作项目分享",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:49:23.998Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand9-z-ab",
+      "name": "z-ab · 开源短剧与创作项目分享",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:49:25.602Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand9-roseat",
+      "name": "粥里有勺糖 · 博客园创作工具实践",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:49:32.594Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand9-ddcat-ai-open-ai-canvas",
+      "name": "open-ai-canvas · 开源创作工具发布",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:49:34.054Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand9-qianmo",
+      "name": "阡陌的小站 · 本地创作实战",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:49:28.626Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand9-monster",
+      "name": "Monster社区 · 中文ComfyUI实测与工作流",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:49:33.501Z",
+      "last_error": null
+    },
+    {
+      "id": "web_list-expand9-tenney95-ai-canvas-tauri",
+      "name": "AI-Canvas-tauri · 公开创作工具发布",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:49:34.318Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand9-note-aikimi",
+      "name": "あいきみ · 图像编辑与LoRA实测",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:50:19.008Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand9-note-sepiablue",
+      "name": "かみもと · 本地AI视频工作流",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:50:19.287Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-expand9-note-tg110",
+      "name": "伊藤P · 低显存图像生成实测",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T00:50:19.537Z",
+      "last_error": null
+    }
+  ],
+  "articles": [
+    {
+      "source_id": "rss-expand9-design-to-ai",
+      "total": 1,
+      "recent": 1,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand9-latteken",
+      "total": 1,
+      "recent": 1,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand9-note-aikimi",
+      "total": 5,
+      "recent": 5,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand9-note-sepiablue",
+      "total": 5,
+      "recent": 5,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand9-note-tg110",
+      "total": 5,
+      "recent": 5,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand9-qianmo",
+      "total": 1,
+      "recent": 1,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand9-roseat",
+      "total": 1,
+      "recent": 1,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand9-wangruofeng",
+      "total": 4,
+      "recent": 4,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-expand9-z-ab",
+      "total": 5,
+      "recent": 5,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand9-ddcat-ai-open-ai-canvas",
+      "total": 3,
+      "recent": 3,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand9-efarsoft-dramaclip",
+      "total": 2,
+      "recent": 2,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand9-monster",
+      "total": 5,
+      "recent": 5,
+      "undated": 0,
+      "pending": 0
+    },
+    {
+      "source_id": "web_list-expand9-tenney95-ai-canvas-tauri",
+      "total": 3,
+      "recent": 3,
+      "undated": 0,
+      "pending": 0
+    }
+  ],
+  "pubs": [
+    {
+      "source_id": "rss-expand9-design-to-ai",
+      "public": 1,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand9-latteken",
+      "public": 0,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand9-note-aikimi",
+      "public": 5,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand9-note-sepiablue",
+      "public": 5,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand9-note-tg110",
+      "public": 5,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand9-qianmo",
+      "public": 1,
+      "selected": 1
+    },
+    {
+      "source_id": "rss-expand9-roseat",
+      "public": 1,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand9-wangruofeng",
+      "public": 3,
+      "selected": 0
+    },
+    {
+      "source_id": "rss-expand9-z-ab",
+      "public": 4,
+      "selected": 2
+    },
+    {
+      "source_id": "web_list-expand9-ddcat-ai-open-ai-canvas",
+      "public": 3,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand9-efarsoft-dramaclip",
+      "public": 2,
+      "selected": 1
+    },
+    {
+      "source_id": "web_list-expand9-monster",
+      "public": 5,
+      "selected": 0
+    },
+    {
+      "source_id": "web_list-expand9-tenney95-ai-canvas-tauri",
+      "public": 3,
+      "selected": 0
+    }
+  ]
+}

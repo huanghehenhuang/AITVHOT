@@ -22,12 +22,16 @@ export function noiseFiltered(c: Candidate, source: SourceRow): boolean {
   const has = (text: string, words: string[] | undefined) => (words ?? []).some((k) => text.includes(k.toLowerCase()));
   const title = c.title.toLowerCase();
   const hay = `${title}\n${(c.excerpt ?? "").toLowerCase()}`;
+  // Some roundups supply their article text but no descriptive title or excerpt. Opted-in feeds
+  // can use that existing text for topic admission without changing the old drop/exemption rules.
+  const topicHay = f.includeBodyForTopic === true && c.bodyStatus === "ok" && c.bodyText
+    ? `${hay}\n${c.bodyText.toLowerCase()}` : hay;
   // Broad feeds can require a literal topic marker before detail reads and model processing.
   // A drop-rule exemption does not bypass this source's explicit topic scope.
   // Short product names need token boundaries: "udio" must not match every "audio" article,
   // and "ai" must not match "paid" or "air". Chinese text next to an ASCII name is allowed.
-  const wordsMatched = f.requireWords?.some((word: string) => new RegExp(`(^|[^a-z0-9_])${word.toLowerCase()}(?=$|[^a-z0-9_])`).test(hay)) ?? false;
-  if ((f.requireMarkers?.length || f.requireWords?.length) && !has(hay, f.requireMarkers) && !wordsMatched) return true;
+  const wordsMatched = f.requireWords?.some((word: string) => new RegExp(`(^|[^a-z0-9_])${word.toLowerCase()}(?=$|[^a-z0-9_])`).test(topicHay)) ?? false;
+  if ((f.requireMarkers?.length || f.requireWords?.length) && !has(topicHay, f.requireMarkers) && !wordsMatched) return true;
   if (has(hay, f.keepIfMatches)) return false;
   return has(title, f.dropMarkersTitleOnly) || has(hay, f.dropMarkers);
 }

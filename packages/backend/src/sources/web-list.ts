@@ -111,7 +111,7 @@ async function fetchListingText(source: SourceRow): Promise<{ text: string; viaJ
   const form = source.config.bodyForm;
   const res = await fetchListing(url, {
     method: source.config.method ?? "GET",
-    headers: { accept: "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8", ...(form ? { "content-type": "application/x-www-form-urlencoded" } : {}) },
+    headers: { accept: "text/html,application/xhtml+xml;q=0.9,*/*;q=0.8", ...(form ? { "content-type": "application/x-www-form-urlencoded" } : {}) },
     ...(form ? { body: new URLSearchParams(form).toString() } : {}),
     timeoutMs: 25_000,
   });

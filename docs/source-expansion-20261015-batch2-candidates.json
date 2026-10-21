@@ -1,0 +1,1354 @@
+{
+  "checkedAt": "2026-10-15T15:40:02.930Z",
+  "reports": [
+    {
+      "checkedAt": "2026-10-15T15:36:35.451Z",
+      "rows": [
+        {
+          "source": {
+            "id": "web-expand6-project-sunnylincc--storyboardai",
+            "name": "StoryboardAI · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/Sunnylincc/StoryboardAI/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-sunnylincc",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "error": "Error: no items matched (html)"
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-m-jyuan--koma",
+            "name": "Koma · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/M-JYuan/Koma/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-m-jyuan",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 1,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-ludwigkienle--ai-video-production-editor",
+            "name": "ai-video-production-editor · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/LudwigKienle/ai-video-production-editor/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-ludwigkienle",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 4,
+          "recent30Days": 1,
+          "sample": [
+            {
+              "title": "AI Video Production Editor v3.0.0",
+              "url": "https://github.com/LudwigKienle/ai-video-production-editor/releases/tag/v3.0.0",
+              "publishedAt": "2026-10-08T09:22:04.000Z",
+              "summary": "Official desktop installer for AI Video Production Editor v3.0.0. Download macOS Apple Silicon DMG: https://github.com/LudwigKienle/ai-video-production-editor/releases/latest/download/AI-Video-Production-Editor-macOS-arm64.dmg Signed with Developer ID (Ludwig Kienle, 5CCR39MBKP), notarized by Apple, ticket stapled. Gatekeeper reports \"Notarized Developer ID\". Windows: no new installer in this release yet; the v2.7.0 EXE is still available under v2.7.0. What's new New studio shell in a macOS-style workspace, with rebuilt Edit, Media, Fusion, Fairlight, Trim and Color pages that share one sequence Project Hub ordered by data flow: Script, World, Concept, Storyboard and Filming phases with calm action bars, and scene-by-scene work Jeff, a Midjourney browser agent for Concept and Storyboard: parallel jobs, style references, moderated prompts softened and resubmitted, cancel Prompt preview per model everywhere; the AI prompt runs automatically before Generate New models: Kling 3.0 Std/4K, MiniMax H3, Hailuo 2.3, PixVerse 6, LTX 2.5 Pro, Wan 3.0, GPT Image 2.5, with Auto model choice Higgsfield as a second model host, with a provider router Local agents over ACP (Claude Code, Codex) using their own CLI logins Activity queue: Jeff jobs, agent turns and Deliver renders in one task center Team workspace for collaboration, Sonilo video-to-music and video-to-SFX nodes in Node Space Onboar"
+            }
+          ]
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-62656456--ai-film-skills",
+            "name": "ai-film-skills · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/62656456/ai-film-skills/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-62656456",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 6,
+          "recent30Days": 1,
+          "sample": [
+            {
+              "title": "Open Film Skills v1.4.0 — synchronized source and standalone downloads",
+              "url": "https://github.com/62656456/ai-film-skills/releases/tag/v1.4.0",
+              "publishedAt": "2026-10-09T02:30:43.000Z",
+              "summary": "Open Film Skills v1.4.0 synchronizes current source and standalone downloads. Storyboard Director is A5.7.2; scene main/reverse-view and prop structural-detail patches are included. All 33 historical automated review comments were checked: 23 still-applicable issues corrected, 7 already resolved, 1 obsolete mechanism and 2 old-preview-only reports kept distinct. Validation: 218 tests (214 passed, 4 environment-dependent skips on Windows), 21 independent packages, 42 generated bilingual guides, existing media checks, complete ZIP CRC and SHA-256 checks. Existing published media and frozen study packages retain their original bytes and acceptance states. Downloads contain 21 standalone Skill ZIPs, the complete archive of 18 regular packages, manifest.json and SHA256SUMS.txt. Experimental packages remain opt-in. These checks do not claim aesthetic acceptance, final-video success or three accepted real creative tasks. Review closure · Installation"
+            }
+          ]
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-nickpittas--storyboardui2",
+            "name": "StoryboardUI2 · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/NickPittas/StoryboardUI2/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-nickpittas",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 2,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-justin-sky--ai-art-engine",
+            "name": "ai-art-engine · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/Justin-sky/ai-art-engine/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-justin-sky",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 10,
+          "sample": [
+            {
+              "title": "AIArtEngine v7.5.2",
+              "url": "https://github.com/Justin-sky/ai-art-engine/releases/tag/v7.5.2",
+              "publishedAt": "2026-10-14T14:05:18.000Z",
+              "summary": "Full Changelog: v7.5.1...v7.5.2"
+            },
+            {
+              "title": "AIArtEngine v7.5.0",
+              "url": "https://github.com/Justin-sky/ai-art-engine/releases/tag/v7.5.0",
+              "publishedAt": "2026-10-14T08:11:09.000Z",
+              "summary": "Full Changelog: v7.4.0...v7.5.0"
+            }
+          ]
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-autfy--storyboard-ai",
+            "name": "StoryBoard-AI · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/Autfy/StoryBoard-AI/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-autfy",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 1,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-lllyasviel--stable-diffusion-webui-forge",
+            "name": "stable-diffusion-webui-forge · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/lllyasviel/stable-diffusion-webui-forge/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-lllyasviel",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 2,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-lykosai--stabilitymatrix",
+            "name": "StabilityMatrix · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/LykosAI/StabilityMatrix/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-lykosai",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 1,
+          "sample": [
+            {
+              "title": "v2.16.4",
+              "url": "https://github.com/LykosAI/StabilityMatrix/releases/tag/v2.16.4",
+              "publishedAt": "2026-09-16T02:42:12.000Z",
+              "summary": "Added Added Comfy Kitchen Attention (--use-ck-attention) as a Cross Attention Method launch option for ComfyUI and ComfyUI-Zluda - thanks to @e-nord! Changed Windows ROCm PyTorch installs now come from AMD's new permanent ROCm 10 package repositories, avoiding the CUDA error: invalid argument / hipErrorInvalidValue failures reported with the ROCm 7.14.1 builds — packages already on 7.14.1 need a reinstall, or an update that also upgrades PyTorch (like ComfyUI's) - thanks to @NeuralFault! Fixed Installing a package into a folder that already contains files — like an existing ComfyUI installation placed in Data\\Packages to be imported — now shows the folder's total size and file count and requires explicit confirmation, instead of silently deleting everything in it; this includes the first-run one-click installer (#1733) Turning off shared model folders no longer tries to delete real directories at the link locations — only links created by Stability Matrix are removed, so the model folders of an imported package are never touched (#1733) The package uninstall confirmation now correctly lists models/checkpoints among the items that will be deleted for packages using config-based model sharing (ComfyUI's default) — previously it implied they were safe — and shows the package folder's total size Fixed the Workflows page loading forever (and eventually freezing the app) when the wor"
+            }
+          ]
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-lllyasviel--fooocus",
+            "name": "Fooocus · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/lllyasviel/Fooocus/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-lllyasviel",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-comfy-org--comfyui-manager",
+            "name": "ComfyUI-Manager · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/Comfy-Org/ComfyUI-Manager/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-comfy-org",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "error": "Error: no items matched (html)"
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-easydiffusion--easydiffusion",
+            "name": "easydiffusion · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/easydiffusion/easydiffusion/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-easydiffusion",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-automatic1111--stable-diffusion-webui",
+            "name": "stable-diffusion-webui · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-automatic1111",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-ltdrdata--comfyui-impact-pack",
+            "name": "ComfyUI-Impact-Pack · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/ltdrdata/ComfyUI-Impact-Pack/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-ltdrdata",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "error": "Error: no items matched (html)"
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-ltdrdata--comfyui-inspire-pack",
+            "name": "ComfyUI-Inspire-Pack · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/ltdrdata/ComfyUI-Inspire-Pack/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-ltdrdata",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "error": "Error: no items matched (html)"
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-ltdrdata--comfyui-impact-subpack",
+            "name": "ComfyUI-Impact-Subpack · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/ltdrdata/ComfyUI-Impact-Subpack/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-ltdrdata",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "error": "Error: no items matched (html)"
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-lyogavin--anima",
+            "name": "Anima · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/lyogavin/Anima/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-lyogavin",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "error": "Error: no items matched (html)"
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-n00mkrad--text2image-gui",
+            "name": "text2image-gui · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/n00mkrad/text2image-gui/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-n00mkrad",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 1,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-n00mkrad--cupscale",
+            "name": "cupscale · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/n00mkrad/cupscale/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-n00mkrad",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-upscayl--upscayl",
+            "name": "upscayl · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/upscayl/upscayl/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-upscayl",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-comfy-org--workflow_templates",
+            "name": "workflow_templates · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/Comfy-Org/workflow_templates/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-comfy-org",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 10,
+          "sample": [
+            {
+              "title": "v0.11.83",
+              "url": "https://github.com/Comfy-Org/workflow_templates/releases/tag/v0.11.83",
+              "publishedAt": "2026-10-13T17:44:52.000Z",
+              "summary": "⚠️ Not published to PyPI: This release was created without PyPI packages (PR missing release label). To publish, add the release label to the PR and re-trigger the workflow. What's Changed Add input_fish_audio_example.mp3 input asset by @comfyui-wiki in #1330 Full Changelog: v0.11.82...v0.11.83"
+            },
+            {
+              "title": "v0.11.82",
+              "url": "https://github.com/Comfy-Org/workflow_templates/releases/tag/v0.11.82",
+              "publishedAt": "2026-10-13T17:14:22.000Z",
+              "summary": "📦 Published to PyPI: Packages are available via pip install comfyui-workflow-templates==0.11.82 What's Changed Fix the qwen_multiangle cover, rename to template_qwen_multiangle.app, move its assets to media-assets-02 by @comfyui-wiki in #1329 Full Changelog: v0.11.81...v0.11.82"
+            }
+          ]
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-chainner-org--chainner",
+            "name": "chaiNNer · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/chaiNNer-org/chaiNNer/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-chainner-org",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-sanster--iopaint",
+            "name": "IOPaint · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/Sanster/IOPaint/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-sanster",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-furkangozukara--stable-diffusion",
+            "name": "Stable-Diffusion · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/FurkanGozukara/Stable-Diffusion/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-furkangozukara",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "error": "Error: no items matched (html)"
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-dominikdoom--a1111-sd-webui-tagcomplete",
+            "name": "a1111-sd-webui-tagcomplete · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-dominikdoom",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 0,
+          "sample": []
+        },
+        {
+          "source": {
+            "id": "web-expand6-project-zanllp--sd-webui-infinite-image-browsing",
+            "name": "sd-webui-infinite-image-browsing · 开源创作项目发布",
+            "kind": "web_list",
+            "config": {
+              "url": "https://github.com/zanllp/sd-webui-infinite-image-browsing/releases",
+              "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+              "linkSelector": "a[href*=\"/releases/tag/\"]",
+              "titleSelector": "a[href*=\"/releases/tag/\"]",
+              "publishedAtSelector": "relative-time[datetime]",
+              "allowUrlPrefixes": [
+                "https://github.com/"
+              ],
+              "maxItemAgeDays": 30,
+              "detail": {
+                "maxFetches": 3,
+                "summarySelector": ".markdown-body"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 3
+              }
+            },
+            "tier": "T1_5",
+            "first_party": true,
+            "owner_entity_id": "github-zanllp",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 10,
+          "recent30Days": 1,
+          "sample": [
+            {
+              "title": "v1.9.1",
+              "url": "https://github.com/zanllp/infinite-image-browsing/releases/tag/v1.9.1",
+              "publishedAt": "2026-10-09T14:18:06.000Z",
+              "summary": "What's Changed feat: unified preview modal for non-media files by @zanllp in #972 feat: video duration badge + tag filter (AND) in fuzzy search by @zanllp in #973 release 1.9.1: fix first-launch errors, orphan-proof sidecar, cached unpack by @zanllp in #976 Full Changelog: v1.9.0...v1.9.1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "checkedAt": "2026-10-15T15:37:52.724Z",
+      "rows": [
+        {
+          "source": {
+            "id": "rss-expand6-frank-houbre",
+            "name": "Frank Houbre · AI电影制作实战",
+            "kind": "rss",
+            "config": {
+              "feedUrl": "https://frankhoubre.com/feed.xml",
+              "maxItemAgeDays": 30,
+              "_aihot": {
+                "initialBackfillLimit": 5
+              }
+            },
+            "tier": "T2",
+            "first_party": false,
+            "owner_entity_id": "publisher-frank-houbre",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 50,
+          "recent30Days": 23,
+          "sample": [
+            {
+              "title": "Réalisateur IA : vrai métier ou titre LinkedIn ?",
+              "url": "https://frankhoubre.com/blog/realisateur-ia-vrai-metier-ou-titre",
+              "publishedAt": "2026-10-15T12:00:00.000Z",
+              "excerpt": "Réalisateur IA, métier réel ou titre gonflé ? Ce que disent les contrats de la DGA, les vraies offres d'emploi de 2026 et mon test pour faire le tri."
+            },
+            {
+              "title": "Studio de cinéma en 2030 : ma projection pièce par pièce",
+              "url": "https://frankhoubre.com/blog/studio-cinema-2030-prospective",
+              "publishedAt": "2026-10-14T12:00:00.000Z",
+              "excerpt": "À quoi ressemblera un studio de cinéma en 2030 ? Les dates déjà fixées, les pièces qui changent, les postes qui naissent et ce que je construis dès aujourd'hui."
+            },
+            {
+              "title": "Appel d'offres vidéo IA : répondre en freelance",
+              "url": "https://frankhoubre.com/blog/freelance-video-ia-appel-offres",
+              "publishedAt": "2026-10-13T12:00:00.000Z",
+              "excerpt": "Appel d'offres vidéo IA en freelance : trouver les bons avis, lire le dossier, chiffrer l'IA honnêtement et rédiger un mémoire technique qui tient."
+            },
+            {
+              "title": "MCP ScreenWeaver : ton scénario dans Claude et ChatGPT",
+              "url": "https://frankhoubre.com/blog/screenweaver-mcp-claude-chatgpt-scenario-storyboard",
+              "publishedAt": "2026-10-12T12:00:00.000Z",
+              "excerpt": "Le MCP de ScreenWeaver branche Claude et ChatGPT sur ton vrai scénario : import, réécriture, recherche, découpage en plans. Installation et limites."
+            }
+          ]
+        },
+        {
+          "source": {
+            "id": "rss-expand6-creator-animation",
+            "name": "Creator Animation · AI影片制作教程",
+            "kind": "rss",
+            "config": {
+              "feedUrl": "https://creatoranimation.com/blog/rss.xml",
+              "maxItemAgeDays": 30,
+              "_aihot": {
+                "initialBackfillLimit": 5
+              }
+            },
+            "tier": "T2",
+            "first_party": false,
+            "owner_entity_id": "publisher-creator-animation",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 50,
+          "recent30Days": 50,
+          "sample": [
+            {
+              "title": "First Ninety Days Selling AI Films Online: An Indie Guide",
+              "url": "https://creatoranimation.com/blog/first-ninety-days-selling-ai-films-online",
+              "publishedAt": "2026-09-17T15:54:53.000Z",
+              "excerpt": "A structured blueprint for independent directors navigating the first ninety days of releasing, monetizing, and distributing AI-generated cinema."
+            },
+            {
+              "title": "Why AI Filmmakers Leave Ad Based Platforms",
+              "url": "https://creatoranimation.com/blog/why-ai-filmmakers-leave-ad-based-platforms",
+              "publishedAt": "2026-09-17T15:54:34.000Z",
+              "excerpt": "AI filmmakers are abandoning legacy ad-supported video sites. Explore the shift toward independent hosting, direct audience ownership, and creator-first monetization."
+            },
+            {
+              "title": "The AI Filmmaking Tools Stack for Selling Content",
+              "url": "https://creatoranimation.com/blog/ai-filmmaking-tools-stack-for-selling-content",
+              "publishedAt": "2026-09-17T15:54:30.000Z",
+              "excerpt": "A practical guide to assembling a modern AI filmmaking workflow—from prompt generation to direct-to-audience distribution without gatekeepers or advertising."
+            },
+            {
+              "title": "Selling AI Movie Downloads to Fans: The Direct Guide",
+              "url": "https://creatoranimation.com/blog/selling-ai-movie-downloads-to-fans",
+              "publishedAt": "2026-09-17T15:54:16.000Z",
+              "excerpt": "Direct distribution gives AI filmmakers full control over their work. Discover how selling AI movie downloads to fans provides sustainable revenue without gatekeepers or ad algorithms."
+            }
+          ]
+        },
+        {
+          "source": {
+            "id": "web_list-expand6-theoretically-media",
+            "name": "Theoretically Media · 电影人AI实测",
+            "kind": "web_list",
+            "config": {
+              "url": "https://www.theoreticallymedia.com/",
+              "itemSelector": "li:has(time):has(a[href^=\"/blog/\"])",
+              "linkSelector": "a[href^=\"/blog/\"]",
+              "titleSelector": "h3",
+              "publishedAtSelector": "time",
+              "maxItemAgeDays": 30,
+              "_aihot": {
+                "initialBackfillLimit": 5
+              }
+            },
+            "tier": "T2",
+            "first_party": false,
+            "owner_entity_id": "publisher-theoretically-media",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 3,
+          "recent30Days": 3,
+          "sample": [
+            {
+              "title": "Gemini 4 Argon, Tested: A Week as My Daily Driver",
+              "url": "https://theoreticallymedia.com/blog/gemini-4-argon-tested-800-million-tokens",
+              "publishedAt": "2026-10-13T00:00:00.000Z"
+            },
+            {
+              "title": "Prism and Kandinsky 6.0, Doom Inside Skyrim, and Nano Banana 2.1",
+              "url": "https://theoreticallymedia.com/blog/prism-kandinsky-6-doom-skyrim-nano-banana-2-1",
+              "publishedAt": "2026-10-06T00:00:00.000Z"
+            },
+            {
+              "title": "Kling 4 Early Look, Gemini 4 Argon, Ideogram 4.5, and Eleven v4",
+              "url": "https://theoreticallymedia.com/blog/kling-4-early-look-gemini-4-argon-ideogram-4-5-eleven-v4",
+              "publishedAt": "2026-10-01T00:00:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "checkedAt": "2026-10-15T15:38:45.061Z",
+      "rows": [
+        {
+          "source": {
+            "id": "web-expand6-ciaro",
+            "name": "Ciaro · 中文AI电影制作教程",
+            "kind": "web_list",
+            "config": {
+              "url": "https://ciaro.pro/zh/blog",
+              "itemSelector": "article",
+              "linkSelector": "a[href*=\"/blog/\"]:has(h2)",
+              "titleSelector": "h2",
+              "maxItemAgeDays": 30,
+              "publishedAfter": "2026-09-15T15:38:27.893Z",
+              "detail": {
+                "maxFetches": 8,
+                "summarySelector": "meta[name=\"description\"]"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 5
+              }
+            },
+            "tier": "T2",
+            "first_party": false,
+            "owner_entity_id": "publisher-ciaro",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 49,
+          "recent30Days": 8,
+          "sample": [
+            {
+              "title": "专业视频剪辑软件：镜头素材入库验收关卡",
+              "url": "https://ciaro.pro/zh/blog/professional-video-editing-software-shot-ingest-gate",
+              "publishedAt": "2026-10-15T09:00:00.396Z",
+              "excerpt": "AI 生成的文件能播放，不代表已经可以送审。通过镜头级验收关卡，决定哪些素材可以通过初审、规范化处理、重新生成或暂缓处理。"
+            },
+            {
+              "title": "CapCut 视频编辑器在 AI 电影流程中的应用：掌控镜头替换",
+              "url": "https://ciaro.pro/zh/blog/capcut-video-editor-ai-film-shot-replacements",
+              "publishedAt": "2026-10-08T09:00:00.594Z",
+              "excerpt": "快速剪辑不只是找到看似合适的重生成片段。了解如何区分时间线决策与镜头身份、审批、连续性参考和受控替换。"
+            },
+            {
+              "title": "AI 电影的视频剪辑软件：AI 视频生成器在剪辑开始后会带来哪些变化",
+              "url": "https://ciaro.pro/zh/blog/ai-video-generator-video-editing-software-ai-films",
+              "publishedAt": "2026-10-07T09:31:38.965Z",
+              "excerpt": "NLE 可以保存剪辑，但 AI 生成镜头还需要共享记录，明确创作意图、版本来源、连续性限制和审批状态，才能安全替换。"
+            },
+            {
+              "title": "AI 影视制作工作流：从生成片段到可替换镜头",
+              "url": "https://ciaro.pro/zh/blog/ai-film-workflow-replacement-ready-shots",
+              "publishedAt": "2026-10-07T09:31:29.976Z",
+              "excerpt": "一套实用的 AI 影视制作工作流：通过稳定镜头 ID、审批记录和清晰交接，将生成片段转化为可追溯、符合连续性要求的剪辑替换版本。"
+            }
+          ]
+        },
+        {
+          "source": {
+            "id": "web-expand6-pyros",
+            "name": "PYROS AI Creative · 视频制作实战",
+            "kind": "web_list",
+            "config": {
+              "url": "https://pyrosaicreative.com/",
+              "itemSelector": "a[href^=\"/tutorials/\"]",
+              "maxItemAgeDays": 30,
+              "publishedAfter": "2026-09-15T15:38:39.266Z",
+              "detail": {
+                "maxFetches": 8,
+                "summarySelector": "meta[name=\"description\"]"
+              },
+              "_aihot": {
+                "initialBackfillLimit": 5
+              }
+            },
+            "tier": "T2",
+            "first_party": false,
+            "owner_entity_id": "publisher-pyros",
+            "participation_mode": "editorial",
+            "interval_minutes": 120,
+            "tags": [
+              "创作者",
+              "教程与工作流",
+              "开源项目分享"
+            ],
+            "site_fulltext": false,
+            "syndicate_fulltext": false
+          },
+          "items": 5,
+          "recent30Days": 0,
+          "sample": []
+        }
+      ]
+    }
+  ]
+}

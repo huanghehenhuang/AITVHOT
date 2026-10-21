@@ -5,13 +5,13 @@ import type { TopicSummary, TopicsResponse } from "@aihot/contracts/site";
 import { apiGet, cachedPage } from "../lib/api.server";
 import { pageReuse } from "../lib/page-reuse";
 import { breadcrumbLd, pageMeta, siteUrl } from "../lib/seo";
-import { relativeTime } from "../lib/format";
 import { IconChevronRight } from "../components/icons";
 import { IntentLink } from "../components/ui/IntentLink";
 import { BrandMark } from "../components/BrandMark";
 import { PhoneBar } from "../components/shell/PhoneBar";
 import { inNav } from "../components/shell/nav";
 import type { Screen } from "../components/shell/screens";
+import { localeFromMatches, localeTag, translate, useFormat, useI18n } from "../i18n";
 
 export const handle: Screen = { home: inNav("/topics") ? "me" : "featured", name: "主题" };
 export { pageHeaders as headers } from "../lib/api.server";
@@ -21,72 +21,79 @@ export async function loader({ request }: { request: Request }) {
   return cachedPage(300, await apiGet<TopicsResponse>("/api/site/topics", { signal: request.signal }));
 }
 
-export function meta({ loaderData }: Route.MetaArgs) {
-  if (!loaderData) return pageMeta({ title: SITE.topicsTitle, path: "/topics", image: "/og/pages/topics.png" });
+export function meta({ loaderData, matches }: Route.MetaArgs) {
+  const locale = localeFromMatches(matches);
+  if (!loaderData) return pageMeta({ title: translate(locale, SITE.topicsTitle), path: "/topics", image: "/og/pages/topics.png", locale });
   const { groups, topics } = loaderData;
   const by = groups.map((g) => g.name).join("、");
-  const indexed = topics.filter((t) => t.indexable);
-  const named = indexed.slice(0, 6).map((t) => t.name.split(" / ")[0]).join("、");
+  const indexed = topics.filter((topic) => topic.indexable);
+  const named = indexed.slice(0, 6).map((topic) => topic.name.split(" / ")[0]).join("、");
   const base = siteUrl();
+  const description = named
+    ? translate(locale, "按{by}追踪 AI影视最新动态：{named}等 {n} 个主题，浏览最新精选与重要进展，持续更新。", { by, named, n: topics.length })
+    : translate(locale, "按{by}追踪 AI影视最新动态：{n} 个主题，浏览最新精选与重要进展，持续更新。", { by, n: topics.length });
   return pageMeta({
-    title: SITE.topicsTitle,
-    description: `按${by}${subjectAfter("追踪", "最新动态")}：${named ? `${named}等 ` : ""}${topics.length} 个主题，浏览最新精选与重要进展，持续更新。`,
+    title: translate(locale, SITE.topicsTitle),
+    description,
     path: "/topics",
     image: "/og/pages/topics.png",
+    locale,
     jsonLd: [
       {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "@id": `${base}/topics#collection`,
         url: `${base}/topics`,
-        name: withSubject("主题"),
-        inLanguage: SITE.locale,
+        name: translate(locale, withSubject("主题")),
+        inLanguage: localeTag(locale),
         isPartOf: { "@id": `${base}/#website` },
         mainEntity: {
           "@type": "ItemList",
           numberOfItems: indexed.length,
-          itemListElement: indexed.map((t, i) => ({ "@type": "ListItem", position: i + 1, name: t.name, url: `${base}/topics/${t.slug}` })),
+          itemListElement: indexed.map((topic, i) => ({ "@type": "ListItem", position: i + 1, name: topic.name, url: `${base}/topics/${topic.slug}` })),
         },
       },
-      breadcrumbLd([{ name: SITE.name, path: "/" }, { name: "主题", path: "/topics" }]),
+      breadcrumbLd([{ name: SITE.name, path: "/" }, { name: translate(locale, "主题"), path: "/topics" }]),
     ],
   });
 }
 
 /** Phones: a row per topic in a grouped list; wider screens: a card per topic. */
-function TopicCard({ t }: { t: TopicSummary }) {
+function TopicCard({ t: topic }: { t: TopicSummary }) {
+  const { t } = useI18n();
+  const { relativeTime } = useFormat();
   return (
     <IntentLink
       viewTransition
-      to={`/topics/${t.slug}`}
+      to={`/topics/${topic.slug}`}
       className="group flex items-center gap-3 py-3 pl-4 pr-3 transition-colors active:bg-bg-sunk lg:card lg:card-hover lg:h-full lg:flex-col lg:items-stretch lg:gap-0 lg:px-5 lg:py-4 lg:active:bg-surface"
     >
-      {t.brand && (
+      {topic.brand && (
         <span className="flex shrink-0 lg:hidden">
-          <BrandMark brand={t.brand} size={30} />
+          <BrandMark brand={topic.brand} size={30} />
         </span>
       )}
       <span className="min-w-0 flex-1 lg:flex lg:flex-col">
         <span className="flex items-center gap-2.5 text-[15.5px] font-semibold text-ink transition-colors group-hover:text-accent lg:text-[15px] lg:font-bold">
-          {t.brand && (
+          {topic.brand && (
             <span className="hidden lg:flex">
-              <BrandMark brand={t.brand} size={22} />
+              <BrandMark brand={topic.brand} size={22} />
             </span>
           )}
-          {t.name}
+          {topic.name}
         </span>
         <span className="mt-0.5 line-clamp-1 text-[12.5px] leading-[1.6] text-ink-4 lg:mt-1.5 lg:line-clamp-2 lg:flex-1 lg:text-[13px] lg:leading-[1.65] lg:text-ink-2">
-          {t.latest?.title ?? t.definition}
+          {topic.latest?.title ?? topic.definition}
         </span>
         <span className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-[11.5px] text-ink-4 lg:mt-3 lg:justify-between">
-          {t.latest && <time dateTime={t.latest.at} suppressHydrationWarning>{relativeTime(t.latest.at)}</time>}
+          {topic.latest && <time dateTime={topic.latest.at} suppressHydrationWarning>{relativeTime(topic.latest.at)}</time>}
           <span>
-            {t.recent > 0 ? (
+            {topic.recent > 0 ? (
               <>
-                近 30 天 <span className="num font-semibold text-ink-3">{t.recent}</span> 条
+                {t("近 30 天 ")}<span className="num font-semibold text-ink-3">{topic.recent}</span>{t(" 条")}
               </>
             ) : (
-              "近 30 天暂无新精选"
+              t("近 30 天暂无新精选")
             )}
           </span>
         </span>
@@ -97,15 +104,18 @@ function TopicCard({ t }: { t: TopicSummary }) {
 }
 
 export default function TopicsPage() {
+  const { t } = useI18n();
   const { groups, topics } = useLoaderData<typeof loader>();
+  const by = groups.map((g) => g.name).join("、");
   return (
     <div className="pb-10">
-      <PhoneBar back={{ to: "/more", label: "我的" }} title="主题" />
+      <PhoneBar back={{ to: "/more", label: "我的" }} title={t("主题")} />
       <header className="pb-2 pt-3 lg:pt-1">
-        <h1 data-page-title="" className="text-[24px] font-semibold leading-[1.3] text-ink">{subjectAfter("按主题看")}</h1>
+        <h1 data-page-title="" className="text-[24px] font-semibold leading-[1.3] text-ink">{t(subjectAfter("按主题看"))}</h1>
         <p className="mt-1.5 text-[13px] leading-relaxed text-ink-3">
-          {`按${groups.map((g) => g.name).join("、")}浏览 `}
-          <span className="num">{topics.length}</span> 个主题，追踪最新精选与重要进展。
+          {t("按{by}浏览 ", { by })}
+          <span className="num">{topics.length}</span>
+          {t(" 个主题，追踪最新精选与重要进展。")}
         </p>
       </header>
       {groups.map((g) => (

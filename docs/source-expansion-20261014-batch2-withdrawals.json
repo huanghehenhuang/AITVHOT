@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-14T00:50:45.329Z",
+  "reason": "Exceeded source maxItemAgeDays after detail enrichment",
+  "articles": [
+    {
+      "id": "wndcz7o7ntgszv363ymkq7xyj",
+      "title": "Adding AI voice to training content? Start with these 12 checks",
+      "publishedAt": "2026-06-03T10:26:27.016Z"
+    },
+    {
+      "id": "v6aclfzdrzt9fiv0lnxknq3oe",
+      "title": "Murf AI alternatives & competitors",
+      "publishedAt": "2026-05-27T09:51:59.378Z"
+    },
+    {
+      "id": "pe1p7485sw6ceuk9si5r18ijn",
+      "title": "How Product Marketing teams keep demo videos updated without re-recording every release",
+      "publishedAt": "2026-08-21T15:45:53.315Z"
+    },
+    {
+      "id": "kxr9pznaisblm3fu6k0dagzx2",
+      "title": "5 ChatGPT Connectors That Fit How Social Teams Actually Work",
+      "publishedAt": "2026-09-02T00:00:00.000Z"
+    },
+    {
+      "id": "khorup1kmn231a2nng1mx3jlp",
+      "title": "What makes WellSaid the most realistic AI voice generator?",
+      "publishedAt": "2026-03-26T20:48:52.800Z"
+    },
+    {
+      "id": "s55e9fotjsahukwiddwqsct6s",
+      "title": "ElevenLabs competitors & alternatives",
+      "publishedAt": "2026-05-27T09:50:25.620Z"
+    },
+    {
+      "id": "r4fdcjejv6xjzc0y5fk3jgzjy",
+      "title": "Why we built AI voice pricing around the finished result",
+      "publishedAt": "2026-07-24T17:05:36.836Z"
+    },
+    {
+      "id": "gu79a8zkrvgwa240sz9utegem",
+      "title": "A faster way to create, translate, and refine voice content",
+      "publishedAt": "2026-04-06T15:02:50.057Z"
+    },
+    {
+      "id": "aowiky33u19nr6yebpmwp0tnw",
+      "title": "10 Claude MCP Servers, Ranked by What They Actually Get Done",
+      "publishedAt": "2026-09-02T00:00:00.000Z"
+    }
+  ]
+}

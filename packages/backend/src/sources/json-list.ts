@@ -2,6 +2,7 @@
 import { credential } from "../config.ts";
 import { fetchListing } from "./listing-fetch.ts";
 import { collapseWhitespace, stripTags } from "../lib/text.ts";
+import { isVideoPageUrl } from "../lib/video-url.ts";
 import { parseLooseDate } from "./dates.ts";
 import { FetchError, type Candidate, type SourceRow } from "./types.ts";
 
@@ -62,6 +63,14 @@ function toDate(v: unknown, unit: string | undefined, utcOffset: string | undefi
   }
   if (unit === "epoch_ms" || unit === "epoch_s") {
     const date = new Date(Number(text) * (unit === "epoch_s" ? 1000 : 1));
+    return Number.isFinite(date.getTime()) ? date : null;
+  }
+  // Spreadsheet calendar days (Adobe's public blog index). Reject the fictitious 1900-02-29
+  // and fractional timestamps: this unit names a day, at UTC midnight like yyyymmdd below.
+  if (unit === "excel_days") {
+    const day = Number(text);
+    if (!Number.isSafeInteger(day) || day < 61) return null;
+    const date = new Date(Date.UTC(1899, 11, 30) + day * 86400_000);
     return Number.isFinite(date.getTime()) ? date : null;
   }
   // 20260922: a calendar day at UTC midnight (some list APIs give dates as yyyymmdd).
@@ -198,7 +207,8 @@ export async function fetchJsonList(source: SourceRow): Promise<Candidate[]> {
     if (!title || !url) continue;
     const externalId = c.externalIdPath ? getPath(item, c.externalIdPath) : null;
     const summary = firstString(item, c.summaryPaths);
-    const summaryIsBody = c.summaryIsBody === true && !!summary;
+      const videoPage = isVideoPageUrl(url);
+      const summaryIsBody = c.summaryIsBody === true && !!summary && !videoPage;
     out.push({
       url,
       title: collapseWhitespace(stripTags(title)),
@@ -206,7 +216,7 @@ export async function fetchJsonList(source: SourceRow): Promise<Candidate[]> {
       publishedAt: toDate(getPath(item, c.publishedAtPath), c.publishedAtUnit, c.publishedAtUtcOffset),
       excerpt: summary ? collapseWhitespace(stripTags(summary)).slice(0, 2000) : null,
       bodyText: summaryIsBody ? stripTags(summary!) : null,
-      bodyStatus: summaryIsBody ? "ok" : "pending",
+        bodyStatus: summaryIsBody ? "ok" : videoPage ? "none" : "pending",
       raw: { externalId: externalId ?? null },
     });
   }

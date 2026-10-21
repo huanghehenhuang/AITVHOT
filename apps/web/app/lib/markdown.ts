@@ -103,7 +103,7 @@ export function parseCopyFile(md: string, firstSection = /^## /m): CopyDocument 
   for (const m of md.matchAll(/^\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|$/gm)) {
     if (m[1] !== "项" && !/^-+$/.test(m[1]!)) meta[m[1]!] = m[2]!;
   }
-  const introMatch = /页首说明：\s*\n+((?:>.*\n?)+)/.exec(md);
+  const introMatch = /(?:页首说明：|Lead:)\s*\n+((?:>.*\n?)+)/.exec(md);
   const intro = introMatch ? introMatch[1]!.replace(/^>\s?/gm, "").replace(/\n/g, "").trim() : null;
   const start = md.search(firstSection);
   return { title, meta, intro, body: start >= 0 ? md.slice(start) : md };

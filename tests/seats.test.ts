@@ -80,11 +80,11 @@ test("one fact holds one selected seat on v1, RSS and the sync ledger", async ()
   assert.equal(net.get(official), "upsert");
   assert.equal(net.get(first), "remove");
   assert.ok(!net.has(second) || net.get(second) === "remove");
-  // 全部动态 and the item page list every report; the ones that yield the seat say which report stands
-  // for the fact, and the recommendation reason goes with the seat.
-  const pool = (await get(`/api/site/pool?q=${T}`)).json.items as Array<{ id: string; reason: string | null; sameEvent?: { id: string } | null }>;
-  assert.equal(pool.find((i) => i.id === first)?.sameEvent?.id, official);
-  assert.equal(pool.find((i) => i.id === first)?.reason, null);
+  // 全部动态 folds the fact into its representative; individual report pages remain readable.
+  const poolResponse = (await get(`/api/site/pool?q=${T}`)).json;
+  const pool = poolResponse.items as Array<{ id: string; reason: string | null; sameEvent?: { id: string } | null }>;
+  assert.deepEqual(pool.filter(i => [first, second, official].includes(i.id)).map(i => i.id), [official]);
+  assert.equal(poolResponse.groups[official].reportCount, 3);
   assert.equal(pool.find((i) => i.id === official)?.sameEvent ?? null, null);
   const detail = (await get(`/api/site/items/${first}`)).json as { reason: string | null; sameEvent?: { id: string } | null };
   assert.equal(detail.sameEvent?.id, official);

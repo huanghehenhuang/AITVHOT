@@ -1,0 +1,6483 @@
+{
+  "at": "2026-10-16T03:44:27.017Z",
+  "baseline": {
+    "at": "2026-10-16T03:39:35.053Z",
+    "pack": 412,
+    "total": 431,
+    "enabled": 429
+  },
+  "pack": 843,
+  "counts": {
+    "total": 862,
+    "enabled": 859
+  },
+  "newCount": 430,
+  "healthy": 430,
+  "health": {
+    "ok": 430
+  },
+  "materials": {
+    "total": 537,
+    "recent": 537,
+    "undated": 0,
+    "pending": 408
+  },
+  "publications": {
+    "public": 117,
+    "selected": 4
+  },
+  "sources": [
+    {
+      "id": "json-double-cnr-qwen-vae-triton",
+      "name": "Qwen VAE Triton W8A8 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:15.866Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-krea2-merge",
+      "name": "ComfyUI Krea2 Merge · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:23.332Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-media-feed",
+      "name": "Media Feed · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:53.925Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-snjake_baikal_swin_anime",
+      "name": "Baikal Anime Upscaler · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:17.003Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-trellis-hicache",
+      "name": "ComfyUI-TRELLIS-HiCache · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:23.174Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-just-nodes",
+      "name": "Just Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:48.428Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-reference-loader",
+      "name": "ComfyUI Reference Loader · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:59.713Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-image-process",
+      "name": "ComfyUI-Image-Process · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:18.842Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-kaola-qwen-image2.1-prompt-rewrite",
+      "name": "ComfyUI-Kaola-Qwen-image2.1-prompt-rewrite · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:16.536Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-detailedregioninpaint",
+      "name": "ComfyUI Detailed Region Inpaint · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:22.640Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-fasth3patcher",
+      "name": "FastH3 Patcher · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:22.994Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-llm-widget",
+      "name": "LLM Widget · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:01.197Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-qwen21-adult-policy",
+      "name": "Qwen 2.1 Adult Policy · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:17.254Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-eagle-bridge",
+      "name": "ComfyUI-EagleBridge · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:17.953Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-broadcast-resolutions",
+      "name": "Broadcast Video Profile Suite · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:49.466Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-9065c57994a668a2e9",
+      "name": "Platform & Stream · 创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:58.789Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-field",
+      "name": "ComfyUI Field · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:19.410Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-atelieraika",
+      "name": "note · atelieraika · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:52.608Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-minamotomasaru",
+      "name": "note · minamotomasaru · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:20.942Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-loyal_owl5720",
+      "name": "note · loyal_owl5720 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:55.532Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-kentauber_ai",
+      "name": "note · kentauber_ai · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:22.659Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-lpp",
+      "name": "note · lpp · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:15.244Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-miyuu_2026",
+      "name": "note · miyuu_2026 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:09.448Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-nobinlog",
+      "name": "note · nobinlog · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:07.282Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-quirky_hippo6791",
+      "name": "note · quirky_hippo6791 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:18.196Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-edgetts",
+      "name": "ComfyUI-EdgeTTS · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:51.948Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-abcxy",
+      "name": "note · abcxy · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:54.492Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-tesalab",
+      "name": "note · tesalab · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:58.422Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-yaoyoroztech",
+      "name": "note · yaoyoroztech · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:03.515Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-megapotato",
+      "name": "MegaPotato AI Upscaler · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:21.586Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-tasty_cougar8018",
+      "name": "note · tasty_cougar8018 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:49.511Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-knowhow_matome99",
+      "name": "note · knowhow_matome99 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:21.759Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-major_myrtle6198",
+      "name": "note · major_myrtle6198 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:27.609Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-brainy_dog4676",
+      "name": "note · brainy_dog4676 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:53.495Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-shio_batapopcorn",
+      "name": "note · shio_batapopcorn · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:04.873Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-bochibochi_ai",
+      "name": "note · bochibochi_ai · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:09.325Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-aiby_masuhiyo",
+      "name": "note · aiby_masuhiyo · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:55.094Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-great_eagle2170",
+      "name": "note · great_eagle2170 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:14.895Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-dreamy_quail9288",
+      "name": "note · dreamy_quail9288 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:24.296Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-mii_chai_ai",
+      "name": "note · mii_chai_ai · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:40.296Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-it_home_life",
+      "name": "note · it_home_life · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:41.216Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-takah_note",
+      "name": "note · takah_note · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:06.620Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-noble_mink9287",
+      "name": "note · noble_mink9287 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:08.167Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-rkpg",
+      "name": "note · rkpg · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:19.606Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-howrass_note",
+      "name": "note · howrass_note · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:32.674Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-singtothesky79",
+      "name": "note · singtothesky79 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:43.879Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-hatano_yusuke",
+      "name": "note · hatano_yusuke · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:31.227Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-masa1229",
+      "name": "note · masa1229 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:32.406Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ai_howtouse",
+      "name": "note · ai_howtouse · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:22.682Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-taka_fukugyo_lab",
+      "name": "note · taka_fukugyo_lab · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:40.611Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-seisei_ai_1st",
+      "name": "note · seisei_ai_1st · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:18.679Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-dreammii",
+      "name": "note · dreammii · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:56.742Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-genial_crocus627",
+      "name": "note · genial_crocus627 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:15.394Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-dhan-power-lora",
+      "name": "Comfyui-DHan-Power-LoRA · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:51.102Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-koheii_miaa",
+      "name": "note · koheii_miaa · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:07.520Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-laoyexiaoye",
+      "name": "note · laoyexiaoye · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:22.622Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-piromo_ai",
+      "name": "note · piromo_ai · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:29.676Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-kind_whale5269",
+      "name": "note · kind_whale5269 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:48.691Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-mintjuku",
+      "name": "note · mintjuku · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:07.583Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-yoshida_komuin",
+      "name": "note · yoshida_komuin · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:12.896Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-zou_aidouga",
+      "name": "note · zou_aidouga · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:22.224Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ryosuke_blog_",
+      "name": "note · ryosuke_blog_ · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:28.181Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-tried_hs",
+      "name": "note · tried_hs · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:26.108Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-eeeemo_japan",
+      "name": "note · eeeemo_japan · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:57.689Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ai_creative_log",
+      "name": "note · ai_creative_log · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:19.393Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-taaaak0504",
+      "name": "note · taaaak0504 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:21.444Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ready_whale7197",
+      "name": "note · ready_whale7197 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:43.434Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-maynoha",
+      "name": "note · maynoha · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:11.474Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-aicu",
+      "name": "note · aicu · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:51.735Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-2tm",
+      "name": "note · 2tm · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:14.160Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-sasao_66",
+      "name": "note · sasao_66 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:26.719Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-eager_thyme9842",
+      "name": "note · eager_thyme9842 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:38.532Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-genkidesu2021",
+      "name": "note · genkidesu2021 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:59.683Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-koza_kura3",
+      "name": "note · koza_kura3 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:07.233Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-kisekae",
+      "name": "Kisekae 👘 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:10.142Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-takumi_ai_web3",
+      "name": "note · takumi_ai_web3 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:53.249Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ai_freak",
+      "name": "note · ai_freak · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:35.637Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-natty_mimosa8652",
+      "name": "note · natty_mimosa8652 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:47.783Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-hearty_knot4636",
+      "name": "note · hearty_knot4636 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:20.672Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-anima-remap",
+      "name": "ComfyUI Anima Remap · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:12.474Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-life_good_life",
+      "name": "note · life_good_life · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:26.494Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-freelife_creator",
+      "name": "note · freelife_creator · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:01.503Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-kawakijourney_ai",
+      "name": "note · kawakijourney_ai · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:21.267Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ample_pika7429",
+      "name": "note · ample_pika7429 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:25.527Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-rosy_dog6649",
+      "name": "note · rosy_dog6649 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:39.500Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ai_shorts_lab",
+      "name": "note · ai_shorts_lab · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:49.273Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-tidaa",
+      "name": "note · tidaa · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:50.179Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ari_tam5555",
+      "name": "note · ari_tam5555 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:50.104Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-aicreatorpathnet",
+      "name": "note · aicreatorpathnet · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:21.449Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-visiondesigning",
+      "name": "note · visiondesigning · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:22.687Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-lovely_hebe1274",
+      "name": "note · lovely_hebe1274 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:45.382Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-akisuke0925",
+      "name": "note · akisuke0925 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:59.265Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-aun_585",
+      "name": "note · aun_585 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:00.583Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ryo1144",
+      "name": "note · ryo1144 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:11.080Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-promptdesign",
+      "name": "note · promptdesign · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:10.857Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-sakisuta",
+      "name": "note · sakisuta · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:22.813Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-bold_oxalis9933",
+      "name": "note · bold_oxalis9933 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:08.770Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-fuckdesune",
+      "name": "note · fuckdesune · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:21.121Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-pixolm_ai",
+      "name": "note · pixolm_ai · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:19.005Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-shuuki_garu_ruka",
+      "name": "note · shuuki_garu_ruka · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:36.452Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-kasmintea",
+      "name": "note · kasmintea · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:43.295Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ryou_gethu93",
+      "name": "note · ryou_gethu93 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:16.635Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-silver517",
+      "name": "note · silver517 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:33.917Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-myloose",
+      "name": "note · myloose · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:42.715Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-yameruzozeetai",
+      "name": "note · yameruzozeetai · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:59.975Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ponko_ai2026",
+      "name": "note · ponko_ai2026 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:02.697Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-lora-preview",
+      "name": "LoRA Preview · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:35.383Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-magic_turtle9466",
+      "name": "note · magic_turtle9466 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:53.469Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-aoao_ai",
+      "name": "note · aoao_ai · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:16.796Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-kaiyano",
+      "name": "note · kaiyano · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:32.081Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-hagiri1312",
+      "name": "note · hagiri1312 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:39.713Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-TagForge",
+      "name": "ComfyUI-TagForge · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:06.726Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ciru-image-accelerator",
+      "name": "Ciru AMD Halo Qwen 2.1 Turbo · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:11.976Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ausboss-nodes",
+      "name": "AusBoss · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:17.695Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-bkwildcards",
+      "name": "BKWILDCARDS · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:54.847Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-QwenVL-Mod",
+      "name": "QwenVL-Mod: Enhanced Vision-Language · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:02.730Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-fantastic-minimax-h3-prompt-builder",
+      "name": "Fantastic H3 Prompt Builder · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:22.666Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-kandinsky6",
+      "name": "Kandinsky 6 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:38.966Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-perfectlab",
+      "name": "PerfectLab Studio · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:40.495Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-dpmpp-2m-sharp",
+      "name": "DPM++ 2M Sharp for Qwen Image 2.1 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:19.535Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-huggingface_dataset",
+      "name": "Hugging Face dataset · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:46.312Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-photoshoot",
+      "name": "Photoshoot · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:47.053Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-minimax-h3-image-studio",
+      "name": "MiniMax H3 Image Studio · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:16.985Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-seamrank",
+      "name": "SeamRank · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:46.987Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-QwenImage-PromptExtractor",
+      "name": "Prompt & Dimensions from LLM · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:16.736Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-furrey-turnaroundsplitter",
+      "name": "ComfyUI-Furrey-TurnaroundSplitter · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:42.117Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-agent-panel",
+      "name": "ComfyUI MCP | Agent Panel · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:12.367Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-basic_data_handling",
+      "name": "Basic data handling · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:18.278Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-kandinsky6-sr",
+      "name": "Kandinsky6 SR · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:23.543Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-h3-temporal-sampler",
+      "name": "H3 Temporal Sampler · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:30.069Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-prompt-editor",
+      "name": "Prompt Editor · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:54.422Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-PerfectVideoResolution",
+      "name": "Perfect Video Resolution · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:57.870Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-binyuan-sampler",
+      "name": "Binyuan Sampler V6.5 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:16.260Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-trellis2-mac",
+      "name": "ComfyUI TRELLIS.2 mac · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:15.807Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-qwenimagerefpack",
+      "name": "Qwen Image References Manager · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:51.042Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-prompt-tag-editor",
+      "name": "Prompt Tag Editor · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:01.972Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-outpaintmask",
+      "name": "Outpaint Mask Editor · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:05.420Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-yanhuo-easy-use",
+      "name": "yanhuo-easy-use · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:15.694Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-node-550w-media",
+      "name": "550W Watermark & Text Eraser · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:54.919Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-mask-editor-shift-color-picker",
+      "name": "Mask Editor Shift Color Picker · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:16.025Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comma-weight",
+      "name": "cozdx1 Comma Weight · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:20.505Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-promptcontract",
+      "name": "PromptContract · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:10.000Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-editfence",
+      "name": "EditFence · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:45.114Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-frameaudit",
+      "name": "FrameAudit · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:08.819Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-workflowcanary",
+      "name": "WorkflowCanary · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:48.754Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-maskcontract",
+      "name": "MaskContract · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:08.438Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-copyproof",
+      "name": "CopyProof · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:06.603Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-qwen-image-21-multiangle-t8",
+      "name": "Comfyui-Qwen-Image-2.1-MultiAngle-T8 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:20.862Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-genmagic",
+      "name": "GenMagic: 450+ AI models for image, video, audio and text · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:03.209Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-old-time-radio",
+      "name": "ComfyUI-OldTimeRadio · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:36.327Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-h3-upgrade-kit",
+      "name": "ComfyUI-H3-upgrade-kit · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:09.245Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-qwen-image-prompt-rewrite-t8",
+      "name": "Qwen Image 2.1 Prompt Rewrite T8 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:27.029Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-prompto",
+      "name": "Prompto · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:15.238Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-erenodes",
+      "name": "ComfyUI-EreNodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:46.145Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-elegant-nodes",
+      "name": "Elegant Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:56.442Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-editutils",
+      "name": "ComfyUI-EditUtils · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:14.783Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-obvpm",
+      "name": "comfyui-obvpm · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:19.753Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-lora-sidebar",
+      "name": "ComfyUI LoRA Sidebar · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:30.975Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI_LC_MaskMaker_nodes",
+      "name": "ComfyUI LC MaskMaker Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:56.977Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-daam-pack",
+      "name": "ComfyUI-DAAM-Pack · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:11.048Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-dogma-nodes",
+      "name": "DOGMA Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:33.332Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-hyperflow",
+      "name": "ComfyUI-Hyperflow · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:02.089Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-wextraui",
+      "name": "WextraUI · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:44.150Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-plaguekind-nodes",
+      "name": "ComfyUI-PlagueKind-Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:45.106Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-songlrc",
+      "name": "ComfyUI-SongLRC · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:04.804Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-image-catalog-indexed",
+      "name": "Image Catalog Indexed · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:30.614Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-kandinsky-t8",
+      "name": "Kandinsky T8 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:42.134Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-prism-t8",
+      "name": "Prism T8 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:42.847Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-qwen-image-21-blockcache-t8",
+      "name": "Qwen Image 2.1 BlockCache T8 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:14.791Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI_RaykoStudio",
+      "name": "ComfyUI_RaykoStudio · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:28.483Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-qg-tools",
+      "name": "ComfyUI-QG-Tools · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:47.682Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-input-thumbnails",
+      "name": "ComfyUI Input Thumbnails · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:56.899Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-castcut-nodes",
+      "name": "Castcut nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:00.290Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-properpixelart",
+      "name": "comfyui-properpixelart · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:15.116Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-stylebook",
+      "name": "Stylebook · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:13.275Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-zen-image-edit-t8",
+      "name": "Zen Image Edit T8 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:54.382Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ltx2.5-msr",
+      "name": "ComfyUI-LTX2.5-MSR · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:05.806Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-qwen-image-2-1-fun-controlnet-union-t8",
+      "name": "Qwen Image 2.1 Fun ControlNet Union (T8) · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:24.202Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-nkd-klein-tools",
+      "name": "NKD Klein Tools · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:25.899Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-kaytool",
+      "name": "KayTool · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:47.814Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-fizgig-h3-tweaks",
+      "name": "Fizgig H3 Tweaks · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:59.387Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-asasr",
+      "name": "ComfyUI-ASASR · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:21.250Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-load-gif-as-video",
+      "name": "Load GIF as Video · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:25.763Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-cyberdelia-metadata",
+      "name": "Cyberdelia Image Metadata · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:52.201Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-a5-nodes",
+      "name": "A5 Custom Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:56.115Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-kotodama",
+      "name": "Kotodama Prompt Enhancer · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:11.571Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-visual-suite",
+      "name": "Visual Suite (Studio Leiel) · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:35.772Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-videomark",
+      "name": "ComfyUI VideoMark · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:43.613Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI_LC_ModelBuilder_nodes",
+      "name": "ComfyUI LC Modelbuilder Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:51.964Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-h3-modality-lora-loader",
+      "name": "ComfyUI-H3-Modality-Lora-Loader · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:24.960Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-jpeg-is-fine",
+      "name": "JPEG is Fine · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:48.403Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-OmniVoice-Native",
+      "name": "OmniVoice · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:50.394Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-josialab",
+      "name": "JosiaNodes Lab · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:04.232Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-imagecanvas-mini",
+      "name": "ImageCanvas mini · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:10.653Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-prompt-feeder",
+      "name": "ComfyUI Prompt Feeder · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:13.549Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-audio-quality-check",
+      "name": "Audio Quality Check · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:52.957Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-x-wide-prompt-input-helper",
+      "name": "X-WIDE Prompt Input Helper · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:53.111Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-tiled-diffusion-ng",
+      "name": "Tiled Diffusion NG · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:01.405Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-load_image_recursive",
+      "name": "Load Image (Recursive) · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:25.228Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-richards-video-kits",
+      "name": "Richard's Video Kits · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:35.043Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-dhan-paint",
+      "name": "Comfyui-DHan-Paint · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:37.957Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-fanvue",
+      "name": "LatentPost for Fanvue · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:09.078Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-Comfyui-MMH3-UltimateUpscale",
+      "name": "Comfyui-MMH3-UltimateUpscale · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:48.077Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-qwen_img_2_1_enhancer",
+      "name": "ComfyUI-qwen_img_2_1_enhancer · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:09.116Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-inpaint-cropandstitch",
+      "name": "ComfyUI-Inpaint-CropAndStitch · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:16.328Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-vnccs-utils",
+      "name": "VNCCS - Collection of utility nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:41.248Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-shadernoiseksampler",
+      "name": "ComfyUI-ShaderNoiseKSampler · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:56.188Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-openpose-studio",
+      "name": "OpenPose Studio · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:05.080Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-minimax-h3-hybrid",
+      "name": "MiniMax H3 Hybrid · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:01.696Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-dora-dynamic-lora-loader",
+      "name": "ComfyUI-DoRA-Dynamic-LoRA-Loader · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:33.581Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-hakuimg",
+      "name": "ComfyUI-HakuImg · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:56.093Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-LoadVideoCrop",
+      "name": "Load Video + Crop · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:02.409Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-h3-img-gen-satodive",
+      "name": "MiniMax H3 Image Gen - SatoDive · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:10.926Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-Element_TileUpscale",
+      "name": "ComfyUI-Element_TileUpscale · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:05.709Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-rvc-trainer",
+      "name": "ComfyUI-RVC-Trainer · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:23.531Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-h3-lbh-x2-stream",
+      "name": "H3 LBH X2 Stream · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:24.909Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-Qwen3ASR-Native",
+      "name": "Qwen3ASR · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:38.026Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-enhance-pack",
+      "name": "ComfyUI-Enhance-Pack · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:56.004Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-pyiqa-toolbox",
+      "name": "pyiqa-toolbox · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:19.507Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-MiniMaxH3-Prompt-Writer",
+      "name": "H3 Prompt Writer · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:27.606Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-wan-vace-prep",
+      "name": "ComfyUI Wan VACE Prep · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:37.249Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-MiniMaxH3Mod",
+      "name": "MiniMax H3 RefMod · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:44.345Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-nkd-vfx-tools",
+      "name": "NKD VFX Tools · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:45.323Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-qwen-h3-prompt",
+      "name": "Qwen H3 Prompt · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:06.012Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-prompt-formula",
+      "name": "ComfyUI-prompt-formula · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:22.425Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ultratex",
+      "name": "ComfyUI-UltraTex · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:33.361Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI_Eclipse",
+      "name": "ComfyUI Eclipse · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:38.914Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-AuK",
+      "name": "ComfyUI-AuK · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:51.077Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI_NVIDIA_RTX_VSR_Long_Video",
+      "name": "ComfyUI NVIDIA RTX VSR Long Video · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:51.480Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-draw-things-comfyui",
+      "name": "Draw Things for ComfyUI · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:10.237Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-scale-image-to-total-pixels-advanced",
+      "name": "ComfyUi-Scale-Image-to-Total-Pixels-Advanced · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:25.128Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-workflow-image-export",
+      "name": "ComfyUI-Workflow-Image-Export · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:03.343Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-breeze-tts-T8",
+      "name": "Breeze TTS 2 · T8star-Aix · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:09.755Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui_danbooru_tags_upsampler",
+      "name": "ComfyUI Danbooru Tags Upsampler · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:21.609Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-text_processor",
+      "name": "ComfyUI Text Processor · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:01.077Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-contextanchoredtilerefine",
+      "name": "Context-Anchored Tile Refine · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:23.279Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-inpaintcanvas",
+      "name": "ComfyUI-InpaintCanvas · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:24.826Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-rednode-studio",
+      "name": "RedNode Studio · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:55.224Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-wildcard-pipeline",
+      "name": "Wildcard Pipeline · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:34.840Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-negpip-zimage",
+      "name": "NegPiP Prompt (Multi-Model) · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:45.242Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-scail-pose2",
+      "name": "ComfyUI-SCAIL-Pose2 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:53.902Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-zf-prompt-palette",
+      "name": "Prompt Palette · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:13.340Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-minimax-h3-transparent-video",
+      "name": "MiniMax H3 Transparent Video - SatoDive · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:20.912Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-easygoing-nodes",
+      "name": "Easygoing Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:08.203Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-h3-long-video",
+      "name": "H3 Long Video · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:26.130Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-camera-path",
+      "name": "Camera Path · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:29.168Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-Model-Visual-Loader",
+      "name": "ComfyUI-Model-Visual-Loader · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:37.173Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-iris-3b-comfy-nodes",
+      "name": "Iris-3B · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:50.564Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-Krea2-Harness",
+      "name": "Krea2 Harness · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:08.158Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-prompt-manager-meet-ai",
+      "name": "ComfyUI-prompt-manager · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:27.380Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-budgetpixel",
+      "name": "BudgetPixel · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:31.880Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-sd-comfyui-style-organizer",
+      "name": "Style Grid · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:55.212Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-cn-01-kemmy-comfyui-prompt-library",
+      "name": "Kemmy Prompt Library · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:12.414Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-demonalone-styleselector-comfyui",
+      "name": "DemonAlone-StyleSelector-ComfyUI · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:16.575Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-prompt-studio-suite",
+      "name": "Prompt Studio Suite · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:22.351Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-randomloraloader",
+      "name": "RandomLoRALoader · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:17.274Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-StepByStep-Sampler",
+      "name": "ComfyUI-StepByStep-Sampler · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:28.285Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui_checkpoint_preset_manager",
+      "name": "comfyui_checkpoint_preset_manager · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:34.139Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-smart-save-image",
+      "name": "Smart Save Image · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:34.479Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-minimax_h3_novel_pipeline",
+      "name": "MiniMax H3 Novel Pipeline · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:20.812Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-apogalleria",
+      "name": "ApoGalleria · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:22.181Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-Metadata-Inspector",
+      "name": "ComfyUI-Metadata-Inspector · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:20.654Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-color-light-finetune",
+      "name": "Color-Light-FineTune · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:38.065Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-fal-gateway",
+      "name": "Fal-Gateway · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:48.786Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-aigctv-ps-bridge-nodes",
+      "name": "ComfyUI PS Bridge Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:52.875Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-aaalice-image-picker",
+      "name": "Aaalice Image Picker · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:06.336Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-neo-sampler",
+      "name": "ComfyUI Neo Sampler (Forge Neo) · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:24.036Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-amd-minimax-h3",
+      "name": "ComfyUI-AMD-MiniMaxH3 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:18.213Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-hires-satodive-pro",
+      "name": "Hires Upscale Pro - SatoDive · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:24.440Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-quokkailab-audio-conditioning",
+      "name": "QuokkaiLab Audio Conditioning · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:29.086Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-CoolB-Nodes",
+      "name": "ComfyUI CoolB Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:23.910Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI_RollingArtist",
+      "name": "ComfyUI_RollingArtist · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:22.503Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-bulentgercek-nodes",
+      "name": "Bulent Gercek Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:22.484Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-promptdeck",
+      "name": "Prompt Deck · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:22.710Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-trellis2-hicache",
+      "name": "ComfyUI-TRELLIS2-HiCache · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:23.426Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-lora-stack-pack",
+      "name": "Lora Stack Pack · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:22.511Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-llamacpp-plus",
+      "name": "comfyui-llamacpp-plus · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:23.072Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-HandyNodes-KT",
+      "name": "ComfyUI Handy Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:23.228Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-9a44ceffac2d1a7dea",
+      "name": "AI Music Newsletter · 创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:19.647Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-6ae3430948369aceb9",
+      "name": "lilting channel (English) · 创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:21.094Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-toshia_fuji",
+      "name": "note · toshia_fuji · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:21.915Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-load-resize-image-with-filename",
+      "name": "Load & Resize Image + Filename · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:44.496Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-cyberdelia-z-engineer",
+      "name": "comfyui-cyberdelia-z-engineer · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:46.133Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-prompt-palette-f",
+      "name": "Prompt Palette-F · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:23.678Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-cherubimbiz",
+      "name": "note · cherubimbiz · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:14.197Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-schematic",
+      "name": "ComfyUI Schematic · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:16.705Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-videomaskeditor",
+      "name": "ComfyUI-VideoMaskEditor · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:21.572Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-aiholic0831",
+      "name": "note · aiholic0831 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:22.928Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-anthropic-claude",
+      "name": "Anthropic Claude · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:52.890Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-lucky_allium8251",
+      "name": "note · lucky_allium8251 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:59.368Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-alchemine-pack",
+      "name": "ComfyUI-Alchemine-Pack · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:00.174Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-weightferry",
+      "name": "ComfyUI-WeightFerry · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:43.937Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-systemone",
+      "name": "System One (Jev / Laya) · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:44.222Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-krea-reference",
+      "name": "Krea Reference · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:44.852Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-yoin_aicreator",
+      "name": "note · yoin_aicreator · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:46.725Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-hydralora",
+      "name": "Anima Adapter Loader · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:47.348Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-LoadImageCrop",
+      "name": "Load Image + Crop · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:49.564Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-er-vfx-nodepack",
+      "name": "ER VFX Nodepack · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:50.372Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-krea2_scanline",
+      "name": "Krea 2 Scanline Attention · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:54.008Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui_rs_nai_api_request",
+      "name": "ComfyUI_RS_NAI_API_Request · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:57.976Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-hpsv3",
+      "name": "ComfyUI-HPSv3 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:58.898Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui_metalfx",
+      "name": "ComfyUI MetalFX · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:45.935Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-enigmind",
+      "name": "note · enigmind · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:46.271Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-tsugiito_design",
+      "name": "note · tsugiito_design · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:48.674Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-psych_ai_it",
+      "name": "note · psych_ai_it · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:53.001Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-h3-project-suite",
+      "name": "H3 Project Suite · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:54.314Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-josianodes",
+      "name": "JosiaNodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:55.768Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-cn-02-kemmy-comfyui-sequential-prompt-list",
+      "name": "Kemmy Sequential Prompt List · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:56.665Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-complex-prompt",
+      "name": "ComfyUI Complex Prompt Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:57.733Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-akira2828",
+      "name": "note · akira2828 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:47.365Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-h3-x2-stream",
+      "name": "H3 X2 Stream · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:49.469Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-wise_azalea8300",
+      "name": "note · wise_azalea8300 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:51.052Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-lumo_ai",
+      "name": "note · lumo_ai · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:51.213Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-diffhdr",
+      "name": "ComfyUI-DiffHDR · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:51.978Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-anpontan_note",
+      "name": "note · anpontan_note · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:52.396Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-chii_kuro0107",
+      "name": "note · chii_kuro0107 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:57.050Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-hideout927",
+      "name": "note · hideout927 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:57.286Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ya_ma_da_pon",
+      "name": "note · ya_ma_da_pon · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:00.492Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-dandan_arigato19",
+      "name": "note · dandan_arigato19 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:02.322Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-livepair",
+      "name": "LivePair · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:04.282Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-honest_newt5115",
+      "name": "note · honest_newt5115 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:07.263Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-7god_ebisu8g2sdr",
+      "name": "note · 7god_ebisu8g2sdr · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:07.899Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-donutnodes",
+      "name": "ComfyUI-DonutNodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:10.507Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-d1a749f8d3125a05db",
+      "name": "AI Art Daily · 创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:59.059Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-kt_kt_89",
+      "name": "note · kt_kt_89 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:00.286Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-cleire_mami",
+      "name": "note · cleire_mami · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:02.909Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-minimax-h3-seedance-music3-prompt-enhancer-t8",
+      "name": "MiniMax H3 / Seedance / Music / YuE2 / Qwen Image Enhancer (T8) · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:05.214Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ai_nemui",
+      "name": "note · ai_nemui · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:05.850Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-asset-manager",
+      "name": "ComfyUI-AssetManager · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:06.743Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-lovely_hyena1697",
+      "name": "note · lovely_hyena1697 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:09.739Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-angeloskar",
+      "name": "ComfyUI-AngelosKar · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:41:59.809Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-glad_snake1405",
+      "name": "note · glad_snake1405 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:01.822Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-lora-pipeline",
+      "name": "LoRA Pipeline · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:02.419Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-demonalone-nodes-comfyui",
+      "name": "DemonAlone-nodes-ComfyUI · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:03.889Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI_LC_Vision_nodes",
+      "name": "ComfyUI LC Vision Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:05.209Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ryo_ai_video",
+      "name": "note · ryo_ai_video · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:06.036Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-welina_kokua",
+      "name": "note · welina_kokua · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:06.633Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-hotswitches",
+      "name": "ComfyUI-HotSwitches · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:11.428Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-kamiryu_ai",
+      "name": "note · kamiryu_ai · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:07.552Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-palealloy",
+      "name": "note · palealloy · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:10.454Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-sucww18",
+      "name": "note · sucww18 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:12.031Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-spectrum-minimax-h3",
+      "name": "ComfyUI-Spectrum-MiniMax-H3 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:14.199Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-gallery-loader",
+      "name": "Gallery Loader · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:15.112Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ruyi-nodes",
+      "name": "RuYi-Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:16.515Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-krea2-twostage-sampler",
+      "name": "Two-Stage Sampler and Krea 2 Resolution Picker · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:18.213Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-colorshiftcolor",
+      "name": "ComfyUI-ColorshiftColor · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:01.194Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-kongo_jun",
+      "name": "note · kongo_jun · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:11.702Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ktcrs1107",
+      "name": "note · ktcrs1107 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:17.282Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ai_to_hibi_note",
+      "name": "note · ai_to_hibi_note · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:19.946Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-diffsynth-studio-comfyui",
+      "name": "DiffSynth-ComfyUI · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:29.376Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-qwen-image-2.1-promptenhancer-mtp",
+      "name": "Qwen-Image 2.1 Prompt Enhancer (MTP) · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:30.266Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-imamirai_editors",
+      "name": "note · imamirai_editors · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:31.817Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-keimasuda",
+      "name": "note · keimasuda · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:32.470Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-shiny_owl56",
+      "name": "note · shiny_owl56 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:12.309Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-shiny_lilac7900",
+      "name": "note · shiny_lilac7900 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:12.629Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-bs-comfyui-model-manager",
+      "name": "Bone-Studio Model Manager · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:17.399Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-dhan-composite",
+      "name": "Comfyui-DHan-Composite · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:18.515Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-catap_art3d",
+      "name": "note · catap_art3d · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:22.924Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-prime_puma3624",
+      "name": "note · prime_puma3624 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:14.197Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-rouageailab",
+      "name": "note · rouageailab · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:17.185Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-promptpresetbuilder",
+      "name": "Prompt Preset Builder · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:17.255Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-x4lch3mist",
+      "name": "X4Lch3mist Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:22.752Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-synth_brain",
+      "name": "note · synth_brain · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:23.213Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-apex-artist",
+      "name": "Apex Artist Professional VFX Tools · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:02.893Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-simple-scribble-canvas",
+      "name": "Simple Scribble Canvas · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:03.616Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-rocm-ninodes",
+      "name": "ROCm Ninodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:04.491Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-7760bc3bf6289e3c3a",
+      "name": "Promptsref.com · 创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:21.905Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-seisei_surumono",
+      "name": "note · seisei_surumono · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:22.430Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-sozaixx",
+      "name": "note · sozaixx · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:23.081Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-shiori_ai_diary",
+      "name": "note · shiori_ai_diary · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:13.545Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-comfylab",
+      "name": "note · comfylab · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:15.189Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-kiryu_mizuki",
+      "name": "note · kiryu_mizuki · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:15.539Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-nodes2classic",
+      "name": "Nodes 2.0 → Classic · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:20.872Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-inferway-comfy",
+      "name": "Inferway H3 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:22.016Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-yanhuo-h3-motion-context-selflift",
+      "name": "yanhuo_H3_Motion-Context_SelfLift · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:16.979Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-npaka",
+      "name": "note · npaka · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:14.496Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-8ff8af6cfebc289509",
+      "name": "Deezer Newsroom · 创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:19.693Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-valitools",
+      "name": "ValiTools · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:15.503Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-ai_partners_jp",
+      "name": "note · ai_partners_jp · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:18.833Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-int8-fast-fork",
+      "name": "ComfyUI Quantization Toolkit · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:19.354Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-eraser107",
+      "name": "note · eraser107 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:22.046Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-mimi_aiart",
+      "name": "note · mimi_aiart · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:23.990Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-deno-custom-nodes",
+      "name": "Deno Custom Nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:31.327Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-cyberkrea-sampler",
+      "name": "CyberKrea Sampler · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:39.425Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-right_kudu1277",
+      "name": "note · right_kudu1277 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:40.007Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-59f7071375f2542f00",
+      "name": "Vinyl Culture · 创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:20.281Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-ac56f0299fb1cf05fa",
+      "name": "MindStudio Blog · 创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:21.574Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-docres",
+      "name": "ComfyUI DocRes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:15.746Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-binyuan-multi-image-compare",
+      "name": "Binyuan Multi Image Compare · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:19.580Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-1adf7fab3ddd1858ed",
+      "name": "Zinstrel: AI Music News, Analysis & Discovery · 创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:20.739Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-xiantu-qwen-image21-workbench",
+      "name": "闲兔 Qwen Image 2.1 工作台 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:19.017Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-kozo_t",
+      "name": "note · kozo_t · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:20.670Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-yoseiya",
+      "name": "note · yoseiya · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:23.396Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui_inteliweb_nodes",
+      "name": "ComfyUI_Inteliweb_nodes · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:41.394Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-singulatelier",
+      "name": "note · singulatelier · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:42.706Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-webapp-api",
+      "name": "WebApp API · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:46.212Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-hyperflow-h3",
+      "name": "HyperFlow for MiniMax-H3 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:55.285Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-prompt-order",
+      "name": "ComfyUI Prompt Order · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:57.072Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-booru-tagger",
+      "name": "ComfyUI-Booru-Tagger · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:57.826Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-artfat-resolution",
+      "name": "Artfat Resolution · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:58.763Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-kazu_fuwa",
+      "name": "note · kazu_fuwa · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:36.290Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-llm-session",
+      "name": "ComfyUI-LLM-Session · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:49.646Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ace-suno",
+      "name": "Suno by Ace Data Cloud · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:50.168Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-akb428",
+      "name": "note · akb428 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:42:58.659Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-forbidden-vision",
+      "name": "ComfyUI-Forbidden-Vision · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:00.904Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-apt_zebra8914",
+      "name": "note · apt_zebra8914 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:04.230Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-lef_works",
+      "name": "note · lef_works · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:06.956Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-QwenVL-F",
+      "name": "QwenVL-F · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:14.707Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-h3-prompt-ide",
+      "name": "H3 Prompt IDE · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:08.717Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-yuto_ai_blog",
+      "name": "note · yuto_ai_blog · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:12.977Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-identity-forge",
+      "name": "Identity Forge · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:15.161Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-cgtest",
+      "name": "note · cgtest · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:17.170Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-pixlstash",
+      "name": "ComfyUI-PixlStash · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:17.830Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-Lotus-2",
+      "name": "ComfyUI-Lotus-2 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:12.893Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-scenedetect",
+      "name": "Comfyui-SceneDetect · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:17.666Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-qwen-image-21-fun-acc-pdd-t8",
+      "name": "Qwen-Image-2.1 Fun-Acc PDD 4-Step (T8) · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:19.367Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-uuhai0625",
+      "name": "note · uuhai0625 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:21.267Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-alert_yak4745",
+      "name": "note · alert_yak4745 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:23.371Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-liquid-inference",
+      "name": "Liquid Inference · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:16.752Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-tuwabuki1211",
+      "name": "note · tuwabuki1211 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:23.205Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-veda-sparse-attention",
+      "name": "Veda Sparse Attention (MiniMax H3) · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:18.608Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-ComfyUI-MOSS-TTS-1.5",
+      "name": "MOSS-TTS 1.5 · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:23.102Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-fordtaurus116",
+      "name": "note · fordtaurus116 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:18.989Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-lofty_eagle5366",
+      "name": "note · lofty_eagle5366 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:23.207Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-cocoredo_2509",
+      "name": "note · cocoredo_2509 · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:19.426Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-h_kitamura",
+      "name": "note · h_kitamura · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:19.950Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-hidenoba",
+      "name": "note · hidenoba · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:21.529Z",
+      "last_error": null
+    },
+    {
+      "id": "rss-double-note-shinryu_kizawa",
+      "name": "note · shinryu_kizawa · 图像视频创作分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:21.953Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-cine-con-ia",
+      "name": "Cine con IA · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:43:23.710Z",
+      "last_error": null
+    },
+    {
+      "id": "json-double-cnr-comfyui-pixai-tagger",
+      "name": "ComfyUI PixAI Tagger · ComfyUI创作项目发布",
+      "kind": "json_list",
+      "enabled": true,
+      "health": "ok",
+      "last_ok_at": "2026-10-16T03:44:23.894Z",
+      "last_error": null
+    }
+  ],
+  "bySource": [
+    {
+      "source_id": "json-double-cnr-comfyui-dogma-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui_inteliweb_nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-MOSS-TTS-1.5",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-pyiqa-toolbox",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-image-catalog-indexed",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-chii_kuro0107",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-cine-con-ia",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-59f7071375f2542f00",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-QwenVL-F",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ai_partners_jp",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-shiny_owl56",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-great_eagle2170",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-sakisuta",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-agent-panel",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-h3-prompt-ide",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-vnccs-utils",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-deno-custom-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-minimax-h3-hybrid",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-wise_azalea8300",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-yanhuo-easy-use",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-simple-scribble-canvas",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-media-feed",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-huggingface_dataset",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-sasao_66",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-Element_TileUpscale",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-imamirai_editors",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-diffhdr",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-prompt-manager-meet-ai",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-prompt-palette-f",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-kaiyano",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-dandan_arigato19",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-kotodama",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-angeloskar",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-eeeemo_japan",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-rvc-trainer",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-qwen-image-prompt-rewrite-t8",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-rosy_dog6649",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-rocm-ninodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-text_processor",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-kozo_t",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-minimax-h3-seedance-music3-prompt-enhancer-t8",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-llamacpp-plus",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-quokkailab-audio-conditioning",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-seamrank",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-plaguekind-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-hakuimg",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI_LC_Vision_nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-knowhow_matome99",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-pixolm_ai",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-hatano_yusuke",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-apogalleria",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-h3-x2-stream",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ai_howtouse",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-yameruzozeetai",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-cyberdelia-z-engineer",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-forbidden-vision",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-MiniMaxH3Mod",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-color-light-finetune",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-kt_kt_89",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-old-time-radio",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-rkpg",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-eager_thyme9842",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-draw-things-comfyui",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-lora-stack-pack",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-dhan-composite",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-Lotus-2",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-natty_mimosa8652",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI_LC_ModelBuilder_nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-masa1229",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-koza_kura3",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-tidaa",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-fal-gateway",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-imagecanvas-mini",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-prompt-tag-editor",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-colorshiftcolor",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-krea2-twostage-sampler",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-budgetpixel",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-nobinlog",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-h3-modality-lora-loader",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-scale-image-to-total-pixels-advanced",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-tuwabuki1211",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-kongo_jun",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-ai_nemui",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI_NVIDIA_RTX_VSR_Long_Video",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-negpip-zimage",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-QwenVL-Mod",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-genkidesu2021",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-hyperflow-h3",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-copyproof",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui_rs_nai_api_request",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-openpose-studio",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-laoyexiaoye",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-int8-fast-fork",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-complex-prompt",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-right_kudu1277",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-aicu",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-hyperflow",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-videomaskeditor",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-trellis2-mac",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-anpontan_note",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-ari_tam5555",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-nkd-vfx-tools",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-takah_note",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-kind_whale5269",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-ryou_gethu93",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-scenedetect",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-load_image_recursive",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-Metadata-Inspector",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-takumi_ai_web3",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-cleire_mami",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-kamiryu_ai",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-promptpresetbuilder",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-demonalone-nodes-comfyui",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-npaka",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-fanvue",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-alchemine-pack",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-zou_aidouga",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-fordtaurus116",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-yaoyoroztech",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-wan-vace-prep",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-Krea2-Harness",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-shinryu_kizawa",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI_RollingArtist",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-d1a749f8d3125a05db",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-weightferry",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-seisei_surumono",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-minimax-h3-transparent-video",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-shiny_lilac7900",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-erenodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-quirky_hippo6791",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-anthropic-claude",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-it_home_life",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-shadernoiseksampler",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-mimi_aiart",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-elegant-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-trellis2-hicache",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-editutils",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-LoadVideoCrop",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-kiryu_mizuki",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-yanhuo-h3-motion-context-selflift",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-schematic",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-cgtest",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-noble_mink9287",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-dreammii",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-mask-editor-shift-color-picker",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-reference-loader",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-magic_turtle9466",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-bkwildcards",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-cherubimbiz",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-aiholic0831",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui_checkpoint_preset_manager",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-8ff8af6cfebc289509",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-minimax-h3-image-studio",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-fuckdesune",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-uuhai0625",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-kaola-qwen-image2.1-prompt-rewrite",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-llm-widget",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-x-wide-prompt-input-helper",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-sd-comfyui-style-organizer",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui_danbooru_tags_upsampler",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-promptcontract",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-toshia_fuji",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-bulentgercek-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-edgetts",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-kazu_fuwa",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-qwen-vae-triton",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-krea-reference",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-h3-long-video",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-lovely_hebe1274",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-ausboss-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-freelife_creator",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-QwenImage-PromptExtractor",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-daam-pack",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-prompt-order",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-just-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ai_freak",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-seisei_ai_1st",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-TagForge",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-basic_data_handling",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-snjake_baikal_swin_anime",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-lora-pipeline",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-wildcard-pipeline",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-field",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-photoshoot",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-binyuan-sampler",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-dora-dynamic-lora-loader",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-hidenoba",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-koheii_miaa",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-tsugiito_design",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI_LC_MaskMaker_nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-qwen21-adult-policy",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-akisuke0925",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-kaytool",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-7god_ebisu8g2sdr",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-megapotato",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-comfylab",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ai_to_hibi_note",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-detailedregioninpaint",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-alert_yak4745",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-properpixelart",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-songlrc",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-donutnodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-er-vfx-nodepack",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-workflowcanary",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-richards-video-kits",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-lora-preview",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-life_good_life",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-sozaixx",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-promptdeck",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-9065c57994a668a2e9",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-hpsv3",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-psych_ai_it",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-prompt-feeder",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-inferway-comfy",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-ac56f0299fb1cf05fa",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-CoolB-Nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-h3-img-gen-satodive",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-obvpm",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-breeze-tts-T8",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-hires-satodive-pro",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-lora-sidebar",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-abcxy",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-minimax_h3_novel_pipeline",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-rouageailab",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-dhan-power-lora",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-shiori_ai_diary",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-hagiri1312",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-qwenimagerefpack",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-webapp-api",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-identity-forge",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-pixlstash",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-AuK",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-9a44ceffac2d1a7dea",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-PerfectVideoResolution",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-silver517",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-a5-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-cyberkrea-sampler",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-editfence",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-akira2828",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-apt_zebra8914",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-workflow-image-export",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-sucww18",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-maskcontract",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-yoin_aicreator",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-loyal_owl5720",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-wextraui",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-glad_snake1405",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-lovely_hyena1697",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-hearty_knot4636",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-genial_crocus627",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-catap_art3d",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-dhan-paint",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-enigmind",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-audio-quality-check",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-kentauber_ai",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ltx2.5-msr",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-booru-tagger",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-qwen-image-21-multiangle-t8",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-nkd-klein-tools",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-bold_oxalis9933",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-kandinsky6-sr",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-h_kitamura",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-inpaint-cropandstitch",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-cocoredo_2509",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-aaalice-image-picker",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-apex-artist",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-easygoing-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-jpeg-is-fine",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-amd-minimax-h3",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-qwen_img_2_1_enhancer",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui_metalfx",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-josialab",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-livepair",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-howrass_note",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-h3-temporal-sampler",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-rednode-studio",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-frameaudit",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-tiled-diffusion-ng",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-anima-remap",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-aiby_masuhiyo",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-krea2_scanline",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-broadcast-resolutions",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-perfectlab",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-7760bc3bf6289e3c3a",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-contextanchoredtilerefine",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-prompt-formula",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-maynoha",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-josianodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-shuuki_garu_ruka",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-qg-tools",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-palealloy",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-shio_batapopcorn",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-x4lch3mist",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-Model-Visual-Loader",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-castcut-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-h3-lbh-x2-stream",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-synth_brain",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-Comfyui-MMH3-UltimateUpscale",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-xiantu-qwen-image21-workbench",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ya_ma_da_pon",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-lef_works",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-minamotomasaru",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-liquid-inference",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-scail-pose2",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ample_pika7429",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-major_myrtle6198",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-veda-sparse-attention",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-smart-save-image",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-hotswitches",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-qwen-image-21-fun-acc-pdd-t8",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ryo1144",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-mii_chai_ai",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-dreamy_quail9288",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-aun_585",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-singtothesky79",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-neo-sampler",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-OmniVoice-Native",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-aoao_ai",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-keimasuda",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ready_whale7197",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-camera-path",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-randomloraloader",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-genmagic",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-dpmpp-2m-sharp",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI_Eclipse",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-taka_fukugyo_lab",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-akb428",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-eraser107",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-mintjuku",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ryosuke_blog_",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-nodes2classic",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-prompto",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-demonalone-styleselector-comfyui",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-stylebook",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-load-gif-as-video",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-visiondesigning",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-fizgig-h3-tweaks",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-cn-02-kemmy-comfyui-sequential-prompt-list",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-lpp",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI_RaykoStudio",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ruyi-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-enhance-pack",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-prompt-studio-suite",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-videomark",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-inpaintcanvas",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-pixai-tagger",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-welina_kokua",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-aigctv-ps-bridge-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-miyuu_2026",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-input-thumbnails",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-artfat-resolution",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-promptdesign",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-iris-3b-comfy-nodes",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-kisekae",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-systemone",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-visual-suite",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ryo_ai_video",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-bochibochi_ai",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-aicreatorpathnet",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-hideout927",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-fantastic-minimax-h3-prompt-builder",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-diffsynth-studio-comfyui",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-kasmintea",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-tasty_cougar8018",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-eagle-bridge",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-MiniMaxH3-Prompt-Writer",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-yoshida_komuin",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-asset-manager",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-1adf7fab3ddd1858ed",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-cyberdelia-metadata",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-gallery-loader",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-ciru-image-accelerator",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-qwen-h3-prompt",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-singulatelier",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-6ae3430948369aceb9",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-brainy_dog4676",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-piromo_ai",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-myloose",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-spectrum-minimax-h3",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comma-weight",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-prompt-editor",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ace-suno",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-tried_hs",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-tesalab",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-furrey-turnaroundsplitter",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ultratex",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-prism-t8",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-image-process",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-qwen-image-21-blockcache-t8",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-trellis-hicache",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-lucky_allium8251",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-qwen-image-2-1-fun-controlnet-union-t8",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-StepByStep-Sampler",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-2tm",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ai_creative_log",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-ai_shorts_lab",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-zf-prompt-palette",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-taaaak0504",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-kandinsky-t8",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-lofty_eagle5366",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-asasr",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-yoseiya",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-kandinsky6",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-yuto_ai_blog",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-fasth3patcher",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-binyuan-multi-image-compare",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-LoadImageCrop",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-Qwen3ASR-Native",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-lumo_ai",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-h3-upgrade-kit",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-zen-image-edit-t8",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-docres",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-outpaintmask",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-ComfyUI-HandyNodes-KT",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-qwen-image-2.1-promptenhancer-mtp",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-valitools",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-prime_puma3624",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-hydralora",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-krea2-merge",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-kawakijourney_ai",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "rss-double-note-honest_newt5115",
+      "materials": 2,
+      "recent": 2,
+      "pending": 2
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-h3-project-suite",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "json-double-cnr-cn-01-kemmy-comfyui-prompt-library",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-bs-comfyui-model-manager",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-llm-session",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-node-550w-media",
+      "materials": 1,
+      "recent": 1,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-atelieraika",
+      "materials": 2,
+      "recent": 2,
+      "pending": 0
+    },
+    {
+      "source_id": "rss-double-note-ponko_ai2026",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "json-double-cnr-comfyui-load-resize-image-with-filename",
+      "materials": 1,
+      "recent": 1,
+      "pending": 1
+    },
+    {
+      "source_id": "rss-double-note-ktcrs1107",
+      "materials": 2,
+      "recent": 2,
+      "pending": 1
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "checkedAt": "2026-10-15T15:31:51.414Z",
+  "configCount": 355,
+  "totals": [
+    {
+      "total": 374,
+      "enabled": 372
+    }
+  ],
+  "ids": {
+    "added": [
+      "rss-expand5-reddit-comfyui",
+      "web-expand5-project-lordekeen--comfyui-simple-batch",
+      "web-expand5-project-cmdmedia--second-unit",
+      "web-expand5-project-impacifist--comfyui-video-control-studio",
+      "web-expand5-project-yolain--comfyui-easy-media",
+      "web-expand5-project-lightricks--ltx-desktop",
+      "web-expand5-project-blaizzy--mlx-audio",
+      "web-expand5-comfyui-wiki-news",
+      "rss-expand5-www-stablediffusiontutorials-com",
+      "web-expand5-project-martindelophy--ai-video-editor",
+      "web-expand5-project-juntaosun--comecut",
+      "web-expand5-project-mangfufu--director-desk",
+      "web-expand5-project-hbai-ltd--toonflow-app",
+      "web-expand5-project-opencut-app--opencut"
+    ],
+    "updated": [
+      "json-expand4-project-colind0pe--trendlume",
+      "json-expand4-project-lcy362--agnes-video-generator",
+      "json-expand4-project-xixihhhh--clipforge",
+      "json-expand4-project-jnmetacode--openshorts",
+      "json-expand4-project-1076184145--video-automation",
+      "json-expand4-project-oskey--go-ai-studio",
+      "json-expand4-project-harry0703--moneyprinterturbo"
+    ]
+  },
+  "sources": [
+    {
+      "id": "json-expand4-project-1076184145--video-automation",
+      "name": "video-automation · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:46.195Z",
+      "articles": 2,
+      "recent": 2
+    },
+    {
+      "id": "json-expand4-project-colind0pe--trendlume",
+      "name": "Trendlume · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:41.641Z",
+      "articles": 2,
+      "recent": 1
+    },
+    {
+      "id": "json-expand4-project-harry0703--moneyprinterturbo",
+      "name": "MoneyPrinterTurbo · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:49.387Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "json-expand4-project-jnmetacode--openshorts",
+      "name": "openshorts · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:44.968Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "json-expand4-project-lcy362--agnes-video-generator",
+      "name": "agnes-video-generator · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:42.797Z",
+      "articles": 4,
+      "recent": 4
+    },
+    {
+      "id": "json-expand4-project-oskey--go-ai-studio",
+      "name": "Go-Ai-Studio · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:47.473Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "json-expand4-project-xixihhhh--clipforge",
+      "name": "clipforge · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:43.851Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "rss-expand5-reddit-comfyui",
+      "name": "Reddit comfyui · 创作与工作流分享",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:24:51.542Z",
+      "articles": 5,
+      "recent": 5
+    },
+    {
+      "id": "rss-expand5-www-stablediffusiontutorials-com",
+      "name": "Stable Diffusion Tutorials · 创作教程",
+      "kind": "rss",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:17.112Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand5-comfyui-wiki-news",
+      "name": "ComfyUI Wiki · 工作流与开源创作分享",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:15.667Z",
+      "articles": 8,
+      "recent": 8
+    },
+    {
+      "id": "web-expand5-project-blaizzy--mlx-audio",
+      "name": "mlx-audio · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:13.790Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "web-expand5-project-cmdmedia--second-unit",
+      "name": "second-unit · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:24:57.145Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand5-project-hbai-ltd--toonflow-app",
+      "name": "Toonflow-app · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:38.881Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "web-expand5-project-impacifist--comfyui-video-control-studio",
+      "name": "ComfyUI-Video-Control-Studio · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:24:59.676Z",
+      "articles": 2,
+      "recent": 2
+    },
+    {
+      "id": "web-expand5-project-juntaosun--comecut",
+      "name": "ComeCut · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:23.955Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "web-expand5-project-lightricks--ltx-desktop",
+      "name": "LTX-Desktop · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:09.942Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand5-project-lordekeen--comfyui-simple-batch",
+      "name": "comfyui-simple-batch · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:24:54.725Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand5-project-mangfufu--director-desk",
+      "name": "director-desk · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:33.845Z",
+      "articles": 3,
+      "recent": 3
+    },
+    {
+      "id": "web-expand5-project-martindelophy--ai-video-editor",
+      "name": "ai-video-editor · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:20.286Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand5-project-opencut-app--opencut",
+      "name": "OpenCut · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:40.672Z",
+      "articles": 1,
+      "recent": 1
+    },
+    {
+      "id": "web-expand5-project-yolain--comfyui-easy-media",
+      "name": "ComfyUI-Easy-Media · 开源创作项目发布",
+      "kind": "web_list",
+      "enabled": true,
+      "health": "ok",
+      "last_error": null,
+      "last_ok_at": "2026-10-15T15:25:07.710Z",
+      "articles": 3,
+      "recent": 3
+    }
+  ],
+  "processing": [
+    {
+      "processing_state": "analyzed",
+      "count": 35
+    },
+    {
+      "processing_state": "new",
+      "count": 1
+    }
+  ],
+  "publications": [
+    {
+      "eligible": 35,
+      "selected": 2
+    }
+  ],
+  "repairPublications": [
+    {
+      "eligible": 15,
+      "selected": 0
+    }
+  ]
+}

@@ -1,0 +1,1606 @@
+{
+  "checkedAt": "2026-10-15T15:23:48.323Z",
+  "accepted": [
+    {
+      "source": {
+        "id": "rss-expand5-reddit-comfyui",
+        "name": "Reddit comfyui · 创作与工作流分享",
+        "kind": "rss",
+        "config": {
+          "feedUrl": "https://www.reddit.com/r/comfyui/new/.rss?limit=30",
+          "_aihot": {
+            "initialBackfillLimit": 5
+          },
+          "maxItemAgeDays": 30,
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "workflow",
+              "tutorial",
+              "github.com",
+              "open source",
+              "open-source",
+              "LoRA",
+              "ComfyUI",
+              "guide",
+              "pipeline",
+              "released",
+              "model"
+            ],
+            "includeBodyForTopic": true
+          }
+        },
+        "tier": "T2",
+        "first_party": false,
+        "owner_entity_id": "reddit-comfyui",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 30,
+      "scoped": 17,
+      "recent30Days": 17,
+      "sample": [
+        {
+          "title": "ComfyUI Nodes Explained: The Basics for Beginners",
+          "url": "https://www.reddit.com/r/comfyui/comments/1x6o47w/comfyui_nodes_explained_the_basics_for_beginners/",
+          "publishedAt": "2026-10-15T15:05:27.000Z"
+        },
+        {
+          "title": "Why waste hours fixing broken JSON workflows? Meet EasyComfy Pro — a 1-click local AI studio starting with 100+ verified model presets (auto-updated by our dev team), LTX 2.5 on 8GB VRAM, and native MCP",
+          "url": "https://www.reddit.com/r/comfyui/comments/1x6mxw1/why_waste_hours_fixing_broken_json_workflows_meet/",
+          "publishedAt": "2026-10-15T14:20:38.000Z"
+        },
+        {
+          "title": "Major bug issue with ComfyUI 0.40.0 update!!",
+          "url": "https://www.reddit.com/r/comfyui/comments/1x6mgat/major_bug_issue_with_comfyui_0400_update/",
+          "publishedAt": "2026-10-15T14:01:06.000Z"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-project-lordekeen--comfyui-simple-batch",
+        "name": "comfyui-simple-batch · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/lordekeen/comfyui-simple-batch/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-lordekeen",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 5,
+      "recent30Days": 1,
+      "sample": [
+        {
+          "title": "v0.2.0 - Batch Load Records & Multi-modal Batching",
+          "url": "https://github.com/lordekeen/comfyui-simple-batch/releases/tag/v0.2.0",
+          "publishedAt": "2026-09-25T18:48:20.000Z",
+          "summary": "What's Changed 🚀 Features & Enhancements Batch Load Records (BatchLoadRecords): Added a generic record iterator node that consumes BATCH_RECORDS lists (e.g. dialogue/TTS lines, metadata records) and integrates seamlessly with any BatchSave* node. Cross-Pack Record Contract: Supports template tokens ({index}, {name}, custom fields with format specs) and persists state for the failure watchdog. Resume Skip Reporting: Batch resume now reports skipped item counts and ranges to both the console and _simple_batch_log.txt (#7). Completion Logging: Clean batch completion summaries are recorded in _simple_batch_log.txt alongside error events (#8). 🛠️ Refactoring & Robustness Strict Record Token Validation: record_token_map now fails loudly if record fields shadow reserved 'index' or 'name' tokens (#2). Duplicate Record Destination Warnings: Added warn_duplicate_record_paths to log warnings when multiple records format to identical output paths (#1). Shared Save Prologue: Extracted _validate_save_args across all Save nodes (BatchSaveImage, BatchSaveAudio, BatchSaveVideo) (#4). Shared Item Picker: Extracted _select_unhandled across folder loaders and the record iterator (#5). Directory Hand"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-project-cmdmedia--second-unit",
+        "name": "second-unit · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/cmdmedia/second-unit/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-cmdmedia",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 2,
+      "recent30Days": 1,
+      "sample": [
+        {
+          "title": "Second Unit 2026.09.28",
+          "url": "https://github.com/CMDMedia/second-unit/releases/tag/v2026.09.28",
+          "publishedAt": "2026-09-28T14:24:11.000Z",
+          "summary": "Second Unit — September 28, 2026 This release brings the Windows download up to date with main, including the workflow catalog and fixes added after the September 15 package. Download and install Download SecondUnit-Windows.zip, extract it into a permanent writable folder, and follow SecondUnit/README.md. Requires Windows, DaVinci Resolve Studio, Python 3.9+, ffmpeg/ffprobe, and a local ComfyUI installation with the required models and nodes. Included updates The current MiniMax H3, LTX 2.5, SAM 3.1, WAN 2.2, and Juggernaut workflow catalog, with existing review status preserved for each preset. Model-specific prompt expansion, environment presets, and camera-reference handling. Seed handling, model selection, automatic progress, and optional LTX 2.5 detail-stage fixes. H3 Pose Follow reference-role and frame-padding fixes. Pose Follow remains experimental; its environment quality still needs improvement. The two-pass Juggernaut Hyperreal preset remains a schema-only preview. Updated download instructions and a preset check that supports the expanded catalog while checking that the reviewed environment presets retain their status. Models, private media, and local credentials are no"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-project-impacifist--comfyui-video-control-studio",
+        "name": "ComfyUI-Video-Control-Studio · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/impacifist/comfyui-video-control-studio/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-impacifist",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 2,
+      "recent30Days": 2,
+      "sample": [
+        {
+          "title": "v0.1.1 — Clearer settings and control-map comparison",
+          "url": "https://github.com/impacifist/ComfyUI-Video-Control-Studio/releases/tag/v0.1.1",
+          "publishedAt": "2026-10-05T20:58:18.000Z",
+          "summary": "Advanced settings are grouped into Video, Pose, Depth and Canny. Only selected extractors show their options, and hidden settings keep their values. Model choices sit alongside their related controls. Refreshed English and Korean node screenshots. Added a synchronized three-second Pose / Depth / Canny preview and 24 FPS MP4. Added prominent MiniMax H3 Fun ControlNet connection instructions. Verified group visibility, retained settings, minimum node size, both languages and playback in the browser; six settings tests pass. Choose either the EN or KO archive. They differ only in the default interface language. Replace the existing node files and refresh the browser with Ctrl+F5. Do not install both copies."
+        },
+        {
+          "title": "Video Control Studio v0.1.0",
+          "url": "https://github.com/impacifist/ComfyUI-Video-Control-Studio/releases/tag/v0.1.0",
+          "publishedAt": "2026-10-05T20:46:06.000Z",
+          "summary": "Video Control Studio extracts Pose, Depth and Canny control sequences from video inside ComfyUI. Synchronized A/B playback, draggable comparison divider and frame stepping. Segment selection, FPS conversion, resize and workflow presets. One-frame tests and segment extraction run only the node and its inputs, even in a connected generation graph. Clean IMAGE and silent VIDEO outputs. Controls fit the minimum node size without internal scrolling. English and Korean UI, illustrated guides and four canvas workflows: extraction/export and H3 Pose ControlNet generation in both languages. Install one ZIP under ComfyUI/custom_nodes, then restart ComfyUI and refresh the browser. EN and KO archives differ only in their default UI language. Control output and its choices remain English in both versions. Canny needs no model. Pose requires SDPose Wholebody; Depth requires Depth Anything 3. Model weights are not bundled. See the README for required ComfyUI features and known limitations. 한국어 설명서 · Workflow guide"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-project-yolain--comfyui-easy-media",
+        "name": "ComfyUI-Easy-Media · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/yolain/comfyui-easy-media/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-yolain",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 10,
+      "recent30Days": 3,
+      "sample": [
+        {
+          "title": "v1.3.4",
+          "url": "https://github.com/yolain/ComfyUI-Easy-Media/releases/tag/v1.3.4",
+          "publishedAt": "2026-09-30T01:42:27.000Z",
+          "summary": "What's Changed feat: add RTX-VSR Video Super-Resolution node for enhanced video processing by @yolain in #105 fix: improve multitrack timeline navigation by @yolain in #121 feat: extend passthrough mode to multitrack task segments by @yolain in #119 fix: rename context swap continuity mode to context drift by @yolain in #122 Full Changelog: v1.3.3...v1.3.4"
+        },
+        {
+          "title": "v1.3.3",
+          "url": "https://github.com/yolain/ComfyUI-Easy-Media/releases/tag/v1.3.3",
+          "publishedAt": "2026-09-25T09:36:30.000Z",
+          "summary": "What's Changed feat: add multi-image loader by @yolain in #91 fix: resolve audio lock bug by optimizing video audio extraction in multitrack projects by @yolain in #94 fix: locked video use uniform temporal resampling by @yolain in #95 feat: mute task images, merge task segments, and bulk-apply prompts in multitrack editor by @yolain in #96 fix: surface video slot preview and remove stale 1s fallback in multitrack editor by @yolain in #98 feat: frame-accurate paused preview for multitrack video segments by @yolain in #100 fix: optimize single video segment rendering and improve timeout handling in video processing #84 by @yolain in #103 fix: skip redundant TE in reference dual-mode multitrack projects by @yolain in #110 feat: add passthrough sampling mode for multitrack H3 projects by @yolain in #111 feat: allow SelfLift high-resolution stage to use a separate model by @yolain in #112 fix: tolerate negligible fps differences when merging videos by @yolain in #99 Full Changelog: v1.3.2...v1.3.3"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-project-lightricks--ltx-desktop",
+        "name": "LTX-Desktop · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/lightricks/ltx-desktop/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-lightricks",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 10,
+      "recent30Days": 1,
+      "sample": [
+        {
+          "title": "LTX Desktop 1.3.0",
+          "url": "https://github.com/Lightricks/LTX-Desktop/releases/tag/v1.3.0",
+          "publishedAt": "2026-10-09T16:51:15.000Z",
+          "summary": "What's Changed A new look for the entire app LTX Desktop has a new look across the whole app, with surfaces that match LTX.io. The new Home page has a cinematic hero, a workflows gallery, a LoRAs row, and example media for each tool. The new sidebar has Home, Assets, and Remote, with Featured tools, Recent workflows, and Recent projects. Quick search (the / shortcut, the sidebar, or the Home search bar) finds any tool, with filters and previews. Home, the Video Editor, Settings, Keyboard Shortcuts, and all dialogs now share one design system and one light or dark theme. First-run is now one Setup screen for Hugging Face, API keys, and model downloads. It has an \"Opt out of basic analytics\" checkbox. A new splash screen plays the LTX-2 end-page animation while the Python environment installs. New back and forward navigation arrows in the header move you through the screens you visited. New tools Text to Video, Image to Video, and Audio to Video run locally, with a live results feed. Audio to Video can record from the microphone on Windows and Mac, and trim long audio. It generates at 540p, 720p, and 1080p. Retake and Extend accept a source of any length, have an optional Trim button"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-project-blaizzy--mlx-audio",
+        "name": "mlx-audio · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/blaizzy/mlx-audio/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-blaizzy",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 10,
+      "recent30Days": 5,
+      "sample": [
+        {
+          "title": "v0.5.9",
+          "url": "https://github.com/Blaizzy/mlx-audio/releases/tag/v0.5.9",
+          "publishedAt": "2026-10-13T18:37:03.000Z",
+          "summary": "What's Changed fix(qwen3_tts): don't add the transposed-conv bias twice in streaming decode by @Shoofio in #1003 Add Irodori-TTS v4-Large support (T5Gemma2 text encoder) by @yoshphys in #993 Add streaming support for Fish S2 Pro by @x-n2o in #977 mossformer2_se: use the custom Metal kernels only when Metal is available by @joshuaswarren in #1004 Add Nemotron speech streaming STT by @Lazarus-931 in #992 Reuse Nemotron predictor results across blank frames by @lyonsno in #1006 Migrate to httpx2, fix CI by @lucasnewman in #1012 fix(server): stop capping /v1/audio/transcriptions at 1024 tokens when max_tokens is omitted by @etzelm in #1009 Bump version to 0.5.9 by @lucasnewman in #1015 New Contributors @Shoofio made their first contribution in #1003 @x-n2o made their first contribution in #977 @joshuaswarren made their first contribution in #1004 @etzelm made their first contribution in #1009 Full Changelog: v0.5.8...v0.5.9"
+        },
+        {
+          "title": "v0.5.8",
+          "url": "https://github.com/Blaizzy/mlx-audio/releases/tag/v0.5.8",
+          "publishedAt": "2026-10-05T18:30:34.000Z",
+          "summary": "What's Changed Fix Voxtral streaming packet boundary drift by @Lazarus-931 in #990 perf(stt): speed up Qwen3 timestamp repair by @Hosi121 in #982 Fix Voxtral TTS openings: decode the first frame from the prompt state by @whallysson in #989 fix(stt): preserve MOSS convolution layout when loading MLX weights by @z11i in #976 fix(breeze): keep bf16 prompt embeddings in bf16 by @EdwardGong in #987 Expose realtime transcription capability by @Lazarus-931 in #991 Revert realtime transcription capability endpoint by @Lazarus-931 in #996 Bump version to 0.5.8 by @lucasnewman in #998 New Contributors @Hosi121 made their first contribution in #982 @whallysson made their first contribution in #989 @z11i made their first contribution in #976 @EdwardGong made their first contribution in #987 Full Changelog: v0.5.7...v0.5.8"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-comfyui-wiki-news",
+        "name": "ComfyUI Wiki · 工作流与开源创作分享",
+        "kind": "web_list",
+        "config": {
+          "url": "https://comfyui-wiki.com/en/news",
+          "itemSelector": "article",
+          "linkSelector": "a[href*=\"/news/\"]",
+          "titleSelector": "a[href*=\"/news/\"]",
+          "publishedAtSelector": "time",
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 8
+          }
+        },
+        "tier": "T2",
+        "first_party": false,
+        "owner_entity_id": "comfyui-wiki",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 20,
+      "recent30Days": 20,
+      "sample": [
+        {
+          "title": "Video editing",
+          "url": "https://comfyui-wiki.com/en/news/2026-10-13-h3-character-swap-live-wallpaper",
+          "publishedAt": "2026-10-13T00:00:00.000Z"
+        },
+        {
+          "title": "Ecosystem",
+          "url": "https://comfyui-wiki.com/en/news/2026-10-13-nvidia-vfx-nodes",
+          "publishedAt": "2026-10-13T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "rss-expand5-www-stablediffusiontutorials-com",
+        "name": "Stable Diffusion Tutorials · 创作教程",
+        "kind": "rss",
+        "config": {
+          "feedUrl": "https://www.stablediffusiontutorials.com/feeds/posts/default?alt=rss",
+          "_aihot": {
+            "initialBackfillLimit": 5
+          },
+          "maxItemAgeDays": 30,
+          "ingestNoiseFilter": {
+            "requireMarkers": [
+              "AI video",
+              "AI image",
+              "AI film",
+              "AI music",
+              "AI audio",
+              "AI voice",
+              "AI speech",
+              "AI filmmaking",
+              "text-to-video",
+              "text-to-image",
+              "text-to-speech",
+              "image generation",
+              "video generation",
+              "image editing",
+              "generative image",
+              "generative video",
+              "generative audio",
+              "ComfyUI",
+              "Stable Diffusion",
+              "Midjourney",
+              "NanoBanana",
+              "Nano Banana",
+              "FLUX",
+              "LoRA",
+              "Seedance",
+              "Seedream",
+              "Veo",
+              "Sora",
+              "Vidu",
+              "Wan2",
+              "Wan 2",
+              "HunyuanVideo",
+              "MoneyPrinter",
+              "Remotion",
+              "OpenMontage",
+              "AI绘画",
+              "AI作图",
+              "AI生图",
+              "AI视频",
+              "AI影视",
+              "AI电影",
+              "AI漫剧",
+              "AI动画",
+              "AI配音",
+              "AI音乐",
+              "AI 绘画",
+              "AI 视频",
+              "AI 图像",
+              "AI影像",
+              "短剧",
+              "漫剧",
+              "分镜",
+              "图生视频",
+              "文生视频",
+              "视频生成",
+              "图像生成",
+              "图片生成",
+              "数字人",
+              "即梦",
+              "可灵",
+              "海螺",
+              "动画生成"
+            ],
+            "requireWords": [
+              "kling",
+              "suno",
+              "udio",
+              "vidu",
+              "runway",
+              "krea",
+              "recraft"
+            ],
+            "includeBodyForTopic": true
+          }
+        },
+        "tier": "T2",
+        "first_party": false,
+        "owner_entity_id": "publisher-www.stablediffusiontutorials.com",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 25,
+      "recent30Days": 1,
+      "sample": [
+        {
+          "title": "Qwen Image 2.1- Image generation & Editing with 10 Images",
+          "url": "https://www.stablediffusiontutorials.com/2026/09/qwen-image-2.1.html",
+          "publishedAt": "2026-09-21T17:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-project-martindelophy--ai-video-editor",
+        "name": "ai-video-editor · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/MartinDelophy/ai-video-editor/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-martindelophy",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 10,
+      "recent30Days": 1,
+      "sample": [
+        {
+          "title": "Timeline Studio v1.0.9 — Agent relighting and depth video",
+          "url": "https://github.com/MartinDelophy/ai-video-editor/releases/tag/v1.0.9",
+          "publishedAt": "2026-10-13T06:29:27.000Z",
+          "summary": "Timeline Studio agents can now run depth-assisted relighting analysis and depth-video conversion through the browser's structured WebMCP tools, then review editable lighting changes or insert generated assets into the timeline. Highlights Add relight-analysis and depth-map to the existing AI prepare → start → inspect → cancel lifecycle. Tasks bind to inspected Visuals/Overlay clip IDs and reuse the production depth worker, pinned owned model mirrors, renderer and RIFE interpolation. Add shared clip.set_relight commands with validated lighting parameters, semantic before/after review, track-lock protection and undo. Enabling lighting requires complete analysis matching the source timing and selected quality. Keep Agent-generated depth videos in My assets until a separate reviewed insertion; analysis does not silently enable effects or replace source clips. Source changes are checked before committing results. Report actual model/task progress, support real cancellation, and return generated asset receipts. Add direct translations for the new task/review copy in all 13 interface languages. Update the repository editing Skill, self-contained browser discovery Skill, discovery digest, integration docs and localized project updates. This release also includes main's accumulated improvements since v1.0.8, including long-video playback, scrubbing and export optimizations. See the full changelog for the complete scope. Execution boundaries WebMCP requires a compatible native browser "
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-project-juntaosun--comecut",
+        "name": "ComeCut · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/juntaosun/ComeCut/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-juntaosun",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 10,
+      "recent30Days": 3,
+      "sample": [
+        {
+          "title": "ComeCut v0.1.9",
+          "url": "https://github.com/juntaosun/ComeCut/releases/tag/v0.1.9",
+          "publishedAt": "2026-10-07T15:38:03.000Z",
+          "summary": "This is ComeCut's first desktop version (Windows, only 28MB) ！It starts up extremely quickly and uses very few resources ! It now supports handling a variety of convenient daily editing tasks, and in addition, it is accelerating the integration of more advanced AI features. The main new features in the current version include: To keep you up-to-date, the developer version is set to expire automatically after 30 days. **(1) Internationalization: ** Added multilingual interface support (e.g., English) for the App Center, models, and plugins; more languages ​​will be added in the future; **(2) Bug Fixes: ** Resolved known issues for an improved user experience; Please download and try it out~ 🤗 这是 ComeCut 的第一个桌面版本（Windows, 仅28M）! 它启动速度极快，占用资源极少 ! 它现在支持处理多种便捷的日常剪辑工作，除此之外，它正在加速整合更先进的AI功能。当前版本的新增功能主要有： 为了让您保持最新,开发版设置为30天自动过期. **(1) 国际化语言: ** 对应用中心和模型和插件,补充多语言界面显示,例如 英语. 后续会持续增加更多语种; **(2) BUG修复: ** 修复已知问题, 体验更优秀; 请下载体验吧~ 🤗"
+        },
+        {
+          "title": "ComeCut v0.1.8",
+          "url": "https://github.com/juntaosun/ComeCut/releases/tag/v0.1.8",
+          "publishedAt": "2026-10-05T13:33:30.000Z",
+          "summary": "This is ComeCut's first desktop version (Windows)！It starts up extremely quickly and uses very few resources ! It now supports handling a variety of convenient daily editing tasks, and in addition, it is accelerating the integration of more advanced AI features. The main new features in the current version include: To keep you up-to-date, the developer version is set to expire automatically after 30 days. 2026-10-05 Milestone: Fully automated voiceover and reduced package size (only 28MB) ; **(1) Fully automated voiceover: ** We have achieved initial functionality to translate any video into Chinese or English voiceovers with a single click. The preview version now supports API integration via audio.cpp based on OpenAI's standard protocols; it supports cutting-edge TTS models such as index-tts2/2.5, Breeze-TTS2, OmniVoice, and Qwen3-ASR. **(2) Audio separation and restoration: ** this update adds \"Separate Audio\" and \"Restore Audio\" functions for video clips, accessible via the right-click menu on any clip. **(3) audio.cpp support: ** When you add a model, it automatically appears in the right-click menu (e.g., Qwen3-ASR, IndexTTS2.5). **(4) Reduced package size: ** I originally intended to integrate large, cutting-edge models directly, but the necessary dependencies caused the package size to balloon. Now, I have decoupled them, using APIs for local calls instead. A truly brilliant idea! Steps for one-click video translation and dubbing: (1) Download audio.cpp and the releva"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-project-mangfufu--director-desk",
+        "name": "director-desk · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/mangfufu/director-desk/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-mangfufu",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 10,
+      "recent30Days": 5,
+      "sample": [
+        {
+          "title": "导演台 0.5.0 · 时间轴交互与中英文界面",
+          "url": "https://github.com/mangfufu/director-desk/releases/tag/v0.5.0",
+          "publishedAt": "2026-10-14T09:55:44.000Z",
+          "summary": "本版更新 中英文切换：在“编辑 → 设置 → 语言”选择中文或 English，自动记住选择；支持英文搜索模型与动作。 动作库拖放：左侧新增动作库，内置动作与个人收藏可直接拖入人物轨道。 时间轴插入：动作和路径片段可放到其他片段前后或两段之间，需要时自动后移后续片段；支持多选一起移动。 拖动预览：片段跟随鼠标，半透明落点显示松手后的位置，改进边界吸附和自动滚动。 右键菜单：时间轴可调整时长、在播放头处分割、删除片段或交给 AI；画布可定位、复制和隐藏对象。右键拖动仍用于平移。 操作响应：改善动作添加与拖动的流畅度，动作添加完成后可立即点击播放。 新增英文 README，更新中英文使用说明。 Downloads DirectorDesk-Setup-0.5.0.exe — Windows x64 installer / 安装版 DirectorDesk-Portable-0.5.0-win-x64.zip — Windows x64 portable edition / 免安装版，完整解压后运行 DirectorDesk.exe director-desk-skill-0.5.0.zip — Agent skill / 配套技能，两种软件包均已内置 SHA256SUMS-0.5.0.txt — File checksums / 文件校验 What’s new Switch between English and Chinese in Edit → Settings → Language. Search models and actions in English. Drag built-in or saved actions from the new Actions tab onto character tracks. Insert action and path clips before, after, or between other clips. Later clips shift when needed to make room. Multi-selection is supported. See a floating clip and a translucent landing preview while dragging, with improved edge snapping and timeline scrolling. Right-click clips to edit timing, split at the playhead, delete, or ask AI to edit the selection. Right-click stage objects to frame, duplicate, or hide them. Right-drag still pans the stage view. Smoother action placement and timeline dragging. Click Play as soon as an action finishes loading. New English README and updated usage instructions."
+        },
+        {
+          "title": "导演台 0.4.11 · 动作、布景与插件扩展",
+          "url": "https://github.com/mangfufu/director-desk/releases/tag/v0.4.11",
+          "publishedAt": "2026-10-08T12:39:48.000Z",
+          "summary": "更新人物外形与基础动作，支持选中关节调整姿势和记录关键帧。 新增重力、碰撞、惯性、布娃娃及定时受力，提供物理演示场景。 新增对象编组、对齐、阵列和用户布景库，常用布景可保存、复用与分享。 新增工程历史版本，可命名保存方案并在重启后恢复。 新增人物与群演地面自动避障，可安排错峰通行。 新增插件安装与启停，支持扩展创作工具和画面效果，提供自由曲线示例。 扩展 AI 与 MCP 操作范围，支持直接打开、导入、保存和导出工程，减少文件选择弹窗。 改进 AI 连续编辑与会话保存，完善双模式配套提示词；修复部分工具调用失败。 优化编辑性能和文件操作，改善撤销、自动恢复与批量导出重试。 下载 Windows 安装版或免安装 ZIP；配套 Skill 随软件提供，也可单独下载。"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-project-hbai-ltd--toonflow-app",
+        "name": "Toonflow-app · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/HBAI-Ltd/Toonflow-app/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-hbai-ltd",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 10,
+      "recent30Days": 7,
+      "sample": [
+        {
+          "title": "Toonflow 2.0.6",
+          "url": "https://github.com/HBAI-Ltd/Toonflow-app/releases/tag/v2.0.6",
+          "publishedAt": "2026-10-13T07:59:07.000Z",
+          "summary": "📦 下载指南 选择你的设备对应的安装包，点击即可下载： 你的设备 下载 💻 Windows（64 位） ⬇️ 下载 Windows 安装包 🍎 Mac（M 系列芯片） ⬇️ 下载 M 系列 Mac 安装包 🍎 Mac（Intel 芯片） ⬇️ 下载 Intel Mac 安装包 📱 Android（ARM64，Android 8 及以上） ⬇️ 下载 Android APK 💡 手动安装请选择上表中的链接。下方其他文件供软件自动更新使用。 🚀 安装说明 💻 Windows：双击下载的安装包，按提示完成安装。 🍎 Mac：打开下载的安装包，将 toonflow.app 拖入“应用程序”，再从“应用程序”打开。 📱 Android：在手机上打开 APK，按系统提示允许此来源安装应用。后续版本可直接覆盖安装。 M 系列 Mac 安装包已完成 Developer ID 签名与 Apple 公证。首次打开时，macOS 仍可能提示确认打开从互联网下载的应用。 Full Changelog: v2.0.5...v2.0.6"
+        },
+        {
+          "title": "Toonflow 2.0.5",
+          "url": "https://github.com/HBAI-Ltd/Toonflow-app/releases/tag/v2.0.5",
+          "publishedAt": "2026-10-09T13:15:16.000Z",
+          "summary": "📦 下载指南 选择你的设备对应的安装包，点击即可下载： 你的设备 下载 💻 Windows（64 位） ⬇️ 下载 Windows 安装包 🍎 Mac（M 系列芯片） ⬇️ 下载 M 系列 Mac 安装包 🍎 Mac（Intel 芯片） ⬇️ 下载 Intel Mac 安装包 📱 Android（ARM64，Android 8 及以上） ⬇️ 下载 Android APK 💡 手动安装请选择上表中的链接。下方其他文件供软件自动更新使用。 🚀 安装说明 💻 Windows：双击下载的安装包，按提示完成安装。 🍎 Mac：打开下载的安装包，将 toonflow.app 拖入“应用程序”，再从“应用程序”打开。 📱 Android：在手机上打开 APK，按系统提示允许此来源安装应用。后续版本可直接覆盖安装。 M 系列 Mac 安装包已完成 Developer ID 签名与 Apple 公证。首次打开时，macOS 仍可能提示确认打开从互联网下载的应用。 What's Changed 修复画布无法粘贴剪贴板图片（develop） by @Clearlove275 in #302 将素材高度校验错误统一到供应商层 by @Clearlove275 in #303 New Contributors @Clearlove275 made their first contribution in #302 Full Changelog: v2.0.4...v2.0.5"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "web-expand5-project-opencut-app--opencut",
+        "name": "OpenCut · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/OpenCut-app/OpenCut/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-opencut-app",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "创作者",
+          "教程与工作流",
+          "开源项目分享"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "items": 4,
+      "recent30Days": 1,
+      "sample": [
+        {
+          "title": "FFmpeg 8.1.3 (build 1)",
+          "url": "https://github.com/OpenCut-app/OpenCut/releases/tag/ffmpeg-8.1.3-1",
+          "publishedAt": "2026-09-24T09:24:44.000Z",
+          "summary": "Shared LGPL builds of FFmpeg 8.1.3 for OpenCut's media crate, built from https://ffmpeg.org/releases/ffmpeg-8.1.3.tar.xz by the Media dependencies workflow. Each archive holds the exact configure flags (BUILD.md) and FFmpeg's licence. Pin them with bun run crates/media/setup/pin.ts ffmpeg-8.1.3-1."
+        }
+      ]
+    }
+  ],
+  "updates": [
+    {
+      "id": "json-expand4-project-colind0pe--trendlume",
+      "name": "Trendlume · 开源创作项目发布",
+      "previousPackSource": {
+        "id": "json-expand4-project-colind0pe--trendlume",
+        "name": "Trendlume · 开源创作项目发布",
+        "kind": "json_list",
+        "config": {
+          "mode": "json_api",
+          "url": "https://api.github.com/repos/colind0pe/Trendlume/releases?per_page=20",
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "urlTemplate": "{raw:html_url}",
+          "publishedAtPath": "published_at",
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-colind0pe",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "previousRuntime": {
+        "kind": "json_list",
+        "config": {
+          "url": "https://api.github.com/repos/colind0pe/Trendlume/releases?per_page=20",
+          "mode": "json_api",
+          "_aihot": {
+            "initialBackfillLimit": 3
+          },
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "urlTemplate": "{raw:html_url}",
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "maxItemAgeDays": 30,
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "publishedAtPath": "published_at"
+        }
+      },
+      "enabledPreserved": true,
+      "cursorPreserved": true,
+      "source": {
+        "id": "json-expand4-project-colind0pe--trendlume",
+        "name": "Trendlume · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/colind0pe/Trendlume/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-colind0pe",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "sample": [
+        {
+          "title": "v0.3.0",
+          "url": "https://github.com/colind0pe/Trendlume/releases/tag/v0.3.0",
+          "publishedAt": "2026-09-24T08:16:36.000Z",
+          "summary": "Trendlume v0.3.0: 多赛道生产流、云端生成扩展与故事板工作台重构 Trendlume v0.3.0 正式发布！本次更新将视频生成引擎由单一文本流水线全面升级为支持「知识科普、电商带货、故事短剧」的三大赛道生产体系，接入阿里云百炼、Google 与 RunningHub 云端图像与视频生成能力，并重构了解耦的故事板工作室与镜头级精修控制。 🌟 核心新特性与改动 1. 三大赛道生产流程（Multi-Track Production） 知识科普：从选题调研、热榜灵感或现成文案切入，经过事实检索与结构化策划卡，自动拆解镜头大纲并进入故事板精修与本地合成。 电商带货：引入商品事实表（Truth Sheet）与合规约束，支持创意策划与实拍素材强锁定，确保关键商品画面的真实性与前后一致。 故事短剧：支持剧作设定集、角色库、场景库与道具库资产管理，支持多集分镜头拆解与审核审批门禁。 2. 模型与云端生成服务扩展（Provider Ecosystem） 图像生成：新增阿里云百炼（Qwen Image 3.0 Pro，支持角色与场景参考）、Google（Gemini Image）以及 RunningHub 线上 ComfyUI 工作流适配器；保留本地 ComfyUI 与火山方舟 Seedream。 视频生成：新增阿里云百炼（Wan 2.7 图生视频与文生视频）、Google（Veo 3.1 首尾帧与参考图支持）与 RunningHub 视频工作流适配器；保留火山方舟 Seedance 与本地 ComfyUI。 前置说明：云端生成依赖对应平台的 API Key；本地 ComfyUI 需要具备相应显存与运行环境；内置微软 Edge-TTS 依然开箱即用、无需填 Key。 3. 故事板工作室与镜头级精修（Storyboard Workbench） 解耦媒体规划与渲染：生成草稿后保留对每个镜头的修改权，支持单镜头旁白微调、分镜头试听、素材换源与局部重试，拒绝因单镜头不佳全片重跑。 任务流水线中心：集中展示与管理多项目任务进度，支持随时暂停、恢复与失败镜头定位。 4. 安全、持久化与工程基建 密钥安全脱敏：本地敏感凭据采用 AES 算法加密持久化存储，应用日志与状态流中全自动打码脱敏。 纯轻量架构：坚持无重量级外部依赖（SQLite + asyncio 队列 + 本地存储），支持单文件一键打包与本地源码运行。 文档与界面更新：重构中英文 README，同步更新 01~07 全套工作台界面预览截图。 ⚠️ 使用边界与前置依赖 视频合成与渲染：本地依赖 FFmpeg 以及 Playwright Chromium（源码运行首次需执行 uv run playwright install chromium）。 社交平台发布：当前版本已实现官方创作者中心扫码发布的渠道为「抖音」；其他平台仍在规划与社区共建中。 Trendlume v0.3.0: Multi-Track Production, Cloud Providers, and Storyboard Workbench Trendlume v0.3.0 is officially released! This update evolves the creation engine from a single script-to-video pipeline into dedicated multi-track production workflows (Knowledge, E-commerce, and Drama"
+        }
+      ]
+    },
+    {
+      "id": "json-expand4-project-lcy362--agnes-video-generator",
+      "name": "agnes-video-generator · 开源创作项目发布",
+      "previousPackSource": {
+        "id": "json-expand4-project-lcy362--agnes-video-generator",
+        "name": "agnes-video-generator · 开源创作项目发布",
+        "kind": "json_list",
+        "config": {
+          "mode": "json_api",
+          "url": "https://api.github.com/repos/lcy362/agnes-video-generator/releases?per_page=20",
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "urlTemplate": "{raw:html_url}",
+          "publishedAtPath": "published_at",
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-lcy362",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "previousRuntime": {
+        "kind": "json_list",
+        "config": {
+          "url": "https://api.github.com/repos/lcy362/agnes-video-generator/releases?per_page=20",
+          "mode": "json_api",
+          "_aihot": {
+            "initialBackfillLimit": 3
+          },
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "urlTemplate": "{raw:html_url}",
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "maxItemAgeDays": 30,
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "publishedAtPath": "published_at"
+        }
+      },
+      "enabledPreserved": true,
+      "cursorPreserved": true,
+      "source": {
+        "id": "json-expand4-project-lcy362--agnes-video-generator",
+        "name": "agnes-video-generator · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/lcy362/agnes-video-generator/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-lcy362",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "sample": [
+        {
+          "title": "v7.1.1",
+          "url": "https://github.com/lcy362/agnes-video-generator/releases/tag/v7.1.1",
+          "publishedAt": "2026-10-15T05:26:15.000Z",
+          "summary": "Usage Docker Image Multi-arch (linux/amd64, linux/arm64) images for this release are published to GHCR and Docker Hub. Pull GitHub Container Registry (GHCR): docker pull ghcr.io/lcy362/free-short-video:7.1.1 Docker Hub: docker pull lcy362/free-short-video:v7.1.1 Run Data persistence: the app writes all generated videos, uploads and settings into /app/.working_dir and /app/.agnes_config inside the container. A plain docker run without a volume loses everything when the container is recreated. Mount these paths to your host so outputs survive restarts and can be exported. Option A — bind mount to a host folder (recommended; files land directly in the folder): mkdir -p ~/agnes-data/working ~/agnes-data/config docker run -d -p 8765:8765 \\ -e AGNES_API_KEY=<your-key> \\ -v ~/agnes-data/working:/app/.working_dir \\ -v ~/agnes-data/config:/app/.agnes_config \\ ghcr.io/lcy362/free-short-video:7.1.1 Your videos will be in ~/agnes-data/working/ on your machine. Option B — named Docker volume (no host path needed; survives container recreation): docker volume create agnes-working docker volume create agnes-config docker run -d -p 8765:8765 \\ -e AGNES_API_KEY=<your-key> \\ -v agnes-working:/app/.working_dir \\ -v agnes-config:/app/.agnes_config \\ ghcr.io/lcy362/free-short-video:7.1.1 Export files from a named volume: docker run --rm -v agnes-working:/data -v \"$PWD\":/out busybox cp -r /data/. /out/agnes-export Then open http://localhost:8765. Notes Prefer Docker Hub? Replace the image with lcy"
+        },
+        {
+          "title": "v7.1.0",
+          "url": "https://github.com/lcy362/agnes-video-generator/releases/tag/v7.1.0",
+          "publishedAt": "2026-10-09T09:00:55.000Z",
+          "summary": "Usage Docker Image Multi-arch (linux/amd64, linux/arm64) images for this release are published to GHCR and Docker Hub. Pull GitHub Container Registry (GHCR): docker pull ghcr.io/lcy362/free-short-video:7.1.0 Docker Hub: docker pull lcy362/free-short-video:v7.1.0 Run Data persistence: the app writes all generated videos, uploads and settings into /app/.working_dir and /app/.agnes_config inside the container. A plain docker run without a volume loses everything when the container is recreated. Mount these paths to your host so outputs survive restarts and can be exported. Option A — bind mount to a host folder (recommended; files land directly in the folder): mkdir -p ~/agnes-data/working ~/agnes-data/config docker run -d -p 8765:8765 \\ -e AGNES_API_KEY=<your-key> \\ -v ~/agnes-data/working:/app/.working_dir \\ -v ~/agnes-data/config:/app/.agnes_config \\ ghcr.io/lcy362/free-short-video:7.1.0 Your videos will be in ~/agnes-data/working/ on your machine. Option B — named Docker volume (no host path needed; survives container recreation): docker volume create agnes-working docker volume create agnes-config docker run -d -p 8765:8765 \\ -e AGNES_API_KEY=<your-key> \\ -v agnes-working:/app/.working_dir \\ -v agnes-config:/app/.agnes_config \\ ghcr.io/lcy362/free-short-video:7.1.0 Export files from a named volume: docker run --rm -v agnes-working:/data -v \"$PWD\":/out busybox cp -r /data/. /out/agnes-export Then open http://localhost:8765. Notes Prefer Docker Hub? Replace the image with lcy"
+        }
+      ]
+    },
+    {
+      "id": "json-expand4-project-xixihhhh--clipforge",
+      "name": "clipforge · 开源创作项目发布",
+      "previousPackSource": {
+        "id": "json-expand4-project-xixihhhh--clipforge",
+        "name": "clipforge · 开源创作项目发布",
+        "kind": "json_list",
+        "config": {
+          "mode": "json_api",
+          "url": "https://api.github.com/repos/xixihhhh/clipforge/releases?per_page=20",
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "urlTemplate": "{raw:html_url}",
+          "publishedAtPath": "published_at",
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-xixihhhh",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "previousRuntime": {
+        "kind": "json_list",
+        "config": {
+          "url": "https://api.github.com/repos/xixihhhh/clipforge/releases?per_page=20",
+          "mode": "json_api",
+          "_aihot": {
+            "initialBackfillLimit": 3
+          },
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "urlTemplate": "{raw:html_url}",
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "maxItemAgeDays": 30,
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "publishedAtPath": "published_at"
+        }
+      },
+      "enabledPreserved": true,
+      "cursorPreserved": true,
+      "source": {
+        "id": "json-expand4-project-xixihhhh--clipforge",
+        "name": "clipforge · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/xixihhhh/clipforge/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-xixihhhh",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "sample": [
+        {
+          "title": "ClipForge v0.9.11 — Ark permission diagnostics",
+          "url": "https://github.com/xixihhhh/clipforge/releases/tag/v0.9.11",
+          "publishedAt": "2026-10-08T03:39:26.000Z",
+          "summary": "ClipForge v0.9.11 improves Ark image/video authorization diagnostics. The Ark model-list connection probe now reports that generation permissions are unverified instead of claiming a successful connection proves model access. Ark 401/403 failures now explain generation credentials, Agent Plan separation, project/model permissions and custom endpoints while preserving the upstream error and request ID. Authorization failures do not trigger repeated paid generation submissions. These changes address the misleading diagnostics in #30. Cloud-side model permissions still require configuration in the Ark console. Downloads: macOS (Apple Silicon): .dmg Windows (x64): .exe Linux (x64): .AppImage Agent skills: clipforge-skill.zip and clipforge-script-judges.zip MCP package: clipforge-mcp-0.1.6.tgz Desktop installers are unsigned. Windows/Linux builds are CI-built and have not been manually tested on those platforms. Validation: 1,289 tests passed; TypeScript, production build and CI passed. Desktop release builds passed for all three platforms."
+        },
+        {
+          "title": "ClipForge v0.9.10 · 火山生图与配画面修复",
+          "url": "https://github.com/xixihhhh/clipforge/releases/tag/v0.9.10",
+          "publishedAt": "2026-09-23T15:49:15.000Z",
+          "summary": "ClipForge v0.9.10：修复火山方舟 Seedream 多图参考与空 Seed 参数问题；免费配画面不再静默混入无关通用背景，未找到贴题素材的镜头会明确留空并提示处理。教程同步补充首次使用、九宫格和排错步骤。"
+        }
+      ]
+    },
+    {
+      "id": "json-expand4-project-jnmetacode--openshorts",
+      "name": "openshorts · 开源创作项目发布",
+      "previousPackSource": {
+        "id": "json-expand4-project-jnmetacode--openshorts",
+        "name": "openshorts · 开源创作项目发布",
+        "kind": "json_list",
+        "config": {
+          "mode": "json_api",
+          "url": "https://api.github.com/repos/jnMetaCode/openshorts/releases?per_page=20",
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "urlTemplate": "{raw:html_url}",
+          "publishedAtPath": "published_at",
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-jnmetacode",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "previousRuntime": {
+        "kind": "json_list",
+        "config": {
+          "url": "https://api.github.com/repos/jnMetaCode/openshorts/releases?per_page=20",
+          "mode": "json_api",
+          "_aihot": {
+            "initialBackfillLimit": 3
+          },
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "urlTemplate": "{raw:html_url}",
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "maxItemAgeDays": 30,
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "publishedAtPath": "published_at"
+        }
+      },
+      "enabledPreserved": true,
+      "cursorPreserved": true,
+      "source": {
+        "id": "json-expand4-project-jnmetacode--openshorts",
+        "name": "openshorts · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/jnMetaCode/openshorts/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-jnmetacode",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "sample": [
+        {
+          "title": "v2.0.0-alpha.26",
+          "url": "https://github.com/jnMetaCode/openshorts/releases/tag/v2.0.0-alpha.26",
+          "publishedAt": "2026-09-23T09:46:12.000Z",
+          "summary": "What's Changed feat(mcp): MCP server——让 AI agent 直接话题进、成片出 by @jnMetaCode in #19 fix(script): 脚本偏短时留最好的一稿，并改为扩写/精简现有稿 by @jnMetaCode in #20 docs: 本机模型档位说实话（7B 能跑通，发布用 14B 以上） by @jnMetaCode in #21 fix(rank): 看图把关候选编号统一（3B 视觉模型 1/5 → 4/5）+ 可选本机 Ollama 视觉模型 by @jnMetaCode in #22 docs: 去掉同名说明；讲清画面不是幻灯片（实拍视频片段 + 会动的照片） by @jnMetaCode in #23 release: 2.0.0-alpha.26（npm 首发版本） by @jnMetaCode in #24 Full Changelog: desktop-v0.1.1...v2.0.0-alpha.26"
+        },
+        {
+          "title": "desktop-v0.1.2",
+          "url": "https://github.com/jnMetaCode/openshorts/releases/tag/desktop-v0.1.2",
+          "publishedAt": "2026-09-23T13:14:08.000Z",
+          "summary": "桌面安装包(未签名,首次打开需在「系统设置 → 隐私与安全性」放行)。 校验下载(在下载目录执行,只校验你下的那个文件): # macOS shasum -a 256 --ignore-missing -c SHA256SUMS-mac.txt # Linux sha256sum --ignore-missing -c SHA256SUMS-linux.txt # Windows PowerShell (Get-FileHash .\\OpenShorts.Setup.0.1.0.exe -Algorithm SHA256).Hash.ToLower() # 与 SHA256SUMS-win.txt 里的那一行比对 What's Changed docs: 安装命令改成 npx openshorts（npm 已首发） by @jnMetaCode in #25 ci(desktop): 发版前真把打出来的包起起来打几条接口；桌面版号提到 0.1.2 by @jnMetaCode in #26 fix(i18n): doctor 按语言说话；素材原因不再中英混杂；中文扫描补两个洞 by @jnMetaCode in #27 Full Changelog: v2.0.0-alpha.26...desktop-v0.1.2"
+        }
+      ]
+    },
+    {
+      "id": "json-expand4-project-1076184145--video-automation",
+      "name": "video-automation · 开源创作项目发布",
+      "previousPackSource": {
+        "id": "json-expand4-project-1076184145--video-automation",
+        "name": "video-automation · 开源创作项目发布",
+        "kind": "json_list",
+        "config": {
+          "mode": "json_api",
+          "url": "https://api.github.com/repos/1076184145/video-automation/releases?per_page=20",
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "urlTemplate": "{raw:html_url}",
+          "publishedAtPath": "published_at",
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-1076184145",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "previousRuntime": {
+        "kind": "json_list",
+        "config": {
+          "url": "https://api.github.com/repos/1076184145/video-automation/releases?per_page=20",
+          "mode": "json_api",
+          "_aihot": {
+            "initialBackfillLimit": 3
+          },
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "urlTemplate": "{raw:html_url}",
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "maxItemAgeDays": 30,
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "publishedAtPath": "published_at"
+        }
+      },
+      "enabledPreserved": true,
+      "cursorPreserved": true,
+      "source": {
+        "id": "json-expand4-project-1076184145--video-automation",
+        "name": "video-automation · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/1076184145/video-automation/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-1076184145",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "sample": [
+        {
+          "title": "Video Automation v0.2.13",
+          "url": "https://github.com/1076184145/video-automation/releases/tag/v0.2.13",
+          "publishedAt": "2026-10-07T06:52:29.000Z",
+          "summary": "What's Changed fix: enforce job directory containment in API routes by @1076184145 in #20 Full Changelog: v0.2.12...v0.2.13"
+        },
+        {
+          "title": "Video Automation v0.2.12",
+          "url": "https://github.com/1076184145/video-automation/releases/tag/v0.2.12",
+          "publishedAt": "2026-10-05T14:55:53.000Z",
+          "summary": "What's Changed fix: gate releases on tests and harden local API requests by @1076184145 in #19 Full Changelog: v0.2.11...v0.2.12"
+        }
+      ]
+    },
+    {
+      "id": "json-expand4-project-oskey--go-ai-studio",
+      "name": "Go-Ai-Studio · 开源创作项目发布",
+      "previousPackSource": {
+        "id": "json-expand4-project-oskey--go-ai-studio",
+        "name": "Go-Ai-Studio · 开源创作项目发布",
+        "kind": "json_list",
+        "config": {
+          "mode": "json_api",
+          "url": "https://api.github.com/repos/oskey/Go-Ai-Studio/releases?per_page=20",
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "urlTemplate": "{raw:html_url}",
+          "publishedAtPath": "published_at",
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-oskey",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "previousRuntime": {
+        "kind": "json_list",
+        "config": {
+          "url": "https://api.github.com/repos/oskey/Go-Ai-Studio/releases?per_page=20",
+          "mode": "json_api",
+          "_aihot": {
+            "initialBackfillLimit": 3
+          },
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "urlTemplate": "{raw:html_url}",
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "maxItemAgeDays": 30,
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "publishedAtPath": "published_at"
+        }
+      },
+      "enabledPreserved": true,
+      "cursorPreserved": true,
+      "source": {
+        "id": "json-expand4-project-oskey--go-ai-studio",
+        "name": "Go-Ai-Studio · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/oskey/Go-Ai-Studio/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-oskey",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "sample": [
+        {
+          "title": "Go-Ai-Studio v1.1.2",
+          "url": "https://github.com/oskey/Go-Ai-Studio/releases/tag/v1.1.2",
+          "publishedAt": "2026-10-09T05:02:35.000Z",
+          "summary": "更新内容 合入 @happymy 的 PR #5：MiniMax H3 短视频抽帧、H3 多段视频渲染与拼接、LM Studio 兼容增强及相关修复。 在系统设置中选择随附 H3 工作流、启用 H3 抽帧或选择 Krea2 GGUF 工作流时，显示模型、插件与硬件适配提醒。 在 README 结尾补充贡献者致谢、优化项目链接和三个 H3 工作流的使用注意事项。 各平台发布包包含 README.md、version.txt 和 workflows，便于查看配置说明与程序版本。 H3 / GGUF 工作流注意事项 以下三个 H3 工作流均为 GGUF 量化适配版： workflows/minimax_h3_t2v-gguf-api.json workflows/minimax_h3_ref2v-gguf-api.json workflows/minimax_h3_i2v-gguf-api.json 贡献者基于 32GB RAM + AMD Radeon RX 7900 XTX（ROCm）环境调优，使用 Q4_K_M 量化模型。需要自行安装 ComfyUI-GGUF、对应模型及工作流引用的其他自定义节点；H3 抽帧和视频拼接还需要 FFmpeg。发布包不包含模型权重或 ComfyUI 插件。 NVIDIA 用户及其他内存/显存配置用户请按本机环境调整模型、加载节点和内存参数。GGUF 不代表仅支持 AMD；如果改用未量化模型，需要同步替换对应加载节点与配置。随附 Krea2_t2i_20260818_API.json 也遵循上述 GGUF 适配要求。 感谢 @happymy！工作流优化与配置参考：happymy/MinimaxH3-7900xtx。 验证 前端构建与 Go 测试通过，三个 H3 工作流的提醒、切换隐藏、H3 抽帧模式及 Krea2 提醒已在浏览器中检查，并检查桌面与手机布局。本次未进行 GPU 实际出图或视频生成验证。"
+        }
+      ]
+    },
+    {
+      "id": "json-expand4-project-harry0703--moneyprinterturbo",
+      "name": "MoneyPrinterTurbo · 开源创作项目发布",
+      "previousPackSource": {
+        "id": "json-expand4-project-harry0703--moneyprinterturbo",
+        "name": "MoneyPrinterTurbo · 开源创作项目发布",
+        "kind": "json_list",
+        "config": {
+          "mode": "json_api",
+          "url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/releases?per_page=20",
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "urlTemplate": "{raw:html_url}",
+          "publishedAtPath": "published_at",
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "maxItemAgeDays": 30,
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-harry0703",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "previousRuntime": {
+        "kind": "json_list",
+        "config": {
+          "url": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo/releases?per_page=20",
+          "mode": "json_api",
+          "_aihot": {
+            "initialBackfillLimit": 3
+          },
+          "itemsPath": "",
+          "titlePaths": [
+            "name",
+            "tag_name"
+          ],
+          "urlTemplate": "{raw:html_url}",
+          "summaryPaths": [
+            "body"
+          ],
+          "summaryIsBody": true,
+          "maxItemAgeDays": 30,
+          "requireBoolean": {
+            "path": "draft",
+            "equals": false
+          },
+          "publishedAtPath": "published_at"
+        }
+      },
+      "enabledPreserved": true,
+      "cursorPreserved": true,
+      "source": {
+        "id": "json-expand4-project-harry0703--moneyprinterturbo",
+        "name": "MoneyPrinterTurbo · 开源创作项目发布",
+        "kind": "web_list",
+        "config": {
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/releases",
+          "itemSelector": ".Box:has(relative-time):has(a[href*=\"/releases/tag/\"])",
+          "linkSelector": "a[href*=\"/releases/tag/\"]",
+          "titleSelector": "a[href*=\"/releases/tag/\"]",
+          "publishedAtSelector": "relative-time[datetime]",
+          "allowUrlPrefixes": [
+            "https://github.com/"
+          ],
+          "maxItemAgeDays": 30,
+          "detail": {
+            "maxFetches": 3,
+            "summarySelector": ".markdown-body"
+          },
+          "_aihot": {
+            "initialBackfillLimit": 3
+          }
+        },
+        "tier": "T1_5",
+        "first_party": true,
+        "owner_entity_id": "github-harry0703",
+        "participation_mode": "editorial",
+        "interval_minutes": 120,
+        "tags": [
+          "开源项目分享",
+          "视频与短剧制作",
+          "创作工具"
+        ],
+        "site_fulltext": false,
+        "syndicate_fulltext": false
+      },
+      "sample": [
+        {
+          "title": "v1.3.8",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/releases/tag/v1.3.8",
+          "publishedAt": "2026-10-03T03:31:16.000Z",
+          "summary": "English | 中文 Highlights Added continuous progress reporting during stock footage downloads, clip processing, and final rendering, with task logs from background helper threads visible in the WebUI. Added configurable stock material and clip rendering concurrency. Stock material concurrency applies to Pexels, Pixabay, and Coverr; both settings default to 1 (serial processing). Added VoxCPM reference-audio voice cloning and optional delivery conditioning to carry over pacing and emotion, with local Whisper transcription for editable reference transcripts. Added Fluxion AI, Cheaper Inference, Requesty, FutureInfra, Y-API, and iFlytek Spark (Astron MaaS) LLM providers. Added MuAPI as a video material source, with model endpoint configuration and asynchronous generation. Added Catalan WebUI localization. Improved video color consistency by using the BT.709 conversion matrix and color metadata in the main rendering pipeline. Added an opt-in local video project CLI with revision tracking, change comparison, and reuse of unchanged rendering artifacts when replacing scenes, narration, or background music. Fixes and Improvements Improved Redis task updates, queue admission, and startup recovery to reduce lost fields, scheduling conflicts, and stalled queues. Invalid queued requests no longer prevent later usable tasks from being dispatched. Added deadlines for stalled FFmpeg operations and improved temporary-file cleanup. Failed encodes no longer replace successful video outputs with i"
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "id": "web-expand5-project-lightricks--ltx-2",
+      "reason": "已有同地址或同项目来源"
+    }
+  ]
+}

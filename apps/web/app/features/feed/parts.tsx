@@ -5,6 +5,7 @@ import { IconBookmark } from "../../components/icons";
 import { SourceAvatar } from "../../components/ui/SourceAvatar";
 import { Lightbox } from "../../components/ui/Lightbox";
 import { toggleStar, useIsStarred } from "../../lib/local-state";
+import { useI18n } from "../../i18n";
 
 /** The source's name, or, for X, avatar + display name + @handle. */
 export function SourceLine({ item, className = "" }: { item: Pick<FeedItemSummary, "source" | "x" | "channel">; className?: string }) {
@@ -22,17 +23,18 @@ export function SourceLine({ item, className = "" }: { item: Pick<FeedItemSummar
 
 /** Up to four media thumbnails, kept small in lists (the detail page shows them larger). Videos are stills. */
 export function MediaThumbs({ media, className = "" }: { media: MediaView[]; className?: string }) {
+  const { t } = useI18n();
   const [index, setIndex] = useState<number | null>(null);
   const images = media.filter((m) => m.kind === "image").map((m) => ({ src: m.fullUrl ?? m.url, alt: m.alt }));
   const shown = media.slice(0, 4);
   if (shown.length === 0) return null;
   return (
     <>
-    <div className={`flex gap-1.5 overflow-hidden ${className}`}>
+    <div className={`cinema-media flex gap-1.5 overflow-hidden ${className}`}>
       {shown.map((m) => {
         const Wrapper = m.kind === "image" ? "button" : "span";
         return (
-        <Wrapper key={m.url} {...(m.kind === "image" ? { type: "button" as const, "aria-label": `查看图片${m.alt ? `：${m.alt}` : ""}`, onClick: (e: React.MouseEvent) => { e.preventDefault(); e.stopPropagation(); setIndex(images.findIndex((image) => image.src === (m.fullUrl ?? m.url))); } } : {})} className={`relative ${m.kind === "image" ? "z-10 cursor-zoom-in" : ""} shrink-0 overflow-hidden rounded-control border border-line-soft bg-bg-sunk ${shown.length === 1 ? "max-w-[240px]" : "w-[112px]"}`}>
+        <Wrapper key={m.url} {...(m.kind === "image" ? { type: "button" as const, "aria-label": m.alt ? t("查看图片：{alt}", { alt: m.alt }) : t("查看图片"), onClick: (e: React.MouseEvent) => { e.preventDefault(); e.stopPropagation(); setIndex(images.findIndex((image) => image.src === (m.fullUrl ?? m.url))); } } : {})} className={`relative ${m.kind === "image" ? "z-10 cursor-zoom-in" : ""} shrink-0 overflow-hidden rounded-control border border-line-soft bg-bg-sunk ${shown.length === 1 ? "max-w-[240px]" : "w-[112px]"}`}>
           <img src={m.poster ?? m.url} srcSet={m.srcSet} sizes={shown.length === 1 ? `${m.width && m.height ? Math.min(240, Math.ceil(112 * m.width / m.height)) : 240}px` : "112px"} width={m.width ?? undefined} height={m.height ?? undefined} alt={m.alt ?? ""} loading="lazy" decoding="async" className={`h-[112px] object-cover ${shown.length === 1 ? "w-auto max-w-[240px]" : "w-[112px]"}`} />
           {m.kind === "video" && (
             <span className="absolute inset-0 grid place-items-center" aria-hidden="true">
@@ -69,13 +71,15 @@ export function useStar(item: Starrable) {
 
 /** Bookmark toggle kept in this browser (收藏): 26px, or sized by `size` or by `className`. */
 export function StarButton({ item, size, className = "size-[26px]" }: { item: Starrable; size?: number; className?: string }) {
+  const { t } = useI18n();
   const { on, toggle, pulse } = useStar(item);
+  const label = on ? t("取消收藏") : t("收藏");
   return (
     <button
       type="button"
       aria-pressed={on}
-      aria-label={on ? "取消收藏" : "收藏"}
-      title={on ? "取消收藏" : "收藏"}
+      aria-label={label}
+      title={label}
       onClick={(e) => {
         e.preventDefault();
         e.stopPropagation();
