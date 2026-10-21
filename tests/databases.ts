@@ -4,6 +4,8 @@
 // created if missing. As the runner's global setup this module brings the template up to date
 // (migrations) and removes the copies and scratch folders of the run; as a preload in each
 // file's process it copies the template and gives the file its own data and temporary folders.
+// Setup also removes copies left behind by earlier template names: a run only dropped copies of the
+// name it used, so every renamed experiment stranded ~130 databases (~1.4 GB).
 // *.standalone.test.ts need no database copy; npm run test:standalone runs them without a database.
 import "./setup.ts";
 import { execFileSync } from "node:child_process";
@@ -17,6 +19,8 @@ const template = new URL(process.env.DATABASE_URL!);
 const name = decodeURIComponent(template.pathname.slice(1));
 const suffix = name.slice(name.lastIndexOf("_") + 1);
 const copyPattern = `^${name.replace(/\W/g, "\\$&")}_f[0-9]+_${suffix}$`;
+// Copies of any template. Setup drops these; teardown keeps to this run's own names.
+const staleCopyPattern = `^.*_f[0-9]+_(test|ci)$`;
 
 function urlOf(database: string) {
   const url = new URL(template);
@@ -33,9 +37,9 @@ async function onServer(fn: (db: postgres.Sql) => Promise<unknown>) {
   }
 }
 
-const dropCopies = () =>
+const dropCopies = (pattern: string) =>
   onServer(async (db) => {
-    for (const { datname } of await db<{ datname: string }[]>`SELECT datname FROM pg_database WHERE datname ~ ${copyPattern}`) {
+    for (const { datname } of await db<{ datname: string }[]>`SELECT datname FROM pg_database WHERE datname ~ ${pattern}`) {
       await db`DROP DATABASE IF EXISTS ${db(datname)} WITH (FORCE)`;
     }
   });
@@ -46,14 +50,14 @@ export async function globalSetup() {
   });
   // The migrations script runs as a literal entry path from the repo root (npm test's cwd).
   execFileSync("node", ["--", "scripts/migrate.ts"], { stdio: ["ignore", "ignore", "inherit"] });
-  await dropCopies(); // left by an interrupted run
+  await dropCopies(staleCopyPattern); // left by an interrupted run or an earlier template name
 }
 
 // Each file's scratch folder is named after the runner, so a run removes only its own leftovers.
 const scratchPrefix = (runner: number) => `aihot-test-${runner}-`;
 
 export async function globalTeardown() {
-  await dropCopies();
+  await dropCopies(copyPattern);
   for (const entry of readdirSync(tmpdir())) {
     if (entry.startsWith(scratchPrefix(process.pid))) rmSync(path.join(tmpdir(), entry), { recursive: true, force: true }); // a crashed file's
   }
