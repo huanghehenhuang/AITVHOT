@@ -59,9 +59,15 @@ for (const [path, type] of MACHINE) await check(path, (res) => (type.test(res.he
 // The stylesheet the page names must actually be served. A rejected static path leaves every page
 // answering 200 while its CSS and JS sit at 404, which no fixed-path check above would notice.
 const home = await get("/");
-const asset = (await home.text()).match(/\/assets\/[^"'\\]+\.css/)?.[0];
+const homeHtml = await home.text();
+const asset = homeHtml.match(/\/assets\/[^"'\\]+\.css/)?.[0];
 if (asset) await check(asset, (res) => (/^text\/css/.test(res.headers.get("content-type") ?? "") ? null : `content-type ${res.headers.get("content-type")}`));
 else { console.log("✗ /  the page names no built stylesheet"); failed += 1; }
+// Same class of miss for hydration: a stale in-memory manifest keeps naming JS that a
+// rebuild deleted (2026-10-22), so the stylesheet check alone leaves the page inert.
+const script = homeHtml.match(/\/assets\/[^"'\\]+\.js/)?.[0];
+if (script) await check(script, (res) => (/javascript/.test(res.headers.get("content-type") ?? "") ? null : `content-type ${res.headers.get("content-type")}`));
+else { console.log("✗ /  the page names no built script"); failed += 1; }
 // MCP: the handshake answers with the site's server name.
 const mcp = await get("/api/mcp", {
   method: "POST",

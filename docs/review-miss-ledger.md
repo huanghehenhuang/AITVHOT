@@ -37,3 +37,20 @@
 **新增防线**：`check.yml` 补 `--live`（提交 3a228bd）。`scripts/smoke.ts` 头部已写明非本地目标需要 `--live`。
 
 **回归验证**：`--base http://web:3000` 不带 `--live` 时拒绝并给出提示；带 `--live` 时门禁放行（随后是网络错误，因为本机不解析 `web`）；`--base http://127.0.0.1:3000` 全部通过。
+
+## 2026-10-22 · 重建后未重启 web，旧 manifest 引用已删除的资源（P0）
+
+**发现问题**：2026-10-21 22:58 阅读主题改版重建 `build/client`（vite 清空 `assets/` 重写 hash），而 web 进程仍是 10-19 13:55 启动的旧构建：SSR 出页继续引用 `root-C1g7ngOm.css` 等旧 hash，源站全部 404。CF 边缘残留的旧 CSS 缓存（immutable 一年）把 404 掩盖了半天，缓存未命中的用户拿到的是无 CSS、无 hydration 的页面。10-22 上午用户报障「前端样式没了」，重启 web 后恢复。
+
+**漏报原因**：
+
+1. `start-stack.ps1`（仓库外运维脚本）见 3000 端口在听就 `[skip]`，没有「构建比进程新」的判定；重建者在提交 0833128 前后既没重启 web 也没跑 smoke。
+2. smoke 只校验首页引用的 CSS，不校验 JS——本次 JS 同样全部 404（hydration 断了），即使当时跑了 smoke 也只会发现一半。
+
+**新增防线**：
+
+- `start-stack.ps1`：web 段改为检测进程与 `build/client` 的新旧，构建比进程新就强制重启（本仓库之外，2026-10-22 生效）。
+- `scripts/smoke.ts`：在样式表检查旁增加首页引用的首个 `/assets/*.js` 的 200 + `javascript` 校验。
+
+**回归验证**：重启后 `node scripts/smoke.ts --base http://127.0.0.1:3000` 全绿（含 `/assets/root-Ba1ey4dZ.css` 与 JS 检查）；线上 `aitvhot.top` 首页引用 `root-Ba1ey4dZ.css` 且经 CF 200 完整（106259 字节），旧 hash `root-BPtEYiOY.js` 404 但已无页面引用；`start-stack.ps1` 重跑对新进程输出 `[skip]`，不误重启。
+
