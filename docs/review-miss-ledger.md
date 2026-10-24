@@ -49,8 +49,8 @@
 
 **新增防线**：
 
-- `start-stack.ps1`：web 段改为检测进程与 `build/client` 的新旧，构建比进程新就强制重启（本仓库之外，2026-10-22 生效）。
-- `scripts/smoke.ts`：在样式表检查旁增加首页引用的首个 `/assets/*.js` 的 200 + `javascript` 校验。
+- `start-stack.ps1`：web 段改为检测进程与 `build/client` 的新旧，构建比进程新就强制重启（本仓库之外，2026-10-22 生效；10-24 经对抗复核收紧——进程识别锚定 node24 的 ExecutablePath + 裸 `server.ts` 参数防误伤无关进程、杀全部匹配进程并在启动后轮询 3000 端口、以 `build/server/index.js` 兼作构建完成标记防构建中途误重启、重启前归档旧日志、build 目录缺失时告警而非 skip）。
+- `scripts/smoke.ts`：在样式表检查旁增加首页引用的 `/assets/*.js` 的 200 + `javascript` 校验（10-24 扩为首页引用的全部 `/assets` 引用去重校验、字符类收紧，堵"部分文件仍在"混合态漏报与含空白伪 URL 误报）。
 
 **回归验证**：重启后 `node scripts/smoke.ts --base http://127.0.0.1:3000` 全绿（含 `/assets/root-Ba1ey4dZ.css` 与 JS 检查）；线上 `aitvhot.top` 首页引用 `root-Ba1ey4dZ.css` 且经 CF 200 完整（106259 字节），旧 hash `root-BPtEYiOY.js` 404 但已无页面引用；`start-stack.ps1` 重跑对新进程输出 `[skip]`，不误重启。
 

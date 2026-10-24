@@ -56,18 +56,19 @@ async function check(path: string, expect: (res: Response, body: string) => stri
 const htmlName = SITE.name.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
 for (const path of PAGES) await check(path, (_res, body) => (body.includes(SITE.name) || body.includes(htmlName) ? null : `the page does not name ${SITE.name}`));
 for (const [path, type] of MACHINE) await check(path, (res) => (type.test(res.headers.get("content-type") ?? "") ? null : `content-type ${res.headers.get("content-type")}`));
-// The stylesheet the page names must actually be served. A rejected static path leaves every page
-// answering 200 while its CSS and JS sit at 404, which no fixed-path check above would notice.
-const home = await get("/");
-const homeHtml = await home.text();
-const asset = homeHtml.match(/\/assets\/[^"'\\]+\.css/)?.[0];
-if (asset) await check(asset, (res) => (/^text\/css/.test(res.headers.get("content-type") ?? "") ? null : `content-type ${res.headers.get("content-type")}`));
-else { console.log("✗ /  the page names no built stylesheet"); failed += 1; }
-// Same class of miss for hydration: a stale in-memory manifest keeps naming JS that a
-// rebuild deleted (2026-10-22), so the stylesheet check alone leaves the page inert.
-const script = homeHtml.match(/\/assets\/[^"'\\]+\.js/)?.[0];
-if (script) await check(script, (res) => (/javascript/.test(res.headers.get("content-type") ?? "") ? null : `content-type ${res.headers.get("content-type")}`));
-else { console.log("✗ /  the page names no built script"); failed += 1; }
+// Every built asset the page names must actually be served. A rejected static path
+// leaves every page answering 200 while its CSS and JS sit at 404, which no fixed-path
+// check above would notice. A rebuild swaps all hashes at once, so one missing file
+// already means the served manifest is stale (2026-10-22: old process, wiped assets) —
+// checking only the first ref would miss a mixed state where some files still exist.
+const homeHtml = await (await get("/")).text();
+const assetRefs = [...new Set([...homeHtml.matchAll(/\/assets\/[^"'\\\s>]+/g)].map((m) => m[0]))].filter((p) => /\.(css|js)$/.test(p));
+if (!assetRefs.some((p) => p.endsWith(".css"))) { console.log("✗ /  the page names no built stylesheet"); failed += 1; }
+if (!assetRefs.some((p) => p.endsWith(".js"))) { console.log("✗ /  the page names no built script"); failed += 1; }
+for (const asset of assetRefs) {
+  const wanted = asset.endsWith(".css") ? /^text\/css/ : /javascript/;
+  await check(asset, (res) => (wanted.test(res.headers.get("content-type") ?? "") ? null : `content-type ${res.headers.get("content-type")}`));
+}
 // MCP: the handshake answers with the site's server name.
 const mcp = await get("/api/mcp", {
   method: "POST",
