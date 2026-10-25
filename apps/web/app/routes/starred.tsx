@@ -111,6 +111,12 @@ export default function StarredPage() {
         <div>
           <h1 data-page-title="" className="text-[24px] font-semibold leading-[1.3] text-ink">{t("收藏")}</h1>
           <p className="mt-1.5 text-[13px] text-ink-3">{t("本机收藏的 {name} 内容，适合稍后阅读和回看。", { name: SITE.name })}</p>
+          <p className="mt-1 text-[12px] text-ink-4">
+            {t("登录后，收藏将可以跨设备同步（即将上线）。")}
+            <Link to={`/login?${new URLSearchParams({ return: "/starred" })}`} className="ml-1 text-ink-3 underline-offset-2 hover:text-accent hover:underline">
+              {t("登录")}
+            </Link>
+          </p>
         </div>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 sm:pt-1.5">
           {webModules().flatMap((m) => m.starredImports ?? []).map((i) => (
