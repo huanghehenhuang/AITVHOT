@@ -3,10 +3,12 @@
 // (/all?q=…). Below the field: this browser's recent searches, topics to browse and what is hot now.
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { Form, Link, useLocation, useNavigation } from "react-router";
+import { readPoolFacets } from "@aihot/contracts/pool-filters";
 import type { SearchSuggestions } from "@aihot/contracts/site";
 import { IconClose, IconSearch } from "../../components/icons";
 import { inNav } from "../../components/shell/nav";
 import { addRecentSearch, clearRecentSearches, useRecentSearches } from "../../lib/local-state";
+import { filterParams, listPath, readFilters } from "../../lib/seo";
 import { useModal } from "../../components/ui/modal";
 import { countLabel, useI18n } from "../../i18n";
 
@@ -59,7 +61,7 @@ export function SearchOverlay() {
   const [hasText, setHasText] = useState(false);
   const recent = useRecentSearches();
   const navigation = useNavigation();
-  const { key } = useLocation();
+  const { key, pathname, search } = useLocation();
   const [more, setMore] = useState<Awaited<ReturnType<typeof loadSuggestions>> | null>(null);
 
   useModal({ open: shown, panel, initialFocus: input, returnFocus: opener, onClose: close });
@@ -104,6 +106,8 @@ export function SearchOverlay() {
     setOpen(false);
   }
 
+  const params = new URLSearchParams(search);
+  const keep: Record<string, string | null> = pathname === "/all" ? { ...filterParams(readFilters(params)), ...readPoolFacets(name => params.get(name)) } : {};
   const companies = (more?.topics ?? []).filter((t) => t.group === "company").slice(0, 6);
   const chip = "inline-flex h-11 max-w-full items-center rounded-full px-3.5 text-[14px] transition-colors";
   return (
@@ -130,6 +134,7 @@ export function SearchOverlay() {
         }}
         className="flex h-14 shrink-0 items-center gap-1 pl-4 pr-1 pt-[env(safe-area-inset-top)]"
       >
+        {Object.entries(keep).map(([name, value]) => value && <input key={name} type="hidden" name={name} value={value} />)}
         <label className="relative flex-1">
           <span className="sr-only">{t("搜索标题、摘要和正文")}</span>
           <IconSearch size={18} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-4" />
@@ -178,7 +183,7 @@ export function SearchOverlay() {
               </div>
               <div className="mt-1.5 flex flex-wrap gap-2">
                 {recent.map((q) => (
-                  <Link key={q} to={`/all?q=${encodeURIComponent(q)}`} onClick={() => addRecentSearch(q)} className={`${chip} bg-surface text-ink-2 ring-1 ring-inset ring-line active:bg-bg-sunk`}>
+                  <Link key={q} to={listPath("/all", { ...keep, q })} onClick={() => addRecentSearch(q)} className={`${chip} bg-surface text-ink-2 ring-1 ring-inset ring-line active:bg-bg-sunk`}>
                     <span className="truncate">{q}</span>
                   </Link>
                 ))}

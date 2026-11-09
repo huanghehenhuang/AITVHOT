@@ -26,7 +26,7 @@ export async function loader({ request }: { request: Request }) {
 export function meta({ loaderData, matches }: Route.MetaArgs) {
   const locale = localeFromMatches(matches);
   const entries = (loaderData?.index ?? []).map((e: ReportIndexEntry) => ({ path: `/daily/${e.key}`, name: e.title ? `${e.key} · ${e.title}` : translate(locale, `${SITE.name} 日报 · {key}`, { key: e.key }) }));
-  return pageMeta({ title: translate(locale, `${withSubject("日报")} · 历史存档`), description: translate(locale, `${SITE.name} 历史日报，按日期归档。`), path: "/daily/archive", image: "/og/pages/daily.png", locale, jsonLd: archiveLd("/daily/archive", translate(locale, `${SITE.name} 日报 · 历史存档`), entries) });
+  return pageMeta({ translationReady: loaderData?.translationReady, title: translate(locale, `${withSubject("日报")} · 历史存档`), description: translate(locale, `${SITE.name} 历史日报，按日期归档。`), path: "/daily/archive", image: "/og/pages/daily.png", locale, jsonLd: archiveLd("/daily/archive", translate(locale, `${SITE.name} 日报 · 历史存档`), entries, locale) });
 }
 
 export default function DailyArchive() {

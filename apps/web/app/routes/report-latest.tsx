@@ -29,7 +29,7 @@ export function meta({ loaderData, location, matches }: Route.MetaArgs) {
   const body = translate(locale, REPORTS.descriptions[kind]);
   const description = `${body}${locale === "en" ? "." : "。"}`;
   const report = loaderData?.report;
-  return [...pageMeta({
+  return [...pageMeta({ translationReady: loaderData && "translationReady" in loaderData ? loaderData.translationReady : undefined,
     title: translate(locale, withSubject(KIND_LABEL[kind])),
     description,
     path: location.pathname,

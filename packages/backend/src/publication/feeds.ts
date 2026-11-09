@@ -2,6 +2,8 @@
 // publication time (none when it is unknown). Summary feeds never carry content:encoded; full feeds
 // inline bodies only for sources that explicitly allow redistribution. Titles come from the site's
 // name and categories.
+import { storyFeedPath } from "@aihot/contracts/site";
+import { resolveStory, storyFeedEntries } from "./stories.ts";
 import { feedCategoryLabel, PUBLIC_API_CATEGORY_KEYS, toPublicApiCategory, type PublicApiCategoryKey } from "@aihot/contracts/taxonomy";
 import { EDITION_WHEN, FEED_COPY, REPORTS, SITE, subjectAfter } from "@aihot/site";
 import { config } from "../config.ts";
@@ -88,6 +90,30 @@ ${items.join("\n")}
   </channel>
 </rss>
 `;
+}
+
+export async function eventFeed(publicId: string) {
+  const lookup = await resolveStory(publicId);
+  if (lookup.kind !== "found") return lookup;
+  const story = await storyFeedEntries(lookup.storyId);
+  if (!story) return { kind: "not_found" as const };
+  const items = story.entries.map(({ factId, firstReportAt, report }) => noticeXml({
+    guid: factId,
+    title: report.title,
+    link: itemUrl(report.id),
+    description: report.summary ?? "",
+    at: new Date(firstReportAt),
+  }));
+  return {
+    kind: "feed" as const,
+    xml: channel({
+      title: `${story.title} · ${SITE.name}`,
+      description: "同一事件下的公开报道与后续进展，每个进展保留一条代表报道。",
+      homePath: `/story/${lookup.publicId}`,
+      selfPath: storyFeedPath(lookup.publicId),
+      ttl: 30,
+    }, items),
+  };
 }
 
 type FeedRow = Pick<ItemRow, "id" | "title" | "summary" | "url" | "category" | "published_at" | "source_name"> &

@@ -2,6 +2,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { IconMonitor, IconMoon, IconSun } from "../icons";
 import { applyTheme, resolvedTheme, setThemePreference, useThemePreference, type ThemePreference } from "../../lib/local-state";
 import { useI18n } from "../../i18n";
+import { DesignAsset } from "../ui/DesignAsset";
 
 type Choice = "dark" | "system" | "light";
 
@@ -12,7 +13,7 @@ const OPTIONS: Array<{ key: Choice; label: string; icon: ReactNode }> = [
 ];
 
 /** Three-way appearance switch (dark / follow the system / light) with a sliding thumb. */
-export function ThemeSwitch({ className = "" }: { className?: string }) {
+export function ThemeSwitch({ className = "", compact = false }: { className?: string; compact?: boolean }) {
   const pref = useThemePreference();
   const { t } = useI18n();
   const [mounted, setMounted] = useState(false);
@@ -33,6 +34,11 @@ export function ThemeSwitch({ className = "" }: { className?: string }) {
     } else apply();
   };
 
+  if (compact) return (
+    <div role="radiogroup" aria-label={t("外观")} className={`editorial-theme-switch ${className}`}>
+      {OPTIONS.filter((o) => o.key !== "system").reverse().map((o) => <button key={o.key} type="button" role="radio" aria-checked={current === o.key} aria-label={t(o.label)} title={t(o.label)} onClick={() => choose(o.key)}><DesignAsset name={o.key === "light" ? "sun" : "moon"} /></button>)}
+    </div>
+  );
   return (
     <div role="radiogroup" aria-label={t("外观")} className={`relative grid h-[34px] grid-cols-3 rounded-full border border-line bg-bg-sunk p-[3px] ${className}`}>
       <span

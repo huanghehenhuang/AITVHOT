@@ -1,16 +1,18 @@
 // Feed filters: the channel and category choice (a row of tabs on desktop, a sheet behind the bar's filter
 // button on phones), the phone bar of 精选 and 全部, and search.
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Form, Link, useNavigation, useSearchParams } from "react-router";
 import { CATEGORY_KEYS, type CategoryKey, type ChannelKey } from "@aihot/contracts/taxonomy";
 import { SITE } from "@aihot/site";
 import { IconCheck, IconClose, IconFilter, IconSearch } from "../../components/icons";
+import { IntentLink } from "../../components/ui/IntentLink";
 import { PillTabs } from "../../components/ui/Tabs";
 import { Sheet } from "../../components/ui/Sheet";
 import { Wordmark } from "@aihot/site/brand/Logo.tsx";
 import { BarButton, PhoneBar } from "../../components/shell/PhoneBar";
 import { openSearch } from "../search/SearchOverlay";
 import { categoryLabel, channelLabel, tagLabel, useI18n, type Locale } from "../../i18n";
+import { DesignAsset } from "../../components/ui/DesignAsset";
 
 /** Same page with some query parameters changed (paging state dropped). */
 function hrefWith(base: string, params: URLSearchParams, patch: Record<string, string | null>) {
@@ -25,28 +27,55 @@ function hrefWith(base: string, params: URLSearchParams, patch: Record<string, s
   return s ? `${base}?${s}` : base;
 }
 
-/**
- * The feed's one filter (精选 and 全部动态 alike): none, 一手, or a category. One choice at a time: picking
- * 一手 clears the category and picking a category clears 一手. Older 资讯 / X links still filter; the
- * choice then shows as none.
- */
-function filterOptions(base: string, params: URLSearchParams, noneLabel: string, locale: Locale) {
+function categoryOptions(base: string, params: URLSearchParams, noneLabel: string, locale: Locale) {
   return [
-    { key: "all", label: noneLabel, to: hrefWith(base, params, { category: null, channel: null }) },
-    { key: "firstParty", label: channelLabel("firstParty", locale), to: hrefWith(base, params, { category: null, channel: "firstParty" }) },
-    ...CATEGORY_KEYS.map((k) => ({ key: k, label: categoryLabel(k, locale), to: hrefWith(base, params, { category: k, channel: null }) })),
+    { key: "all", label: noneLabel, to: hrefWith(base, params, { category: null }) },
+    ...CATEGORY_KEYS.map(key => ({ key, label: categoryLabel(key, locale), to: hrefWith(base, params, { category: key }) })),
   ];
 }
 
-function filterKey(category: CategoryKey | null, channel: ChannelKey): string {
-  return channel === "firstParty" ? "firstParty" : (category ?? "all");
+export function FirstPartyFilter({ base, channel, onClick }: { base: string; channel: ChannelKey; onClick?: () => void }) {
+  const { t } = useI18n();
+  const [params] = useSearchParams();
+  const active = channel === "firstParty";
+  return (
+    <div className="home-channel">
+      <Link to={hrefWith(base, params, { channel: active ? null : "firstParty" })} aria-current={active ? "true" : undefined} onClick={onClick}>
+        {t(active ? "取消官方一手筛选" : "仅看官方一手")}
+      </Link>
+    </div>
+  );
 }
 
-/** Desktop: the filter as a row of tabs beside the search field. */
-export function CategoryTabs({ base, category, channel = "all", layoutId, className = "" }: { base: string; category: CategoryKey | null; channel?: ChannelKey; layoutId: string; className?: string }) {
+export function CategoryTabs({ base, category, layoutId, className = "" }: { base: string; category: CategoryKey | null; layoutId: string; className?: string }) {
   const { t, locale } = useI18n();
   const [params] = useSearchParams();
-  return <PillTabs items={filterOptions(base, params, t("全部"), locale).map(o => ({ ...o, prefetch: 'intent' as const }))} active={filterKey(category, channel)} layoutId={layoutId} label={t("筛选")} className={className} />;
+  return <PillTabs items={categoryOptions(base, params, t("全部"), locale).map(o => ({ ...o, prefetch: "intent" as const }))} active={category ?? "all"} layoutId={layoutId} label={t("新闻分类")} className={className} />;
+}
+
+/** Homepage categories keep the full filter sheet available on narrow screens. */
+export function HomeFilters({ category, channel }: { category: CategoryKey | null; channel: ChannelKey }) {
+  const { t, locale } = useI18n();
+  const [params] = useSearchParams();
+  const [open, setOpen] = useState(false);
+  const options = categoryOptions("/", params, t("今日精选"), locale);
+  const active = category ?? "all";
+  return <>
+    <div className="editorial-categories">
+      <nav aria-label={t("新闻分类")}>
+        {options.map(option => <IntentLink key={option.key} to={option.to} aria-current={option.key === active ? "page" : undefined}>{option.label}</IntentLink>)}
+      </nav>
+      <button type="button" className="editorial-category-more" aria-label={t("筛选")} onClick={() => setOpen(true)}>{t("全部分类")}</button>
+    </div>
+    <FirstPartyFilter base="/" channel={channel} />
+    <Sheet open={open} onClose={() => setOpen(false)} title={t("全部分类")}>
+      <nav className="mx-4 divide-y divide-line-soft" aria-label={t("新闻分类")}>
+        {options.map(option => <Link key={option.key} to={option.to} onClick={() => setOpen(false)} aria-current={option.key === active ? "page" : undefined} className="flex min-h-11 items-center gap-2">
+          {option.label}{option.key === active && <IconCheck size={18} />}
+        </Link>)}
+      </nav>
+    </Sheet>
+  </>;
 }
 
 /**
@@ -56,9 +85,7 @@ export function CategoryTabs({ base, category, channel = "all", layoutId, classN
 export function FeedBar({ base, category, channel }: { base: "/" | "/all"; category: CategoryKey | null; channel: ChannelKey }) {
   const { t } = useI18n();
   const [params] = useSearchParams();
-  const [sheet, setSheet] = useState(false);
   const scope = (to: string) => hrefWith(to, params, { q: null, tab: null, search: null });
-  const filtered = filterKey(category, channel) !== "all";
   return (
     <>
       <PhoneBar
@@ -81,27 +108,39 @@ export function FeedBar({ base, category, channel }: { base: "/" | "/all"; categ
         }
         actions={
           <>
-            <BarButton label={filtered ? t("筛选（已选）") : t("筛选")} on={filtered} onClick={() => setSheet(true)}>
-              <IconFilter size={21} />
-              {filtered && <span aria-hidden="true" className="absolute right-[9px] top-[9px] size-[7px] rounded-full bg-accent ring-2 ring-bg" />}
-            </BarButton>
+            <FeedFilterButton base={base} category={category} channel={channel} />
             <SearchButton />
           </>
         }
       />
-      <FilterSheet open={sheet} onClose={() => setSheet(false)} base={base} active={filterKey(category, channel)} />
+    </>
+  );
+}
+
+export function FeedFilterButton({ base, category, channel }: { base: string; category: CategoryKey | null; channel: ChannelKey }) {
+  const { t } = useI18n();
+  const [open, setOpen] = useState(false);
+  const filtered = category !== null || channel !== "all";
+  return (
+    <>
+      <BarButton label={filtered ? t("筛选（已选）") : t("筛选")} on={filtered} onClick={() => setOpen(true)}>
+        <IconFilter size={21} />
+        {filtered && <span aria-hidden="true" className="absolute right-[9px] top-[9px] size-[7px] rounded-full bg-accent ring-2 ring-bg" />}
+      </BarButton>
+      <FilterSheet open={open} onClose={() => setOpen(false)} base={base} active={category ?? "all"} channel={channel} />
     </>
   );
 }
 
 /** Phones: the filter as a sheet of options, the one in use ticked; choosing one applies it. */
-function FilterSheet({ open, onClose, base, active }: { open: boolean; onClose: () => void; base: string; active: string }) {
+function FilterSheet({ open, onClose, base, active, channel }: { open: boolean; onClose: () => void; base: string; active: string; channel: ChannelKey }) {
   const { t, locale } = useI18n();
   const [params] = useSearchParams();
   return (
     <Sheet open={open} onClose={onClose} title={t("筛选")}>
+      <div className="mx-4"><FirstPartyFilter base={base} channel={channel} onClick={onClose} /></div>
       <ul className="mx-4 divide-y divide-line-soft">
-        {filterOptions(base, params, t("不限"), locale).map((o) => {
+        {categoryOptions(base, params, t("不限"), locale).map((o) => {
           const on = o.key === active;
           return (
             <li key={o.key}>
@@ -126,17 +165,20 @@ function FilterSheet({ open, onClose, base, active }: { open: boolean; onClose: 
 export function ActiveFilters({ base, category, channel, tag }: { base: string; category: CategoryKey | null; channel: ChannelKey; tag: string | null }) {
   const { t, locale } = useI18n();
   const [params] = useSearchParams();
-  const label = channel === "firstParty" ? channelLabel("firstParty", locale) : category ? categoryLabel(category, locale) : null;
-  if (!label && !tag) return null;
+  const active = [
+    ...(category ? [{ key: "category", label: categoryLabel(category, locale) }] : []),
+    ...(channel !== "all" ? [{ key: "channel", label: channelLabel(channel, locale) }] : []),
+  ];
+  if (!active.length && !tag) return null;
   const chip = "inline-flex min-h-11 max-w-full items-center gap-1 rounded-full bg-accent-soft pl-3 pr-2 text-[13px] font-medium text-accent transition-opacity active:opacity-60";
   return (
     <div className="flex flex-wrap gap-2 pb-3 pt-1 lg:hidden">
-      {label && (
-        <Link to={hrefWith(base, params, { category: null, channel: null })} aria-label={t("取消筛选：{label}", { label })} className={chip}>
+      {active.map(({ key, label }) => (
+        <Link key={key} to={hrefWith(base, params, { [key]: null })} aria-label={t("取消筛选：{label}", { label })} className={chip}>
           {t("只看{label}", { label })}
           <IconClose size={14} strokeWidth={2} />
         </Link>
-      )}
+      ))}
       {tag && (
         <Link to={hrefWith(base, params, { tag: null })} aria-label={t("取消标签：{tag}", { tag: tagLabel(tag, locale) })} className={chip}>
           <span className="truncate">#{tagLabel(tag, locale)}</span>
@@ -173,6 +215,7 @@ function useSlashFocus(ref: React.RefObject<HTMLInputElement | null>) {
 /** Desktop search field (GET /all?q=…): at the end of the filter row as the same grey track, at the height of md tabs, with a "/" hint. */
 export function SearchField({ defaultValue = "", keep = {} }: { defaultValue?: string; keep?: Record<string, string | null> }) {
   const { t } = useI18n();
+  const searchId = useId();
   const [value, setValue] = useState(defaultValue);
   const navigation = useNavigation();
   const inputRef = useRef<HTMLInputElement>(null);
@@ -184,13 +227,13 @@ export function SearchField({ defaultValue = "", keep = {} }: { defaultValue?: s
   return (
     <Form method="get" action="/all" role="search" className="group relative w-full shrink-0 lg:w-60">
       {hidden}
-      <label htmlFor="site-search" className="sr-only">
+      <label htmlFor={searchId} className="sr-only">
         {t("搜索标题、摘要与正文")}
       </label>
-      <IconSearch size={16} className={`pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 transition-colors ${searching ? "text-accent" : "text-ink-4 group-focus-within:text-ink-3"}`} />
+      <DesignAsset name="search" className={`editorial-search-icon pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 ${searching ? "opacity-60" : ""}`} />
       <input
         ref={inputRef}
-        id="site-search"
+        id={searchId}
         name="q"
         value={value}
         onChange={(e) => setValue(e.target.value)}

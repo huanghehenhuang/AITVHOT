@@ -1,0 +1,88 @@
+[
+  {
+    "repo": "zenstory-ai/drama-skills",
+    "pattern": "short-drama",
+    "stage": "剧本与分镜"
+  },
+  {
+    "repo": "Comfy-Org/comfy-skills",
+    "pattern": "comfy",
+    "stage": "工作流与扩展"
+  },
+  {
+    "repo": "remotion-dev/skills",
+    "pattern": "remotion",
+    "stage": "剪辑与合成"
+  },
+  {
+    "repo": "elevenlabs/skills",
+    "pattern": "audio|speech|music|tts|sound|transcrib|sfx|voice|dubbing",
+    "stage": "配音与音频"
+  },
+  {
+    "repo": "fal-ai-community/skills",
+    "pattern": "image|video|audio|speech|music|fal|3d|tts|sound|voice",
+    "stage": "图像与多模态"
+  },
+  {
+    "repo": "62656456/ai-film-skills",
+    "pattern": "^skills/(?!d-).*",
+    "stage": "导演与分镜"
+  },
+  {
+    "repo": "wuwangzhang1216/DirectorSKILL",
+    "pattern": "^SKILL",
+    "stage": "导演与分镜"
+  },
+  {
+    "repo": "tuoxie0102/ai-director-skill",
+    "pattern": "^SKILL",
+    "stage": "导演与分镜"
+  },
+  {
+    "repo": "huggingface/skills",
+    "pattern": "skills/",
+    "stage": "模型训练与定制"
+  },
+  {
+    "repo": "google-labs-code/stitch-skills",
+    "pattern": "skills/",
+    "stage": "界面与设计"
+  },
+  {
+    "repo": "Comfy-Org/workflow_templates",
+    "pattern": "^templates/.*(wan|flux|qwen|hunyuan|ltx|audio|music).*json$",
+    "stage": "图像与短剧工作流",
+    "kind": "workflow"
+  },
+  {
+    "repo": "MiniMax-AI/skills",
+    "pattern": "image|video|audio|speech|music|drama|film|design|prompt|story|voice",
+    "stage": "导演与分镜"
+  },
+  {
+    "repo": "smixs/visual-skills",
+    "pattern": ".*",
+    "stage": "导演与分镜"
+  },
+  {
+    "repo": "dexhunter/seedance2-skill",
+    "pattern": ".*",
+    "stage": "导演与分镜"
+  },
+  {
+    "repo": "SHIFT-R/director-agent",
+    "pattern": ".*",
+    "stage": "导演与分镜"
+  },
+  {
+    "repo": "xixihhhh/ai-short-drama-skill",
+    "pattern": ".*",
+    "stage": "导演与分镜"
+  },
+  {
+    "repo": "djyy1031/ai-comic-drama-director-skills",
+    "pattern": ".*",
+    "stage": "导演与分镜"
+  }
+]

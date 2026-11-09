@@ -12,6 +12,9 @@ import { isApiOwned, resolveRedirect } from "@aihot/contracts/http-policy";
 import { BROWSER_MAX_SECONDS } from "./app/lib/api.server.ts";
 import { proxyToApi } from "./app/lib/api-proxy.server.ts";
 import { logError } from "./app/lib/errors.server.ts";
+import { canonicalRedirect } from "./app/lib/canonical.server.ts";
+import { incomingLocale, localeContext } from "./app/lib/locale-context.server.ts";
+import { browserLocale } from "./app/i18n/locale.ts";
 
 const PORT = Number(process.env.WEB_PORT || 3000);
 const HOST = process.env.WEB_HOST || "127.0.0.1";
@@ -21,6 +24,7 @@ const HOST = process.env.WEB_HOST || "127.0.0.1";
  * limits (sign-in attempts, feedback).
  */
 const TRUST_PROXY = process.env.TRUST_PROXY === "true";
+const PUBLIC_SITE = new URL(process.env.SITE_URL || "http://localhost:3000");
 const CLIENT_DIR = path.resolve(import.meta.dirname, "build/client");
 
 const TYPES: Record<string, string> = {
@@ -88,25 +92,11 @@ const server = createServer((req, res) => {
 });
 
 /**
- * English documents must not enter the public cache: a cached Chinese page would otherwise be
- * served to a reader who already chose English. ?lang=en is a separate URL; the cookie is the
- * same choice on a clean address.
- */
-function isEnglishDocument(req: import("node:http").IncomingMessage): boolean {
-  const raw = req.url ?? "/";
-  const q = raw.indexOf("?");
-  const params = new URLSearchParams(q >= 0 ? raw.slice(q + 1) : "");
-  if (params.get("lang") === "zh") return false;
-  if (params.get("lang") === "en") return true;
-  return /(?:^|;\s*)locale=en(?:;|$)/.test(String(req.headers.cookie ?? ""));
-}
-
-/**
  * The one writer of page response headers: a route only says how long shared caches may keep it (cachedPage, edgeTtl).
  * Public navigation returns all matched loaders, so `_routes` never changes a cached answer.
  */
 function pageResponse(req: import("node:http").IncomingMessage, res: import("node:http").ServerResponse) {
-  const english = isEnglishDocument(req);
+  const english = incomingLocale(req) === "en";
   const target = req.url ?? "/";
   // An origin-form target is a path even when it starts with //, not a new URL authority.
   const url = new URL(target.startsWith("/") ? `http://web.local${target}` : target, "http://web.local");
@@ -129,7 +119,14 @@ function pageResponse(req: import("node:http").IncomingMessage, res: import("nod
       res.setHeader("Content-Type", "text/plain; charset=utf-8");
     }
     const cc = String(res.getHeader("Cache-Control") ?? "");
-    if (english || !publicRead || status !== 200 || res.hasHeader("Set-Cookie") || !cc || /(?:private|no-store)/i.test(cc)) {
+    res.setHeader("Content-Language", english ? "en" : "zh-CN");
+    res.setHeader("Vary", "Accept-Encoding, Cookie, Accept-Language, CF-IPCountry");
+    const negotiated = !["zh", "en"].includes(url.searchParams.get("lang") ?? "") && (
+      /(?:^|;\s*)locale=(?:zh|en)(?:;|$)/.test(req.headers.cookie ?? "")
+      || browserLocale(String(req.headers["accept-language"] ?? "")) !== null
+      || (TRUST_PROXY && /^[A-Z]{2}$/.test(String(req.headers["cf-ipcountry"] ?? "")))
+    );
+    if (!publicRead || status !== 200 || res.hasHeader("Set-Cookie") || !cc || /no-store/i.test(cc)) {
       res.removeHeader("Expires");
       res.setHeader("Cache-Control", "private, no-store");
       res.setHeader("X-Accel-Expires", "0");
@@ -142,18 +139,26 @@ function pageResponse(req: import("node:http").IncomingMessage, res: import("nod
       const seconds = /(?:^|,)\s*no-cache(?:,|$)/i.test(cc) || expires === "0" ? 0
         : Math.max(0, Math.min(sharedSeconds, Number(expires.slice(1)) - nowSeconds));
       res.setHeader("Date", now.toUTCString());
-      res.setHeader("X-Accel-Expires", seconds > 0 ? expires : "0");
+      const privateCache = english || negotiated || /private/i.test(cc);
+      res.setHeader("X-Accel-Expires", !privateCache && seconds > 0 ? expires : "0");
       // Reuse intent-prefetched data in the browser within the same shared-cache deadline (capped).
       // Never serve it beyond that deadline, including while revalidating or on an error.
       res.setHeader("Cache-Control", seconds > 0
-        ? `public, max-age=${Math.min(seconds, BROWSER_MAX_SECONDS)}, s-maxage=${seconds}, must-revalidate`
-        : "no-cache");
+        ? privateCache
+          ? `private, max-age=${Math.min(seconds, BROWSER_MAX_SECONDS)}, must-revalidate`
+          : `public, max-age=${Math.min(seconds, BROWSER_MAX_SECONDS)}, s-maxage=${seconds}, must-revalidate`
+        : privateCache ? "private, no-cache" : "no-cache");
     }
     return typeof messageOrHeaders === "string" ? writeHead(status, messageOrHeaders) : writeHead(status);
   }) as typeof res.writeHead;
 }
 
 async function handle(req: import("node:http").IncomingMessage, res: import("node:http").ServerResponse) {
+  const canonical = canonicalRedirect(req, PUBLIC_SITE, TRUST_PROXY);
+  if (canonical) {
+    res.writeHead(308, { Location: canonical, "Cache-Control": "private, no-store" });
+    return res.end();
+  }
   const raw = req.url ?? "/";
   const qi = raw.indexOf("?");
   const pathname = qi >= 0 ? raw.slice(0, qi) : raw;
@@ -172,12 +177,12 @@ async function handle(req: import("node:http").IncomingMessage, res: import("nod
     // entry), or this connection's own. Both headers carry only that.
     const forwarded = String(req.headers["x-forwarded-for"] ?? "").split(",").map((v) => v.trim()).filter(Boolean);
     const client = TRUST_PROXY && forwarded.length ? forwarded[forwarded.length - 1]! : (req.socket.remoteAddress ?? "");
-    return proxyToApi(req, res, { "x-forwarded-for": client, "x-real-ip": client });
+    return proxyToApi(req, res, { "x-forwarded-for": client, "x-real-ip": client, "x-aihot-locale": incomingLocale(req) });
   }
 
   if ((req.method === "GET" || req.method === "HEAD") && pathname.includes(".") && (await serveStatic(pathname, res))) return;
   pageResponse(req, res);
-  return ssr(req, res);
+  return localeContext.run({ locale: incomingLocale(req), complete: true }, () => ssr(req, res));
 }
 
 process.on("unhandledRejection", (reason) => {

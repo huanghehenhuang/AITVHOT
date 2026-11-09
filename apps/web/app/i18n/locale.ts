@@ -1,6 +1,5 @@
-// Reader locale for the public site. Chinese is the default and keeps every existing address.
-// English is explicit: ?lang=en, or the locale cookie the switcher sets. Published articles,
-// reports, RSS, share images and MCP stay in the language they were written (Chinese).
+import { isbot } from "isbot";
+// Explicit URLs and saved choices win. Browser language and trusted edge country are first-visit hints.
 export const LOCALES = ["zh", "en"] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = "zh";
@@ -10,14 +9,43 @@ export function isLocale(value: unknown): value is Locale {
   return value === "zh" || value === "en";
 }
 
-/** ?lang= wins, then the cookie, otherwise Chinese. Admin stays Chinese. */
-export function resolveLocale(request: Request): Locale {
+export function browserLocale(header: string | null): Locale | null {
+  const choices = (header ?? "").split(",").map((part, order) => {
+    const [tag, ...params] = part.trim().split(";");
+    const raw = params.find((p) => p.trim().startsWith("q="))?.trim().slice(2);
+    const quality = raw === undefined ? 1 : Number(raw);
+    return { tag: tag?.toLowerCase(), quality, order };
+  }).filter((v) => Number.isFinite(v.quality) && v.quality > 0 && v.quality <= 1)
+    .sort((a, b) => b.quality - a.quality || a.order - b.order);
+  for (const { tag } of choices) {
+    if (/^zh(?:-|$)/.test(tag ?? "")) return "zh";
+    if (/^en(?:-|$)/.test(tag ?? "")) return "en";
+  }
+  return null;
+}
+
+/** Admin stays Chinese; crawlers have a deterministic default and can crawl explicit English URLs. */
+export function resolveLocale(request: Request, trustCountry = false): Locale {
   const url = new URL(request.url);
   if (url.pathname === "/admin" || url.pathname.startsWith("/admin/")) return DEFAULT_LOCALE;
   const query = url.searchParams.get("lang");
   if (isLocale(query)) return query;
   const match = request.headers.get("cookie")?.match(/(?:^|;\s*)locale=(zh|en)(?:;|$)/);
-  return isLocale(match?.[1]) ? match[1] : DEFAULT_LOCALE;
+  if (isLocale(match?.[1])) return match[1];
+  if (isbot(request.headers.get("user-agent") ?? "")) return DEFAULT_LOCALE;
+  const browser = browserLocale(request.headers.get("accept-language"));
+  if (browser) return browser;
+  const country = trustCountry ? request.headers.get("cf-ipcountry")?.toUpperCase() : null;
+  if (country && /^[A-Z]{2}$/.test(country) && country !== "XX") return ["CN", "HK", "MO", "TW"].includes(country) ? "zh" : "en";
+  return DEFAULT_LOCALE;
+}
+
+export function languagePath(path: string, locale: Locale): string {
+  const url = new URL(`https://site.local${path.startsWith("/") ? path : `/${path}`}`);
+  url.pathname = url.pathname.replace(/^\/{2,}/, "/");
+  url.searchParams.delete("lang");
+  if (locale === "en") url.searchParams.set("lang", "en");
+  return url.pathname + url.search + url.hash;
 }
 
 export function localeCookie(locale: Locale): string {

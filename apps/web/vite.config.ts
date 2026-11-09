@@ -5,6 +5,7 @@ import { defineConfig, type Plugin } from "vite";
 import { isApiOwned, resolveRedirect } from "@aihot/contracts/http-policy";
 import { DEPLOYMENT } from "@aihot/site";
 import { proxyToApi } from "./app/lib/api-proxy.server.ts";
+import { incomingLocale, localeContext } from "./app/lib/locale-context.server.ts";
 
 /** Development stand-in for the production web server: the shared redirect table and api-owned path routing. */
 function devEdge(): Plugin {
@@ -24,10 +25,10 @@ function devEdge(): Plugin {
           res.statusCode = decision.status;
           return res.end();
         }
-        if (!isApiOwned(pathname)) return next();
+        if (!isApiOwned(pathname)) return localeContext.run({ locale: incomingLocale(req), complete: true }, next);
         // The api sees the Host it gets in production.
         if (DEPLOYMENT.originHost) req.headers.host = DEPLOYMENT.originHost;
-        proxyToApi(req, res);
+        proxyToApi(req, res, { "x-aihot-locale": incomingLocale(req) });
       });
     },
   };
@@ -37,7 +38,7 @@ export default defineConfig({
   plugins: [devEdge(), tailwindcss(), reactRouter()],
   // The modules' pages import the engine's web code by this name (tsconfig.json paths).
   resolve: { alias: { "@aihot/web/": `${path.resolve(import.meta.dirname, "app")}/` } },
-  server: { port: 3000, strictPort: true },
+  server: { port: 3000, strictPort: true, allowedHosts: ["aitvhot.top", "www.aitvhot.top", ".localhost"] },
   build: {
     rolldownOptions: {
       output: {

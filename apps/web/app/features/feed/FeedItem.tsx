@@ -25,9 +25,12 @@ export interface FeedItemProps {
   showTags?: boolean;
   /** The time the item sits at in its list; phones show it in the source line (desktop: on the rail). */
   at?: string;
+  editorial?: boolean;
+  lead?: boolean;
+  detailed?: boolean;
 }
 
-export const FeedItem = memo(function FeedItem({ item, group, filters, read = false, onOpen, showTags = false, at }: FeedItemProps) {
+export const FeedItem = memo(function FeedItem({ item, group, filters, read = false, onOpen, showTags = false, at, editorial = false, lead = false, detailed = false }: FeedItemProps) {
   const { t, locale } = useI18n();
   const isX = item.channel === "x" && !!item.x;
   const open = () => {
@@ -36,6 +39,28 @@ export const FeedItem = memo(function FeedItem({ item, group, filters, read = fa
   };
   const showSources = !!group && (group.additionalSourceCount > 0 || group.reportCount > 1);
   const tags = showTags ? item.tags.slice(0, 3) : [];
+
+  if (editorial) {
+    const Heading = lead ? "h2" : "h3";
+    const publishedAt = item.publishedAt ?? at;
+    return (
+      <article className={`editorial-feed-item ${lead ? "home-lead" : ""} ${detailed ? "home-detailed" : ""} ${read ? "editorial-read" : ""}`} data-item-id={item.id}>
+        <header className="home-item-meta">
+          {item.category && <span className="home-item-category">{categoryLabel(item.category, locale)}</span>}
+          <SourceLine item={item} />
+          {publishedAt && <time className="mono" dateTime={publishedAt}>{beijingTime(publishedAt)}</time>}
+        </header>
+        <Heading><IntentLink viewTransition={!lead} to={`/items/${item.id}`} onClick={open} className="editorial-item-link">{item.title}</IntentLink></Heading>
+        {item.summary && <p className="editorial-item-summary">{item.summary}</p>}
+        {lead && item.reason && <p className="home-lead-reason"><strong>{t("为什么重要")}</strong> · {item.reason}</p>}
+        {detailed && item.reason && <details className="editorial-reason" open><summary>{t(ITEM_COPY.reasonLabel)}</summary><p>{item.reason}</p></details>}
+        {detailed && group && showSources && <div className="editorial-group-sources"><GroupSources group={group} filters={filters} parentId={item.id} /></div>}
+        {detailed && tags.length > 0 && <div className="home-item-tags">{tags.map((tag) => <Link key={tag} to={`/all?tag=${encodeURIComponent(tag)}`}>#{tagLabel(tag, locale)}</Link>)}</div>}
+        {detailed && item.sameEvent && <Link className="editorial-same-event" to={`/items/${item.sameEvent.id}`}>{t("同一新闻，精选展示")} · {item.sameEvent.title}</Link>}
+        <StarButton item={item} className="home-bookmark size-11" designIcon />
+      </article>
+    );
+  }
 
   return (
     <article className="cinema-feed-item relative min-w-0 lg:card lg:card-hover lg:px-[18px] lg:pb-[14px] lg:pt-[15px]" data-item-id={item.id}>

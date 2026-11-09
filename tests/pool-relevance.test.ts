@@ -73,3 +73,18 @@ test("relevance retains combined filters and literal LIKE characters", async () 
   await add("wildcard-lookalike", "qx-anything-z", "");
   assert.deepEqual((await loadPool(query("qx%_\\z"))).items.map(item => item.id), [id("literal")]);
 });
+
+test("pool date bounds include both Beijing endpoints and intersect the source in both orderings", async () => {
+  const date = "2026-01-01";
+  await add("date-before", "datefilter", "", { age: 72_001 });
+  await add("date-open", "datefilter", "", { age: 72_000 });
+  await add("date-close", "datefilter", "", { age: -14_399 });
+  await add("date-after", "datefilter", "", { age: -14_400 });
+  for (const tab of ["time", "relevance"] as const) {
+    const filters = { ...query("datefilter"), tab, from: date, to: date, source: T.toUpperCase() };
+    const result = await loadPool({ ...filters, now: new Date("2026-01-02T00:00:00Z") });
+    assert.deepEqual(result.items.map(item => item.id), [id("date-close"), id("date-open")]);
+    assert.equal(result.total, 2);
+    assert.equal((await loadPool({ ...filters, source: "%" })).total, 0);
+  }
+});

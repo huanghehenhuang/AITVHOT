@@ -8,6 +8,7 @@ import { listedCondition, seatedCondition } from "./scope.ts";
 import { publicMatchCondition, searchTerms, withSearchCapacity } from "./pool.ts";
 import { sharedSearch } from "../lib/cache.ts";
 import { v1Payload, type V1ItemPayload } from "./publish.ts";
+import { itemUrl } from "./links.ts";
 
 export interface V1ItemsQuery {
   mode: "selected" | "all";
@@ -115,8 +116,14 @@ export async function ledgerWatermark(): Promise<number> {
 function minimalOf(item: V1ItemPayload) {
   return {
     id: item.id, title: item.title, source: item.source, publishedAt: item.publishedAt, discoveredAt: item.discoveredAt,
-    category: item.category, score: item.score, selected: item.selected, links: { aihot: item.links.aihot },
+    category: item.category, score: item.score, selected: item.selected, links: { aihot: itemUrl(item.id) },
   };
+}
+
+/** Editorial history stays frozen; deployment addresses follow the current public origin. */
+function currentLinks(item: V1ItemPayload): V1ItemPayload {
+  const url = itemUrl(item.id);
+  return { ...item, links: { ...item.links, aihot: url }, attribution: { ...item.attribution, url } };
 }
 
 // Drop unused wide fields before crossing the database connection; minimalOf remains the output
@@ -188,7 +195,7 @@ export async function selectedSnapshot(q: SnapshotQuery, now = new Date()) {
     count: page.length,
     hasMore,
     nextPage: hasMore && last ? encodeCursor(SYNC_PREFIX, { k: "page", e: epoch, w, f: fields, a: last.article_id, t: asOf }) : null,
-    items: page.map((r) => (fields === "minimal" ? minimalOf(r.payload) : r.payload)),
+    items: page.map((r) => (fields === "minimal" ? minimalOf(r.payload) : currentLinks(r.payload))),
   };
 }
 
@@ -225,7 +232,7 @@ export async function selectedChanges(q: { cursor: string; limit: number }, now 
     changes: page.map((r) =>
       r.op === "remove"
         ? { op: "remove" as const, changedAt: r.changed_at.toISOString(), id: r.article_id }
-        : { op: "upsert" as const, changedAt: r.changed_at.toISOString(), item: c.f === "minimal" ? minimalOf(r.payload!) : r.payload! },
+        : { op: "upsert" as const, changedAt: r.changed_at.toISOString(), item: c.f === "minimal" ? minimalOf(r.payload!) : currentLinks(r.payload!) },
     ),
   };
 }

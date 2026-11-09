@@ -1,0 +1,22 @@
+[
+  { "query": "short-drama in:name,description", "stage": "导演与分镜" },
+  { "query": "seedance skill in:name,description", "stage": "导演与分镜" },
+  { "query": "image prompts in:name,description", "stage": "图片提示词", "kind": "prompt" },
+  { "query": "topic:comfyui", "stage": "图像与短剧工作流" },
+  { "query": "topic:text-to-video", "stage": "视频生成" },
+  { "query": "AI storyboard in:name,description", "stage": "导演与分镜" },
+  { "query": "nano-banana prompts in:name,description", "stage": "图片提示词", "kind": "prompt" },
+  { "query": "topic:text-to-speech", "stage": "配音与音频" },
+  { "query": "AI film in:name,description", "stage": "导演与分镜" },
+  { "query": "AI image skill in:name,description", "stage": "图像与多模态" },
+  { "query": "topic:generative-ai topic:3d", "stage": "3D与空间" },
+  { "query": "AIGC in:name,description", "stage": "全流程" },
+  { "query": "seedream prompts in:name,description", "stage": "图片提示词", "kind": "prompt" },
+  { "query": "AI music in:name,description", "stage": "配音与音频" },
+  { "query": "AI video workflow in:name,description", "stage": "图像与短剧工作流" },
+  { "query": "topic:lora", "stage": "模型训练与定制" },
+  { "query": "AI screenplay in:name,description", "stage": "剧本与分镜" },
+  { "query": "FLUX prompts in:name,description", "stage": "图片提示词", "kind": "prompt" },
+  { "query": "topic:rag topic:multimodal", "stage": "多模态与知识检索" },
+  { "query": "AI lipsync in:name,description", "stage": "数字人与口型" }
+]

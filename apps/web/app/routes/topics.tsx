@@ -32,7 +32,7 @@ export function meta({ loaderData, matches }: Route.MetaArgs) {
   const description = named
     ? translate(locale, "按{by}追踪 AI影视最新动态：{named}等 {n} 个主题，浏览最新精选与重要进展，持续更新。", { by, named, n: topics.length })
     : translate(locale, "按{by}追踪 AI影视最新动态：{n} 个主题，浏览最新精选与重要进展，持续更新。", { by, n: topics.length });
-  return pageMeta({
+  return pageMeta({ translationReady: loaderData && "translationReady" in loaderData ? loaderData.translationReady : undefined,
     title: translate(locale, SITE.topicsTitle),
     description,
     path: "/topics",

@@ -1,0 +1,4 @@
+[
+  { "repo": "UnderleveledBuilder/awesome-short-drama-skills", "stage": "导演与分镜", "pattern": "skill|director|drama|film|seedance|story|video" },
+  { "repo": "PicoTrex/Awesome-Nano-Banana-images", "stage": "图片提示词", "pattern": "prompt|banana|image|seedream", "kind": "prompt" }
+]

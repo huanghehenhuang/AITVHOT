@@ -4,8 +4,8 @@
 import type { MetaDescriptor } from "react-router";
 import type { ReportDetail, StoryDetail, TimelineFilters } from "@aihot/contracts/site";
 import { isCategoryKey, isChannelKey } from "@aihot/contracts/taxonomy";
-import { SITE, subjectAfter, withSubject } from "@aihot/site";
-import { ogLocale, localeTag, type Locale } from "../i18n/locale.ts";
+import { POLICY, SITE, subjectAfter, withSubject } from "@aihot/site";
+import { languagePath, ogLocale, localeTag, type Locale } from "../i18n/locale.ts";
 import { translate } from "../i18n/translate.ts";
 
 /**
@@ -33,6 +33,7 @@ export interface PageMetaInput {
   jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
   /** Reader language. Defaults to Chinese, which is what a page renders when it does not pass one. */
   locale?: Locale;
+  translationReady?: boolean;
 }
 
 /**
@@ -81,12 +82,15 @@ export function pageMeta(input: PageMetaInput): MetaDescriptor[] {
   const siteDescription = translate(locale, SITE_DESCRIPTION);
   const title = input.title ? (input.rawTitle ? input.title : titled(input.title)) : homeTitle;
   const description = input.description ?? siteDescription;
-  const url = `${base}${input.path}`;
+  const url = `${base}${languagePath(input.path, locale)}`;
   const image = input.image ? (input.image.startsWith("http") ? input.image : `${base}${input.image}`) : `${base}/og/site.png`;
   const tags: MetaDescriptor[] = [
     { title },
     { name: "description", content: description },
     { tagName: "link", rel: "canonical", href: url },
+    { tagName: "link", rel: "alternate", hrefLang: "zh-CN", href: `${base}${languagePath(input.path, "zh")}` },
+    { tagName: "link", rel: "alternate", hrefLang: "en", href: `${base}${languagePath(input.path, "en")}` },
+    { tagName: "link", rel: "alternate", hrefLang: "x-default", href: `${base}${languagePath(input.path, "zh")}` },
     { property: "og:site_name", content: SITE.name },
     { property: "og:type", content: input.type ?? "website" },
     { property: "og:title", content: input.title ?? homeTitle },
@@ -102,7 +106,7 @@ export function pageMeta(input: PageMetaInput): MetaDescriptor[] {
     { name: "twitter:description", content: description },
     { name: "twitter:image", content: image },
   ];
-  if (input.noindex) tags.push({ name: "robots", content: input.nofollow ? "noindex, nofollow" : "noindex, follow" });
+  if (input.noindex || (locale === "en" && input.translationReady === false)) tags.push({ name: "robots", content: input.nofollow ? "noindex, nofollow" : "noindex, follow" });
   if (input.jsonLd) tags.push({ "script:ld+json": input.jsonLd });
   return tags;
 }
@@ -130,12 +134,12 @@ export function organizationLd() {
   };
 }
 
-export function breadcrumbLd(items: Array<{ name: string; path: string }>) {
+export function breadcrumbLd(items: Array<{ name: string; path: string }>, locale: Locale = "zh") {
   const base = siteUrl();
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, item: `${base}${it.path}` })),
+    itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, item: `${base}${languagePath(it.path, locale)}` })),
   };
 }
 
@@ -147,7 +151,6 @@ const orgRef = () => ({ "@id": `${siteUrl()}/#organization` });
  */
 export function siteLd(locale: Locale = "zh") {
   const base = siteUrl();
-  const lang = localeTag(locale);
   return [
     organizationLd(),
     {
@@ -157,7 +160,7 @@ export function siteLd(locale: Locale = "zh") {
       name: SITE.name,
       url: base,
       description: translate(locale, SITE_DESCRIPTION),
-      inLanguage: lang,
+      inLanguage: ["zh-CN", "en"],
       publisher: orgRef(),
     },
     {
@@ -165,14 +168,13 @@ export function siteLd(locale: Locale = "zh") {
       "@type": "Dataset",
       "@id": `${base}/#dataset`,
       name: `${SITE.name} — ${translate(locale, withSubject("行业动态数据集"))}`,
-      description: translate(locale, `${subjectAfter("持续更新的中文", "行业动态")}：每条附中文摘要、评分与原文出处，${subjectAfter("另有每日精选与", "日报")}，可通过 RSS 与公开 API 获取。`),
+      description: SITE.datasetDescription[locale],
       url: base,
-      inLanguage: lang,
+      inLanguage: ["zh-CN", "en"],
+      license: { "@type": "CreativeWork", name: POLICY.terms.datasetLicense.name, url: `${base}${POLICY.terms.datasetLicense.path}` },
       isAccessibleForFree: true,
       ...(SITE.since ? { temporalCoverage: `${SITE.since}/..` } : {}),
-      keywords: locale === "en"
-        ? ["AI short drama", "AI film", "short-drama news", "AI daily", "micro-drama"]
-        : [...SITE.keywords],
+      keywords: [...SITE.keywords],
       creator: orgRef(),
       publisher: orgRef(),
       distribution: [
@@ -192,13 +194,13 @@ export function siteLd(locale: Locale = "zh") {
  * A list's entries by their visible titles. No entry URLs: item pages are mostly noindex, and a
  * list item must point at an indexable page; the list itself is the signal.
  */
-export function itemListLd(path: string, name: string, titles: string[]) {
+export function itemListLd(path: string, name: string, titles: string[], locale: Locale = "zh") {
   const names = titles.slice(0, 30);
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: `${SITE.name} · ${name}`,
-    url: `${siteUrl()}${path}`,
+    url: `${siteUrl()}${languagePath(path, locale)}`,
     numberOfItems: names.length,
     itemListElement: names.map((n, i) => ({ "@type": "ListItem", position: i + 1, name: n })),
   };
@@ -207,7 +209,7 @@ export function itemListLd(path: string, name: string, titles: string[]) {
 /** An item page: the site's reading of a third-party report, based on (not claiming) the original. */
 export function articleLd(input: { path: string; headline: string; description?: string | null; publishedAt?: string | null; modifiedAt?: string | null; image?: string | null; basedOn?: string | null; section?: string[]; locale?: Locale }) {
   const base = siteUrl();
-  const url = `${base}${input.path}`;
+  const url = `${base}${languagePath(input.path, input.locale ?? "zh")}`;
   const description = input.description?.trim();
   return {
     "@context": "https://schema.org",
@@ -231,33 +233,33 @@ export function articleLd(input: { path: string; headline: string; description?:
 }
 
 /** An archive whose entries are indexable pages of their own (report issues). */
-export function archiveLd(path: string, name: string, entries: Array<{ path: string; name: string }>) {
+export function archiveLd(path: string, name: string, entries: Array<{ path: string; name: string }>, locale: Locale = "zh") {
   const base = siteUrl();
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name,
-    url: `${base}${path}`,
+    url: `${base}${languagePath(path, locale)}`,
     numberOfItems: entries.length,
     itemListOrder: "https://schema.org/ItemListOrderDescending",
-    itemListElement: entries.map((e, i) => ({ "@type": "ListItem", position: i + 1, name: e.name, url: `${base}${e.path}` })),
+    itemListElement: entries.map((e, i) => ({ "@type": "ListItem", position: i + 1, name: e.name, url: `${base}${languagePath(e.path, locale)}` })),
   };
 }
 
 const REPORT_NAME = { daily: "日报", weekly: "周报", monthly: "月报" } as const;
 
 /** An issue's date and actual editorial lead, falling back only to a still-public visible highlight. */
-export function reportTitle(report: ReportDetail): string {
+export function reportTitle(report: ReportDetail, locale: Locale = "zh"): string {
   const lead = report.lead?.title.trim() || report.highlights.find((item) => item.available)?.title.trim();
-  const name = `${withSubject(REPORT_NAME[report.kind])} ${report.key}`;
-  return lead ? `${name}：${lead}` : name;
+  const name = `${translate(locale, withSubject(REPORT_NAME[report.kind]))} ${report.key}`;
+  return lead ? `${name}${locale === "en" ? ": " : "："}${lead}` : name;
 }
 
 /** One report issue: an editorial round-up by the site (no personal byline), sections as its sections. */
 export function reportLd(r: ReportDetail, path: string, description: string, locale: Locale = "zh") {
   return articleLd({
     path,
-    headline: reportTitle(r),
+    headline: reportTitle(r, locale),
     description,
     publishedAt: r.generatedAt,
     image: `/og/reports/${r.kind}/${r.key}.png`,
@@ -269,7 +271,7 @@ export function reportLd(r: ReportDetail, path: string, description: string, loc
 /** The event page collects public reports; their publication times do not date the page itself. */
 export function storyLd(story: StoryDetail, locale: Locale = "zh") {
   const base = siteUrl();
-  const url = `${base}/story/${story.publicId}`;
+  const url = `${base}${languagePath(`/story/${story.publicId}`, locale)}`;
   const description = story.digest ?? story.summary ?? story.excerpt?.text;
   const updated = [story.latestAt, story.digest ? story.digestUpdatedAt : null]
     .filter((at): at is string => !!at).sort((a, b) => Date.parse(b) - Date.parse(a))[0];
@@ -306,7 +308,7 @@ export function topicLd(input: {
   locale?: Locale;
 }) {
   const base = siteUrl();
-  const url = `${base}${input.path}`;
+  const url = `${base}${languagePath(input.path, input.locale ?? "zh")}`;
   // Entries name their event page when they have one (event pages are indexable, most article pages are not).
   const lists = input.lists.filter((l) => l.entries.length > 0).map((l) => ({
     "@type": "ItemList",

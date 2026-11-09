@@ -5,6 +5,9 @@ import { noteScreen, rememberedTab, useScreen } from "./screens";
 import { markBack } from "./transitions";
 import { useChangelogDot } from "./Sidebar";
 import { useI18n } from "../../i18n";
+import { DesignAsset, type DesignAssetName } from "../ui/DesignAsset";
+
+const DESIGN_ICONS: Partial<Record<TabKey, DesignAssetName>> = { featured: "grid", hot: "film", daily: "bookmark", me: "menu" };
 
 const subscribe = () => () => {};
 const serverTab = () => null;
@@ -37,7 +40,7 @@ export function TabBar({ changelogVersion }: { changelogVersion: string | null }
   return (
     <nav
       aria-label={tr("底部导航")}
-      className="fixed inset-x-0 bottom-0 z-40 bg-surface/90 pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] shadow-[0_-1px_0_var(--line)] backdrop-blur-xl backdrop-saturate-150 lg:hidden"
+      className="editorial-tabbar fixed inset-x-0 bottom-0 z-40 bg-bg pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] lg:hidden"
     >
       <div className="mx-auto grid h-[50px] max-w-[640px]" style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))` }}>
         {items.map((t) => {
@@ -63,8 +66,8 @@ export function TabBar({ changelogVersion }: { changelogVersion: string | null }
               }}
               className={`relative flex flex-col items-center justify-center gap-[2px] text-[10.5px] transition-colors ${on ? "font-semibold text-accent" : "text-ink-3 active:text-ink"}`}
             >
-              <Icon size={23} />
-              <span>{tr(t.label)}</span>
+              {DESIGN_ICONS[t.key] ? <DesignAsset name={DESIGN_ICONS[t.key]!} /> : <Icon size={23} />}
+              <span className="whitespace-nowrap">{tr(t.label)}</span>
               {dot && t.changelog && <span className="absolute left-[calc(50%+9px)] top-[7px] size-1.5 rounded-full bg-hot" aria-label={tr("有新的更新")} />}
             </Link>
           );

@@ -5,6 +5,7 @@ import { IconBookmark } from "../../components/icons";
 import { SourceAvatar } from "../../components/ui/SourceAvatar";
 import { Lightbox } from "../../components/ui/Lightbox";
 import { toggleStar, useIsStarred } from "../../lib/local-state";
+import { DesignAsset } from "../../components/ui/DesignAsset";
 import { useI18n } from "../../i18n";
 
 /** The source's name, or, for X, avatar + display name + @handle. */
@@ -70,7 +71,7 @@ export function useStar(item: Starrable) {
 }
 
 /** Bookmark toggle kept in this browser (收藏): 26px, or sized by `size` or by `className`. */
-export function StarButton({ item, size, className = "size-[26px]" }: { item: Starrable; size?: number; className?: string }) {
+export function StarButton({ item, size, className = "size-[26px]", designIcon = false }: { item: Starrable; size?: number; className?: string; designIcon?: boolean }) {
   const { t } = useI18n();
   const { on, toggle, pulse } = useStar(item);
   const label = on ? t("取消收藏") : t("收藏");
@@ -89,7 +90,7 @@ export function StarButton({ item, size, className = "size-[26px]" }: { item: St
       className={`relative z-10 inline-flex shrink-0 items-center justify-center rounded-control transition-colors duration-150 ${on ? "text-accent" : "text-ink-4 hover:bg-bg-sunk hover:text-ink-2"} ${className}`}
     >
       <span key={pulse} className={`flex ${pulse ? "anim-bump" : ""}`}>
-        <IconBookmark size={size ? Math.round(size * 0.6) : 16} filled={on} />
+        {designIcon ? <DesignAsset name="bookmark" className={on ? "design-bookmarked" : ""} /> : <IconBookmark size={size ? Math.round(size * 0.6) : 16} filled={on} />}
       </span>
     </button>
   );

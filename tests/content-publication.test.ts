@@ -4,6 +4,7 @@ import { randomUUID } from "node:crypto";
 import { after, test } from "node:test";
 import { closeDb, sql } from "@aihot/backend/db";
 import { pickRepresentative, representativePriority } from "@aihot/backend/publication/representative";
+import { eventFeed } from "@aihot/backend/publication/feeds";
 import { loadTimeline } from "@aihot/backend/publication/timeline";
 import { loadStoryFollowups } from "@aihot/backend/publication/followups";
 import { loadGroupReports } from "@aihot/backend/publication/groups";
@@ -113,6 +114,14 @@ test("mentions cannot choose a timeline origin, anchor, representative, or a lat
   assert.equal(detail.latest, "Dots 后续更新");
   assert.equal(detail.officialReports.length, 1, "only tier T1 has the first-party label");
   assert.equal(detail.developments[0]!.representative.source.firstParty, false);
+  const feed = await eventFeed(g.storyPublicId);
+  assert.equal(feed.kind, "feed");
+  if (feed.kind === "feed") {
+    assert.equal((feed.xml.match(/<item>/g) ?? []).length, 1, "a fact has one RSS item");
+    assert.ok(feed.xml.includes(`/items/${official}`));
+    assert.ok(feed.xml.includes(`<guid isPermaLink="false">${g.factPublicId}</guid>`));
+    assert.ok(!feed.xml.includes("ROUNDUP"));
+  }
   const edition = await candidates(at(100), now);
   assert.equal(edition.find((c) => c.factId === g.factPublicId)?.itemId, official, "report editions use the same authority within their own time window");
   assert.equal(edition.find((c) => c.itemId === official)?.firstParty, false);

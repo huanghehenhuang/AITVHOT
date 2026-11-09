@@ -67,7 +67,7 @@ export function meta({ loaderData, matches }: Route.MetaArgs) {
   const list = parts.map((p) => p.name).join("、");
   const extra = parts.length ? (locale === "en" ? ` and ${parts.map((p) => translate(locale, p.name)).join(", ")}` : `与${list}`) : "";
   const crumbs = breadcrumbLd([{ name: SITE.name, path: "/" }, ...(inNav("/topics") ? [{ name: translate(locale, "主题"), path: "/topics" }] : []), { name: topic.name, path: `/topics/${topic.slug}` }]);
-  return pageMeta({
+  return pageMeta({ translationReady: loaderData && "translationReady" in loaderData ? loaderData.translationReady : undefined,
     title: page > 1
       ? translate(locale, "{name} 精选 · 第 {page} 页", { name: topic.name, page })
       : translate(locale, "{name} 最新动态{extra}", { name: topic.name, extra }),

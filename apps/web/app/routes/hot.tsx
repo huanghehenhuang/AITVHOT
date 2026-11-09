@@ -1,5 +1,7 @@
-import { useLoaderData } from "react-router";
+import { useEffect } from "react";
+import { useLoaderData, useLocation } from "react-router";
 import { IntentLink } from "../components/ui/IntentLink";
+import { HOT_REFRESH_MINUTES } from "@aihot/contracts/site";
 import type { HotEntryView, HotResponse } from "@aihot/contracts/site";
 import { subjectAfter, withSubject } from "@aihot/site";
 import { cachedPage, loadOr404 } from "../lib/api.server";
@@ -10,11 +12,12 @@ import { EmptyState } from "../components/ui/Page";
 import { IconChevronDown, IconInfo } from "../components/icons";
 import { Sparkline } from "../features/hot/Sparkline";
 import { Faces } from "../features/hot/Faces";
+import { isRankingDelayed, RankingUpdate } from "../features/hot/RankingUpdate";
 import { Delta } from "../features/hot/Delta";
 import { PhoneBar } from "../components/shell/PhoneBar";
 import { inNav } from "../components/shell/nav";
 import type { Screen } from "../components/shell/screens";
-import { countLabel, localeFromMatches, translate, useFormat, useI18n } from "../i18n";
+import { countLabel, localeFromMatches, translate, useI18n } from "../i18n";
 import type { Route } from "./+types/hot";
 
 export const handle: Screen = { tab: inNav("/hot") ? "hot" : "featured", name: "热点" };
@@ -22,12 +25,15 @@ export { pageHeaders as headers } from "../lib/api.server";
 export const { clientLoader, shouldRevalidate } = pageReuse<typeof loader>();
 
 export async function loader({ request }: { request: Request }) {
-  return cachedPage(120, { hot: await loadOr404<HotResponse>("/api/site/hot", { signal: request.signal }) });
+  const upstream = new Headers();
+  const hot = await loadOr404<HotResponse>("/api/site/hot", { signal: request.signal, responseHeaders: upstream });
+  return cachedPage(30, { hot, delayed: isRankingDelayed(hot.computedAt, Date.now()) }, upstream);
 }
 
-export function meta({ matches }: Route.MetaArgs) {
+export function meta({ matches, loaderData }: Route.MetaArgs) {
   const locale = localeFromMatches(matches);
   return pageMeta({
+    translationReady: loaderData?.translationReady,
     title: translate(locale, withSubject("热点榜")),
     description: translate(locale, `${subjectAfter("过去 48 小时", "圈")}讨论最多的 10 个事件：热度指数、趋势与组成热度的公开来源。`),
     path: "/hot",
@@ -245,9 +251,12 @@ function showMethod() {
 }
 
 export default function HotPage() {
-  const { hot } = useLoaderData<typeof loader>();
+  const { hot, delayed } = useLoaderData<typeof loader>();
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (hash === "#hot-method") showMethod();
+  }, [hash]);
   const { t } = useI18n();
-  const { monthDayTime } = useFormat();
   const [lead, ...rest] = hot.entries;
   const runners = rest.slice(0, 2);
   const others = rest.slice(2);
@@ -258,12 +267,11 @@ export default function HotPage() {
         large
         sub={
           <>
-            {t(`过去 {hours}${subjectAfter(" 小时", "圈")}讨论最多的 {n} 件事`, { hours: hot.windowHours, n: hot.entries.length || 10 })}
+            {t(`过去 {hours}${subjectAfter(" 小时", "圈")}讨论最多的 {n} 件事`, { hours: hot.windowHours, n: hot.entries.length })}
             {hot.computedAt && (
               <>
                 {" · "}
-                <span className="num">{monthDayTime(hot.computedAt)}</span>
-                {t(" 更新")}
+                <RankingUpdate computedAt={hot.computedAt} delayed={delayed} />
               </>
             )}
           </>
@@ -278,19 +286,18 @@ export default function HotPage() {
         <div>
           <div className="flex items-center gap-2 text-[12px] font-semibold tracking-[0.08em] text-hot">
             <span className="relative flex size-2" aria-hidden="true">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-hot opacity-30" />
               <span className="relative inline-flex size-2 rounded-full bg-hot" />
             </span>
-            {t("实时热度")}
+            {t("行业热榜")}
           </div>
           <h1 className="mt-1.5 text-[24px] font-bold leading-[1.3] tracking-[-0.01em] text-ink lg:text-[26px]">{t(withSubject("热点榜"))}</h1>
-          <p className="mt-1.5 text-[13.5px] text-ink-3">{t(`过去 {hours} 小时，${withSubject("圈")}讨论最多的 {n} 件事`, { hours: hot.windowHours, n: hot.entries.length || 10 })}</p>
+          <p className="mt-1.5 text-[13.5px] text-ink-3">{t(`过去 {hours} 小时，${withSubject("圈")}讨论最多的 {n} 件事`, { hours: hot.windowHours, n: hot.entries.length })}</p>
         </div>
-        {hot.computedAt && (
-          <p className="text-[12px] text-ink-4">
-            <span className="num">{monthDayTime(hot.computedAt)}</span>{t(" 更新 · 按讨论热度排序")}
-          </p>
-        )}
+        <p className="text-[12px] text-ink-4">
+          <RankingUpdate computedAt={hot.computedAt} delayed={delayed} />
+          {hot.computedAt && " · "}
+          {t("每 {n} 分钟计算", { n: HOT_REFRESH_MINUTES })}
+        </p>
       </header>
 
       {!lead ? (
@@ -340,6 +347,7 @@ export default function HotPage() {
         </summary>
         <div className="max-w-[760px] space-y-2 pb-2 pl-[21px] pt-2 leading-[1.75] text-ink-3">
           <p>{t("热度来自参与同一事件的独立账号与机构，重复采集只算一次，并按 24 小时半衰期衰减。它衡量讨论活跃程度，不是报道质量评分。")}</p>
+          <p>{t("每 {n} 分钟计算", { n: HOT_REFRESH_MINUTES })}。</p>
           <p>{t("榜单统计过去 48 小时。趋势只比较持续覆盖的同一组信源；它反映我们的监测范围，不代表全网人数。缺少可比历史时，不展示趋势线。")}</p>
           <p>
             {t("信源名单只展示可公开阅读的报道来源；讨论参与者还包括只计入热度的账号与机构。同一机构的多个渠道可能合并计数，因此参与者不一定多于信源数。点击事件可查看各方报道与观点。")}

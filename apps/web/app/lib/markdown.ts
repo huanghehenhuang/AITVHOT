@@ -42,8 +42,10 @@ export function renderMarkdown(md: string, site: string): RenderedCopy {
     const heading = /^(#{2,4})\s+(.+)$/.exec(line);
     if (heading) {
       const level = heading[1]!.length;
-      const text = heading[2]!.trim();
-      const id = `s${++h}`;
+      const explicit = /\s+\{#([a-z][a-z0-9-]*)\}$/.exec(heading[2]!);
+      const text = heading[2]!.replace(/\s+\{#[a-z][a-z0-9-]*\}$/, "").trim();
+      const id = explicit?.[1] ?? `s${h + 1}`;
+      h++;
       if (level === 2) outline.push({ id, text });
       html.push(`<h${level} id="${id}">${inline(text, site)}</h${level}>`);
       i++;

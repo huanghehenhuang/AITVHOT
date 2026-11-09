@@ -1,0 +1,4 @@
+[
+  { "url": "https://huggingface.co/blog/feed.xml", "host": "huggingface.co", "stage": "模型与创作教程", "pattern": "image|video|audio|speech|music|diffusion|comfy|3d|multimodal|lora|fine.tun" },
+  { "url": "https://blog.comfy.org/feed", "host": "blog.comfy.org", "stage": "图像与短剧工作流", "pattern": "tutorial|guide|workflow|how.to|prompt|getting.started|learn" }
+]

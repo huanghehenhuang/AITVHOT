@@ -1,12 +1,17 @@
 // Opens the site's main pages and machine exits and checks each answers: the whole-site check after a
 // deploy, and CI's check of the built site on an empty database.
 //   node scripts/smoke.ts [--base http://localhost:3000]
+//   node scripts/smoke.ts --base http://127.0.0.1:3000 --expected-origin https://example.com
 // Local targets are the default. Checking any other origin requires an explicit --live.
 import { SITE } from "@aihot/site";
+import { checkSeo } from "./seo-checks.ts";
 
 const at = process.argv.indexOf("--base");
 const rawBase = (at > 0 ? process.argv[at + 1] : process.env.SITE_URL) ?? "http://localhost:3000";
 const target = new URL(rawBase);
+// An origin probe may use loopback while its public canonical is an HTTPS domain.
+const expectedAt = process.argv.indexOf("--expected-origin");
+const expectedOrigin = new URL(expectedAt > 0 ? process.argv[expectedAt + 1]! : target.origin).origin;
 const LOCAL_HOSTS = new Set(["localhost", "127.0.0.1", "::1"]);
 
 /** Every request passes these checks immediately before it is sent. */
@@ -25,6 +30,7 @@ const MACHINE: Array<[path: string, type: RegExp]> = [
   ["/api/health", /json/],
   ["/api/v1/items", /json/],
   ["/api/v1/hot-topics", /json/],
+  ["/api/v1/agent", /text\/markdown/],
   ["/api/v1/selected/snapshot", /json/],
   ["/feed.xml", /xml/],
   ["/feed/all.xml", /xml/],
@@ -54,8 +60,8 @@ async function check(path: string, expect: (res: Response, body: string) => stri
 
 // Pages write the name as HTML text: a name such as "MyF&B" appears as "MyF&amp;B".
 const htmlName = SITE.name.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
-for (const path of PAGES) await check(path, (_res, body) => (body.includes(SITE.name) || body.includes(htmlName) ? null : `the page does not name ${SITE.name}`));
-for (const [path, type] of MACHINE) await check(path, (res) => (type.test(res.headers.get("content-type") ?? "") ? null : `content-type ${res.headers.get("content-type")}`));
+for (const path of PAGES) await check(path, (_res, body) => (body.includes(SITE.name) || body.includes(htmlName) ? checkSeo(path, body, expectedOrigin) : `the page does not name ${SITE.name}`));
+for (const [path, type] of MACHINE) await check(path, (res, body) => (type.test(res.headers.get("content-type") ?? "") ? checkSeo(path, body, expectedOrigin) : `content-type ${res.headers.get("content-type")}`));
 // Every built asset the page names must actually be served. A rejected static path
 // leaves every page answering 200 while its CSS and JS sit at 404, which no fixed-path
 // check above would notice. A rebuild swaps all hashes at once, so one missing file

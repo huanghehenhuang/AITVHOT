@@ -6,7 +6,7 @@
 @source "../../../modules/*/{web.tsx,web/**}";
 
 /* ---------------------------------------------------------------------------
-   Design tokens: light reading mode and neutral charcoal with muted gold accents.
+   Design tokens: white-paper and black-paper reading modes with monochrome accents.
    Components use the semantic names below; values change per theme only.
    --------------------------------------------------------------------------- */
 
@@ -19,8 +19,8 @@
 @custom-variant touch (@media (hover: none));
 
 @theme {
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "HarmonyOS Sans SC", "Microsoft YaHei", sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  --font-sans: "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "HarmonyOS Sans SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 
   /* Semantic colours. */
   --color-bg: var(--bg);
@@ -61,12 +61,12 @@
   /* Radius scale: mark 5 (inline code, kbd, tiny tags and swatches), control 8 (inputs, small
      blocks), tile 10 (list rows, hover areas), card 12, panel 14 (wells, pictures), sheet 16 (dialogs,
      sheets, hero shells); pills are rounded-full. Arbitrary radii are not used. */
-  --radius-mark: 5px;
-  --radius-control: 8px;
-  --radius-tile: 10px;
-  --radius-card: 12px;
-  --radius-panel: 14px;
-  --radius-sheet: 16px;
+  --radius-mark: 2px;
+  --radius-control: 0px;
+  --radius-tile: 0px;
+  --radius-card: 0px;
+  --radius-panel: 0px;
+  --radius-sheet: 2px;
 
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 
@@ -199,32 +199,6 @@
   --selection: rgba(199, 179, 138, 0.25);
 }
 
-/* Editorial homepage: compact masthead, quiet rules, content-led typography. */
-.editorial-masthead { display: flex; align-items: end; justify-content: space-between; gap: 24px; padding: 12px 0 24px; margin-bottom: 24px; border-bottom: 1px solid var(--line-strong); }
-.editorial-kicker { color: var(--ink-4); font-size: 11px; letter-spacing: 0.06em; }
-.editorial-masthead h1 { margin-top: 8px; font-size: 32px; font-weight: 650; line-height: 1.3; letter-spacing: -0.025em; }
-.editorial-description { margin-top: 9px; font-size: 13px; color: var(--ink-3); }
-.editorial-links { display: flex; flex-wrap: wrap; gap: 22px; flex-shrink: 0; padding-bottom: 3px; font-size: 13px; color: var(--ink-2); }
-.editorial-links a { padding-block: 5px; border-bottom: 1px solid var(--line-strong); }
-.editorial-links a:hover { color: var(--accent); border-color: var(--accent); }
-.cinema-sidebar nav a { min-height: 40px; }
-.cinema-sidebar nav a[aria-current="page"] { box-shadow: inset 2px 0 0 var(--accent); }
-.cinema-feed-item { border-radius: 6px; box-shadow: none; }
-.cinema-feed-item h3 { letter-spacing: -0.015em; }
-.cinema-feed-item .cinema-media { gap: 10px; margin-top: 16px; }
-.cinema-feed-item .cinema-media > :is(button, span) { width: min(240px, 45%); max-width: 320px; border-radius: 6px; }
-.cinema-feed-item .cinema-media img { width: 100%; height: 150px; max-width: none; }
-@media (max-width: 960px) {
-  .editorial-masthead { padding-top: 20px; }
-  .cinema-feed-item { padding: 16px 0; border: 0; border-radius: 0; background: transparent; }
-}
-@media (max-width: 640px) {
-  .editorial-masthead { align-items: start; flex-direction: column; gap: 12px; padding-bottom: 18px; margin-bottom: 16px; }
-  .editorial-masthead h1 { font-size: 26px; }
-  .editorial-description { font-size: 12px; }
-  .editorial-links { gap: 20px; font-size: 12px; }
-  .cinema-feed-item .cinema-media img { height: 112px; }
-}
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
@@ -511,6 +485,24 @@
   padding: 0.1em 0 0.1em 1em;
   color: var(--ink-3);
 }
+.article-video-frame {
+  display: grid;
+  justify-items: center;
+}
+.article-video-frame > video { grid-area: 1 / 1; min-height: 76px; }
+.article-video-play {
+  grid-area: 1 / 1;
+  place-self: center;
+  z-index: 1;
+  min-height: 44px;
+  padding-inline: 16px;
+  border-radius: 6px;
+  background: #202124;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.article-video-play:focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
 .prose img, .prose video {
   border-radius: var(--radius-tile);
   margin-inline: auto;

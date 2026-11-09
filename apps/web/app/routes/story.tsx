@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode }
 import { IntentLink } from "../components/ui/IntentLink";
 import { Link, useLoaderData, useLocation } from "react-router";
 import type { Route } from "./+types/story";
+import { storyFeedPath } from "@aihot/contracts/site";
 import type { StoryDetail, StoryReportView } from "@aihot/contracts/site";
 import { SITE } from "@aihot/site";
 import { cachedPage, loadOr404 } from "../lib/api.server";
@@ -35,7 +36,7 @@ export function meta({ loaderData, matches }: Route.MetaArgs) {
   const s = loaderData.story;
   const lead = (s.digest ?? s.summary ?? s.excerpt?.text)?.slice(0, 150);
   const description = lead ?? `${countLabel(locale, s.sourceCount, "{n} 个报道来源", "{n} source", "{n} sources")} ${locale === "en" ? "and " : ""}${countLabel(locale, s.reportCount, "{n} 篇报道", "{n} report", "{n} reports")}${translate(locale, "，完整时间线与最新进展。")}`;
-  return pageMeta({
+  return [...pageMeta({ translationReady: loaderData && "translationReady" in loaderData ? loaderData.translationReady : undefined,
     title: s.title,
     description,
     path: `/story/${s.publicId}`,
@@ -47,7 +48,7 @@ export function meta({ loaderData, matches }: Route.MetaArgs) {
       // Under the board only while it is a way in, as the back link.
       breadcrumbLd([{ name: SITE.name, path: "/" }, ...(inNav("/hot") ? [{ name: translate(locale, "热点榜"), path: "/hot" }] : []), { name: s.title, path: `/story/${s.publicId}` }]),
     ],
-  });
+  }), { tagName: "link", rel: "alternate", type: "application/rss+xml", title: s.title, href: storyFeedPath(s.publicId) }];
 }
 
 const STATUS = {
@@ -276,6 +277,9 @@ export default function StoryPage() {
             </span>
           )}
         </div>
+        <a href={storyFeedPath(story.publicId)} className="mt-2 inline-flex min-h-11 items-center text-sm font-semibold text-accent underline underline-offset-4">
+          {t("订阅事件 RSS")}
+        </a>
       </header>
 
       <div className="bleed sticky top-[var(--bar-h)] z-20 mt-5 bg-bg/90 py-2 backdrop-blur-md lg:mx-0 lg:px-0">

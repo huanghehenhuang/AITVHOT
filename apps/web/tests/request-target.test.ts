@@ -42,7 +42,7 @@ test("homepage stylesheet is served from the client build on every platform", as
   const asset = await raw(stylesheet[1]!, "GET");
   assert.equal(asset.status, 200);
   assert.match(asset.headers["content-type"] ?? "", /^text\/css/);
-  assert.match(asset.body, /editorial-masthead/);
+  assert.match(asset.body, /home-focus/);
   assert.match(asset.headers["cache-control"] ?? "", /immutable/);
 });
 

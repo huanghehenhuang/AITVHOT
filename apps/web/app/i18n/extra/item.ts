@@ -29,6 +29,7 @@ export const extra: Record<string, string> = {
   "正文语言": "Article language",
   "译文尚不完整，完整内容请切换到原文。": "This translation is incomplete. Switch to the original for the full text.",
   "相关事件": "Related events",
+  "播放视频": "Play video",
   "打开原推播放视频": "Play the video on X",
   "查看大图：{alt}": "View larger: {alt}",
   "查看大图": "View larger",

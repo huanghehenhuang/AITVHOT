@@ -1,6 +1,7 @@
 // RSS routes. Unknown query parameters are accepted and never change content.
 import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
-import { feedCacheControl, isFeedCategory, itemFeed, reportFeed, type ItemFeedKind } from "@aihot/backend/publication/feeds";
+import { storyFeedPath } from "@aihot/contracts/site";
+import { eventFeed, feedCacheControl, isFeedCategory, itemFeed, reportFeed, type ItemFeedKind } from "@aihot/backend/publication/feeds";
 import { requestNotice, serverModules } from "@aihot/backend/modules";
 import { applyPublicHeaders, sendTextWithEtag } from "../http/respond.ts";
 
@@ -19,7 +20,7 @@ function feedError(reply: FastifyReply) {
 
 export function registerFeeds(app: FastifyInstance) {
   // A preflight gets 204 and the allowed methods; feeds send no CORS headers.
-  for (const url of ["/feed.xml", "/feed/full.xml", "/feed/all.xml", "/feed/daily.xml", "/feed/weekly.xml", "/feed/monthly.xml", "/feed/category/:file", "/feed/full/category/:file"]) {
+  for (const url of ["/feed.xml", "/feed/full.xml", "/feed/all.xml", "/feed/daily.xml", "/feed/weekly.xml", "/feed/monthly.xml", "/feed/category/:file", "/feed/full/category/:file", "/feed/story/:file"]) {
     app.options(url, async (_req, reply) => reply.code(204).header("Allow", "GET, HEAD, OPTIONS").send());
   }
   const item = (kind: ItemFeedKind) => async (req: FastifyRequest, reply: FastifyReply) => {
@@ -43,6 +44,20 @@ export function registerFeeds(app: FastifyInstance) {
       }
     });
   }
+  app.get("/feed/story/:file", async (req, reply) => {
+    const { file } = req.params as { file: string };
+    const notFound = () => reply.code(404).header("Cache-Control", "public, max-age=60").type("text/plain; charset=utf-8").send("Not found");
+    if (!file.endsWith(".xml")) return notFound();
+    try {
+      const feed = await eventFeed(file.slice(0, -4));
+      if (feed.kind === "not_found") return notFound();
+      if (feed.kind === "merged") return reply.code(308).header("Cache-Control", "public, max-age=300").header("Location", storyFeedPath(feed.target)).send();
+      return await sendFeed(req, reply, feed.xml, feedCacheControl("selected"));
+    } catch (error) {
+      req.log.error({ err: error }, "event feed error");
+      return feedError(reply);
+    }
+  });
   for (const full of [false, true]) {
     app.get(full ? "/feed/full/category/:file" : "/feed/category/:file", async (req, reply) => {
       const file = (req.params as { file: string }).file;

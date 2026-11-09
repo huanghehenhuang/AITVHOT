@@ -1,0 +1,27 @@
+.knowledge-page { max-width: 1200px; margin: auto; padding: 24px 0 80px; }
+.knowledge-page h1 { font-size: 28px; font-weight: 700; }
+.knowledge-page header p { margin: 12px 0; }
+.knowledge-shortcuts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.knowledge-shortcuts a { border: 1px solid var(--line-strong); padding: 7px 12px; border-radius: 20px; }
+.knowledge-search { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 14px; }
+.knowledge-search input { flex: 1; min-width: 200px; }
+.knowledge-search select { max-width: 100%; min-width: 120px; }
+.knowledge-search select[name="source"] { max-width: 260px; }
+.knowledge-search :is(input, select, button) { border: 1px solid var(--line-strong); border-radius: 8px; padding: 10px; background: var(--bg); color: inherit; }
+.knowledge-search button { cursor: pointer; font-weight: 700; }
+.knowledge-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+.knowledge-grid article { padding: 20px; border: 1px solid var(--line-strong); border-radius: 12px; }
+.knowledge-grid h2 { font-size: 18px; font-weight: 700; margin: 14px 0; overflow-wrap: anywhere; }
+.knowledge-intro { overflow-wrap: anywhere; }
+.knowledge-intro strong { display: block; margin-bottom: 4px; font-size: 12px; }
+.knowledge-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.knowledge-tags a { border: 1px solid var(--line-strong); border-radius: 999px; padding: 3px 8px; font-size: 12px; overflow-wrap: anywhere; }
+.knowledge-grid p { margin: 10px 0; line-height: 1.65; }
+.knowledge-labels { display: flex; flex-wrap: wrap; gap: 10px; font-size: 12px; }
+.knowledge-note { color: var(--ink-3); font-size: 13px; overflow-wrap: anywhere; }
+.knowledge-updates { margin-top: 32px; line-height: 2; }
+.knowledge-updates h2 { font-size: 20px; font-weight: 700; }
+.knowledge-page a:hover { text-decoration: underline; }
+.knowledge-pagination { display: flex; align-items: center; justify-content: center; gap: 24px; margin: 24px 0; }
+@media (max-width: 960px) { .knowledge-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .knowledge-page { padding: 16px 0 80px; } .knowledge-grid { grid-template-columns: minmax(0, 1fr); } }

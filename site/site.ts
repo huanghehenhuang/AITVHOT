@@ -36,12 +36,16 @@ export const SITE = {
   feedbackEmailHint: "留下邮箱，我们可以回信联系你",
   /** 一句话介绍：搜索引擎、分享卡片、RSS、llms.txt 会用。 */
   description: "自动盯住 AI 短剧与 AI 影视的上百个信源：模型发布、工具工作流、平台规则、监管政策，抓取、归并、打分、精选，每天早上出一份日报。",
+  datasetDescription: {
+    zh: "持续更新的 AI 影视与短剧动态，提供中英文摘要、评分、原文出处、事件综述与日报，也可通过 RSS 与公开 API 获取。",
+    en: "Continuously updated AI film and short-drama news with Chinese and English summaries, scores, original sources, event digests and daily briefings. RSS and public APIs are also available.",
+  },
   /** llms.txt 里一句话介绍下面的一段详细介绍（选填）。 */
-  llmsIntro: null as string | null,
+  llmsIntro: "本站网页提供中英文摘要、事件综述和日报。英文页面在同一路径添加 ?lang=en（已有查询参数时添加 &lang=en），中文可用 ?lang=zh。RSS、公开 API v1 和 MCP 继续提供中文数据。\n\nThe website provides Chinese and English summaries, event digests and briefings. Append lang=en to a page URL for English, or lang=zh for Chinese. RSS, public API v1 and MCP currently provide Chinese data. AITVHot-owned summaries, scores and compilation allow reading, attributed quotation and internal use; commercial redistribution, mirroring or bulk republication requires separate authorization. Third-party originals and media are excluded." as string | null,
   /** 一行小字：分享图、海报下方。 */
   tagline: "值得关注的 AI 短剧与影视动态",
   /** 搜索引擎读到的关键词（首页结构化数据）。 */
-  keywords: ["AI短剧", "AI影视", "短剧资讯", "AI 日报", "微短剧行业动态"] as string[],
+  keywords: ["AI短剧", "AI影视", "短剧资讯", "AI 日报", "微短剧行业动态", "AI short drama", "AI filmmaking", "AI video", "short drama news", "AI daily briefing", "micro-drama industry"] as string[],
   /** 网站开始收录的年份（结构化数据的时间范围，选填）。 */
   since: null as string | null,
   /** 界面语言（HTML lang、og:locale）。 */
@@ -92,7 +96,11 @@ export const POLICY = {
      * 讲清哪些用途要先取得授权的话（选填）：llms 接在 llms.txt“使用说明”的版权说明后面，
      * agent 写在给 Agent 的使用说明“使用规则”一节的开头。
      */
-    license: null as null | { llms: string; agent: string },
+    license: {
+      llms: "AITVHot 自有摘要、评分与编排允许阅读、署名引用和内部使用；商用再分发、镜像或批量转载需另行授权。第三方原文、图片等不在本许可范围内。",
+      agent: "AITVHot 自有摘要、评分与编排允许阅读、署名引用和内部使用；商用再分发、镜像或批量转载需另行授权。第三方原文、图片等仍归原权利人。",
+    } as null | { llms: string; agent: string },
+    datasetLicense: { name: "AITVHot Data Use License v1.0", path: "/terms#data-license-v1" },
     /**
      * 公开 API、RSS 和 OpenAPI 文件声明使用规则的响应头（选填）：原样附上，再加一个指向这一页的
      * Link 头（rel="terms-of-service"）；浏览器里的调用方也读得到它们。

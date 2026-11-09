@@ -4,6 +4,7 @@ import type { Route } from "./+types/item";
 import type { FeedItemSummary, SiteItemDetail } from "@aihot/contracts/site";
 import { ITEM_COPY, SITE } from "@aihot/site";
 import { cachedPage, loadOr404 } from "../lib/api.server";
+import { loadParts } from "../site-modules";
 import { pageReuse } from "../lib/page-reuse";
 import { articleLd, breadcrumbLd, pageMeta, siteUrl, titled } from "../lib/seo";
 import { localeFromMatches, tagLabel, translate, useFormat, useI18n } from "../i18n";
@@ -29,6 +30,7 @@ import { isPhone, type Screen } from "../components/shell/screens";
 export const handle: Screen = { home: "featured", toolbar: true };
 export { pageHeaders as headers } from "../lib/api.server";
 
+const resourceParts = await loadParts(module => module.itemResources);
 const PosterSheet = lazy(() => import("../features/item/PosterSheet"));
 
 export async function loader({ params, request }: Route.LoaderArgs) {
@@ -57,7 +59,7 @@ export function meta({ loaderData, matches }: Route.MetaArgs) {
   if (!loaderData) return [{ title: titled(translate(locale, "内容不存在")) }, { name: "robots", content: "noindex" }];
   const { item } = loaderData;
   if (!item) return [{ title: titled(loaderData.preview.title) }];
-  return pageMeta({
+  return pageMeta({ translationReady: loaderData && "translationReady" in loaderData ? loaderData.translationReady : undefined,
     title: item.title,
     description: item.summary ?? undefined,
     path: `/items/${item.id}`,
@@ -392,14 +394,7 @@ function ItemView({ item }: { item: SiteItemDetail }) {
   );
   const notes = (
     <>
-      {item.reason && !summaryOnly ? (
-        <RailSection title={t(ITEM_COPY.reasonLabel)}>
-          {verdict && <div className="mb-3">{verdict}</div>}
-          <p className="text-[13.5px] leading-[1.8] text-ink-2">{item.reason}</p>
-        </RailSection>
-      ) : (
-        verdict && <RailSection title={shownScore(item.score) !== null ? t("AI 评分") : undefined}>{verdict}</RailSection>
-      )}
+      {verdict && <RailSection title={shownScore(item.score) !== null ? t("AI 评分") : undefined}>{verdict}</RailSection>}
       {item.topics.length > 0 && (
         <RailSection title={t("主题")}>
           <div className="flex flex-wrap gap-1.5">
@@ -480,7 +475,7 @@ function ItemView({ item }: { item: SiteItemDetail }) {
             )}
           </div>
           {!isX && <h1 data-page-title="" className="text-[26px] font-bold leading-[1.38] tracking-[-0.01em] text-ink lg:text-[32px] lg:leading-[1.34] xl:text-[36px] xl:leading-[1.3]">{item.title}</h1>}
-          {!isX && item.originalTitle && <p className="mt-2.5 text-[14px] leading-relaxed text-ink-4">{item.originalTitle}</p>}
+          {!isX && item.originalTitle && item.originalTitle.trim() !== item.title.trim() && <p className="mt-2.5 text-[14px] leading-relaxed text-ink-4">{item.originalTitle}</p>}
 
           {item.summary && (!isX || item.summary.replace(/\s+/g, " ").trim() !== item.title) && (
             <section className={isX ? "mt-4" : "mt-7 xl:mt-8"}>
@@ -490,11 +485,18 @@ function ItemView({ item }: { item: SiteItemDetail }) {
           )}
 
           {item.reason && !summaryOnly && (
-            <section className="mt-6 border-t border-line pt-4 lg:hidden">
-              <div className="mb-1 text-[12px] font-semibold text-ink-3">{t(ITEM_COPY.reasonLabel)}</div>
+            <section className="mt-6 border-t border-line pt-4">
+              <div className="mb-1 text-[12px] font-semibold text-ink-3">{t("为什么重要")}</div>
               <p className="text-[15px] leading-[1.75] text-ink-2">{item.reason}</p>
             </section>
           )}
+
+          <p className="mt-5 flex flex-wrap items-center gap-x-2 text-[13px] text-ink-3">
+            <a href={item.links.original} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-1 font-semibold underline underline-offset-4">
+              {t(originalLabel)} <IconExternal size={13} aria-hidden="true" />
+            </a>
+            <span>{hostOf(item.links.original)}</span>
+          </p>
 
           {item.sameEvent && (
             <p className="mt-5 text-[13px] leading-relaxed text-ink-4">
@@ -541,13 +543,6 @@ function ItemView({ item }: { item: SiteItemDetail }) {
           {isX && item.x!.media.length > 0 && <MediaGallery media={item.x!.media} postUrl={item.links.original} />}
           {isX && item.x!.quoted?.text && <QuotedPost quoted={item.x!.quoted} original={lang === "original"} />}
 
-          <p className="mt-8 text-[13px] text-ink-4">
-            {t("来源：")}
-            <a href={item.links.original} target="_blank" rel="noopener noreferrer" className="text-ink-3 hover:text-accent">
-              {isX ? item.x!.authorName : item.source.name}
-            </a>
-            <span> · {hostOf(item.links.original)}</span>
-          </p>
 
           {(item.topics.length > 0 || item.tags.length > 0) && (
             <div className="mt-4 flex flex-wrap gap-1.5 lg:hidden">
@@ -563,6 +558,8 @@ function ItemView({ item }: { item: SiteItemDetail }) {
               ))}
             </div>
           )}
+
+          {resourceParts.map(({ name, part: Resources }) => <Resources key={name} item={item} />)}
 
           {item.story && <StoryFollowups story={item.story} currentId={item.id} />}
 

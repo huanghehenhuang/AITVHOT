@@ -27,9 +27,9 @@ export async function loader({ request }: { request: Request }) {
   return cachedPage(300, { contact, stats });
 }
 
-export function meta({ matches }: Route.MetaArgs) {
+export function meta({ matches, loaderData }: Route.MetaArgs) {
   const locale = localeFromMatches(matches);
-  return pageMeta({ title: translate(locale, "关于"), description: translate(locale, ABOUT.description), path: "/about", image: "/og/pages/about.png", jsonLd: organizationLd(), locale });
+  return pageMeta({ translationReady: loaderData?.translationReady, title: translate(locale, "关于"), description: translate(locale, ABOUT.description), path: "/about", image: "/og/pages/about.png", jsonLd: organizationLd(), locale });
 }
 
 const NO_SOURCES: RiverSource[] = [];

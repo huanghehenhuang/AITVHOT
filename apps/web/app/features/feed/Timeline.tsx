@@ -125,7 +125,7 @@ export function TimelineSlot({ at, children, fresh = false, delay = 0, dataKey }
   );
 }
 
-export function Timeline({ initial, filters }: { initial: TimelineResponse; filters: TimelineFilters }) {
+export function Timeline({ initial, filters, editorial = false, detailed = false, excludeKey }: { initial: TimelineResponse; filters: TimelineFilters; editorial?: boolean; detailed?: boolean; excludeKey?: string }) {
   const { t } = useI18n();
   const location = useLocation();
   const navigation = useNavigation();
@@ -269,21 +269,25 @@ export function Timeline({ initial, filters }: { initial: TimelineResponse; filt
   const days = useMemo(() => {
     const out: Array<{ day: string; cards: TimelineCard[] }> = [];
     for (const c of state.cards) {
+      if (c.key === excludeKey) continue;
       const d = beijingDate(c.anchorAt);
       const last = out[out.length - 1];
       if (last && last.day === d) last.cards.push(c);
       else out.push({ day: d, cards: [c] });
     }
     return out;
-  }, [state.cards]);
+  }, [state.cards, excludeKey]);
+
+  const excluded = state.cards.find((card) => card.key === excludeKey);
+  const excludedDay = excluded ? beijingDate(excluded.anchorAt) : null;
 
   const toggleDay = (day: string) =>
     setState((s) => ({ ...s, collapsed: s.collapsed.includes(day) ? s.collapsed.filter((d) => d !== day) : [...s.collapsed, day] }));
 
   let order = 0;
   return (
-    <div className="relative">
-      {days.length === 0 && (
+    <div className={`relative ${editorial ? "editorial-timeline" : ""}`}>
+      {days.length === 0 && !excludeKey && (
         <div className="lg:card">
           <EmptyState title={t("这个筛选下还没有精选内容")}>{t("换个类别看看，或者去全部动态里找找。")}</EmptyState>
         </div>
@@ -291,7 +295,7 @@ export function Timeline({ initial, filters }: { initial: TimelineResponse; filt
 
       {days.map(({ day, cards }) => {
         const collapsed = state.collapsed.includes(day);
-        const count = state.dayCounts[day] ?? cards.length;
+        const count = state.dayCounts[day] === undefined ? cards.length : state.dayCounts[day] - Number(day === excludedDay);
         return (
           <section key={day} aria-label={day} className="lg:mb-1">
             <DayHeader day={day} today={today} count={count} collapsed={collapsed} onToggle={() => toggleDay(day)} />
@@ -302,7 +306,7 @@ export function Timeline({ initial, filters }: { initial: TimelineResponse; filt
                     const delay = fresh ? Math.min(order++, 10) * 40 : 0;
                     return (
                       <TimelineSlot key={c.key} dataKey={c.key} at={c.anchorAt} fresh={fresh} delay={delay}>
-                        <FeedItem item={c.item} group={c.group} filters={filters} read={readSet.has(c.item.id)} onOpen={markRead} showTags at={c.anchorAt} />
+                        <FeedItem item={c.item} group={c.group} filters={filters} read={readSet.has(c.item.id)} onOpen={markRead} showTags at={c.anchorAt} editorial={editorial} detailed={detailed} />
                       </TimelineSlot>
                     );
                   })}

@@ -124,6 +124,19 @@ async function storyContent(storyId: number, now: Date) {
   return { s, reports, primaryReports, developments, latestReport, firstReportAt };
 }
 
+export async function storyFeedEntries(storyId: number) {
+  const content = await storyContent(storyId, new Date());
+  if (!content) return null;
+  return {
+    title: content.s.title,
+    entries: content.developments.slice(0, 30).map(({ factId, firstReportAt, representative }) => ({
+      factId,
+      firstReportAt,
+      report: reportView(representative),
+    })),
+  };
+}
+
 async function relatedStories(storyId: number, now: Date) {
   return sql<{ public_id: string; title: string; relation: "storyline" | "related" }[]>`
     SELECT st.public_id::text, st.title, l.relation FROM story_links l JOIN stories st ON st.id = l.other_id

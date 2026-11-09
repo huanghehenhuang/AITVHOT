@@ -3,6 +3,7 @@
 // requests per page.
 import { data, redirect, type HeadersArgs } from "react-router";
 import { logError } from "./errors.server.ts";
+import { localeContext } from "./locale-context.server.ts";
 
 /** Where the api listens (API_BASE_URL, set by the deployment); development uses the default. */
 export const API_BASE_URL = process.env.API_BASE_URL || "http://127.0.0.1:3001";
@@ -22,8 +23,10 @@ class ApiError extends Error {
 
 export async function apiGet<T>(path: string, init?: { signal?: AbortSignal; headers?: Record<string, string>; responseHeaders?: Headers }): Promise<T> {
   try {
-    const res = await fetch(`${API_BASE_URL}${path}`, {
-      headers: { accept: "application/json", "x-aihot-ssr": "1", ...init?.headers },
+    const url = new URL(path, API_BASE_URL);
+    if (localeContext.getStore()?.locale === "en") url.searchParams.set("lang", "en");
+    const res = await fetch(url, {
+      headers: { accept: "application/json", "x-aihot-ssr": "1", "x-aihot-locale": localeContext.getStore()?.locale ?? "zh", ...init?.headers },
       redirect: "manual",
       signal: init?.signal ? AbortSignal.any([init.signal, AbortSignal.timeout(15_000)]) : AbortSignal.timeout(15_000),
     });
@@ -32,6 +35,8 @@ export async function apiGet<T>(path: string, init?: { signal?: AbortSignal; hea
       throw new ApiError(res.status, res.status === 308 ? (body?.mergedInto ?? null) : null, res.headers.get("X-Request-Id"));
     }
     res.headers.forEach((value, name) => init?.responseHeaders?.set(name, value));
+    const context = localeContext.getStore();
+    if (context && res.headers.get("X-Translation-Complete") === "false") context.complete = false;
     return (await res.json()) as T;
   } catch (error) {
     if (!init?.signal?.aborted && (!(error instanceof ApiError) || error.status >= 500)) {
@@ -86,7 +91,7 @@ export function cachedPage<T extends object>(seconds: number, value: T, upstream
   const left = (until: number) => Math.floor(until - now / 1000);
   const browserDeadline = Math.min(deadline, second + BROWSER_MAX_SECONDS);
   return data(
-    { ...value, expiresAt: left(browserDeadline) > 0 ? browserDeadline * 1000 : 0 },
+    { ...value, translationReady: localeContext.getStore()?.complete ?? true, expiresAt: left(browserDeadline) > 0 ? browserDeadline * 1000 : 0 },
     { headers: left(deadline) > 0 ? { ...edgeTtl(left(deadline)), "X-Accel-Expires": `@${deadline}` } : { "Cache-Control": "no-cache", "X-Accel-Expires": "0" } },
   );
 }

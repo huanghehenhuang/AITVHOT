@@ -1,5 +1,5 @@
 import {
-  isRouteErrorResponse, Link, Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData, useLocation, useNavigation, useRouteError, useRouteLoaderData,
+  isRouteErrorResponse, Link, Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData, useLocation, useMatches, useNavigation, useRouteError, useRouteLoaderData,
   type ShouldRevalidateFunction,
 } from "react-router";
 import type { SiteMeta } from "@aihot/contracts/site";
@@ -8,7 +8,9 @@ import { RingMark } from "@aihot/site/brand/Logo.tsx";
 import { useEffect, useState, type ReactNode } from "react";
 import type { Route } from "./+types/root";
 import "./app.css";
-import { Sidebar } from "./components/shell/Sidebar";
+import "./monochrome.css";
+import { TopNav } from "./components/shell/TopNav";
+import { SiteFooter } from "./components/shell/SiteFooter";
 import { TabBar } from "./components/shell/TabBar";
 import { PullToRefresh } from "./components/shell/PullToRefresh";
 import { usePageTransition } from "./components/shell/transitions";
@@ -23,17 +25,17 @@ import { webModules } from "./site-modules";
 import { I18nProvider, LOCALE_BOOT_SCRIPT, localeFromMatches, localeTag, resolveLocale, translate, useI18n } from "./i18n";
 
 export const links: Route.LinksFunction = () => [
-  { rel: "icon", href: "/favicon.ico", sizes: "any" },
-  { rel: "icon", type: "image/png", href: "/icon.png" },
-  { rel: "apple-touch-icon", href: "/apple-icon.png" },
-  { rel: "manifest", href: "/manifest.webmanifest" },
+  { rel: "icon", href: "/favicon.ico?v=logo-20261031", sizes: "any" },
+  { rel: "icon", type: "image/png", href: "/icon.png?v=logo-20261031" },
+  { rel: "apple-touch-icon", href: "/apple-icon.png?v=logo-20261031" },
+  { rel: "manifest", href: "/manifest.webmanifest?v=logo-20261031" },
   { rel: "alternate", type: "application/rss+xml", title: `${SITE.name} — 精选`, href: "/feed.xml" },
 ];
 
 /** The release rendering this document: once a newer one is deployed, a render error reloads the page (entry.client). */
 export async function loader({ request }: Route.LoaderArgs) {
   const release = process.env.AIHOT_RELEASE ?? null;
-  const locale = resolveLocale(request);
+  const locale = resolveLocale(request, process.env.TRUST_PROXY === "true");
   try {
     const meta = await apiGet<SiteMeta>("/api/site/meta", {
       headers: Object.assign({}, ...webModules().map((m) => m.root?.documentHeaders?.(request) ?? {})),
@@ -51,14 +53,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const site = useRouteLoaderData<typeof loader>("root");
   const [documentRelease] = useState(site?.release ?? null);
   const locale = site?.locale === "en" ? "en" : "zh";
+  const pending = useMatches().some((m) => m.loaderData && typeof m.loaderData === "object" && "translationReady" in m.loaderData && m.loaderData.translationReady === false);
   return (
     <html lang={localeTag(locale)} data-theme="dark" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         {documentRelease && <meta name="aihot-release" content={documentRelease} />}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f6" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111112" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f2ed" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#242624" />
         <meta name="apple-mobile-web-app-title" content={SITE.name} />
         <script dangerouslySetInnerHTML={{ __html: LOCALE_BOOT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: APPEARANCE_BOOT_SCRIPT }} />
@@ -67,7 +70,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <I18nProvider locale={locale}>{children}</I18nProvider>
+        <I18nProvider locale={locale}>
+          {locale === "en" && pending && <p role="status" className="fixed bottom-4 left-1/2 z-[80] w-[min(90vw,36rem)] -translate-x-1/2 rounded-lg border border-line bg-surface px-4 py-3 text-sm text-ink shadow-lg">English translation is being prepared. Some entries are currently shown in Chinese.</p>}
+          {children}
+        </I18nProvider>
         <ScrollRestoration getKey={(location) => location.key} />
         <Scripts />
       </body>
@@ -87,24 +93,26 @@ export function meta({ error, matches }: Route.MetaArgs) {
 function SiteShell({ changelogVersion, children }: { changelogVersion: string | null; children: ReactNode }) {
   const { t } = useI18n();
   const navigation = useNavigation();
+  const { pathname } = useLocation();
   // The phone search and pull-to-refresh are client-side, mounted once the page is interactive.
   const [interactive, setInteractive] = useState(false);
   useEffect(() => setInteractive(true), []);
   return (
-    <div className="flex min-h-dvh">
+    <div className="editorial-shell min-h-dvh">
       <NavigationProgress active={navigation.state === "loading"} />
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[70] focus:rounded-control focus:bg-surface focus:px-3 focus:py-2">
         {t("跳到正文")}
       </a>
-      <Sidebar changelogVersion={changelogVersion} />
+      <TopNav showMobile={pathname === "/"} />
       {/* Phone shell (≤ 960px): each page's top bar (PhoneBar), one centred column, the tab bar below.
           Desktop: the page fills the main area up to the list width (--page-max-wide), centred beyond it. */}
-      <main id="main" className="min-w-0 flex-1 pb-[calc(72px+env(safe-area-inset-bottom))] lg:px-7 lg:pb-[72px] lg:pt-6">
-        <div className="mx-auto w-full max-w-[640px] pl-[var(--gutter-l)] pr-[var(--gutter-r)] lg:max-w-[var(--page-max-wide)] lg:px-0">
+      <main id="main" className="editorial-main min-w-0 pb-[calc(72px+env(safe-area-inset-bottom))] lg:pb-12">
+        <div className="editorial-page mx-auto w-full pl-[var(--gutter-l)] pr-[var(--gutter-r)]">
           {webModules().map((m) => m.root?.Top && <m.root.Top key={m.name} />)}
           {children}
         </div>
       </main>
+      <SiteFooter />
       <TabBar changelogVersion={changelogVersion} />
       {interactive && <SearchOverlay />}
       {interactive && <PullToRefresh />}

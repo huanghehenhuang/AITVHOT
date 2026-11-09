@@ -1,13 +1,14 @@
 import { useEffect } from "react";
-import { Link, redirect, useLoaderData, useNavigation, useSearchParams } from "react-router";
+import { Form, Link, redirect, useLoaderData, useNavigation, useSearchParams } from "react-router";
 import type { Route } from "./+types/all";
+import { readPoolFacets, type PoolFacets } from "@aihot/contracts/pool-filters";
 import type { PoolResponse } from "@aihot/contracts/site";
 import { SITE, subjectAfter } from "@aihot/site";
 import { beijingTime } from "@aihot/contracts/time";
 import { cachedPage, loadOr404 } from "../lib/api.server";
 import { pageReuse } from "../lib/page-reuse";
 import { filterParams, hasFeedFilters, itemListLd, listPath, pageMeta, readFilters } from "../lib/seo";
-import { ActiveFilters, CategoryTabs, FeedBar, SearchField } from "../features/feed/Filters";
+import { ActiveFilters, CategoryTabs, FeedBar, FeedFilterButton, FirstPartyFilter, SearchField } from "../features/feed/Filters";
 import { PillTabs } from "../components/ui/Tabs";
 import { DayList, Pagination } from "../features/feed/DayList";
 import { EmptyState } from "../components/ui/Page";
@@ -31,7 +32,7 @@ export async function loader({ request }: Route.LoaderArgs) {
   // Older deep-paging parameters (deep, anchorAt) still open a normal page.
   const page = Math.min(Math.max(Number.parseInt(url.searchParams.get("page") ?? "1", 10) || 1, 1), 50);
   const data = await loadOr404<PoolResponse>(
-    listPath("/api/site/pool", { ...filterParams(readFilters(url.searchParams)), q, tab, page: page > 1 ? page : null }),
+    listPath("/api/site/pool", { ...filterParams(readFilters(url.searchParams)), ...readPoolFacets(name => url.searchParams.get(name)), q, tab, page: page > 1 ? page : null }),
     // The busy page keeps the search, so it can be tried again as it was.
     { signal: request.signal, busyRedirect: `/all/search-busy${url.search}` },
   );
@@ -45,16 +46,16 @@ export function meta({ matches, loaderData }: Route.MetaArgs) {
   const f = loaderData?.data.filters;
   const q = f?.q;
   const page = loaderData?.data.page ?? 1;
-  const path = listPath("/all", { ...(f && filterParams(f)), q, tab: q && f?.tab === "relevance" ? "relevance" : null, page: page > 1 ? page : null });
+  const path = listPath("/all", { ...(f && filterParams(f)), from: f?.from, to: f?.to, source: f?.source, q, tab: q && f?.tab === "relevance" ? "relevance" : null, page: page > 1 ? page : null });
   const title = `${q ? translate(locale, "搜索：{q}", { q }) : translate(locale, ALL_TITLE)}${page > 1 ? translate(locale, " · 第 {n} 页", { n: page }) : ""}`;
-  const noindex = !!q || hasFeedFilters(f);
-  return pageMeta({
+  const noindex = !!(q || f?.from || f?.to || f?.source) || hasFeedFilters(f);
+  return pageMeta({ translationReady: loaderData && "translationReady" in loaderData ? loaderData.translationReady : undefined,
     title,
     description: translate(locale, `${SITE.name} 收录的${subjectAfter("全部", "相关动态")}，可按频道、类别与标签筛选，支持中英文搜索。`),
     path,
     noindex,
     locale,
-    jsonLd: noindex ? undefined : itemListLd(path, title, loaderData?.data.items.map((i) => i.title) ?? []),
+    jsonLd: noindex ? undefined : itemListLd(path, title, loaderData?.data.items.map((i) => i.title) ?? [], locale),
   });
 }
 
@@ -69,6 +70,38 @@ function pageHref(params: URLSearchParams, page: number) {
   return s ? `/all?${s}` : "/all";
 }
 
+function DateSourceFilters({ filters, keep }: { filters: PoolFacets; keep: Record<string, string | null> }) {
+  const { t } = useI18n();
+  const { from, to, source } = filters;
+  const active = [from, to, source].filter(Boolean).length;
+  const field = "min-h-11 w-full min-w-0 rounded-control border border-line-strong bg-surface px-3 text-sm text-ink";
+  return (
+    <details className="mb-4 rounded-control border border-line px-3" open={active > 0 || undefined}>
+      <summary className="min-h-11 cursor-pointer py-3 text-sm font-semibold text-ink">
+        {t("日期与来源")}{active > 0 && ` · ${active}`}
+      </summary>
+      <Form method="get" className="flex flex-wrap items-end gap-3 pb-3" key={JSON.stringify([from, to, source])}>
+        {Object.entries(keep).map(([name, value]) => value && <input key={name} type="hidden" name={name} value={value} />)}
+        <label className="grid min-w-0 flex-[1_1_9rem] gap-1 text-xs text-ink-3">
+          {t("起始日期")}
+          <input className={field} type="date" name="from" defaultValue={from ?? ""} />
+        </label>
+        <label className="grid min-w-0 flex-[1_1_9rem] gap-1 text-xs text-ink-3">
+          {t("结束日期")}
+          <input className={field} type="date" name="to" defaultValue={to ?? ""} />
+        </label>
+        <label className="grid min-w-0 flex-[2_1_12rem] gap-1 text-xs text-ink-3">
+          {t("报道来源")}
+          <input className={field} type="search" name="source" defaultValue={source ?? ""} maxLength={120} placeholder={t("输入部分来源名称")} />
+        </label>
+        <button className="min-h-11 rounded-control bg-ink px-4 text-sm text-accent-contrast" type="submit">{t("筛选")}</button>
+        {active > 0 && <Link className="inline-flex min-h-11 items-center text-sm underline" to={listPath("/all", keep)}>{t("清除日期与来源")}</Link>}
+        <p className="w-full text-xs text-ink-3">{t("日期按北京时间的资讯列表日期计算，包含起止当天。")}</p>
+      </Form>
+    </details>
+  );
+}
+
 export default function AllPage() {
   const { data } = useLoaderData<typeof loader>();
   const { t, locale } = useI18n();
@@ -76,8 +109,8 @@ export default function AllPage() {
   const navigation = useNavigation();
   const f = data.filters;
   const busy = navigation.state === "loading" && navigation.location?.pathname === "/all";
-  const { channel, category } = filterParams(f);
-  const keep = { channel, category };
+  const facetKeep = { ...filterParams(f), q: f.q, tab: f.tab === "relevance" ? f.tab : null };
+  const searchKeep = { ...filterParams(f), from: f.from ?? null, to: f.to ?? null, source: f.source ?? null };
   const searchTabHref = (tab: "time" | "relevance") => {
     const sp = new URLSearchParams(params);
     sp.delete("page");
@@ -102,6 +135,7 @@ export default function AllPage() {
       {f.q ? (
         <PhoneBar
           back={{ to: "/all", label: "全部" }}
+          actions={<FeedFilterButton base="/all" category={f.category} channel={f.channel} />}
           center={
             <button type="button" onClick={(event) => openSearch(f.q ?? "", event.currentTarget)} className="flex h-11 min-w-0 max-w-full items-center gap-2 rounded-full bg-bg-sunk px-3.5 text-[15px] text-ink ring-1 ring-inset ring-line-soft dark:bg-bg-muted/60">
               <IconSearch size={16} className="shrink-0 text-ink-4" />
@@ -118,10 +152,13 @@ export default function AllPage() {
       <div className="hidden lg:block">
         <h1 className="text-[24px] font-semibold leading-[1.3] text-ink">{title ?? t(ALL_TITLE)}</h1>
         <div className="mb-5 mt-4 flex items-center justify-between gap-4">
-          <CategoryTabs base="/all" category={f.category} channel={f.channel} layoutId="all-cat-desk" className="min-w-0" />
-          <SearchField defaultValue={f.q ?? ""} keep={keep} />
+          <CategoryTabs base="/all" category={f.category} layoutId="all-cat-desk" className="min-w-0" />
+          <SearchField defaultValue={f.q ?? ""} keep={searchKeep} />
         </div>
+        <FirstPartyFilter base="/all" channel={f.channel} />
       </div>
+
+      <DateSourceFilters filters={f} keep={facetKeep} />
 
       {f.q && (
         <div className="mb-3 mt-1 flex flex-wrap items-center justify-between gap-2 lg:mt-0">

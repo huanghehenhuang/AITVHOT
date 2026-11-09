@@ -1,7 +1,7 @@
 // An article body as the server sent it (sanitised HTML, in the first HTML response), enhanced after
 // hydration: code blocks get a head with the language and a copy button and are coloured on demand,
 // and pictures that are not links open in the viewer, stepping through the body's pictures.
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Lightbox, type LightboxImage } from "../../components/ui/Lightbox";
 import { useI18n } from "../../i18n";
 
@@ -100,15 +100,59 @@ function enhanceCode(root: HTMLElement, t: (zh: string, vars?: Record<string, st
   };
 }
 
+// Sanitized article HTML has no scripts or arbitrary data attributes. Rename media URLs before
+// rendering it, since some browsers fetch video metadata even with preload="none".
+function deferVideoSources(html: string) {
+  return html.replace(/<(?:video|source)\b(?:[^"'<>]|"[^"]*"|'[^']*')*>/gi, tag =>
+    tag.replace(/("[^"]*"|'[^']*')|\s+src(?=\s*=)/gi, (part, quoted) => quoted ? part : " data-video-src"));
+}
+
+function enhanceVideos(root: HTMLElement, playLabel: string) {
+  const cleanups: Array<() => void> = [];
+  for (const video of root.querySelectorAll("video")) {
+    const sources = [video, ...video.querySelectorAll("source")].filter(node => node.hasAttribute("data-video-src"));
+    if (!sources.length) continue;
+    const frame = document.createElement("div");
+    frame.className = "article-video-frame";
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "article-video-play";
+    button.textContent = playLabel;
+    video.controls = false;
+    video.before(frame);
+    frame.append(video, button);
+
+    button.addEventListener("click", () => {
+      for (const node of sources) {
+        node.setAttribute("src", node.getAttribute("data-video-src")!);
+        node.removeAttribute("data-video-src");
+      }
+      video.controls = true;
+      video.tabIndex = 0;
+      video.focus({ preventScroll: true });
+      button.remove();
+      video.load();
+      void video.play().catch(() => {}); // Native controls still let the reader retry.
+    }, { once: true });
+
+    cleanups.push(() => {
+      if (frame.parentNode) frame.replaceWith(video);
+    });
+  }
+  return () => cleanups.forEach(clean => clean());
+}
+
 export function ArticleBody({ html }: { html: string }) {
   const { t } = useI18n();
   const ref = useRef<HTMLDivElement>(null);
+  const body = useMemo(() => ({ __html: deferVideoSources(html) }), [html]);
   const [images, setImages] = useState<LightboxImage[]>([]);
   const [open, setOpen] = useState<number | null>(null);
   useEffect(() => {
     const root = ref.current;
     if (!root) return;
     const cleanCode = enhanceCode(root, t);
+    const cleanVideos = enhanceVideos(root, t("播放视频"));
     const mark = (img: HTMLImageElement) => {
       if (canZoom(img)) {
         img.classList.add("zoomable");
@@ -144,6 +188,7 @@ export function ArticleBody({ html }: { html: string }) {
     root.addEventListener("keydown", onKeyDown);
     return () => {
       cleanCode();
+      cleanVideos();
       root.removeEventListener("load", onLoad, true);
       root.removeEventListener("click", showImage);
       root.removeEventListener("keydown", onKeyDown);
@@ -151,7 +196,7 @@ export function ArticleBody({ html }: { html: string }) {
   }, [html, t]);
   return (
     <>
-      <div ref={ref} className="prose" dangerouslySetInnerHTML={{ __html: html }} />
+      <div ref={ref} className="prose" dangerouslySetInnerHTML={body} />
       <Lightbox images={images} index={open} onIndex={setOpen} onClose={() => setOpen(null)} />
     </>
   );

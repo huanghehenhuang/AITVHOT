@@ -1,3 +1,4 @@
+import type { PoolFacets } from "./pool-filters.ts";
 // First-party site API (/api/site/*). Not a public API: it may evolve with the website,
 // but it is served from the same public read layer as v1, RSS and MCP.
 import type { CategoryKey, ChannelKey } from "./taxonomy.ts";
@@ -111,7 +112,7 @@ export interface TimelineResponse {
 export interface PoolResponse {
   /** Other public reports of each displayed item's confirmed news fact. */
   groups?: Record<string, GroupInfo>;
-  filters: TimelineFilters & { q: string | null; tab: "time" | "relevance" };
+  filters: TimelineFilters & PoolFacets & { q: string | null; tab: "time" | "relevance" };
   items: FeedItemSummary[];
   page: number;
   pageCount: number;
@@ -199,6 +200,8 @@ export interface HotEntryView {
   cover: { url: string; srcSet?: string; width: number | null; height: number | null } | null;
 }
 
+export const HOT_REFRESH_MINUTES = 5;
+
 export interface HotResponse {
   computedAt: string | null;
   windowHours: number;
@@ -226,6 +229,10 @@ export interface StoryFactView {
   firstReportAt: string;
   reportCount: number;
   representative: StoryReportView;
+}
+
+export function storyFeedPath(publicId: string): string {
+  return `/feed/story/${encodeURIComponent(publicId)}.xml`;
 }
 
 export interface StoryDetail {

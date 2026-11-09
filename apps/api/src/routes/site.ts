@@ -1,3 +1,4 @@
+import { readPoolFacets } from "@aihot/contracts/pool-filters";
 // First-party site API (/api/site/*). Not public, not versioned, never called /api/v2.
 // Reads through the same public read layer as v1; no cookies are read or set.
 import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
@@ -18,7 +19,19 @@ import { listTopicSummaries, loadTopicPage, topicBrowseLinks } from "@aihot/back
 import { registerFeedback } from "./feedback.ts";
 import { loadHot, loadStoryDetail, resolveStory } from "@aihot/backend/publication/stories";
 import { listReports, loadReport, reportNavigation, loadReportNavigation, loadReportMonth, type ReportKind } from "@aihot/backend/publication/reports";
-import { looseQuery, sendJsonWithEtag, sendProblem } from "../http/respond.ts";
+import { looseQuery, sendJsonWithEtag as sendBaseJsonWithEtag, sendProblem } from "../http/respond.ts";
+import { localizePublication } from "@aihot/backend/publication/localization";
+
+async function sendJsonWithEtag(req: FastifyRequest, reply: FastifyReply, body: unknown, opts: Parameters<typeof sendBaseJsonWithEtag>[3]) {
+  opts = { ...opts, vary: "Accept-Encoding, X-Aihot-Locale" };
+  const language = new URL(req.url, "http://api.local").searchParams.get("lang") ?? req.headers["x-aihot-locale"];
+  if (language !== "en") return sendBaseJsonWithEtag(req, reply, body, opts);
+  const localized = await localizePublication(body);
+  reply.header("Content-Language", "en").header("X-Translation-Complete", String(localized.complete));
+  const maxAge = opts.cacheControl.match(/(?:^|,)\s*max-age=(\d+)/)?.[1];
+  const cacheControl = /no-store/.test(opts.cacheControl) || !maxAge ? "private, no-store" : `private, max-age=${maxAge}, must-revalidate`;
+  return sendBaseJsonWithEtag(req, reply, localized.body, { ...opts, etagOf: undefined, etagPrefix: `${opts.etagPrefix}-en`, cacheControl });
+}
 
 type Handler = (req: FastifyRequest, reply: FastifyReply) => Promise<unknown>;
 
@@ -81,7 +94,7 @@ export function registerSite(app: FastifyInstance) {
     const page = Math.min(Math.max(Number(q.page) || 1, 1), 50);
     const search = q.q?.trim() ? q.q.trim().slice(0, 200) : null;
     const tab = q.tab === "relevance" ? "relevance" : "time";
-    return sendJsonWithEtag(req, reply, await loadPool({ ...filters, q: search, tab, page }), { etagPrefix: "pool", cacheControl: "public, max-age=60, s-maxage=60" });
+    return sendJsonWithEtag(req, reply, await loadPool({ ...filters, ...readPoolFacets(name => q[name]), q: search, tab, page }), { etagPrefix: "pool", cacheControl: "public, max-age=60, s-maxage=60" });
   }));
 
   app.get("/api/site/items/:id", siteHandler(async (req, reply) => {
@@ -103,13 +116,13 @@ export function registerSite(app: FastifyInstance) {
   app.get("/api/site/stories/:publicId/followups", siteHandler(async (req, reply) => {
     const result = await loadStoryFollowups((req.params as { publicId: string }).publicId);
     if (!result) return sendProblem(req, reply, { status: 404, code: "not_found", detail: "story not found" });
-    return reply.header("Cache-Control", "no-store").send(result);
+    return sendJsonWithEtag(req, reply, result, { etagPrefix: "followups", cacheControl: "no-store" });
   }));
 
   app.get("/api/site/groups/:factId/reports", siteHandler(async (req, reply) => {
     const data = await loadGroupReports({ factPublicId: (req.params as { factId: string }).factId, ...parseFilters(looseQuery(req)) });
     if (!data) return sendProblem(req, reply, { status: 404, code: "not_found", detail: "reading group unavailable" });
-    return reply.header("Cache-Control", "no-store").send(data);
+    return sendJsonWithEtag(req, reply, data, { etagPrefix: "group", cacheControl: "no-store" });
   }));
 
   app.get("/api/site/contact", siteHandler(async (req, reply) => {

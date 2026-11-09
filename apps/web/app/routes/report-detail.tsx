@@ -43,7 +43,7 @@ export function meta({ loaderData, matches }: Route.MetaArgs) {
   const zhTitle = reportTitle(r);
   const name = withSubject(KIND_LABEL[r.kind]);
   const title = locale === "zh" || !zhTitle.startsWith(name) ? zhTitle : `${translate(locale, name)}${zhTitle.slice(name.length)}`;
-  return [...pageMeta({
+  return [...pageMeta({ translationReady: loaderData && "translationReady" in loaderData ? loaderData.translationReady : undefined,
     title,
     description,
     path,

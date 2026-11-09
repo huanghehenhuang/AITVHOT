@@ -9,6 +9,7 @@ export const KEYS = {
   read: "aihot-read-items",
   theme: "aihot-theme",
   font: "aihot-font",
+  feedDensity: "aihot-feed-density",
   changelogSeen: "aihot-changelog-seen-version",
   feedbackDraft: "aihot-feedback-draft-v1",
   recentSearches: "aihot-recent-searches",
@@ -268,7 +269,7 @@ export function resolvedTheme(pref: ThemePreference = getThemePreference()): "li
   }
 }
 
-const THEME_COLOR = { light: "#faf9f6", dark: "#111112" } as const;
+const THEME_COLOR = { light: "#f4f2ed", dark: "#242624" } as const;
 
 /** Puts a theme on the page: the document's data-theme and the browser's theme colour. */
 export function applyTheme(theme: "light" | "dark", followsSystem: boolean) {
