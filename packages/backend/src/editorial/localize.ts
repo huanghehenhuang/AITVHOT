@@ -55,8 +55,8 @@ export async function localizePending(maxBatches = 12): Promise<{ translated: nu
     const outputs = result.data.translations.map((v, i) => masked[i]!.restore(v.text));
     await sql.begin(async (tx) => {
       for (const [i, source] of sources.entries()) await tx`
-        INSERT INTO publication_translations (source_hash, language, source_text, translated_text, receipt_id)
-        VALUES (${translationHash(source)}, 'en', ${source}, ${outputs[i]!}, ${result.receiptId})
+        INSERT INTO publication_translations (source_hash, language, source_text, translated_text, receipt_id, updated_at)
+        VALUES (${translationHash(source)}, 'en', ${source}, ${outputs[i]!}, ${result.receiptId}, statement_timestamp())
         ON CONFLICT (source_hash, language) DO NOTHING`;
       await completeReceipt(tx, result.receiptId);
     });
