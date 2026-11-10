@@ -5,7 +5,10 @@ import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 import { audit } from "../audit.ts";
 import { config, credential } from "../config.ts";
 import { sql } from "../db.ts";
+import { parseCookies } from "../lib/cookies.ts";
 import { sha256 } from "../lib/ids.ts";
+
+export { cookie, parseCookies } from "../lib/cookies.ts";
 
 export const SESSION_COOKIE = "aihot_admin";
 export const STATE_COOKIE = "aihot_oauth_state";
@@ -84,24 +87,6 @@ function unsign(signed: string | undefined): string | null {
   const expected = Buffer.from(sign(value).slice(i + 1));
   const given = Buffer.from(signed.slice(i + 1));
   return expected.length === given.length && timingSafeEqual(expected, given) ? value : null;
-}
-
-export function parseCookies(header: string | undefined): Record<string, string> {
-  const out: Record<string, string> = {};
-  for (const part of (header ?? "").split(";")) {
-    const i = part.indexOf("=");
-    if (i <= 0) continue;
-    try {
-      out[part.slice(0, i).trim()] = decodeURIComponent(part.slice(i + 1).trim());
-    } catch {
-      // Other cookies need not be URI-encoded. A malformed value must not break admin sign-in.
-    }
-  }
-  return out;
-}
-
-export function cookie(name: string, value: string, maxAgeSeconds: number, secure: boolean): string {
-  return `${name}=${encodeURIComponent(value)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAgeSeconds}${secure ? "; Secure" : ""}`;
 }
 
 /** Where to send the browser to sign in; the signed state also carries where to return. */

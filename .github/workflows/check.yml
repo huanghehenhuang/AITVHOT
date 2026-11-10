@@ -8,6 +8,11 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+    inputs:
+      package_release:
+        description: Build a Huawei Cloud release image after checks pass
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -123,3 +128,30 @@ jobs:
       - name: Stop
         if: always()
         run: docker compose down -v
+
+  release-package:
+    if: github.event_name == 'workflow_dispatch' && inputs.package_release
+    needs: [check, docker]
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Build and package the release image
+        shell: bash
+        run: |
+          set -euo pipefail
+          image="aitvhot-app:${GITHUB_SHA}"
+          mkdir -p release
+          git archive HEAD | docker build --platform linux/amd64 --label "org.opencontainers.image.revision=${GITHUB_SHA}" -f deploy/Dockerfile.huawei -t "$image" -
+          docker save "$image" | gzip -1 > release/aitvhot-image.tar.gz
+          printf 'commit=%s\nimage=%s\nplatform=linux/amd64\n' "$GITHUB_SHA" "$image" > release/release.txt
+          (cd release && sha256sum aitvhot-image.tar.gz release.txt > SHA256SUMS)
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: aitvhot-release-${{ github.sha }}
+          path: release/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14

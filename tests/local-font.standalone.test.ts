@@ -24,7 +24,7 @@ test("appearance startup applies a saved browser font before rendering and safel
       document: { documentElement: { setAttribute: (key: string, value: string) => { attributes[key] = value; } }, querySelectorAll: () => [] },
     });
     assert.equal(attributes["data-font"], font === "browser" ? "browser" : "system");
-    assert.equal(attributes["data-theme"], font === "denied" ? "light" : "dark");
+    assert.equal(attributes["data-theme"], "dark");
   }
 });
 

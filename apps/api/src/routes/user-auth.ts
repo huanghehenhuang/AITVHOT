@@ -5,7 +5,7 @@
 import type { FastifyInstance } from "fastify";
 import type { UserAuthOptions, UserMe } from "@aihot/contracts/user";
 import { config } from "@aihot/backend/config";
-import { cookie, parseCookies } from "@aihot/backend/admin/auth";
+import { cookie, parseCookies } from "@aihot/backend/lib/cookies";
 import {
   endUserSession,
   safeUserReturn,

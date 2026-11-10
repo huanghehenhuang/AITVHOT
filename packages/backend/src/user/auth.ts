@@ -5,7 +5,7 @@ import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 import { credential } from "../config.ts";
 import { sql } from "../db.ts";
 import { sha256 } from "../lib/ids.ts";
-import { parseCookies } from "../admin/auth.ts";
+import { parseCookies } from "../lib/cookies.ts";
 
 export const USER_SESSION_COOKIE = "aihot_user";
 export const USER_STATE_COOKIE = "aihot_user_state";

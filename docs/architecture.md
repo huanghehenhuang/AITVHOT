@@ -49,6 +49,7 @@ flowchart LR
 | `packages/backend/src/editorial/` | 判断与写作：`analyze.ts`（流程）、`prompts.ts`（读提示词）、`models.ts`（每一步用哪个模型） |
 | `packages/backend/src/events/` | 事件归组、热度、事件综述 |
 | `packages/backend/src/publication/` | 公开读取层 |
+| `packages/backend/src/user/` | 访客登录与会话。仅访客登录路由可直接调用。 |
 | `packages/backend/src/reports/` | 日报、周报、月报 |
 | `packages/backend/src/providers/` | 模型、向量、X、公众号、Jina 的调用，回执与预算 |
 | `packages/backend/src/notify/` | 飞书推送 |
