@@ -33,3 +33,18 @@ test("an invalid later config or repeated ID rejects the entire import plan", ()
   assert.throws(() => planSourceImport([source("ok", "https://example.org/feed"), { ...source("bad", "https://example.org/bad"), config: { feedUrl: "https://example.org/bad", ignoredSetting: true } }], []), /ignoredSetting/);
   assert.throws(() => planSourceImport([source("same", "https://example.org/one"), source("same", "https://example.org/two")], []), /Duplicate source ID/);
 });
+
+test("POST author lists share an endpoint but retain distinct request identities", () => {
+  const post = (id: string, body: Record<string, unknown>): SeedSource => ({
+    id, name: id, kind: "json_list", config: { url: "https://example.org/authors", method: "POST", bodyJson: body },
+  });
+  const existing = [post("author-one", { pphId: "one", page: { size: 20, number: 1 } })];
+  const plan = planSourceImport([
+    post("author-two", { pphId: "two", page: { size: 20, number: 1 } }),
+    post("author-one-alias", { page: { number: 1, size: 20 }, pphId: "one" }),
+    { ...post("form-list", {}), config: { url: "https://example.org/authors", method: "POST", bodyForm: { pphId: "one" } } },
+    { ...post("get-list", {}), config: { url: "https://example.org/authors" } },
+  ], existing);
+  assert.deepEqual(plan.add.map(s => s.id), ["author-two", "form-list", "get-list"]);
+  assert.deepEqual(plan.duplicates.map(s => s.id), ["author-one-alias"]);
+});

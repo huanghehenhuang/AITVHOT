@@ -103,6 +103,11 @@ export const ENTITIES: Record<string, { name: string; displayTag: string | null;
 // ── 清单注册表（231 源的 owner 归属；displayTag 为 null 表示只用 entity:<id> 归组、不进卡片标签）──
 // 名称按 docs/source-catalog.md 的清单口径从源名称推导；人工核对的别名欢迎补充。
 export const CATALOG_ENTITIES: Record<string, { name: string; displayTag: null; aliases: string[] }> = {
+  "adquan": { name: "广告门", displayTag: null, aliases: ["广告门", "Adquan"] },
+  "baijing": { name: "白鲸出海", displayTag: null, aliases: ["白鲸出海"] },
+  "dianyingjie": { name: "电影界", displayTag: null, aliases: ["电影界"] },
+  "duanju-shenshuiqu": { name: "短剧深水区", displayTag: null, aliases: ["短剧深水区"] },
+  "xiaguang": { name: "霞光社", displayTag: null, aliases: ["霞光社", "ShineGlobal"] },
   "80lv": { name: "80 Level", displayTag: null, aliases: ["80 Level"] },
   "ace-step": { name: "ACE-Step", displayTag: null, aliases: ["ACE-Step"] },
   "acly": { name: "acly（krita-ai-diffusion）", displayTag: null, aliases: ["acly（krita-ai-diffusion）"] },
@@ -268,6 +273,19 @@ export const CATALOG_ENTITIES: Record<string, { name: string; displayTag: null; 
   "zai-org": { name: "智谱（Z.ai）", displayTag: null, aliases: ["智谱", "Z.ai", "Zhipu"] },
   "zhidx": { name: "智东西", displayTag: null, aliases: ["智东西"] },
   "zyphra": { name: "Zyphra", displayTag: null, aliases: ["Zyphra"] },
+  "guduo": { name: "骨朵网络影视", displayTag: null, aliases: ["骨朵网络影视"] },
+  "newplaylet": { name: "短剧新圈", displayTag: null, aliases: ["短剧新圈"] },
+  "ciwei": { name: "刺猬公社", displayTag: null, aliases: ["刺猬公社"] },
+  "prensariozone": { name: "Prensario Zone", displayTag: null, aliases: ["Prensario Zone"] },
+  "mediaplaynews": { name: "Media Play News", displayTag: null, aliases: ["Media Play News"] },
+  "tvmas": { name: "TVMAS Magazine", displayTag: null, aliases: ["TVMAS Magazine"] },
+  "woshipm": { name: "人人都是产品经理", displayTag: null, aliases: ["人人都是产品经理"] },
+  "senalnews": { name: "Señal News", displayTag: null, aliases: ["Señal News"] },
+  "shortsreport": { name: "Shorts Report", displayTag: null, aliases: ["Shorts Report"] },
+  "campaignbrief": { name: "Campaign Brief", displayTag: null, aliases: ["Campaign Brief"] },
+  "cveintiuno": { name: "Cveintiuno", displayTag: null, aliases: ["Cveintiuno"] },
+  "juduanduan": { name: "剧短短", displayTag: null, aliases: ["剧短短"] },
+  "canseideserpop": { name: "Cansei de Ser Pop", displayTag: null, aliases: ["Cansei de Ser Pop"] },
 };
 Object.assign(ENTITIES, CATALOG_ENTITIES);
 

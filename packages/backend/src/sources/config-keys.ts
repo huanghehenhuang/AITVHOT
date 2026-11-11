@@ -14,7 +14,7 @@ const KEYS: Record<SourceRow["kind"], string[]> = {
     "itemSelector", "linkSelector", "linkAttribute", "linkTemplate", "embeddedHtmlSelector", "titleSelector", "publishedAtSelector", "publishedAtRegex", "publishedAtUtcOffset",
   ],
   json_list: [
-    ...COLLECTED, "url", "mode", "method", "headers", "bodyJson", "jsonKey", "windowVar", "itemsPath", "itemsObjectValues",
+    ...COLLECTED, "url", "mode", "method", "headers", "bodyJson", "bodyForm", "jsonKey", "windowVar", "itemsPath", "itemsObjectValues",
     "titlePaths", "summaryPaths", "summaryIsBody", "authorPaths", "publishedAtPath", "publishedAtUnit", "publishedAtUtcOffset", "externalIdPath",
     "urlTemplate", "urlTemplateFallback", "rawDropKeys", "requireBoolean", "minNumeric", "preserveUrlFragment",
   ],
@@ -53,6 +53,7 @@ function utcInstant(value: unknown): boolean {
 export function unsupportedConfig(kind: SourceRow["kind"], config: Record<string, unknown>): string[] {
   const allowed = new Set(KEYS[kind] ?? []);
   const out: string[] = [];
+  if (config.bodyForm && config.bodyJson) out.push("bodyForm and bodyJson cannot be combined");
   for (const [key, value] of Object.entries(config ?? {})) {
     if (!allowed.has(key)) out.push(key);
     else if (kind === "web_list" && key === "method" && !["GET", "POST"].includes(String(value))) out.push(`method=${String(value)}`);

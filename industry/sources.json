@@ -46725,6 +46725,1542 @@
           "initialBackfillLimit": 3
         }
       }
+    },
+    {
+      "id": "rss-biz20261031-xiaguang",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://xiaguangshe.com/?s=%E7%9F%AD%E5%89%A7&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow"
+          ],
+          "includeBodyForTopic": true,
+          "dropMarkersTitleOnly": [
+            "即将启幕",
+            "火热招商",
+            "GTC2026",
+            "共寻全球化新曲线",
+            "商业价值共创周"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAfter": "2026-10-01T00:00:00.000Z"
+      },
+      "name": "霞光社 · 短剧出海与商业趋势",
+      "owner_entity_id": "xiaguang",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "enabled": true,
+      "id": "json-biz20261031-baijing",
+      "name": "白鲸出海 · 短剧商业与受众趋势",
+      "owner_entity_id": "baijing",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.baijing.cn/index/ajax/get_article/",
+        "method": "POST",
+        "bodyForm": {
+          "type": "0",
+          "pn": "1",
+          "ps": "50"
+        },
+        "mode": "json_api",
+        "itemsPath": "data.article_list",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "synopsis"
+        ],
+        "urlTemplate": "https://www.baijing.cn/article/{id}",
+        "publishedAtPath": "published_at",
+        "externalIdPath": "id",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "竖屏",
+            "AI剧",
+            "AI影视",
+            "AI演员",
+            "AI漫剧",
+            "AI真人剧",
+            "AI电影",
+            "AI动画",
+            "AI内容",
+            "仿真人",
+            "互动剧",
+            "红果",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlareFlow"
+          ],
+          "dropMarkersTitleOnly": [
+            "GTC2026",
+            "WAVE2026",
+            "资源对接会"
+          ]
+        },
+        "detail": {
+          "maxFetches": 10,
+          "publishedAtSelector": "time.timeago",
+          "publishedAtAuthoritative": true
+        },
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        }
+      }
+    },
+    {
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "enabled": true,
+      "id": "web-biz20261031-dianyingjie",
+      "name": "电影界 · 短剧经营与内容趋势",
+      "owner_entity_id": "dianyingjie",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.dianyingjie.com.cn/duanju/",
+        "parseMode": "html",
+        "itemSelector": "li:has(a.list_title)",
+        "linkSelector": "a.list_title",
+        "titleSelector": "a.list_title",
+        "allowUrlPrefixes": [
+          "https://www.dianyingjie.com.cn/"
+        ],
+        "detail": {
+          "maxFetches": 10,
+          "publishedAtSelector": ".article-infos .date",
+          "publishedAtAuthoritative": true
+        },
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        }
+      }
+    },
+    {
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "enabled": true,
+      "id": "web-biz20261031-adquan",
+      "name": "广告门 · 短剧营销与AI内容趋势",
+      "owner_entity_id": "adquan",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.adquan.com/",
+        "parseMode": "html",
+        "itemSelector": "a.article_2_href",
+        "linkSelector": "a.article_2_href",
+        "titleSelector": "a.article_2_href",
+        "allowUrlPrefixes": [
+          "https://www.adquan.com/article/"
+        ],
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "竖屏",
+            "AI剧",
+            "AI影视",
+            "AI演员",
+            "AI漫剧",
+            "AI真人剧",
+            "AI电影",
+            "AI动画",
+            "AI内容",
+            "仿真人",
+            "互动剧",
+            "红果",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlareFlow"
+          ]
+        },
+        "detail": {
+          "maxFetches": 6,
+          "publishedAtRegex": "发布时间[：:]\\s*(\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2})",
+          "publishedAtAuthoritative": true
+        },
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        }
+      }
+    },
+    {
+      "id": "json-biz20261031-thepaper-shenshui",
+      "name": "短剧深水区 · 澎湃公开专栏",
+      "kind": "json_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "duanju-shenshuiqu",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "config": {
+        "url": "https://www.thepaper.cn/contentapi/cont/pph/gov",
+        "method": "POST",
+        "bodyJson": {
+          "pphId": "7599722",
+          "pageNum": 1,
+          "pageSize": 20,
+          "contType": 0,
+          "excludeContIds": [],
+          "startTime": 0
+        },
+        "headers": {
+          "Client-Type": "1"
+        },
+        "mode": "json_api",
+        "itemsPath": "data.list",
+        "titlePaths": [
+          "name"
+        ],
+        "summaryPaths": [
+          "summary"
+        ],
+        "urlTemplate": "https://www.thepaper.cn/newsDetail_forward_{contId}",
+        "publishedAtPath": "pubTimeLong",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "contId",
+        "requireBoolean": {
+          "path": "paywalled",
+          "equals": false
+        },
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "_aihot": {
+          "initialBackfillLimit": 10
+        }
+      }
+    },
+    {
+      "id": "json-biz2-paper-guduo",
+      "name": "骨朵网络影视 · 澎湃商业与内容趋势",
+      "kind": "json_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "guduo",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "config": {
+        "url": "https://www.thepaper.cn/contentapi/cont/pph/gov",
+        "method": "POST",
+        "bodyJson": {
+          "pphId": "4890190",
+          "pageNum": 1,
+          "pageSize": 20,
+          "contType": 0,
+          "excludeContIds": [],
+          "startTime": 0
+        },
+        "headers": {
+          "Client-Type": "1"
+        },
+        "mode": "json_api",
+        "itemsPath": "data.list",
+        "titlePaths": [
+          "name"
+        ],
+        "summaryPaths": [
+          "summary"
+        ],
+        "urlTemplate": "https://www.thepaper.cn/newsDetail_forward_{contId}",
+        "publishedAtPath": "pubTimeLong",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "contId",
+        "requireBoolean": {
+          "path": "paywalled",
+          "equals": false
+        },
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "AI影视",
+            "AI电影",
+            "AI剧",
+            "AI演员",
+            "AI内容",
+            "仿真人",
+            "拟真人",
+            "红果",
+            "互动剧",
+            "竖屏",
+            "ReelShort",
+            "DramaBox"
+          ],
+          "dropMarkersTitleOnly": [
+            "骨朵榜单"
+          ]
+        },
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      }
+    },
+    {
+      "id": "json-biz2-paper-dataeye",
+      "name": "DataEye短剧观察 · 澎湃商业与内容趋势",
+      "kind": "json_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "dataeye",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "config": {
+        "url": "https://www.thepaper.cn/contentapi/cont/pph/gov",
+        "method": "POST",
+        "bodyJson": {
+          "pphId": "7241021",
+          "pageNum": 1,
+          "pageSize": 20,
+          "contType": 0,
+          "excludeContIds": [],
+          "startTime": 0
+        },
+        "headers": {
+          "Client-Type": "1"
+        },
+        "mode": "json_api",
+        "itemsPath": "data.list",
+        "titlePaths": [
+          "name"
+        ],
+        "summaryPaths": [
+          "summary"
+        ],
+        "urlTemplate": "https://www.thepaper.cn/newsDetail_forward_{contId}",
+        "publishedAtPath": "pubTimeLong",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "contId",
+        "requireBoolean": {
+          "path": "paywalled",
+          "equals": false
+        },
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "AI影视",
+            "AI电影",
+            "AI剧",
+            "AI演员",
+            "AI内容",
+            "仿真人",
+            "拟真人",
+            "红果",
+            "互动剧",
+            "竖屏",
+            "ReelShort",
+            "DramaBox"
+          ],
+          "dropMarkersTitleOnly": [
+            "骨朵榜单"
+          ]
+        },
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      }
+    },
+    {
+      "id": "json-biz2-paper-duanju-neihang",
+      "name": "短剧内行人 · 澎湃商业与内容趋势",
+      "kind": "json_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "duanju-neihang",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "config": {
+        "url": "https://www.thepaper.cn/contentapi/cont/pph/gov",
+        "method": "POST",
+        "bodyJson": {
+          "pphId": "7352224",
+          "pageNum": 1,
+          "pageSize": 20,
+          "contType": 0,
+          "excludeContIds": [],
+          "startTime": 0
+        },
+        "headers": {
+          "Client-Type": "1"
+        },
+        "mode": "json_api",
+        "itemsPath": "data.list",
+        "titlePaths": [
+          "name"
+        ],
+        "summaryPaths": [
+          "summary"
+        ],
+        "urlTemplate": "https://www.thepaper.cn/newsDetail_forward_{contId}",
+        "publishedAtPath": "pubTimeLong",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "contId",
+        "requireBoolean": {
+          "path": "paywalled",
+          "equals": false
+        },
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "AI影视",
+            "AI电影",
+            "AI剧",
+            "AI演员",
+            "AI内容",
+            "仿真人",
+            "拟真人",
+            "红果",
+            "互动剧",
+            "竖屏",
+            "ReelShort",
+            "DramaBox"
+          ],
+          "dropMarkersTitleOnly": [
+            "骨朵榜单"
+          ]
+        },
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      }
+    },
+    {
+      "id": "json-biz2-paper-newplaylet",
+      "name": "短剧新圈 · 澎湃商业与内容趋势",
+      "kind": "json_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "newplaylet",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "config": {
+        "url": "https://www.thepaper.cn/contentapi/cont/pph/gov",
+        "method": "POST",
+        "bodyJson": {
+          "pphId": "7460100",
+          "pageNum": 1,
+          "pageSize": 20,
+          "contType": 0,
+          "excludeContIds": [],
+          "startTime": 0
+        },
+        "headers": {
+          "Client-Type": "1"
+        },
+        "mode": "json_api",
+        "itemsPath": "data.list",
+        "titlePaths": [
+          "name"
+        ],
+        "summaryPaths": [
+          "summary"
+        ],
+        "urlTemplate": "https://www.thepaper.cn/newsDetail_forward_{contId}",
+        "publishedAtPath": "pubTimeLong",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "contId",
+        "requireBoolean": {
+          "path": "paywalled",
+          "equals": false
+        },
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "AI影视",
+            "AI电影",
+            "AI剧",
+            "AI演员",
+            "AI内容",
+            "仿真人",
+            "拟真人",
+            "红果",
+            "互动剧",
+            "竖屏",
+            "ReelShort",
+            "DramaBox"
+          ],
+          "dropMarkersTitleOnly": [
+            "骨朵榜单"
+          ]
+        },
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      }
+    },
+    {
+      "id": "json-biz2-paper-ciwei",
+      "name": "刺猬公社 · 澎湃商业与内容趋势",
+      "kind": "json_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "ciwei",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "config": {
+        "url": "https://www.thepaper.cn/contentapi/cont/pph/gov",
+        "method": "POST",
+        "bodyJson": {
+          "pphId": "4956213",
+          "pageNum": 1,
+          "pageSize": 20,
+          "contType": 0,
+          "excludeContIds": [],
+          "startTime": 0
+        },
+        "headers": {
+          "Client-Type": "1"
+        },
+        "mode": "json_api",
+        "itemsPath": "data.list",
+        "titlePaths": [
+          "name"
+        ],
+        "summaryPaths": [
+          "summary"
+        ],
+        "urlTemplate": "https://www.thepaper.cn/newsDetail_forward_{contId}",
+        "publishedAtPath": "pubTimeLong",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "contId",
+        "requireBoolean": {
+          "path": "paywalled",
+          "equals": false
+        },
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "AI影视",
+            "AI电影",
+            "AI剧",
+            "AI演员",
+            "AI内容",
+            "仿真人",
+            "拟真人",
+            "红果",
+            "互动剧",
+            "竖屏",
+            "ReelShort",
+            "DramaBox"
+          ],
+          "dropMarkersTitleOnly": [
+            "骨朵榜单"
+          ],
+          "includeBodyForTopic": true
+        },
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      }
+    },
+    {
+      "id": "rss-biz2-mediaplaynews",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.mediaplaynews.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow",
+            "AI filmmaking",
+            "AI film",
+            "AI cinema",
+            "AI video",
+            "generative video",
+            "synthetic actor"
+          ],
+          "includeBodyForTopic": true
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      },
+      "name": "Media Play News · 微短剧商业与营销",
+      "owner_entity_id": "mediaplaynews",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-biz2-prensariozone",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://digitalcontent.prensariozone.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow",
+            "AI filmmaking",
+            "AI film",
+            "AI cinema",
+            "AI video",
+            "generative video",
+            "synthetic actor"
+          ],
+          "includeBodyForTopic": true
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAfter": "2026-10-01T00:00:00.000Z"
+      },
+      "name": "Prensario Zone · 微短剧商业与营销",
+      "owner_entity_id": "prensariozone",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-biz2-tvmas",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://tvmasmagazine.com/es/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow",
+            "AI filmmaking",
+            "AI film",
+            "AI cinema",
+            "AI video",
+            "generative video",
+            "synthetic actor"
+          ],
+          "includeBodyForTopic": true
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAfter": "2026-10-01T00:00:00.000Z"
+      },
+      "name": "TVMAS Magazine · 微短剧商业与营销",
+      "owner_entity_id": "tvmas",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "enabled": true,
+      "id": "web-biz2-woshipm",
+      "name": "人人都是产品经理 · 短剧商业与趋势",
+      "owner_entity_id": "woshipm",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.woshipm.com/tag/%E7%9F%AD%E5%89%A7",
+        "parseMode": "html",
+        "itemSelector": "article",
+        "linkSelector": "h2.post-title a",
+        "titleSelector": "h2.post-title a",
+        "allowUrlPrefixes": [
+          "https://www.woshipm.com/ai/",
+          "https://www.woshipm.com/it/",
+          "https://www.woshipm.com/share/",
+          "https://www.woshipm.com/operate/",
+          "https://www.woshipm.com/pd/",
+          "https://www.woshipm.com/marketing/"
+        ],
+        "detail": {
+          "maxFetches": 10,
+          "publishedAtSelector": ".artilce--meta2 time",
+          "publishedAtAuthoritative": true,
+          "publishedAtUtcOffset": "+08:00"
+        },
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "_aihot": {
+          "initialBackfillLimit": 10
+        }
+      }
+    },
+    {
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "enabled": true,
+      "id": "web-biz2-senalnews",
+      "name": "Señal News · 微短剧国际交易",
+      "owner_entity_id": "senalnews",
+      "kind": "web_list",
+      "config": {
+        "url": "https://senalnews.com/en/search?q=microdrama",
+        "parseMode": "html",
+        "itemSelector": "div:has(> .imagen):has(> .info)",
+        "linkSelector": ".info h2 a",
+        "titleSelector": ".info h2 a",
+        "publishedAtSelector": ".fecha",
+        "allowUrlPrefixes": [
+          "https://senalnews.com/en/"
+        ],
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAtUtcOffset": "+00:00",
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      }
+    },
+    {
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "enabled": true,
+      "id": "web-biz2-shortsreport",
+      "name": "Shorts Report · 微短剧商业链接索引",
+      "owner_entity_id": "shortsreport",
+      "kind": "web_list",
+      "config": {
+        "url": "https://shortsreport.com/",
+        "parseMode": "html",
+        "itemSelector": "article",
+        "linkSelector": "h3 a",
+        "titleSelector": "h3 a",
+        "allowUrlPrefixes": [
+          "https://www.produ.com/",
+          "https://variety.com/",
+          "https://www.contentgrip.com/"
+        ],
+        "detail": {
+          "maxFetches": 10
+        },
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-10-01T00:00:00.000Z",
+        "_aihot": {
+          "initialBackfillLimit": 10
+        }
+      }
+    },
+    {
+      "id": "json-biz1103-paper-entcapital",
+      "name": "娱乐资本论 · 澎湃商业与影视趋势",
+      "kind": "json_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "entcapital",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "config": {
+        "url": "https://www.thepaper.cn/contentapi/cont/pph/gov",
+        "method": "POST",
+        "bodyJson": {
+          "pphId": "6148056",
+          "pageNum": 1,
+          "pageSize": 20,
+          "contType": 0,
+          "excludeContIds": [],
+          "startTime": 0
+        },
+        "headers": {
+          "Client-Type": "1"
+        },
+        "mode": "json_api",
+        "itemsPath": "data.list",
+        "titlePaths": [
+          "name"
+        ],
+        "summaryPaths": [
+          "summary"
+        ],
+        "urlTemplate": "https://www.thepaper.cn/newsDetail_forward_{contId}",
+        "publishedAtPath": "pubTimeLong",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "contId",
+        "requireBoolean": {
+          "path": "paywalled",
+          "equals": false
+        },
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-10-04T00:00:00.000Z",
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "AI影视",
+            "AI电影",
+            "AI剧",
+            "AI演员",
+            "AI内容",
+            "仿真人",
+            "拟真人",
+            "红果",
+            "互动剧",
+            "竖屏",
+            "ReelShort",
+            "DramaBox"
+          ],
+          "dropMarkersTitleOnly": [
+            "骨朵榜单"
+          ]
+        },
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      }
+    },
+    {
+      "id": "rss-biz1103-entcapital",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://ylzbl.com/feed",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "AI影视",
+            "AI电影",
+            "AI剧",
+            "AI演员",
+            "AI内容",
+            "仿真人",
+            "拟真人",
+            "红果",
+            "互动剧",
+            "竖屏",
+            "ReelShort",
+            "DramaBox"
+          ],
+          "dropMarkersTitleOnly": [
+            "Las 5 noticias",
+            "Week in Review"
+          ],
+          "includeBodyForTopic": true
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAfter": "2026-10-04T00:00:00.000Z",
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      },
+      "name": "娱乐资本论官网 · 短剧商业与内容营销",
+      "owner_entity_id": "entcapital",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-biz1103-campaignbrief",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://campaignbrief.com/?s=drama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow",
+            "AI filmmaking",
+            "AI film",
+            "AI cinema",
+            "AI video",
+            "generative video",
+            "synthetic actor"
+          ],
+          "includeBodyForTopic": true,
+          "dropMarkersTitleOnly": [
+            "Las 5 noticias",
+            "Week in Review"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAfter": "2026-10-04T00:00:00.000Z",
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      },
+      "name": "Campaign Brief · 短剧商业与内容营销",
+      "owner_entity_id": "campaignbrief",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "json-biz1103-paper-wenyu-value",
+      "name": "文娱价值官 · 澎湃商业与影视趋势",
+      "kind": "json_list",
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": "wenyu-value",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "行业商业",
+        "影视趋势"
+      ],
+      "config": {
+        "url": "https://www.thepaper.cn/contentapi/cont/pph/gov",
+        "method": "POST",
+        "bodyJson": {
+          "pphId": "6776044",
+          "pageNum": 1,
+          "pageSize": 20,
+          "contType": 0,
+          "excludeContIds": [],
+          "startTime": 0
+        },
+        "headers": {
+          "Client-Type": "1"
+        },
+        "mode": "json_api",
+        "itemsPath": "data.list",
+        "titlePaths": [
+          "name"
+        ],
+        "summaryPaths": [
+          "summary"
+        ],
+        "urlTemplate": "https://www.thepaper.cn/newsDetail_forward_{contId}",
+        "publishedAtPath": "pubTimeLong",
+        "publishedAtUnit": "epoch_ms",
+        "externalIdPath": "contId",
+        "requireBoolean": {
+          "path": "paywalled",
+          "equals": false
+        },
+        "maxItemAgeDays": 30,
+        "publishedAfter": "2026-10-04T00:00:00.000Z",
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "AI影视",
+            "AI电影",
+            "AI剧",
+            "AI演员",
+            "AI内容",
+            "仿真人",
+            "拟真人",
+            "红果",
+            "互动剧",
+            "竖屏",
+            "ReelShort",
+            "DramaBox"
+          ],
+          "dropMarkersTitleOnly": [
+            "骨朵榜单"
+          ]
+        },
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      }
+    },
+    {
+      "id": "rss-biz1103-todotvnews",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://todotvnews.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow",
+            "AI filmmaking",
+            "AI film",
+            "AI cinema",
+            "AI video",
+            "generative video",
+            "synthetic actor"
+          ],
+          "includeBodyForTopic": true,
+          "dropMarkersTitleOnly": [
+            "Las 5 noticias",
+            "Week in Review"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAfter": "2026-10-04T00:00:00.000Z",
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      },
+      "name": "TodoTV News · 微短剧商业趋势",
+      "owner_entity_id": "todotvnews",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-biz1103-cveintiuno",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://cveintiuno.com/?s=microdrama&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow",
+            "AI filmmaking",
+            "AI film",
+            "AI cinema",
+            "AI video",
+            "generative video",
+            "synthetic actor"
+          ],
+          "includeBodyForTopic": true,
+          "dropMarkersTitleOnly": [
+            "Las 5 noticias",
+            "Week in Review"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAfter": "2026-10-04T00:00:00.000Z",
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      },
+      "name": "Cveintiuno · 微短剧商业趋势",
+      "owner_entity_id": "cveintiuno",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "rss-biz1104-canseideserpop",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://canseideserpop.com/?s=microdramas&feed=rss2",
+        "ingestNoiseFilter": {
+          "requireMarkers": [
+            "短剧",
+            "微短剧",
+            "漫剧",
+            "红果",
+            "点众",
+            "microdrama",
+            "micro drama",
+            "micro-drama",
+            "short drama",
+            "short-drama",
+            "short form drama",
+            "short-form drama",
+            "vertical drama",
+            "vertical-drama",
+            "vertical series",
+            "vertical scripted",
+            "ReelShort",
+            "DramaBox",
+            "ShortMax",
+            "FlexTV",
+            "GoodShort",
+            "NetShort",
+            "DramaWave",
+            "FlareFlow",
+            "AI filmmaking",
+            "AI film",
+            "AI cinema",
+            "AI video",
+            "generative video",
+            "synthetic actor"
+          ],
+          "includeBodyForTopic": true,
+          "dropMarkersTitleOnly": [
+            "Las 5 noticias",
+            "Week in Review"
+          ]
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAfter": "2026-10-05T00:00:00.000Z",
+        "detail": {
+          "maxFetches": 10,
+          "upgradeDatePrecision": true
+        }
+      },
+      "name": "Cansei de Ser Pop · 短剧商业与影视趋势",
+      "owner_entity_id": "canseideserpop",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "web-biz1104-juduanduan",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.juduanduan.com/xinwen/1.shtml",
+        "parseMode": "html",
+        "itemSelector": ".row:has(> div > h3 > a.stretched-link)",
+        "linkSelector": "h3 a.stretched-link",
+        "titleSelector": "h3 a.stretched-link",
+        "allowUrlPrefixes": [
+          "https://www.juduanduan.com/"
+        ],
+        "detail": {
+          "maxFetches": 10,
+          "publishedAtAuthoritative": true,
+          "publishedAtRegex": "<li class=\"nav-item\">(\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2})</li>"
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAfter": "2026-10-05T00:00:00.000Z"
+      },
+      "name": "剧短短 · 新闻速递",
+      "owner_entity_id": "juduanduan",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
+    },
+    {
+      "id": "web-biz1104-juduanduan-cases",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.juduanduan.com/chaijie/",
+        "parseMode": "html",
+        "itemSelector": ".row:has(> div > h3 > a.stretched-link)",
+        "linkSelector": "h3 a.stretched-link",
+        "titleSelector": "h3 a.stretched-link",
+        "allowUrlPrefixes": [
+          "https://www.juduanduan.com/"
+        ],
+        "detail": {
+          "maxFetches": 10,
+          "publishedAtAuthoritative": true,
+          "publishedAtRegex": "<li class=\"nav-item\">(\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2})</li>"
+        },
+        "maxItemAgeDays": 30,
+        "_aihot": {
+          "initialBackfillLimit": 10
+        },
+        "publishedAfter": "2026-10-05T00:00:00.000Z"
+      },
+      "name": "剧短短 · 作品与题材拆解",
+      "owner_entity_id": "juduanduan",
+      "tier": "T2",
+      "first_party": false,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "tags": [
+        "短剧",
+        "漫剧"
+      ]
     }
   ]
 }

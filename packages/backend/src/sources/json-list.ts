@@ -180,8 +180,9 @@ export async function fetchJsonList(source: SourceRow): Promise<Candidate[]> {
   const res = await fetchListing(url, {
     redirectPolicy: "same-origin",
     method: c.method ?? "GET",
-    headers: c.bodyJson ? { ...headers, "content-type": "application/json" } : headers,
-    body: c.bodyJson ? JSON.stringify(c.bodyJson) : undefined,
+    headers: c.bodyForm ? { ...headers, "content-type": "application/x-www-form-urlencoded" }
+      : c.bodyJson ? { ...headers, "content-type": "application/json" } : headers,
+    body: c.bodyForm ? new URLSearchParams(c.bodyForm).toString() : c.bodyJson ? JSON.stringify(c.bodyJson) : undefined,
     timeoutMs: 25_000,
   });
   if (res.status !== 200) throw new FetchError(`HTTP ${res.status}`, res.status);

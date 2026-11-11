@@ -4,6 +4,7 @@ import { after, test } from "node:test";
 import { config } from "@aihot/backend/config";
 import { closeDb } from "@aihot/backend/db";
 import { fetchJsonList } from "@aihot/backend/sources/json-list";
+import { assertSupportedConfig } from "@aihot/backend/sources/config-keys";
 import type { SourceRow } from "@aihot/backend/sources/types";
 
 const posts = [
@@ -18,7 +19,17 @@ const pages: Record<string, string> = {
   "/broken": `<script>self.__next_f.push([1,${JSON.stringify('a:{"posts":[{"title":"Incomplete"}')}]);</script>`,
   "/mixed": JSON.stringify([{ title: "Number", href: "/n", date: 1790787600000 }, { title: "Numeric string", href: "/s", date: "1790787600000" }, { title: "ISO", href: "/i", date: "2026-09-30T17:00:00.000Z" }, { title: "Bad", href: "/bad", date: "invalid" }]),
 };
-const server = http.createServer((req, res) => res.end(pages[req.url ?? ""] ?? ""));
+const server = http.createServer(async (req, res) => {
+  if (req.url === "/form") {
+    let body = "";
+    for await (const chunk of req) body += chunk;
+    const form = new URLSearchParams(body);
+    res.end(JSON.stringify(req.method === "POST" && req.headers["content-type"] === "application/x-www-form-urlencoded"
+      && form.get("topic") === "短剧 & 出海" && form.get("ps") === "50" ? posts : []));
+    return;
+  }
+  res.end(pages[req.url ?? ""] ?? "");
+});
 await new Promise<void>((resolve) => server.listen(0, "127.0.0.1", resolve));
 const base = `http://127.0.0.1:${(server.address() as { port: number }).port}`;
 const wasPrivate = config.allowPrivateNetworkFetch;
@@ -51,4 +62,13 @@ test("mixed millisecond and ISO dates use an explicit unit without changing exis
   assert.deepEqual(items.map((c) => c.publishedAt?.toISOString() ?? null), ["2026-09-30T17:00:00.000Z", "2026-09-30T17:00:00.000Z", "2026-09-30T17:00:00.000Z", null]);
   const numericOnly = await fetchJsonList(source("/mixed", { publishedAtUnit: "epoch_ms" }));
   assert.equal(numericOnly[2]!.publishedAt, null, "ISO support is opt-in for APIs with mixed date formats");
+});
+
+test("public JSON lists can require an encoded form POST instead of a JSON request", async () => {
+  const formSource = source("/form", { method: "POST", bodyForm: { topic: "短剧 & 出海", ps: "50" } });
+  assertSupportedConfig(formSource.kind, formSource.config);
+  assert.deepEqual((await fetchJsonList(formSource)).map(c => c.title), posts.map(p => p.title));
+  assert.throws(() => assertSupportedConfig("json_list", { ...formSource.config, bodyJson: { ps: 10 } }), /cannot be combined/);
+  assert.throws(() => assertSupportedConfig("json_list", { ...formSource.config, method: "GET" }), /bodyForm/);
+  assert.throws(() => assertSupportedConfig("json_list", { ...formSource.config, bodyForm: { ps: 50 } }), /bodyForm/);
 });
