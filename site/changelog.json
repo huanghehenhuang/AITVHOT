@@ -1,6 +1,16 @@
 {
-  "latestVersion": "2026-11-09T17:04",
+  "latestVersion": "2026-11-11T09:13",
   "releases": [
+    {
+      "date": "2026-11-11",
+      "time": "09:13",
+      "kind": "更新",
+      "title": "上线新闻媒体化改版 / Editorial news redesign",
+      "body": [
+        "首页新增焦点头条和行业热榜，支持精简与详细阅读；新增日期与来源筛选、事件 RSS 和新闻与知识库的双向入口。",
+        "The homepage now features a lead story and industry rankings with compact and detailed reading. Added date and source filters, event RSS, and links between news and the resource library."
+      ]
+    },
     {
       "date": "2026-11-09",
       "time": "17:04",
